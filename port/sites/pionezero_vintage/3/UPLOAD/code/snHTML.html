@@ -1,0 +1,760 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>html5 snippet</title><link rel="stylesheet" href="railscasts.css">
+<style>
+body {
+  font-size:17px !important;
+  margin: 0 auto !important;
+  background: #232323;
+}
+@media screen and (max-width: 330px) {
+body {
+  font-size:13px !important;
+  margin: 0 auto !important;
+  background: #232323;
+ }
+}
+/* thanks to chris coyler http://mediatemple.net/blog/tips/considerations-for-styling-the-pre-tag/ */
+pre {
+  white-space: pre-wrap;
+}
+pre {
+  overflow-x: auto;
+}
+</style></head><body>
+<pre><code class="html">
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    META
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="author" content=""&gt;
+
+    &lt;title&gt;pionezero&lt;/title&gt;
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    FAVICONS, thanks to http://realfavicongenerator.net/
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+    &lt;link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"&gt;
+    &lt;link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"&gt;
+    &lt;link rel="manifest" href="/manifest.json"&gt;
+    &lt;link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"&gt;
+    &lt;meta name="theme-color" content="#ffffff"&gt;
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    CSS
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link href="css/navbar-top.css" rel="stylesheet"&gt;
+    &lt;link href="css/sticky-footer.css" rel="stylesheet"&gt;
+    &lt;link href="css/new.css" rel="stylesheet"&gt;
+
+    &lt;!-- thanks to http://stackoverflow.com/questions/17281486/use-target-blank-in-css --&gt;
+    &lt;base target="_blank"&gt;
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    GOOGLE FONT
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"&gt;
+
+    &lt;!— last edit: december 13 2016 --&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+
+
+
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    DROP DOWN NAV
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;div class="collapse tophide" id="navbar-header"&gt;
+
+      &lt;!— + + + + + + + + + 2 columns + + + + + + + + + —&gt;
+      &lt;div class="container-fluid bg-inverse p-a-1 lemon-top"&gt;
+
+        &lt;!— ``````````````````` CONTACT --&gt;
+        &lt;div class="col-md-6 connectcnt"&gt;
+            &lt;div class="connect"&gt;
+                 &lt;!— ``````` EMAIL —&gt;
+                &lt;a href="mailto:pionezero@protonmail.ch" target="_self"&gt;send a message&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="connect2"&gt;
+                &lt;!— ``````` CELL —&gt;
+                &lt;!-- call &lt;a href="tel://12624215780"&gt;262-421-5780&lt;/a&gt;--&gt;
+            &lt;/div&gt;
+        &lt;!— / col-md-6 connectcnt —&gt;
+        &lt;/div&gt;
+
+        &lt;!— ``````````````````` SOCIAL ICONS --&gt;
+        &lt;div class="col-md-6 socsec"&gt;
+                &lt;!— ``````` LINKEDIN —&gt;
+               &lt;a href="https://www.linkedin.com/in/cssninja"&gt;&lt;img src="img/soc_linkedin.png" class="socicon"&gt;&lt;/a&gt;
+                &lt;!— ``````` GITHUB —&gt;
+               &lt;a href="https://github.com/cssninja"&gt;&lt;img src="img/soc_github.png" class="socicon"&gt;&lt;/a&gt;
+                &lt;!— ``````` TWITTER —&gt;
+                &lt;a href="https://twitter.com/cssninja"&gt;&lt;img src="img/soc_twitter.png" class="socicon"&gt;&lt;/a&gt;
+                &lt;!— ``````` PINTEREST —&gt;
+                &lt;a href="https://www.pinterest.com/auuumoksa/likes/"&gt;&lt;img src="img/soc_pinterest.png" class="socicon" style="margin-right:7px;"&gt;&lt;/a&gt;
+        &lt;!— / col-md-6 socsec —&gt;
+        &lt;/div&gt;
+
+      &lt;!— / container-fluid —&gt;
+      &lt;/div&gt;
+
+       &lt;!— ``````````````````` NAV ICONS --&gt;
+       &lt;!— + + + + + + + + + 5 columns + + + + + + + + + —&gt;
+      &lt;div class="row" style="text-align:center !important;margin:0px 10px 0px 10px;"&gt;
+        &lt;div class="col-md-15 col-sm-15"&gt;
+            &lt;!— ``````` IDEAS —&gt;
+            &lt;a href="#idea"&gt;&lt;img src="img/ideas.png"&gt;&lt;/a&gt;&lt;br /&gt;
+                &lt;span class="iconztxt-t"&gt;&lt;a href="#idea"&gt;ideas&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-15 col-sm-15"&gt;
+            &lt;!— ``````` CODING —&gt;
+            &lt;a href="#coding"&gt;&lt;img src="img/coding.png"&gt;&lt;/a&gt;&lt;br /&gt;
+                &lt;span class="iconztxt-t"&gt;&lt;a href="#coding"&gt;coding&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-15 col-sm-15"&gt;
+            &lt;!— ``````` DESIGN —&gt;
+            &lt;a href="#design"&gt;&lt;img src="img/design.png"&gt;&lt;/a&gt;&lt;br /&gt;
+                &lt;span class="iconztxt-t"&gt;&lt;a href="#design"&gt;design&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-15 col-sm-15"&gt;
+            &lt;!— ``````` GROWTH —&gt;
+            &lt;a href="#incubator"&gt;&lt;img src="img/incubator.png"&gt;&lt;/a&gt;&lt;br /&gt;
+                &lt;span class="iconztxt-t"&gt;&lt;a href="#incubator"&gt;growth&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-15 col-sm-15"&gt;
+            &lt;!— ``````` FUNDING —&gt;
+            &lt;a href="#funding"&gt;&lt;img src="img/funding.png"&gt;&lt;/a&gt;&lt;br /&gt;
+                &lt;span class="iconztxt-t"&gt;&lt;a href="#funding"&gt;funding&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;!— / row —&gt;
+      &lt;/div&gt;
+
+    &lt;!— / drop down nav collapse —&gt;
+    &lt;/div&gt;
+
+    &lt;!— ``````````````````` COLLAPSABLE 3 BARS --&gt;
+    &lt;div class="navbar navbar-light bg-faded navbar-static-top m-b-1"&gt;
+      &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" style="outline:none !important;"&gt;
+
+        &lt;!— ``````` 3 BARS ICON, toggles header content —&gt;
+        &lt;img src="img/bars.png" style="height:30px;border:0 !important;"&gt;
+
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+
+
+
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    UPPER SECTION
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;!— + + + + + + + + + 2 columns + + + + + + + + + —&gt;
+    &lt;div class="container"&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` LOGO --&gt;
+		  &lt;div class="col-md-6 pi10logo"&gt;
+                  &lt;img src="img/logo.png"&gt;
+		  &lt;/div&gt;
+
+                  &lt;!— ``````````````````` INTRO --&gt;
+		  &lt;div class="col-md-6 lemon"&gt;i am an innovator who creates &lt;span class="txtbg"&gt;&lt;a href="https://www.crunchbase.com/#/home/index"&gt;startups&lt;/a&gt;&lt;/span&gt; and assists them to be successful with well researched &lt;span class="txtbg"&gt;&lt;a href="#idea"&gt;ideas&lt;/a&gt;&lt;/span&gt;, robust ninja &lt;span class="txtbg"&gt;&lt;a href="#coding"&gt;coding&lt;/a&gt;&lt;/span&gt;, crowd-attracting &lt;span class="txtbg"&gt;&lt;a href="#design"&gt;design&lt;/a&gt;&lt;/span&gt;, &lt;span class="txtbg"&gt;&lt;a href="#incubator"&gt;growth & sustainability&lt;/a&gt;&lt;/span&gt; and seed &lt;span class="txtbg"&gt;&lt;a href="#funding"&gt;funding&lt;/a&gt;&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;
+
+		  &lt;p class="perhaps"&gt;
+		  { perhaps you just need a simple &lt;span class="txtbg_res"&gt;mobile-friendly web site&lt;/span&gt;? or &lt;span class="txtbg_res"&gt;branding&lt;/span&gt; or &lt;span class="txtbg_res"&gt;business-building&lt;/span&gt; of some sort? &lt;span class="txtbg"&gt;&lt;a href="resume.htm" target="_self"&gt;i can do this as well.&lt;/a&gt;&lt;/span&gt; }&lt;/p&gt;&lt;br /&gt;
+
+                  &lt;!— ``````````````````` TALK, scrolls to bottom --&gt;
+&lt;p&gt;&lt;span class="txtbg"&gt;&lt;a href="#talk"&gt;let's talk!&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+		  &lt;/div&gt;
+
+           &lt;!— / row —&gt;
+	  &lt;/div&gt;
+    &lt;!— / upper section container —&gt;
+    &lt;/div&gt;
+
+
+
+
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    MAIN CONTENT
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;div class="container container_home"&gt;
+
+          &lt;!— / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /  IDEAS —&gt;
+          &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` IDEAS ICON --&gt;
+		  &lt;div id="idea" class="col-md-4 iconz"&gt;
+                  &lt;img src="img/ideas.png"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` empty —&gt;
+		  &lt;div class="col-md-4"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````````````````` CONTENT --&gt;
+		  &lt;div class="col-md-4 iconztxt"&gt;
+
+                   &lt;!— ``````` TITLE —&gt;
+		  &lt;p&gt;well researched ideas&lt;/p&gt;
+
+                   &lt;!— ``````` BLURB ON IDEAS —&gt;
+		  &lt;p class="samples"&gt;
+		  the following is a typical ‘todo’ list for &lt;span class="txtbg_res"&gt;pure concept development&lt;/span&gt; of your startup (discussions, emphasis, research, planning, strategies, models, white boarding, etc.):&lt;/p&gt;&lt;br /&gt;
+
+                   &lt;!— ``````` YOUR DESTINATION —&gt;
+		  &lt;p class="samples"&gt;
+		  &lt;span class="txtbg3"&gt;[ your destination? ]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+                  - discussions on your &lt;span class="txtbg2"&gt;vision and the value of your idea&lt;/span&gt;&lt;br /&gt;&lt;img src="img/ideas_map.png" class="coolicons"&gt;
+		    - &lt;span class="txtbg2"&gt;trends&lt;/span&gt; discussions of past, current and future&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;niche&lt;/span&gt; research&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;mobile&lt;/span&gt; emphasis&lt;br /&gt;
+                  - white boarding &lt;span class="txtbg2"&gt;‘hack-a-thons’&lt;/span&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK --&gt;
+                  &lt;br /&gt;&lt;br /&gt;( &lt;a href ="#" class="samples" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"&gt;&lt;span class="txtbg"&gt;more: design, code, pre-launch&lt;/span&gt;&lt;/a&gt; )&lt;/p&gt;&lt;br /&gt;
+
+                   &lt;!— ``````` COLLAPSABLE CONTENT --&gt;
+		  &lt;div class="collapse" id="collapseExample1"&gt;
+
+                  &lt;!— ``````` DESIGN —&gt;
+		  &lt;p class="samples"&gt;
+                  &lt;span class="txtbg3"&gt;[ design ]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;img src="img/design.png" class="coolicons"&gt;
+                  - &lt;span class="txtbg2"&gt;creative direction and branding&lt;/span&gt;&lt;br /&gt;
+                  - front end &lt;span class="txtbg2"&gt;ui/ux&lt;/span&gt; discussions&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;simplicity&lt;/span&gt; emphasis&lt;/p&gt;&lt;br /&gt;
+
+                  &lt;!— ``````` CODE —&gt;
+		  &lt;p class="samples"&gt;
+                  &lt;span class="txtbg3"&gt;[ code ]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;img src="img/coding.png" class="coolicons"&gt;
+                  - &lt;span class="txtbg2"&gt;front and back end&lt;/span&gt; development discussions&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;scalability, add-ons and mapping&lt;/span&gt; discussions&lt;br /&gt;
+                  - facebook &lt;span class="txtbg2"&gt;chat bots&lt;/span&gt; and other technologies consideration&lt;/p&gt;&lt;br /&gt;
+
+                  &lt;!— ``````` PRE-LAUNCH —&gt;
+		  &lt;p class="samples"&gt;
+                  &lt;span class="txtbg3"&gt;[ pre-launch ]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;img src="img/ideas_rocket.png" class="coolicons"&gt;
+                  - &lt;span class="txtbg2"&gt;onboarding&lt;/span&gt; planning&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;launch&lt;/span&gt; strategy&lt;br /&gt;
+                  - marketing assistance from the &lt;span class="txtbg2"&gt;perspectives&lt;/span&gt; of 1) ui/ux, 2) back end and 3) the startup world expertise&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;monetization&lt;/span&gt; research&lt;br /&gt;
+                  - &lt;span class="txtbg2"&gt;business growth models&lt;/span&gt;&lt;br /&gt;
+                  - think globally, &lt;span class="txtbg2"&gt;bloom locally&lt;/span&gt; emphasis&lt;/p&gt;
+
+                  &lt;!— / collapse—&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— / col-md-4 iconztxt —&gt;
+		  &lt;/div&gt;
+
+          &lt;!— / row —&gt;
+	  &lt;/div&gt;
+
+
+
+          &lt;!— / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /  CODING —&gt;
+          &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` CODING ICON --&gt;
+		  &lt;div  id="coding" class="col-md-4 iconz"&gt;
+                  &lt;img src="img/coding.png"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` empty —&gt;
+		  &lt;div class="col-md-4"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````````````````` CONTENT --&gt;
+		  &lt;div class="col-md-4 iconztxt"&gt;
+
+                   &lt;!— ``````` TITLE —&gt;
+		  &lt;p&gt;robust ninja coding&lt;/p&gt;
+
+                   &lt;!— ``````` BLURB ON CODING —&gt;
+		  &lt;p class="samples"&gt;
+		  - front end responsive coding using &lt;span class="txtbg2"&gt;css3, sass, html5, jquery, angularjs and bootstrap v4&lt;/span&gt;&lt;br /&gt;
+		  - i partner with a team of very talented back-end developers from india .. &lt;span class="txtbg2"&gt;we can create any mobile app or web application you want&lt;/span&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK --&gt;
+		  &lt;p&gt;&lt;a href ="#" class="samples" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"&gt;&lt;span class="txtbg"&gt;samples&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` COLLAPSABLE CONTENT --&gt;
+		  &lt;div class="collapse" id="collapseExample2"&gt;
+
+		  &lt;p class="samples"&gt;
+		  &lt;a href="code/snHTML.html"&gt;&lt;span class="txtbg"&gt;html5 snippet&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
+		  &lt;a href="code/snCSS.html"&gt;&lt;span class="txtbg"&gt;css3 snippet&lt;/span&gt;&lt;/a&gt;
+
+                  &lt;!— / collapse—&gt;
+		  &lt;/div&gt;
+
+                  &lt;!— / col-md-4 iconztxt —&gt;
+		  &lt;/div&gt;
+
+          &lt;!— / row —&gt;
+	  &lt;/div&gt;
+
+
+
+          &lt;!— / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /  DESIGN —&gt;
+          &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` DESIGN ICON --&gt;
+		  &lt;div  id="design" class="col-md-4 iconz"&gt;
+                  &lt;img src="img/design.png"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` empty —&gt;
+		  &lt;div class="col-md-4"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````````````````` CONTENT --&gt;
+		  &lt;div class="col-md-4 iconztxt"&gt;
+
+                   &lt;!— ``````` TITLE —&gt;
+		  &lt;p&gt;crowd-attracting design&lt;/p&gt;
+
+                   &lt;!— ``````` BLURB ON DESIGN —&gt;
+		  &lt;p class="samples"&gt;
+              - &lt;span class="txtbg2"&gt;ui design&lt;/span&gt; for web and web applications&lt;br /&gt;
+		  - &lt;span class="txtbg2"&gt;mobile&lt;/span&gt; app ui design&lt;br /&gt;
+		  - &lt;span class="txtbg2"&gt;illustration&lt;/span&gt; and &lt;span class="txtbg2"&gt;graphic design&lt;/span&gt;&lt;br /&gt;
+		  - &lt;span class="txtbg2"&gt;ui/ux&lt;/span&gt;&lt;br /&gt;
+		  - &lt;span class="txtbg2"&gt;branding&lt;/span&gt;&lt;br /&gt;
+		  -&lt;span class="txtbg2"&gt; information design&lt;/span&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK TO SIX SAMPLES (HIDDEN TO EVERYTHING BELOW IPAD) --&gt;
+		  &lt;p&gt;&lt;a href ="#" class="samples byeee2" data-toggle="collapse" data-target="#SIX_SAMPLES" aria-expanded="false" aria-controls="SIX_SAMPLES"&gt;&lt;span class="txtbg"&gt;samples&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK TO MINIFIED GALLERY (HIDDEN TO EVERYTHING ABOVE IPAD) —&gt;
+		  &lt;p&gt;&lt;a href ="#" class="samples byeee3" data-toggle="collapse" data-target="#MINIFIED_PORT" aria-expanded="false" aria-controls="MINIFIED_PORT"&gt;&lt;span class="txtbg"&gt;portfolio&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK TO FULL GALLERY (HIDDEN TO EVERYTHING BELOW IPAD) —&gt;
+		  &lt;p&gt;&lt;a href ="masonry/index.htm" class="samples byeee2" target="_self"&gt;&lt;span class="txtbg"&gt;portfolio&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+                   &lt;!— ``````` COLLAPSABLE CONTENT modals thanks to http://v4-alpha.getbootstrap.com/components/modal/) --&gt;
+		  &lt;div class="collapse" id="SIX_SAMPLES"&gt;
+                   &lt;!— + + + + + + + + + 1 column + + + + + + + + + —&gt;
+		  &lt;div class="card card-block"&gt;
+
+	             &lt;div class="row ipadp2"&gt;
+                             &lt;!— ``````` SAMPLE 1 —&gt;
+		                 &lt;div class="grid-item"&gt;
+		                     &lt;a href="img/ext/dronevision.png" data-toggle="modal" data-target="#ms1"&gt;
+		                       &lt;div class="col-md-6 img-circular1"&gt;&lt;/div&gt;
+		                     &lt;/a&gt;
+		                     &lt;div id="ms1" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+		                       &lt;div class="modal-dialog modal-lg"&gt;
+		                         &lt;div class="modal-content"&gt;
+		                           &lt;img src="img/ext/dronevision.png" class="mimgc" /&gt;
+		                         &lt;/div&gt;
+		                       &lt;/div&gt;
+		                     &lt;/div&gt;
+		                   &lt;/div&gt;
+                             &lt;!— ``````` SAMPLE 2 —&gt;
+		                 &lt;div class="grid-item"&gt;
+                                 &lt;a href="img/ext/STOREFRONT.jpg" data-toggle="modal" data-target="#s1"&gt;
+                                   &lt;div class="col-md-6 img-circular2"&gt;&lt;/div&gt;
+                                 &lt;/a&gt;
+                                 &lt;div id="s1" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                                   &lt;div class="modal-dialog modal-lg"&gt;
+                                     &lt;div class="modal-content"&gt;
+                                       &lt;img src="img/ext/STOREFRONT.jpg" class="mimgc" /&gt;
+                                     &lt;/div&gt;
+                                   &lt;/div&gt;
+                                 &lt;/div&gt;
+                               &lt;/div&gt;
+                     &lt;!— / row ipadp2 —&gt;
+	             &lt;/div&gt;
+
+	             &lt;div class="row ipadp2"&gt;
+                             &lt;!— ``````` SAMPLE 3 —&gt;
+		                 &lt;div class="grid-item"&gt;
+                                 &lt;a href="img/ext/saturn.jpg" data-toggle="modal" data-target="#ms3"&gt;
+                                   &lt;div class="col-md-6 img-circular3"&gt;&lt;/div&gt;
+                                 &lt;/a&gt;
+                                 &lt;div id="ms3" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                                   &lt;div class="modal-dialog modal-lg"&gt;
+                                     &lt;div class="modal-content"&gt;
+                                       &lt;img src="img/ext/saturn.jpg" class="mimgc" /&gt;
+                                     &lt;/div&gt;
+                                   &lt;/div&gt;
+                                 &lt;/div&gt;
+                               &lt;/div&gt;
+                             &lt;!— ``````` SAMPLE 4 —&gt;
+		                 &lt;div class="grid-item"&gt;
+                                 &lt;a href="img/ext/choicchis_banner.jpg" data-toggle="modal" data-target="#ms4"&gt;
+                                   &lt;div class="col-md-6 img-circular4"&gt;&lt;/div&gt;
+                                 &lt;/a&gt;
+                                 &lt;div id="ms4" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                                   &lt;div class="modal-dialog modal-lg"&gt;
+                                     &lt;div class="modal-content"&gt;
+                                       &lt;img src="img/ext/choicchis_banner.jpg" class="mimgc" /&gt;
+                                     &lt;/div&gt;
+                                   &lt;/div&gt;
+                                 &lt;/div&gt;
+                               &lt;/div&gt;
+                     &lt;!— / row ipadp2 —&gt;
+	             &lt;/div&gt;
+
+	             &lt;div class="row ipadp2"&gt;
+                             &lt;!— ``````` SAMPLE 5 —&gt;
+		                 &lt;div class="grid-item"&gt;
+                                 &lt;a href="img/ext/illus1d_edited.jpg" data-toggle="modal" data-target="#ms5"&gt;
+                                   &lt;div class="col-md-6 img-circular5"&gt;&lt;/div&gt;
+                                 &lt;/a&gt;
+                                 &lt;div id="ms5" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                                   &lt;div class="modal-dialog modal-lg"&gt;
+                                     &lt;div class="modal-content"&gt;
+                                       &lt;img src="img/ext/illus1d_edited.jpg" class="mimgc" /&gt;
+                                     &lt;/div&gt;
+                                   &lt;/div&gt;
+                                 &lt;/div&gt;
+                               &lt;/div&gt;
+                             &lt;!— ``````` SAMPLE 6 —&gt;
+		                 &lt;div class="grid-item"&gt;
+                                 &lt;a href="img/ext/newhours_preprint.jpg" data-toggle="modal" data-target="#ms6"&gt;
+                                   &lt;div class="col-md-6 img-circular6"&gt;&lt;/div&gt;
+                                 &lt;/a&gt;
+                                 &lt;div id="ms6" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                                   &lt;div class="modal-dialog modal-lg"&gt;
+                                     &lt;div class="modal-content"&gt;
+                                       &lt;img src="img/ext/newhours_preprint.jpg" class="mimgc" /&gt;
+                                     &lt;/div&gt;
+                                   &lt;/div&gt;
+                                 &lt;/div&gt;
+                               &lt;/div&gt;
+                     &lt;!— / row ipadp2 —&gt;
+	             &lt;/div&gt;
+
+                   &lt;!— / card card-block dezs (6 samples) —&gt;
+		  &lt;/div&gt;
+                  &lt;!— / collapse—&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` COLLAPSABLE CONTENT (portfolio) --&gt;
+		  &lt;div class="collapse" id="MINIFIED_PORT"&gt;
+                   &lt;!— + + + + + + + + + 1 column + + + + + + + + + —&gt;
+		  &lt;div class="card card-block dezs"&gt;
+	             &lt;div class="row andw iphw iphwS"&gt;
+                               &lt;!— ``````` peaceful yak —&gt;
+		              &lt;a href="img/ext/STOREFRONT.jpg"&gt;&lt;span class="img-circular_ex0"&gt;&lt;/span&gt;&lt;/a&gt;
+                             &lt;span class="perhaps txtbrks_ap lift"&gt;peaceful yak branding&lt;/span&gt;&lt;br /&gt;
+		               &lt;span class="txtbg"&gt;&lt;a href="http://peacefulyak.bigcartel.com/" class="perhaps linktwk"&gt;peaceful yak&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` ap bar & kitchen —&gt;
+		              &lt;a href="img/ext/logo_big_lc2.png"&gt;&lt;span class="img-circular_ex1"&gt;&lt;/span&gt;&lt;/a&gt;
+                             &lt;span class="perhaps txtbrks_ap lift"&gt;ap bar and kitchen logo&lt;/span&gt;&lt;br /&gt;
+		               &lt;span class="txtbg"&gt;&lt;a href="http://www.apbarandkitchen.com" class="perhaps linktwk"&gt;ap bar and kitchen&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` chocolate chisel —&gt;
+		              &lt;a href="img/ext/choicchis_banner.jpg"&gt;&lt;span class="img-circular_ex2"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;span class="perhaps txtbrks_cc lift"&gt;chocolate chisel graphic&lt;/span&gt;&lt;br /&gt;
+		               &lt;span class="txtbg"&gt;&lt;a href="http://www.chocolatechisel.com/" class="perhaps linktwk"&gt;chocolate chisel&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` hernandez roofing —&gt;
+		              &lt;a href="img/ext/dronevision.png"&gt;&lt;span class="img-circular_ex3"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/c_RED_industrial.jpg"&gt;&lt;span class="img-circular_ex4"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/buscard_front_BRIAN.jpg"&gt;&lt;span class="img-circular_ex5"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_hr"&gt;hernandez roofing: drone icon, web ui, print&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` crazy water —&gt;
+		              &lt;a href="img/ext/crazywater_fb.jpg"&gt;&lt;span class="img-circular_ex6"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/crazywater_2D_3.png"&gt;&lt;span class="img-circular_ex7"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/crazywater_1D_3.png" class="ipadp"&gt;&lt;span class="img-circular_ex8"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_cw lift"&gt;crazy water: facebook graphic, print 1, print 2&lt;/span&gt;&lt;br /&gt;
+		              &lt;span class="txtbg"&gt;&lt;a href="http://crazywatermilwaukee.com" class="perhaps linktwk"&gt;crazy water&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` optimal health —&gt;
+		              &lt;a href="img/ext/ohn_rebrand.jpg"&gt;&lt;span class="img-circular_ex9"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/ohn_fb.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex10"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_ohn"&gt;optimal health network: web ui, facebook app&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` pionezero —&gt;
+		              &lt;a href="img/ext/saturn.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex11"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_pio"&gt;former pionezero logo&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` sweetrio —&gt;
+		              &lt;a href="img/ext/sweettrio_100.jpg"&gt;&lt;span class="img-circular_ex12"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/newhours_preprint.jpg"&gt;&lt;span class="img-circular_ex13"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/summer_preprint.jpg"&gt;&lt;span class="img-circular_ex14"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;a href="img/ext/winter_preprint.jpg"&gt;&lt;span class="img-circular_ex15"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/deandeluca_printed.jpg"&gt;&lt;span class="img-circular_ex16"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/autumn_preprint.jpg"&gt;&lt;span class="img-circular_ex17"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;a href="img/ext/mothersday_preprint.jpg"&gt;&lt;span class="img-circular_ex18"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/valentinesday_preprint.jpg"&gt;&lt;span class="img-circular_ex19"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/autumn_printed.jpg"&gt;&lt;span class="img-circular_ex20"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;a href="img/ext/july4_preprint.jpg"&gt;&lt;span class="img-circular_ex21"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/santa_preprint.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex22"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="txtbrks_st"&gt;&lt;/span&gt;&lt;span class="perhaps"&gt;sweettrio print&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` illustrations —&gt;
+		              &lt;a href="img/ext/illus1a_edited.jpg"&gt;&lt;span class="img-circular_ex23"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/illus1b_edited.jpg"&gt;&lt;span class="img-circular_ex24"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/illus1d_edited.jpg"&gt;&lt;span class="img-circular_ex25"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;a href="img/ext/sketch5_edited.jpg"&gt;&lt;span class="img-circular_ex26"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/print6_edited_2.jpg"&gt;&lt;span class="img-circular_ex27"&gt;&lt;/span&gt;&lt;/a&gt;
+		              &lt;a href="img/ext/twitter_owl_v.png" class="ipadp"&gt;&lt;span class="img-circular_ex28"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_ils"&gt;illustrations&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` off the beadn path —&gt;
+		              &lt;a href="img/ext/otbp.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex29"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks_obp"&gt;off the beadn path web ui&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` art asia —&gt;
+		              &lt;a href="img/ext/artasia.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex30"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks"&gt;art asia gallery web ui&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` barkow —&gt;
+		              &lt;a href="img/ext/barkow_mrbarkow.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex31"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks lift"&gt;barkow graphic&lt;/span&gt;&lt;br /&gt;
+		              &lt;span class="txtbg"&gt;&lt;a href="http://barkow.com" class="perhaps linktwk"&gt;barkow inc.&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` zipcoat —&gt;
+		              &lt;a href="img/ext/zc.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex32"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks"&gt;zipcoat web ui&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` info graphic —&gt;
+		              &lt;a href="img/ext/trek_fest.jpg" class="ipadp"&gt;&lt;span class="img-circular_ex33"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks"&gt;information design graphic&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+                               &lt;!— ``````` startup —&gt;
+		              &lt;a href="img/ext/sprint1B(blue-green).jpg" class="ipadp"&gt;&lt;span class="img-circular_ex34"&gt;&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+		              &lt;span class="perhaps txtbrks"&gt;startup web ui&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+	             &lt;/div&gt;
+                  &lt;!— / card card-block dezs (long links) —&gt;
+		  &lt;/div&gt;
+                  &lt;!— / collapse—&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— / col-md-4 iconztxt —&gt;
+		  &lt;/div&gt;
+
+          &lt;!— / row —&gt;
+	  &lt;/div&gt;
+
+
+
+          &lt;!— / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /  GROWTH —&gt;
+          &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` GROWTH ICON --&gt;
+		  &lt;div  id="incubator" class="col-md-4 iconz"&gt;
+                  &lt;img src="img/incubator.png"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` empty —&gt;
+		  &lt;div class="col-md-4"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````````````````` CONTENT --&gt;
+		  &lt;div class="col-md-4 iconztxt"&gt;
+
+                   &lt;!— ``````` TITLE —&gt;
+		  &lt;p&gt;growth & sustainability&lt;/p&gt;
+
+                   &lt;!— ``````` BLURB OF GROWTH —&gt;
+		  &lt;p class="samples"&gt;the &lt;span class="txtbg"&gt;&lt;a href="https://techcrunch.com/2016/03/22/y-combinator-demo-day-winter-2016/"&gt;latest info&lt;/a&gt;&lt;/span&gt; coming out of y combinator these days is that vc’s are looking for profitability, or, startups that can become &lt;span class="txtbg2"&gt;sustainable quickly and won’t need lots of funding to succeed&lt;/span&gt;.&lt;/p&gt;
+
+                   &lt;!— ``````` TOGGLE CONTENT LINK --&gt;
+		  &lt;p class="samples"&gt;( &lt;a href ="#" class="samples" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"&gt;&lt;span class="txtbg"&gt;more ..&lt;/span&gt;&lt;/a&gt; )&lt;/p&gt;
+
+                   &lt;!— ``````` COLLAPSABLE CONTENT --&gt;
+		  &lt;div class="collapse" id="collapseExample4"&gt;
+		  &lt;p class="samples"&gt;one of the original employees at apple was guy kawasaki, who once said: &lt;span class="txtbg2"&gt;"always make progress"&lt;/span&gt;, and it’s our expertise that will kickstart your startup into essential growth and sustainability.&lt;/p&gt;
+
+		  &lt;p class="samples"&gt;if you want to consider an incubator or accelerator growth approach in preparation for larger seed funding, we will help you find the right incubator or accelerator &lt;span class="txtbg"&gt;&lt;a href="http://qz.com/682975/boston-is-now-ranked-the-best-city-to-launch-a-startup/"&gt;environment&lt;/a&gt;&lt;/span&gt;.
+
+		  &lt;p class="samples"&gt;want to do some homework? try the &lt;span class="txtbg"&gt;&lt;a href="http://playbook.samaltman.com/"&gt;startup playbook&lt;/a&gt;&lt;/span&gt; which is straight out of &lt;span class="txtbg"&gt;&lt;a href="https://www.ycombinator.com/"&gt;y combinator’s&lt;/a&gt;&lt;/span&gt; best talent.&lt;/p&gt;
+                  &lt;!— / collapse—&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— / col-md-4 iconztxt —&gt;
+		  &lt;/div&gt;
+
+          &lt;!— / row —&gt;
+	  &lt;/div&gt;
+
+
+
+          &lt;!— / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /  FUNDING —&gt;
+          &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+	  &lt;div class="row"&gt;
+
+                  &lt;!— ``````````````````` FUNDING ICON --&gt;
+		  &lt;div  id="funding" class="col-md-4 iconz"&gt;
+                  &lt;img src="img/funding.png"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````` empty —&gt;
+		  &lt;div class="col-md-4"&gt;
+		  &lt;/div&gt;
+
+                   &lt;!— ``````````````````` CONTENT --&gt;
+		  &lt;div class="col-md-4 iconztxt"&gt;
+
+                   &lt;!— ``````` TITLE —&gt;
+		  &lt;p&gt;seed funding&lt;/p&gt;
+
+                   &lt;!— ``````` BLURB ON FUNDING —&gt;
+		  &lt;p class="samples"&gt;preparing for seed funding depends on these core areas of focus:&lt;/p&gt;
+
+		  &lt;p class="samples"&gt;
+                 - &lt;span class="txtbg2"&gt;the market&lt;/span&gt; for your idea,&lt;br /&gt;
+                 - a &lt;span class="txtbg2"&gt;well designed&lt;/span&gt; app,&lt;br /&gt;
+                 - your &lt;span class="txtbg2"&gt;business plan&lt;/span&gt;,&lt;br /&gt;
+                 - and your &lt;span class="txtbg2"&gt;pitch to investors&lt;/span&gt;.&lt;/p&gt;
+
+		  &lt;p class="samples"&gt;&lt;span class="txtbg"&gt;&lt;a href="#idea"&gt;we help you be prepared&lt;/a&gt;&lt;/span&gt; before applying for seed funding and will &lt;span class="txtbg"&gt;&lt;a href="https://www.crunchbase.com/investor-leaderboard"&gt;help you find it&lt;/a&gt;&lt;/span&gt;.
+
+                  &lt;!— / col-md-4 iconztxt —&gt;
+		  &lt;/div&gt;
+
+          &lt;!— / row —&gt;
+	  &lt;/div&gt;
+
+    &lt;!— / main content container —&gt;
+    &lt;/div&gt;
+
+    &lt;!— ``````````````````SPACING TO FOOTER --&gt;
+   &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+
+
+
+
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    FOOTER
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;footer id="talk" class="footer"&gt;
+      &lt;!— + + + + + + + + + 3 columns + + + + + + + + + —&gt;
+      &lt;div class="container"&gt;
+
+        &lt;!— ``````````````````` IDEAS ICON --&gt;
+        &lt;div class="col-md-4 ideas"&gt;
+          &lt;img src="img/ideas3.png"&gt;
+        &lt;/div&gt;
+
+        &lt;!— ``````````````````` BLURB ON NEXT STEP --&gt;
+        &lt;div class="col-md-4 have"&gt;
+          &lt;p class="samples"&gt;&lt;span class="txtbg"&gt;&lt;a href="resume.htm" target="_self"&gt;resume&lt;/a&gt;&lt;/span&gt; | take your idea a step forward, &lt;span class="txtbg"&gt;&lt;a href="mailto:pionezero@protonmail.ch" target="_self"&gt;let’s talk! &lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+          &lt;!-- or call &lt;a href="tel://12624215780"&gt;262-421-5780&lt;/a&gt;--&gt;
+        &lt;/div&gt;
+
+         &lt;!— ``````` empty —&gt;
+        &lt;div class="col-md-4 have"&gt;
+        &lt;/div&gt;
+
+       &lt;!— / footer container —&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+
+
+
+
+
+    &lt;!—
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    SCRIPTING
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    —&gt;
+    &lt;!— ``````````````````` GOOGLE JQUERY, v2.1.4 --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!— ``````````````````` LOCAL JQUERY, v2.1.4 --&gt;
+    &lt;script&gt;window.jQuery || document.write('&lt;script src="js/jquery.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+
+    &lt;!— ``````````````````` BOOTSTRAP JQUERY, v4.0.0-alpha.2 --&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+
+    &lt;!— ``````````````````` IE10 VIEWPORT HACK FOR SURFACE/DESKTOP WINDOWS 8 BUG --&gt;
+    &lt;script src="js/ie10-viewport-bug-workaround.js"&gt;&lt;/script&gt;
+
+    &lt;!— ``````````````````` SMOOTH SCROLLING, from http://css-tricks.com/snippets/jquery/smooth-scrolling/ --&gt;
+    &lt;script&gt;
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    &lt;/script&gt;
+
+    &lt;!— ``````````````````` GOOGLE --&gt;
+    &lt;script&gt;
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1002182-8', 'auto');
+      ga('send', 'pageview');
+    &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre><script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/58c5b39997fbd80a94f9bcc4/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body></html>

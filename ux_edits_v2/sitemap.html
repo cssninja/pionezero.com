@@ -1,0 +1,569 @@
+      
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>sitemap | docs (peak)</title>
+
+    <!-- notes
+      
+      1
+      possible internal search, query: https://search.brave.com/search?q=create+an+internal+webiste+search+script&source=desktop, https://stackoverflow.com/questions/21386497/javascript-search-engine-search-own-site, https://github.com/fergiemcdowall/search-index
+    
+      2
+      include styled code (entire ux_edits file) https://highlightjs.org/
+
+      3
+      color picker > https://coolors.co/1b1b1b
+
+      4
+      error when trying to use anchor link to code page:
+      "syscall":"","errno":2,"code":"ENOENT","path":"/var"
+      https://stackoverflow.com/questions/58936939/errno-2-code-enoent-syscall-open
+    
+    -->
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- ADDED .. original -->
+    <!-- <link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css"/> -->
+    <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
+    <!-- <link rel="stylesheet" href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css"/> -->
+
+     <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+    <style>
+      body {
+        background: #2E3338;
+        font-size: 1em;
+      }
+      /* links */
+      a {
+        color: #9A9D9F;
+      }
+      a:hover {
+        color: #BDBFC1;
+      }
+      /* text */
+      .txtc {
+        color: #9A9DA0 !important;
+      }
+      /* dim notation text */
+      .txtc_2 {
+        color:#596268;
+        text-decoration: none;
+      }
+      .txt_2 a {
+        color: #596268;
+        text-decoration: none;
+      }
+      .txt_2 a:hover {
+        color: #778187;
+        text-decoration: none;
+      }
+      /* color for code build link */
+      .build {
+        color: #9D8F4E;
+        text-decoration: none;
+      }
+      .build a {
+        color: #9D8F4E;
+        text-decoration: none;
+      }
+      .build a:hover {
+        color: #C6A516 !important;
+        text-decoration: none;
+      }
+      /* highlighted text for making point */
+      .txtbg {
+        color:#1E2124;
+        background:#676D73;
+        padding:1px;
+        border-radius:2px;
+        font-weight:500;
+      }
+      
+      /* underline control thanks to: https://css-tricks.com/styling-links-with-real-underlines/ */
+      .unq {
+        color: #9D8F4E;
+      }
+      .unq a {
+        text-decoration-color: #9D8F4E;
+        text-decoration-thickness: .225em;
+        text-underline-offset: 4px;
+      }
+      .unq a:hover {
+        color: #C6A516 !important;
+        text-decoration-color: #C6A516;
+        text-decoration-thickness: .225em;
+        text-underline-offset: 4px;
+      }
+      
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+      /* row style from: https://getbootstrap.com/docs/5.0/assets/css/docs.css .. + sign described here: https://www.w3.org/TR/CSS21/selector.html#adjacent-selectors */
+      /* ADDED */
+      .bd-example-row {
+        margin-top: 6em;
+        margin-bottom: 6em;
+      }
+      .bd-example-row .row>.col,.bd-example-row .row>[class^="col-"] {
+        /* ADDED */
+        /* margin-top:5em; */
+        padding-top:.75rem;
+        padding-bottom:.75rem;
+        background-color:#1E2124; /* rgba(39,41,43,0.03), hex #27292b .. background of each col-md div */
+        border:5px solid #3C4249; /* rgba(39,41,43,0.1), hex #27292b .. border or each col-md div */
+        border-radius: 10px;
+      }
+
+      /* col-md is 768px breakpoint .. check styles here: https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css .. long string of URL text was causing css grid to break up, fixed thanks to: https://css-tricks.com/almanac/properties/w/word-break/ */
+      @media screen and (min-width: 768px) {
+        .col-md {
+          margin:0.5rem;
+          word-break: break-all;
+          padding: 0px 20px;
+        }
+      }
+      @media screen and (max-width: 767.5px) {
+        .col-md {
+          margin:0.5rem 0rem 0.5rem 0rem;
+          word-break: break-all;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand txtc" href="https://codepen.io/fullstackninja/live/LYgzZXW">Site Map (developer mode)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+           <li class="nav-item">
+            <a target="_blank" class="nav-link" aria-current="page" href="https://pionezero.com/ux_edits_v2/">Master edit log</a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" aria-current="page" href="https://teams.microsoft.com/_#/conversations/19:meeting_YWMxMGJlODEtNzNiMC00MTU2LWJmZGUtY2NiYjQwNGVkMDIx@thread.v2?ctx=chat">Chat for help</a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://codepen.io/fullstackninja/full/abaapgo/40cb07ccdfc7f7e1d86dd26799666aea">Color palette</a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://coolors.co/d1cb1c">Color picker</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    
+    <div class="bd-example-row">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md">
+            <span class="txtc">developer notes<br />
+              (updated: t jun 6 2023 7:14)
+            </span><br /><br />
+
+            <p class="txtc">
+              * DEV OPS DOCUMENTATION OF USER STORIES + TASKS FOR SARAH > <a href="https://pionezero.com/ux_edits_v2/devops_notes.txt">devops_notes.txt</a>
+            <p>
+
+            <p class="txtc">
+              * NEEDS TO BE DONE > take code located in miva version history and update (or add) below .. ONLY ABOUT 50% LOGGED INTO THIS DEV SITE MAP
+            <p>
+
+            <p class="txtc">
+              * DONE > migrating css, img and js from github to miva, reference site map for that HERE: <a href="https://pionezero.com/ux_edits_v2/code_migration_site_map.txt">https://pionezero.com/ux_edits_v2/code_migration_site_map.txt</a> .. COMPLETED: login, global header, SFNT
+            <p>
+            
+            <p class="txtc">
+              1) for editing accuracy, in the browser dev tools look at the body ID at the top of the source code <span class="txtbg">for the miva code name of the actual page that is loaded</span> (like CTGY, BASK, etc), as this is not always apparent<br /><br />
+              2) outside of a demo, <span class="txtbg">if you wish to quickly click through the links below (without having to log in)</span> do one of two things:<br /><br />
+              
+                 &nbsp;&nbsp;&nbsp;&nbsp;a) go to customers > check box to the left of any customer > click blue button 'shop as customer' .. this should disable having to log in all the time to see a link<br />
+                 &nbsp;&nbsp;&nbsp;&nbsp;b) or, go to user interface > global settings > global header & footer > global header .. and comment out lines of code 1-4, beginning with:<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mvt:if expr="NOT g.basket:cust_id"&gt;<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;this disables the need to log in.<br /><br />
+              3) the main user experience a customer will have 90% of the time is the first section below, <span class="txtbg">'shopping ux path' (demo-ready and pixel perfect for ALL 60 customers)</span> .. the remaining pages (with a few exceptions) are account pages or category pages and such with only minor editing left to do<br /><br />
+              4) <span class="txtbg">in gold links below is in-depth coding info</span>, either access to a complete build via codepen or stackblitz, or access to my <span class="unq"><a class="unq" href="https://pionezero.com/ux_edits_v2/">master edit log</a></span>, which is a file i used to write and store all CSS editing, so if you wish to see a bunch of media queries or alignments coding, it's all there<br /><br />
+              5) NEW SECTIONS TO ADD BELOW > (a) notes on codepen, stackblitz dev environments .. (b) what code fix is .. (c) resources section (client list, png img, jpg img, psd, brand guide all via mega folder access) .. (d) build section (login, header, storefront, major edits like PROD, CTGY) .. (e) scrum section (link to board) .. (f) comps section (XD and live) .. (g) contact section (maybe live chat modal) .. (h) document INLINE .. (i) site map and docs
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <span class="txtc">shopping ux path</span><br /><br />
+
+            <span class="txtc">storefront</span>&nbsp;&nbsp;<br />
+            <a target="_blank" href="https://peakdentalstore.com/storefront.html">https://peakdentalstore.com/storefront.html</a><br />
+            <span class="txtc">edi/location: user interface > templates > SFNT</span><br />
+            <span class="build"><a target="_blank" href="https://codepen.io/fullstackninja/full/bGmNXrg">code build</a></span><span class="txtc_2"> (rebuilt in codepen, click 'view source code' upper right to view dev environment and code written)</span><br /><br />
+
+            <span class="txtc">promo or print</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/promo.html">https://peakdentalstore.com/promo.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/print.html">https://peakdentalstore.com/print.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > promo</span><br />
+            <span class="txtc">location: catalogue > categories > print</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">product</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/lip-moisturizer.html">https://peakdentalstore.com/lip-moisturizer.html</a><br />
+            <span class="txtc">edit: user interface > templates > PROD</span><br />
+            <span class="txtc">location: catalogue > products</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#prod">code fix</a></span><br /><br />
+
+            <span class="txtc">basket contents</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/basket-contents.html">https://peakdentalstore.com/basket-contents.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > BASK</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#bask">code fix</a></span><br /><br />
+
+            <span class="txtc">checkout: customer information</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout.html">https://peakdentalstore.com/checkout.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-customer-information.html">https://peakdentalstore.com/checkout-customer-information.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > OCST</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ocst">code fix</a></span><br /><br />
+
+            <span class="txtc">checkout: shipping/payment selection</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-special-offers.html">https://peakdentalstore.com/checkout-special-offers.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-shippingpayment-selection.html">https://peakdentalstore.com/checkout-shippingpayment-selection.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > OSEL</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#osel">code fix</a></span><br /><br />
+            
+            <span class="txtc">checkout: payment information</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-payment-information.html">https://peakdentalstore.com/checkout-payment-information.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > OPAY</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#opay">code fix</a></span><br /><br />
+            
+            <span class="txtc">invoice</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/invoice.html">https://peakdentalstore.com/invoice.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > INVC</span><br /><br />
+          </div>
+
+          <div class="col-md">
+            <span class="txtc">shopping ux path, sub pages</span><br /><br />
+
+            <span class="txtc">checkout: basket empty</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-basket-empty.html">https://peakdentalstore.com/checkout-basket-empty.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > BSKE</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#bske">code fix</a></span><br /><br />
+
+            <span class="txtc">order already processed</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/order-already-processed.html">https://peakdentalstore.com/order-already-processed.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > OPRC</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#oprc">code fix</a></span><br /><br />
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <span class="txtc">shopping ux path, optional pages</span><br /><br />
+
+            <span class="txtc">category display</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-display.html">https://peakdentalstore.com/category-display.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > CTGY</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 1</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-1.html">https://peakdentalstore.com/category-1.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_01</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 2</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-2.html">https://peakdentalstore.com/category-2.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_02</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 3</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-3.html">https://peakdentalstore.com/category-3.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_03</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 4</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-4.html">https://peakdentalstore.com/category-4.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_04</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sub category 1</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-1.html">https://peakdentalstore.com/sub-category-1.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sub-cat-1</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sub category 2</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-2.html">https://peakdentalstore.com/sub-category-2.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sub-cat-2</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sub category 3</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-3.html">https://peakdentalstore.com/sub-category-3.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sub-cat-3</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sub category 4</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-4.html">https://peakdentalstore.com/sub-category-4.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sub-cat-4</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sale</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sale.html">https://peakdentalstore.com/sale.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sale</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">featured products</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/featured-products.html">https://peakdentalstore.com/featured-products.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > featured</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/shipping-and-return-policy.html">https://peakdentalstore.com/shipping-and-return-policy.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-shippingpayment-selection.html">https://peakdentalstore.com/checkout-shippingpayment-selection.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout.html">https://peakdentalstore.com/checkout.html</a>
+          </div>
+
+          <div class="col-md">
+            <span class="txtc">header</span><br /><br />
+
+            <span class="txtc">global header</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/storefront.html">https://peakdentalstore.com/storefront.html</a><br />
+            <span class="txtc">edi/location: user interface > global settings > global header & footer > global header</span>&nbsp;&nbsp;<br />
+            <span class="build"><a target="_blank" href="https://codepen.io/fullstackninja/full/VwEPBrg">code build</a></span><span class="txtc_2"> (rebuilt in codepen, click 'view source code' upper right to view dev environment and code written)<span><br /><br />
+
+            <span class="txtc">category 1</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-1.html">https://peakdentalstore.com/category-1.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_01</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 2</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-2.html">https://peakdentalstore.com/category-2.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_02</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 3</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-3.html">https://peakdentalstore.com/category-3.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_03</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 4</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-4.html">https://peakdentalstore.com/category-4.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_04</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <span class="txtc">footer</span><br /><br />
+
+            <span class="txtc">category 1</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-1.html">https://peakdentalstore.com/category-1.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_01</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 2</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-2.html">https://peakdentalstore.com/category-2.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_02</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 3</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-3.html">https://peakdentalstore.com/category-3.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_03</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">category 4</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-4.html">https://peakdentalstore.com/category-4.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > category_04</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">sale</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/sale.html">https://peakdentalstore.com/sale.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > sale</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <span class="txtc">featured products</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/featured-products.html">https://peakdentalstore.com/featured-products.html</a><br />
+            <span class="txtc">edit: user interface > templates > CTGY</span><br />
+            <span class="txtc">location: catalogue > categories > featured</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#ctgy">code fix</a></span><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/about-us.html">https://peakdentalstore.com/about-us.html</a><br /><br />
+
+            <span class="txtc">customer account</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account.html">https://peakdentalstore.com/customer-account.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > ACLN</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#acln">code fix</a></span><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/contact-us.html">https://peakdentalstore.com/contact-us.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/wish-lists.html">https://peakdentalstore.com/wish-lists.html</a><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/privacy-policy.html">https://peakdentalstore.com/privacy-policy.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/shipping-and-return-policy.html">https://peakdentalstore.com/shipping-and-return-policy.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/site-map.html">https://peakdentalstore.com/site-map.html</a>
+          </div>
+
+          <div class="col-md">
+            <span class="txtc">account</span><br /><br />
+
+            <span class="txtc">login</span>&nbsp;&nbsp;<br />
+
+            <a target="_blank" href="https://peakdentalstore.com/login-new.html">https://peakdentalstore.com/login-new.html</a><br />
+            <span class="txtc">edit: user interface > templates > LOGN_new</span>&nbsp;&nbsp;<br />
+            <span class="build"><a target="_blank" href="https://codepen.io/fullstackninja/full/dygdPKW">code build</a></span><span class="txtc_2"> (rebuilt locally, click 'view source code' upper right to view new dev environment and code written)</span><br /><br />
+
+            <span class="txtc">customer account</span><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account.html">https://peakdentalstore.com/customer-account.html</a><br />
+            <span class="txtc">edit/location: user interface > templates > ACLN</span><br />
+            <span class="build"><a target="_blank" href="https://pionezero.com/ux_edits_v2/#acln">code fix</a></span><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/customer-edit.html">https://peakdentalstore.com/customer-edit.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/change-password.html">https://peakdentalstore.com/change-password.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account-balance.html">https://peakdentalstore.com/customer-account-balance.html</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <span class="txtc">my dashboard</span><br /><br />
+
+            <a target="_blank" href="https://peakdentalstore.com/customer-edit.html">https://peakdentalstore.com/customer-edit.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/change-email-address.html">https://peakdentalstore.com/change-email-address.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/change-password.html">https://peakdentalstore.com/change-password.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-payment-cards.html">https://peakdentalstore.com/customer-payment-cards.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-payment-card-add.html">https://peakdentalstore.com/customer-payment-card-add.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/order-history-list.html">https://peakdentalstore.com/order-history-list.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-subscriptions.html">https://peakdentalstore.com/customer-subscriptions.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/wish-lists.html">https://peakdentalstore.com/wish-lists.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account-balance.html">https://peakdentalstore.com/customer-account-balance.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/redeem-gift-certificate.html">https://peakdentalstore.com/redeem-gift-certificate.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-address-book.html">https://peakdentalstore.com/customer-address-book.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-address-add.html">https://peakdentalstore.com/customer-address-add.html</a>
+          </div>
+
+          <div class="col-md">
+            <span class="txtc">alphabetized master list</span><br /><br />
+            
+            <a target="_blank" href="https://peakdentalstore.com/about-us.html">https://peakdentalstore.com/about-us.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/basket-contents.html">https://peakdentalstore.com/basket-contents.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-1.html">https://peakdentalstore.com/category-1.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-2.html">https://peakdentalstore.com/category-2.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-3.html">https://peakdentalstore.com/category-3.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-4.html">https://peakdentalstore.com/category-4.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/category-display.html">https://peakdentalstore.com/category-display.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/change-email-address.html">https://peakdentalstore.com/change-email-address.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/change-password.html">https://peakdentalstore.com/change-password.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-basket-empty.html">https://peakdentalstore.com/checkout-basket-empty.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-customer-information.html">https://peakdentalstore.com/checkout-customer-information.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-payment-information.html">https://peakdentalstore.com/checkout-payment-information.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-shippingpayment-selection.html">https://peakdentalstore.com/checkout-shippingpayment-selection.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout-special-offers.html">https://peakdentalstore.com/checkout-special-offers.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/checkout.html">https://peakdentalstore.com/checkout.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/contact-us.html">https://peakdentalstore.com/contact-us.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account-balance.html">https://peakdentalstore.com/customer-account-balance.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-account.html">https://peakdentalstore.com/customer-account.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-address-add.html">https://peakdentalstore.com/customer-address-add.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-address-book.html">https://peakdentalstore.com/customer-address-book.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-edit.html">https://peakdentalstore.com/customer-edit.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-payment-card-add.html">https://peakdentalstore.com/customer-payment-card-add.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-payment-cards.html">https://peakdentalstore.com/customer-payment-cards.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/customer-subscriptions.html">https://peakdentalstore.com/customer-subscriptions.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/featured-products.html">https://peakdentalstore.com/featured-products.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/frequently-asked-questions.html">https://peakdentalstore.com/frequently-asked-questions.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/invoice.html">https://peakdentalstore.com/invoice.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/lip-moisturizer.html">https://peakdentalstore.com/lip-moisturizer.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/order-history-list.html">https://peakdentalstore.com/order-history-list.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/privacy-policy.html">https://peakdentalstore.com/privacy-policy.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/redeem-gift-certificate.html">https://peakdentalstore.com/redeem-gift-certificate.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/sale.html">https://peakdentalstore.com/sale.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/shipping-and-return-policy.html">https://peakdentalstore.com/shipping-and-return-policy.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/site-map.html">https://peakdentalstore.com/site-map.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/storefront.html">https://peakdentalstore.com/storefront.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-1.html">https://peakdentalstore.com/sub-category-1.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-2.html">https://peakdentalstore.com/sub-category-2.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-3.html">https://peakdentalstore.com/sub-category-3.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/sub-category-4.html">https://peakdentalstore.com/sub-category-4.html</a><br />
+            <a target="_blank" href="https://peakdentalstore.com/wish-lists.html">https://peakdentalstore.com/wish-lists.html</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light" style="background:#1E2124 !important;">
+  <div class="container">
+    <span class="txt_2"><a target="_blank" href="https://pionezero.com">pi one zero labs</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="tel:+16082869463">dev help: <span style="font-size:0.9em;">+1-608-286-9463</span></a></span>
+  </div>
+</footer>
+
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+  </body>
+</html>

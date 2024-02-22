@@ -1,0 +1,95 @@
+/*
+
+NOTES and CREDITS:
+
+1) AS IN HTML, ORDER OF STYLES VERY IMPORTANT, DON'T ALTER!! ALTERING WILL DISABLE SOME FUNCTIONS
+2) Combined 3 different .css files, so there are 3 DIFFERENT DESIGNATED AREAS
+3) EDITS to original styles marked via: CHANGED, ADDED
+
+4) MOSAIC refers to LAYOUT, https://github.com/sapegin/jquery.mosaicflow
+5) FIT TEXT refers to SCALABLE TITLE TEXT, https://github.com/davatron5000/FitText.js
+6) DARK DROPDOWN MENU of course refers to the top responsive MENU, http://responsive-nav.com/
+7) STICKY FOOTER SOLUTION refers to FIXING FOOTER to bottom using #outer, .footer and .push, http://ryanfait.com/sticky-footer/
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* ============= SOURCE: EXTRACTED from original RESPONSIVE LAYOUT build (Mosaic) from sapegin on GitHub, https://github.com/sapegin/jquery.mosaicflow ============= */
+
+.mosaicflow__column {
+	float:left;
+	}
+
+.mosaicflow__item {
+	 position:relative;
+        padding:20px; /* ADDEDx */
+        background: #49637A; /* ADDED */
+        -moz-border-radius: 7px; /* ADDED */
+        border-radius: 7px; /* ADDED */
+        margin:5px 5px 9px 5px; /* ADDED */
+        font-family: lato;
+        color: #C3C3C3 !important; /* was hsla(2, 0%, 7%, 1.0) .. hex equivalent is 333, http://www.workwithcolor.com/hsl-color-picker-01.htm */
+        font-weight:bold;
+	 font-size:20px;
+        text-align:center;
+        border:0;
+	}
+	.mosaicflow__item img {
+		display:block;
+		width:100%;
+		max-width:500px;
+		height:auto;
+		}
+	/* .mosaicflow__item p {
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		margin:0;
+		padding:5px;
+		background:hsla(0,0%,0%,.5);
+		color:#fff;
+		font-size:14px;
+		text-shadow:1px 1px 1px hsla(0,0%,0%,.75);
+		opacity:0;
+		-webkit-transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+		   -moz-transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+		     -o-transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+		        transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+		} */
+	.mosaicflow__item p {
+		margin-top:7px;
+		}
+	/* .mosaicflow__item:hover p {
+		opacity:1;
+		} */
+
+
+
+*{padding:0;margin:0;-moz-box-sizing:border-box;box-sizing:border-box}
+
+
+
+
+
+
+
+.wrapper{position:relative;margin:20px auto 20px;max-width:1200px;padding:15px 20px 20px;} /* CHANGED, 1) took out:
+-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.4);box-shadow:0 5px 10px rgba(0,0,0,0.4) at end, 2) increased width to 1200px */
+
+
+
+
+
+
+.mosaicflow{margin:0 -20px 50px}
+
+

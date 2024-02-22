@@ -1,0 +1,36 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 250px;
+  line-height: 0px; /* Vertically center the text there */
+  background-color: #fdfdf3;
+  border-width:10px;	
+  border-top-style:dashed;
+  border-color: #ba4173;
+  line-height:40px;
+}
+.footer_drk {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 250px;
+  line-height: 0px; /* Vertically center the text there */
+  background-color: #fdfdf3;
+  border-width:10px;	
+  border-top-style:dashed;
+  border-color: #656565;
+  line-height:40px;
+}

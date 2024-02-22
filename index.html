@@ -1,1 +1,1787 @@
-testing testing
+<!doctype html>
+<html lang="en">
+<head>
+    <title>pi one zero labs | madison, wi</title>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="pi one zero labs">
+    <meta name="description" content="I’m a highly skilled visual designer. My creative existence is absorbed in all things design: illustration, branding, graphic design, typography, I love flat design based color palettes and prefer simplicity in design. I'm a front-end coding ninja and craft Shopify stores as well. On breaks I enjoy building things (outdoor greenhouses, alpine furniture, tree houses), survival gardening, vegan food, and long training runs or bikes in the country. I'm fully immersed and fluent in startup culture , from AI to distributed web to the ethereal mathematics that empowers it all. ">
+    <meta name="keywords" content="product design,web design,web designer,visual design,visual designer,ui,ui design,ux,ux design,illustration,branding,mobile,mobile first,code,coding,developer,front-end,front-end development,front-end coding,responsive,responsive design,mobile app,shopfy,liquid,html,css,javascript,react,startup,distributed web,ai,math,mathematics,madison,wisconsin,pi one zero labs">
+
+    <!-- open graph properties, thanks to: https://realfavicongenerator.net/social/ -->
+    <meta property="og:image:width" content="279">
+    <meta property="og:image:height" content="279">
+    <meta property="og:description" content="I’m a highly skilled visual designer. My creative existence is absorbed in all things design: illustration, branding, graphic design, typography, I love flat design based color palettes and prefer simplicity in design. I'm a front-end coding ninja and craft Shopify stores as well. On breaks I enjoy building things (outdoor greenhouses, alpine furniture, tree houses), survival gardening, vegan food, and long training runs or bikes in the country. I'm fully immersed and fluent in startup culture , from AI to distributed web to the ethereal mathematics that empowers it all. ">
+    <meta property="og:url" content="https://pionezero.com/">
+    <meta property="og:image" content="https://pionezero.com/og-image.jpg">
+    <meta property="og:title" content="pi one zero labs">
+
+    <!-- favicon, thanks to https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- preloading port img via js (not jquery), targeted div tag is in HEADER labeled HIDDEN, thanks to: https://www.dougv.com/2012/03/preloading-images-with-javascript/, view-source:https://demo.dougv.com/js_preload_images/example1.htm -->
+    <script type="text/javascript">
+    function preloadImages() {
+        var hiddenDiv = document.getElementById('hiddenImages');
+        var i;
+        var img;
+
+        for (i = 0; i < arguments.length; i++) {
+            img = document.createElement('img');
+            img.src = arguments[i];
+            img.alt = '';
+            hiddenDiv.appendChild(img);
+        }
+    }
+
+    function toggleHidden() {
+        var hiddenDiv = document.getElementById('hiddenImages');
+        if (hiddenDiv.style.display == 'none') {
+            hiddenDiv.style.display = 'block';
+        }
+        else {
+            hiddenDiv.style.display = 'none';
+        }
+    }
+    </script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CPlayfair+Display:400,400i,700,700i%7CRoboto:400,400i,500,700" rel="stylesheet">
+    <!-- use firefox only for nabbing fonts .. ubuntu under greek language -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+
+    <!-- font awesome js -->
+    <script src="https://kit.fontawesome.com/3c4f5c0732.js" crossorigin="anonymous"></script>
+
+    <!-- modernizr for webp display in safari, thanks to: https://modernizr.com/download?webp-dontmin-setclasses and https://stackoverflow.com/questions/55191112/webp-images-doesnt-display-in-safari-although-added-polyfill and https://css-tricks.com/using-webp-images/#article-header-id-4 and http://www.stucox.com/blog/using-webp-with-modernizr/ .. SEE NOTES IN folder assets, have to add css classes and js snippet (https://modernizr.com/download?webp-webplossless_webp_lossless-dontmin-setclasses .. see: 'view examples') .. MODERNIZR IS JUST A DETECT SCRIPT, DOES NOT ADD WEBP FUNCTIONALITY TO SAFARI SO REMOVE // INSTEAD, add this: https://www.npmjs.com/package/webp-hero, and tehy give working example here: https://webp-hero.chasemoskal.com .. stackoverflw link above also links to solution using <picture> and such here: https://stackoverflow.com/questions/60913711/how-to-use-webp-images-and-support-safari/64048033#64048033  -->
+    <script src="assets/js/added/modernizr-custom.js" type="text/javascript"></script>
+
+    <!-- plugins css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/themify-icons/css/themify-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/fancybox/css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/owlcarousel/css/owl.carousel.min.css"/>
+
+    <!-- theme css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+    <!-- manual css .. edits in master file (style.css) are marked 'WAS', 'ADDED' or 'NOTE' -->
+    <style type="text/css">
+    /*
+    (BEGIN notes)
+
+      -------
+        image types (34)
+      -------
+        1) 3 svgs >
+          - 2 waves (both in sections 4 and 7)
+            - 1 footer arch (section 6)
+      2) 1 jpg >
+          - banner rocket (section 3, .rocketbg)
+        3) 4 png's >
+          - logo (section 3, .pi10bg)
+            - logo (section 6, widget 1, STILL IN SVG MODE)
+            - map (section 6, widget 3)
+            - favicon labeled 'open graph properties and favicon' (above)
+      4) 26 font awesome icons >
+          - 1 labled 'to bottom arrow'(section 2 .. font size > .topar)
+        - 10 labeled 'font awesome icon' (section 5 .. font size > .display-1)
+            - 6 labeled 'contact info' (section 6, widget 3 .. font size > .fawe)
+            - 1 labeled 'to top arrow' (section 6, bottom .. font size > .botar)
+            - 2 labeled 'trademark and copyright' (section 6, bottom .. font size > .hlight2)
+            - 7 labeled 'social links' (section 6, bottom .. font size > .social-icons-link)
+
+        * use svg's only if you want to control fill, shape, animation, everything (in a file like functions.js, line 267-290)
+        * most svg setup edited out but all divs and classes remain for layout (see original svg setup in wizixo-1.1.0.zip)
+            * moz documents setting up png in svg mode > https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image
+
+    -------
+        illustrations (10)
+    -------
+        1) 10 in 'panels and such' (section 6) use bg ILLUSTRATIONS in each div marked // left //, // right //
+
+      (END notes)
+        */
+    /* banner image as background */
+    .rocketbg {
+        background: url('assets/images/pionezero/wavysvgbg_blastclouds_med.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 55% 0%;
+        /* x,y */
+    }/* rocket bg in em's .. cool feature, can ZOOM THE ROCKET IN OR OUT HERE */
+
+    .rocketems {
+        height: 50em !important;
+    }
+
+    @media (max-width: 450px) {
+        .rocketems {
+            height: 46em !important;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .rocketems {
+            height: 40em !important;
+        }
+    }/* auto-type top .. manually imported from style.css */
+
+    .text-primary {
+        color: #e1d9e7 !important;
+    }/* auto-type bottom (moving type) .. manually imported from style.css */
+
+    .text-info {
+        color: #d489fa !important;
+        /* WAS c8baf9 */
+        background: #3a204c;
+        padding: 6px;
+        border: 0;
+    }/* auto-type cursor .. manually imported from style.css */
+
+    .cd-headline.big-clip .cd-words-wrapper::after {
+        background-color: #e1d9e7 !important;
+    }
+
+    .clip-dark.cd-headline.big-clip .cd-words-wrapper::after {
+        background-color: #e1d9e7 !important;
+    }/* reduces auto-type size for small mobile */
+
+    @media (max-width: 420px) {
+        .getsmall {
+            font-size: 0.8em !important;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .getsmall_intro {
+            font-size: 0.55em !important;
+            margin-bottom: 20px !important;
+        }
+    }/* wavify margin just above 'panels and such' */
+
+    .wavebot {
+        top: 100px !important;
+    }
+
+    @media (max-width: 767.98px) {
+        .wavebot {
+            top: 100px !important;
+        }
+    }/* fill mobile vertically with the rocket (under tablet size) */
+
+    @media (max-width: 767.98px) {
+        .staybig {
+            height: 550px !important;
+        }
+    }/* footer font size increase and color .. manually imported from style.css */
+
+    .footer {
+        font-size: 0.98rem !important;
+        color: #e1d9e7 !important;
+    }
+
+    .footer a {
+        color: #e1d9e7 !important;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .footer a:hover {
+        color: #e1d9e7 !important;
+        text-decoration: none;
+    }/* background for 'helpful links' (not used) */
+
+    .linkbg {
+        background: #e1d9e7;
+        padding: 4px;
+        color: #343a40;
+        font-weight: bold;
+        font-size: 1em;
+        width: 70%;
+    }
+
+    @media (max-width: 1060px) {
+        .linkbg {
+            background: #e1d9e7;
+            padding: 4px;
+            color: #343a40;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .linkbg {
+            background: #e1d9e7;
+            padding: 4px;
+            color: #343a40;
+            font-weight: bold;
+            font-size: 1em;
+            width: 40%;
+        }
+    }/* top margin for 'panels and such' to meet wavify */
+
+    .panelmar {
+        margin: -80px 0px 170px 0px !important;
+    }/* tablet */
+
+    @media (max-width: 768px) {
+        .panelmar {
+            margin: -120px 0px 170px 0px !important;
+        }
+    }/* sm mobile */
+
+    @media (max-width: 450px) {
+        .panelmar {
+            margin: -160px 0px 170px 0px !important;
+        }
+    }/* top alert */
+
+    .alertl {
+        color: #e1d9e7 !important;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .alertl a {
+        color: #e1d9e7 !important;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        background-color: #605175;
+        /* WAS transparent */
+        padding: 2px 4px 2px 4px;
+    }/* footer text highlight */
+
+    .hlight {
+        font-weight: bold;
+        font-size: 1em;
+        /* letter-spacing: 1px; */
+        color: #e1d9e7;
+    }/* FONT AWESOME, trademark and copyright */
+
+    .hlight2 {
+        font-weight: bold;
+        font-size: 0.7em;
+        /* letter-spacing: 1px; */
+        color: #e1d9e7;
+        vertical-align: super !important;
+    }/* hamb menu link styles */
+
+    .linksp label ul li {
+        font-size: 1.2em !important;
+        line-height: 1.3em !important;
+        margin: 0 !important;
+    }
+
+    .linksp label ul li a {
+        font-size: 1.2em !important;
+        line-height: 1.3em !important;
+        margin: 0 !important;
+    }/* sm mobile */
+
+    @media (max-width: 450px) {
+        .linksp label ul li {
+            font-size: 1.1em !important;
+            line-height: 1.3em !important;
+            margin: 0 !important;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .linksp label ul li a {
+            font-size: 1.1em !important;
+            line-height: 1.3em !important;
+            margin: 0 !important;
+        }
+    }/* FONT AWESOME, to top arrow */
+
+    .botar {
+        padding: 40px;
+        font-size: 2.7em !important;
+    }/* FONT AWESOME, to bottom arrow */
+
+    .topar {
+        padding: 10px 20px 5px 5px;
+        font-size: 2.7em !important;
+    }
+
+    .topar2 {
+        padding: 0px 0px 0px 0px;
+        font-size: 1.7em !important;
+        vertical-align: sub !important;
+    }/* FONT AWESOME, contact section of footer */
+
+    .fawe {
+        font-size: 24px !important;
+        vertical-align: sub !important;
+    }/* logo as bg */
+
+    .pi10bg {
+        /* background: url(assets/images/pionezero/best_logo.png); */
+        background-repeat: no-repeat;
+        background-size: 340px;
+        /* iphone 5/SE sm mobile optimal > 170px, 15% 25% and 40em below */
+        background-position: 15% 15%;
+        /* x,y */
+    }/* ipad */
+
+    @media (max-width: 768px) {
+        .pi10bg {
+            /* background: url(assets/images/pionezero/best_logo.png); */
+            background-repeat: no-repeat;
+            background-size: 270px;
+            /* iphone 5/SE sm mobile optimal > 170px, 15% 25% and 40em below */
+            background-position: 15% 15%;
+            /* x,y */
+        }
+    }/* sm mobile */
+
+    @media (max-width: 450px) {
+        .pi10bg {
+            /* background: url(assets/images/pionezero/best_logo.png); */
+            background-repeat: no-repeat;
+            background-size: 170px;
+            /* iphone 5/SE sm mobile optimal > 170px, 15% 25% and 40em below */
+            background-position: 15% 25%;
+            /* x,y */
+        }
+    }/* NEW for pre-launch *//* web, mobile and brand links */
+
+    .reslink {
+        color: #7e8185 !important;
+        /* WAS #8f9397 */
+        font-size: 1.2em !important;
+    }
+
+    .morehere {
+        color: #7e8185 !important;
+    }
+
+    .resicon {
+        padding: 0px 0px 0px 14px !important;
+    }
+
+    .resicon2 {
+        padding: 0px 0px 0px 12px !important;
+    }/* darker font for vody text */
+
+    body {
+        color: #7e8185 !important;
+        overflow-x: hidden; /* added 2/11/2023 after finding mystery span at bottom of code in dev tools that caused 16px white space, then it disappeared, hmm .. */
+    }/* img as background .. transform matrix explained here > http://www.useragentman.com/blog/2011/01/07/css3-matrix-transform-for-the-mathematically-challenged/ .. .webp amd no-webp classes refers to modernizr js .. thanks to: https://modernizr.com/download?webp-dontmin-setclasses and https://stackoverflow.com/questions/55191112/webp-images-doesnt-display-in-safari-although-added-polyfill and https://css-tricks.com/using-webp-images/#article-header-id-4 and http://www.stucox.com/blog/using-webp-with-modernizr/ *//* port 1 img as background, the loft on broadway */
+
+    .webp .port1 {
+        background: url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp');
+        height: 300px !important;
+        background-position: 0% 20%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 160%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port1 {
+        background: url('assets/images/port/links/loft_on_broadway/safari/loft_on_broadway.jpg');
+        height: 300px !important;
+        background-position: 0% 20%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 160%;
+        position: relative;
+        border: 0px !important;
+    }/* port 2 img as background, the factory on barclay */
+
+    .webp .port2 {
+        background: url('assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO.webp');
+        height: 300px !important;
+        background-position: 50% 45%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 180%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port2 {
+        background: url('assets/images/port/links/factory_on_barclay/brand_mark/safari/LOGO.jpg');
+        height: 300px !important;
+        background-position: 50% 45%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 180%;
+        position: relative;
+        border: 0px !important;
+    }/* port 3 img as background, the cheesehead factory */
+
+    .webp .port3 {
+        background: url('assets/images/port/links/cheesehead_factory/web_ss/webp/cheesehead-mobiless-1.webp');
+        height: 300px !important;
+        background-position: 50% 70%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 240%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port3 {
+        background: url('assets/images/port/links/cheesehead_factory/web_ss/safari/cheesehead_mobiless_1.jpg');
+        height: 300px !important;
+        background-position: 50% 70%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 240%;
+        position: relative;
+        border: 0px !important;
+    }/* port 4 img as background, peaceful yak */
+
+    .webp .port4 {
+        background: url('assets/images/port/links/peacefulyak/webp/PY-MASTER.webp');
+        height: 300px !important;
+        background-position: 50% 36%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port4 {
+        background: url('assets/images/port/links/peacefulyak/safari/PY_MASTER.jpg');
+        height: 300px !important;
+        background-position: 50% 36%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        border: 0px !important;
+    }/* port 5 img as background, jangobio */
+
+    .webp .port5 {
+        background: url('assets/images/port/links/jangobio/v2/webp/new.webp');
+        height: 300px !important;
+        background-position: 50% 50%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 140%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port5 {
+        background: url('assets/images/port/links/jangobio/v2/safari/new.jpg');
+        height: 300px !important;
+        background-position: 50% 50%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 140%;
+        position: relative;
+        border: 0px !important;
+    }/* port 6 img as background, hernandez */
+
+    .webp .port6 {
+        background: url('assets/images/port/links/hernandez_roofing/DRONE/webp/hr_large2.webp');
+        height: 300px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 170%;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port6 {
+        background: url('assets/images/port/links/hernandez_roofing/DRONE/safari/hr_large2.jpg');
+        height: 300px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: 170%;
+        position: relative;
+        border: 0px !important;
+    }/* bigger font awesome icon */
+
+    .webp .port7 {
+        background: url('port/img/mixxi/mixxi_1.jpg');
+        height: 800px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port7 {
+        background: url('port/img/mixxi/mixxi_1.jpg');
+        height: 800px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .webp .port8 {
+        background: url('port/img/mixxi/mixxi_bold:clean_3.jpg');
+        height: 800px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .no-webp .port8 {
+        background: url('port/img/mixxi/mixxi_bold:clean_3.jpg');
+        height: 800px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        border: 0px !important;
+    }
+
+    .bigicon {
+        font-size: 1.5em !important;
+    }/* COVID19 statement */
+
+    .alertl-COV {
+        color: #e1d9e7 !important;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        /* background-color: #432957; */
+    }
+
+    .alertl-COV a {
+        color: #e1d9e7 !important;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        background-color: #432957;
+        /* WAS transparent, #605175 */
+        padding: 3px 4px 4px 4px;
+    }/* small logo in main banner */
+
+    .sm_logo {
+        position: absolute;
+        left: 2% !important;
+        top: 5% !important;
+        max-width: 60px;
+    }
+
+    @media (max-width: 1200px) {
+        .sm_logo {
+            position: absolute;
+            left: 3% !important;
+            top: 5% !important;
+            max-width: 60px;
+        }
+    }
+
+    @media (max-width: 767.95px) {
+        .sm_logo {
+            position: absolute;
+            left: 6% !important;
+            top: 5% !important;
+            max-width: 40px;
+        }
+    }/* also added media query in style.css with footer-logo-item *//* modified from style.css */
+
+    .card {
+        background-color: #e1d9e7 !important;
+        /* #e1d9e7 light, #dad2e0 darker */
+        background-clip: initial;
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 0rem;
+        width: 100% !important;
+        /* creates collapsable flex grid for MANY images, as with Factory on Barclay .. ADDED flex-wrap, CHANGED flex-direction from column, line 4492 in style,css .. MUST REMOVE BREAKS AFTER DIVS, that's all */
+        flex-wrap: wrap !important;
+        flex-direction: row;
+    }/* when using colored bg *//* @media (max-width:540px) {
+              .card {
+                width: 100vw !important;
+                margin-left: -5vw;
+                margin-right: -5vw;
+              }
+            } *//* for large library img load, smaller images using > webp, html5Preloader.js, lazyload: https://stackoverflow.com/questions/9617935/reduce-loading-time-of-heavy-images-in-html5 *//* for portfolio images loaded as div backgrounds BELOW IN HTML, first used in .port1 (notes there) */
+
+    .thumbz {
+        position: relative;
+        padding: 20px;
+        display: block !important;
+        border-radius: 5px !important;
+        width: 200px !important;
+        height: 200px !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: 0% 0% !important;
+        /* x,y */
+        z-index: 1000 !important;
+        /* margin more form mobile */
+        /* margin:0 auto !important; */
+    }/* thanks to: https://coryrylan.com/blog/css-gap-space-with-flexbox */
+
+    div > .thumbz {
+        margin: 6px !important;
+    }
+
+    @media (max-width: 540px) {
+        .thumbz {
+            margin: 10px auto !important;
+            width: 80vw !important;
+        }
+    }
+
+    div.thumbz:hover {
+        cursor: hand;
+        cursor: pointer;
+        opacity: .95;
+    }/* linking text a href text link with no actual text link by targeting entire dimension of div */
+
+    a.linkz {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        /* raises anchor tag above everything else in div */
+        z-index: 10;
+        /*workaround to make clickable in IE */
+        background-color: white;
+        /*workaround to make clickable in IE */
+        opacity: 0;
+        /*workaround to make clickable in IE */
+        filter: alpha(opacity=0);
+    }/* methods >
+            1) just use spans instead of divs and embed bg img there
+            2) USING > can make entire link fill div with text link then make invisible (correction: visibility:hidden; actually disables clickableness), thanks to: https://www.labnol.org/code/19639-turn-div-clickable-link
+            3) give a href a bg image (seems to work), occupying space with actual text link but making invisible
+            width:100%;color:#000;visibility:hidden;
+
+        note: for container >
+            display: flex !important;
+            justify-content: center !important;
+            text-align:center;
+            *//* same as thumbz only for source code .. demos_EDITED.js runs typed6 byt typed (first one) or type2 seems best as they run off parapgraph type text .. all source code styling thanks to: https://github.com/highlightjs/highlight.js */
+
+    .codez {
+        position: relative;
+        padding: 0px 20px 20px 20px;
+        display: block !important;
+        border-radius: 5px !important;
+        width: 100% !important;
+        height: 14vh !important;
+        color: #e4c578 !important;
+        background: #333333 !important;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4em;
+        font-weight: bold;
+    }/* thanks to: https://coryrylan.com/blog/css-gap-space-with-flexbox */
+
+    div > .codez {
+        margin: 6px !important;
+    }
+
+    @media (max-width: 540px) {
+        .codez {
+            margin: 0px 10px 10px 10px auto !important;
+            width: 87vw !important;
+            font-size: 0.9em;
+        }
+    }
+
+    div.codez:hover {
+        cursor: hand;
+        cursor: pointer;
+        opacity: .95;
+    }
+
+    a.codez {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        /* raises anchor tag above everything else in div */
+        z-index: 10;
+        /*workaround to make clickable in IE */
+        background-color: white;
+        /*workaround to make clickable in IE */
+        opacity: 0;
+        /*workaround to make clickable in IE */
+        filter: alpha(opacity=0);
+    }/* backup source code styling */
+
+    .scode {
+        color: #e4c578 !important;
+        background: #333333 !important;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        white-space: pre-wrap;
+        overflow-x: auto;
+    }/* container for card that holds portfolio images */
+
+    .imgcon {
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-width: 100% !important;
+    }/* bg color truncation via inline thanks to: https://stackoverflow.com/questions/13817506/background-color-only-around-text */
+
+    .titlebg {
+        background: #675077 !important;
+        padding: 3px 9px 3px 9px;
+        color: #e1d9e7 !important;
+        display: inline !important;
+    }
+
+    @media (min-width: 540px) {
+        .minhd {
+           max-height: 50px !important 
+        }
+    }
+
+    /* brave browser rendering error fix for line 1362 using 10px pseudo element line, .. '\a0' refers to space, https://stackoverflow.com/questions/50264375/add-a-space-in-css-content .. psuedo element thanks to: https://stackoverflow.com/questions/12671898/outline-on-only-one-border */
+    .bravefix:before {
+      content: "\a0";
+      display: block;
+      padding: 2px 0;
+      line-height: 1px;
+      border-top: 12px solid #343a40; /* use red for testing, svg bg color is #343a40 */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- corner menu / / / / / /    1    / / / / / / -->
+    <!-- disable/enable alert with > display: -->
+    <section class="d-flex m-0 p-0 bd-highlight justify-content-end" style="display:non !important;">
+        <div class="hamburger-menu m-0 p-0 bd-highlight linksp" id="top">
+            <label>
+                <input type='checkbox'>
+                <span class='hamburger-inner'>
+                    <span class='hamburger-icon'></span>
+                </span>
+                <ul style="z-index:2002 !important;top:250px !important;">
+
+                    <!-- main links -->
+                    <li class="linksp">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="https://pionezero.com/marcus_grant_res.pdf">Resume</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="https://pionezero.com/marcus_grant_cover.pdf">Executive Summary</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="https://dribbble.com/cssninja">Dribbble</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a>
+                    </li>
+                    <li class="linksp"><br />
+                        <a href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">Full port (all raw image samples, resume and executive summary, also downloadable)</a>
+                    </li>
+                    <br/>
+
+                    <!-- areas of expertise -->
+                    <!-- <li class="linksp">
+                        <a href="#">Mobile App UI Design</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Responsive UI Design</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Illustration</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Branding</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">UX Design</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Front-end Development</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Shopify</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Mobile App Development</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Distributed Web</a>
+                    </li>
+                    <li class="linksp">
+                        <a href="#">Startups</a>
+                    </li>
+                    <br/> -->
+
+                    <!-- to footer -->
+                    <!-- <li class="linksp">
+                        <a href="#bottomres">Resume</a>
+                    </li> -->
+                </ul>
+            </label>
+        </div>
+    </section>
+
+    <!-- header / / / / / /    2    / / / / / / -->
+    <!-- disable/enable alert with > display: .. original #301b3f, COVID19 #6c2e8c -->
+    <header class="d-flex header-static navbar-light justify-content-center minhd" style="background:#301b3f !important;display:non !important">
+
+        <!-- top alert .. useful code > &nbsp; -->
+        <div class="row border-radius-0 border-0 all-text-white px-3 py-3 mb-0 align-middle" style="/* max-height:50px !important */">
+            <div class="col-12">
+                <p class="mb-0 pr-5 alertl">
+                    <!-- <strong>Newest dev</strong>
+                    &nbsp; > going deep with Python in hybrid quantum application dev thanks to the
+                    <a href="https://www.dwavesys.com/take-leap">D-Wave</a>
+                     team. -->
+
+                    <!-- <strong>Newest addition to portfolio</strong>
+                    &nbsp; > <a href="https://drive2udetailing.com">Drive 2 U Detailing</a> -->
+
+                    <span style="font-size:1em"><strong>New Codepen front-end code portfolio:</strong> <a href="https://codepen.io/fullstackninja/pen/bGzzbXg">code cms</a>, <a href="https://codepen.io/fullstackninja/pen/MWqRVYL">bootstrap power</a>, <a href="https://codepen.io/fullstackninja/pens/public">entire repository</a></span>
+
+                              <!-- HIDDEN div for img preload script for port -->
+                <div id="hiddenImages" style="display: none;"></div>
+
+                </p>
+                <!-- <p class="mb-0 pr-5 alertl-COV">
+                COVID19 is hurting small businesses badly. Here's a <a href="#covid">reduced price $150 small business dev package</a>: get an online store, logo design, coding and 1 month phone support.
+                </p> -->
+            </div>
+        </div>
+
+        <!-- to bottom arrow -->
+        <a href="#bottom">
+            <i class="fas fa-angle-down topar"></i>
+        </a>
+        <!-- <a href="#covid"><i class="fas fa-angle-down topar alertl-COV"></i></a> -->
+
+    </header>
+
+    <!-- main banner / / / / / /    3    / / / / / / -->
+    <!-- ROCKET IMAGE HERE as bg -->
+    <section class="p-0 position-relative rocketbg staybig rocketems">
+
+        <!-- small logo for use of larger shopfy logo -->
+        <div class="container">
+            <div class="sm_logo">
+                <img src="assets/images/pionezero/best_logo.png">
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex h-100 w-100">
+            <!-- LOGO HERE as bg -->
+            <div class="row justify-content-between align-items-center w-100 pi10bg">
+
+                <!-- former svg location (col-md-5 still needed) -->
+                <div class="col-md-5"></div>
+
+                <!-- banner content (animated headline starts at 17437 in style.css, but Bootstrap template got it here: https://codyhouse.co/gem/css-animated-headlines/)-->
+                <div class="col-md-7 offset-lg-1 col-lg-6 mt-5 mt-md-0 mr-auto">
+                    <h5 class="display-6 display-xl-4 font-weight-normal cd-headline clip clip-dark big-clip is-full-width">
+                        <!-- stationary type -->
+                        <p class="text-primary getsmall_intro" style="font-size:0.45em;font-family:'Ubuntu',sans-serif;">
+                            <strong>Welcome to π10 labs</strong>
+                        </p>
+                        <span class="pt-0 text-primary getsmall">Design & coding for</span>
+                        <br>
+                        <span class="cd-words-wrapper pt-0 text-info getsmall">
+                            <!-- moving type here -->
+                            <b class="is-visible">Small Businesses</b>
+                            <b>Jamstack</b>
+                            <b>Responsive Web</b>
+                            <b>Mobile Apps</b>
+                            <b>Shopify</b>
+                            <b>Startups</b>
+                            <b>Distributed Web</b>
+                            <b>Bootstrap</b>
+                            <b>Qubit applications</b>
+                        </span>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- wavify / / / / / /    4    / / / / / / -->
+        <!-- other svg components in section 8, go to functions.js line 267-290 for full controls -->
+        <div class="position-relative wavebot" style="z-index:100 !important;">
+            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+                <defs></defs>
+                <path id="wave-one" d=""/>
+            </svg>
+            <svg width="100%" height="10%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+                <defs></defs>
+                <path id="wave-two" d=""/>
+            </svg>
+        </div>
+
+    </section>
+
+    <!-- panels and such / / / / / /    5    / / / / / / -->
+    <section class="mt-3 panelmar" style="background-color: #e1d9e7;">
+        <div class="container" id="covid">
+
+            <!-- intro -->
+            <div class="container d-flex justify-content-center mb-2">
+                <div class="col-md-6 pr-lg-5 reslink" style="margin-top:100px;z-index:1000 !important;">
+                    <div class="mt-5 mt-md-0" style="display:none !important;">
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold">Launching soon!</h2>
+                        <div class="d-flex mt-3">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-rocket"></i>
+                            </h6>
+                            <div class="align-self-start" style="margin-bottom:50px !important;">
+                                <!-- blurb -->
+                                <p>I'm updating and redesigning my port, including this site, Dribbble, InVision and LinkedIn. But I've temporarily posted some samples below .. click the Dribbble link for all assets of each project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row begin -->
+            <div class="row d-flex justify-content-around">
+
+                <!-- // ------------- Mixxi -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/23681213-Design-challenge-1"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">Mixxi</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fa-solid fa-microchip-ai"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>
+                                    <strong>Design challenges for San Francisco startup.</strong>
+                                     <!-- Full branding of store identity, Shopify web store. -->
+                                </p>
+                                <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
+                                <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
+                                    <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card card-body"></div>
+                    </div>
+
+                </div>
+
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port7">
+                    <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- forms left side grid for image below .. ipadpro12 is determining viewport in mobile, changed from 600 to 500 width, but 600 algins in desktop -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0">
+                    <a href="">
+                        <image width="600" height="100%" href="#">
+                    </a>
+                </div>
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port8">
+                    <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- / ------------- END Mixxi -->
+
+                <!-- // ------------- Loft on Broadway -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;z-index:1000 !important;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">Loft on Broadway</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-building"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>
+                                    <strong>Project in progress.</strong>
+                                     Full branding of corporate identity, website.
+                                </p>
+                                <p>
+                                    <a href="https://theloftonbroadway.com">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+
+                                    <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway">
+                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                    <a href="#" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body imgcon">
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp');">
+                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-2.webp');">
+                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-3.webp');">
+                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-3.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-4.webp');">
+                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-4.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-5.webp');">
+                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-5.webp" class="linkz"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port1">
+                    <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway">
+                        <image width="450" height="100%" href="">
+                    </a>
+                </div>
+                <!-- / END ------------- Loft on Broadway -->
+
+                <!-- // ------------- JangoBio -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/14017239-JangoBio"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">JangoBio</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-flask"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>Logo design, prototype website.</p>
+                                <p>
+                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-a23b21bc77cb67?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-a23b21bc77cb67&preview=cdf0dfbbafb8deb00b13c90e30d9aeb6&mode=preview">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <span style="font-size:0.85em;">
+                                        &nbsp;&nbsp;
+
+                                        <a href="https://dribbble.com/shots/14017239-JangoBio">
+                                            <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                        </a>
+                                        &nbsp;&nbsp;
+                                                                        <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                        <a href="#" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                                            <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                        </a>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample4">
+                        <div class="card card-body">
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v2/webp/new.webp');">
+                                <a href="assets/images/port/links/jangobio/v2/webp/new.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v2/webp/composite.webp');">
+                                <a href="assets/images/port/links/jangobio/v2/webp/composite.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v1/webp/jb-large.webp');">
+                                <a href="assets/images/port/links/jangobio/v1/webp/jb-large.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v2/webp/new-circle.webp');">
+                                <a href="assets/images/port/links/jangobio/v2/webp/new-circle.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v2/webp/new-side-light2.webp');">
+                                <a href="assets/images/port/links/jangobio/v2/webp/new-side-light2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/v2/webp/new-side.webp');">
+                                <a href="assets/images/port/links/jangobio/v2/webp/new-side.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/neurology_lab/webp/new-lead-logo.webp');">
+                                <a href="assets/images/port/links/jangobio/neurology_lab/webp/new-lead-logo.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/jangobio/neurology_lab/webp/webflow-desk.webp');">
+                                <a href="assets/images/port/links/jangobio/neurology_lab/webp/webflow-desk.webp" class="linkz"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port5">
+                    <a href="https://dribbble.com/shots/14017239-JangoBio">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- / END ------------- Jangobio -->
+
+                <!-- // ------------- Factory on Barclay -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;z-index:1000 !important;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/14440599-The-Factory-on-Barclay"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">Factory on Barclay</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-industry"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>
+                                    <strong></strong>
+                                     Full branding of corporate identity, website.
+                                </p>
+                                <p>
+                                    <a href="https://thefactoryonbarclay.com">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample2-code" aria-expanded="false" aria-controls="collapseExample2-code"><i class="fas fa-code bigicon"></i></a>&nbsp;&nbsp; -->
+                                    <a href="https://dribbble.com/shots/14440599-The-Factory-on-Barclay">
+                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                    <a href="#" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample2-code">
+                        <div class="card card-body imgcon">
+
+                            <!-- code 1 -->
+                            <!-- <div class="codez">
+                                    <a href="assets/images/port/code_port/code_factory_1.html" class="codez"></a><br />
+                                    <div class="type-wrap">
+                                    <div id="typed-strings">
+                                        <p><pre><code class="scode">/* SHOPIFY FRONT END DEVELOPMENT IN THEME.LIQUID */</pre></code></p>
+                                        <p><pre><code class="scode">/* container for placing floating logo over image .. desktop, tablet, mobile */</pre></code></p>
+                                      <p><pre><code class="scode">.imgcon {</pre></code></p>
+                                      <p><pre><code class="scode">display:flex !important;</pre></code></p>
+                                      <p><pre><code class="scode">align-items: center !important;</pre></code></p>
+                                      <p><pre><code class="scode">justify-content: center !important;</pre></code></p>
+                                      <p><pre><code class="scode">flex-direction: row !important;</pre></code></p>
+                                      <p><pre><code class="scode">width: 100% !important;</pre></code></p>
+                                      <p><pre><code class="scode">margin: 0%; /* v,h */</pre></code></p>
+                                      <p><pre><code class="scode">CLICK FOR MORE CODE SAMPLES</pre></code></p>
+                                    </div>
+                                    <span id="typed" style="white-space:pre;"></span>
+                                  </div>
+                                </div> -->
+                            <!-- END code 1 -->
+
+                            <!-- model -->
+                            <!-- <div class="codez">
+                                  <a href="assets/images/port/code_port/code_factory_1.html" class="codez"></a><br />
+                                     <div>
+                                      <span id="typed6"></span>
+                                     </div>
+                                 </div> -->
+                            <!-- END model -->
+
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card card-body imgcon">
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/master/webp/illustrations-hr.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/master/webp/illustrations-hr.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-1.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-1.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-2.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO-rgbcmyk.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO-rgbcmyk.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/brand_mark/webp/building.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/brand_mark/webp/building.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-1.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-1.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2mod-2.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2mod-2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-3.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-3.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-4.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-4.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-5.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-5.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-6.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-6.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7mod-2.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7mod-2.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-3.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-3.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/web_ss/webp/factory-on-barclay-web-1.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/web_ss/webp/factory-on-barclay-web-1.webp" class="linkz"></a>
+                            </div>
+                            <div class="thumbz" style="background-image:url('assets/images/port/links/factory_on_barclay/footer/webp/transparent-logo-footer-sm.webp');">
+                                <a href="assets/images/port/links/factory_on_barclay/footer/webp/transparent-logo-footer-sm.webp" class="linkz"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port2">
+                    <a href="https://dribbble.com/shots/14440599-The-Factory-on-Barclay">
+                        <image width="450" height="100%" href="">
+                    </a>
+                </div>
+                <!-- / END ------------- Factory on Barclay -->
+
+                <!-- // ------------- Hernandez Roofing -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/14017630-Hernandez-Roofing"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">Hernandez Roofing</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-hard-hat"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>Full branding of corporate identity, website.</p>
+                                <p>
+                                    <!-- <a href="https://pionezero.com/pi10_bu/hernandez_roofing/beta/">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a> -->
+                                    &nbsp;&nbsp;
+
+                                    <a href="https://dribbble.com/shots/14017630-Hernandez-Roofing">
+                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                    </a> -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample5">
+                        <div class="card card-body"></div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port6">
+                    <a href="https://dribbble.com/shots/14017630-Hernandez-Roofing">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- / END ------------- Hernandez Roofing -->
+
+                <!-- // The ------------- Cheesehead Factory -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;z-index:1000 !important;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://www.dropbox.com/sh/nt6qkfaq7tjeodt/AADAW5zpDxI9Ns0fWi6T2wHwa?dl=0"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dropbox</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">The Cheesehead Factory</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-cheese"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>Website redesign, Shopify marketing.</p>
+                                <p>
+                                    <!-- <a href="https://cheesehead.com/">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a> -->
+                                    &nbsp;&nbsp;
+                                    <!-- <a href="https://www.dropbox.com/s/evqxup24cgmtna6/cheesehead_mobiless_1.jpg?dl=0"><i class="fas fa-image bigicon"></i></a> -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port3">
+                    <a href="https://cheesehead.com/">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- / END ------------- Cheesehead Factory -->
+
+                <!-- // ------------- Peacful Yak -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/14440465-Peaceful-Yak"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">Peaceful Yak</h2>
+                        <div class="d-flex mt-3 reslink">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                                <i class="fas fa-mountain"></i>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>
+                                    <strong>Project in progress.</strong>
+                                     Full branding of store identity, Shopify web store.
+                                </p>
+                                <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
+                                <a href="https://dribbble.com/shots/14440465-Peaceful-Yak">
+                                    <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card card-body"></div>
+                    </div>
+
+                </div>
+                <!-- image -->
+                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port4">
+                    <a href="https://dribbble.com/shots/14440465-Peaceful-Yak">
+                        <image width="450" height="100%" href="#">
+                    </a>
+                </div>
+                <!-- / ------------- END Peaceful Yak -->
+
+                <!-- row end -->
+            </div>
+
+            <!-- more -->
+            <div class="container d-flex justify-content-center mb-2">
+                <div class="col-md-6 pr-lg-5 reslink" style="margin-top:140px;z-index:1000 !important;">
+                    <div class="mt-5 mt-md-0">
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold morehere">
+                            More samples
+                            <a href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">here</a>
+                             ..
+                        </h2>
+                        <div class="d-flex mt-3">
+                            <!-- font awesome icon -->
+                            <h6 class="display-1 mr-3 align-self-start">
+                                <a href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">
+                                    <i class="fas fa-meteor"></i>
+                                </a>
+                            </h6>
+                            <div class="align-self-start">
+                                <!-- blurb -->
+                                <p>Be sure to click through folders to see it all. Temporarily right now in Dropbox but will be in my new home page and Dribbble shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer / / / / / /    6    / / / / / / -->
+    <footer class="footer footer-dark section-pt position-relative pt-4 mt-5" id="bottom">
+
+        <!-- footer arch svg, greyscale #343a40, purple #301b3f .. have to fix 1px white line in middle of arch only for brave browser .. it ceases when margin-top: -39px (max39.5) but continues at -40px .. original was -70px .. it appears that the dark footer color has a top edge that is white so give this a dark 1px border -->
+        <div class="position-absolute top-0 left-0 w-100 bravefix" style="background-color:#343a40 !important;">
+            <svg width="100%" height="70" viewBox="0 0 500 70" preserveAspectRatio="none" style="margin-top:-70px;">
+                <path d="M0,70 L0,40 Q250,-40 500,40 L580,70 Z" fill="#343a40"/>
+            </svg>
+        </div>
+
+        <div class="footer-content pb-3">
+            <div class="container">
+                <div class="row justify-content-around">
+
+                    <!-- ( ( ( WIDGET 1 ) ) ) -->
+                    <div class="col-md-4">
+                        <div class="widget">
+
+                            <!-- footer logo, png in svg mode, ref: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix -->
+                            <div class="d-flex m-0 p-0 justify-content-center">
+                                <svg class="footer-logo-item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMid" width="180" height="180" viewBox="0 0 180 180">
+                                    <g>
+                                        <image width="180" height="180" href="assets/images/pionezero/best_logo.png" transform="matrix(1 0 0 1 0 0)"></image>
+                                    </g>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ( ( ( WIDGET 2 ) ) ) -->
+                    <div class="col-md-8 mt-5">
+                        <div class="widget">
+
+                            <!-- short bio -->
+                            <p class="pb-3">
+                            I’m a highly skilled <span class="hlight">visual designer</span>. My creative existence is absorbed in all things design: illustration, branding, graphic design, typography, I love flat design based color palettes and prefer simplicity in design. I'm a <span class="hlight">front-end coding</span> ninja and craft Shopify stores as well. I'm fully immersed and fluent in <span class="hlight">startup culture</span>, from <span class="hlight">AI</span> to <span class="hlight">distributed web</span> to the ethereal <span class="hlight">mathematics</span> that empowers it all. On breaks I enjoy: time with <span class="hlight">family</span>, <span class="hlight">building</span> things (outdoor and indoor greenhouses, alpine furniture, tree houses), survival <span class="hlight">gardening</span>, cultivating <span class="hlight">off grid</span> skills, <span class="hlight">Youtube and Tiktok</span> videos, studying <span class="hlight">math and science</span>, Indian culture and <span class="hlight">philosophy</span>, <span class="hlight">vegan</span> food, long training runs or bikes in the country, weight training and swim training (I’m a <span class="hlight">lifelong athlete</span>). Anything having to do with <span class="hlight">meditation, Buddha dharma, or promoting peace and abundance on Gaia</span> you will find me there.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+
+                    <!-- ( ( ( WIDGET 3 ) ) ) -->
+                    <div class="col-md-4 col-sm-6 mt-4">
+
+                        <div class="widget address" style="background-image: url('assets/images/world-map_invert.png'); background-position: 50% 20px; background-repeat: no-repeat; background-size: contain;">
+                            <ul class="list-unstyled">
+                                <!-- contact info -->
+                                <!-- location -->
+                                <li class="media hlight">
+                                    <i class="fas fa-map-marker-alt fawe mb-4 mr-3 display-8"></i>
+                                    Madison, Wisconsin
+                                </li>
+                                <!-- phone -->
+                                <li class="media hlight">
+                                    <a href="tel:6082869463">
+                                        <i class="fas fa-headset fawe mb-4 mr-3 display-8"></i>
+                                        (608) 286-9463
+                                    </a>
+                                </li>
+                                <!-- slack -->
+                                <li class="media hlight">
+                                    <a href="https://pionezero.slack.com/?redir=%2Fgantry%2Fclient">
+                                        <i class="fab fa-slack fawe mb-4 mr-3 display-8"></i>
+                                        Chat in Slack
+                                    </a>
+                                </li>
+                                <!-- email -->
+                                <li class="media hlight">
+                                    <a href="mailto:pionezero@protonmail.ch">
+                                        <i class="far fa-envelope fawe mb-4 mr-3 display-8"></i>
+                                        Email
+                                    </a>
+                                </li>
+                                <!-- hours -->
+                                <li class="media hlight">
+                                    <i class="far fa-clock fawe mb-4 mr-3 display-8"></i>
+                                    Mon - Fri: 10:00 - 17:00 CST
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ( ( ( WIDGET 4 ) ) ) -->
+
+                    <!-- ( ( ( WIDGET 5 ) ) ) -->
+                    <div class="col-md-3 col-sm-6 mt-2">
+                        <div class="widget">
+                            <ul class="nav flex-column primary-hover hlight">
+                                <!-- areas of expertise -->
+                                <li style="color:#e1d9e7 !important;">Expertise > </li>
+                                <li class="nav-item">Illustration</li>
+                                <li class="nav-item">Graphic Design</li>
+                                <li class="nav-item">Branding</li>
+                                <li class="nav-item">UX Design</li>
+                                <li class="nav-item">Front-end Development</li>
+                                <li class="nav-item">Shopify</li>
+                                <li class="nav-item"><a href="https://jamstack.org/">Jamstack</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ( ( ( WIDGET 6 ) ) ) -->
+                    <div class="col-md-3 col-sm-6 mt-2" id="bottomres">
+                        <div class="widget">
+                            <ul class="nav flex-column primary-hover hlight">
+                                <!-- resumes and portfolios -->
+                                <li style="color:#e1d9e7 !important;">Download > </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://pionezero.com/marcus_grant_res.pdf">Resume (PDF)</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://pionezero.com/marcus_grant_cover.pdf">Executive Summary (PDF)</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">Full port (all raw image samples, resume and executive summary in PDF, also downloadable as zip)</a>
+                                </li>
+                                <li style="color:#e1d9e7 !important;margin:20px 0px 6px 0px">Ports > </li>
+                                <p>
+                                    <a class="" href="https://codepen.io/fullstackninja/pens/public">Codepen</a> |  
+                                    <a class="" href="https://stackblitz.com/@cssninja">Stackblitz</a> | 
+                                    <a class="" href="https://github.com/cssninja">Github</a> | 
+                                    <a class="" href="https://dribbble.com/cssninja">Dribbble</a> | 
+                                    <a class="" href="https://www.linkedin.com/in/cssninja">LinkedIn</a> | 
+                                    <a class="" href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">Dropbox</a>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom -->
+        <div class="footer-copyright py-3">
+            <div class="container">
+                <div class="d-md-flex justify-content-between align-items-center py-3 text-center text-md-left">
+
+                    <!-- to top arrow -->
+                    <a href="#top">
+                        <i class="fas fa-angle-up botar"></i>
+                    </a>
+
+                    <!-- trademark and copyright -->
+                    <div class="copyright-text">
+                        <!-- company -->
+                        <!-- <i class="fas fa-rocket"></i>&nbsp; -->
+                        <span class="hlight" style="font-family:'Ubuntu',sans-serif;">π10 labs</span>
+                        <span class="hlight2">
+                            <!-- tm and c -->
+                            <i class="fas fa-trademark"></i>
+                            <i class="far fa-copyright"></i>
+                        </span>
+                    </div>
+
+                    <div>
+                        <a href="https://www.anonymousforthevoiceless.org/">
+                            <i class="fas fa-seedling"></i>
+                            &nbsp;
+
+                            <span class="hlight">vegan</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-3 mt-md-0">
+                        <ul class="social-icons">
+                            <!-- social links -->
+                            <!-- codepen -->
+                            <li class="social-icons-item social-linkedin">
+                                <a class="social-icons-link" href="https://codepen.io/fullstackninja/pens/public">
+                                    <i class="fa-brands fa-codepen"></i>
+                                </a>
+                            </li>
+                            <!-- github -->
+                            <li class="social-icons-item social-github">
+                                <a class="social-icons-link" href="https://github.com/cssninja">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                            <!-- dribbble -->
+                            <li class="social-icons-item social-dribbble">
+                                <a class="social-icons-link" href="https://dribbble.com/cssninja">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <!-- linkedin -->
+                            <li class="social-icons-item social-linkedin">
+                                <a class="social-icons-link" href="https://www.linkedin.com/in/cssninja/">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <!-- dropbox -->
+                            <li class="social-icons-item social-dropbox">
+                                <a class="social-icons-link" href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0">
+                                    <i class="fa-brands fa-dropbox"></i>
+                                </a>
+                            </li>
+                            <!-- twitter -->
+                            <li class="social-icons-item social-twitter">
+                                <a class="social-icons-link" href="https://twitter.com/cssninja">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- wavify / / / / / /    7    / / / / / / -->
+    <div>
+        <!-- svg wave top, full controls in functions.js, line 267-290 .. other svg components in section 5 -->
+        <figure class="position-absolute top-0 left-0 w-100 d-none d-md-block ie-d-none mt-n3" style="z-index:-1 !important;">
+            <svg version="1.1" id="wave-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="" xml:space="preserve">
+                <path id="wave-1-path" class="fill-light" d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"/>
+            </svg>
+        </figure>
+        <!-- svg wave top, full controls in functions.js, line 267-290 .. other svg components in section 5 -->
+        <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block ie-d-none mb-n3" style="z-index:-1 !important;">
+            <svg version="1.1" id="wave-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="" xml:space="preserve">
+                <path id="wave-2-path_" class="fill-white" d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"/>
+            </svg>
+        </figure>
+    </div>
+
+    <!-- scripts / / / / / /    8    / / / / / / -->
+    <!-- global js -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/popper.js/umd/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- vendors -->
+    <script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+    <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendor/animated-headline/main.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <!-- wavify -->
+    <script src="assets/vendor/wavify/wavify.js"></script>
+    <!-- image place holder, thanks to http://holderjs.com/ -->
+    <script src="assets/vendor/holder/holder.min.js"></script>
+
+    <!-- template functions .. CORE wavify controls here also -->
+    <script src="assets/js/functions.js"></script>
+
+    <!-- smooth scrolling, thanks to: https://codepen.io/chriscoyier/pen/dpBMVP. Otherwise cool one direction scroll > https://alvarotrigo.com/blog/how-create-jquery-scrollTop-animation-without-jquery/ -->
+    <script>
+    // Select all links with hashes
+    $('a[href*="#"]')
+
+    .// Remove links that don't actually link to anything
+    not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        // On-page links
+        if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) {
+                        // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    }
+                    ;
+                });
+            }
+        }
+    });
+    </script>
+
+    <!-- skimlinks -->
+    <script type="text/javascript" src="https://s.skimresources.com/js/125218X1586232.skimlinks.js"></script>
+
+    <!-- preloading port img via js (not jquery), targeted div tag is in HEADER labeled HIDDEN, thanks to: https://www.dougv.com/2012/03/preloading-images-with-javascript/, view-source: https://demo.dougv.com/js_preload_images/example1.htm -->
+    <script type="text/javascript">
+    preloadImages('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp', 'assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-2.webp', 'assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-3.webp', 'assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-4.webp', 'assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-5.webp', 'assets/images/port/links/factory_on_barclay/illustrations/master/webp/illustrations-hr.webp', 'assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-1.webp', 'assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-2.webp', 'assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO.webp', 'assets/images/port/links/factory_on_barclay/brand_mark/webp/LOGO-rgbcmyk.webp', 'assets/images/port/links/factory_on_barclay/brand_mark/webp/building.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-1.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-2mod-2.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-4.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-5.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-6.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7.webp', 'assets/images/port/links/factory_on_barclay/illustrations/talk_about_brand/webp/talk-about-brand-7mod-2.webp', 'assets/images/port/links/factory_on_barclay/web_ss/webp/shopify-desk-3.webp', 'assets/images/port/links/factory_on_barclay/web_ss/webp/factory-on-barclay-web-1.webp', 'assets/images/port/links/factory_on_barclay/footer/webp/transparent-logo-footer-sm.webp');
+    </script>
+
+    <!-- source code animated type, thanks to: https://github.com/mattboldt/typed.js/ -->
+    <script src="assets/images/port/code_port/code_type/lib/typed.js" type="text/javascript"></script>
+    <script src="assets/images/port/code_port/code_type/assets/demos_E2.js"></script>
+
+</body>
+</html>

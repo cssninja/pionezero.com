@@ -1,0 +1,30 @@
+.footer {
+	background-color: #1B1F1D;
+	color: #515151;
+	padding-top: 0px;
+       margin-bottom:-7px;
+}
+
+.toggle {
+	color: #565C66;
+	font-weight: bold;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	background-color: #1B1F1D;
+	padding: 20px;
+
+	-webkit-transition: background-color 1s ease-out;
+	   -moz-transition: background-color 1s ease-out;
+	    -ms-transition: background-color 1s ease-out;
+	     -o-transition: background-color 1s ease-out;
+	        transition: background-color 1s ease-out;
+}
+
+.toggle.is-open {
+	background-color: #1B1F1D;
+}
+
+
+
+

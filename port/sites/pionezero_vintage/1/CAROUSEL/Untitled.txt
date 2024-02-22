@@ -1,0 +1,242 @@
+            <!-- Jackbox temporarily disabled as was conflicting with responsive rendering of images between portrait and landscape -->
+		<!-- <div class="mosaicflow__item">
+                        <a class="jackbox"
+                             data-group="images"
+                             data-thumbnail="img/IMAGE.JPG"
+                             data-title="<a href='img/IMAGE.JPG' target=_blank'>View full size</a> &raquo;"
+                             data-description="#description_1"
+                             href="img/IMAGE.JPG"
+                         ><!-- end opening tag -->
+                         <!-- thumbnail -->
+                         <img src="img/IMAGE.JPG" alt="responsive lightbox" />
+                         </a>
+			<p>Print, branding</span></p>
+		</div> -->
+
+		<div class="mosaicflow__item">
+                        <a href="img/logo_big_lc2.png"><img src="img/logo_big_lc2.png" /></a>
+			<p>logo graphic design</span></p>
+		</div>
+		<div class="mosaicflow__item">
+                       <a href="img/trek_fest.jpg"><img src="img/trek_fest.jpg" /></a>
+			<p>UI prototype, graphic design</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                       <a href="img/chocolatechis.jpg"><img src="img/chocolatechis.jpg" /></a>
+			<p>UI prototype, graphic design, <a href="http://chocolatechisel.com" class="fancytext2">chocolatechisel.com</a></span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                       <a href="img/ap_orig.jpg"><img src="img/ap_orig.jpg" /></a>
+			<p>UI prototype, branding, <a href="http://apbarandkitchen.com" class="fancytext2">apbarandkitchen.com</a></span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                       <a href="img/crazywater_hp.jpg"><img src="img/crazywater_hp.jpg" /></a>
+			<p>UI prototype, <a href="http://crazywatermilwaukee.com" class="fancytext2">crazywatermilwaukee.com</a></span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                       <a href="img/crazywater_1D_3.png"><img src="img/crazywater_1D_3.png" /></a>
+			<p>Print, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                       <a href="img/ohn_rebrand.jpg"><img src="img/ohn_rebrand.jpg" /></a>
+			<p>Print, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/crazywater_2D_3.png"><img src="img/crazywater_2D_3.png" /></a>
+			<p>UI prototype, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/ohn_fb.jpg"><img src="img/ohn_fb.jpg" /></a>
+			<p>Optimal Health Network Facebook tab</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/fanbox_mockup.jpg"><img src="img/fanbox_mockup.jpg" /></a>
+			<p>UI prototype, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/offertap_sprint1B.jpg"><img src="img/offertap_sprint1B.jpg" /></a>
+			<p>UI prototype, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/artasia.jpg"><img src="img/artasia.jpg" /></a>
+			<p>UI prototype</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/aclearinfinitesky_edited_2.jpg"><img src="img/aclearinfinitesky_edited_2.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+		<div class="mosaicflow__item">
+                      <a href="img/illus1a_edited.jpg"><img src="img/illus1a_edited.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/illus1b_edited.jpg"><img src="img/illus1b_edited.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/illus1d_edited.jpg"><img src="img/illus1d_edited.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/illus2_ps_edited_2.jpg"><img src="img/illus2_ps_edited_2.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/print6_edited_2.jpg"><img src="img/print6_edited_2.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/print7_edited.jpg"><img src="img/print7_edited.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/sketch5_edited.jpg"><img src="img/sketch5_edited.jpg" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/twitter_owl_v.png"><img src="img/twitter_owl_v.png" /></a>
+			<p>Illustration</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/w2_10.jpg"><img src="img/w2_10.jpg" /></a>
+			<p>Illustration, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/mackey_ss.jpg"><img src="img/mackey_ss.jpg" /></a>
+			<p>UI prototype</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/otbp.jpg"><img src="img/otbp.jpg" /></a>
+			<p>UI prototype, illustration, branding, offthebeadinpathneosho.com</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/sweettrio_100.jpg"><img src="img/sweettrio_100.jpg" /></a>
+			<p>UI prototype</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/winter_preprint.jpg"><img src="img/winter_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/autumn_preprint.jpg"><img src="img/autumn_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/autumn_printed.jpg"><img src="img/autumn_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/deandeluca_printed.jpg"><img src="img/deandeluca_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/july4_preprint.jpg"><img src="img/july4_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                      <a href="img/july4_printed.jpg"><img src="img/july4_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/mothersday_preprint.jpg"><img src="img/mothersday_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/mothersday_printed.jpg"><img src="img/mothersday_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/newhours_preprint.jpg"><img src="img/newhours_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/newhours_printed.jpg"><img src="img/newhours_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/santa_preprint.jpg"><img src="img/santa_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                     <a href="img/santa_printed.jpg"><img src="img/santa_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/summer_preprint.jpg"><img src="img/summer_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/summer_printed.jpg"><img src="img/summer_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/valentinesday_preprint.jpg"><img src="img/valentinesday_preprint.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/valentinesday_printed.jpg"><img src="img/valentinesday_printed.jpg" /></a>
+			<p>Graphic design, print</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/xcd_p1.jpg"><img src="img/xcd_p1.jpg" /></a>
+			<p>UI prototype, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/zc.jpg"><img src="img/zc.jpg" /></a>
+			<p>UI prototype, branding</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/barkow_all.jpg"><img src="img/barkow_all.jpg" /></a>
+			<p>UI prototype, barkow.com</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/barkow_LTWO_master.jpg"><img src="img/barkow_LTWO_master.jpg" /></a>
+			<p>UI prototype</span></p>
+		</div>
+
+		<div class="mosaicflow__item">
+                    <a href="img/barkow_mrbarkow.jpg"><img src="img/barkow_mrbarkow.jpg" /></a>
+			<p>UI prototype, graphic design</span></p>
+		</div>

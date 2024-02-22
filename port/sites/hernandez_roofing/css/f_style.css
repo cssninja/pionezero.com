@@ -1,0 +1,33 @@
+.footer {
+	background: rgba(255, 255, 255, 0); /* was background-color: #eeeeee; */
+	color: #515151;
+	padding-top: 0px;
+       /* margin-bottom:-7px; */
+}
+
+.toggle {
+	color: #FFFDD8;
+	font-weight: bold;
+	margin: -130px 0px 0px 0px; /* was margin: 0 auto; */
+	display: block;
+	text-align: right;
+	background: rgba(255, 255, 255, 0); /* was background-color: #2C3440; */
+	padding: 20px;
+      width:20% !important;
+      position:absolute;
+      right:140px !important;
+
+	-webkit-transition: background-color 1s ease-out;
+	   -moz-transition: background-color 1s ease-out;
+	    -ms-transition: background-color 1s ease-out;
+	     -o-transition: background-color 1s ease-out;
+	        transition: background-color 1s ease-out;
+}
+
+.toggle.is-open {
+	background: rgba(255, 255, 255, 0); /* background-color: #DADFE1; */
+}
+
+
+
+

@@ -1,0 +1,698 @@
+/* ==================================================
+   CSS Imports
+================================================== */
+
+@import url("reset.css");
+@import url("fonts/fontawesome/font.css");
+@import url("owlcarousel.css");
+@import url("animations.css");
+
+/* ==================================================
+   Google Fonts
+================================================== */
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+
+/* ==================================================
+   Global Styles
+================================================== */
+
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html
+{
+	height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body
+{
+	font-family: "Roboto", Arial, Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.7);
+	background: #26292E;
+	
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+
+::selection
+{
+	background: #1ABC9C;
+	color: #FFF;
+}
+
+	::-moz-selection
+	{
+		background: #1ABC9C;
+		color: #FFF;
+	}
+
+img
+{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+a
+{
+	color: #1ABC9C;
+	text-decoration: none;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+	a:hover
+	{
+		color: #FFF;
+	}
+	
+/* ==================================================
+   Custom Scrollbars
+================================================== */
+
+.nicescroll-rails
+{
+	background: transparent;
+}
+
+	.nicescroll-rails div
+	{
+		background: #4E535D !important;
+		cursor: pointer;
+	}
+
+/* ==================================================
+   General Layout Styles
+================================================== */
+
+.container
+{
+	width: 100%;
+	min-width: 280px;
+	line-height: 28px;
+	text-align: center;
+}
+
+	.container p
+	{
+		margin: 0 0 20px 0;
+	}
+
+	.container h2
+	{
+		font-size: 42px;
+		line-height: 42px;
+		color: #FFF;
+		margin: 0 0 20px 0;
+		font-weight: 300;
+		font-family: "Roboto Condensed", Arial, Verdana, Helvetica, sans-serif;
+	}
+	
+		.container h2 strong
+		{
+			font-weight: 700;
+		}
+		
+	.container h3
+	{
+		font-size: 30px;
+		line-height: 30px;
+		color: #FFF;
+		margin: 0 0 20px 0;
+		font-weight: 300;
+		font-family: "Roboto Condensed", Arial, Verdana, Helvetica, sans-serif;
+	}
+	
+		.container h3 strong
+		{
+			font-weight: 700;
+		}
+		
+	.container hr
+	{
+		border: 0;
+		height: 0;
+		margin: 0 0 20px 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.15);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+	}
+
+svg
+{
+	display: block;
+	width: 100%;
+	height: 50px;
+}
+
+	.bgblue
+	{
+		background: #26292E;
+	}
+
+	.bglightblue
+	{
+		background: #2F3238;
+	}
+
+		.curveUpColor1 path
+		{
+			fill: #26292E;
+			stroke: #26292E;
+		}
+		
+		.curveUpColor2 path
+		{
+			fill: #2F3238;
+			stroke: #2F3238;
+		}
+	
+/** Fixed or Full Width **/
+
+.container .fixedwidth
+{
+	width: 86%;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.container .fullwidth
+{
+	width: 100%;
+}
+
+/* ==================================================
+   Top Header
+================================================== */
+
+#topsection
+{
+	padding: 80px 0;
+}
+
+	#topsection h1
+	{
+		font-family: "Dancing Script", Georgia, Times New Roman, Times, serif;
+		font-weight: 700;
+		font-size: 72px;
+		line-height: 72px;
+		margin: 0 0 30px 0;
+	}
+	
+/* ==================================================
+   Main Section
+================================================== */
+
+#mainsection
+{
+	
+}
+
+	#mainsection #phonecont
+	{
+		position: relative;
+		z-index: 100;
+		float: left;
+		width: 260px;
+		min-width: 260px;
+		max-width: 260px;
+		padding: 85px 21px 0 24px;
+		background: url("../images/iphone5-white.png") no-repeat;
+		background-size: 100%;
+		margin: -60px 0 0 0;
+		
+		min-height: 550px;
+		height: auto !important;
+		height: 550px;
+	}
+		
+	#mainsection #detailscont
+	{
+		width: auto;
+		margin: 0 0 0 260px;
+		padding: 40px 0 40px 70px;
+		text-align: left;
+	}
+	
+		#mainsection #detailscont ul#platforms
+		{
+			list-style-type: none;
+			margin: 0 0 20px 0;
+		}
+		
+			#mainsection #detailscont ul#platforms li
+			{
+				display: inline;
+			}
+			
+				#mainsection #detailscont ul#platforms li a
+				{
+					margin: 0 5px 10px 0;
+				}
+				
+/* ==================================================
+   Features Section
+================================================== */
+
+#pointssection
+{
+	padding: 80px 0 40px 0;
+}
+
+	#pointssection .servicesicons
+	{
+		width: 100%;
+	}
+	
+		#pointssection .servicesicons .servicesdiv
+		{
+			position: relative;
+			float: left;
+			width: 50%;
+			padding: 0 15px 30px 110px;
+			text-align: left;
+		}
+		
+			#pointssection .servicesicons .servicesdiv span.fixedicon
+			{
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 44px;
+				line-height: 44px;
+				border: 4px solid #1ABC9C;
+				color: #1ABC9C;
+				min-width: 75px;
+				text-align: center;
+				padding: 14px 17px;
+				
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+			}
+		
+			#pointssection .servicesicons .servicesclear
+			{
+				clear: both;
+			}
+			
+	/** Fading Tabs **/
+	
+	#tabscont ul#tabsmenu
+	{
+		list-style-type: none;
+		margin: 0 0 50px 0;
+	}
+	
+		#tabscont ul#tabsmenu li
+		{
+			display: inline-block;
+			margin: 0 5px 8px 5px;
+		}
+
+			#tabscont ul#tabsmenu li a.active
+			{
+				background: #1ABC9C;
+			}
+			
+/* ==================================================
+   Testimonials Section
+================================================== */
+
+#commentssection
+{
+	padding: 100px 0 50px 0;
+}
+
+	#commentssection p
+	{
+		font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 32px;
+		color: #FFF;
+		margin: 0 0 15px 0;
+		font-style: italic;
+	}
+	
+		#commentssection p.author
+		{
+			font-size: 20px;
+			line-height: 20px;
+			color: rgba(255, 255, 255, 0.5);
+			margin: 0 0 30px 0;
+			font-style: italic;
+		}
+		
+/* ==================================================
+   Footer Section
+================================================== */
+
+#footersection
+{
+	padding: 70px 0 50px 0;
+	font-size: 15px;
+}
+
+	#footersection .footer
+	{
+		color: rgba(255, 255, 255, 0.4);
+	}
+
+		#footersection .footer #footerleft
+		{
+			float: left;
+			text-align: left;
+		}
+		
+			#footersection .footer #footerleft p
+			{
+				font-style: italic;
+			}
+		
+			/** Social Media **/
+			
+			#footersection .footer #footerleft #socialmedia ul
+			{
+				margin: 0 0 10px 0;
+			}
+		
+			#footersection .footer #footerleft #socialmedia ul li
+			{
+				display: inline-block;
+				list-style-type: none;
+				margin: 0 10px;
+			}
+		
+				#footersection .footer #footerleft #socialmedia ul li a
+				{
+					font-size: 28px;
+					color: rgba(255, 255, 255, 0.4);
+				}
+				
+					#footersection .footer #footerleft #socialmedia ul li a:hover
+					{
+						color: #FFF;
+					}
+		
+		#footersection .footer #footerright
+		{
+			float: right;
+		}
+		
+			#footersection .footer #footerright a
+			{
+				display: inline-block;
+				background: #2F3238;
+				font-size: 32px;
+				line-height: 32px;
+				color: #FFF;
+				padding: 4px 14px;
+				
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+			}
+			
+				#footersection .footer #footerright a:hover
+				{
+					background-color: #1ABC9C;
+					text-decoration: none;
+				}
+				
+/* ==================================================
+   Carousel Styles
+================================================== */
+
+.owl-theme .owl-controls .owl-page span
+{
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#phoneslider .owl-controls .owl-page span
+{
+	background: rgba(0, 0, 0, 0.5);
+}
+
+	.owl-theme .owl-controls .owl-page.active span,
+	.owl-theme .owl-controls.clickable .owl-page:hover span,
+	#phoneslider .owl-controls .owl-page.active span,
+	#phoneslider .owl-controls .owl-page:hover span
+	{
+		background: #1ABC9C;
+	}
+
+/* ==================================================
+   Responsive Media Queries - Tablets
+================================================== */
+
+@media screen and (max-width: 768px)
+{
+	
+	svg
+	{
+		height: 40px;
+	}
+	
+	.container h2
+	{
+		font-size: 32px;
+		line-height: 32px;
+	}
+	
+	#topsection
+	{
+		padding: 50px 0;
+	}
+		
+		#topsection h1
+		{
+			font-size: 60px;
+			line-height: 60px;
+		}
+	
+	#mainsection
+	{
+		padding: 50px 0 0 0;
+	}
+	
+		#mainsection #phonecont
+		{
+			float: none;
+			width: 100%;
+			margin: 0 auto;
+		}
+			
+		#mainsection #detailscont
+		{
+			width: 100%;
+			margin: 0;
+			padding: 40px 0;
+			text-align: center;
+		}
+	
+	#pointssection .servicesicons .servicesdiv
+	{
+		float: left;
+		width: 50%;
+		text-align: center;
+		padding: 0 10px 30px 10px;
+	}
+	
+		#pointssection .servicesicons .servicesdiv span.fixedicon
+		{
+			position: relative;
+			display: inline-block;
+			margin: 0 0 20px 0;
+			font-size: 32px;
+			line-height: 32px;
+			padding: 18px 23px;
+		}
+		
+	#commentssection p
+	{
+		font-size: 26px;
+		line-height: 26px;
+	}
+	
+		#commentssection p.author
+		{
+			font-size: 18px;
+			line-height: 18px;
+		}
+	
+	#footersection .footer
+	{
+		text-align: center;
+	}
+		
+		#footersection .footer #footerleft
+		{
+			float: none;
+			padding: 30px 0;
+			text-align: center;
+		}
+		
+			#footersection .footer #footerleft #socialmedia ul li a
+			{
+				font-size: 28px;
+			}
+		
+		#footersection .footer #footerright
+		{
+			float: none;
+		}
+	
+}
+
+/* ==================================================
+   Responsive Media Queries - Mobiles
+================================================== */
+
+@media screen and (max-width: 480px)
+{	
+	
+	svg
+	{
+		height: 30px;
+	}
+	
+	.container h2
+	{
+		font-size: 28px;
+		line-height: 28px;
+	}
+	
+	#topsection h1
+	{
+		font-size: 54px;
+		line-height: 54px;
+	}
+	
+	#pointssection .servicesicons .servicesdiv
+	{
+		float: none;
+		width: 100%;
+		padding: 0 0 15px 0;
+	}
+	
+	#footersection .footer #socialmedia ul li
+	{
+		margin: 0 5px;
+	}
+	
+}
+
+/* ==================================================
+   CSS Buttons
+================================================== */
+
+.button, .appbutton
+{
+	position: relative;
+	display: inline-block;
+	padding: 13px 20px;
+	margin: 0;
+	width: auto;
+	font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	text-align: left;
+	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+	.button span, .appbutton span
+	{
+		margin: 0 10px 0 0;
+		font-size: 16px;
+	}
+
+	.button:after, .appbutton:after
+	{
+		content: '';
+		position: absolute;
+		z-index: -1;
+
+		-webkit-transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+		transition: all 0.2s linear;
+	}
+	
+		/** Normal Button Colours **/
+
+		.button
+		{
+			background: #1ABC9C;
+			color: #FFF;
+		}
+
+			.button:hover
+			{
+				background: #17A98C;
+				color: #FFF;
+			}
+
+				.button:active
+				{
+					background: #17A98C;
+					top: 2px;
+				}
+
+		/** App Button Colours **/
+
+		.appbutton
+		{
+			background: #4E535D;
+			color: #FFF;
+		}
+
+			.appbutton span
+			{
+				border-right: 1px solid rgba(0, 0, 0, 0.2);
+				padding: 0 12px 0 0;
+				font-size: 22px;
+			}
+
+				.appbutton:hover
+				{
+					background: #17A98C;
+					color: #FFF;
+				}
+
+					.appbutton:active
+					{
+						background: #17A98C;
+						top: 2px;
+					}
+

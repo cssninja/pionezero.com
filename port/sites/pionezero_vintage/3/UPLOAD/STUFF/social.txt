@@ -1,0 +1,12 @@
+      <div class="container-fluid bg-inverse p-a-1 lemon-top">
+         <div>
+           <div class="follow_us">
+              <a href="http://www.linkedin.com/in/cssninja" class="zocial linkedin"></a>
+              <a href="https://twitter.com/cssninja" class="zocial twitter"></a>
+              <a href="https://github.com/cssninja" class="zocial github"></a>
+              <a href="https://dribbble.com/cssninja" class="zocial dribbble"></a>
+              <a href="https://instagram.com/auuumoksa" class="zocial instagram"></a>
+              <a href="http://www.pinterest.com/auuumoksa/likes/" class="zocial pinterest"></a>
+           </div>
+         </div>
+      </div>

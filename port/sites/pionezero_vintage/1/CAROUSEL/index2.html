@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <title>piOne0 :: UI Design, Web Development, Startups, App Development</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- added, from offcanvaspush -->
+    <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <!-- added, from offcanvaspush -->
+    <link href="css/navmenu-push.css" rel="stylesheet">
+
+    <!-- just for debugging purposes -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <!-- zocial footer icons -->
+    <link href="css/zocial.css" rel="stylesheet" type="text/css"/>
+
+    <!-- remodal thanks to vodkabears http://vodkabears.github.io/remodal/# -->
+    <link rel="stylesheet" href="css/jquery.remodal.css">
+
+  </head>
+
+  <body id="top" style="background-color:#21628D;">
+
+
+
+
+<!-- ```````````````````````````` navbar begin, added, from offcanvaspush -->
+    <div class="bg-fix">
+    <!-- logo (added) -->
+        <div id="hide" class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="background-color:#213242 !important;border-color:#213242 !important;overflow-x:scroll;-webkit-overflow-scrolling:touch;">
+          <a class="navmenu-brand" href="#" style="font-weight:bold;color:#57636f !important;">pionezero.com</a>
+          <ul class="nav navmenu-nav lato" style="font-size:1.4em;">
+          </ul>
+
+          <hr class="menu-divider">
+
+          <ul class="nav navmenu-nav lato follow_us">
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu navmenu-nav lato">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+    </div>
+
+    <!-- note: max-width: zero to xx px, min-width: starting from xx px; and border is top, left/right, bottom -->
+        <div class="navbar navbar-default navbar-fixed-top" style="background:transparent !important;border-width:0 0 0px !important;">
+          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" style="border-color:#2C3E50 !important;">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+    </div>
+
+<!-- ```````````````````````````` navbar end -->
+
+
+
+
+<!-- ```````````````````````````` carousel begin -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <!-- ``````````  slide 1 begin; note: there are css attributes in docs.min.js, search 'holder.js' -->
+        <div class="item active" style="background-image:url('img/upper_panel3.svg');background-position:1% 0%;background-repeat:no-repeat;background-color:#21628D;">
+          <!--<img data-src="holder.js/900x500/auto/#162E46:#162E46/text:First slide" alt="First slide" style="z-index:1 !important;">-->
+          <div class="container">
+            <div class="carousel-caption">
+              <!--<h1>Example headline.</h1>-->
+              <!--<p class="scifly squishy" style="margin-top:-410px;"><img src="img/pionezero.svg" style="width:100%;" class="limit" alt="GOOGLE"><br/>-->
+              <!--<span style="position:absolute !important;margin-top:0px !important;font-size:40px !important;text-align:center !important;width:100% !important;" class="scifly2">design | think tank</span>-->
+              </p>
+              <p class="scifly squishy" style="margin-top:-450px;">piOne0<br />
+              <span style="position:relative !important;top:-20px !important;" class="scifly2">down for maintenance</span>
+              </p>
+
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
+            </div>
+          </div>
+        </div>
+        <!-- / slide 1 -->
+
+      </div>
+      <!-- / .carousel-inner -->
+
+    </div>
+    <!-- / .carousel .slide -->
+<!-- ```````````````````````````` carousel end -->
+
+
+
+
+<!-- ```````````````````````````` container 2 begin -->
+
+<!-- ```````````````````````````` container 2 end -->
+
+
+
+
+<!-- ```````````````````````````` footer begin -->
+
+<!-- ```````````````````````````` footer end -->
+
+
+
+
+<!-- ```````````````````````````` bootstrap core js begin -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- added, from offcanvaspush -->
+    <script src="js/jasny-bootstrap.min.js"></script>
+<!-- ```````````````````````````` bootstrap core js end -->
+
+<!-- smooth scrolling begin, from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- smooth scrolling end -->
+
+    <script src="js/jquery.squishy.js"></script>
+    <script type="text/javascript">
+        $(".squishy").squishy({minSize: 50, maxSize: 120});
+    </script>
+
+
+
+
+
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+
+<script src="js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+    $(document).on('open', '.remodal', function () {
+        console.log('open');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('close', '.remodal', function () {
+        console.log('close');
+    });
+
+    $(document).on('closed', '.remodal', function () {
+        console.log('closed');
+    });
+
+    $(document).on('confirm', '.remodal', function () {
+        console.log('confirm');
+    });
+
+    $(document).on('cancel', '.remodal', function () {
+        console.log('cancel');
+    });
+
+    // You can open or close it like this:
+    // var inst = $.remodal.lookup[$('[data-remodal-id=modal]').data('remodal')];
+    // inst.open();
+    // inst.close();
+
+    // Or init in this way:
+    var inst = $('[data-remodal-id=modal2]').remodal();
+    // inst.open();
+</script>
+
+
+  </body>
+</html>

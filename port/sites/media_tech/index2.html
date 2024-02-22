@@ -1,0 +1,770 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- (    (    (    fonts    )    )    ) -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700%7CMerriweather+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    
+    <!-- (    (    (    css    )    )    ) -->
+    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/add.css">
+
+    <!-- (    (    (    favicons and facebook open graph, thanks to http://realfavicongenerator.net/    )    )    ) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="800">
+    <meta property="og:title" content="Red Productions - HD drones, 4K + 3R, VR, AR, algorithm editing for video and film">
+    <meta property="og:description" content="Red Productions - HD drones, 4K + 3R, VR, AR, algorithm editing for video and film">
+    <meta property="og:url" content="https://pionezero.com/vid_proto/favicon">
+    <meta property="og:image" content="https://pionezero.com/vid_proto/favicon/og-image.jpg">
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- (    (    (    title    )    )    ) -->
+    <title>Red Productions - HD drones, 4K + 3R, VR, AR, algorithm editing for video and film</title>
+
+<style>
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+||||||||||||||||||||||||
+DESIGN NOTES
+||||||||||||||||||||||||
+
+1 IMAGES ----------
+images i designed (found in folder: img) >
+logo_red.png
+logo_red2.png
+desktop.png
+tablet.png
+mobile.png
+
+images i redesigned (from acquired bootstrap license) >
+screenshot.png
+
+images from stock >
+ny_all_liberty.jpg
+ny_all_modern.jpg
+ny_all_street.jpg
+
+2 MORE COOL STUFF ----------
+in the dropdown menu at the top of the page (services) there are links to more versions of the site:
+
+landing page 2
+
+landing page 3
+
+plus >
+
+a github website repository (where you can fully access all of the website's files and inspect the code)
+
+visual assets (in the img folder .. right click to open in new tab for full size)
+
+||||||||||||||||||||||||
+HTML NOTES
+||||||||||||||||||||||||
+
+1 ANNOTATION ----------
+
+<!-- (    (    (    main    )    )    ) -->
+<!-- (    sub    ) -->
+
+2 DISPLAY OPTION ----------
+
+elements you can turn on and off are marked 'DISPLAY OPTION', where you can disable display:none to turn it on (IN THE HTML, NOT IN THE CSS). there may be instructions for editing add.css as well for that particular div tag style, but it's mostly HTML TWEAKS. they are >
+
+header logo
+swatch toggle button
+logo option (option to display logo OVER video)
+text title (option to display text OVER video)
+full width vimeo video
+subtitle
+to portfolio (button and text)
+
+3 BUILT-IN SWATCH ----------
+
+for DESIGNERS > at the very top of the page is a toggle switch for a color swatch representing the color palette for this site. it can be disabled with display:none. colors can be changed just below this message area > (    (    (    swatch    )    )    )
+
+ANIMATION settings can be tweaked in the document add.css here >
+
+.toggle-body
+.toggle-body--on
+
+4 VIMEO ----------
+
+videos can be changed at: FULL WIDTH VIMEO VIDEO .. that section is optimized for vimeo only. title and text editing for vimeo videos are referenced as >
+
+ititial title and text
+add more here
+
+i initially included a third row of vimeo videos but cut them out to speed up load time.
+
+5 LOGO ----------
+
+the LARGE SCREEN LOGO is just referenced with img src in the HTML.
+
+but .. juuuuust in case you're looking for it, the SMALL SCREEN LOGO for smaller screen sizes and mobile is displayed via a pseudo element .appear:before, with an empty string content:'' and made responsive below that, FOUND AT THE BOTTOM OF THE DOCUMENT ADD.CSS referenced as >
+
+/* (    (    (    intro message + logo    )    )    ) */
+
+and referenced in the HTML as >
+
+BLURB + SMALL SCREEN LOGO
+
+options for both a LOGO or TEXT can be displayed in this pseudo element, but ONLY IN THE CSS.
+
+6 LANDING PAGES 2 & 3 ----------
+
+click the menu above and you will find 2 additional landing page options .. each having a different large screen video plus a different nyc background image under the intro blurb and logo.
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+</style>
+
+</head>
+
+<body>
+
+    <!-- (    (    (    swatch    )    )    ) -->
+    <div class="collapse" id="collapseExample">
+        <div class="d-flex bd-highlight collapse" id="collapseExample">
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#080e12"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#332e2e"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#473f3f"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#494646"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#656e79"></div>
+
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#a21313"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#b71c1c"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#c25555"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#f44336"></div>
+
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#f4eff2"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#f1f2f3"></div>
+            <div class="p-2 flex-grow-1 bd-highlight" style="background:#fff9fb"></div>
+        </div>
+    </div>
+
+    <!-- (    (    (    menu    )    )    ) -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Main navigation">
+            <div class="container">
+
+                <!-- (    header logo .. DISPLAY OPTION (only disables with display:none !important, just disable to display)    ) -->
+                <div class="d-flex p-2 bd-highlight pull-left" style="display:none !important">
+                    <div class="d-flex align-items-left logoh pull-left">
+                        <a class="navbar-brand text-dark" href="index.html">
+                            <img src="img/logo_red2.png" alt="red productions logo">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- (    swatch toggle button .. DISPLAY OPTION (when in designer mode, but disable with display:none    ) -->
+                <div class="background d-flex butpos" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="display:">
+                    <div class="toggle-body ml-0">
+                        <div class="toggle-btn"></div>
+                    </div>
+                </div>
+
+                <!-- (    three line menu icon    ) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="outline:none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+
+                <!-- (    nav starts here    ) -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="z-index:300"><br />
+                    <ul class="navbar-nav align-items-lg-center text-uppercase pt-3 pt-lg-0 ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="index2.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services<i class="fas fa-angle-down fa-sm ml-1"></i></a>
+                            <div class="dropdown-menu mb-2" aria-labelledby="DropdownMenu">
+                                <a class="dropdown-item" href="index.html">Landing Page 1</a>
+                                <a class="dropdown-item" href="index3.html">Landing Page 3</a>
+                                <!-- <a class="dropdown-item" href="#">GitHub site repository</a> -->
+                                <!-- <a class="dropdown-item" href="#">Visual assets</a> -->
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html">Our Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- (    (    (    text or img over video    )    )    ) -->
+    <div class="vidcon">
+        <div class="d-flex p-0 bd-highlight justify-content-end">
+
+            <!-- (    logo option .. DISPLAY OPTION (just disable display:none)    ) -->
+            <div class="d-flex justify-content-end flogo">
+                <img src="img/logo_red.png" class="logo_red" style="display:none">
+            </div>
+            <!-- (    text title .. DISPLAY OPTION (just disable display:none)    ) -->
+            <div class="d-flex justify-content-end redcon">
+                <h1 class="display-8 redtitle" style="display:none">RED PRODUCTIONS</h1>
+            </div>
+        </div>
+
+        <!-- (    FULL WIDTH VIMEO VIDEO .. DISPLAY OPTION (change to position:absolute in add.css for placing video behind BLURB + responsive pseudo element LOGO below)    ) -->
+        <div style="padding:56.25% 0 0 0;position:relative">
+            <iframe src="https://player.vimeo.com/video/226196373?autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#424242" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+    </div>
+    <!— / vidcon —>
+
+    <main id="content">
+
+        <!-- (    (    (    intro message + logo    )    )    ) -->
+        <div class="container introbg2">
+            <div class="row justify-content-lg-between align-items-lg-center py-5">
+
+                <div class="col-lg-6 mb-4 text-center text-lg-center" style="padding:8% 2% 4% 2%">
+                    <!-- thanks to https://loremipsum.io -->
+                    <span class="adjust">
+                        <!-- (    BLURB + SMALL SCREEN LOGO written into a responsive pseudo element   ) -->
+                        <h1 class="display-5 appear"><span class="blurb">We daily play with</span> <a href="http://www.dragondrones.org/">HD drones</a>, <a href="https://www.premiumbeat.com/blog/nab-2017-latest-vr-recording-news/">4K + 3D</a>, <a href="https://techcrunch.com/search/virtual%20reality">VR</a>, <a href="https://techcrunch.com/search/augmented%20reality">AR</a>, <a href="https://engineering.stanford.edu/magazine/article/video-editing-algorithm-gives-ordinary-motion-dance-rhythm">algorithm editing</a>, <a href="https://ultimaker.com/en/stories/22401-the-future-of-filmmaking-3d-printed-props">3D printing</a> and <a href="https://www.90yearsofdesign.philips.com/article/44">Ambilight technology</a> ... we've got your video experience covered.</h1>
+                        <!-- (    subtitle .. DISPLAY OPTION (just disable display:none)    ) -->
+                        <p class="lead mb-4" style="font-weight:400;display:none">Here are a few of our amazing, happy clients ..</p>
+                    </span>
+                </div>
+
+                <!-- (    LARGE SCREEN LOGO    ) -->
+                <div class="col-lg-6">
+                    <img src="img/logo_red.png" class="d-none d-lg-block img-fluid logo_adjust" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- |||||||||||||||||||| (    (    (    video row 1    )    )    ) |||||||||||||||||||| -->
+        <div class="d-xl-flex justify-content-around bd-highlight">
+
+            <!-- (    video 1    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/22361988" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="https://vimeo.com/22361988">Behind the Scenes of “Extinction” part I 5K Red Epic Underwater Shoot</a></span><br />
+                        A behind the scenes look into the worlds 1st RED EPIC 5k Underwater shoot on a pre production EPIC-M #008 & cinematographer Clayton Haskell.
+
+                        <div class="accordion" id="accordionQuestions">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="headingOne" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionQuestions">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>This behind the scenes video was shot and cut by Mark Weston. The EPIC-M 008 was made possible by Ketch Rossi.</p>
+
+                                        <p>The Film "eXtinction" is brought to you by Summer Rayne Oakes, Directed and shot by Clayton Haskell. For a teaser of the film visit <a href="https://vimeo.com/21689019">vimeo.com/21689019</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- (    end video 1    ) -->
+
+            <!-- (    video 2    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/109543178" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="#">Awesome sauce title here</a></span><br />
+                        Nec sagittis aliquam malesuada bibendum arcu vitae. Morbi tristique senectus et netus et malesuada fames ac. Tristique senectus et netus et. Faucibus scelerisque eleifend donec pretium.
+
+                        <div class="accordion" id="accordionQuestions2">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="heading2" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapse2" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionQuestions2">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>Sit amet est placerat in. Velit aliquet sagittis id consectetur purus ut. Eget nunc scelerisque viverra mauris. <span style="font-weight:bold;font-style:italic">Vel risus commodo viverra maecenas accumsan. Lorem ipsum dolor sit amet consectetur. Quam lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- (    end video 2    ) -->
+
+            <!-- (    video 3    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/78254514" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="#">Awesome sauce title here</a></span><br />
+                        Nec sagittis aliquam malesuada bibendum arcu vitae. Morbi tristique senectus et netus et malesuada fames ac. Tristique senectus et netus et. Faucibus scelerisque eleifend donec pretium.
+
+                        <div class="accordion" id="accordionQuestions3">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="heading3" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapse3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionQuestions3">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>Sit amet est placerat in. Velit aliquet sagittis id consectetur purus ut. Eget nunc scelerisque viverra mauris. <span style="font-weight:bold;font-style:italic">Vel risus commodo viverra maecenas accumsan. Lorem ipsum dolor sit amet consectetur. Quam lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- (    end video 3    ) -->
+
+        </div>
+        <!-- (    END video row 1    ) -->
+
+        <!-- |||||||||||||||||||| (    (    (    video row 2    )    )    ) |||||||||||||||||||| -->
+        <div class="d-xl-flex justify-content-around bd-highlight">
+
+            <!-- (    video 1    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/248591160" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="#">Awesome sauce title here</a></span><br />
+                        Nec sagittis aliquam malesuada bibendum arcu vitae. Morbi tristique senectus et netus et malesuada fames ac. Tristique senectus et netus et. Faucibus scelerisque eleifend donec pretium.
+
+                        <div class="accordion" id="accordionQuestions4">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="heading4" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapse4" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionQuestions4">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>Sit amet est placerat in. Velit aliquet sagittis id consectetur purus ut. Eget nunc scelerisque viverra mauris. <span style="font-weight:bold;font-style:italic">Vel risus commodo viverra maecenas accumsan. Lorem ipsum dolor sit amet consectetur. Quam lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- (    end video 1    ) -->
+
+            <!-- (    video 2    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/224640635" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="#">Awesome sauce title here</a></span><br />
+                        Nec sagittis aliquam malesuada bibendum arcu vitae. Morbi tristique senectus et netus et malesuada fames ac. Tristique senectus et netus et. Faucibus scelerisque eleifend donec pretium.
+
+                        <div class="accordion" id="accordionQuestions5">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="heading5" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapse5" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionQuestions5">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>Sit amet est placerat in. Velit aliquet sagittis id consectetur purus ut. Eget nunc scelerisque viverra mauris. <span style="font-weight:bold;font-style:italic">Vel risus commodo viverra maecenas accumsan. Lorem ipsum dolor sit amet consectetur. Quam lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- (    end video 2    ) -->
+
+            <!-- (    video 3    ) -->
+            <div class="p-2 bd-highlight vidspace">
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/55347966" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                        <!-- (    ITITIAL TITLE AND TEXT    ) -->
+                        <p class="vidtext"><span class="vidtext3"><a href="#">Awesome sauce title here</a></span><br />
+                        Nec sagittis aliquam malesuada bibendum arcu vitae. Morbi tristique senectus et netus et malesuada fames ac. Tristique senectus et netus et. Faucibus scelerisque eleifend donec pretium.
+
+                        <div class="accordion" id="accordionQuestions6">
+                            <div class="card shadow mb-2" style="background: #f4eff2 !important">
+                                <div class="card-header" id="heading6" style="background: #f4eff2 !important">
+                                    <a class="collapsed" href="#collapse6" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    <h3 class="card-title" style="font-size: 0.9rem;">more .. <i class="fas fa-angle-down float-right rotate-icon"></i></h3>
+                                    </a>
+                                </div>
+                                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionQuestions6">
+                                    <div class="card-body" style="background-: #f4eff2 !important">
+                                         <!-- (    ADD MORE HERE    ) -->
+                                        <p>Sit amet est placerat in. Velit aliquet sagittis id consectetur purus ut. Eget nunc scelerisque viverra mauris. <span style="font-weight:bold;font-style:italic">Vel risus commodo viverra maecenas accumsan. Lorem ipsum dolor sit amet consectetur. Quam lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div><br />
+            <!-- (    end video 3    ) -->
+
+        </div>
+        <!-- (    END video row 2    ) -->
+
+        <!-- (    (    (   to portfolio (button and text) .. DISPLAY OPTION (just disable display:none)    )    )    ) -->
+        <div class=" text-center" style="display:">
+            <button type="submit" class="btn btn-pill btn-purple mb-2">Portfolio</button><br /><br /><br /><br /><br />
+        </div>
+        <div class="container py-3" style="display:none">
+            <a href="#"><h2 class="text-center mb-5">This way to our full portfolio ..</h2></a><br /><br /><br /><br />
+        </div>
+
+        <div class="bg-skew bg-skew-light2"><br />
+
+        <!-- (    (    (    mobile campaign    )    )    ) -->
+        <div class="container py-5">
+            <h2 class="text-center">Pssst! We have not forgotten about mobile. Explore how we can partner to build your mobile video experience.</h2>
+        </div>
+            <!-- (    (    (    icon blocks    )    )    ) -->
+            <div class="container">
+                <div class="row align-items-center py-5">
+
+                    <!-- (    cell img    ) -->
+                    <div class="col-lg-4">
+                        <div class="iphone-x mb-5 mx-auto">
+                            <div class="screen" style="background-image: url(img/screenshot.png)"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="row">
+
+                            <!-- (    youtube    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-youtube" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">YouTube</h3>
+                                        <p>Viverra justo. Id aliquet lectus proin nibh nisl condimentum id venenatis.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    vimeo    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-vimeo-v" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Vimeo</h3>
+                                        <p>Feugiat nisl pretium fusce id velit ut. In mollis nunc sed id semper risus.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    instagram    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-instagram" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Instagram</h3>
+                                        <p>Tortor id aliquet lectus proin nibh nisl condimentum id venenatis.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    facebook    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-facebook-f" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Facebook</h3>
+                                        <p>Sed adipiscing diam donec adipiscing tristique risus nec feugiat in.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    linkedin    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">LinkedIn</h3>
+                                        <p>Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    twitter    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-twitter" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Twitter</h3>
+                                        <p>Nisl suscipit adipiscing bibendum est ultricies. Tempor orci dapibus ultrices in iaculis nunc.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    periscope    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-periscope" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Periscope</h3>
+                                        <p>Mattis aliquam faucibus purus in massa tempor nec feugiat. Suspendisse in est ante in nibh.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    snapchat    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-snapchat-ghost" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Snapchat</h3>
+                                        <p>Mattis aliquam faucibus purus in massa tempor nec feugiat. Suspendisse in est ante in nibh.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    whatsapp    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-whatsapp" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">WhatsApp</h3>
+                                        <p>Mattis aliquam faucibus purus in massa tempor nec feugiat. Suspendisse in est ante in nibh.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- (    messenger    ) -->
+                            <div class="col-sm-6 mb-4">
+                                <div class="media">
+                                    <span class="icon icon-purple mr-3">
+                                        <i class="icon-inner fab fa-facebook-messenger" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h3 class="h5 mb-2">Messenger</h3>
+                                        <p>Id interdum velit laoreet id donec ultrices. Interdum velit laoreet id donec ultrices tincidunt arcu.</p>
+                                    </div>
+                                </div>
+                                <!-- (    get started with mobile    ) -->
+                                <div class=" text-right">
+                                    <button type="submit" class="btn btn-pill btn-purple mb-2">Let's Do It!</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!— / row —>
+                    </div>
+                    <!— / col-lg-8 —>
+                </div>
+                <!— / icon blocks row —>
+            </div>
+            <!— / icon blocks container —><br /><br />
+
+        </div>
+        <!— / bg-skew —>
+
+        <hr class="sep border-danger" style="display:none">
+
+        <!-- (    (    (    get started form    )    )    ) -->
+        <div class="container py-5">
+            <h2 class="text-center mb-5">Are you ready for amazing video experiences?</h2>
+            <form class="">
+                <div class="d-md-flex justify-content-center">
+                    <div class="mr-md-2 mb-3">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="mr-md-2 mb-3">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="password" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="cmb-3">
+                        <button type="submit" class="btn btn-pill btn-purple mb-2">Get Started</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <!— / main —>
+
+    <!-- (    (    (    footer    )    )    ) -->
+    <footer class="site-footer mt-5">
+
+        <div class="container">
+
+            <div class="row justify-content-md-between">
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <h3 class="h5 mb-3">Company</h3>
+                    <p><a href="#" style="color:#a21313;font-weight:bold">Red Productions</a> is a botique video production company and studio based in NYC. We utilize the latest production gear and our network of skilled professionals to provide video services that meet or exceed industry standards. We act as a creaetive partner to our clients, creating innovative solutions that surpass their expectations.</p>
+                    <p>Red Productions<br />5th Ave & Central Park S<br />New York, NY 10022<br /><a href="hello@redproductions.com">hello@redproductions.com</a><br /><a href="tel:+12123106600" style="color:#a21313;font-weight:bold">212-310-6600</a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <h3 class="h5 mb-3">About</h3>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#">About</a></li>
+                        <li class="mb-1"><a href="#">Team</a></li>
+                        <li class="mb-1"><a href="#">Careers</a></li>
+                        <li class="mb-1"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <h3 class="h5 mb-3">Services</h3>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#">HD Video</a></li>
+                        <li class="mb-1"><a href="#">Animation</a></li>
+                        <li class="mb-1"><a href="#">Corporate</a></li>
+                        <li class="mb-1"><a href="#">Effects</a></li>
+                        <li class="mb-1"><a href="#">Everything</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <h3 class="h5 mb-3">Help</h3>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#">FAQ</a></li>
+                        <li class="mb-1"><a href="#">Contact</a></li>
+                        <li class="mb-1"><a href="#">Phones</a></li>
+                        <li class="mb-1"><a href="#">Chat</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="m-0">
+
+            <!-- (    (    (    copyright, social    )    )    ) -->
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center mt-4">
+                <p class="small text-muted">&copy; Red Productions 2018</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-facebook-messenger"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-youtube"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-vimeo"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-reddit-alien"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-amazon"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-snapchat-ghost"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-whatsapp"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-skype"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-slack-hash"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="icon icon-sm icon-secondary" href="#"><i class="icon-inner fab fa-ethereum"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+       <!— / footer container —>
+
+        <!-- (    (    (    map    )    )    ) -->
+        <div class="d-flex p-0 bd-highlight">
+            <div class="d-flex justify-content-center" style="min-width:100%;display:block">
+                <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4zGFAZpYwokRGUGph3Mf37k&key=AIzaSyDigU_zaVoClVHltANdBCV3uqDQ48MWrsY" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </footer>
+    <!— / footer —>
+
+    <!-- (    (    (    bootstrap script    )    )    ) -->
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- (    toggle switch    ) -->
+    <script >
+    const background = document.querySelector('.background');
+    const toggleBody = document.querySelector('.toggle-body');
+    const toggleBtn = document.querySelector('.toggle-btn');
+
+    toggleBtn.addEventListener('click', () => {
+      background.classList.toggle('background--on');
+      toggleBody.classList.toggle('toggle-body--on');
+      toggleBtn.classList.toggle('toggle-btn--on');
+      toggleBtn.classList.toggle('toggle-btn--scale');
+    });
+    </script>
+
+</body>
+</html>

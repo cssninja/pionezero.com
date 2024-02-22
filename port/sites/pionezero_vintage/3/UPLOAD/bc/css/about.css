@@ -1,0 +1,20 @@
+
+    /* restricting classes from bc: content, page-about-peaceful-yak, custom, has_welcome, custom_page (HERE), about-peaceful-yak */
+    section.content .custom_page {
+      color: #393230;
+      line-height: 1.7em;
+      margin: 0 auto;
+      max-width: 100% !important; /* was 640px */
+      overflow-y: auto;
+      padding: 0 1px;
+      width: 100%;
+    }
+
+    .riteimg {
+      padding:0px 0px 0px 10px !important;
+    }
+    @media screen and (max-width: 1000px) {
+    .riteimg {
+      padding:0px !important;
+      margin-bottom:200px !important;
+    }

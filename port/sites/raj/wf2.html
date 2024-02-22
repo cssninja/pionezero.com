@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VATARA</title>
+
+    <meta name="description" content="">
+    <meta name="author" content=“pionezero.com”>
+
+    <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STYLES —>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OUTER CONTAINER —>
+    <div class="container-fluid">
+
+        <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NAV BAR —>
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">VATARA</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Admin</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right text-right” role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" class="btn btn-default">
+							Submit
+						</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row">
+
+                <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LEFT SIDE —>
+		<div class="col-md-4">
+			 
+                         <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LEFT MENU —>
+			<button type="button" class="btn btn-primary btn-block btn-lg">
+				Welcome Dev
+			</button> 
+			<button type="button" class="btn btn-info btn-block btn-lg">
+				LEASE MANAGEMENT
+			</button> 
+			<button type="button" class="btn btn-info btn-block btn-lg">
+				FACILITY MANAGEMENT
+			</button> 
+			<button type="button" class="btn btn-info btn-block btn-lg">
+				ACCOUNTING/FINANCIALS
+			</button> 
+			<button type="button" class="btn btn-block btn-lg btn-info">
+				MARKETING
+			</button> 
+			<button type="button" class="btn btn-info btn-block btn-lg">
+				ADMIN
+			</button><br />
+		</div>
+
+                <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RIGHT SIDE —>
+		<div class="col-md-8">
+
+                <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PROPERTY PROFILE —>
+                <!— from http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_pills_dynamic&stacked=h —>
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+    <li><a data-toggle="pill" href="#menu1">Profile</a></li>
+    <li><a data-toggle="pill" href="#menu2">Financial Summary</a></li>
+    <li><a data-toggle="pill" href="#menu3">Maintenance</a></li>
+    <li><a data-toggle="pill" href="#menu4">Occupancy & Listing</a></li>
+    <li><a data-toggle="pill" href="#menu5">Docs & Reports</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+
+	<div class="row"><br /><br />
+		<div class="col-md-4">
+<!— from Bootstrap v4, http://v4-alpha.getbootstrap.com/components/forms/#form-groups —>
+<form>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">Address</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Country</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">State/Province</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Country</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+</form>
+		</div>
+		<div class="col-md-4">
+<!— from Bootstrap v4, http://v4-alpha.getbootstrap.com/components/forms/#form-groups —>
+<form>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">City</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Postal Code</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Contact</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Status</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+</form>
+		</div>
+		<div class="col-md-4">
+			<img alt="Bootstrap Image Preview" src="img/image.png" class="img-thumbnail" /> <br /><br />
+			<button type="button" class="btn btn-default">
+				Edit Profile
+			</button><br /><br />
+		</div>
+	</div><br /><br />
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>PROFILE</h3><br /><br /><br /><br />
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>FINANCIAL</h3><br /><br /><br /><br />
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>MAINTENANCE</h3><br /><br /><br /><br />
+    </div>
+    <div id="menu4" class="tab-pane fade">
+      <h3>OCCUPANCY</h3><br /><br /><br /><br />
+    </div>
+    <div id="menu5" class="tab-pane fade">
+      <h3>DOCS</h3><br /><br /><br /><br />
+    </div>
+
+
+                <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PROPERTY DESCRIPTION —>
+                                             <a class="panel-title" data-toggle="collapse" data-parent="#panel-291816" href="#panel-element-141651">
+			                    <div class="panel panel-primary">
+				               <div class="panel-heading">
+					           <h3 class="panel-title">
+						      Property Description
+					           </h3>
+				               </div>
+			                    </div>
+                                             </a>
+                         <div id="panel-element-141651" class="panel-collapse collapse in">
+	<div class="row">
+		<div class="col-md-4">
+
+<!— from Bootstrap v4, http://v4-alpha.getbootstrap.com/components/forms/#form-groups —>
+<form>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">Description</label>
+    <textarea class="form-control" rows="3"></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Unit</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Parking Spaces</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">Leased/Owned</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+</form>
+		</div>
+		<div class="col-md-4">
+
+<!— from Bootstrap v4, http://v4-alpha.getbootstrap.com/components/forms/#form-groups —>
+<form>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Grass Area</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Rentable Area</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Prop Custom Field 1</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+  <fieldset class="form-group"><br />
+    <label for="formGroupExampleInput2">Lease ID: <a href=“#”>LS 3456</a></label>
+  </fieldset>
+</form>
+
+		</div>
+		<div class="col-md-4">
+
+		<div class="col-md-4"><br />
+			<button type="button" class="btn btn-default">
+				List
+			</button><br /><br />
+			<button type="button" class="btn btn-default">
+				Edit
+			</button><br /><br />
+			<button type="button" class="btn btn-default">
+				Add Custom Fields
+			</button><br /><br />
+		</div>
+
+		</div>
+
+	</div>
+        <!— row / >
+                         </div>
+                         <!— collapse />
+
+                <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MAP —>
+
+                                             <a class="panel-title" data-toggle="collapse" data-parent="#panel-297678" href="#panel-element-564123">
+			                    <div class="panel panel-primary">
+				               <div class="panel-heading">
+					           <h3 class="panel-title">
+						      Map
+					           </h3>
+				               </div>
+			                    </div>
+                                             </a>
+                         <div id="panel-element-564123" class="panel-collapse collapse in">
+	<div class="row">
+		<div class="col-md-12">
+
+<div class="map-responsive">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47313.37317683915!2d-87.98734245361362!3d42.16984573999787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fbc0db73e17df%3A0x93b86f7936dde6d5!2sBuffalo+Grove%2C+IL!5e0!3m2!1sen!2sus!4v1457878634216" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+	</div>
+		</div><br /><br />
+
+	</div>
+        <!— 8 / —>
+</div>
+<!— row / —>
+
+     <!— \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCRIPTS —>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>

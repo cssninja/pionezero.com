@@ -1,0 +1,411 @@
+/* CHANGED */
+/* ADDED */
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  ISOTOPE FILTERING */
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  ISOTOPE TRANSITIONS */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  BASE STYLES */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, em, img,
+small, strong, var, b, i, dl, dt, dd, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  padding: 0px; /* CHANGED, was 20px */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  background: #2C2C2C     ;
+  color: #FFF;
+}
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 1.0em;
+}
+
+h1, h2, #super-list, .element, .tagline, #index-list, 
+.super-list .link {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3 { font-weight: bold; }
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+a,
+a code {
+  color: #FB4;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover code { 
+  color: #4BF; 
+}
+
+a:active,
+a:active code {
+  color: #1FB;
+  background: black;
+}
+
+a img { border: none; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+blockquote {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  border-left: 1px solid #333;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  ISOTOPE CONTENT CELLS */
+html,
+body {
+  height: 100%; /* required for containers to inherit vertical size from window */
+}
+
+#container {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+/* SMALL CELL */
+.element {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #2C2C2C;
+  -webkit-border-top-right-radius: 1.2em;
+      -moz-border-radius-topright: 1.2em;
+          border-top-right-radius: 1.2em;
+}
+
+.hide {
+  visibility:hidden;
+}
+
+
+.element.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
+.element.alkaline-earth  { background: #8CB4D3; background: hsl(  206, 45%, 69%); }
+.element.lanthanoid      { background: #69c3e9; background: hsl(  198, 74%, 66%); }
+.element.actinoid        { background: #4E84B0; background: hsl( 207, 39%, 50%); }
+.element.transition      { background: #0096E0; background: hsl( 200, 100%, 44%); } /* SMALL CELLS */
+.element.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
+.element.metalloid       { background: #3B75C0; background: hsl( 214, 53%, 49%); } /* LARGE CELLS */
+.element.other.nonmetal  { background: #00F; background: hsl( 252, 100%, 50%); }
+.element.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
+.element.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
+
+.element * {
+  position: absolute;
+  margin: 0;
+}
+
+/* SMALL CELL */
+.element .symbol_SMALL {
+  left: 0.3em;
+  top: 0.4em;
+  font-size: 1.5em; /* WAS 3.8em */
+  line-height: 1.0em;
+  color: #fff;
+}
+/* LARGE CELL */
+.element .symbol_BIG {
+  left: 0.3em;
+  top: 0.4em;
+  font-size: 3.8em;
+  line-height: 1.0em;
+  color: #FFF;
+}
+
+.element.large .symbol {
+  font-size: 4.5em;
+}
+
+.element.fake .symbol {
+  color: #000;
+}
+
+.element .name {
+  left: 0.5em;
+  bottom: 1.6em;
+  font-size: 1.05em;
+}
+
+.element .weight {
+  font-size: 0.9em;
+  left: 0.5em;
+  bottom: 0.5em;
+}
+
+.element .number {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: hsla(72,100%,50%,.5); /* CCFF00 */
+  right: 0.5em;
+  top: 0.5em;
+  visibility:hidden;
+}
+
+/* LARGE CELL */
+.variable-sizes .element.width2 { width: 230px; }
+
+.variable-sizes .element.height2 { height: 230px; }
+
+.variable-sizes .element.width2.height2 {
+  font-size: 0.8em; /* WAS 2.0em */
+}
+
+.element.large,
+.variable-sizes .element.large,
+.variable-sizes .element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+}
+
+.clickable .element:hover {
+  cursor: pointer;
+}
+
+.clickable .element:hover h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 10px white
+  ;
+}
+
+.clickable .element:hover h2 {
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  COMBINATION FILTER OPTIONS */
+#options .option-combo {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+#options .option-combo ul {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#options .option-combo h2,
+#options .option-combo h4 {
+  line-height: 34px;
+  margin-bottom: 0;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  FONT FOR LARGE CONTENT CELLS */
+.super-list .example {
+  list-style: none;
+  float: left;
+  width: 230px;
+  margin: 5px;
+}
+
+.super-list .example a,
+.super-list .example b,
+.super-list .example img {
+  display: block;
+}
+
+.super-list .example img { width: 100%; }
+
+.super-list .example a {
+  background: #2C2C2C     ;
+}
+
+.super-list .example a:hover {
+  background: white;
+  color: #2C2C2C;
+}
+
+.super-list .example b { 
+  font-weight: bold;
+  line-height: 1.3em;
+  padding: 3px;
+  padding-top: 8px;
+}
+
+.super-list .link {
+  float: left;
+  position: relative;
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: 300;
+  margin: 5px;
+}
+
+.super-list .link {
+  width: 230px;
+  height: 110px;
+}
+
+/* ANYTHING, TWITTER, HIRE ME LINKS */
+.super-list .link a {
+  display: block;
+  padding: 10px;
+  padding-left: 65px;
+  height: 90px;
+  background: #2C2C2C;
+  color: #AAAAAA;
+  -webkit-border-radius: 14px;
+     -moz-border-radius: 14px;
+          border-radius: 14px;
+}
+
+/* WHERE TO PLACE CONTENT FOR AN ARROW */
+.super-list .link a:before {
+  content: '➔';
+  font-size: 70px;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.super-list .link.away a:before {
+  top: 25px;
+  left: 0px;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.super-list .link a:hover {
+  background: #93F23A;
+  color: #2c2c2c;
+}
+
+.super-list .feature .name {
+  bottom: auto;
+  top: 65px;
+  left: 18px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/* `  `  `  `  `  `  `  `  `  CLEARFIX, nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+
+

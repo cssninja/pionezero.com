@@ -1,0 +1,393 @@
+/* ORIGINALS FOR DEVELOPMENT */
+
+/* [class*="col-"] {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   background-color: rgba(86,61,124,.15);
+   border: 1px solid rgba(86,61,124,.2);
+} */
+
+/* .dev1 {
+   padding: 1rem;
+   background-color: rgba(230, 226, 235, 1);
+   border: 2px solid rgba(201, 193, 213, 1);
+} */
+/* .dev2 {
+   padding: 1rem;
+   background-color: rgba(201, 193, 213, 1);
+   border: 2px solid rgba(175, 164, 191, 1);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOR TITLE AND CONTENT BACKGROUND AND BORDERS ONLY */
+.dev1 {
+   padding: 4rem;
+   background-color: rgba(244, 236, 170, 1); /* whitish .. former was orangy - rgba(247, 216, 103, 1) */
+   border: 18px solid rgba(237, 205, 89, 1);
+   /* opacity:0.9; */
+}
+.dev1_title {
+   padding: 4rem;
+   background-color: rgba(244, 236, 170, 1); /* whitish .. former was orangy - rgba(247, 216, 103, 1) */
+   border: 18px solid rgba(237, 205, 89, 1);
+   /* opacity:0.9; */
+}
+@media screen and (max-width: 700px) {
+.dev1_title {
+   padding: 4rem 2rem 4rem 2rem;
+   background-color: rgba(244, 236, 170, 1); /* whitish .. former was orangy - rgba(247, 216, 103, 1) */
+   border: 18px solid rgba(237, 205, 89, 1);
+   /* opacity:0.9; */
+ }
+}
+
+
+
+
+
+/* FLOATING IMG .. target: and (orientation: landscape) */
+.floatR {
+   float:right;
+   padding:0px 0px 20px 20px;
+}
+@media screen and (max-width: 500px) {
+.floatR {
+   /* float:right; */
+   padding:20px 0px 20px 0px;
+   margin:0 auto !important;
+ }
+}
+
+.floatL {
+   float:left;
+   padding:0px 20px 20px 0px;
+}
+@media screen and (max-width: 500px) {
+.floatL {
+   /* float:left; */
+   padding:20px 20px 20px 0px;
+   margin:0 auto !important;
+ }
+}
+/* galaxy note 4 */
+@media screen and (min-width: 480px) and (max-width: 500px) and (orientation: portrait) {
+.floatL {
+   float:left;
+   padding:20px 60px 20px 0px; /* pushes scant text on right to bottom */
+   margin:0 auto !important;
+ }
+}
+@media screen and (max-width: 550px) and (orientation: landscape) {
+.floatL {
+   float:left;
+   padding:20px 60px 20px 0px; /* pushes scant text on right to bottom */
+   margin:0 auto !important;
+ }
+}
+
+
+
+
+
+/* bootstrap override to fix outside (and few pixels that pbfix can't do below .. original border e2c458/rgba(226, 196, 88, 1), lighter best edcd59/rgba(237, 205, 89, 1), best darker b49f51/rgba(180, 159, 81, 1) */
+.panel-group >.panel {
+   background-color: rgba(247, 216, 103, 1) !important;
+   border: 6px solid rgba(237, 205, 89, 1) !important;
+   border-color: rgba(237, 205, 89, 1) !important;
+   border-radius:0px !important; /* gets rid of dots */
+}
+.panel-default >.panel-heading {
+   background-color: rgba(247, 216, 103, 1) !important;
+   border: 6px solid rgba(237, 205, 89, 1) !important;
+   border-color: rgba(237, 205, 89, 1) !important;
+   border-radius:0px !important; /* gets rid of dots */
+}
+/* styles inside */
+.pbfix {
+   background-color: rgba(244, 236, 170, 1) !important;
+   border: 6px solid rgba(237, 205, 89, 1) !important;
+   border-color: rgba(237, 205, 89, 1) !important;
+   outline: 0 !important;
+   border-radius:0px !important; /* gets rid of dots */
+}
+
+.auxsty {
+   padding:0px 0px 0px 12px !important;
+   margin-top:-135px;
+}
+@media screen and (max-width: 990px) {
+.auxsty {
+   padding:0px 0px 0px 0px !important;
+   margin:-142px 0px 100px 0px !important;
+ }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.auxsty {
+   padding:0px 0px 0px 12px !important;
+   margin-top:-132px;
+ }
+}
+
+
+
+
+/* .dev2 {
+   padding: 1rem;
+   background-color: rgba(226, 196, 88, 1);
+   border: 2px solid rgba(206, 177, 74, 1);
+} */
+
+
+
+
+
+/* MAIN TEXT */
+.atxt {
+   color:#393230 !important;
+   font-family: font-family: 'Lato', sans-serif;
+   font-size:1.3em;
+}
+
+/* PANEL TEXT */
+.atxt_p {
+   color:#393230 !important;
+   font-family: font-family: 'Lato', sans-serif;
+   font-size:1em;
+   font-weight:bold;
+}
+
+
+
+
+
+
+/* FOR TITLE DESCRIPTION ONLY */
+.atxt_title {
+   color:#393230 !important;
+   font-family: 'Lato', sans-serif !important;
+   font-size:1.3em;
+   width:58% !important;
+   margin:0 auto !important;
+   padding-top: 18px !important;
+   text-align: center !important;
+   line-height:18px;
+}
+@media screen and (max-width: 700px) {
+.atxt_title {
+   color:#393230 !important;
+   font-family: 'Lato', sans-serif;
+   font-size:1.3em;
+   width:60% !important;
+   margin-top:20px !important;
+   text-align: center !important;
+ }
+}
+
+
+
+.atxt_content {
+   margin-top:-95px !important;
+   border: 0px solid rgba(0, 0, 0, 0.0) !important; /* fixes weird 1px white border that appeared under 20px border */
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.atxt_content {
+   margin-top:-94px !important;
+   border: 0px solid rgba(0, 0, 0, 0.0) !important;
+ }
+}
+
+.sep_pan {
+   margin-bottom:12px !important;
+}
+
+
+
+
+
+
+
+
+
+/* NOT USED */
+.atxt2 {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:3em !important;
+   width:60% !important;
+   margin:0 auto !important;
+   text-align: center !important;
+}
+@media screen and (max-width: 700px) {
+.atxt2 {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:2em !important;
+   width:100% !important;
+   margin:0 auto !important;
+   text-align: center !important;
+  }
+}
+
+
+
+
+
+
+/* FOR TITLE FONT ONLY */
+.atxt2_title {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:3em !important;
+   width:60% !important;
+   margin:0 auto !important;
+   text-align: center !important;
+}
+@media screen and (max-width: 870px) {
+.atxt2_title {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:3em !important;
+   width:100% !important;
+   margin:0 auto !important;
+   text-align: center !important;
+  }
+}
+@media screen and (max-width: 700px) {
+.atxt2_title {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:2.3em !important;
+   width:100% !important;
+   margin:0 auto !important;
+   text-align: center !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.atxt3 {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:2em !important;
+   margin:0px 0px 12px 0px !important;
+}
+@media screen and (max-width: 700px) {
+.atxt3 {
+   color:#393230 !important;
+   font-family: 'Lemon', cursive;
+   font-size:1.5em !important;
+   margin:0px 0px 12px 0px !important;
+  }
+}
+
+
+
+/* don't change these, works in mozilla .. have to do one media query for chrome in products.css .. 'about peaceful yak' page height is default heaight as it gets cut off if raised so all resizing based on this being fixed FIRST */
+.topmar {
+   margin-top:-286px !important;
+}
+@media screen and (max-width: 680px) {
+.topmar {
+   margin-top:-250px !important;
+ }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.topmar {
+   margin-top:-280px !important;
+ }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 680px) {
+.topmar {
+   margin-top:-243px !important;
+ }
+}
+
+
+
+
+    section a:link {
+      color:#393230 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    section a:hover {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    section a:visited {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    section a:active {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+
+    body {
+      /* background-color: #f8bf21 !important; */
+      background-image: url(http://pionezero.com/bc/img/PY_SEASON.jpg) !important;
+      background-position: 0% 0% !important; /* distance FROM y-axis, x-axis .. was 0 555, was 0% 20% .. from left-y top-x */
+      background-repeat: no-repeat !important;
+      background-attachment: fixed !important;
+      /* z-index:2000 !important; */
+      width:100% !important;  /* dimensions are 450px H, 400px W */
+      /* height:450px !important; */
+      /* margin:0 auto !important; */
+      /* overflow:hidden !important; */
+      background-size:cover !important;
+      margin-top:-70px !important; /* to raise title higher */
+      }
+
+    section h1 {
+      display:none !important;
+      }
+
+a {
+   outline: 0 !important;
+}

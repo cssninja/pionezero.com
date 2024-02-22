@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <!--
+        ADDED TO ORIGINAL MARKUP:
+           1) RESPONSIVE TO SMART DEVICES
+           2) FOOTER FONT (Lato)
+           3) SOCIAL FOOTER CSS (font-awesome.min.cs and zocial.css)
+           4) CUSTOM EMBEDDED FONT
+           5) FOOTER 1 AND 2
+           6) STICKY FOOTER SHELL
+           7) STICKY FOOTER SOLUTION
+
+        SCRIPT LIST:
+           css________
+           font-awesome.min.css
+           zocial.css
+           bootstrap_dark.css
+           bootstrap-responsive.css
+
+           js________
+           modernizr-2.6.2-respond-1.1.0.min.js
+           http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+           jquery-1.9.1.min.js
+           bootstrap.min.js
+
+           font________
+           http://fonts.googleapis.com/css?family=Lato
+           http://fonts.googleapis.com/css?family=Lato:400
+           http://fonts.googleapis.com/css?family=Lato:700
+           http://fonts.googleapis.com/css?family=Lato:300
+           atwriter.ttf
+           santa_fe_plain.ttf
+           cooprblk.ttf
+           copperplate-gothic-light.ttf
+           FaunaOne-Regular.ttf
+        -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>All Purpose | Walker's Point, Milwaukee :: Wine</title>
+        <meta name="description" content="AP Bar & Kitchen, Walker's Point, Milwaukee. Urban Rustic North American Cuisine.">
+        <meta name="keywords" content="all purpose, ap, milwaukee, crazy water, restaurant, food, foodie, delicious, drinks, beer, ale, cocktails, wine, tequila, gin, scotch, bourbon, rum, lemon, cognac, chardonnay, muscadet, sauvignon blanc, cabernet sauvignon, zinfindel, pinot noir, riesling, grenache, cabernet franc, cabernet, merlot, oysters, cheese, duck, chicken, foie gras torchon, burrata, shrimp, catfish, sweetbread, beef, corn, clams, jalepeno cucumber soup, kale, tomato, endive, beet, feta, eggplant, octopus, bbq, spare ribs, pork belly, dates, fried chicken, scallops, goulash, cheeseburger, hamburger, skate, lamb, rice, fish, steak, potato, bread, butter, french fries, bacon, watermelon, goat cheese, blue cheese, coconut, sweet and sour, garlic, thyme, balsamic, onion, walker's point, late night, bar, kitchen, peggy magister, justin anthony, daniel pope">
+
+        <!-- RESPONSIVE TO SMART DEVICES (ADDED) -->
+        <!-- Set the viewport width to device width for mobile -->
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <!-- from https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+        <!-- FOOTER FONT (ADDED) -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+
+        <!-- SOCIAL FOOTER CSS (ADDED) -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/zocial.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="css/bootstrap_dark.css"> <!-- CHANGED, was bootstrap.min.css -->
+
+        <!-- CUSTOM EMBEDDED FONT -->
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            @font-face { 
+	        font-family: "atwriter";
+	        src: url(font/atwriter.eot);
+	        src: local("atwriter"), url(font/atwriter.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "santa_fe_plain";
+	        src: url(font/santa_fe_plain.eot);
+	        src: local("santa_fe_plain"), url(font/santa_fe_plain.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "cooprblk";
+	        src: url(font/cooprblk.eot);
+	        src: local("cooprblk"), url(font/cooprblk.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "copperplate-gothic-light";
+	        src: url(font/copperplate-gothic-light.eot);
+	        src: local("copperplate-gothic-light"), url(font/copperplate-gothic-light.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "FaunaOne-Regular";
+	        src: url(font/FaunaOne-Regular.eot);
+	        src: local("FaunaOne-Regular"), url(font/FaunaOne-Regular.ttf) format("truetype");
+            }
+            /* solution thanks to gonçalo peres at stack overflow, http://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-handheld-device-in-jquery || this is the only way these two media queries work .. when separated into .css and .html .. otherwise if both in .css the upper one disables the one below it */
+            @media only screen and (max-width: 760px) {
+              .laptop_disappear_at_760 { display: none !important; }
+            }
+        </style>
+
+        <link rel="stylesheet" href="css/bootstrap-responsive.css"> <!-- CHANGED, was bootstrap-responsive.min.css -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+
+    </head>
+
+    <body>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      NAVIGATION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="tel://14146726000"><!--AP Bar & Kitchen </a>-->Tel: +1 (414) 672-6000</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="smart"><a href="food.html#food">Food</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/food.pdf">Food</a></li>
+                                    <li class="smart"><a href="wine.html#wine">Wine</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/wine.pdf">Wine</a></li>
+                                    <li class="smart"><a href="cocktails_beer.html#cocktails_beer">Cocktails & Beer</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/cocktails_beer.pdf">Cocktails & Beer</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/cocktails_beer.pdf">Cocktails & Beer</a></li>
+                                    <li class="smart"><a href="http://www.opentable.com/single.aspx?rid=147988&rtype=ism&restref=147988">Make A Reservation</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="http://www.opentable.com/single.aspx?rid=147988&rtype=ism&restref=147988">Make A Reservation</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://www.facebook.com/allpurposemke">About</a></li>
+                            <li><a href="press.html#press">Press</a></li>
+                            <li><a href="http://goo.gl/maps/RnR4v">Directions</a></li>
+                            <li><a href="mailto:info@apbarandkitchen.com">Jobs</a></li>
+                            <li><a href="mailto:info@apbarandkitchen.com">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      MAIN CALL TO ACTION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <!-- NOTE: have not applied media queries for hero-unit h1 elements in bootstrap_dark.css .. appears to not be needed yet -->
+            <div class="hero-unit2" style="margin-bottom: -17px;">
+                <center>
+
+                <span class="logo_bigger"><img src="img/cursif_logo_cropped.png" style="width:600px !important; margin-bottom:30px;opacity:0.7;" alt="all purpose, ap, milwaukee, crazy water, restaurant, food, foodie, drinks, beer, ale, cocktails, wine, oysters, duck, chicken, shrimp, catfish, beef, clams, feta, bbq, spare ribs, fried chicken, scallops, cheeseburger, hamburger, fish, steak, french fries, walker's point, late night, bar, kitchen, peggy magister, justin anthony, daniel pope"></span>
+                <p class="fauna_one">814 South 2nd Street - Milwaukee
+                <br /><span class="copperplate-gothic-light">Between National & Walker</span></p>
+
+                <!-- TEMPORARY ANNOUNCEMENT -->
+                <!--<p class="fauna_one_announce"><br />EVENT: Wine Dinner on March 13, 2014. We have Andrea Sottimano joining us for a very special dinner paired with his wonderful wines from Italy's famous Barbaresco region. This will be a very unique opportunity to speak with one of Italy's great winemakers. Seating is very limited. Please call 414.672.6000 for reservations.</p>-->
+
+                <p><br /><a href="tel://14146726000" class="fauna_one_contact" style="display:block;margin: 5px 0px 0px 0px !important;"><span style="font-size:30px;">&#9742;&nbsp;&nbsp;</span>414 672 6000</a></p>
+                <p><a href="tel://14146726000" class="fauna_one_contact"></a></p>
+                <p><a href="http://www.opentable.com/single.aspx?rid=147988&rtype=ism&restref=147988" class="fauna_one_contact">Make A Reservation</a></p>
+                <p><a href="mailto:info@apbarandkitchen.com" class="fauna_one_contact">Email Us</a></p>
+                <p><a href="http://goo.gl/maps/RnR4v" class="fauna_one_contact">Google Map directions</a></p>
+
+                <p class="fauna_one_hours">
+                <br />Tuesday - Thursday
+                <br /><span class="fauna_one_hours">5:00 pm - 10:00 pm
+                <br />Friday - Saturday
+                <br /><span class="fauna_one_hours">5:00 pm - 11:00 pm
+                <br />Sunday
+                <br /><span class="fauna_one_hours">5:00 pm - 9:00 pm</span></p>
+                
+                <!-- ************** NEWS ************** -->
+                <!--<p class="fauna_one_news">
+                <br />NEWS: 'Food Tasting Friday' from 6:00pm-7:00pm Oct 3 2013</p>-->
+
+                <!-- media query toggled menus because smart phones still can't read pdf's -->
+                <p class="fauna_one_submenu follow_uszzz laptop_disappear_at_760">
+                <br /><a href="index.html" class="zocial_lil">home</a>&nbsp;&nbsp; <a href="menu/food.pdf" class="zocial_lil">food</a>&nbsp;&nbsp; <a href="menu/wine.pdf" class="zocial_lil">wine</a>&nbsp;&nbsp; <a href="menu/cocktails_beer.pdf" class="zocial_lil">cocktails & beer</a>&nbsp;&nbsp; <a href="http://www.facebook.com/allpurposemke" class="zocial_lil">about</a>&nbsp;&nbsp; <a href="press.html#press" class="zocial_lil">press</a>
+                </p>
+                <p class="fauna_one_submenu follow_uszzz smart">
+                <br /><a href="index.html" class="zocial_lil">home</a>&nbsp;&nbsp; <a href="food.html#food" class="zocial_lil">food</a>&nbsp;&nbsp; <a href="wine.html#wine" class="zocial_lil">wine</a>&nbsp;&nbsp; <a href="cocktails_beer.html#cocktails_beer" class="zocial_lil">cocktails & beer</a>&nbsp;&nbsp; <a href="http://www.facebook.com/allpurposemke" class="zocial_lil">about</a>&nbsp;&nbsp; <a href="press.html#press" class="zocial_lil">press</a>
+                </p>
+                
+                    <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+                    <div class="follow_us">
+	                <a href="http://twitter.com/allpurposemke" class="zocial twitter"></a>
+		         <a href="http://www.facebook.com/allpurposemke" class="zocial facebook"></a>
+                       <a href="http://www.instagram.com/allpurposemke" class="zocial instagram"></a>
+	                </div>
+
+                </center>
+
+                <!--<h1>ap bar & kitchen</h1>-->
+                <!--<p class="subtitle_bg">Opening in August 2013</p>
+                <p><a class="btn btn-primary btn-large">Contact Us &raquo;</a></p>-->
+            </div>
+            
+            
+            
+            
+        <!-- ` ` ` ` ` ` ` SINGLE COLUMN ` ` ` ` ` ` ` -->
+                            
+        <div class="main-container" style="color:#aaaaaa !important;" >
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <section>
+                        <a name="wine"></a>
+                        <br /><h2>a.p. wine</h2><br />
+
+                        <p class="smallh2">BY THE GLASS</p>
+
+                        <!--<p class="smallh2">aperitif [2oz]</p>
+
+                        <p>&raquo; Bonal // Gentiane-Quina // FR ... 4
+                        <p>&raquo; Priorat Natur // Vermut Blanco // Catalonia, ES ... 7
+                        <p>&raquo; Vergano // Vermouth Americano // Asti, Piemonte ... 8 
+                        <p>&raquo; Vergano // Vermouth Bianco // Asti, Piemonte ... 9
+                        <p>&raquo; Rare Wine Company // "Charleston Sercial" // Madiera, PT ... 9 [3oz]</p><br />-->
+
+                        <p class="smallh2">Vermouth // Sherry // Madeira</p>
+
+                        <p>&raquo; Vergano // Vermouth Americano // Asti, Piemonte ... 8 
+                        <p>&raquo; Vergano // Vermouth Bianco // Asti, Piemonte ... 9
+                        <p>&raquo; Grant // "La Garrocha" // Amontillado // Jerez-Xeres-Sherry, ES ... 7
+                        <p>&raquo; Gutierrez // "Sangre y Trabajadero" // Oloroso // Jerez-Xeres-Sherry, ES ... 9
+                        <p>&raquo; Rare Wine Company // "Charleston Sercial" // Madeira, PT ... 9 
+                        <p>&raquo; Rare Wine Company // "Boston Bual" // Madeira, PT ... 9</p><br />
+
+                        <p class="smallh2">Sparkling</p>
+
+                        <p>&raquo; NV Mestres // Cava Reserva Brut // "1312" // Macabeu, Xerello, Paralleda // Catalonia, ES ... 10 | 40
+                        <p>&raquo; Casa Costa Piane // Frizzante Naturalmente // "Brichet" // Glera // Valdobbiadene, IT ... 12 | 48</p><br />
+
+                        <p class="smallh2">Rose</p>
+
+                        <p>&raquo; 2013 Alois Lageder // Lagrein // Alto Adige, IT ... 11 | 44</p><br />
+
+                        <p class="smallh2">White</p>
+
+                        <p>&raquo; 2012 Chateau La Rame // Sauvignon Blanc // Bordeaux, FR ... 10 | 40
+                        <p>&raquo; 2013 Ameztoi // Hondarrabi  Zuri // Txakolina, ES  ... 10 | 40
+                        <p>&raquo; 2012 Bucci // Classico Supieriore // Verdicchio // Castelli di Jesi, Marche, IT ... 12 | 48
+                        <p>&raquo; 2011 Veleta // "Viji" // Vijiriega // Alpujarra, ES ... 8 | 32 
+                        <p>&raquo; 2011 Lioco // Chardonnay // Sonoma County, CA ... 12 | 48
+                        <p>&raquo; 2012 Alkoomi // Riesling // Frankland River, AU ... 9 | 36</p><br />
+
+                        <p class="smallh2">Red</p>
+
+                        <p>&raquo; 2012 Eric Texier // Cotes du Rhone // Grenache // Rhone, FR ... 10 | 40
+                        <p>&raquo; 2010 Chateau Nozieres // "Ambroise de L'Her // Malbec // Cahors, FR ... 9 | 36
+                        <p>&raquo; 2011 Veleta // Joven // Tempranillo // Alpujarra, ES ... 9 | 36
+                        <p>&raquo; 2011 Ampeleia // "Kepos" // Alicante, Carignan // Tuscany, IT ... 11 | 44
+                        <p>&raquo; 2013 Tami // Frappato // Sicily, IT ... 12 | 48
+                        <p>&raquo; 2012 Seven of Hearts // Pinot Noir // Willamette Valley, OR ... 13 | 52</p><br />
+
+                        <p class="smallh2">BOTTLES</p>
+
+                        <p class="smallh2">Sparkling</p>
+
+                        <p>&raquo; NV H. Billiot // Grand Cru // Brut Rose // Pinot Noir, Chardonnay // Champagne, FR ... 135
+                        <p>&raquo; NV Billecart Salmon // Brut Rose // Chardonnay, Pinot Meunier, Pinot Noir // Champagne, FR ... 185
+                        <p>&raquo; NV Guy-Larmandier // 1er Cru // Brut // Chardonnay // Champagne, FR ... 99
+                        <p>&raquo; NV Roger Coulon // Brut // "Reserve de l'Hommee" // Pinot Meunier, Chardonnay, Pinot Noir // 1er Cru // Champagne, FR ... 120
+                        <p>&raquo; NV Gaston Chiquet // 1er Cru // "Tradition" // Chardonnay, Pinot Meunier, Pinot Noir // Champagne, FR ... 105
+                        <p>&raquo; NV Pierre Gimonnet // 1er Cru // "Cuvee Cuis" // Chardonnay // Champagne, FR ... 111
+                        <p>&raquo; NV Pierre Peters // Grand Cru // Brut // "Cuvee de Reserve" // Chardonnay // Champagne, FR ... 123
+                        <p>&raquo; 2007 Domaine Huet // Brut // "Vouvray Petillant" // Chenin Blanc // Vouvray, Loire, FR ... 66
+                        <p>&raquo; La Stoppa // "Trebbiolo Frizzante" // Bonarda,Barbera // Emilia-Romagna, IT ... 42</p><br />
+
+                        <p class="smallh2">Rose</p>
+
+                        <p>&raquo; 2013 Lioco // "Indica" // Carignan // Mendocino County, CA ... 42</p><br />
+
+                        <p class="smallh2">White</p>
+
+                        <p>France
+                        <p>&raquo; 2012 Domaine Specht // Pinot Gris // Alsace ... 39
+                        <p>&raquo; 2012 Domaine Fief Aux Dames // Muscadet // Melon de Bourgogne // Sevre et Maine, Loire ... 30
+                        <p>&raquo; 2013 Francois Cazin // Ramorantin // Cour Cheverney, Loire ... 35
+                        <p>&raquo; 2011 Francois Cazin // "Cuvee Renaissance" // Ramorantin // Cour Cheveny, Loire ... 39
+                        <p>&raquo; 2012 Domaine de la Pepiere // Muscadet // Sevre et Maine, Loire ... 39
+                        <p>&raquo; 2006 Doamine du Closel // "Clos du Papillion" // Chenin Blanc // Savennieres, Loire ... 90
+                        <p>&raquo; 2008 Domaine du Closel // "Clos du Papillion" // Chenin Blanc // Savennieres, Loire ... 90
+                        <p>&raquo; 2009 Domaine du Closel // "Clos du Papillion" // Chenin Blanc // Savennieres, Loire ... 90
+                        <p>&raquo; 2012 De Moor // "Chitry" // Chardonnay // Chablis ... 66
+                        <p>&raquo; 2010 Domaine du Montbourgeau // "L'Etoile" // Chardonnay // Jura ... 53</p><br />
+
+                        <p> Italia
+                        <p>&raquo; 2012 Bolzano // Goldmuskateller // Alto Adige ... 42
+                        <p>&raquo; 2011 Grosjean // "Vigne Rovettaz" // Petite Arvine // Valle d'Aosta ... 55
+                        <p>&raquo; 2011 Les Cretes // Petite Arvine // Valle d'Aosta ... 77
+                        <p>&raquo; 2010 Ermes Pavese // Blanc de Morgex et de La Salle // Prie Blanc // Valle d'Aosta ... 59
+                        <p>&raquo; 2012 Bastianich // "Adriatico" // Malvasia // Istrian Penninsula, CR ... 36
+                        <p>&raquo; 2010 Ferrando // "La Torrazza" // Erbaluce // Caluso, Piemonte ... 35
+                        <p>&raquo; 2012 Roagna // Chardonnay // Piemonte ... 44
+                        <p>&raquo; 2012 De Forvile // Arneis // Piemonte ... 36
+                        <p>&raquo; 2012 De Forville // "Ca del Buc" // Chardonnay // Piemonte ... 32
+                        <p>&raquo; 2012 Fontaleoni // Vernaccia // San Gimignano, Tuscany ... 36
+                        <p>&raquo; 2011 Sartarelli // Verdicchio // Castelli di Jesi, Marche ... 36
+                        <p>&raquo; 2010 Sartarelli //  "Tralivio" // Verdicchio // Castelli di Jesi, Marche ... 39
+                        <p>&raquo; 2008 Sartarelli // "Balciana" // Verdichhio // Castelli di Jesi, Marche ... 60
+                        <p>&raquo; 2012 Occhipinti // "SP68" // Albenello, Moscato // Sicily ... 60
+                        <p>&raquo; 2012 Graci // Etna Bianco // Carricante, Catarratto // Mount Etna, Sicily ... 60</p><br />
+
+                        <p> Espania
+                        <p>&raquo; 2012 Bodegas Arzabro // "Luzia de Ripa" // Hondarrabi Zuri, Izpiriotza Txikia // Txakoli ... 40
+                        <p>&raquo; 2011 Brezo // Godello, Dona // Bierzo ... 43
+                        <p>&raquo; 2012 Finca Vinoa // Treixadura, Godello, Albarino // Ribeiro ... 50</p><br />
+
+                        <p> Germany / Austria
+                        <p>&raquo; 2011 Immich-Batterierberg // Riesling Trocken C.A.I. // Mosel ... 47
+                        <p>&raquo; 2012 Vols // Wiltinger Kupp Riesling Kabinett // Saar ... 53
+                        <p>&raquo; 2012 Eugen Muller // "Cyriakus" // Forster Kirchenstuck Riesling Spatlese Trocken // Pfalz ... 64
+                        <p>&raquo; 2012 Hexamer // Medderscheimer Rheingrafenberg // "Riesling #1 "// Nahe ... 77
+                        <p>&raquo; 2011 Nikolaihof // "Hefeabzug" // Gruner Veltliner // Wachau, AT ... 60</p><br />
+
+                        <p> New World
+                        <p>&raquo; 2012 Seven of Hearts // Chardonnay // Willamette Valley, OR ... 43
+                        <p>&raquo; 2012 Zepaltas // "Babushka" // Chardonnay // Russian River Valley, CA ... 81
+                        <p>&raquo; 2011 Smith-Madrone // "Spring Mountain District" // Chardonnay // Napa Valley, CA ... 75</p><br />
+
+                        <p class="smallh2">Red</p>
+
+                        <p>France
+                        <p>&raquo; 2011 Domaine de la Petit Marie // "Les Galluches" // Cabernet Franc // Bourgeil, Loire  ... 39
+                        <p>&raquo; 2010 Marechal // "Cuvee Gravel" // Pinot Noir // Burgundy ... 68
+                        <p>&raquo; 2012 Hubert Lignier // Bourgogne Rouge // Pinot Noir // Burgundy ... 90
+                        <p>&raquo; 2010 Ghislaine Barthod // "Les Bons Batons" // Pinot Noir // Burgundy ... 90
+                        <p>&raquo; 2012 Jean-Paul Brun // Vielles Vignes // "L'Ancien" // Gamay // Beaujolais ... 42
+                        <p>&raquo; 2010 Domaine Cheveau // "Les Champs Grilles" // Gamay // Saint-Amour, Beaujolais ... 45
+                        <p>&raquo; 2012 Charly Thevenet // "Grain and Granite" // Gamay // Beaujolais ... 72
+                        <p>&raquo; 2011 Jacques Puffeney // Poulsard "M" // Jura ... 58
+                        <p>&raquo; 2011 Jacques Puffeney // "Les Berangeres" // Trousseau // Jura ... 75
+                        <p>&raquo; 2012 Eric Texier // "Vaison la Romaine" // Grenache // Rhone ... 41 
+                        <p>&raquo; 2012 Eric Texier // "Brezeme" // Syrah // Rhone ... 54
+                        <p>&raquo; 2012 Eric Texier // "St. Julien en St. Alban" // Syrah // Rhone ... 53
+                        <p>&raquo; 2013 Peillot // Mondeuse // Bugey ... 51
+                        <p>&raquo; 2011 Chateau D'Oupia // Carignan, Syrah // Minervois, Languedoc  ... 32
+                        <p>&raquo; 2010 Domaine Faillenc Sainte Marie // "Escapade" // Cinsault // VdP d'Oc ... 30</p><br />
+
+                        <p>Italia
+                        <p>&raquo; 2009 Cantina Terlano // "Gries" // Lagrein // Alto Adige ... 66
+                        <p>&raquo; 2010 Les Crete // Torrette // Petite Rouge // Vallee d'Aosta ... 53
+                        <p>&raquo; 2011 Danilo Thomain // Enfer d'Arvier // Petite Rouge // Vallee d'Aosta ... 72
+                        <p>&raquo; 2012 Grosjean // Pinot Noir // Vallee d'Aosta ... 55
+                        <p>&raquo; 2009 Bussola // "Ca del Laito" // Corvina, Rondinella, Molinara // Valpolicella Superiore ... 51
+                        <p>&raquo; 2011 Vercesi del Castellazzo // "Cla" // Barbera // Oltrepo Pavese, Lombardia ... 45
+                        <p>&raquo; 2011 Brovia // "Vignavillej" // Dolcetto D'Alba // Piemonte ... 45
+                        <p>&raquo; 2012 Mascarello // Dolcetto D'Alba // Piemonte ... 51
+                        <p>&raquo; 2012 De Forville // Barbera // Piemonte ... 36
+                        <p>&raquo; 2011 Lucignano // Sangiovese // Chianti, Toscana ... 32
+                        <p>&raquo; 2011 Isole e Olena // Chianti Classico // Sangiovese // Tuscany ... 47
+                        <p>&raquo; 2009 Podere il Palazzino // "Argenina" // Sangiovese // Chianti Classico, Toscana ... 36
+                        <p>&raquo; 2008 Podere il Palazzino // "Grosso Senese" // Sangiovese // Chianti Classico, Toscana ... 69
+                        <p>&raquo; 2012 Montesecondo // Sangiovese, Canaiolo // Chianti Classico, Toscana ... 62
+                        <p>&raquo; 2011 Monteraponi // Chianti Classico// Sanigiovese // Toscana ... 66
+                        <p>&raquo; 2009 La Spinetta // "Il Nero di Casanova" // Sangiovese // Toscana ... 48
+                        <p>&raquo; 2012 Claudio Morelli // Sangiovese // Marche ... 35
+                        <p>&raquo; 2011 Due Mani // "CiFra" // Cabernet Franc  // Toscana ... 68
+                        <p>&raquo; 2012 Terre Nere // "Santo Spirito" // Nerello Mascalese // Mount Etna, Sicily ... 87
+                        <p>&raquo; 2012 Terre Nere // "Feudo di Mezzo" // Mount Etna, Sicily ... 87
+                        <p>&raquo; 2010 Centonze // Nero d'Avola // Sicily ... 31
+                        <p>&raquo; 2009 Gulfi // "Nerojbleo" // Nero d'Avola // Sicily ... 57
+                        <p>&raquo; 2010 Centonze // Frappato, Nero d'Avola // Cerasuolo di Vittoria, Sicily ... 36
+                        <p>&raquo; 2012 Occhipinti // "SP68" // Frappato, Nero d'Avola // Sicily ... 60
+                        <p>&raquo; 2012 Occhipinti // "Il Frappato" // Sicily ... 78</p><br />
+
+                        <p>Austria
+                        <p>&raquo; 2008 Prieler // "Johanneshohe" // Blaufrankisch // Burgenland ... 51</p><br />
+
+                        <p>Espania
+                        <p>&raquo; 2003 R. Lopez de Heredia // Riserva // "Vina Bosconia" // Tempranillo, Garnacha // Rioja ... 72
+                        <p>&raquo; 2011 Buil & Gine // "Ginegine" // Garnacha, Carinena // Priorat ... 41
+                        <p>&raquo; 2011 Descendientes de J. Palacios // "Petalos" // Mencia // Bierzo ... 50
+                        <p>&raquo; 2012 Alvaro Palacios // "Camins" // Granacha, Samso,Cabernet Sauvignon, Syrah // Priorat ... 54
+                        <p>&raquo; 2009 Veleta // "Nolados" // Cabernet Sauvignon, Cabernet Franc, Tempranillo // Alpujarra ... 36
+
+                        <p>United States
+                        <p>&raquo; 2011 Duxoup // Syrah // Napa Valley, CA ... 41
+                        <p>&raquo; 2010 Copain // "Les Voisins" // Syrah // Yorkville Highlands, CA ... 63
+                        <p>&raquo; 2010 Copain // "Les Voisins" // Pinot Noir // Anderson Valley, CA ... 68
+                        <p>&raquo; 2012 Lioco // "Laguna" // Pinot Noir // Sonoma Coast, CA ... 75
+                        <p>&raquo; 2011 Laurel Glen // "Counterpoint" // Cabernet Sauvignon // Sonoma, CA ... 60
+                        <p>&raquo; 2009 Unti // "Dry Creek Valley" // Zinfandel // Sonoma, CA ... 63</p><br />
+
+                        <p class="smallh2">WEIRDOS AND RIPPERS</p>
+
+                        <p>Sparkling
+                        <p>&raquo; Mosse // Petillant Naturel // "Moussamousettes" // Grolleau Gris, Gamay // Anjou, Loire, FR ... 51</p><br />
+
+                        <p>White / Orange
+                        <p>&raquo; 2009 Clos Rougeard // "Breze" // Chenin Blanc // Saumur-Champigny, Loire, FR ... 162
+                        <p>&raquo; 2011 Francois Raveneau // Grand Cru // "Valmur" // Chardonnay // Chablis, FR ... 300
+                        <p>&raquo; 2011 Francois Raveneau // 1er Cru // "Butteaux" // Chardonnay // Chablis, FR ... 195
+                        <p>&raquo; 2011 Francois Raveneau // "Le Foret" // Chardonnay // Chablis, FR ... 195
+                        <p>&raquo; 2002 Daniel Etienne Defaix // 1er Cru // "Cote de Lechet" // Chardonnay // Chablis, FR ... 115
+                        <p>&raquo; 2012 Mas de Daumas Gassac // Viognier, Chardonnay, Petit Manseng, Chenin Blanc // Languedoc, FR ... 105
+                        <p>&raquo; 2008 La Stoppa // "Ageno" // Malvasia, Trebbiano // Emilia –Romagna, IT ... 85
+                        <p>&raquo; 2004 R. Lopez de Heredia // "Vina Gravonia" // Viura // Rioja, ES ... 48
+                        <p>&raquo; 2011 Lioco // "Hanzell Vineyard" // Chardonnay // Sonoma County ... 120</p><br />
+
+                        <p>Red
+                        <p>&raquo; 2009 Clos Rougeard // Cabernet Franc // Saumur-Champigny, Loire, FR ... 140
+                        <p>&raquo; 2009 Clos Rougeard // "Les Poyeux" // Cabernet Franc // Saumur-Champigny, Loire, FR ... 162
+                        <p>&raquo; 2009 Clos Rougeard // "Le Bourg" // Cabernet Franc // Saumur-Champigny, Loire, FR ... 230
+                        <p>&raquo; 2011 Hubert Lignier // Pinot Noir // Gevery-Chambertin, FR ... 120
+                        <p>&raquo; 2011 Domaine Fourrier // 1er Cru // "Aux Combe Aux Maines" // Pinot Noir // Gevery-Chambertin, FR ... 270
+                        <p>&raquo; 2011 Hubert Lignier // Pinot Noir // Morey-Saint-Denis, FR ... 150
+                        <p>&raquo; 2011 Mas de Daumas Gassac // IGP Pays de Herault Rouge // Cabernet Sauvignon // Languedoc, FR ... 105
+                        <p>&raquo; 2009 Ferrando // "Etichetta Bianco" // Nebbiolo // Carema, Piemonte, IT ... 108
+                        <p>&raquo; 2009 Isole e Olena // Cepparello // Sangiovese // Tuscany, IT ... 153
+                        <p>&raquo; 2009 Uccelliera // Brunello // Sangiovese Grosso // Montalcino, Toscana, IT ... 120
+                        <p>&raquo; 2005 Gulfi // "Reseca" // Nerello Mascalese // Mount Etna, Sicily, IT 100
+                        <p>&raquo; Frank Cornelissen // "Munjebel #4" // Nerello Mascalese // Mount Etna, Sicily, IT ... 115
+                        <p>&raquo; 2010 Salvo Foti // "Vinupetra" // Nerello Cappuccio, Nerello Mascalese // Mount Etna, Sicily ... 125
+                        <p>&raquo; 2012 Donkey and Goat // "The Prospector" // Mourvedre // El Dorado, CA ... 63</p><br /><br /><br />
+                    </section>
+                </article>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        </div>
+        <!-- /container -->
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      SCRIPTS      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- http: excluded in original -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>

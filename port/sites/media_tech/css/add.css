@@ -1,0 +1,908 @@
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+||||||||||||||||||||||||
+CSS NOTES
+||||||||||||||||||||||||
+
+1 ANNOTATION ----------
+
+/* (    (    (    main    )    )    ) */
+/* (    sub    ) */
+
+2 COLOR PALETTE ----------
+
+-- dark --
+#080e12 ---- dark (video background)
+#332e2e ---- charcoal (header bg, toggle btn container bg + off, LOGO)
+#473f3f ---- light charcoal (site text)
+#494646 ---- lighter charcoal (LOGO)
+#656e79 ---- lightest charcoal (social icons)
+
+-- red --
+#a21313 ---- darkest red (LOGO, text links, dropdown menu bg)
+#b71c1c ---- medium red (LOGO, bootstrap btn bg, text links, dropdown menu bg, font awesome btn bg, title bg {video overlay}, pseudo element text, toggle btn)
+#c25555 ---- light red (LOGO)
+#f44336 ---- bright red (toggle btn)
+
+-- light --
+#f4eff2 ---- grey red (bootstrap btn text + border, toggle btn text, font awesome btn text, video title bg, nav icon bg, nav link, skew bg)
+#f1f2f3 ---- light grey (social icon bg {on white bg})
+#fff9fb ---- white red (site bg, dropdown menu text + border)
+
+3 MOBILE ----------
+
+mobile responsive is tweaked down to iphone 6 (375 x 667) .. smaller that that has not been responsively tweaked due to time constraints. only very general mobile checks have been done.
+
+4 ORDER ----------
+
+order (a class or id, etc appearing before or above another) is important .. changing the order can disable those classes!
+
+5 CREDITS ----------
+
+i frequently credit help and write it in right near the class that i worked on! it's noted lots.
+
+always good to review the basics in w3schools.com >
+https://www.w3schools.com/Css/css_syntax.asp
+
+or problem solve in stackoverflow >
+https://stackoverflow.com/
+
+6 OVERRIDES ----------
+
+a BUNCH of bootstrap default styles have been overwritten, referenced here >
+
+/* (    (    (    override from theme.css    )    )    ) */
+
+just below these notes.
+
+7 DISPLAY OPTION ----------
+
+in the html notes, note #2 describes DISPLAY OPTION .. these are enabled or disabled ONLY IN THE HTML AND NOT IN THIS STYLE SHEET. classes included are >
+
+.logoh
+
+.background
+.toggle-body
+.toggle-btn
+
+.logo_red
+.flogo
+
+.redcon
+.redtitle
+
+these classes will be marked: 'DISABLED IN HTML ONLY with display:none in div tag'
+
+8 LOGO ----------
+
+a display option that can be done ONLY IN CSS is labeled >
+
+/* (    (    (    intro message + logo    )    )    ) */
+
+it's for the SMALL SCREEN LOGO for smaller screen sizes and mobile and is displayed via a pseudo element .appear:before, with an empty string content:'' and made responsive below that.
+
+both TEXT and a LOGO can be made to appear in this pseudo element, with instructions there.
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+
+
+
+/* (    (    (    header cool stuff    )    )    ) */
+
+/* (    header logo .. DISABLED IN HTML ONLY with display:none in div tag    ) */
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 50px 0px 0px
+}
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 50px 0px 0px
+}
+@media (min-width: 1380px) {
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 50px 0px -100px !important
+ }
+}
+@media (min-width: 1200px) {
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 50px 0px 0px
+ }
+}
+@media (max-width: 990px) {
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 0px 0px 0px
+ }
+}
+@media (max-width: 765px) {
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 0px 0px 0px
+ }
+}
+@media (max-width: 570px) {
+.logoh {
+    width:50px;
+    height:50px;
+    display:block;
+    margin: -12px 0px 0px 0px
+ }
+}
+
+/* (    swatch toggle button
+thanks to >
+https://codemyui.com/colour-changing-toggle-switch/
+https://codepen.io/AlexJedi/pen/PKdxYE
+
+DISABLED IN HTML ONLY with display:none in div tag
+) */
+
+.background {
+  /* width: 100vw;
+  height: 100vh;
+  position: relative; */
+  background: #332e2e;
+  transition: 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35); /* (    was 1.5s everywhere    ) */
+  z-index:200
+}
+
+/* (    use only when header logo displayed    ) */
+/* @media (min-width: 1350px) {
+.background {
+  /* width: 100vw;
+  height: 100vh;
+  position: relative; */
+  margin-left:100px !important;
+  background: #332e2e;
+  transition: 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35); /* (    was 1.5s everywhere    ) */
+ }
+} */
+
+/* (    added    ) */
+.background::after {
+  content: "swatch";
+  color: #f4eff2;
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  width: 100%;
+  height: 100%;
+  opacity:0.5
+}
+
+.background--on {
+  background: #332e2e;
+  transition: 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35)
+}
+
+/* (    added    ) */
+.background--on::after {
+  content: "swatch";
+  color: #f4eff2;
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  width: 100%;
+  height: 100%;
+  opacity:1
+}
+
+.toggle-body {
+  width: 3.2rem;
+  height: 1.9rem;
+  position: relative; /* (    was absolute    ) */
+  top: calc(50% - 4rem / 2);
+  left: calc(50% - 7rem / 2);
+  background: #b71c1c;
+  border-radius: 2rem;
+  /* (    disable below for straight horizontal toggle    ) */
+  -webkit-animation: angle-reverse 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+          animation: angle-reverse 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  opacity:0.7 /* added */
+}
+
+.toggle-body--on {
+  /* (    disable below for straight horizontal toggle    ) */
+  -webkit-animation: angle 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+          animation: angle 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  opacity:1 /* (    added    ) */
+}
+
+.toggle-btn {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: calc(55.5% - 2rem / 2);
+  left: calc(33% - 2rem / 2);
+  background: white;
+  border-radius: 2rem;
+  background: #f44336;
+  cursor: pointer;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition: 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  opacity:0.7 /* (    added    ) */
+}
+
+.toggle-btn--on {
+  transition: 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  -webkit-transform: translateX(150%);
+          transform: translateX(72%);
+  background: #f44336;
+  opacity:1 /* (    added    ) */
+}
+
+@-webkit-keyframes angle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes angle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes angle-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes angle-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+/* (    added to position the toggle switch better    ) */
+.butpos {
+    position:relative;
+    margin-left:40px
+}
+@media (min-width: 1350px) {
+.butpos {
+    position:relative;
+    margin-left:-60px
+ }
+}
+@media (min-width: 1450px) {
+.butpos {
+    position:relative;
+    margin-left:-110px
+ }
+}
+@media (min-width: 1700px) {
+.butpos {
+    position:relative;
+    margin-left:-240px
+ }
+}
+
+
+
+
+/* (    (    (    override from theme.css    )    )    ) */
+
+body {
+  margin: 0;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #473f3f;
+  text-align: left;
+  background-color: #f8f9fa !important
+}
+
+a {
+  color: #a21313;
+  text-decoration: none !important;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color:#a21313;
+  text-decoration: none !important;
+}
+
+/* (    this might be in a scss file    ) */
+.site-header {
+  background-color: #332f2f !important;
+  color: #f4eff2 !important;
+  padding-bottom:0px
+}
+
+.icon-purple {
+  background-color: #b71c1c !important;
+  color: #f4eff2 !important;
+}
+
+.icon-purple[href]:hover {
+  background-color: #b71c1c !important;
+  color: #f4eff2 !important;
+}
+
+.btn-purple {
+  color: #f4eff2 !important;
+  background-color: #b71c1c !important;
+  border-color: #c25555 !important;
+  -webkit-box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-purple:hover {
+  color: #f4eff2 !important;
+  background-color: #b71c1c !important;
+  border-color: #c25555 !important;
+}
+
+.btn-purple:focus, .btn-purple.focus {
+  -webkit-box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.2rem rgba(234, 220, 234, 1) !important;
+          box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.2rem rgba(234, 220, 234, 1) !important;
+}
+
+.btn-purple.disabled, .btn-purple:disabled {
+  color: #f4eff2 !important;
+  background-color: #b71c1c !important;
+  border-color: #c25555 !important;
+}
+
+.btn-purple:not(:disabled):not(.disabled):active, .btn-purple:not(:disabled):not(.disabled).active,
+.show > .btn-purple.dropdown-toggle {
+  color: #f4eff2 !important;
+  background-color: #b71c1c !important;
+  border-color: #c25555 !important;
+}
+
+.btn-purple:not(:disabled):not(.disabled):active:focus, .btn-purple:not(:disabled):not(.disabled).active:focus,
+.show > .btn-purple.dropdown-toggle:focus {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(234, 220, 234, 1) !important;
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(234, 220, 234, 1) !important;
+}
+
+.navbar-brand > img {
+  max-height: 60px;
+  width: auto;
+  margin-top:-5px
+}
+
+.navbar-toggler {
+  color: #f4eff2 !important;
+  margin-top:0px;
+  z-index:1000 !important;
+}
+
+@media (min-width: 200px) and  (max-width: 991px) {
+#navbarNav {
+  /* margin-top:-55px */ /* (    tweak for logo so menu is below    ) */
+ }
+}
+@media (min-width: 992px) {
+#navbarNav {
+  margin-top:0px
+ }
+}
+
+#navbarNav a {
+  color: #f4eff2 !important;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#navbarNav .active {
+  color: #f4eff2 !important;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width 10em;
+  padding: 0 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #fff9fb;
+  text-align: left;
+  list-style: none;
+  background-color: #b71c1c;
+  background-clip: padding-box;
+  border: 3px solid #fff9fb;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+@media (max-width: 990px) {
+.dropdown-menu {
+  min-width: 10rem !important; /* use max-width to shrink for mobile */
+ }
+}
+
+/* (    not needed but exra overrides    ) */
+/* @media (min-width: 100px) {
+.nav-link {
+  color: #f4eff2 !important
+ }
+} */
+
+/* .nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+} */
+
+/* (    skew    ) */
+.bg-skew {
+  position: relative;
+}
+.bg-skew::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  z-index: -1;
+}
+.bg-skew-light2::before {
+  background-color: #f4eff2;
+}
+
+.card-header {
+  padding: 0.25rem 0.4rem !important;
+  margin-top:-1%
+}
+
+
+
+
+/* (    (    (    portfolio videos. video row 1, etc    )    )    ) */
+
+/* (    text or img over video container .. change to position:absolute for placing video behind Hero/intro text    ) */
+.vidcon {
+  width:100%;
+  display:block;
+  position:relative
+}
+
+/* (    text under vimeo portfolio videos    ) */
+.vidtext {
+  display:block;
+  width:100%;
+  font-weight:400;
+  background: #f4eff2;
+  border-radius:5px;
+  padding:5px
+}
+
+.vidtext2 {
+  display:block;
+  width:100%;
+  padding:5px;
+  margin-left:5px
+}
+
+.vidtext3 {
+  font-weight:900 !important
+}
+
+/* (    necessary as vimeo videos don't declare space, must be done here, otherwise videos won't appear .. thanks to: https://stackoverflow.com/questions/20127763/video-100-width-and-height    ) */
+.vidspace {
+  display:block;
+  width:100%
+}
+
+
+
+
+/* (    (    (    nyc background image and large screen logo    )    )    ) */
+
+/* (    3 background views: ny_all_street.jpg ny_all_liberty.jpg ny_all_modern.jpg .. linear gradient opacity thanks to: https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-background-image-of-a-div#27505936    ) */
+.introbg {
+  background-image: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url("../img/ny_all_modern.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 40%;
+  /* background-attachment: fixed; */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width:100% !important;
+  /* (    increasing this zooms the image    ) */
+  max-height:800px !important
+}
+.introbg2 {
+  background-image: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url("../img/ny_all_street.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  /* background-attachment: fixed; */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width:100% !important;
+  /* (    increasing this zooms the image    ) */
+  max-height:800px !important
+}
+.introbg3 {
+  background-image: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url("../img/ny_all_liberty.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 75%;
+  /* background-attachment: fixed; */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width:100% !important;
+  /* (    increasing this zooms the image    ) */
+  max-height:800px !important
+}
+
+/* (    adjustments to text and logo from above image cover    ) */
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 44%
+  /* CAN ADD > -webkit-filter:brightness(10) contrast(8); */
+}
+@media (max-width: 1720px) {
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 30%
+ }
+}
+@media (max-width: 1420px) {
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 22%
+ }
+}
+@media (max-width: 1250px) {
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 0%
+ }
+}
+@media (max-width: 1145px) {
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 10%
+ }
+}
+@media (max-width: 1080px) {
+.adjust {
+  display:block;
+  min-height:100%;
+  min-width:100%;
+  padding:0% 0% 0% 0%
+ }
+}
+
+/* (    large screen logo positioning    ) */
+.logo_adjust {
+  max-width:80%
+}
+@media (max-width: 1750px) {
+.logo_adjust {
+  max-width:80%
+ }
+}
+@media (max-width: 1700px) {
+.logo_adjust {
+  max-width:80%
+ }
+}
+@media (max-width: 1300px) {
+.logo_adjust {
+  max-width:80%
+ }
+}
+@media (max-width: 1200px) {
+.logo_adjust {
+  max-width:100%
+ }
+}
+@media (max-width: 1100px) {
+.logo_adjust {
+  max-width:100%
+ }
+}
+
+
+
+
+/* (    (    (    text or img over video
+from >
+https://html5backgroundvideos.com/video/new-york-traffic-jam/
+https://stackoverflow.com/questions/30362144/background-video-that-acts-like-css-background-size-cover-of-an-element-not-en#
+
+and >
+https://stackoverflow.com/questions/48962072/add-color-overlay-to-video-background
+https://jsfiddle.net/kggv3213/1/
+
+DISABLED IN HTML ONLY with display:none in div tag
+)    )    ) */
+
+/* (    logo over video option in IMG TAG    ) */
+.logo_red {
+  display:block;
+  width:100%;
+  height:100%
+}
+@media (max-width: 800px) {
+.logo_red {
+  display:block;
+  width:100%;
+  height:100%
+ }
+}
+@media (max-width: 600px) {
+.logo_red {
+  display:block;
+  width:100%;
+  height:100%
+ }
+}
+
+/* (    logo over video option in DIV TAG .. DISABLED IN HTML ONLY with display:none in div tag    ) */
+.flogo {
+  position: absolute;
+  display:block;
+  width:100%;
+  padding:30% 5% 5% 50%;
+  -webkit-transform: translate(0%, -50%); /* (    from left, from top    ) */
+  transform: translate(0%, -50%);
+  z-index:100
+}
+/* (    NOTE > transform: translate WAY BETTER for fixed position during browser screen width scaling .. is completely SMOOTH    ) */
+@media (max-width: 800px) {
+.flogo {
+  position: absolute;
+  display:block;
+  width:100%;
+  padding:20% 9% 15% 50%;
+  -webkit-transform: translate(0%, -30%); /* (    from left, from top    ) */
+  transform: translate(0%, -30%);
+  z-index:100
+ }
+}
+@media (max-width: 600px) {
+.flogo {
+  position: absolute;
+  display:block;
+  width:100%;
+  padding:0% 12% 15% 50%;
+  -webkit-transform: translate(0%, 13%); /* (    from left, from top    ) */
+  transform: translate(0%, 13%);
+  z-index:100
+ }
+}
+
+/* (    text over video option in DIV TAG .. FINALLY DOESN'T BREAK, don't touch! solution was basic code, and min-width
+
+another solution: shrink font-size
+
+DISABLED IN HTML ONLY with display:none in div tag
+) */
+.redcon {
+  position: absolute !important;
+  min-width:30%;
+  -webkit-transform: translate(-10%, 35%); /* (    from left, from top    ) */
+  transform: translate(-10%, 35%);
+  z-index:100
+}
+@media (max-width: 700px) {
+.redcon {
+  position: absolute !important;
+  min-width:25%;
+  -webkit-transform: translate(-30%, 30%); /* (    from left, from top    ) */
+  transform: translate(-30%, 30%);
+  z-index:100
+ }
+}
+
+/* (    text over video option in H1 TAG .. DISABLED IN HTML ONLY with display:none in div tag    ) */
+.redtitle {
+  position:relative;
+  display:block;
+  width:100%;
+  color: #fcfdff;
+  /* background:#333; */
+  background-color:#b71c1c;
+  padding:4px 12px 4px 12px;
+  border-radius:0px;
+  font-size:3em
+}
+@media (max-width: 700px) {
+.redtitle {
+  position:relative;
+  display:block;
+  width:100%;
+  color: #fcfdff;
+  /* background:#333; */
+  background-color:#b71c1c;
+  padding:4px 12px 4px 12px;
+  border-radius:0px;
+  font-size:1em
+ }
+}
+
+
+
+
+/* (    (    (    intro message + logo    )    )    ) */
+
+/* (    for text    ) */
+@media (max-width: 890px) {
+.blurb::before {
+  content: ""; /* (    DISPLAY OPTION > insert RED PRODUCTIONS in content for pseudo element based text title    ) */
+  color: #b71c1c;
+  font-size:1em;
+  font-weight:900;
+  visibility: visible;
+  display: block;
+  /* text-shadow: 2px 0 #ba2163; */
+  letter-spacing:2px
+ }
+}
+
+/* (    media query for TEXT .. to push down under logo    ) */
+@media (max-width: 990px) {
+.blurb {
+    display:block;
+    width:100%;
+    height:100%;
+    margin-top:35%
+}
+
+/* (
+using a pseudo element .appear:after to inject img or text responsivley
+
+thanks to >
+1) https://stackoverflow.com/questions/10829675/how-to-put-an-image-in-div-with-css#
+
+this works too (no parenthesis) > content:url(../img/logo_red.png) but there are no background property, positioning or responsive properties available to the image once it's inside the content property, so it's made into an empty string >
+
+content:'';
+
+where below it background property, positioning and other responsive declarations can be written.
+
+2) ddg query: HOW TO MAKE AN IMAGE RESPONSIVE WITH PSEUDO ELEMENTS and
+3) https://stackoverflow.com/questions/10425162/how-to-add-a-responsive-image-using-pseudo-elements
+
+COOL STUFF!!
+) */
+
+@media (max-width: 990px) {
+.appear:after {
+    content:'';
+    position: absolute;
+    z-index: -1;
+    margin: 10px auto;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:0 !important;
+    background:url('../img/logo_red.png') no-repeat;
+    -moz-background-size:80% !important;
+    background-size:80% !important
+ }
+}
+@media (max-width: 990px) {
+.appear:before {
+    content:'';
+    position: absolute;
+    margin: 0em 1em 0em 1em;
+    /* (    added to fix clickable links under not working    ) */
+    height:60%;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:0 !important;
+    background:url('../img/logo_red.png') no-repeat;
+    -moz-background-size:100% !important;
+    background-size:100% !important
+ }
+}
+@media (max-width: 725px) {
+.appear:before {
+    /* (    added to fix clickable links under not working    ) */
+    height:48%;
+ }
+}
+@media (max-width: 650px) {
+.appear:before {
+    /* (    added to fix clickable links under not working    ) */
+    height:40%;
+ }
+}
+@media (max-width: 500px) {
+.appear:before {
+    /* (    added to fix clickable links under not working    ) */
+    height:30%;
+ }
+}
+
+
+
+/* (    that's it!    ) */
+

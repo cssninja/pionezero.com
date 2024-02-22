@@ -1,0 +1,43 @@
+just pure export from .ai (no pdf transition)
+
+
+
+--
+for wrapping text
+
+Call or send an email with your questions .. or use the secure link below to purchase this amazing package.
+
+WORKS >
+https://duckduckgo.com/?q=example+of+content+area+and+auto-wrapped+text+svg&t=brave&ia=web
+** https://stackoverflow.com/questions/4991171/auto-line-wrapping-in-svg-text
+
+https://duckduckgo.com/?q=line+breaks+in+svg+text&t=brave&ia=web
+https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript
+
+https://www.google.com/search?source=hp&ei=auyUXtSwOIGMtAaJ1ptI&q=svg+text+wrapping&oq=svg+text+wrapping&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIFCAAQzQJKCggXEgYxMS0xMDBKCAgYEgQxMS0xUIUHWIUHYPYNaABwAHgAgAFWiAFWkgEBMZgBAKABAqABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwjUjcqjvuboAhUBBs0KHQnrBgkQ4dUDCAk&uact=5
+
+**
+<switch>
+  <foreignObject x="60" y="90" width="110" height="200">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+      <span class="order4">Call or send an email with your questions .. or use the secure link below to purchase this amazing package.</span></p>
+  </foreignObject>
+</switch>
+
+
+
+--
+	/* NOTE > can use fonts in svg to render text .. do this next, as here:
+
+		<?xml version="1.0" standalone="yes"?>
+			<svg width="400px" height="300px" version="1.1" xmlns = 'http://www.w3.org/2000/svg'>
+				<text x="100" y="100" style="font-family: impact, georgia, times, serif; font-weight: normal; font-style: normal">
+					Text using web safe font
+				</text>
+			</svg>
+
+			thanks to: http://nimbupani.com/demo/svgfonts/svg-websafe.svg from this tutorial > http://nimbupani.com/about-fonts-in-svg.html, which is from here > https://www.bryanbraun.com/2016/12/30/embedding-svg-logos-that-contain-text/ (where it writes about using text as VECTORs (trace or fonts in Illustrator, not sure), from query > https://duckduckgo.com/?q=can+svg%27s+contain+text&t=brave&ia=web
+
+			fonts can also be rendered via pseudo elements > https://jsfiddle.net/tagliala/77re29ct/24/, thanks to > https://github.com/FortAwesome/Font-Awesome/issues/5019 (which contain more alpha numneric rendering techniques)
+	*/
+

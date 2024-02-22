@@ -1,0 +1,276 @@
+dev ops
+updated > jun 6 2023 7:08
+dev site map > https://pionezero.com/ux_edits_v2/sitemap.html
+
+----------
+notes
+----------
+
+1
+if you need help with details or want me to create a revised user story or task let me know
+
+2
+there were three 'BIGGEST BUILD' (3) phases which took the lion's share of my time:
+
+(a) the protypes for the PEAK site (not included in dev ops)
+(b) setting up all 60 users and their respective custom fields (for variables)
+(c) and the core functionality of the PEAK site: multiple user logins where their logo and color palette dynamically load with a login .. this was located in past sprints as well
+
+3
+then there were eight considered a 'MAJOR BUILD' (8) which pretty much also took the lion's share of my time (creating components from scratch in the bootstrap framework, or major page overhauls) .. they were also located in past sprints and went through their evolution there
+
+4
+five required a moderate amount of coding to align the layout for all viewports (mobile, tablet and desktop) .. labeled 'MODERATE' (5) above .. these pages are generally in the UX of a purchase, from start to finish .. they were also located in past sprints and kind of 'collected dust' until i got to them as i was focused more on the BIGGEST BUILD or MAJOR BUILD user stories
+
+5
+the rest (5) i considered a 'SUB PAGE' (5) which i relegated to last in attention as not much coding was required .. these also were located in past sprints and kind of 'collected dust' until i got to them as i was focused more on the BIGGEST BUILD or MAJOR BUILD user stories
+
+|
+|
+|
+
+----------
+user stories + tasks migration from sprint 005 to tech rocks
+----------
+
+--BIGGEST BUILD--
+THIS IN NOT LOCATED IN DEV OPS .. but i initially was tasked with creating a prototype for the PEAK site (before WILD had acquired the account), which included:
+
+1) abobe xd files for the login page, the storefront page and the product page
+2) i am able to work fast in the bootstrap framework so i actually created for erin and jamie two LIVE pages for the login and storefront, which were completed, ready-to-use pages .. these assets are located here:
+
+LOGIN LIVE PREVIEW (fully functional and completed build, not just a demo)
+https://pionezero.com/diageo/login/
+
+STOREFRONT LIVE PREVIEW (fully functional and completed build, not just a demo)
+https://codepen.io/fullstackninja/full/MWqRVYL
+
+the whole DEMO PACKAGE is located here:
+https://www.dropbox.com/s/cquvtrhja9fmulq/DIAGEO_DEMO.zip?dl=0
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4478 Admin approval page (APPR)
+
+task > 4479 Properly align .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4476 Product page layout fix (PROD)
+
+task > 4477 PROD elements' layout .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--SUB PAGE--
+user story > 4299 contact us (CTUS)
+
+task > 4370 static content .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4300 global header and footer - PEAK
+
+task > 4481 redesign global .. (READY FOR PEER REVIEW)
+
+* this user story is under sean's name but the global header was a MAJOR BUILD for me as it was 1) completely redesigned in the bootstrap framework and 2) contains a lot of 'universal code' that applies to other pages as the global header loads in all pages and is high in the DOM (document object model) .. so added a task
+
+* code documentation is in my dev site map here in header section:
+https://pionezero.com/ux_edits_v2/sitemap.html
+
+or direct codepen build ref here:
+https://codepen.io/fullstackninja/full/VwEPBrg
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4301 home page (SFNT)
+
+task > 4434 migrate css .. (READY FOR PEER REVIEW)
+
+* code documentation is in my dev site map here in storefront section:
+https://pionezero.com/ux_edits_v2/sitemap.html
+
+or direct codepen build ref here:
+https://codepen.io/fullstackninja/full/bGmNXrg
+
+|
+|
+|
+
+--SUB PAGE--
+user story > 4302 privacy policy (PRPO)
+
+task > 4371 is static .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4304 designer product page (DPROD) - peak
+
+task > 4480 major overhaul .. (READY FOR PEER REVIEW)
+
+* this user story is under sean's name but DPROD was a MAJOR BUILD for me as it needed a coding overhaul for all viewports (mobile, tablet and desktop) .. so i added a task
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4305 product listing page (CTGY)
+
+task > 4372 is dynamic .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--SUB PAGE--
+user story > 4306 shipping and return policy (SARP)
+
+task > 4373 is dynamic .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MODERATE--
+user story > 4308 confirmation page & printout (INVC) - PEAK
+
+task > 4374 layout is good .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4309 customer account (ACLN) - peak
+
+task > 4402 UPDATE: ACLN DONE .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--SUB PAGE--
+user story > 4310 missing product attribute (PATR)
+
+task > 4377 is dynamic .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--SUB PAGE--
+user story > 4311 order confirmation customer .. EMAIL_ORDERCONF_CUSTOMER
+
+task > 4411 examine layout .. (ACTIVE)
+
+|
+|
+|
+
+--MODERATE--
+user story > 4312 order status page & printout (ORDS)
+
+task > 4437 this will have .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MODERATE--
+user story > 4313 payment information (OPAY)
+
+task > 4436 is dynamic (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MODERATE--
+user story > 4314 shipping selection (OSEL)
+
+task > 4435 is dynamic .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MODERATE--
+user story > 4331 customer login (ORDL) - peak
+
+task > 4336 update the layout (READY FOR PEER REVIEW)
+task > 4381 remove guest checkout (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--BIGGEST BUILD--
+user story > 4334 setup users and custom fields - PEAK
+
+task > 4380 add location .. (READY FOR PEER REVIEW)
+
+this user story was under sean's name but i changed it to mine as i had to manually set up all 60 users (.csv upload was not working) and add thier respective custom fields (for variables)
+
+|
+|
+|
+
+--BIGGEST BUILD--
+user story > 4351 site theming based on customer location - PEAK
+
+this user story is intertwined with the tasks of user story 4334 .. the color palette setup, code set up, documentation and implementation took a huge amount of time for me as this is the core feature and novelty of PEAK, multiple user logins .. it required:
+
+1) creating four color palettes (following the design guidelines)
+2) identifying small code sections (in the UX of buying a product)
+3) documenting all those code section in a master file
+4) creating 'variables' and parking that code in the global header (sean worked with me in this part then i later learned to create the variables myself)
+5) inserting those variables in about 14 code sections throughout the site to replace the normal CSS
+6) assign those variables to all 60 users in a master file
+7) list those users manually in the customers tab (.csv upload was not working)
+8) then test everything
+
+* color palette located here (menu at top) > https://pionezero.com/ux_edits_v2/sitemap.html, or directly here in codepen > https://codepen.io/fullstackninja/full/abaapgo
+
+* variables master file located here > https://mega.nz/file/YzxU1SwL#JY4AETGnvZHqCECEuoYJYubi5UySZWVOQhbi2Gd0WII
+
+task > 4361 UPDATE: not needed .. (READY FOR PEER REVIEW)
+task > 4412 examine entire .. (READY FOR PEER REVIEW)
+task > 4414 create four .. (READY FOR PEER REVIEW)
+task > 4413 create master .. (READY FOR PEER REVIEW)
+task > 4415 examine, edit .. (READY FOR PEER REVIEW)
+task > 4433 migrate css .. (READY FOR PEER REVIEW)
+
+|
+|
+|
+
+--MAJOR BUILD--
+user story > 4358 LOGN_new: PEAK (user interface > content management > LOGN_new)
+
+task > 4431 migrate css .. (READY FOR PEER REVIEW)
+task > 4384 add LOGN_new .. (READY FOR PEER REVIEW)
+
+
+
+
+
+
+

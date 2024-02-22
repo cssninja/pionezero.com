@@ -1,0 +1,61 @@
+
+/* big cartel footer override */	
+footer.footer {
+  *zoom: 1;
+  /* background: {{ theme.footer_background_color }}; */
+  /* background-image: url(http://pionezero.com/bc/img/PY_NIGHT.jpg) !important; */
+  /* from left-y top-x */
+  /* background-position: 0% 50% !important; */
+  /* background-repeat: no-repeat !important; */
+  /* width:100% !important; */
+  background-color: rgba(48, 44, 41, 1) !important; /* 302c29, hut entrance color */
+  border-top: 18px solid rgba(67, 64, 54, 1) !important; /* 434036, lighter than hut entrance color */
+  border-right: 0px solid rgba(67, 64, 54, 1) !important;
+  border-bottom: 0px solid rgba(67, 64, 54, 1) !important;
+  border-left: 0px solid rgba(67, 64, 54, 1) !important;
+  font-family: {{ theme.secondary_font | font_family }};
+  bottom: 0;
+  min-height: 120px;
+  padding: 60px 20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* override of footer text and svg colors */
+
+    .footer_credit {
+      color:#f6efd4 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+
+    footer a:link {
+      color:#f6efd4 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    footer a:hover {
+      color:#f6efd4 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    footer a:visited {
+      color:#f6efd4 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+    footer a:active {
+      color:#f6efd4 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:none !important;
+    }
+
+    svg {
+      fill:#f6efd4 !important;
+    }

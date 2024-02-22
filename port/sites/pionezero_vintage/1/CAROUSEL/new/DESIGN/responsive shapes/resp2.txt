@@ -1,0 +1,40 @@
+          <div class="img-responsive" style="border:7px solid #34495E;padding-bottom:80%;background:#30455A;width:80%;border-radius:60px;">
+            <div style="position:absolute;top:0px;width:80%;"><img src="img/ohn_raw.jpg" alt="Generic placeholder image"></div>
+          </div>
+
+
+<div class='round-box'>
+    <div class='rb-content'><div><span><img src="img/ohn_raw.jpg" alt="Generic placeholder image"></span></div></div>
+</div>
+
+.round-box{
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    background: #30455A;
+    border-radius:60px /* added */
+}
+.round-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.rb-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.rb-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.rb-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white
+}}

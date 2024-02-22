@@ -1,0 +1,760 @@
+    /* MULTIPLE BG IMAGES, thanks to http://stackoverflow.com/questions/17134929/overlay-a-background-image-with-an-rgba-background-color and http://png-pixel.com/ */
+    body {
+      /* background-image:url("http://pionezero.com/bc/img/bg_all_sizes2.png"), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8sV/xPwAHaALZJdu7wgAAAABJRU5ErkJggg==) !important; */
+      /* background-attachment: fixed; */
+      /* background-position: 0% 81%; */
+      background-color:#F8BF21!important;
+    }
+    h2 {
+      color:#f7f1d9 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1.6em !important;
+      text-decoration:none !important;
+      outline:none !important;
+    }
+    @media screen and (max-width: 480px) {
+    h2 {
+      color:#f7f1d9 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1.6em !important;
+      text-decoration:none !important;
+      outline:none !important;
+      }
+    }
+    h2 a:link {
+      color:#f7f1d9 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+    h2 a:hover {
+      color:#f7f1d9 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:underline !important;
+    }
+    h2 a:visited {
+      color:#f7f1d9 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+    h2 a:active {
+      color:#f7f1d9 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+
+
+    .blogtxt {
+      color:#f7f1d9;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1.2em;
+      font-weight:bold !important;
+    }
+    .blogbg {
+      background-color:#393230;
+      border-radius: 1em;
+      padding:35px;
+      margin:0px;
+      border: 30px solid #F8BF21;
+    }
+    @media screen and (max-width: 480px) {
+    .blogbg {
+      background-color:#393230;
+      border-radius: 1em;
+      padding:15px;
+      margin:0px;
+      border: 10px solid #F8BF21;
+      width:100% !important;
+      }
+    }
+
+    /* colored padding thanks to: http://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding and http://jsfiddle.net/techsin/TyXRY/1/ */
+    .blogbg_mas {
+      background-color:rgba(67, 64, 54, 1); /* e0a605, this is the outer background and the actual border -- .this draws a second background in it's div */
+      /* background-color:#393230; */
+      /* border-radius: 1em; */
+      padding:18px; /* this is the border width */
+      margin:0px;
+      border: 30px solid #F8BF21; /* this is the space between blog posts */
+    }
+    @media screen and (max-width: 480px) {
+    .blogbg_mas {
+      background-color:rgba(67, 64, 54, 1); /* e0a605, this is the outer background and the actual border -- .this draws a second background in it's div */
+      /* background-color:#393230; */
+      /* border-radius: 1em; */
+      padding:18px; /* this is the border width */
+      margin:0px;
+      border: 10px solid #F8BF21; /* this is the space between blog posts */
+      width:100% !important;
+      }
+    }
+    .this {
+      background-image:linear-gradient(to bottom, rgba(57, 50, 48, 1) 50%, rgba(57, 50, 48, 1) 100%), linear-gradient(to bottom, rgba(57, 50, 48, 1) 50%, rgba(57, 50, 48, 1) 100%);
+      background-clip: content-box, padding-box;
+      padding:35px;
+      z-index:1 !important;
+    }
+
+
+    /* BLOG POST CONTAINER PADDING, CRUNCH BLOG POST WIDTHS HERE */
+    .blogp {
+      margin:0px 10px 0px 10px;
+    }
+    @media screen and (min-width: 700px) and (max-width: 991px) {
+    .blogp {
+      margin:0px 160px 0px 160px; !important;
+        }
+      }
+    @media screen and (min-width: 1300px) {
+    .blogp {
+      margin:0% 10% 0% 10% !important;
+        }
+      }
+    .bimg {
+      text-align: center !important;
+      width:100% !important;
+      padding:0px !important;
+      margin:0 auto !important;
+    }
+     /* BG sometimes doesn't understand background-image:url(""), although it worked above, maybe server syntax with blog language ..     /* SYNCH WITH HEIGHT OF intro ..  position:absolute !important; works but is right on top of text .. 36vmax HAS NO GAPS .. 50vh too .. 40vw too .. FIXED thanks to http://stackoverflow.com/questions/12609110/responsive-css-background-images .. FINISHED THIS FIX BY GIVING PARENT ROW CLASS (.panelfix) TO FIXED WIDTH AND DOING overflow:hidden past 350px */
+    .imgpanel1 {
+      background: url(http://pionezero.com/bc/img/PY_MASTER.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 65% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 1000px !important; /* width height .. original was 1000px 700px */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 300px) {
+    .imgpanel1 {
+      background: url(http://pionezero.com/bc/img/PY_MASTER.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 65% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 300px 200px !important; /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel1 {
+      background: url(http://pionezero.com/bc/img/PY_MASTER.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 65% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 500px 333.333px !important; /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (min-width: 1495px) {
+    .imgpanel1 {
+      background: url(http://pionezero.com/bc/img/PY_MASTER.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 100% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 1000px !important; /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    .imgpanel2 {
+      background: url(http://pionezero.com/bc/img/sadhu2.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 30% 40% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1000px 1500px !important; /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel2 {
+      background: url(http://pionezero.com/bc/img/sadhu2.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 30% 40% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 333.333px 500px !important; /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (max-width: 400px) {
+    .imgpanel2 {
+      background: url(http://pionezero.com/bc/img/sadhu2.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 30% 25% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1000px 1500px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    .imgpanel3 {
+      background: url(http://pionezero.com/bc/img/three_bean2.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 50% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 1125px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel3 {
+      background: url(http://pionezero.com/bc/img/three_bean2.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 50% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 1125px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    .imgpanel4 {
+      background: url(http://pionezero.com/bc/img/3_products.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 10% 65% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 844px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel4 {
+      background: url(http://pionezero.com/bc/img/3_products.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 10% 65% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 500px 277.666px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (min-width: 1300px) {
+    .imgpanel4 {
+      background: url(http://pionezero.com/bc/img/3_products.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 10% 100% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 844px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (min-width: 1577px) {
+    .imgpanel4 {
+      background: url(http://pionezero.com/bc/img/3_products.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 10% 100% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1500px 844px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    .imgpanel5 {
+      background: url(http://pionezero.com/bc/img/alpaca_socks.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 50% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1523px 767px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel5 {
+      background: url(http://pionezero.com/bc/img/alpaca_socks.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 50% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 761.5px 383.5px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (min-width: 1300px) {
+    .imgpanel5 {
+      background: url(http://pionezero.com/bc/img/alpaca_socks.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 100% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1523px 767px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    .imgpanel6 {
+      background: url(http://pionezero.com/bc/img/hoil.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 80% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 960px 618px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+    }
+     /* for tiny androids that don't like height: 36vmax, have to use pixels */
+    @media screen and (max-width: 400px) {
+    .imgpanel6 {
+      background: url(http://pionezero.com/bc/img/hoil.jpg) !important;
+      height: 200px !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 80% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 480px 309px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+    @media screen and (min-width: 1550px) {
+    .imgpanel6 {
+      background: url(http://pionezero.com/bc/img/hoil.jpg) !important;
+      height: 36vmax !important;
+      /* max-height:700px !important; */
+      z-index:2 !important;
+      background-position: 50% 100% !important; /* left-right up-down */
+      /* background-attachment: fixed !important; */
+      background-repeat:no-repeat !important;
+      background-size: 1200px 773px !important;  /* width height */
+      margin: 0 auto !important;
+      overflow:hidden !important;
+      display:block !important;
+      /* text-indent:-9999px; */
+      /* -webkit-background-size:cover; */
+      /* -moz-background-size:cover; */
+      /* -o-background-size:cover; */
+      /* background-size:cover; */
+      position:relative !important;
+      }
+    }
+
+    @media screen and (min-width: 1px) {
+    .topp {
+      margin:0 auto !important;
+      padding:0px !important;
+      width:100% !important;
+      left:0px !important;
+      top:0px !important;
+      position:relative !important;
+      display:block !important;
+      }
+    }
+    /* SYNCH WITH HEIGHT OF panel1-4 */
+    .intropanel {
+      padding:15px 35px 35px 35px !important;
+      margin: 0 auto !important;
+      height:100% !important;
+      background:#edc642;
+      overflow:hidden !important;
+    }
+    @media screen and (max-width: 480px) {
+    .intropanel {
+      padding:15px 35px 35px 35px !important;
+      width:100% !important;
+      height:100% !inportant;
+      }
+    }
+    /* OVERRIDE OF BC CSS, marked with '--------- EDIT' .. found only in browser source code, NOT present in original HOME file in BC syntax -- <section class="content page-home theme has_welcome"> */
+    section.content {
+      margin: 0 auto !important;
+      max-width: 100% !important;
+      padding: 0px !important;
+      overflow:hidden !important;
+    }
+    .bottomtxt {
+      position:relative !important;
+      bottom:0px !important;
+      margin-bottom: 0px !important;
+      left:-15px;
+      }
+
+    @media screen and (min-width: 990px) {
+    .panelfix {
+     background:#edc642 !important;
+     max-height:350px !important;
+     overflow:hidden !important;
+       }
+     }
+
+     /* FREES readmore ELEMENT from page-wide fixed/absolute to parent-based fixed/absolute. With 1) READMORE (position:fixed !important;) div 2) JUST outside of intropanel div (just below it), then 3) transform: translateZ(50%); OR transform: translateZ(-50%); CREATES FIXED CHAT BUBBLE ON LOWER RIGHT OF PAGE, WOOOOOOOO!!!! .. % considered invalid so can use px, em or numeric instead. Turns out transform: translateZ(-50%); just repositions, does not confine to parent div =/. fixed is PAGE positioning (parent div does not hold it) .. absolute is within parent div positioning (content does/does not not push it), relative STAYS WITHIN DIV and is within parent div positioning (content DOES push it.) .. TEMP NOT BEING USED */
+     transf {
+     transform: translateZ(50%);
+     }
+
+    /* panel links */
+    .readmore {
+      background-color:#F8D760;
+      width:70px;
+      padding:4px 4px 4px 4px;
+      border-radius:8px;
+      font-size:0.7em;
+      font-weight:bold;
+      /* float:right; */
+      position: absolute !important;
+      right:30px !important;
+      /* left:17%; */
+      bottom:5% !important;
+      /* transform: translateX(-50%); */
+      display: inline-block !important;
+      z-index:2 !important;
+      overflow:scroll !important;
+    }
+    .readmore a:link {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+    .readmore a:hover {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+      text-decoration:underline !important;
+    }
+    .readmore a:visited {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+    .readmore a:active {
+      color:#393230 !important;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1em;
+    }
+
+     /* targets firefox only */
+      .readmore2 a {
+      color:#393230 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      /* background-color:#393230; */
+      /* width:74px; */
+      /* padding:6px 8px 4px 6px; */
+      /* border-radius:8px; */
+      font-weight:bold;
+      margin-bottom:-20px !important;
+      text-align: right !important;
+      /* float:right; */
+      /* position: relative !important; */
+      right:0px !important;
+      /* left:17%; */
+      /* bottom:2% !important; */
+      /* transform: translateX(-50%); */
+      display: inline-block !important;
+      z-index:2 !important;
+      /* overflow:scroll !important; */
+      }
+     /* targets chrome, safari only */
+     @media only screen and (-webkit-min-device-pixel-ratio:0) {
+        .readmore2 a {
+      color:#393230 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      /* background-color:#393230; */
+      /* width:74px; */
+      /* padding:5px 8px 5px 6px; */
+      /* border-radius:8px; */
+      font-weight:bold;
+      margin-bottom:-20px !important;
+      text-align: right !important;
+      /* float:right; */
+      /* position: relative !important; */
+      right:0px !important;
+      /* left:17%; */
+      /* bottom:2% !important; */
+      /* transform: translateX(-50%); */
+      display: inline-block !important;
+      z-index:2 !important;
+      /* overflow:scroll !important; */
+      }
+    }
+    .readmore2 a:hover {
+      color:#f7f1d9 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      outline:none !important;
+      -webkit-transition: 0.2s linear;
+      -moz-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
+      transition: 0.2s linear;
+    }
+
+    /* blog links */
+      /* targets firefox only */
+      .readmore3 a {
+      color:#f7f1d9 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      /* background-color:#F8D760; */
+      /* width:80px; */
+      /* padding:4px 6px 3px 2px; */
+      /* border-radius:5px; */
+      font-weight:bold;
+      margin-bottom:-20px !important;
+      text-align: right !important;
+      /* float:right; */
+      /* position: relative !important; */
+      right:0px !important;
+      /* left:17%; */
+      /* bottom:2% !important; */
+      /* transform: translateX(-50%); */
+      display: inline-block !important;
+      /* overflow:scroll !important; */
+       z-index:20 !important;
+      }
+     /* targets chrome, safari only */
+     @media only screen and (-webkit-min-device-pixel-ratio:0) {
+      .readmore3 a {
+      color:#f7f1d9 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      /* background-color:#F8D760; */
+      /* width:80px; */
+      /* padding:4px 8px 4px 4px; */
+      /* border-radius:5px; */
+      font-weight:bold;
+      margin-bottom:-20px !important;
+      text-align: right !important;
+      /* float:right; */
+      /* position: relative !important; */
+      right:0px !important;
+      /* left:17%; */
+      /* bottom:2% !important; */
+      /* transform: translateX(-50%); */
+      display: inline-block !important;
+      /* overflow:scroll !important; */
+      z-index:20 !important;
+      }
+    }
+    .readmore3 a:hover {
+      color:#F8D760 !important;
+      font-family: 'Lemon', cursive;
+      font-size:1em;
+      text-decoration:none !important;
+      outline:none !important;
+      -webkit-transition: 0.2s linear;
+      -moz-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
+      transition: 0.2s linear;
+    }
+
+    .paneltxt {
+      color:#393230;
+      font-family: font-family: 'Lato', sans-serif;
+      font-size:1.2em;
+      font-weight:bold !important;
+    }
+
+    .rite {
+      width:100% !important;
+      text-align:right !important;
+      display: inline-block !important;
+    }
+
+    /* order inmportant here .. didn't work in h2 declarations at top */
+    section h2 .linkov {
+       color:#f7f1d9 !important;
+       text-decoration:none !important;
+       outline:none !important;
+    }
+    section h2  a:hover {
+       color:#393230 !important;
+       text-decoration:none !important;
+       outline:none !important;
+       -webkit-transition: 0.2s linear;
+       -moz-transition: 0.2s linear;
+       -o-transition: 0.2s linear;
+       transition: 0.2s linear;
+    }
+
+a {
+   outline: 0 !important;
+}

@@ -1,0 +1,3212 @@
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+M E N U
+
+GENERAL
+  - FIX FOR PORTRAIT ONLY
+  - BODY
+  - BACKGROUND TO TEXT
+
+DROP DOWN NAV
+  - 3 BARS DROPDOWN (IMPROVED)
+  - 3 BARS DROPDOWN
+  - CONTACT GRID
+  - DROPDOWN SOCIAL ICONS
+  - 5 COLUMN GRID FOR DROP DOWN NAV ICONS
+  - DROPDOWN NAV ICONS
+  - DROP DOWN NAV ICONS TEXT
+  - TINY MOBILE MENU
+
+UPPER SECTION
+  - LOGO
+  - INTRO SECTION
+
+MAIN CONTENT
+  - SECTION ICONS
+  - SECTION ICONS TEXT
+  - IDEAS SUB ICONS
+  - FONT FOR TEXT THAT TRIGGERS COLLAPSE
+  - DESIGN SAMPLES GRID
+
+PORTFOLIO
+  - 6 SAMPLES ICONS
+  - ALL THE ICONS
+  - OTHER SPACING
+
+FOOTER
+  - LARGE BACKGROUND IMAGE
+  - FOOTER FONT
+  - IDEA ICON
+
+RESUME
+  - RESUME TEXT
+  - LOGO
+  - OTHER SPACING
+
+FULL GALLERY MADE WITH MASONRY .. SWITCH TO 6 COLUMN GRID FOR DROP DOWN NAV ICONS
+  - BOOTSTRAP OVERRIDES
+  - MASONRY GALLERY COLLAPSED NAV MENU IMAGES
+  - MASONRY DROP DOWN NAV ICONS TEXT
+  - HIDE CONTENT
+  - MODAL SIZE
+  - MODAL BACKGROUND COLOR
+  - CENTERING IMAGES IN MODAL
+
+MOBILE PORT
+
+COOL STUFF
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+GENERAL
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` FIX FOR PORTRAIT ONLY > Galaxy S6 (360 x 640), Xperia Z3 (360 x 598), Galaxy Note II (360 x 640) .. and, overflow gets rid of horizontal scrollbar from 101% =D .. special media query needed for tiny android bcs it was still responding to min-width 400+ */
+@media screen and (max-width: 300px) {
+html {
+  width:100% !important;
+  overflow-x:hidden !important;
+ }
+}
+@media screen and (max-width: 300px) {
+body {
+  width:101% !important;
+  overflow-x:hidden !important;
+ }
+}
+@media screen and (min-width: 301px) {
+html {
+  width:101% !important;
+  overflow-x:hidden !important;
+ }
+}
+
+/* ``````````````````` BODY */
+body {
+ background:#fdfdf3 !important;
+}
+body a:link {
+  color:#cd4a84 !important;
+  text-decoration:none;
+}
+body a:visited {
+  color:#cd4a84 !important;
+  text-decoration:none;
+}
+body a:hover {
+  color:#cd4a84 !important;
+  text-decoration:none;
+}
+body a:active {
+  color:#cd4a84 !important;
+  text-decoration:none;
+}
+
+/* ``````````````````` BACKGROUND TO TEXT */
+/* ``````` 1 */
+.txtbg {
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:0px 3px 2px 3px !important;
+  line-height: 40px;
+}
+.txtbg_des {
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:0px 3px 2px 3px !important;
+  line-height: 15px;
+}
+.txtbg_drk {
+  color:#fdfdf3 !important;
+  background-color:#656565; !important;
+  padding:0px 3px 2px 3px !important;
+  line-height: 40px;
+}
+@media screen and (max-width: 500px) {
+.txtbg {
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:0px 3px 0px 3px !important;
+  line-height: 0px;
+ }
+}
+@media screen and (max-width: 500px) {
+.txtbg_des {
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:0px 3px 0px 3px !important;
+  line-height: 15px;
+ }
+}
+@media screen and (max-width: 330px) {
+.txtbg {
+  font-size:12px !important;
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:2px 5px 2px 5px !important;
+  line-height: 25px;
+ }
+}
+@media screen and (max-width: 330px) {
+.txtbg_des {
+  font-size:12px !important;
+  color:#fdfdf3;
+  background-color:#cd4a84;
+  padding:2px 5px 2px 5px !important;
+  line-height: 15px;
+ }
+}
+.txtbg a:link {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg a:visited {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg a:hover {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg a:active {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_des a:link {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_des a:visited {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_des a:hover {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_des a:active {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+/* ``````` 2 */
+.txtbg2 {
+  color:#cd4a84;
+  background-color:#ede9eb;
+  padding:5px !important;
+  line-height: 40px;
+}
+@media screen and (max-width: 500px) {
+.txtbg2 {
+  color:#cd4a84;
+  background-color:#ede9eb;
+  padding:5px !important;
+  line-height: 30px;
+ }
+}
+/* ``````` 3 */
+.txtbg3 {
+  color:#fdfdf3;
+  background-color:#856472;
+  padding:5px !important;
+  line-height: 40px;
+}
+@media screen and (max-width: 500px) {
+.txtbg3 {
+  color:#fdfdf3;
+  background-color:#856472;
+  padding:5px !important;
+  line-height: 30px;
+ }
+}
+/* ``````` drk */
+.txtbg_drk a:link {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_drk a:visited {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_drk a:hover {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.txtbg_drk a:active {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+DROP DOWN NAV
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` 3 BARS DROPDOWN (IMPROVED) .. thanks to https://codepen.io/designcouch/pen/Atyop */
+#nav-icon3 {
+  width: 33px;
+  height: 20px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 10 !important;
+}
+/* firefox fix */
+@-moz-document url-prefix() {
+#nav-icon3 {
+  width: 38px;
+  height: 20px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 10 !important;
+ }
+}
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #cd4a84;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  z-index: 10 !important;
+}
+/* firefox fix */
+@-moz-document url-prefix() {
+  #nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background: #cd4a84;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    z-index: 10 !important;
+  }
+}
+/* added */
+.bgdrk {
+  background-color: #4f5253 !important;
+  z-index: 10 !important;
+}
+@media screen and (min-width: 501px) {
+.bgdrk2 {
+  background-color: #4f5253 !important;
+  z-index: 10 !important;
+ }
+}
+@media screen and (max-width: 500px) {
+.bgdrk2 {
+  background-color:#fdfdf3 !important;
+  z-index: 10 !important;
+ }
+}
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+  z-index: 10 !important;
+}
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 12px;
+  z-index: 10 !important;
+}
+/* firefox fix */
+@-moz-document url-prefix() {
+  #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+    top: 0.65em;
+    z-index: 10 !important;
+  }
+}
+#nav-icon3 span:nth-child(4) {
+  top: 24px;
+  z-index: 10 !important;
+}
+/* firefox fix */
+@-moz-document url-prefix() {
+  #nav-icon3 span:nth-child(4) {
+    top: 27px;
+    z-index: 10 !important;
+  }
+}
+#nav-icon3.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+  z-index: 10 !important;
+}
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 10 !important;
+}
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 10 !important;
+}
+#nav-icon3.open span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+  z-index: 10 !important;
+}
+
+/* ``````````````````` 3 BARS DROPDOWN */
+/* ``````` FONT */
+.lemon-top {
+  font-family: 'Lemon', cursive;
+  font-size:25px !important;
+  color:#fdfdf3 !important;
+}
+@media screen and (max-width: 1200px) {
+.lemon-top {
+  font-family: 'Lemon', cursive;
+  font-size:25px !important;
+  color:#fdfdf3 !important;
+ }
+}
+@media screen and (max-width: 320px) {
+.lemon-top {
+  font-family: 'Lemon', cursive;
+  font-size:18px !important;
+  color:#fdfdf3 !important;
+ }
+}
+.lemon-top a:link {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.lemon-top a:visited {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.lemon-top a:hover {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.lemon-top a:active {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.lemon-bottom a:link {
+  color:#ba4173 !important;
+  text-decoration:none;
+}
+.lemon-bottom a:visited {
+  color:#ba4173 !important;
+  text-decoration:none;
+}
+.lemon-bottom a:hover {
+  color:#ba4173 !important;
+  text-decoration:none;
+}
+.lemon-bottom a:active {
+  color:#ba4173 !important;
+  text-decoration:none;
+}
+/* ``````` COLLAPSED NAV MENU BG, OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS */
+.bg-faded {
+  background-color: #fdfdf3;
+}
+/* ``````` EXPANDED NAV MENU BG, OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS */
+@media screen and (min-width: 301px) {
+.bg-inverse {
+  color: #fdfdf3;
+  background-color: #ba4173;
+ }
+}
+/* ``````` FOR TINY ANDROID ONLY to stop scroll to right showing white space */
+@media screen and (max-width: 300px) {
+.bg-inverse {
+  color: #fdfdf3;
+  background-color: #ba4173 !important;
+  width:104% !important;
+  display:block !important;
+ }
+}
+
+/* ``````````````````` CONTACT GRID */
+/* ``````` CONTAINERS */
+.connectcnt {
+  padding-top:20px;
+}
+@media screen and (max-width: 262px) {
+.connectcnt {
+  width:112% !important;
+  padding-top:20px;
+ }
+}
+@media screen and (max-width: 1150px) {
+.connectcnt {
+  padding-top:20px;
+ }
+}
+@media screen and (max-width: 1136px) {
+.connectcnt {
+  padding-top:0px;
+ }
+}
+/* ``````` media query targeting only landscape for ipad type devices .. FIRST CUSTOM HEIGHT-BASED MEDIA QUERY */
+@media screen and (min-height: 480px) and (orientation : landscape) {
+.connectcnt {
+  padding-top:23px !important;
+ }
+}
+/* ``````` TEXT SPACING */
+.connect {
+  float: left;
+  max-width: 30rem;
+  margin-right: 2rem;
+  padding-top:0px;
+}
+.connect2 {
+  float: left;
+  max-width: 30rem;
+  margin-left: 0rem;
+  padding-top:0px;
+}
+
+/* ``````````````````` DROPDOWN SOCIAL ICONS */
+.socsec {
+  width:50% !important;
+  text-align:right;
+}
+@media screen and (min-width: 976px) and (max-width: 1150px) { /* was max-width: 1150px .. guessing 976px for min */
+.socsec {
+  width:50% !important;
+  /* text-align:left; */
+  padding:0px 0px 0px 20px;
+ }
+}
+@media screen and (min-width: 901px) and (max-width: 975px) { /* was max-width: 975px .. guessing 901px for min */
+.socsec {
+  width:60% !important;
+  text-align:left;
+  padding:0px 0px 0px 20px;
+ }
+}
+/* ``````` DEVICE WIDTH (GALAXY 4 PHABLETS LANDSCAPE AND KINDLE FIRE HD 7 TABLETS) FROM */
+@media screen and (min-width: 869px) and (max-width: 900px) { /* was min-width: 869px .. guessing 900px for max */
+.socsec {
+  width:50% !important;
+  text-align:right;
+  padding:0px 0px 0px 20px;
+ }
+}
+@media screen and (min-width: 800px) and (max-width: 868px) { /* new */
+.socsec {
+  width:90% !important;
+  text-align:left;
+  padding:0px 0px 0px 20px;
+ }
+}
+@media screen and (min-width: 768px) and (max-width: 799px) { /* was min-width: 768px */
+.socsec {
+  width:50% !important;
+  text-align:right;
+  padding:0px 0px 0px 20px;
+  margin-top:-40px !important; /* wasn't here before */
+ }
+}
+@media screen and (min-width: 532px) and (max-width: 584px) { /* was max-width: 584px */
+.socsec {
+  width:60% !important;
+  text-align:left;
+  padding:40px 0px 0px 20px;
+ }
+}
+@media screen and (min-width: 321px) and (max-width: 531px) { /* was max-width: 531px */
+.socsec {
+  width:100% !important;
+  text-align:left;
+  padding:80px 0px 0px 20px; /* was 40 top, changed to 80 after adding skype phone # back, but should not have caused this, hmmm */
+ }
+}
+@media screen and (min-width: 254px) and (max-width: 320px) { /* was max-width: 320px */
+.socsec {
+  width:100% !important;
+  text-align:left;
+  padding:60px 0px 0px 20px;
+ }
+}
+@media screen and (max-width: 253px) {
+.socsec {
+  width:100% !important;
+  text-align:left;
+  padding:0px 0px 0px 5px;
+ }
+}
+/* ``````` FOR >
+Iphone 6 (375 x 667) LANDSCAPE
+Galaxy S6 (360 x 640) LANDSCAPE
+Xperia Z3 (360 x 598) LANDSCAPE
+Lumia 920 (384 x 640) LANDSCAPE
+Nexus 6 (412 x 690) LANDSCAPE
+Iphone 6 Plus (414 x 736 LANDSCAPE
+Galaxy Note II (360 x 640) LANDSCAPE
+Galaxy Nexus 7 (603 x 966) PORTRAIT
+Kindle Fire (600 x 1024) PORTRAIT
+*/
+@media screen and (min-width: 550px) and (max-width: 800px) {
+.socsec {
+  width:100% !important;
+  text-align:left;
+  padding:40px 0px 0px 20px;
+ }
+}
+/* ``````` ICON SPACING */
+.socicon {
+  width: 2em !important;
+  padding:20px 0px 15px 0px;
+  margin-top:0px;
+  border:0 !important;
+  outline:0 !important;
+}
+@media screen and (max-width: 300px) {
+.socicon {
+  width: 1.8em !important;
+  padding:20px 0px 15px 0px;
+  margin-top:0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+
+/* ``````````````````` 5 COLUMN GRID FOR DROP DOWN NAV ICONS, thanks to http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/, with tweaked and added media queries */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+.col-xs-15 img {
+    width: 60% !important;
+    padding:10px 0px 0px 0px;
+}
+/* ``````` DEVICE WIDTH UP TO */
+@media (max-width: 400px) {
+.col-sm-15 img {
+    width: 70% !important;
+    padding:10px 0px 0px 0px;
+    }
+}
+@media (max-width: 767px) {
+.col-sm-15 {
+        width: 50%;
+        float: left;
+    }
+}
+@media (max-width: 767px) {
+.col-sm-15 img {
+    width: 50% !important;
+    padding:10px 0px 0px 0px;
+    }
+}
+/* ``````` DEVICE WIDTH FROM */
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 768px) {
+.col-sm-15 img {
+    width: 60% !important;
+    padding:10px 0px 0px 0px;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 img {
+    width: 60% !important;
+    padding:10px 0px 0px 0px;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 img {
+    width: 60% !important;
+    padding:10px 0px 0px 0px;
+    }
+}
+
+/* ``````````````````` DROPDOWN NAV ICONS */
+.iconz-t img {
+  width: 80% !important; /* 749 x 750 */
+  padding:10px 0px 0px 0px;
+  margin: auto !important;
+  border:0 !important;
+  outline:0 !important;
+  display:block !important;
+  text-align:center !important;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.iconz-t img {
+  width:80% !important; /* 749 x 750 */
+  padding:10px 0px 0px 0px;
+  margin-top:0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (max-width: 766px) {
+.iconz-t img {
+  width: 30% !important; /* 749 x 750 */
+  padding:10px 0px 10px 0px;
+  margin-top:0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 350px) {
+.iconz-t img {
+  width: 30% !important; /* 749 x 750 */
+  padding:10px 0px 10px 0px;
+  margin-top:0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+
+/* ``````````````````` DROP DOWN NAV ICONS TEXT */
+.iconztxt-t {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 40px;
+  width:50%;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.iconztxt-t {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 40px;
+  width:50%;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (max-width: 766px) {
+.iconztxt-t {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 40px;
+  width:50%;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 350px) {
+.iconztxt-t {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 40px;
+  width:50%;
+ }
+}
+
+/* ``````````````````` TINY MOBILE MENU */
+@media screen and (max-width: 1130px) {
+.poof {
+  display:none !important;
+ }
+}
+
+/* cd4a84 default font color, ba4173 default bg color for menu, fdfd3 default site bg color and reverse font color, 656565 is dark font */
+@media screen and (max-width: 1130px) {
+.tiny1 {
+  color:#fdfdf3 !important;
+  background-color: #ba4173;
+  padding:30px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  width:100%;
+  text-align:center;
+  /* border-width:10px;
+  border-bottom-style:dashed;
+  border-color: #fdfdf3; */
+ }
+}
+@media screen and (max-width: 1130px) {
+.tiny2 {
+  color:#fdfdf3 !important;
+  background-color: #ba4173;
+  padding:0px 0px 30px 0px;
+  margin:0px 0px 0px 0px;
+  width:100%;
+  text-align:center;
+ }
+}
+.tiny1 a:link, .tiny2 a:link {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.tiny1 a:visited, .tiny2 a:visited {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.tiny1 a:hover, .tiny2 a:hover {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+.tiny1 a:active, .tiny2 a:active {
+  color:#fdfdf3 !important;
+  text-decoration:none;
+}
+@media screen and (max-width: 1130px) {
+.tinyt {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  /* color:#cd4a84; */
+  padding:10px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 20px;
+  width:100%;
+ }
+}
+@media screen and (min-width: 1130px) {
+.mobonly {
+    display:none;
+ }
+}
+.tinyicon {
+  width: 2em !important;
+  padding:0px 2px 0px 2px;
+  margin:0px 0px -30px 0px;
+  border:0 !important;
+  outline:0 !important;
+}
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+UPPER SECTION
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` LOGO */
+.pi10logo img {
+  width: 100% !important; /* 749 x 750 */
+  padding:50px 0px 50px 0px;
+  margin-top:50px;
+  border:0 !important;
+  outline:0 !important;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.pi10logo img {
+  width: 100% !important; /* 749 x 750 */
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (max-width: 766px) {
+.pi10logo img {
+  width: 100% !important; /* 749 x 750 */
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+
+/* ``````````````````` INTRO SECTION, fonts and spacings combined */
+.lemon {
+  font-family: 'Lemon', cursive;
+  font-size:35px;
+  color:#cd4a84;
+  padding:50px 0px 0px 30px;
+  margin-top:50px;
+  line-height: 70px;
+}
+.lemon_drk {
+  font-family: 'Lemon', cursive;
+  font-size:19px;
+  color:#656565;
+  padding:0px 0px 0px 30px;
+  margin-top:50px;
+  line-height: 33px;
+}
+@media screen and (max-width: 768px) {
+.lemon_drk {
+  font-family: 'Lemon', cursive;
+  font-size:17px;
+  color:#656565;
+  padding:0px 0px 0px 30px;
+  margin-top:50px;
+  line-height: 33px;
+ }
+}
+.lato_tags {
+  display:block;
+  width:99%;
+  text-align:right;
+  font-family: 'Lato';
+  font-weight:800;
+  font-size:1.1em;
+  color:#656565 !important;
+  padding:14px 0px 10px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 24px;
+  opacity:0.4;
+}
+@media screen and (max-width: 1193px) {
+.lato_tags {
+  display:block;
+  width:98%;
+  text-align:right;
+  font-family: 'Lato';
+  font-weight:800;
+  font-size:1.1em;
+  color:#656565 !important;
+  padding:14px 0px 10px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 24px;
+  opacity:0.4;
+ }
+}
+@media screen and (max-width: 590px) {
+.lato_tags {
+  display:block;
+  width:97%;
+  text-align:right;
+  font-family: 'Lato';
+  font-weight:800;
+  font-size:1.1em;
+  color:#656565 !important;
+  padding:14px 0px 10px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 24px;
+  opacity:0.4;
+ }
+}
+@media screen and (max-width: 400px) {
+.lato_tags {
+  display:block;
+  width:96%;
+  text-align:right;
+  font-family: 'Lato';
+  font-weight:800;
+  font-size:1.1em;
+  color:#656565 !important;
+  padding:14px 0px 10px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 24px;
+  opacity:0.4;
+ }
+}
+@media screen and (max-width: 330px) {
+.lato_tags {
+  display:block;
+  width:92%;
+  text-align:right;
+  font-family: 'Lato';
+  font-weight:800;
+  font-size:1.1em;
+  color:#656565 !important;
+  padding:14px 0px 10px 0px;
+  margin:0px 0px 0px 0px;
+  line-height: 24px;
+  opacity:0.4;
+ }
+}
+.lato_tags a:link {
+  color:#656565 !important;
+  text-decoration:none;
+}
+.lato_tags a:visited {
+  color:#656565 !important;
+  text-decoration:none;
+}
+.lato_tags a:hover {
+  color:#000 !important;
+  text-decoration:none;
+}
+
+.lemon_tags a:active {
+  color:#656565 !important;
+  text-decoration:none;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.lemon {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:40px 0px 0px 20px;
+  margin-top:0px;
+  line-height: 50px;
+  width:50%;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (min-width: 331px) and (max-width: 766px) {
+.lemon {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:50px 50px 0px 50px;
+  margin:0px 0px 0px 0px;
+  line-height: 54px;
+  width:100%;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.lemon {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:50px 10px 0px 20px;
+  margin:0px 0px 0px 0px;
+  line-height: 25px;
+ }
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+MAIN CONTENT
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` SECTION ICONS */
+.iconz img {
+  width: 70% !important; /* 749 x 750 */
+  padding:50px 0px 50px 0px;
+  margin-top:50px;
+  border:0 !important;
+  outline:0 !important;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.iconz img {
+  width: 70% !important; /* 749 x 750 */
+  padding:0px 0px 0px 0px;
+  margin:150px 0px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (max-width: 766px) {
+.iconz img {
+  width: 50% !important; /* 749 x 750 */
+  padding:0px 0px 0px 0px;
+  margin:40px 0px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.iconz img {
+  width: 90% !important; /* 749 x 750 */
+  padding:0px 0px 0px 0px;
+  margin:40px 0px -180px 0px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+
+/* ``````````````````` SECTION ICONS TEXT */
+.iconztxt {
+  font-family: 'Lemon', cursive;
+  font-size:35px;
+  color:#cd4a84;
+  padding:0px 0px 0px 30px;
+  margin:190px 0px 0px -450px;
+  line-height: 40px;
+  width:50%;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.iconztxt {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 0px 0px 20px;
+  margin:220px 0px 0px -50px;
+  line-height: 30px;
+  width:50%;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (min-width: 331px) and (max-width: 766px) {
+.iconztxt {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:20px 50px 0px 20px;
+  margin:0px 0px 0px 0px;
+  line-height: 34px;
+  width:100%;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.iconztxt {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:20px 10px 0px 20px;
+  margin:0px 0px 0px 0px;
+  line-height: 25px;
+  width:100%;
+ }
+}
+
+/* ``````````````````` IDEAS SUB ICONS */
+.coolicons {
+  clear: both;
+  float:right !important;
+  width:35% !important;
+  padding:10px 0px 10px 10px;
+}
+
+/* ``````````````````` FONT FOR TEXT THAT TRIGGERS COLLAPSE */
+.samples {
+  font-size:0.8em;
+}
+.perhaps {
+  font-size:18px;
+  line-height: 25px;
+}
+@media screen and (max-width: 330px) {
+.perhaps {
+  font-size:13px;
+  line-height: 20px;
+ }
+}
+
+/* ``````````````````` DESIGN SAMPLES GRID, from http://v4-alpha.getbootstrap.com/components/collapse/ */
+/* ``````` OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS */
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: .75rem;
+  background-color: #fdfdf3 !important;
+  border: 0px solid #fdfdf3 !important;
+  border-radius: .25rem;
+}
+/* ``````` OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS */
+.card-block {
+  padding: 1rem;
+}
+/* ``````` IMG SIZE */
+.dezs img {
+  margin:0px 0px 20px 0px;
+  border:0 !important;
+  outline:0 !important;
+  width:70%;
+}
+/* ``````` ALLOWS 2 MORE PER ROW, doesn't collapse roight tho in mid-sized browser width, so disabled */
+.dezs {
+  width:130%;
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+PORTFOLIO
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` 6 SAMPLES ICONS */
+/* thanks to https://coderwall.com/p/z87nsq/how-to-make-a-circular-image-with-css-only */
+/* disabled .dezs img above but added .dezs to allow for 2 more image per row .. disabled though */
+.img-circular1 {
+    border-radius: 100%;
+    width: 150px !important;
+    height: 150px !important;
+    background-image: url('../img/ext2/dronevision.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin:10px !important;
+}
+.img-circular2 {
+    border-radius: 100%;
+    width: 160px !important;
+    height: 160px !important;
+    background-image: url('../img/ext2/STOREFRONT.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 50% 50%;
+    margin:10px !important;
+}
+.img-circular3 {
+    border-radius: 100%;
+    width: 150px !important;
+    height: 150px !important;
+    background-image: url('../img/ext2/saturn.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 50% 50%;
+    margin:10px !important;
+}
+.img-circular4 {
+    border-radius: 100%;
+    width: 150px !important;
+    height: 150px !important;
+    background-image: url('../img/ext2/choicchis_banner.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 10% 50%;
+    margin:10px !important;
+}
+.img-circular5 {
+    border-radius: 100%;
+    width: 150px !important;
+    height: 150px !important;
+    background-image: url('../img/ext2/links_aiv.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 60% 50%;
+    margin:10px !important;
+}
+.img-circular6 {
+    border-radius: 100%;
+    width: 150px !important;
+    height: 150px !important;
+    background-image: url('../img/ext2/newhours_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 10% 50%;
+    margin:10px !important;
+}
+
+/* ``````````````````` ALL THE ICONS (smaller than 6 samples) */
+.img-circular_ex0 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/STOREFRONT.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important;
+    float:right; */
+}
+.img-circular_ex1 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/logo_big_lc2.png');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important;
+    float:right; */
+}
+.img-circular_ex2 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/choicchis_banner.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important;
+    float:right; */
+}
+.img-circular_ex3 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/dronevision.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex3 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex3 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex4 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/c_RED_industrial.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex4 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex4 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex5 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/buscard_front_BRIAN.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex5 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex5 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex6 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/crazywater_fb.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex6 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex6 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex7 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/crazywater_2D_3.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex7 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex7 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex8 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/crazywater_1D_3.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex8 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.img-circular_ex8 {
+    margin: 5px 5px 5px 5px !important;
+ }
+}
+.img-circular_ex9 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/ohn_rebrand.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex9 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex10 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/ohn_fb.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex10 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex11 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/saturn.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex12 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/sweettrio_100.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex12 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex13 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/newhours_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex13 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex14 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/summer_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex14 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex15 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/winter_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 90% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex15 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex16 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/deandeluca_printed.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex16 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex17 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/autumn_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 90% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex17 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex18 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/mothersday_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex18 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex19 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/valentinesday_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex19 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex20 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/autumn_printed.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 40% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex20 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex21 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/july4_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex21 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex22 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/santa_preprint.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex23 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/illus1a_edited.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex23 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex24 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/illus1b_edited.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex24 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex25 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/illus1d_edited.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex25 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex26 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/sketch5_edited.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex26 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex27 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/print6_edited_2.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+@media screen and (max-width: 300px) {
+.img-circular_ex27 {
+    margin: 5px 30px 5px 5px !important;
+ }
+}
+.img-circular_ex28 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/twitter_owl_v.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 50%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex29 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/otbp.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex30 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/artasia.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex31 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/barkow_mrbarkow.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex32 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/zc.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex33 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/trek_fest.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex34 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/sprint1B(blue-green).jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+.img-circular_ex35 {
+    border-radius: 100%;
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url('../img/ext2/links_aiv.jpg');
+    background-size: cover !important;
+    display: block !important;
+    background-position: 0% 0%; /* horiz-ver */
+    margin: 0px 30px 0px 0px !important;
+    /* text-align:left !important; */
+    float:left;
+}
+
+/* ``````````````````` OTHER SPACING */
+/* ``````` LINE BREAKS FOR PORTFOLIO IN IPAD */
+/* simulates <br />, line breaks for ipad only to render port text properly, thanks to http://stackoverflow.com/questions/9185157/how-do-i-simulate-br-the-br-tag-using-css */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+.ipadp {
+  display:block !important;
+  margin-bottom:20px !important;
+ }
+}
+/* ``````` MORE RIGHT SPACE FOR PORTFOLIO IN IPAD (gives 6 samples two images per row, only works for ipad for some reason, not lower) */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+.ipadp2 {
+  display:block !important;
+  width:120% !important;
+ }
+}
+/* ``````` HIDE CONTENT (MINIFIED GALLERY LINK) .. 2 more byeee's later below */
+/* simplifies content in tiny androids (330) and anything below ipad (768) width .. was 330, but disabled everything below ipad */
+@media screen and (max-width: 767px) {
+.byeee {
+  display:none !important;
+ }
+}
+/* ``````` TWEAKS FOR TINY ANDROID TO JUST BELOW IPAD AIR */
+/* ``````` AP BAR & KITCHEN */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_ap {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_ap {
+  width:100% !important;
+  display:block !important;
+  margin: 0px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_ap {
+  width:100% !important;
+  display:block !important;
+  margin: 10px 0px -25px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` CHOCOLATE CHISEL */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_cc {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_cc {
+  width:100% !important;
+  display:block !important;
+  margin: 0px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_cc {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -25px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` HERNANDEZ ROOFING */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_hr {
+  width:100% !important;
+  display:block !important;
+  margin: 220px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_hr {
+  width:100% !important;
+  display:block !important;
+  margin: 30px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_hr {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` CRAZY WATER */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_cw {
+  width:100% !important;
+  display:block !important;
+  margin: 220px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_cw {
+  width:100% !important;
+  display:block !important;
+  margin: 30px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_cw {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` OPTIMAL HEALTH */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_ohn {
+  width:100% !important;
+  display:block !important;
+  margin: 140px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_ohn {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_ohn {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` PIONEZERO */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_pio {
+  width:100% !important;
+  display:block !important;
+  margin: 40px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_pio {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_pio {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` SWEETRIO */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_st {
+  width:100% !important;
+  display:block !important;
+  margin: 720px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_st {
+  width:100% !important;
+  display:block !important;
+  margin: 145px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_st {
+  width:100% !important;
+  display:block !important;
+  margin: 30px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` ILLUSTRATIONS */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_ils {
+  width:100% !important;
+  display:block !important;
+  margin-top: 420px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_ils {
+  width:100% !important;
+  display:block !important;
+  margin-top: 110px !important;
+ }
+}
+/*
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_ils {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -15px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` OFF THE BEADN PATH */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks_obp {
+  width:100% !important;
+  display:block !important;
+  margin: 40px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks_obp {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks_obp {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` ART ASIA, BARKOW, ZIPCOAT, INFO GRAPHIC, STARTUP */
+/* tiny android */
+@media screen and (max-width: 300px) {
+.txtbrks {
+  width:100% !important;
+  display:block !important;
+  margin: 40px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.txtbrks {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.txtbrks {
+  width:100% !important;
+  display:block !important;
+  margin: 20px 0px -20px 0px !important;
+  line-height:20px !important;
+ }
+}
+/* ``````` RIGHT TEXT WRAP FOR TINY ANDROID */
+@media screen and (max-width: 300px) {
+.andw {
+  width:90% !important;
+  display:block !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+}
+/* RIGHT TEXT WRAP JUST ABOVE TINY ANDROID (300px) TO JUST BELOW IPHONE 6 (375px) */
+@media screen and (min-width: 301px) and (max-width: 374px) {
+.iphwS {
+  width:100% !important;
+  display:block !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+}
+/* ``````` RIGHT TEXT WRAP FOR IPHONE 6 (375px) TO JUST BELOW IPAD AIR (768px) */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+.iphw {
+  width:90% !important;
+  display:block !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+}
+/* ``````` FIXES LEFT SPACE FOR LINKS */
+@media screen and (max-width: 300px) {
+.linktwk {
+  margin-left:-6px !important;
+ }
+}
+/* ``````` VERTICAL SPACE FOR LINKS */
+.lift {
+  margin-bottom:-30px !important;
+ }
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+FOOTER
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` LARGE BACKGROUND IMAGE, disabled for now */
+.mountain {
+  /* background-image: url("../img/sky.jpg") !important; */
+  width:100%;
+  height:300px;
+  background-position: 100% 80%;
+  opacity:0.9;
+}
+@media screen and (max-width: 500px) {
+.mountain {
+  /* background-image: url("../img/sky.jpg") !important; */
+  width:100%;
+  height:300px;
+  background-position: 0% 80%;
+  opacity:0.9;
+ }
+}
+
+/* ``````````````````` FOOTER FONT, fonts and spacings combined */
+.have {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -200px;
+  width:50%;
+}
+.have_drk {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#656565;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -200px;
+  width:50%;
+}
+@media screen and (max-width: 1200px) {
+.have {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -120px;
+  width:50%;
+ }
+}
+@media screen and (max-width: 1200px) {
+.have_drk {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#5e6061;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -120px;
+  width:50%;
+ }
+}
+@media screen and (max-width: 990px) {
+.have {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -50px;
+  width:50%;
+ }
+}
+@media screen and (max-width: 990px) {
+.have_drk {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#5e6061;
+  padding:0px 0px 0px 0px;
+  margin:50px 0px 0px -50px;
+  width:50%;
+ }
+}
+@media screen and (max-width: 767px) {
+.have {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:0px 30px 0px 30px;
+  margin:50px 0px 0px 0px;
+  width:100%;
+ }
+}
+@media screen and (max-width: 767px) {
+.have_drk {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#5e6061;
+  padding:0px 30px 0px 30px;
+  margin:50px 0px 0px 0px;
+  width:100%;
+ }
+}
+@media screen and (max-width: 320px) {
+.have {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:0px 0px 0px 20px;
+  margin:30px 0px 20px 0px;
+  width:100%;
+  line-height:25px;
+ }
+}
+
+/* ``````````````````` IDEA ICON */
+.ideas img {
+  margin:50px 50px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+}
+@media screen and (max-width: 767px) {
+.ideas img {
+  margin:50px 50px 0px 20px;
+  border:0 !important;
+  outline:0 !important;
+ }
+}
+@media screen and (max-width: 320px) {
+.ideas img {
+  margin:50px 50px 0px 0px;
+  border:0 !important;
+  outline:0 !important;
+  width:30%;
+ }
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+RESUME
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ``````````````````` RESUME TEXT (FROM: SECTION ICONS TEXT) */
+/* ``````` MAIN */
+.resumetxt {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:0px;
+  margin:80px 30px 0px 30px;
+  line-height: 25px;
+  width:100%;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.resumetxt {
+  font-family: 'Lemon', cursive;
+  font-size:18px
+  color:#cd4a84;
+  padding:0px;
+  margin:190px 30px 0px 30px;
+  line-height: 25px;
+  width:100%;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (min-width: 331px) and (max-width: 766px) {
+.resumetxt {
+  font-family: 'Lemon', cursive;
+  font-size:18px
+  color:#cd4a84;
+  padding:0px;
+  margin:190px 30px 0px 30px;
+  line-height: 25px;
+  width:100%;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.resumetxt {
+  font-family: 'Lemon', cursive;
+  font-size:13px;
+  color:#cd4a84;
+  padding:0px;
+  margin:60px 0px 0px 0px !important;
+  line-height: 25px;
+  width:100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.iconztxt {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:0px;
+  margin:190px 30px 0px 30px;
+  line-height: 25px;
+  width:100%;
+ }
+}
+/* ``````` RELEVANT EXPERIENCE TITLES */
+.title_res {
+  font-size:24px;
+ }
+@media screen and (max-width: 330px) {
+.title_res {
+  font-size:19px;
+ }
+}
+/* ``````` TEXT HIGHLIGHTING */
+.txtbg_res {
+  color:#cd4a84;
+  background-color:#ede9eb;
+  padding:5px !important;
+  line-height: 30px;
+}
+
+/* ``````````````````` LOGO (FROM IDEAS SUB ICONS) */
+/* ``````` MAIN */
+.coolicons_res {
+  clear: both;
+  float:left !important;
+  width:20% !important;
+  padding:10px 30px 10px 10px;
+  margin:0px 0px 0px 0px;
+}
+/* ``````` FOR TABLETS AND LAPTOPS */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.coolicons_res {
+  clear: both;
+  float:left !important;
+  width:25% !important;
+  padding:10px 30px 10px 10px;
+  margin:0px 0px 0px 0px;
+ }
+}
+/* ``````` EVERYTHING LESS THAN TABLETS */
+@media screen and (min-width: 331px) and (max-width: 766px) {
+.coolicons_res {
+  clear: both;
+  float:left !important;
+  width:50% !important;
+  padding:10px 30px 10px 10px;
+  margin:0px 0px 0px 0px;
+ }
+}
+/* ``````` TINY ANDROID */
+@media screen and (max-width: 330px) {
+.coolicons_res {
+  clear: both;
+  float:left !important;
+  width:100% !important;
+  padding:10px 30px 10px 10px;
+  margin:-70px 0px 0px 0px;
+ }
+}
+/* ``````` PLACES LOGO HIGHER */
+@media screen and (max-width: 1200px) {
+.resup {
+  margin:-140px 25px 0px 0px !important;
+ }
+}
+@media screen and (max-width: 330px) {
+.resup {
+  margin:0px 0px 0px 0px !important;
+ }
+}
+
+/* ``````````````````` OTHER SPACING */
+/* ``````` CLOSES SPACE ON RIGHT (for resume on all sizes, should probably only be for max 330) */
+.container_res {
+  padding-right:30px !important;
+}
+/* for homepage tiny android */
+@media screen and (max-width: 330px) {
+.container_home {
+  padding-right:70px !important;
+ }
+}
+/* ``````` TEXT WRAP (wraps long text for tiny android) */
+@media screen and (max-width: 330px) {
+.nicetxt {
+  /* overflow-x: auto !important; */
+  padding-right:70px !important;
+ }
+}
+/* ``````` TEXT WRAP FOR TEXT LIST OF PORTFOLIO */
+@media screen and (min-width: 300px) and (max-width: 767px) {
+.txtlist {
+  width:80% !important;
+  display:block !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+}
+.proj_task {
+  font-size:19px;
+  color:#fdfdf3;
+  background-color:#656565;
+  padding:5px 9px 5px 10px !important;
+  line-height: 30px;
+  border-radius: 6px !important;
+  width:50%;
+ }
+@media screen and (max-width: 768px) {
+.proj_task {
+  font-size:19px;
+  color:#fdfdf3;
+  background-color:#656565;
+  padding:5px 9px 5px 10px !important;
+  line-height: 30px;
+  border-radius: 6px !important;
+  width:100%;
+ }
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+FULL GALLERY MADE WITH MASONRY (thanks to http://masonry.desandro.com/ and http://codepen.io/desandro/pen/RPKgEN)
+
+SWITCH TO 6 COLUMN GRID FOR DROP DOWN NAV ICONS (thanks to http://stackoverflow.com/questions/21875681/bootstrap-6-column-responsive)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ```````````````````` BOOTSTRAP OVERRIDES */
+/* ``````` MASONRY GALLERY COLLAPSED NAV MENU, OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS (this is above as well) */
+.m-b-1_mas {
+  margin-bottom: 0rem !important;
+  background-color: #232323 !important;
+}
+/* ``````` FOR MASONRY GALLERY COLLAPSED NAV MENU, OVERRIDE OF DUPLICATE CLASS IN BOOTSTRAP.CSS (this is above as well) */
+.bg-faded_mas {
+  background-color: #232323 !important;
+  z-index;1 !important;
+ /* rounded corners for some odd reason of 3 px, so this covers it */
+  margin:-2px 0px -2px 0px !important;
+}
+
+/* ``````````````````` MASONRY GALLERY COLLAPSED NAV MENU IMAGES */
+.col-sm-12 img {
+    width: 60% !important;
+    padding:10px 0px 0px 0px;
+}
+
+/* ``````````````````` MASONRY DROP DOWN NAV ICONS TEXT (3 columns, 2 columns each .. 6 columns total) */
+/* ``````` COLUMN 1 */
+.iconztxt-tmas {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 20px !important; /* orig left 35, 27, 20 .. left-right text alignment fix thanks to http://stackoverflow.com/questions/12818528/text-in-inline-block-div-pushing-it-down*/
+  margin:0 auto !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+.iconztxt-tmas {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px !important;
+  margin:0 auto !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+@media screen and (min-width: 500px) and (max-width: 650px) and (orientation: portrait) {
+.iconztxt-tmas {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px !important;
+  margin:0px 0px 0px 0px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+.iconztxt-tmas {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px !important;
+  margin:0px 0px 0px 40px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` FIXES MID-SIZE IPAD TYPE DEVICES IN LANDSCAPE, exludes only > Kindle Fire (600 x 1024) > ONLY DEVICE SIZE NOT QUERIED SO FAR */
+@media screen and (max-height: 966px) and (orientation: landscape) {
+.iconztxt-tmas {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px !important;
+  margin:0px 0px 0px 0px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` COLUMN 2 */
+.iconztxt-tmas2 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 20px;
+  margin:0 auto !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+.iconztxt-tmas2 {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px;
+  margin:0 auto !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+@media screen and (min-width: 500px) and (max-width: 650px) and (orientation: portrait) {
+.iconztxt-tmas2 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px;
+  margin:0px 0px 0px 0px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` JUST FOR IDEAS ALIGNMENT */
+@media screen and (min-width: 500px) and (max-width: 650px) and (orientation: portrait) {
+.iconztxt-tmas2b {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 0px;
+  margin:0px 0px 0px 0px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+.iconztxt-tmas2 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0px 0px 0px 0px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` FIXES MID-SIZE IPAD TYPE DEVICES IN LANDSCAPE, EXLUDES ONLY > Kindle Fire (600 x 1024) > ONLY DEVICE SIZE NOT QUERIED SO FAR */
+@media screen and (max-height: 966px) and (orientation: landscape) {
+.iconztxt-tmas2 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0px 0px 0px -10px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` COLUMN 3 */
+.iconztxt-tmas3 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0 auto !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+.iconztxt-tmas3 {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0px 0px 0px -15px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+@media screen and (min-width: 500px) and (max-width: 650px) and (orientation: portrait) {
+.iconztxt-tmas3 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0px 0px 0px -15px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* ``````` FIXES MID-SIZE IPAD TYPE DEVICES IN LANDSCAPE, EXLUDES ONLY > Kindle Fire (600 x 1024) > ONLY DEVICE SIZE NOT QUERIED SO FAR */
+@media screen and (max-height: 966px) and (orientation: landscape) {
+.iconztxt-tmas3 {
+  font-family: 'Lemon', cursive;
+  font-size:25px;
+  color:#cd4a84;
+  padding:10px 0px 0px 10px;
+  margin:0px 0px 0px -25px !important;
+  line-height: 40px;
+  height:50px !important;
+  width:200px !important;
+  display:block !important;
+ }
+}
+/* NO MEDIA QUERY NEEDED FOR .iconztxt-tmas3 > @media screen and (min-width: 768px) and (orientation: landscape) { */
+/* ``````` FOR TABLETS AND LAPTOPS (COLUMN 1, 2, 3) */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+.iconztxt-tmas, .iconztxt-tmas2, .iconztxt-tmas3 {
+  font-family: 'Lemon', cursive;
+  font-size:18px;
+ }
+}
+
+/* ``````````````````` HIDE CONTENT */
+/* ``````` HIDDEN TO EVERYTHING BELOW IPAD */
+@media screen and (max-width: 900px) {
+.byeee2 {
+  display:none !important;
+ }
+}
+/* ``````` HIDDEN TO EVERYTHING ABOVE IPAD */
+@media screen and (min-width: 900px) {
+.byeee3 {
+  display:none !important;
+ }
+}
+
+/* ``````````````````` MODAL SIZE, thanks to http://stackoverflow.com/questions/9416985/increase-modal-size-for-twitter-bootstrap */
+.modal-dialog {
+  width:133vh !important; /* sets the height to 80/100ths of the viewport. */
+}
+
+/* ``````````````````` MODAL BACKGROUND COLOR, with commas between classes the entire screen goes dark with just the image .. cool */
+.modal .modal-dialog .modal-content {
+  background-color: #232323 !important; /* #232323 or transparent */
+}
+
+/* ``````````````````` CENTERING IMAGES IN MODAL thanks to http://stackoverflow.com/questions/29334416/bootstrap-modal-dialog-center-image-in-body */
+.mimgc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+MOBILE PORT
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+.squeeze {
+  display:block !important;
+  margin:0 auto !important;
+  padding:10px !important;
+}
+.blank {
+  display:block !important;
+  width:25% !important;
+}
+
+@media screen and (max-width: 768px) {
+.desk {
+  display:block !important;
+  max-width:100%;
+  margin:0 auto !important;
+  padding:10px !important;
+ }
+}
+@media screen and (max-width: 768px) {
+.tablet {
+  display:block !important;
+  max-width:50%;
+  margin:0 auto !important;
+  padding:10px !important;
+ }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+.tablet {
+  display:block !important;
+  margin:0 auto !important;
+  padding-left:60px !important;
+ }
+}
+@media screen and (max-width: 768px) {
+.mobile {
+  display:block !important;
+  max-width:33.33%;
+  margin:0 auto !important;
+  padding:10px !important;
+ }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+.mobile {
+  display:block !important;
+  margin:0 auto !important;
+  padding-left:90px !important;
+ }
+}
+
+@media screen and (max-width: 500px) {
+.swatch {
+  max-width:50% !important;
+ }
+}
+.covermob {
+  position:relative;
+  display:block;
+  margin:0px 0px -20px 0px !important;
+  width:100%;
+}
+@media screen and (max-width: 500px) {
+.covermob {
+  position:relative;
+  display:block;
+  /* background: url(../img/dev/jb_large.jpg); */
+  margin:-80px 0px 0px -190px !important;
+  width:200%;
+  z-index: -1 !important;
+  /* background-position: -50% 0% !important; */
+ }
+}
+@media screen and (max-width: 290px) {
+.covermob {
+  position:relative;
+  display:block;
+  /* background: url(../img/dev/jb_large.jpg); */
+  margin:-80px 0px -20px -260px !important;
+  width:300%;
+  z-index: -1 !important;
+  /* background-position: -50% 0% !important; */
+ }
+}
+@media screen and (max-width: 240px) {
+.covermob {
+  position:relative;
+  display:block;
+  /* background: url(../img/dev/jb_large.jpg); */
+  margin:-80px 0px -20px -220px !important;
+  width:300%;
+  z-index: -1 !important;
+  /* background-position: -50% 0% !important; */
+ }
+}
+@media screen and (max-width: 212px) {
+.covermob {
+  position:relative;
+  display:block;
+  /* background: url(../img/dev/jb_large.jpg); */
+  margin:-80px 0px -20px -170px !important;
+  width:300%;
+  z-index: -1 !important;
+  /* background-position: -50% 0% !important; */
+ }
+}
+
+.illus {
+  width:100%;
+  border-radius: 6% !important;
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+.illus {
+  width:77%;
+  border-radius: 6% !important;
+ }
+}
+
+
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+COOL STUFF
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+.imgbd {
+  border-style: solid;
+  border-width:30px;
+  border-color:#565859
+}
+@media screen and (max-width: 500px) {
+.imgbd {
+  border-width:0px
+ }
+}
+
+.img500 {
+  background-image: url(../img/dev/swatch_bg.png) !important;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size:23em;
+  float:right;
+  display:block;
+  height:52px;
+  width:40%;
+  margin:40px 0px 0px 0px !important;
+  background-color: #dbdbdb !important;
+  padding:15px 10px 8px 53px;
+  border-radius:10px
+ }
+@media screen and (max-width: 500px) {
+.img500 {
+  background-image: url(../img/dev/swatch_bg.pn) !important;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  float:right;
+  display:block;
+  height:36px;
+  width:60%;
+  margin:20px 0px 0px 0px !important;
+  background-color: #dbdbdb !important;
+  padding:8px 8px 8px 8px;
+  border-radius:10px
+ }
+}
+@media screen and (max-width: 292px) {
+.img500 {
+  background-image: url(../img/dev/swatch_bg.pn) !important;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  float:right;
+  display:block;
+  height:36px;
+  width:60%;
+  margin:36px 0px 0px 0px !important;
+  background-color: #dbdbdb !important;
+  padding:8px 8px 8px 8px;
+  border-radius:10px
+ }
+}
+
+@media screen and (min-width: 1200px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:180% !important; /* equ em's: 130 */
+  left:-500px !important;
+  margin-top:-210px;
+ }
+}
+@media screen and (min-width: 995px) and (max-width: 1199px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:180% !important; /* equ em's: 130 */
+  left:-500px !important;
+  margin-top:-80px;
+ }
+}
+@media screen and (min-width: 768px) and (max-width: 996px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:260% !important; /* equ em's: 130 */
+  left:-400px !important;
+  margin-top:-120px;
+ }
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:330% !important; /* equ em's: 130 */
+  left:-100px !important;
+  margin-top:-204px;
+ }
+}
+@media screen and (min-width: 473px) and (max-width: 574px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:300% !important; /* equ em's: 130 */
+  left:0px !important;
+  margin-top:-140px;
+ }
+}
+@media screen and (min-width: 400px) and (max-width: 472px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:380% !important; /* equ em's: 130 */
+  left:-300px !important;
+  margin-top:-140px;
+ }
+}
+@media screen and (min-width: 383px) and (max-width: 399px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:420% !important; /* equ em's: 130 */
+  left:-300px !important;
+  margin-top:-100px;
+ }
+}
+@media screen and (min-width: 361px) and (max-width: 382px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:420% !important; /* equ em's: 130 */
+  left:-300px !important;
+  margin-top:-50px;
+ }
+}
+@media screen and (min-width: 300px) and (max-width: 360px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:450% !important; /* equ em's: 130 */
+  left:-300px !important;
+  margin-top:-80px;
+ }
+}
+@media screen and (min-width: 259px) and (max-width: 299px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:450% !important; /* equ em's: 130 */
+  left:-50px !important;
+  margin-top:-80px;
+ }
+}
+@media screen and (min-width: 230px) and (max-width: 258px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:500% !important; /* equ em's: 130 */
+  left:-50px !important;
+  margin-top:-80px;
+ }
+}
+@media screen and (min-width: 200px) and (max-width: 229px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:570% !important; /* equ em's: 130 */
+  left:-50px !important;
+  margin-top:-50px;
+ }
+}
+@media screen and (min-width: 180px) and (max-width: 199px) {
+.zzz1 {
+  background-image: url(../img/p1.svg) !important;
+  background-repeat: no-repeat;
+  position:absolute;
+  height:100% !important; /* equ em's: 100 */
+  width:730% !important; /* equ em's: 130 */
+  left:-150px !important;
+  margin-top:-70px;
+ }
+}
+
+/* necessary firefox fixes .. can't believe there are still issues! */
+/* outline around link animation */
+.fffix {
+  outline:none !important;
+}
+/* 3 bar nav icon spacing: in 3 BARS DROPDOWN (IMPROVED) section above */
+
+/* footer .. for some reason the order matters here .. does not work beneath buddhablast1 .. from buddhablast2, txtbg and lemon */
+.buddhablast3 {
+  font-size:35px !important;
+  color:#fdfdf3 !important;
+  background-color:#cd4a84 !important;
+  padding:0px 3px 2px 3px !important;
+  line-height: 46px;
+  margin: 0px 0px 0px 0px !important;
+ }
+ /* from buddhablast2, txtbg and lemon */
+ @media screen and (max-width: 1200px) {
+ .buddhablast3 {
+   font-size:25px !important;
+   color:#fdfdf3 !important;
+   background-color:#cd4a84 !important;
+   padding:0px 3px 1px 3px !important;
+   line-height: 33px;
+   margin: 0px 0px 0px 0px !important;
+  }
+}
+ /* from buddhablast2, txtbg and lemon */
+@media screen and (max-width: 331px) {
+.buddhablast3 {
+ font-size:18px !important;
+ color:#fdfdf3 !important;
+ background-color:#cd4a84 !important;
+ padding:0px 3px 0px 3px !important;
+ line-height: 30px;
+ margin: 0px 0px 0px 0px !important;
+}
+}
+
+.buddhablast2 {
+  /* from .perhaps and .txtbg_des */
+  font-size:0.8em !important;
+  color:#fdfdf3 !important;
+  background-color:#cd4a84 !important;
+  padding:0px 3px 2px 3px !important;
+  line-height: 25px !important;
+  margin: 0px 0px -20px 0px !important;
+ }
+ @media screen and (max-width: 320px) {
+.buddhablast2 {
+   /* from .perhaps and .txtbg_des */
+   font-size:12px !important;
+   color:#fdfdf3 !important;
+   background-color:#cd4a84 !important;
+   padding:2px 5px 2px 5px !important;
+   line-height: 15px !important;
+   margin: 0px 0px -20px 0px !important;
+   }
+ }
+
+.buddhablast {
+  /* from .perhaps and .txtbg_des */
+  font-size:18px !important;
+  color:#fdfdf3 !important;
+  background-color:#cd4a84 !important;
+  padding:0px 3px 2px 3px !important;
+  line-height: 25px !important;
+  margin: 0px 0px -20px 0px !important;
+ }
+ @media screen and (max-width: 500px) {
+ .buddhablast {
+   /* from .perhaps and .txtbg_des */
+   font-size:18px !important;
+   color:#fdfdf3 !important;
+   background-color:#cd4a84 !important;
+   padding:0px 3px 2px 3px !important;
+   line-height: 25px !important;
+   }
+}
+@media screen and (max-width: 330px) {
+  .buddhablast {
+    /* from .perhaps and .txtbg_des */
+    font-size:12px !important;
+    color:#fdfdf3 !important;
+    background-color:#cd4a84 !important;
+    padding:2px 5px 2px 5px !important;
+    line-height: 15px !important;
+   }
+
+
+
+/* end end */

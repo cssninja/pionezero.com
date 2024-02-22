@@ -1,0 +1,264 @@
+css, js and img migration site map
+updated: f jun 2 2023 18:31
+
+================
+LOGIN
+================
+
+----
+LOCATION
+----
+
+ORIGINAL
+miva > user interface > content management > LOGN_new > Peak Login (bs4)
+
+CURREWNT
+miva > user interface > templates > LOGN_new
+
+body id="js-LOGN_new" 
+
+
+----
+DEV TOOLS ID
+----
+
+mmx-text-editor
+
+----
+EDITS NEEDED STILL
+----
+
+line 32 > <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+----
+CSS
+----
+
+line 36-47
+
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/bs4.min.css">
+<!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/flaticon.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/slicknav.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/animate.min.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/themify-icons.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/slick.css">
+<link rel="stylesheet" href="https://pionezero.com/appco/assets/css/nice-select.css">
+<link rel="stylesheet" href="https://pionezero.com/appco_min/assets/css/style.css">
+
+----
+IMG
+----
+
+line 321
+<img src="https://pionezero.com/appco/assets/img/dental/peak-dk-blue.png" alt="">
+
+line 337
+<a href="index.html"><img src="https://pionezero.com/appco/assets/img/dental/logo_edited.png" alt=""></a>
+
+----
+JS
+----
+
+line 506-536
+
+  <!-- All JS Custom Plugins Link Here here -->
+  <script src="https://pionezero.com/appco/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="https://pionezero.com/appco/assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/popper.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/bootstrap.min.js"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="https://pionezero.com/appco/assets/js/jquery.slicknav.min.js"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="https://pionezero.com/appco/assets/js/owl.carousel.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/slick.min.js"></script>
+  <!-- Date Picker -->
+  <script src="https://pionezero.com/appco/assets/js/gijgo.min.js"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="https://pionezero.com/appco/assets/js/wow.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/animated.headline.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.magnific-popup.js"></script>
+
+  <!-- Scrollup, nice-select, sticky -->
+  <script src="https://pionezero.com/appco/assets/js/jquery.scrollUp.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.nice-select.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.sticky.js"></script>
+
+  <!-- contact js -->
+  <script src="https://pionezero.com/appco/assets/js/contact.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.form.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.validate.min.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/mail-script.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/jquery.ajaxchimp.min.js"></script>
+
+  <!-- Jquery Plugins, main Jquery -->
+  <script src="https://pionezero.com/appco/assets/js/plugins.js"></script>
+  <script src="https://pionezero.com/appco/assets/js/main.js"></script>
+
+----
+FILE PATHS (reduced 38 files to 12)
+----
+
+https://peakdentalstore.com/mm5/
+
+https://peakdentalstore.com/mm5/css/00000001/GH_animate.min.css
+https://peakdentalstore.com/mm5/css/00000001/GH_bs4.min.css
+https://peakdentalstore.com/mm5/css/00000001/GH_slick.css
+https://peakdentalstore.com/mm5/css/00000001/GH_style.css
+
+https://peakdentalstore.com/mm5/graphics/00000001/1/GH_peak-dk-blue.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/GH_logo_edited.png
+
+https://peakdentalstore.com/mm5/scripts/00000001/GH_bootstrap.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_jquery.slicknav.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_main.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_owl.carousel.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_popper.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_slick.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_jquery-1.12.4.min.js
+https://peakdentalstore.com/mm5/scripts/00000001/GH_modernizr-3.5.0.min.js
+
+|
+|
+|
+|
+|
+|
+|
+
+================
+GLOBAL HEADER
+================
+
+----
+LOCATION
+----
+
+miva > user interface > global settings > global header & footer > global header
+
+----
+DEV TOOLS ID
+----
+
+body id="js-SFNT" 
+
+----
+EDITS NEEDED STILL
+----
+
+----
+CSS
+----
+
+line 337
+<link rel="stylesheet" href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css"/>
+
+----
+IMG
+----
+
+----
+JS
+----
+
+line 339
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+----
+FILE PATHS
+----
+
+https://peakdentalstore.com/mm5/
+
+https://peakdentalstore.com/mm5/css/00000001/GH_bootstrap-isolated.css
+https://peakdentalstore.com/mm5/scripts/00000001/GH_CDN_bootstrap.bundle.min.js
+
+|
+|
+|
+|
+|
+|
+|
+
+================
+STOREFRONT
+================
+
+----
+LOCATION
+----
+
+miva > user interface > templates > SFNT
+
+----
+DEV TOOLS ID
+----
+
+body id="js-SFNT" 
+
+----
+EDITS NEEDED STILL
+----
+
+----
+CSS
+----
+
+line 209
+<link rel="stylesheet" href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css"/>
+
+----
+IMG
+----
+
+----
+JS
+----
+
+----
+FILE PATHS
+----
+
+https://peakdentalstore.com/mm5/
+
+https://peakdentalstore.com/mm5/css/00000001/GH_bootstrap-isolated.css
+
+|
+|
+
+OPAY
+
+<link rel="stylesheet" href="https://peakdentalstore.com/mm5/css/00000001/GH_bs4.min.css">
+<link rel="stylesheet" href="https://peakdentalstore.com/mm5/css/00000001/GH_style.css">
+
+<script src="https://peakdentalstore.com/mm5/scripts/00000001/GH_main.js"></script>
+
+https://peakdentalstore.com/mm5/css/00000001/GH_bs4.min.css
+https://peakdentalstore.com/mm5/css/00000001/GH_style.css
+https://peakdentalstore.com/mm5/scripts/00000001/GH_main.js
+
+preloader img
+<img src="https://pionezero.com/appco/assets/img/dental/peak-dk-blue.png" alt="">
+
+https://peakdentalstore.com/mm5/graphics/00000001/1/GH_peak-dk-blue.png
+
+
+
+
+<link rel="stylesheet" href="https://peakdentalstore.com/mm5/css/00000001/GH_bs4.min.css">
+<link rel="stylesheet" href="https://peakdentalstore.com/mm5/css/00000001/GH_style.css">
+
+<script src="https://peakdentalstore.com/mm5/scripts/00000001/GH_main.js"></script>
+
+<img src="https://peakdentalstore.com/mm5/graphics/00000001/1/GH_peak-dk-blue.png" alt="">
+
+
+
+

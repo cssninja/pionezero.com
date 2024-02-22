@@ -1,0 +1,324 @@
+use of xmp (decpreciated)
+
+wrapping
+
+original notes from >
+file:///Users/owls/Documents/STUFF/INDEPENDENT!/PIONEZERO/MASTER/archive/UPLOAD/code/snCSS.html
+file:///Users/owls/Documents/STUFF/INDEPENDENT!/PIONEZERO/MASTER/archive/UPLOAD/code/snHTML.html
+
+more > https://stackoverflow.com/questions/4611591/code-vs-pre-vs-samp-for-inline-and-block-code-snippets
+
+
+
+
+
+
+
+
+<style>
+body {
+  font-size:17px !important;
+  margin: 0 auto !important;
+  background: #232323;
+}
+@media screen and (max-width: 330px) {
+body {
+  font-size:13px !important;
+  margin: 0 auto !important;
+  background: #232323;
+ }
+}
+/* thanks to chris coyler http://mediatemple.net/blog/tips/considerations-for-styling-the-pre-tag/ */
+pre {
+  white-space: pre-wrap;
+}
+pre {
+  overflow-x: auto;
+}
+</style>
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title>pi one zero labs ∑ madison, wi | code snippets w/methods in notes</title>
+
+	<link rel="stylesheet" href="railscasts.css">
+
+<style type="text/css">
+
+/* thanks to: https://stackoverflow.com/questions/16226463/html-css-display-html-code-with-xmp-pre-or-code .. also links to: https://stackoverflow.com/questions/11673978/is-there-a-html-css-way-to-display-html-tags-without-parsing where using textarea with (boolean) attribute readonly {https://www.freecodecamp.org/news/html-attributes-explained/} is recommended as xmp will be depreciated >
+
+<textarea readonly='true'>
+    <p>This is some text</p>
+</textarea>
+
+also gives js method there:
+https://jsfiddle.net/hucY9/5/
+
+honorable mentions:
+https://www.w3docs.com/snippets/css/how-to-wrap-text-in-a-pre-tag-with-css.html
+https://www.cjcid.com/articles/wrapping-long-words-css-html/#line-break-strict
+
+also:
+display: flex !important;
+flex-wrap: wrap !important;
+width: 100vw !important;
+
+my own previous method with full color:
+file:///Users/owls/Documents/STUFF/INDEPENDENT!/PIONEZERO/MASTER/archive/UPLOAD/code/snCSS.html
+file:///Users/owls/Documents/STUFF/INDEPENDENT!/PIONEZERO/MASTER/archive/UPLOAD/code/snHTML.html
+
+including css and js files .. also requires texxt replacement
+
+*/
+
+xmp {
+	white-space:pre-wrap !important;
+	word-wrap:break-word !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+XMP RENDERING<br />
+<!-- thanks to: https://stackoverflow.com/questions/11386586/how-to-show-div-tag-literally-in-code-pre-tag -->
+
+<xmp>
+
+	<style type="text/css">
+	/* container for placeing floating logo over image .. desktop, tablet, mobile */
+	.imgcon {
+		display:flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		flex-direction: row !important;
+		/* text-align:center; */
+		width: 100% !important;
+		margin: 0%; /* v,h */
+	}
+	/* desktop */
+	@media (min-width: 1024px) {
+	.imgfloat {
+		position: absolute !important;
+		/* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+		background-size:  !important;
+		background-repeat: no-repeat; */
+		top: 1% !important;
+		left:28% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+		width: 45% !important; /* 40% w/bg image, 60% without */
+		opacity:1; /* was 0.87 */
+		z-index:1000 !important;
+	 }
+	}
+ /* tablet, mobile */
+ @media (max-width: 1023.95px) { /* was 948px */
+	.imgfloat {
+		position: absolute !important;
+		/* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+		background-size:  !important;
+		background-repeat: no-repeat; */
+		top: 1% !important;
+		left:25% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+		width: 55% !important; /* 80% w/bg image, 100% without */
+		opacity:1; /* was 0.87 */
+		z-index:1000 !important;
+	 }
+	}
+ /* sm mobile */
+ @media (max-width: 450px) {
+	.imgfloat {
+		position: absolute !important;
+		/* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+		background-size:  !important;
+		background-repeat: no-repeat; */
+		top: 1% !important; /* 2% w/bg image, 4% without */
+		left:10% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+		width: 80% !important; /* 80% w/bg image, 100% without */
+		opacity:1; /* was 0.87 */
+		z-index:1000 !important;
+	 }
+	}
+ /* thanks to: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+		 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+		 https://flexbox.help/
+		 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+	 */
+
+ /* line 2249 in theme.scss.liquid changed 40px to 46 px for announcement bar */
+
+ /* new flex menu can be ENABLED via text theme.liquid_new(WITH TOP MENU).txt */
+
+/* removes image section in tablet and mobile */
+ @media (max-width: 1024px) {
+	 .rich-text__media {
+		 display: none !important;
+	}
+	 .rich-text__content {
+		width: 100%;
+	 }
+	}
+
+ /* line 6880 disabled .slide__overlay for parallax scrolling */
+
+/* slide 1 .. don't have to use a blank cream city brick colored image with this feature */
+#slide-1570684534406 {
+	opacity:1 !important; /* was opacity:0 .. THIS GIVES VISIBILITY TO UPPERMOST IMAGE */
+}
+@media (max-width: 767.95px) {
+	#slide-1570684534406 {
+		opacity:1 !important;
+ }
+}
+
+/* slide calls to action text colors (svg arrow color filled with body text color, //fill: $bodyTxt;, line 978 in theme.scss.liquid .. just create own variable in Variables or Settings .. ref:
+1) https://blog.jim-nielsen.com/2019/generating-shades-of-color-using-css-variables/
+2) https://stackoverflow.com/questions/51395179/svg-fill-with-css-variables
+3) https://stackoverflow.com/questions/9529300/can-i-change-the-fill-color-of-an-svg-path-with-css) */
+.button {
+	color:#b8b5a9 !important; /* WORKS */
+}
+/* NOT WORKING .. is svg fill, SO DISABLED SVG ARROW */
+.symbol--arrow-right {
+	background-color:#b8b5a9 !important;
+	z-index:-1 !important;
+	display:none !important;
+}
+
+/* ----------------------- */
+/* MIDDLE TEXT SECTION INDUSTRIAL CHIC BG COLOR TO COVER WHITE */
+#id-1570691463158 {
+	background-color:#474a56 !important;
+}
+/* PARENT DIV FOR ABOVE TWO SECTIONS TO COVER WHITE */
+#page-content {
+	background-color:#474a56 !important;
+}
+/* ----------------------- */
+
+/* ----------------------- */
+LOGO SECTION > #shopify-section-1613326161336370f1
+LOGO SLIDE > #slide-1613326161336370f1-0
+TEXT SECTION > #shopify-section-1613326814958c2958
+
+NOTE: height not always responding to percentage, vh or em but responds to px and rem (targeting font) .. display: block issue?
+
+https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7
+
+LOGO HEIGHT ADJUSTMENT in industrial chic .. DESKTOP .. better controls in Slider cesction in theme.scss.liquid, line 6824, esp 6828-6836 .. got classes from slider-horizonral.liquid .. full edits in text file theme.liquid.new_W/LOGO/TEXT_MQ.txt
+/* ----------------------- */
+
+/* 4 */
+/* TEXT HEIGHT ADJUSTMENT in industrial chic .. TABLET */
+@media (max-width: 949px) {
+#shopify-section-1613326814958c2958 {
+	background-color:#474a56 !important;
+	max-height: 100vh !important;
+	/* margin-top: -20rem !important; */
+	z-index:9999 !important;
+	}
+}
+
+/* 7 */
+/* BG FOR TEXT BELOW SLIDESHOW HORIZONTAL (INDUSTRIAL CHIC), VERY LARGE SCREEN ..  #shopify-section-1613326814958c2958 #id-1613326814958c2958 .rich-text__body .. contain normally is best .. but when making bg image VERY WIDE and changing to cover, then it behaves as you want it to .. so just bring in bolts closer to center while still keeping image very wide .. has to do with ASPECT RATIO of contain vs cover .. OR wher volts disappear do new image with media query */
+#id-1613326814958c2958 {
+	/* min-width:120vw !important;*/
+	/* z-index: -1 !important; */
+	/* excessive padding SHRINKS/SQUEEZES CONTAINER .. SOlUTION FOR OLD MILW IMAGE + BG IMG CONFLICT .. also BELL CURVE > if too much passing it begins expanding again */
+	padding: 100px 50px 100px 50px !important;
+	}
+/* SAME BUT ZEROING OUT MARGINS FOR MOBILE */
+@media (max-width: 768px) {
+	#id-1613326814958c2958 {
+		/* min-width:120vw !important;*/
+		/* z-index: -1 !important; */
+		/* excessive padding SHRINKS/SQUEEZES CONTAINER .. SOlUTION FOR OLD MILW IMAGE + BG IMG CONFLICT .. also BELL CURVE > if too much passing it begins expanding again */
+		padding: 100px 0px 100px 0px !important;
+		}
+	}
+
+/* 8 */
+/* INDUSTRIAL CHIC BG IMG, LARGE DESKTOP */
+@media (min-width: 1551px) {
+	#id-1613326814958c2958 {
+		background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG.jpg?v=1613547857') !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important; /* x,y */
+		z-index: 9999 !important;
+		background-color:#474a56 !important;
+		/* width: 10vw !imporant; */
+		/* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+	}
+}
+/* INDUSTRIAL CHIC BG IMG, LAPTOP TO LARGE DESKTOP */
+@media (min-width: 1180px) and (max-width: 1550px) {
+	#id-1613326814958c2958 {
+		background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_SMALL_3149d5c0-1791-4e1e-8643-ae9a1a508d47.jpg?v=1613549951') !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important; /* x,y */
+		z-index: 9999 !important;
+		background-color:#474a56 !important;
+		/* width: 10vw !imporant; */
+		/* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+	}
+}
+/* INDUSTRIAL CHIC BG IMG, UNDER LAPTOP */
+@media (min-width: 950px) and (max-width: 1179px) {
+	#id-1613326814958c2958 {
+		background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_EVEN_SMALLER.jpg?v=1613551503') !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important; /* x,y */
+		z-index: 9999 !important;
+		background-color:#474a56 !important;
+		/* width: 10vw !imporant; */
+		/* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+	}
+}
+/* INDUSTRIAL CHIC BG IMG, SMALL */
+@media (max-width: 949px) {
+	#id-1613326814958c2958 {
+		background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_EVEN_SMALLER.jpg?v=1613551503') !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important; /* x,y */
+		z-index: 9999 !important;
+		background-color:#474a56 !important;
+		/* width: 10vw !imporant; */
+		/* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+	}
+}
+
+/* 9 */
+/* SHRINKING LOGO WITH PADDING JUST AS WITH TEXT BELOW .. FOR GALAZY FOLD */
+@media (min-width: 280px) and (max-width: 281px) {
+	#slide-1613326161336370f1-0 {
+		max-height: 90vh !important;
+	}
+}
+</style>
+
+<!-- BEGIN XO GALLERY -->
+{% include "xo-gallery" %}
+<!-- END XO GALLERY -->
+
+</xmp>
+
+</div>
+
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

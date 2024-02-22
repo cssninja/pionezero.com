@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <!--
+        ADDED TO ORIGINAL MARKUP:
+           1) RESPONSIVE TO SMART DEVICES
+           2) FOOTER FONT (Lato)
+           3) SOCIAL FOOTER CSS (font-awesome.min.cs and zocial.css)
+           4) CUSTOM EMBEDDED FONT
+           5) FOOTER 1 AND 2
+           6) STICKY FOOTER SHELL
+           7) STICKY FOOTER SOLUTION
+        -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AP Bar & Kitchen | Walker's Point, Milwaukee</title>
+        <meta name="description" content="">
+
+        <!-- RESPONSIVE TO SMART DEVICES (ADDED) -->
+        <!-- Set the viewport width to device width for mobile -->
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <!-- from https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+       <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+       <!-- FOOTER FONT (ADDED) -->
+       <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+
+        <!--[if IE]>
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+        <![endif]-->
+
+        <!-- SOCIAL FOOTER CSS (ADDED) -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/zocial.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="css/bootstrap_dark.css"> <!-- CHANGED, was bootstrap.min.css -->
+
+        <!-- CUSTOM EMBEDDED FONT -->
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            @font-face { 
+	        font-family: "atwriter";
+	        src: url(font/atwriter.eot);
+	        src: local("atwriter"), url(font/atwriter.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "santa_fe_plain";
+	        src: url(font/santa_fe_plain.eot);
+	        src: local("santa_fe_plain"), url(font/santa_fe_plain.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "cooprblk";
+	        src: url(font/cooprblk.eot);
+	        src: local("cooprblk"), url(font/cooprblk.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "copperplate-gothic-light";
+	        src: url(font/copperplate-gothic-light.eot);
+	        src: local("copperplate-gothic-light"), url(font/copperplate-gothic-light.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "FaunaOne-Regular";
+	        src: url(font/FaunaOne-Regular.eot);
+	        src: local("FaunaOne-Regular"), url(font/FaunaOne-Regular.ttf) format("truetype");
+            }
+        </style>
+
+        <link rel="stylesheet" href="css/bootstrap-responsive.css"> <!-- CHANGED, was bootstrap-responsive.min.css -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      NAVIGATION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="tel://14146726000"><!--AP Bar & Kitchen </a>-->Tel: +1 (414) 672-6000</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Small Plates</a></li>
+                                    <li><a href="#">Large Plates</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Wine</a></li>
+                                    <li><a href="#">Craft Cocktails</a></li>
+                                    <li><a href="#">Beer</a></li>
+                                    <!--<li class="divider"></li>
+                                    <li><a href="gallery.html">Menu Photo Gallery</a></li>
+                                    <li><a href="logos.html">Logo Gallery</a></li>
+                                    <li><a href="logos2.html">Logo Gallery 2</a></li>-->
+                                </ul>
+                            </li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#about">Directions</a></li>
+                            <li><a href="#about">Press</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a>
+                            <li><a href="#about">Jobs</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <!--<form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>-->
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      MAIN CALL TO ACTION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit2"> <!-- NOTE: have not applied media queries for hero-unit h1 elements in bootstrap_dark.css .. appears to not be needed yet -->
+                <center><span class="logo_bigger"><img src="img/cursif_logo_cropped.png" style="width:600px !important; margin-bottom:30px;opacity:0.7;"></span>
+                <p class="fauna_one">814 South 2nd Street - Milwaukee
+                <br /><span class="copperplate-gothic-light">Between National & Walker</span></p>
+
+                <p><a href="tel://14146726000" class="fauna_one_contact" style="display:block;margin: 5px 0px 0px 0px !important;"><span style="font-size:30px;">&#9742;&nbsp;&nbsp;</span>414 672 6000</a></p>
+                <p><a href="mailto:info@apbarandkitchen.com" class="fauna_one_contact">Email Us</a></p>
+
+	        <!--<div class="follow_us">
+		<a href="http://www.facebook.com/apbarandkitchen" class="zocial facebook"></a>
+	        </div>-->
+
+                <p class="fauna_one_hours">
+                Tuesday - Sunday
+                <br /><span class="fauna_one_hours">5:00 pm - Midnight</span></p>
+
+                <p class="fauna_one_submenu follow_uszzz">
+                <a href="#" class="zocial_lil">food</a>&nbsp;&nbsp; <a href="#" class="zocial_lil">wine</a>&nbsp;&nbsp; <a href="#" class="zocial_lil">cocktails</a>&nbsp;&nbsp; <a href="#" class="zocial_lil">beer</a>&nbsp;&nbsp; <a href="#" class="zocial_lil">about</a>&nbsp;&nbsp; <a href="#" class="zocial_lil">press</a></p>
+
+                </center>
+
+                <!--<h1>ap bar & kitchen</h1>-->
+                <!--<p class="subtitle_bg">Opening in August 2013</p>
+                <p><a class="btn btn-primary btn-large">Contact Us &raquo;</a></p>-->
+            </div>
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="span4">
+                    <h2>Food</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <!--<p><a href="#">View details &raquo;</a></p>--><br />
+                </div>
+                <div class="span4">
+                    <h2>Drink</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <!--<p><a href="#">View details &raquo;</a></p>--><br />
+               </div>
+                <div class="span4">
+                    <h2>Directions, Contact Us</h2>
+                    <p>We are AP Bar & Kitchen, located at 814 South 2nd Street, Walker's Point, Milwaukee, WI 53204.
+                    <p><a href="http://goo.gl/maps/RnR4v" style="font-weight:bold;color:#a2dd44">GOOGLE MAP DIRECTIONS</a></p>
+                    <p><span class="bigger">T: <a href="tel://14146726000">+1 (414) 672-6000</a></span></p>
+                    <p><span class="bigger">E: <a mailto:"info@apbarandkitchen.com">info@apbarandkitchen.com</a></span></p>
+
+                    <!--<p><a href="#">View details &raquo;</a></p>--><br /><br />
+                </div>
+            </div>
+
+            <!-- Original footer disabled -->
+            <!--<footer>
+                <p>&copy; Company 2012</p>
+            </footer>-->
+
+        </div> <!-- /container -->
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      FOOTER GEARED TO SOCIAL ENGAGEMENT      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <!-- STICKY FOOTER SHELL (ADDED) -->
+        <div id="outer">
+
+        <!-- FOOTER 1 (ADDED) -->
+	<div id="footer">
+	<h1 style="font-weight: 200 !important;">get in touch</h1>
+	<h3 class="center follow">
+	We're social and we'd love to hear from you! Feel free to talk about us on Yelp, follow us on Twitter or Pinterest, be our fan on Facebook or just say hello.</h3>
+	
+        <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us">
+		<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/" class="zocial yelp"></a>
+		<a href="http://twitter.com/apbarandkitchen" class="zocial twitter"></a>
+		<a href="http://pinterest.com/" class="zocial pinterest"></a>
+		<a href="http://www.facebook.com/apbarandkitchen" class="zocial facebook"></a>
+		<a href="http://www.youtube.com/" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/" class="zocial linkedin"></a>
+		<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>
+	  </div>
+	</div>
+	
+        <!-- FOOTER 2 (ADDED) -->
+        <div id="footer2">
+            <div class="container">
+	        <div class="row">
+		    <div class="span12">
+                        <div class="copyright">
+			    AP Bar & Kitchen <br />814 South 2nd Street<br />Walker's Point, Milwaukee, WI 53204<br /><a href="tel://14146726000">(414) 672-6000</a> | <a href="mailto:info@apbarandkitchen.com">Email</a> <br />
+			    &copy;
+			        <script type="text/javascript">
+				    //<![CDATA[
+				        var d = new Date()
+					document.write(d.getFullYear())
+					//]]>
+					</script>
+			    - All Rights Reserved<br />
+                            Design by <a href="http://lyraedesign.com">Lyrae Design</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+        <div class="push"></div>
+
+        <!-- END outer, STICKY FOOTER SHELL -->
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      SCRIPTS      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- http: excluded in original -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!--<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>--->
+
+    </body>
+</html>

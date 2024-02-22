@@ -1,0 +1,9 @@
+
+/* FOR TITLE AND CONTENT BACKGROUND AND BORDERS ONLY */
+.dev1 {
+   padding: 4rem;
+   background-color: rgba(244, 236, 170, 1); /* whitish .. former was orangy - rgba(247, 216, 103, 1) */
+   border: 18px solid rgba(226, 196, 88, 1);
+   /* opacity:0.9; */
+  z-index:2000 !important;
+}

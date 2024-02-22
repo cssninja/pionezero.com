@@ -1,0 +1,1218 @@
+body {
+  padding:0px;
+  margin:0;
+  background: rgba(255, 255, 255, 0) !important; /* for footer toggle */
+  font-family: 'lato-bold';
+  font-size: 20px !important; /* can now use em's for relative font size */
+  overflow-x: hidden !important; /* FOR STICKY FOOTER .. overflow:hidden prevents vertical scrolling */
+}
+/* body a {
+  color:#FFFDD8;
+  text-decoration: none;
+  font-family: 'jockey_oneregular';
+  font-weight:lighter !important;
+} */
+/* body a:hover {
+  color:#FFFDD8;
+  text-decoration: none;
+  font-family: 'jockey_oneregular';
+  font-weight:lighter !important;
+} */
+body h1 a {
+  color:#FFFDD8;
+  text-decoration: none;
+  font-family: 'jockey_oneregular';
+  font-weight:lighter !important;
+}
+body h1 a:hover {
+  color:#FFFDD8;
+  text-decoration: none;
+  font-family: 'jockey_oneregular';
+  font-weight:lighter !important;
+}
+/* FOR STICKY FOOTER */
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden !important;
+}
+
+
+
+
+.sec_container {
+  width:100%;
+  height:100%;
+  margin:0 auto !important;
+}
+
+/* from ps: reds - bf513c, ba4e39, b44c38, ad4733, a44331, 994333 .. light - fffce1, dark - 5b5452 */
+/* from pt: reds - be382b, ba3629, b4342a, ac2e24, 9f2d24, 912f24 .. light - fefed9, dark - 4b4142 */
+/* -------- COMBINED -------- */
+.section1 {
+  width:100%;
+  height:837px !important;
+  background:#be382b;
+  margin:0 auto !important;
+}
+.section1_gall {
+  width:100%;
+  height:100% !important;
+  background:#be382b;
+  margin:0 auto !important;
+}
+.section1b {
+  width:100%;
+  height:100% !important; /* was 837px */
+  background:#c13e33;  /* for MOBILE PORT, was #be382b */
+  margin:0 auto !important;
+}
+.combined {
+  max-width:100% !important;
+  position:relative !important;
+  margin:40px 0px 0px 0px !important;
+  text-align:center !important;
+}
+.combined img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+@media (max-width: 767px) {
+.combined {
+  max-width:100% !important;
+  position:relative !important;
+  margin:120px 0px 0px 0px !important;
+  text-align:center !important;
+ }
+.combined img {
+  max-width:100% !important;
+  padding:20px !important;
+ }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+.combined {
+  max-width:100% !important;
+  position:relative !important;
+  margin:-50px 0px 0px 0px !important;
+  text-align:center !important;
+  z-index:1000 !important;
+ }
+.combined img {
+  max-width:100% !important;
+  padding:20px !important;
+ }
+}
+
+.combined_u {
+  max-width:100% !important;
+  position:relative !important;
+  margin:40px 0px 0px 0px !important;
+  text-align:center !important;
+}
+.combined_u img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+@media (max-width: 767px) {
+.combined_u {
+  max-width:100% !important;
+  position:relative !important;
+  margin:-110px 0px 0px 0px !important;
+  text-align:center !important;
+ }
+.combined_u img {
+  max-width:100% !important;
+  padding:20px !important;
+ }
+}
+
+.combined_mob {
+  max-width:100% !important;
+  position:relative !important;
+  margin:-20px 0px 100px 0px !important; /* was margin:-100px 50px 100px 50px .. changed to give app effect/no margin */
+  text-align:center !important;
+}
+/* THREE RESIZES -------------- */
+@media screen and (min-width: 989px) and (max-width: 1200px) {
+.section1 {
+  width:100%;
+  height:695px !important;
+  background:#be382b;
+  margin:0 auto !important;
+ }
+}
+@media screen and (min-width: 768px) and (max-width: 988px) {
+.section1 {
+  width:100%;
+  height:675px !important;
+  background:#be382b;
+  margin:0 auto !important;
+ }
+}
+@media screen and (max-width: 767px) {
+.section1 {
+  width:100%;
+  height:897px !important;
+  background:#be382b;
+  margin:0 auto !important;
+ }
+}
+/* -------------- */
+/* -------- DRONEVISION -------- */
+.section2 {
+  width:100%;
+  height:100% !important; /* make 100% to make accordian push panel size larger .. normally 536px..top rivets can be absolutely positioned, but bottom can be pushed down, positioned relatively .. also consider toggling 'hide' off and on with jquery */
+  background:#ba3629;
+  margin:0 auto !important;
+}
+.iconmrgn {
+  max-width:100% !important;
+  position:relative !important;
+  margin:40px 0px 0px 0px !important;
+  text-align:right !important;
+}
+.iconmrgn2 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:110px 0px 0px 0px !important;
+  text-align:right !important;
+}
+.iconmrgn3 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:-150px -50px 0px 0px !important;
+  text-align:right !important;
+}
+.iconmrgn4 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:150px 0px 0px 100px !important;
+  text-align:right !important;
+}
+.iconmrgn5 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:0px -50px 0px 0px !important;
+  text-align:right !important;
+}
+@media (max-width: 768px) {
+.iconmrgn3 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:0px -50px 0px 0px !important;
+  text-align:right !important;
+ }
+}
+@media (max-width: 768px) {
+.iconmrgn5 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:250px 0px 0px 0px !important;
+  text-align:right !important;
+ }
+}
+.iconmrgn img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+.iconmrgn2 img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+.iconmrgn3 img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+.iconmrgn4 img {
+  max-width:100% !important;
+  padding:20px !important;
+}
+.hdr_text {
+  max-width:100% !important;
+  position:relative !important;
+  /* margin:120px 0px 0px 0px !important; DO UPPER AND BOTTOM MARGIN WITH SEPARATE CLASS IN SECOND COLUMN col-sm-6, DOESN'T WORK HERE */
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:3em;
+}
+.hdr_text2 {
+  max-width:100% !important;
+  position:relative !important;
+  /* margin:120px 0px 0px 0px !important; DO UPPER AND BOTTOM MARGIN WITH SEPARATE CLASS IN SECOND COLUMN col-sm-6, DOESN'T WORK HERE */
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:2.5em;
+}
+.hdr_text3 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:0px 0px 0px 0px !important; /* was margin:0px 0px 0px 20px !important; .. changed to give app effect/no margin */
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:2.1em;
+}
+.hdr_text4 {
+  max-width:100% !important;
+  position:relative !important;
+  margin:-60px 0px 15px 0px !important; /* was margin:0px 0px 0px 20px !important; .. changed to give app effect/no margin */
+  text-align:center !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.7em;
+}
+.t-b-margins {
+  margin:120px 0px 0px 0px !important;
+}
+.unique-margins {
+  margin:0px 0px 0px -50px !important;
+}
+@media (max-width: 768px) {
+.unique-margins {
+  margin:0px 0px 0px 50px !important;
+ }
+}
+/* WITHOUT MEDIA QUERY THIS KEEPS TOP MARGIN CONSISTENT DOWN FROM LESS THAN 990 PX IN SMALL LAPTOP TO 768 PX (MEDIA QUERY NEEDED HERE) */
+/* .tabletsqz {
+  width:50% !important;
+  margin-top:120px !important;
+} */
+/* @media screen (max-width: 980px) {
+.tabletsqz {
+  width:50% !important;
+  margin-top:120px !important;
+ }
+} */
+.cont_text {
+  max-width:100% !important; /* max-width works, width does not .. width also messes up left bottom rivet */
+  position:relative !important;
+  margin:0px 60px 0px 60px !important;
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+}
+@media (max-width: 480px) {
+.cont_text {
+  max-width:100% !important; /* max-width works, width does not .. width also messes up left bottom rivet */
+  position:relative !important;
+  margin:0px 0px 0px 0px !important;
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+ }
+}
+.certified {
+  position:relative !important;
+  margin-bottom:400px !important;
+}
+@media (max-width: 768px) {
+.certified {
+  position:relative !important;
+  margin-bottom:-80px !important;
+ }
+}
+.colltext2 {
+  max-width:80% !important;
+  margin:0px 0px 0px 40px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#BA3629;
+  border:none !important;
+}
+@media (max-width: 480px) {
+.colltext2 {
+  max-width:100% !important;
+  margin:0px 0px 0px 0px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#BA3629;
+  border:none !important;
+ }
+}
+.colltext3 {
+  max-width:80% !important;
+  margin:0px 0px 0px 40px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#B4342A;
+  border:none !important;
+}
+@media (max-width: 480px) {
+.colltext3 {
+  max-width:100% !important;
+  margin:0px 0px 0px 0px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#B4342A;
+  border:none !important;
+ }
+}
+.colltext4 {
+  max-width:80% !important;
+  margin:0px 0px 0px 40px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#AC2E24;
+  border:none !important;
+}
+@media (max-width: 480px) {
+.colltext4 {
+  max-width:100% !important;
+  margin:0px 0px 0px 0px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#AC2E24;
+  border:none !important;
+ }
+}
+.colltext5 {
+  max-width:80% !important;
+  margin:0px 0px 0px 40px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#9F2D24;
+  border:none !important;
+}
+@media (max-width: 480px) {
+.colltext5 {
+  max-width:100% !important;
+  margin:0px 0px 0px 0px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#9F2D24;
+  border:none !important;
+ }
+}
+.colltext6 {
+  max-width:80% !important;
+  margin:0px 0px 0px 40px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#912F24;
+  border:none !important;
+}
+@media (max-width: 480px) {
+.colltext6 {
+  max-width:100% !important;
+  margin:0px 0px 0px 0px !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.6em;
+  line-height:34px;
+  font-weight:lighter !important;
+  background:#912F24;
+  border:none !important;
+ }
+}
+.txtbg {
+  padding:2px 6px 2px 6px !important;
+  background-color:#C74D3B !important;
+}
+.cont_text a {
+  color:#FFFDD8;
+  text-decoration:none;
+  font-family: 'jockey_oneregular';
+  font-size:1em; /*1 if part of paragraph, 1.6 if separate */
+  line-height:32px;
+  font-weight:lighter !important;
+  cursor: pointer; /* http://stackoverflow.com/questions/16944646/html-hand-cursor-not-showing-in-anchor-tag-when-hovered */
+}
+.cont_text2 hover {
+  color:#FFFDD8;
+  text-decoration:none;
+  font-family: 'jockey_oneregular';
+  font-size:1em; /*1 if part of paragraph, 1.6 if separate */
+  line-height:32px;
+  font-weight:lighter !important;
+  cursor: pointer;
+}
+/* -------- HRAPID -------- */
+.section3 {
+  width:100%;
+  height:100% !important; /* was 536px */
+  background:#b4342a;
+  margin:0 auto !important;
+}
+/* -------- HRESPONSIBLE -------- */
+.section4 {
+  width:100%;
+  height:100% !important; /* was 536px */
+  background:#ac2e24;
+  margin:0 auto !important;
+}
+/* -------- HREPLACE -------- */
+.section5 {
+  width:100%;
+  height:100% !important; /* was 536px */
+  background:#9f2d24;
+  margin:0 auto !important;
+}
+/* -------- HREVOLUTION -------- */
+.section6 {
+  width:100%;
+  height:100% !important; /* was 536px */
+  background:#912f24;
+  margin:0 auto !important;
+}
+
+/* -------- WHY UNIQUE -------- */
+.4reasons {
+  position:relative !important;
+  right:130px !important;
+  text-align:right !important;
+  margin:40px 0px 0px 0px !important;
+  z-index:1000 !important;
+}
+@media (max-width: 480px) {
+.uniqueimg img {
+  width:90% !important;
+  margin:-30px 0px 40px 0px !important;
+ }
+}
+
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../fonts/lato-bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-bold.svg#svglato-bold') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'jockey_oneregular';
+    src: url('../fonts/jockeyone-regular-webfont.eot');
+    src: url('../fonts/jockeyone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/jockeyone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/jockeyone-regular-webfont.woff') format('woff'),
+         url('../fonts/jockeyone-regular-webfont.ttf') format('truetype'),
+         url('../fonts/jockeyone-regular-webfont.svg#jockey_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.lato_menu {
+  font-family:lato-bold;
+  /* font-weight:200;*/
+  font-size:15px !important;
+  color:#49637A;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  text-align:left !important;
+  line-height: 1 !important;
+}
+.menubg {
+  background: #fefed9;
+  border-radius:6px;
+  color:#fefed9;
+}
+.menubg a {
+  color:#be382b !important;
+  text-decoration: none !important;
+  padding: 7px !important;
+}
+.menubg a:hover {
+  color:#be382b !important;
+  text-decoration: none !important;
+  border-radius:10px !important;
+}
+.homemg {
+ margin-top:8px !important;
+}
+.homemg2 {
+ margin-top:0px !important;
+}
+/* to fix 1 pixel thing above menu .. can also be used to push menu down for UI id position:relative is used .. have to realign when .fix2 and .logo used */
+.fix {
+  position:absolute !important;
+  width:100% !important;
+  height:1px !important;
+  background-color: #be382b !important; /* be382b, fefed9 */
+  z-index:20 !important;
+  margin:151px 0px 0px 0px !important; /* without fix2: 51px 0px 0px 0px .. with fix2: 101px 0px 0px 0px .. with fix2 & logo: 151px 0px 0px 0px */
+}
+/* pushed menu down */
+@media (min-width: 767px) {
+.fix2 {
+  position:relative !important;
+  width:100% !important;
+  height:0px !important;
+  background-color: #be382b !important; /* be382b, fefed9 */
+  /* z-index:2000 !important; */
+  margin:60px 0px 0px 0px !important;
+ }
+}
+/* weird opaque lines above and below tablet and mobile form */
+@media (max-width: 767px) {
+.fix3 {
+  position:absolute !important;
+  width:60% !important;
+  height:1px !important;
+  background-color: #be382b !important; /* be382b, fefed9 */
+  z-index:2000 !important;
+  margin:16px 0px 0px 0px !important;
+  text-align:left;
+  left:0 !important;
+ }
+}
+@media (max-width: 767px) {
+.fix4 {
+  position:absolute !important;
+  width:60% !important;
+  height:1px !important;
+  background-color: #be382b !important; /* be382b, fefed9 */
+  z-index:2000 !important;
+  margin:147px 0px 0px 0px !important;
+  text-align:left;
+  left:0 !important;
+ }
+}
+/* opaque line reappeared above home in menu .. best place in html is about the ul .. check to see if fix1 and fix5 aren't doing the same thing */
+@media (max-width: 767px) {
+.fix5 {
+  position:absolute !important;
+  width:100% !important;
+  height:1px !important;
+  background-color: #be382b !important; /* be382b, fefed9 */
+  z-index:2000 !important;
+  margin:0px 0px 0px 0px !important;
+  text-align:left;
+  left:0 !important;
+ }
+}
+/* ------------------------------------- LOGO */
+@media (min-width: 768px) {
+.hrlogo {
+  position:relative !important;
+  display:block !important;
+  width:100% !important;
+  padding:0px 0px 0px 50px !important; /* margins affect % size, padding doesn't */
+  top:-10px !important;
+  z-index:40 !important;
+ }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+.hrlogo {
+  position:relative !important;
+  display:block !important;
+  width:100% !important;
+  padding:0px 0px 0px 60px !important; /* margins affect % size, padding doesn't */
+  top:0px !important;
+  z-index:40 !important;
+ }
+}
+@media (max-width: 480px) {
+.hrlogo {
+  position:relative !important;
+  display:block !important;
+  width:100% !important;
+  padding:0px 0px 0px 60px !important; /* margins affect % size, padding doesn't */
+  top:0px !important;
+  z-index:40 !important;
+ }
+.hrlogo img {
+  width:90% !important;
+ }
+}
+@media (max-width: 480px) {
+.hrlogo_mob {
+  position:relative !important;
+  display:block !important;
+  width:100% !important;
+  padding:10px 0px 0px 0px !important; /* margins affect % size, padding doesn't .. was padding:0px 0px 0px 60px !important;, all 0 wen upper left rivets removed for mobile */
+  top:0px !important;
+  z-index:40 !important;
+ }
+.hrlogo img {
+  width:100% !important;
+ }
+}
+/* ------------------------------------- */
+@media (max-width: 767px) {
+.hidethis {
+  display:none !important;
+ }
+}
+@media (max-width: 480px) {
+.hidethis2 {
+  display:none !important;
+ }
+}
+@media (min-width: 768px) {
+.hidethis3 {
+  display:none !important;
+ }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+.hidethis4 {
+  display:none !important;
+ }
+}
+@media (max-width: 768px) {
+.hidethis5 {
+  display:none !important;
+ }
+}
+@media (min-width: 990px) {
+.hidethis6 {
+  display:none !important;
+ }
+}
+@media (min-width: 481px) {
+.hidethis7 {
+  display:none !important;
+ }
+}
+
+/* LOGIN GEAR & RIVETS */
+/* 1 COMBINED ___________ */
+.clogin {
+  position:absolute;
+  margin:46px 122px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  color:#FEFED9;
+  background:#BE382B;
+  z-index:1000 !important;
+  font-size: 0.73em !important;
+}
+.cog {
+  position:absolute;
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivL_1 {
+  position:absolute;
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_1 {
+  position:absolute;
+  margin:924px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_1 {
+  position:absolute;
+  margin:924px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+
+
+
+
+
+.rivLB_1b {
+  position:relative;
+  margin:0px 0px 22px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_1b {
+  position:relative;
+  margin:0px 22px -62px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+
+
+
+
+
+
+/* 2 DRONEVISION ___________ */
+.rivL_2 {
+  position:absolute; /* ABSOLUTE WITHIN THE PANEL */
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_2 {
+  position:relative; /* was absolute at 452px .. RELATIVE SO AS TO BE PUSHED DOWN BY CONTENT */
+  margin:0px 0px 22px 22px !important; /* dronevision_text2 positioning determines rivLB_2 positioning */
+  text-align:left !important;
+  left:0 !important;
+  z-index:1 !important;
+}
+.rivR_2 {
+  position:absolute; /* ABSOLUTE WITHIN THE PANEL */
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_2 {
+  position:relative; /* was absolute at 452px .. RELATIVE SO AS TO BE PUSHED DOWN BY CONTENT */
+  margin:0px 22px -62px 0px !important; /* margin:0px 22px 0px 0px covers link with z-index .. margin:452px 22px 0px 0px moves z-index under link (doesn't push rivets down .. use botton:0 instead, or overriding z-index of link (only 4000 works) .. FINAL is margin:0px 22px -62px 0px, where for some reason -62 is final bottom positioning */
+  text-align:right !important;
+  right:0 !important;
+  z-index:1 !important;
+}
+/* 3 HRAPID ___________ */
+.rivL_3 {
+  position:absolute;
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_3 {
+  position:relative;
+  margin:0px 0px 22px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1 !important;
+}
+.rivR_3 {
+  position:absolute;
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_3 {
+  position:relative;
+  margin:0px 22px -62px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1 !important;
+}
+/* 4 HRESPONSIBLE ___________ */
+.rivL_4 {
+  position:absolute;
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_4 {
+  position:relative;
+  margin:0px 0px 22px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1 !important;
+}
+.rivR_4 {
+  position:absolute;
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_4 {
+  position:relative;
+  margin:0px 22px -62px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1 !important;
+}
+/* 5 HREPLACE ___________ */
+.rivL_5 {
+  position:absolute;
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_5 {
+  position:relative;
+  margin:0px 0px 22px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1 !important;
+}
+.rivR_5 {
+  position:absolute;
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_5 {
+  position:relative;
+  margin:0px 22px -62px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1 !important;
+}
+/* 6 HREVOLUTION ___________ */
+.rivL_6 {
+  position:absolute;
+  margin:22px 0px 0px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1000 !important;
+}
+.rivLB_6 {
+  position:relative;
+  margin:0px 0px 22px 22px !important;
+  text-align:left !important;
+  left:0 !important;
+  z-index:1 !important;
+}
+.rivR_6 {
+  position:absolute;
+  margin:22px 22px 0px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1000 !important;
+}
+.rivRB_6 {
+  position:relative;
+  margin:0px 22px -62px 0px !important;
+  text-align:right !important;
+  right:0 !important;
+  z-index:1 !important;
+}
+
+
+
+
+
+
+
+
+/* spacing between menu items */
+.menusp {
+  margin-left:18px !important;
+}
+
+
+
+
+
+
+
+
+.navbar-default {
+  background-color: #c13e33;  /* for MOBILE PORT, was #be382b */
+  border-color: #c13e33;
+  margin-bottom:0px !important; /* added to get rid of white margin implement UI menu */
+}
+.navbar-default .navbar-brand {
+  color: #fefed9;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #fefed9;
+}
+.navbar-default .navbar-text {
+  color: #fefed9;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fefed9;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fefed9;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fefed9;
+  background-color: #4b4142;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #fefed9;
+  background-color: #4b4142;
+}
+.navbar-default .navbar-toggle {
+  border-color: #be382b;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #4b4142;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fefed9;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #be382b; /* location of annoying 1px line, but still transparent */
+}
+.navbar-default .navbar-link {
+  color: #fefed9;
+}
+.navbar-default .navbar-link:hover {
+  color: #fefed9;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fefed9;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fefed9;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fefed9;
+    background-color: #4b4142;
+  }
+}
+
+
+
+/* left spacing from logo for menu */
+@media (min-width: 767px) {
+.navbar-right {
+    position: relative;
+    width: 60%;
+    left: -80px;
+    top:-40px !important;
+ }
+}
+
+/* BACKUP COLLAPSE FOR SHRINKING SMALLER LAPTOP BROWSERS .. navbar-left included in here .. breaking points: tablet to 1200px */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.backupc {
+    width:40% !important;
+    position:relative !important;
+    float: left !important;
+    margin:-50px 0px 0px 320px !important;
+ }
+}
+@media (max-width: 767px) {
+.pushmup {
+    margin-top:-65px !important;
+ }
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #BE382B !important;
+  border-color: #d43f3a;
+}
+
+
+/* STICKY FOOTER */
+-------------------------------------------------- */
+/* is at top of file
+html {
+  position: relative;
+  min-height: 100%;
+} */
+
+/* Margin bottom by footer height .. is at top of file
+body {
+  margin-bottom: 60px;
+} */
+
+.footer_top {
+  position: absolute;
+  bottom: 0 !important;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  max-height:300px !important;
+  background-color: #4A4140 !important;
+}
+@media (min-width: 768px) {
+.ftrspacings {
+  /* min-height:300px !important; */
+  padding:70px 0px 0px 0px !important;
+  text-align:center;
+ }
+}
+@media (max-width: 767px) {
+.ftrspacings {
+  /* min-height:300px !important; */
+  padding:0px 0px 0px 0px !important;
+  text-align:center;
+ }
+}
+
+.footerfont {
+  color:#FFFDD8;
+  font-size: 0.9em !important;
+  text-align:left !important;
+  /*font-weight: bold;*/
+  line-height:25px !important;
+  margin:0px 30px 0px 30px !important;
+}
+.stickfooter a {
+  color:#FFFDD8;
+  text-decoration: none;
+}
+.stickfooter a:hover {
+  color:#BFBFBF;
+  text-decoration: none;
+}
+
+
+.mapsil {
+  padding:40px 0px 40px 0px !important;
+  text-align:center;
+}
+/* LAPTOP - ONLY FOR IMAGE wo_cell2.png */
+@media (min-width: 768px) {
+.footerbd {
+  padding:20px 20px 20px 20px !important;
+  border-radius:20px;
+  background: rgba(255, 255, 255, 0.1); /* background-color: rgba(0, 0, 0, 0.1); http://www.css3maker.com/css-3-rgba.html */
+  margin:0px 30px 0px 30px !important;
+ }
+}
+/* TABLET - ONLY FOR IMAGE wo_cell3.png */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+.footerbd {
+  padding:20px 20px 50px 20px !important;
+  border-radius:20px;
+  background: rgba(255, 255, 255, 0.1); /* background-color: rgba(0, 0, 0, 0.1); http://www.css3maker.com/css-3-rgba.html */
+  margin:0px 30px 0px 30px !important;
+ }
+}
+/* CELL - ONLY FOR IMAGE wo_cell2.png */
+@media (max-width: 480px) {
+.footerbd {
+  padding:20px 20px 20px 20px !important;
+  border-radius:20px;
+  background: rgba(255, 255, 255, 0.1); /* background-color: rgba(0, 0, 0, 0.1); http://www.css3maker.com/css-3-rgba.html */
+  margin:0px 30px 0px 30px !important;
+ }
+}
+/* CONTROLS SIZE OF TABLET IMAGE - ONLY FOR IMAGE wo_cell2.png */
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+.blurbtab {
+  width:30% !important;
+ }
+}
+
+
+.footer-container {
+  background: rgba(255, 255, 255, 0) !important;
+}
+.footer-container a {
+  color:#FFFDD8 !important;
+  text-decoration: none;
+  opacity:0.5 !important;
+}
+.footer-container a:hover {
+  color:#FFFDD8 !important;
+  text-decoration: none;
+  opacity:1 !important;
+}
+
+
+/* zocial icons */
+.follow_us {text-align:left;width:120%;}
+.follow_us a.zocial { 
+    font-size:28px;
+    width:77px;
+    margin:0 10px 0 0;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    background:transparent;
+    opacity:0.2;
+}
+.follow_us a.zocial:hover {opacity:1.0; background:transparent; }
+
+
+
+
+/* GALLERY */
+.portfolio-item {
+    margin-bottom: 25px;
+}
+.gall_ttl {
+  max-width:100% !important;
+  position:relative !important;
+  /* margin:120px 0px 0px 0px !important; DO UPPER AND BOTTOM MARGIN WITH SEPARATE CLASS IN SECOND COLUMN col-sm-6, DOESN'T WORK HERE */
+  text-align:left !important;
+  color:#FFFDD8;
+  font-family: 'jockey_oneregular';
+  font-size:1.3em;
+}
+#gall a {
+  color:#FFFDD8 !important;
+  text-decoration: none !important;
+}
+#gall hover {
+  color:#FFFDD8 !important;
+  text-decoration: none !important;
+}
+#gall p {
+  max-width:100% !important; /* max-width works, width does not .. width also messes up left bottom rivet */
+  position:relative !important;
+  margin:0px 0px 0px 0px !important;
+  text-align:left !important;
+  color:#FFFDD8;
+  font-size:1em;
+}
+
+
+
+
+
+
+#pagen li a {
+  color:#2c2c2c !important;
+  background-color:#FFFDD8 !important;
+}
+#pagen .active > a {
+  color:#FFFDD8 !important;
+  background-color: #9B372B !important;
+  border-color: #9B372B !important;
+}
+
+
+.gallspace {
+  width:92% !important;
+  margin-top:100px;
+}
+@media (max-width: 768px) {
+.gallspace {
+  width:92% !important;
+  margin-top:150px;
+ }
+}
+@media (max-width: 480px) {
+.gallspace {
+  width:92% !important;
+  margin-top:60px;
+ }
+}
+
+
+
+
+

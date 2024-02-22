@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <!--
+        ADDED TO ORIGINAL MARKUP:
+           1) RESPONSIVE TO SMART DEVICES
+           2) FOOTER FONT (Lato)
+           3) SOCIAL FOOTER CSS (font-awesome.min.css and zocial.css)
+           4) CUSTOM EMBEDDED FONT
+           5) FOOTER 1 AND 2
+           6) STICKY FOOTER SHELL
+           7) STICKY FOOTER SOLUTION
+
+        SCRIPT LIST:
+           css________
+           font-awesome.min.css
+           zocial.css
+           bootstrap_dark.css
+           bootstrap-responsive.css
+
+           js________
+           modernizr-2.6.2-respond-1.1.0.min.js
+           http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+           jquery-1.9.1.min.js
+           bootstrap.min.js
+
+           font________
+           http://fonts.googleapis.com/css?family=Lato
+           http://fonts.googleapis.com/css?family=Lato:400
+           http://fonts.googleapis.com/css?family=Lato:700
+           http://fonts.googleapis.com/css?family=Lato:300
+           atwriter.ttf
+           santa_fe_plain.ttf
+           cooprblk.ttf
+           copperplate-gothic-light.ttf
+           FaunaOne-Regular.ttf
+        -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AP Bar & Kitchen | Walker's Point, Milwaukee</title>
+        <meta name="description" content="">
+
+        <!-- RESPONSIVE TO SMART DEVICES (ADDED) -->
+        <!-- Set the viewport width to device width for mobile -->
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <!-- from https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+        <!-- FOOTER FONT (ADDED) -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+
+        <!-- SOCIAL FOOTER CSS (ADDED) -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/zocial.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="css/bootstrap_dark.css"> <!-- CHANGED, was bootstrap.min.css -->
+
+        <!-- CUSTOM EMBEDDED FONT -->
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            @font-face { 
+	        font-family: "atwriter";
+	        src: url(font/atwriter.eot);
+	        src: local("atwriter"), url(font/atwriter.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "santa_fe_plain";
+	        src: url(font/santa_fe_plain.eot);
+	        src: local("santa_fe_plain"), url(font/santa_fe_plain.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "cooprblk";
+	        src: url(font/cooprblk.eot);
+	        src: local("cooprblk"), url(font/cooprblk.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "copperplate-gothic-light";
+	        src: url(font/copperplate-gothic-light.eot);
+	        src: local("copperplate-gothic-light"), url(font/copperplate-gothic-light.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "FaunaOne-Regular";
+	        src: url(font/FaunaOne-Regular.eot);
+	        src: local("FaunaOne-Regular"), url(font/FaunaOne-Regular.ttf) format("truetype");
+            }
+            /* solution thanks to gonçalo peres at stack overflow, http://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-handheld-device-in-jquery || this is the only way these two media queries work .. when separated into .css and .html .. otherwise if both in .css the upper one disables the one below it */
+            @media only screen and (max-width: 760px) {
+              .laptop_disappear_at_760 { display: none !important; }
+            }
+           }
+        </style>
+
+        <link rel="stylesheet" href="css/bootstrap-responsive.css"> <!-- CHANGED, was bootstrap-responsive.min.css -->
+
+        <!--<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+
+    </head>
+
+    <body>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      NAVIGATION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="tel://14146726000"><!--AP Bar & Kitchen </a>-->Tel: +1 (414) 672-6000</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="smart"><a href="#food">Food</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/food.pdf">Food</a></li>
+                                    <li class="divider"></li>
+                                    <li class="smart"><a href="wine.html">Wine</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/wine.pdf">Wine</a></li>
+                                    <li class="smart"><a href="cocktails_beer.html">Cocktails & Beer</a></li>
+                                    <li class="laptop_disappear_at_760"><a href="menu/cocktails_beer.pdf">Cocktails & Beer</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="http://onmilwaukee.com/dining/articles/apbarkitchenopens.html">Press</a></li>
+                            <li><a href="http://goo.gl/maps/RnR4v">Directions</a></li>
+                            <li><a href="mailto:info@apbarandkitchen.com">Jobs</a></li>
+                            <li><a href="mailto:info@apbarandkitchen.com">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      MAIN CALL TO ACTION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <!-- NOTE: have not applied media queries for hero-unit h1 elements in bootstrap_dark.css .. appears to not be needed yet -->
+            <div class="hero-unit2" style="margin-bottom: -17px;">
+                <center>
+
+                <span class="logo_bigger"><img src="img/cursif_logo_cropped.png" style="width:600px !important; margin-bottom:30px;opacity:0.7;" alt="all purpose, ap, milwaukee, crazy water, restaurant, food, foodie, drinks, beer, ale, cocktails, wine, oysters, duck, chicken, shrimp, catfish, beef, clams, feta, bbq, spare ribs, fried chicken, scallops, cheeseburger, hamburger, fish, steak, french fries, walker's point, late night, bar, kitchen, peggy magister, justin anthony, daniel pope"></span>
+                <p class="fauna_one">814 South 2nd Street - Milwaukee
+                <br /><span class="copperplate-gothic-light">Between National & Walker</span></p>
+
+                <p><br /><a href="tel://14146726000" class="fauna_one_contact" style="display:block;margin: 5px 0px 0px 0px !important;"><span style="font-size:30px;">&#9742;&nbsp;&nbsp;</span>414 672 6000</a></p>
+                <p><a href="mailto:info@apbarandkitchen.com" class="fauna_one_contact">Email Us</a></p>
+                <p><a href="http://goo.gl/maps/RnR4v" class="fauna_one_contact">Google Map directions</a></p>
+
+                <p class="fauna_one_hours">
+                <br />Tuesday - Sunday
+                <br /><span class="fauna_one_hours">5:00 pm - Midnight</span></p>
+                
+                <!-- ************** NEWS ************** -->
+                <p class="fauna_one_news">
+                <br />NEWS: 'Food Tasting Friday' from 6:00pm-7:00pm Oct 3 2013</p>
+
+                <!-- media query toggled menus because smart phones still can't read pdf's -->
+                <p class="fauna_one_submenu follow_uszzz laptop_disappear_at_760">
+                <br /><a href="menu/food.pdf" class="zocial_lil">food</a>&nbsp;&nbsp; <a href="menu/wine.pdf" class="zocial_lil">wine</a>&nbsp;&nbsp; <a href="menu/cocktails_beer.pdf" class="zocial_lil">cocktails & beer</a>&nbsp;&nbsp; <a href="http://www.facebook.com/apbarandkitchen" class="zocial_lil">about</a>&nbsp;&nbsp; <a href="http://onmilwaukee.com/dining/articles/apbarkitchenopens.html" class="zocial_lil">press</a>
+                </p>
+                <p class="fauna_one_submenu follow_uszzz smart">
+                <br /><a href="food.html#food" class="zocial_lil">food</a>&nbsp;&nbsp; <a href="wine.html#wine" class="zocial_lil">wine</a>&nbsp;&nbsp; <a href="cocktails_beer.html#cocktails_beer" class="zocial_lil">cocktails & beer</a>&nbsp;&nbsp; <a href="http://www.facebook.com/apbarandkitchen" class="zocial_lil">about</a>&nbsp;&nbsp; <a href="http://onmilwaukee.com/dining/articles/apbarkitchenopens.html" class="zocial_lil">press</a>
+                </p>
+                
+                    <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+                    <div class="follow_us">
+	                <a href="http://twitter.com/apbarandkitchen" class="zocial twitter"></a>
+		            <a href="http://www.facebook.com/apbarandkitchen" class="zocial facebook"></a>
+	                </div>
+
+                </center>
+
+                <!--<h1>ap bar & kitchen</h1>-->
+                <!--<p class="subtitle_bg">Opening in August 2013</p>
+                <p><a class="btn btn-primary btn-large">Contact Us &raquo;</a></p>-->
+            </div>
+
+            <!-- Example row of columns -->
+            <!-- NOTE: 1) found where row collapses weirdly briefly: in bootstrap-responsive.css, search for: @media (min-width: 1200px). 2) for only two paragraphs, go to bootstrap-responsive.css and search for: @media (min-width: 1200px) { .. under there is: .span4 {, changed from 370px to 570px .. must do for all media queries: 3) @media (min-width: 768px) and (max-width: 979px) { .. too complex at the moment though to complete -->
+            <div class="row" style="margin-top:40px !important;">
+                <!-- ` ` ` ` ` ` ` SECTION ONE ` ` ` ` ` ` ` -->
+                <div class="span4">
+                    <center style="margin-right:40px;"><img src="img/apbarkitchen.jpg" style="display:block;margin:20px 0 30px 0;width:100%;border-radius: 7px;-moz-border-radius: 7px;background: #374a55;padding:20px;"></center>
+               </div>
+
+                <!-- ` ` ` ` ` ` ` SECTION TWO ` ` ` ` ` ` ` -->
+                <div class="span4">
+                    <h2>Us In A Nutshell</h2>
+                    <p>Welcome to Chicago's Oldest Italian Restaurant!</p>
+
+                    <p>Three restaurants in one historic building, the Italian Village is home to The Village, La Cantina Chophouse and Vivere. All three have their own chef and make their own way, each catering to a different restaurant experience.</p>
+
+                    <p>Whichever experience you choose, you can't go wrong. Our 35,000-bottle wine collection fills hearts with joy and our waitstaff, many of them with us for decades, ensure your dining experience here at the Italian Village is memorable. We treat you like family!</p>
+                    <!--<p><a href="#">View details &raquo;</a></p>--><br />
+                </div>
+
+                <!-- ` ` ` ` ` ` ` SECTION THREE ` ` ` ` ` ` ` -->
+                <div class="span4">
+                    <h2>News & Events</h2>
+                    <p>&raquo; We do lots of our announcements and postings on <a href="http://www.facebook.com/apbarandkitchen">Facebook</a> so be sure to like our fan page!</p>
+                    <p>&raquo; Event 2</p>
+                    <p>&raquo; Event 3</p>
+                    <p>&raquo; Event 4</p>
+                    <!--<p><a href="#">View details &raquo;</a></p>--><br />
+                </div>
+            </div>
+
+            <!-- Original footer disabled -->
+            <!--<footer>
+                <p>&copy; Company 2012</p>
+            </footer>-->
+
+        </div>
+        <!-- /container -->
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      FOOTER GEARED TO SOCIAL ENGAGEMENT      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <!-- STICKY FOOTER SHELL (ADDED) -->
+        <div id="outer">
+
+        <!-- FOOTER 1 (ADDED) -->
+	<div id="footer">
+	<h1 style="font-weight: 200 !important;">stay in touch</h1>
+	<h3 class="center follow">
+	We're social and we'd love to hear from you! Feel free to talk about us on Yelp, follow us on Twitter, be our fan on Facebook or just say hello.</h3>
+	
+        <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us">
+		<a href="http://www.yelp.com/" class="zocial yelp"></a>
+		<a href="http://twitter.com/apbarandkitchen" class="zocial twitter"></a>
+		<a href="http://pinterest.com/" class="zocial pinterest"></a>
+		<a href="http://www.facebook.com/apbarandkitchen" class="zocial facebook"></a>
+		<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.youtube.com/" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/" class="zocial linkedin"></a>
+		<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>
+	  </div>
+
+          <div class="follow_us fauna_one_footer">
+                AP Bar & Kitchen, 814 South 2nd Street,
+                Walker's Point, Milwaukee, WI 53204<br />
+                <a href="tel://14146726000">(414) 672-6000</a> | <a href="mailto:info@apbarandkitchen.com">Email</a><br  />
+                <span style="font-size:22px;display:inline-block;vertical-align:bottom;line-height: 15px;">&#169;</span> 2013 - All Rights Reserved
+	  </div>
+
+	</div>
+
+        <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+        <div class="push"></div>
+
+        <!-- END outer, STICKY FOOTER SHELL -->
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      SCRIPTS      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- http: excluded in original -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>

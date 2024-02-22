@@ -1,0 +1,82 @@
+FINAL:
+
+    <style>
+    .container {
+        height: 100% !important;
+        width: 900px !important;
+        margin: 0px auto;
+        position: relative;
+    }
+    .float {
+        background-image: url('res/resume_mgrant.png') !important;
+        background-color: #FDFDF4 !important;
+        background-repeat: no-repeat !important;
+        height: 240% !important;
+        width: 1126px !important;
+        position: absolute !important;
+        left: -40px !important;
+    }
+    </style>
+
+  <div class="container">
+  <div class="float"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+====
+
+    .float {
+        background-image: url('res/resume_mgrant.png') !important;
+        background-color: #FDFDF4 !important;
+        background-repeat: no-repeat !important;
+        height: 240% !important;
+        width: 1126px !important;
+        margin-top: 0 !important;
+        margin-right: 200px !important;
+        margin-bottom: 0 !important;
+        margin-left: auto !important;
+    }
+
+  <div class="float"></div>
+
+====
+also works, thanks to https://codemyviews.com/blog/how-to-center-anything-with-css
+
+    <style>
+    .container {
+        height: 100% !important;
+        width: 900px !important;
+        margin: 0px auto;
+        position: relative;
+    }
+    .float {
+        background-image: url('res/resume_mgrant.png') !important;
+        background-color: #FDFDF4 !important;
+        background-repeat: no-repeat !important;
+        height: 240% !important;
+        width: 1126px !important;
+        position: absolute !important;
+    }
+    </style>
+
+  <div class="container">
+  <div class="float"></div>
+  </div>
+
+====
+contain
+
+    .float {
+        background-image: url('res/resume_mgrant.png') !important;
+        height: 240% !important;
+        background-size: contain !important;
+    }
