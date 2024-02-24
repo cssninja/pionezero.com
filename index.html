@@ -111,6 +111,168 @@
 
       (END notes)
         */
+
+    /* ============= css-only typing effect of code, up here for stacking (disabled at bottom) */
+    .typcon {
+      display: block;
+      position: relative;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      background: #353636; /* was #3a254c .. #353636 */
+      color: #dadad8;
+      animation: out 10s infinite;
+      animation-duration: 20s;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    /* pseudo element experiment for code placement as background */
+    .typcon2::after {
+      content: "dddddddddddddd";
+      display: block;
+      position: relative;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 20px;
+      background: #3a204c;
+      background-size: cover;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      color: #dcd4e2;
+      width: 100%;
+      height: 100%;
+      top: -430px;
+      left: 0px;
+      margin: 0 auto;
+      border-radius: 10px;
+      /* margin: 3px; */ /* ONLY FOR MOBILE .. need media queries */
+      z-index: 1;
+    }
+    /* for this to be in place .typcon2 has to be disabled with display: none BELOW ib div otherwise purple block shows */
+    .typcon3 {
+      position: absolute;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 20px;
+      background: #353636; /* was #3a254c .. #353636 */
+      background-size: cover;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      color: #dadad8;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    /* can do with opacity, display, anything */
+    @keyframes out {
+        0% {z-index:2;opacity:1}
+        10% {z-index:2;opacity:1}
+        20% {z-index:2;opacity:1}
+        25% {z-index:2;opacity:1}
+        30% {z-index:2;opacity:0.93}
+        33% {z-index:2;opacity:0.9}
+        34% {z-index:2;opacity:0.85}
+        35% {z-index:2;opacity:0.8}
+        40% {z-index:2;opacity:0.8}
+        42% {z-index:2;}
+        45% {z-index:2;}
+        48% {z-index:2;}
+        50% {z-index:2;opacity:0.45}
+        52% {z-index:2;}
+        55% {z-index:2;}
+        58% {z-index:2;}
+        60% {z-index:1;opacity:0}
+        70% {z-index:1;}
+        85% {z-index:1;}
+        80% {z-index:1;}
+        90% {z-index:1;}
+        100% {z-index:1;opacity:0}
+    }
+
+    /* DELAY ACHIEVED with config:
+
+      .typcon >
+        animation: out 10s infinite;
+        animation-duration: 25s;
+      keyframes >
+        0% opacity: 1
+        50% opaacity 1
+        80% opacity 0
+        100% opacity 0
+
+      now just have duplicate div with code enetered, no typing
+    */
+
+    .type {
+      color:#0000; /* this isn't a color, it's for monospace font, more here: https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3 .. background layers color the text and create the blinking caret .. thanks to: https://stackoverflow.com/questions/41828017/how-to-make-a-typewritter-text-effect-to-loop-using-css for infinite loop .. thanks to: https://stackoverflow.com/questions/13887889/css-animation-delay-in-repeating for animation delay .. thanks to: https://css-tricks.com/css-keyframe-animation-delay-iterations/ AND https://css-tricks.com/a-new-way-to-delay-keyframes-animations/ AND https://lists.w3.org/Archives/Public/www-style/2011May/0549.html for DELAY BETWEEN ITERATIONS, EXACTLY WHAT YOU WANT .. query: css animation iteration delay keyframe .. can also try to ANIMATE DISPLAY, OPACITY etc with transition, transform .. HAVE ANOTHER ANIMATION TO HIDE DIV CONTAINER */
+      background:
+      linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,
+      linear-gradient(#dadad8 0 0) 0 0;
+      background-size:calc(var(--n)*1ch) 200%;
+      -webkit-background-clip:padding-box,text;
+      background-clip:padding-box,text;
+      background-repeat:no-repeat;
+      animation: 
+        b .7s infinite steps(1),   
+        t calc(var(--n)*.01s) steps(var(--n)) forwards;
+      animation-iteration-count: infinite;
+
+      /* "You animation time is 2.5 seconds and delay is 2.5, so you change duration to 5 seconds. However, because you doubled the total duration, you'll want to halve the animations proportion." ref: https://stackoverflow.com/questions/13887889/css-animation-delay-in-repeating */
+      /* animation-duration: 5s;
+      -webkit-animation-duration: 5s;
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s; */
+      /* progressively speeds up animation */
+      /* animation-timing-function: ease-in; */
+      /* -webkit-animation-timing-function: ease-in; */
+
+        }
+
+    @keyframes t {
+      from {background-size:0 200%}
+      /* to {transform: translateY(40px); opacity: 0;} */
+    }
+
+    /* for some reason b animation is not even needed, therefore does not respond to code changes, even in codepen (for my CONTENT that is) */
+    @keyframes b {
+      50% {background-position:0 -100%,0 0}
+    }
+
+    /* background block text, but almost impossible to make it clickable with a stacking order higher than parent, ref: https://stackoverflow.com/questions/16057361/how-to-make-child-element-higher-z-index-than-parent .. maybe js */
+    .idetxt {
+      font-size:3.5em;
+      z-index:2000 !important;
+      font-family: 'Poppins', sans-serif;
+    }
+    .idetxt a {
+      color: #dadad8 !important;
+    }
+    .idetxt a:hover {
+      color: #4bb8f1 !important;
+    }
+    /* .idetxt a:visited {
+      color: #dadad8 !important;
+    } */
+    /* .idetxt a:active {
+      color: #dadad8 !important;
+    } */
+    /* technically this places the first child of .rowc, which is .typcon, lower in the z-index stacking order */
+    /* .rowc div:first-child {
+      opacity: .99; 
+    } */
+    /* GOT IT! make the keyframe DISPLAY: NONE or Z-INDEX: 1 for 10 seconds, enough to click link .. DISCUSSED IN STACKOVERFLOW: https://stackoverflow.com/questions/13278524/infinite-animation-keyframes-z-index-issue-at-the-end-of-the-cycle */
+
+    /* ============= typing effect END */
+    
     /* banner image as background */
     .rocketbg {
         background: url('assets/images/pionezero/wavysvgbg_blastclouds_med.jpg');
@@ -816,6 +978,178 @@
       line-height: 1px;
       border-top: 12px solid #343a40; /* use red for testing, svg bg color is #343a40 */
     }
+
+
+
+
+
+    /* non-bootstrap flex-based styles */
+
+/* parent container */
+.wrapc {
+  margin: 0px;
+  /* border: 3px solid #ff9933; */
+  width: 450px;
+}
+
+/* rows */
+.rowc {
+  position: relative; /* added to absolutely position .typcon3 above */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  /* border: 3px solid #ff9933; */
+}
+
+/* columns */
+.columnc {
+  display: flex;
+  flex-direction: column;
+  /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */
+  flex-basis: 100%;
+  flex: 1;
+  /* outside */
+  margin:4px;
+  /* inside */
+  padding:10px;
+  /* border: 3px solid #ff9933; */
+}
+
+/* option */
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
+/* content */
+.content {
+  height: 20px;
+  width: 100% !important;
+  text-align:center;
+  align-items: center;
+  overflow: hidden;
+  /* border: 3px solid #ff9933; */
+  /* display: none */
+}
+/* background img version of content */
+.content_bg {
+  background: url("https://via.placeholder.com/800x150?text=right") no-repeat center;
+  background-size:cover;
+  background-position: 50% 0%; 
+  height: 100px;
+  width: 100% !important;
+  text-align:center;
+  overflow: hidden;
+  /* border: 3px solid #ff9933; */
+  display: none
+}
+
+/* text styles */
+.ts {
+  color: #242424;
+  font-family: verdana;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  /* inner */
+  padding:0px;
+  /* outer */
+  margin:10px;
+}
+
+/* use this for upper img content */
+.imgr {
+  width: 100%;
+  /* to retain original img width, not scaled */
+  /* max-width: 100%; */
+  height: auto;
+}
+
+/* use this for upper non-img content */
+.this1 {
+  background-color: #ffc266;
+  width: 100%;
+  height: 200px;
+  /* border: 3px solid #ff9933; */
+  background-image: url("https://pionezero.com/port/img/code/code_codepen.jpg");
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.this2 {
+  background-color: #ffc266;
+  width: 100%;
+  height: 200px;
+  /* border: 3px solid #ff9933; */
+  background-image: url("https://pionezero.com/port/img/code/code_stackblitz.jpg");
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.this3 {
+  background-color: #ffc266;
+  width: 100%;
+  height: 200px;
+  /* border: 3px solid #ff9933; */
+  background-image: url("https://pionezero.com/port/img/code/code_github.jpg");
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* responsive collapse at 700px */
+@media screen and (max-width: 700px) {
+  .rowc {   
+    flex-direction: column;
+  }
+}
+/* dev to link, thanks to: https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+.linx {
+    position: absolute;
+    display: block;
+    min-width: 450px;
+    min-height: 300px;
+    z-index: 1000 !important;
+}
+/* text links near font awesome icons */
+.iconlk {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 5px;
+  /* font-variant-position: super; */
+}
+
+/* typing CODE via pseudo element
+https://codepen.io/raubaca/pen/rxLwPq
+
+embed text in div tag
+
+content: attr(rel);
+https://css-tricks.com/pseudo-element-roundup/
+https://css-tricks.com/a-complete-guide-to-data-attributes/
+
+https://codepen.io/fullstackninja/pen/bGzzbXg?editors=1010
+<div class="divtxt" data-text="this is optional text (data attr based written inside HTML tag)"></div>
+
+found it (but uses js) >
+https://css-tricks.com/snippets/css/typewriter-effect/
+
+found it (no js) >
+https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3
+
+*/
+
+/* lazy loading
+https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
+*/
+
+
     </style>
 
 </head>
@@ -970,6 +1304,7 @@
                             <b>Distributed Web</b>
                             <b>Bootstrap</b>
                             <b>Qubit applications</b>
+                            <b>Stackoverflow</b>
                         </span>
                     </h5>
                 </div>
@@ -1019,15 +1354,13 @@
             <!-- row begin -->
             <div class="row d-flex justify-content-around">
 
-                <div style="display:none !important">
-                    
                 <!-- // ------------- code samples -->
                 <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
                         <!-- portfolio links -->
                         <!-- <a href="https://dribbble.com/shots/23681213-Design-challenge-1"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
                         <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Code</h2>
+                        <h2 class="h1 font-weight-bold titlebg">Code repositories</h2>
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
@@ -1036,18 +1369,21 @@
                             <div class="align-self-start">
                                 <!-- blurb -->
                                 <p>
-                                    <strong>Coding samples.</strong>
+                                    <strong>Integrated dev environments (IDE) where I build and deploy code blocks or entire web sites via various front end languages (HTML, CSS, Javascipt, React).</strong>
                                      <!-- Full branding of store identity, Shopify web store. -->
                                 </p>
                                 <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
-                                <a href="https://codepen.io/fullstackninja/pens/public">
-                                    <i class="fa-solid fa-laptop" style="font-weight:bold;font-size:1.5em;"></i>
+                                <a href="https://codepen.io/fullstackninja/pens/public" style="display:flex;align-items: center;">
+                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <span class="iconlk"> &nbsp&nbspCodepen</span>
                                 </a>
-                                <a href="https://stackblitz.com/@cssninja">
-                                    <i class="fa-solid fa-laptop" style="font-weight:bold;font-size:1.5em;"></i>
+                                <a href="https://stackblitz.com/@cssninja" style="display:flex;align-items: center;">
+                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <span class="iconlk"> &nbsp&nbspStackblitz</span>
                                 </a>
-                                <a href="https://github.com/cssninja?tab=repositories">
-                                    <i class="fa-solid fa-laptop" style="font-weight:bold;font-size:1.5em;"></i>
+                                <a href="https://github.com/cssninja?tab=repositories" style="display:flex;align-items: center;">
+                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <span class="iconlk"> &nbsp&nbspGithub</span>
                                 </a>
                                 &nbsp;&nbsp;
                                 <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
@@ -1065,34 +1401,88 @@
 
                 </div>
 
-                <!-- image -->
-                <!-- forms left side grid for image below .. ipadpro12 is determining viewport in mobile, changed from 600 to 500 width, but 600 algins in desktop -->
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0">
-                    <a href="">
-                        <image width="100" height="100%" href="#">
-                    </a>
+                <div class='wrapc'>
+
+                  <div class='rowc'>
+
+                    <div class="typcon" style="background-color:#353636;border-radius:10px;margin:3px">
+                        <span class="type" style="--n:400">
+                        /* columns */<br />
+                        .columnc {<br />
+                        display: flex;<br />
+                        flex-direction: column;<br />
+                        /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */<br />
+                        flex-basis: 100%;<br />
+                        flex: 1;<br />
+                        /* outside */<br />
+                        margin:4px;<br />
+                        /* inside */<br />
+                        padding:10px;<br />
+                        /* border: 3px solid #ff9933; *<br />
+                        }
+                        </span>
+                    </div>
+                    <div class="typcon2" style="display:none"></div>
+                    <div class="typcon3" style="background-color:#353636;border-radius:10px;margin:3px;display:flex;align-items:center;justify-content:center">
+                        <!-- /* columns */<br />
+                        .columnc {<br />
+                        display: flex;<br />
+                        flex-direction: column;<br />
+                        /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */<br />
+                        flex-basis: 100%;<br />
+                        flex: 1;<br />
+                        /* outside */<br />
+                        margin:4px;<br />
+                        /* inside */<br />
+                        padding:10px;<br />
+                        /* border: 3px solid #ff9933; *<br />
+                        } -->
+                        <div class="idetxt">
+                          <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
+                          <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br />
+                          <a href="https://github.com/cssninja?tab=repositories">Github</a>
+                        </div>
+                    </div>
+                    
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                      <a class="linx" href="https://codepen.io/fullstackninja/pens/public"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this1"></div>
+                      <div class='content ts'>Codepen</div>
+                    </div>
+                    
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                      <a class="linx" href="https://stackblitz.com/@cssninja"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content_bg'></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this2"></div>
+                      <div class='content ts'>Stackblitz</div>
+                    </div>
+                    
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                      <a class="linx" href="https://github.com/cssninja?tab=repositories"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content_bg'></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this3"></div>
+                      <div class='content ts'>Github</div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class='rowc' style="display:none">
+                    
+                    <div class='columnc' style="background-color:#e68a00;">
+                      <div class='content ts'></div>
+                    </div>
+                    
+                  </div>
+                  
                 </div>
 
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port9">
-                    <a href="https://codepen.io/fullstackninja/pens/public">
-                        <image width="200" height="100%" href="#">
-                    </a>
-                </div>
-
-                <!-- forms left side grid for image below .. ipadpro12 is determining viewport in mobile, changed from 600 to 500 width, but 600 algins in desktop -->
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0">
-                    <a href="">
-                        <image width="100" height="100%" href="#">
-                    </a>
-                </div>
-
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port10">
-                    <a href="https://stackblitz.com/@cssninja">
-                        <image width="200" height="100%" href="#">
-                    </a>
-                </div>
-
-                </div>
                 <!-- / ------------- END code samples -->
 
                 <!-- // ------------- Mixxi -->

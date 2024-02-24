@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<style>
+.typcon {
+  font-family: monospace;
+  font-weight: 700;
+  font-size:15px;
+  padding:20px;
+  background:#005F6B;
+  color:#00DFFC
+}
+
+.type {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+    linear-gradient(#00DFFC 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+   b .7s infinite steps(1),   
+   t calc(var(--n)*.01s) steps(var(--n)) forwards;
+}
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="typcon">
+  <span class="type" style="--n:400">
+  /* columns */<br />
+  .columnc {<br />
+    display: flex;<br />
+    flex-direction: column;<br />
+    /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */<br />
+    flex-basis: 100%;<br />
+    flex: 1;<br />
+    /* outside */<br />
+    margin:4px;<br />
+    /* inside */<br />
+    padding:10px;<br />
+    /* border: 3px solid #ff9933; *<br />
+  }
+  </span>
+</div>
+
+</body>
+</html>
