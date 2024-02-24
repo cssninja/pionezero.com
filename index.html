@@ -543,8 +543,13 @@
 
     body {
         color: #7e8185 !important;
-        overflow-x: hidden; /* added 2/11/2023 after finding mystery span at bottom of code in dev tools that caused 16px white space, then it disappeared, hmm .. */
-    }/* img as background .. transform matrix explained here > http://www.useragentman.com/blog/2011/01/07/css3-matrix-transform-for-the-mathematically-challenged/ .. .webp amd no-webp classes refers to modernizr js .. thanks to: https://modernizr.com/download?webp-dontmin-setclasses and https://stackoverflow.com/questions/55191112/webp-images-doesnt-display-in-safari-although-added-polyfill and https://css-tricks.com/using-webp-images/#article-header-id-4 and http://www.stucox.com/blog/using-webp-with-modernizr/ *//* port 1 img as background, the loft on broadway */
+        overflow-x: hidden !important; /* added 2/11/2023 after finding mystery span at bottom of code in dev tools that caused 16px white space, then it disappeared, hmm .. */
+    }
+    /* img as background .. transform matrix explained here > http://www.useragentman.com/blog/2011/01/07/css3-matrix-transform-for-the-mathematically-challenged/ .. .webp amd no-webp classes refers to modernizr js .. thanks to: https://modernizr.com/download?webp-dontmin-setclasses and https://stackoverflow.com/questions/55191112/webp-images-doesnt-display-in-safari-although-added-polyfill and https://css-tricks.com/using-webp-images/#article-header-id-4 and http://www.stucox.com/blog/using-webp-with-modernizr/ *//* port 1 img as background, the loft on broadway */
+
+    html {
+      overflow-x: hidden !important;
+    }
 
     .webp .port1 {
         background: url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp');
@@ -1120,8 +1125,8 @@
 /* text links near font awesome icons */
 .iconlk {
   font-weight: bold;
-  font-size: 17px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin: 3px 0px 5px 0px;
   /* font-variant-position: super; */
 }
 
@@ -1369,20 +1374,20 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                             <div class="align-self-start">
                                 <!-- blurb -->
                                 <p>
-                                    <strong>Integrated dev environments (IDE) where I build and deploy code blocks or entire web sites via various front end languages (HTML, CSS, Javascipt, React).</strong>
+                                    Besides desktop code editors like <strong>Sublime Text or Atom</strong> (where I push 'local' code to <strong>Github</strong>), I also heavily use browser-based code editors <strong>(Integrated dev environments or 'IDE')</strong>. With all these tools I build and deploy code blocks or entire web sites via various front end languages <strong>(HTML, CSS, Javascipt, React)</strong>.
                                      <!-- Full branding of store identity, Shopify web store. -->
                                 </p>
                                 <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
                                 <a href="https://codepen.io/fullstackninja/pens/public" style="display:flex;align-items: center;">
-                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <i class="fa-brands fa-codepen" style="font-weight:bold;font-size:1.5em;"></i>
                                     <span class="iconlk"> &nbsp&nbspCodepen</span>
                                 </a>
                                 <a href="https://stackblitz.com/@cssninja" style="display:flex;align-items: center;">
-                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <i class="fa-solid fa-bolt" style="font-weight:bold;font-size:1.5em;"></i>
                                     <span class="iconlk"> &nbsp&nbspStackblitz</span>
                                 </a>
                                 <a href="https://github.com/cssninja?tab=repositories" style="display:flex;align-items: center;">
-                                    <i class="fa-solid fa-code" style="font-weight:bold;font-size:1.5em;"></i>
+                                    <i class="fa-brands fa-github" style="font-weight:bold;font-size:1.5em;"></i>
                                     <span class="iconlk"> &nbsp&nbspGithub</span>
                                 </a>
                                 &nbsp;&nbsp;
@@ -1405,7 +1410,7 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
 
                   <div class='rowc'>
 
-                    <div class="typcon" style="background-color:#353636;border-radius:10px;margin:3px">
+                    <div class="typcon" style="background-color:#353636;border-radius:10px;">
                         <span class="type" style="--n:400">
                         /* columns */<br />
                         .columnc {<br />
@@ -1500,7 +1505,7 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                             <div class="align-self-start">
                                 <!-- blurb -->
                                 <p>
-                                    <strong>Design challenges for San Francisco startup.</strong>
+                                    Design challenges for <strong>San Francisco startup</strong>.
                                      <!-- Full branding of store identity, Shopify web store. -->
                                 </p>
                                 <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
