@@ -228,6 +228,7 @@
         b .7s infinite steps(1),   
         t calc(var(--n)*.01s) steps(var(--n)) forwards;
       animation-iteration-count: infinite;
+      opacity: 0.75;
 
       /* "You animation time is 2.5 seconds and delay is 2.5, so you change duration to 5 seconds. However, because you doubled the total duration, you'll want to halve the animations proportion." ref: https://stackoverflow.com/questions/13887889/css-animation-delay-in-repeating */
       /* animation-duration: 5s;
@@ -1461,7 +1462,7 @@
 
                   <div class='rowc'>
 
-                    <div class="typcon" style="background-color:#353636;border-radius:0px;">
+                    <div class="typcon" style="background-color:#353636;border-radius:0px">
                         <span class="type" style="--n:800">
                         <span class="linen">1</span>&nbsp.type {<br />
                         <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
