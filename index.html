@@ -984,175 +984,223 @@
       border-top: 12px solid #343a40; /* use red for testing, svg bg color is #343a40 */
     }
 
+     /* NEW IMG FORMAT FOR RIGHT SIDE OF PORT .. non-bootstrap flex-based styles .. ONLY CHANGES FROM CODEPEN v1 to v2 > responsiveness disabled by adding:
+     1)  width in .wrapc {width:450px}
+     2) changing row to column in .rowc {flex-direction: row}
 
+     TRY MASONRY GRID also =)
+     */
 
+    /* parent container */
+    .wrapc {
+      margin: 0px;
+      /* border: 3px solid #ff9933; */
+      width: 450px;
+    }
+    .wrapc_mixxi {
+      margin: 0px;
+      /* border: 3px solid #ff9933; */
+      width: 450px;
+    }
 
+    /* rows */
+    .rowc {
+      position: relative; /* added to absolutely position .typcon3 above */
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      /* border: 3px solid #ff9933; */
+    }
+    .rowc_mixxi {
+      position: relative; /* added to absolutely position .typcon3 above */
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      /* border: 3px solid #ff9933; */
+    }
 
-    /* non-bootstrap flex-based styles */
+    /* columns */
+    .columnc {
+      display: flex;
+      flex-direction: column;
+      /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */
+      flex-basis: 100%;
+      flex: 1;
+      /* outside */
+      margin:4px;
+      /* inside */
+      padding:10px;
+      /* border: 3px solid #ff9933; */
+    }
 
-/* parent container */
-.wrapc {
-  margin: 0px;
-  /* border: 3px solid #ff9933; */
-  width: 450px;
-}
+    /* option */
+    .double-column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 2;
+    }
 
-/* rows */
-.rowc {
-  position: relative; /* added to absolutely position .typcon3 above */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  /* border: 3px solid #ff9933; */
-}
+    /* content */
+    .content {
+      height: 20px;
+      width: 100% !important;
+      text-align:center;
+      align-items: center;
+      overflow: hidden;
+      /* border: 3px solid #ff9933; */
+      /* display: none */
+    }
+    /* background img version of content */
+    .content_bg {
+      background: url("https://via.placeholder.com/800x150?text=right") no-repeat center;
+      background-size:cover;
+      background-position: 50% 0%; 
+      height: 100px;
+      width: 100% !important;
+      text-align:center;
+      overflow: hidden;
+      /* border: 3px solid #ff9933; */
+      display: none
+    }
 
-/* columns */
-.columnc {
-  display: flex;
-  flex-direction: column;
-  /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */
-  flex-basis: 100%;
-  flex: 1;
-  /* outside */
-  margin:4px;
-  /* inside */
-  padding:10px;
-  /* border: 3px solid #ff9933; */
-}
+    /* text styles */
+    .ts {
+      color: #242424;
+      font-family: verdana;
+      font-size: 1em;
+      font-weight: bold;
+      text-align: left;
+      /* inner */
+      padding:0px;
+      /* outer */
+      margin:10px;
+    }
 
-/* option */
-.double-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 2;
-}
+    /* use this for upper img content */
+    .imgr {
+      width: 100%;
+      /* to retain original img width, not scaled */
+      /* max-width: 100%; */
+      height: auto;
+    }
 
-/* content */
-.content {
-  height: 20px;
-  width: 100% !important;
-  text-align:center;
-  align-items: center;
-  overflow: hidden;
-  /* border: 3px solid #ff9933; */
-  /* display: none */
-}
-/* background img version of content */
-.content_bg {
-  background: url("https://via.placeholder.com/800x150?text=right") no-repeat center;
-  background-size:cover;
-  background-position: 50% 0%; 
-  height: 100px;
-  width: 100% !important;
-  text-align:center;
-  overflow: hidden;
-  /* border: 3px solid #ff9933; */
-  display: none
-}
+    /* codepen version of bg images (as w/ .webp .port10 etc above), ref: https://codepen.io/fullstackninja/full/zYbgrLx/ddd82182fc1e637619b45127cf5a13ad */
+    /* use this for upper non-img content */
+    .this1 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 200px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/code/code_codepen.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .this2 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 200px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/code/code_stackblitz.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .this3 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 200px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/code/code_github.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .this4 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 730px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/mixxi/mixxi_1.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .this5 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 730px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/mixxi/mixxi_bold_clean_3.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .this6 {
+      background-color: #ffc266;
+      width: 100%;
+      height: 730px;
+      /* border: 3px solid #ff9933; */
+      background-image: url("https://pionezero.com/port/img/mixxi/mixxi_2.jpg");
+      background-position: center; /* x% y% */
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
 
-/* text styles */
-.ts {
-  color: #242424;
-  font-family: verdana;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: left;
-  /* inner */
-  padding:0px;
-  /* outer */
-  margin:10px;
-}
+    /* responsive collapse at 700px */
+    @media screen and (max-width: 700px) {
+      .rowc {   
+        flex-direction: column;
+      }
+    }
+    /* dev to link, thanks to: https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+    .linx {
+        position: absolute;
+        display: block;
+        min-width: 450px;
+        min-height: 300px;
+        z-index: 1000 !important;
+    }
+    /* text links near font awesome icons */
+    .iconlk {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 3px 0px 5px 0px;
+      /* font-variant-position: super; */
+    }
 
-/* use this for upper img content */
-.imgr {
-  width: 100%;
-  /* to retain original img width, not scaled */
-  /* max-width: 100%; */
-  height: auto;
-}
+    /* typing CODE via pseudo element
+    https://codepen.io/raubaca/pen/rxLwPq
 
-/* use this for upper non-img content */
-.this1 {
-  background-color: #ffc266;
-  width: 100%;
-  height: 200px;
-  /* border: 3px solid #ff9933; */
-  background-image: url("https://pionezero.com/port/img/code/code_codepen.jpg");
-  background-position: center; /* x% y% */
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.this2 {
-  background-color: #ffc266;
-  width: 100%;
-  height: 200px;
-  /* border: 3px solid #ff9933; */
-  background-image: url("https://pionezero.com/port/img/code/code_stackblitz.jpg");
-  background-position: center; /* x% y% */
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.this3 {
-  background-color: #ffc266;
-  width: 100%;
-  height: 200px;
-  /* border: 3px solid #ff9933; */
-  background-image: url("https://pionezero.com/port/img/code/code_github.jpg");
-  background-position: center; /* x% y% */
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+    embed text in div tag
 
-/* responsive collapse at 700px */
-@media screen and (max-width: 700px) {
-  .rowc {   
-    flex-direction: column;
-  }
-}
-/* dev to link, thanks to: https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
-.linx {
-    position: absolute;
-    display: block;
-    min-width: 450px;
-    min-height: 300px;
-    z-index: 1000 !important;
-}
-/* text links near font awesome icons */
-.iconlk {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 3px 0px 5px 0px;
-  /* font-variant-position: super; */
-}
+    content: attr(rel);
+    https://css-tricks.com/pseudo-element-roundup/
+    https://css-tricks.com/a-complete-guide-to-data-attributes/
 
-/* typing CODE via pseudo element
-https://codepen.io/raubaca/pen/rxLwPq
+    https://codepen.io/fullstackninja/pen/bGzzbXg?editors=1010
+    <div class="divtxt" data-text="this is optional text (data attr based written inside HTML tag)"></div>
 
-embed text in div tag
+    found it (but uses js) >
+    https://css-tricks.com/snippets/css/typewriter-effect/
 
-content: attr(rel);
-https://css-tricks.com/pseudo-element-roundup/
-https://css-tricks.com/a-complete-guide-to-data-attributes/
+    found it (no js) >
+    https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3
 
-https://codepen.io/fullstackninja/pen/bGzzbXg?editors=1010
-<div class="divtxt" data-text="this is optional text (data attr based written inside HTML tag)"></div>
+    */
 
-found it (but uses js) >
-https://css-tricks.com/snippets/css/typewriter-effect/
-
-found it (no js) >
-https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3
-
-*/
-
-/* lazy loading
-https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
-*/
+    /* lazy loading
+    https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
+    */
 
 
     </style>
@@ -1501,14 +1549,6 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                     
                   </div>
                   
-                  <div class='rowc' style="display:none">
-                    
-                    <div class='columnc' style="background-color:#e68a00;">
-                      <div class='content ts'></div>
-                    </div>
-                    
-                  </div>
-                  
                 </div>
 
                 <!-- / ------------- END code samples -->
@@ -1523,13 +1563,12 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fa-solid fa-microchip-ai"></i>
+                                <i class="fas fa-mountain"></i>
                             </h6>
                             <div class="align-self-start">
                                 <!-- blurb -->
                                 <p>
-                                    Design challenges for <strong>San Francisco startup</strong>.
-                                     <!-- Full branding of store identity, Shopify web store. -->
+                                    Design challenges for <strong>San Francisco startup.</strong>
                                 </p>
                                 <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
                                 <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
@@ -1552,21 +1591,39 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                 </div>
 
                 <!-- image -->
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port7">
-                    <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
-                        <image width="450" height="100%" href="#">
-                    </a>
-                </div>
-                <!-- forms left side grid for image below .. ipadpro12 is determining viewport in mobile, changed from 600 to 500 width, but 600 algins in desktop -->
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0">
-                    <a href="">
-                        <image width="600" height="100%" href="#">
-                    </a>
-                </div>
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port8">
-                    <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
-                        <image width="450" height="100%" href="#">
-                    </a>
+                <div class='wrapc_mixxi'>
+
+                  <div class='rowc_mixxi'>
+                    
+                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                      <a class="linx" href="https://dribbble.com/shots/23681213-Design-challenge-1"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this4"></div>
+                      <!-- <div class='content ts'>Codepen</div> -->
+                    </div>
+
+                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                      <a class="linx" href="https://dribbble.com/shots/23681213-Design-challenge-1"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content_bg'></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this5"></div>
+                      <!-- <div class='content ts'>Stackblitz</div> -->
+                    </div>
+
+                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                      <a class="linx" href="https://dribbble.com/shots/23681213-Design-challenge-1"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content_bg'></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="this6"></div>
+                      <!-- <div class='content ts'>Github</div> -->
+                    </div>
+                    
+                  </div>
+                  
                 </div>
                 <!-- / ------------- END Mixxi -->
 
