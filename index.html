@@ -129,6 +129,9 @@
       border-radius: 10px;
       z-index: 2;
     }
+    .linen {
+      opacity:0.28 !important
+    }
     /* pseudo element experiment for code placement as background */
     .typcon2::after {
       content: "dddddddddddddd";
@@ -1460,29 +1463,27 @@
 
                     <div class="typcon" style="background-color:#353636;border-radius:0px;">
                         <span class="type" style="--n:800">
-                        .type {<br />
-                          color:#0000;<br />
-                          background:<br />
-                          linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
-                          linear-gradient(#fffef2 0 0) 0 0;<br />
-                          background-size:calc(var(--n)*1ch) 200%;<br />
-                          -webkit-background-clip:padding-box,text;<br />
-                          background-clip:padding-box,text;<br />
-                          background-repeat:no-repeat;<br />
-                          animation: <br />
-                            b .7s infinite steps(1),<br />
-                            t calc(var(--n)*.01s) steps(var(--n)) forwards;<br />
-                          animation-iteration-count: infinite;<br />
-                        }<br />
-
-                        @keyframes t {<br />
-                          from {background-size:0 200%}<br />
-                          /* to {transform: translateY(40px); opacity: 0;} */<br />
-                        }<br />
-
-                        @keyframes b {<br />
-                          50% {background-position:0 -100%,0 0}<br />
-                        }
+                        <span class="linen">1</span>&nbsp.type {<br />
+                        <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
+                        <span class="linen">3</span>&nbsp&nbsp background:<br />
+                        <span class="linen">4</span>&nbsp&nbsp linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
+                        <span class="linen">5</span>&nbsp&nbsp linear-gradient(#fffef2 0 0) 0 0;<br />
+                        <span class="linen">6</span>&nbsp&nbsp background-size:calc(var(--n)*1ch) 200%;<br />
+                        <span class="linen">7</span>&nbsp&nbsp -webkit-background-clip:padding-box,text;<br />
+                        <span class="linen">8</span>&nbsp&nbsp background-clip:padding-box,text;<br />
+                        <span class="linen">9</span>&nbsp&nbsp background-repeat:no-repeat;<br />
+                        <span class="linen">10</span>&nbsp animation: <br />
+                        <span class="linen">11</span> &nbsp&nbsp&nbsp b .7s infinite steps(1),<br />
+                        <span class="linen">12</span> &nbsp&nbsp&nbsp t calc(var(--n)*.01s) steps(var(--n)) forwards;<br />
+                        <span class="linen">13</span> animation-iteration-count: infinite;<br />
+                        <span class="linen">14</span>&nbsp}<br />
+                        <span class="linen">15</span>&nbsp@keyframes t {<br />
+                        <span class="linen">16</span>&nbsp&nbsp&nbspfrom {background-size:0 200%}<br />
+                        <span class="linen">18</span>&nbsp&nbsp&nbsp/* to {transform: translateY(40px); opacity: 0;} */<br />
+                        <span class="linen">19</span>&nbsp}<br />
+                        <span class="linen">20</span>&nbsp@keyframes b {<br />
+                        <span class="linen">21</span>&nbsp&nbsp&nbsp50% {background-position:0 -100%,0 0}<br />
+                        <span class="linen">22</span>&nbsp}
                         </span>
                     </div>
                     <!-- pseudo-element placement of text -->
