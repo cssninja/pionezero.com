@@ -1410,25 +1410,52 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
 
                   <div class='rowc'>
 
-                    <div class="typcon" style="background-color:#353636;border-radius:10px;">
-                        <span class="type" style="--n:400">
-                        /* columns */<br />
-                        .columnc {<br />
-                        display: flex;<br />
-                        flex-direction: column;<br />
-                        /* flex-basis sets the initial main size of the first flex item .. it sets the size of the content box unless otherwise set with box-sizing */<br />
-                        flex-basis: 100%;<br />
-                        flex: 1;<br />
-                        /* outside */<br />
-                        margin:4px;<br />
-                        /* inside */<br />
-                        padding:10px;<br />
-                        /* border: 3px solid #ff9933; *<br />
+                    <div class="typcon" style="background-color:#353636;border-radius:0px;">
+                        <span class="type" style="--n:800">
+                        <!-- /* ============= css-only typing effect of code, up here for stacking (disabled at bottom) */<br />
+                        .typcon {<br />
+                          display: block;<br />
+                          position: relative;<br />
+                          font-family: monospace;<br />
+                          font-weight: 700;<br />
+                          font-size: 15px;<br />
+                          padding: 20px;<br />
+                          width: 100%;<br />
+                          height: 100%;<br />
+                          background: #353636; /* was #3a254c .. #353636 */<br />
+                          color: #dadad8;<br />
+                          animation: out 10s infinite;<br />
+                          animation-duration: 20s;<br />
+                          border-radius: 10px;<br />
+                          z-index: 2;<br />
+                        }<br /><br /> -->
+                        .type {<br />
+                          color:#0000;<br />
+                          background:<br />
+                          linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
+                          linear-gradient(#dadad8 0 0) 0 0;<br />
+                          background-size:calc(var(--n)*1ch) 200%;<br />
+                          -webkit-background-clip:padding-box,text;<br />
+                          background-clip:padding-box,text;<br />
+                          background-repeat:no-repeat;<br />
+                          animation: <br />
+                            b .7s infinite steps(1),<br />
+                            t calc(var(--n)*.01s) steps(var(--n)) forwards;<br />
+                          animation-iteration-count: infinite;<br />
+                        }<br />
+
+                        @keyframes t {<br />
+                          from {background-size:0 200%}<br />
+                          /* to {transform: translateY(40px); opacity: 0;} */<br />
+                        }<br />
+
+                        @keyframes b {<br />
+                          50% {background-position:0 -100%,0 0}<br />
                         }
                         </span>
                     </div>
                     <div class="typcon2" style="display:none"></div>
-                    <div class="typcon3" style="background-color:#353636;border-radius:10px;display:flex;align-items:center;justify-content:center">
+                    <div class="typcon3" style="background-color:#353636;border-radius:0px;display:flex;align-items:center;justify-content:center">
                         <!-- /* columns */<br />
                         .columnc {<br />
                         display: flex;<br />
@@ -1449,7 +1476,7 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                         </div>
                     </div>
                     
-                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:0px;display:none">
                       <a class="linx" href="https://codepen.io/fullstackninja/pens/public"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -1458,7 +1485,7 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                       <div class='content ts'>Codepen</div>
                     </div>
                     
-                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:0px;display:none">
                       <a class="linx" href="https://stackblitz.com/@cssninja"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content_bg'></div> -->
@@ -1467,7 +1494,7 @@ https://medium.com/@iliketoplay/lazy-loading-images-in-2024-9b579e885e07
                       <div class='content ts'>Stackblitz</div>
                     </div>
                     
-                    <div class='columnc' style="background-color:#cbc4d0;border-radius:10px;display:none">
+                    <div class='columnc' style="background-color:#cbc4d0;border-radius:0px;display:none">
                       <a class="linx" href="https://github.com/cssninja?tab=repositories"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content_bg'></div> -->
