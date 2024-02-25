@@ -123,7 +123,7 @@
       width: 100%;
       height: 100%;
       background: #353636; /* was #3a254c .. #353636 */
-      color: #dadad8;
+      color: #fffef2;
       animation: out 10s infinite;
       animation-duration: 20s;
       border-radius: 10px;
@@ -142,7 +142,7 @@
       background-size: cover;
       background-position: 0% 0%;
       background-repeat: no-repeat;
-      color: #dcd4e2;
+      color: #fffef2;
       width: 100%;
       height: 100%;
       top: -430px;
@@ -163,7 +163,7 @@
       background-size: cover;
       background-position: 0% 0%;
       background-repeat: no-repeat;
-      color: #dadad8;
+      color: #fffef2;
       width: 100%;
       height: 100%;
       top: 0px;
@@ -216,7 +216,7 @@
       color:#0000; /* this isn't a color, it's for monospace font, more here: https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3 .. background layers color the text and create the blinking caret .. thanks to: https://stackoverflow.com/questions/41828017/how-to-make-a-typewritter-text-effect-to-loop-using-css for infinite loop .. thanks to: https://stackoverflow.com/questions/13887889/css-animation-delay-in-repeating for animation delay .. thanks to: https://css-tricks.com/css-keyframe-animation-delay-iterations/ AND https://css-tricks.com/a-new-way-to-delay-keyframes-animations/ AND https://lists.w3.org/Archives/Public/www-style/2011May/0549.html for DELAY BETWEEN ITERATIONS, EXACTLY WHAT YOU WANT .. query: css animation iteration delay keyframe .. can also try to ANIMATE DISPLAY, OPACITY etc with transition, transform .. HAVE ANOTHER ANIMATION TO HIDE DIV CONTAINER */
       background:
       linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,
-      linear-gradient(#dadad8 0 0) 0 0;
+      linear-gradient(#fffef2 0 0) 0 0;
       background-size:calc(var(--n)*1ch) 200%;
       -webkit-background-clip:padding-box,text;
       background-clip:padding-box,text;
@@ -254,16 +254,16 @@
       font-family: 'Poppins', sans-serif;
     }
     .idetxt a {
-      color: #dadad8 !important;
+      color: #fffef2 !important;
     }
     .idetxt a:hover {
       color: #4bb8f1 !important;
     }
     /* .idetxt a:visited {
-      color: #dadad8 !important;
+      color: #fffef2 !important;
     } */
     /* .idetxt a:active {
-      color: #dadad8 !important;
+      color: #fffef2 !important;
     } */
     /* technically this places the first child of .rowc, which is .typcon, lower in the z-index stacking order */
     /* .rowc div:first-child {
@@ -1029,7 +1029,7 @@
       flex-basis: 100%;
       flex: 1;
       /* outside */
-      margin:4px;
+      /* margin:4px; */
       /* inside */
       padding:10px;
       /* border: 3px solid #ff9933; */
@@ -1068,7 +1068,7 @@
 
     /* text styles */
     .ts {
-      color: #242424;
+      color: #fffef2;
       font-family: verdana;
       font-size: 1em;
       font-weight: bold;
@@ -1164,11 +1164,11 @@
     }
     /* dev to link, thanks to: https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
     .linx {
-        position: absolute;
-        display: block;
-        min-width: 450px;
-        min-height: 300px;
-        z-index: 1000 !important;
+      position: absolute;
+      display: block;
+      min-width: 450px;
+      min-height: 300px;
+      z-index: 1000 !important;
     }
     /* text links near font awesome icons */
     .iconlk {
@@ -1464,7 +1464,7 @@
                           color:#0000;<br />
                           background:<br />
                           linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
-                          linear-gradient(#dadad8 0 0) 0 0;<br />
+                          linear-gradient(#fffef2 0 0) 0 0;<br />
                           background-size:calc(var(--n)*1ch) 200%;<br />
                           -webkit-background-clip:padding-box,text;<br />
                           background-clip:padding-box,text;<br />
@@ -1493,7 +1493,7 @@
                           color:#0000;<br />
                           background:<br />
                           linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
-                          linear-gradient(#dadad8 0 0) 0 0;<br />
+                          linear-gradient(#fffef2 0 0) 0 0;<br />
                           background-size:calc(var(--n)*1ch) 200%;<br />
                           -webkit-background-clip:padding-box,text;<br />
                           background-clip:padding-box,text;<br />
@@ -1545,6 +1545,15 @@
                       <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="this3"></div>
                       <div class='content ts'>Github</div>
+                    </div>
+                    
+                  </div>
+
+                    <div class='rowc' style="display:non">
+    
+                    <!-- link to lines of code in github, thanks to: https://stackoverflow.com/questions/23821235/how-to-link-to-a-specific-line-number-on-github -->
+                    <div class='columnc' style="width:100%;height:100%;background-color:#292a2a;border-radius:0px">
+                      <div class='content ts' style="font-size:0.85em;height:100%;opacity:0.4;padding:10px">Code challenges for above module: 1) css-only typing effect for code, 2) background text child element w/higher stacking order than parent (done w/css animation keyframes where parent z-index is temporarily reduced to 1. <a href="https://github.com/cssninja/pionezero.com/blob/main/index.html?plain=1#L115" style="color: #fffef2 !important">[ View code ]</a></div>
                     </div>
                     
                   </div>
