@@ -271,6 +271,22 @@
     /* .idetxt a:active {
       color: #fffef2 !important;
     } */
+    .idetxt2 {
+      font-size:1.5em;
+      z-index:2000 !important;
+      font-family: 'Poppins', sans-serif;
+      line-height: 30px;
+      padding-top: 0%;
+      color: #fffef2 !important;
+    }
+    .idetxt2 a {
+      color: #fffef2 !important;
+    }
+    .idetxt2 a:hover {
+      color: #4bb8f1 !important;
+    }
+
+
     /* technically this places the first child of .rowc, which is .typcon, lower in the z-index stacking order */
     /* .rowc div:first-child {
       opacity: .99; 
@@ -1142,6 +1158,18 @@
       /* border: 3px solid #ff9933; */
       display: none
     }
+    .content_bg2 {
+      display: block;
+      background: url("port/img/code/github_desktop.jpg") no-repeat;
+      background-size: 100%;
+      background-position: 70% 100%; 
+      height: 100%;
+      width: 100% !important;
+      text-align: center;
+      overflow: hidden;
+      /* border: 3px solid #ff9933; */
+      /* display: none */
+    }
 
     /* text styles */
     .ts {
@@ -1643,10 +1671,11 @@
                           50% {background-position:0 -100%,0 0}<br />
                         } -->
 
-                        <div class="idetxt">
-                          <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
-                          <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br />
-                          <a href="https://github.com/cssninja?tab=repositories">Github</a>
+                        <div class="idetxt2 content_bg2">
+                          <!-- <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
+                          <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br /> -->
+                          <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:12em;"></i><br />
+                          Powered by Github Desktop with much love</a>
                         </div>
                     </div>
                     
@@ -1683,7 +1712,7 @@
     
                     <!-- link to lines of code in github, thanks to: https://stackoverflow.com/questions/23821235/how-to-link-to-a-specific-line-number-on-github .. (have to be signed in or public repo) https://github.com/cssninja/pionezero.com/blob/main/index.html?plain=1#L115 .. for source code link, https://css-tricks.com/make-a-view-source-button/ and https://css-tricks.com/make-a-view-source-button/ -->
                     <div class='columnc' style="width:100%;height:100%;background-color:#292a2a;border-radius:0px">
-                      <div class='content ts' style="font-size:0.85em;height:100%;opacity:0.4;padding:10px">Code challenges for above module: 1) css-only typing effect for code (thanks to: <a href="https://codepen.io/t_afif/pen/ExXyXpB" class="ts">https://codepen.io/t_afif/pen/ExXyXpB</a>), 2) background text child element w/higher stacking order than parent so that background text are clickable links (done w/css animation keyframes where parent z-index is temporarily reduced to 1). <a href="https://github.com/cssninja/view_source/blob/main/pionezero_view.html?plain=1#L115" style="color: #fffef2 !important">[ View code (line 115-278) ]</a></div>
+                      <div class='content ts' style="font-size:0.85em;height:100%;opacity:0.4;padding:0px 20px 10px 20px">Code challenges for above module: 1) css-only typing effect for code (thanks to: <a href="https://codepen.io/t_afif/pen/ExXyXpB" class="ts">https://codepen.io/t_afif/pen/ExXyXpB</a>), 2) background text child element w/higher stacking order than parent so that background text are clickable links (done w/css animation keyframes where parent z-index is temporarily reduced to 1). <a href="https://github.com/cssninja/view_source/blob/main/pionezero_view.html?plain=1#L115" style="color: #fffef2 !important">[ View code (line 115-278) ]</a></div>
                     </div>
                     
                   </div>
