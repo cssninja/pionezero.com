@@ -418,6 +418,7 @@ p {
     margin:-20px 0px 0px 0px !important;
     position:relative;
     width:100% !important;
+    background-size: cover;
 }
 @media screen and (max-width: 767px) {
 .mobtitle {
