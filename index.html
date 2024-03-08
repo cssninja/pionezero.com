@@ -582,7 +582,8 @@
         background-repeat: no-repeat;
         background-size: 160%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port1 {
         background: url('assets/images/port/links/loft_on_broadway/safari/loft_on_broadway.jpg');
@@ -604,7 +605,8 @@
         background-repeat: no-repeat;
         background-size: 180%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port2 {
         background: url('assets/images/port/links/factory_on_barclay/brand_mark/safari/LOGO.jpg');
@@ -626,7 +628,8 @@
         background-repeat: no-repeat;
         background-size: 240%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port3 {
         background: url('assets/images/port/links/cheesehead_factory/web_ss/safari/cheesehead_mobiless_1.jpg');
@@ -636,7 +639,8 @@
         background-repeat: no-repeat;
         background-size: 240%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }/* port 4 img as background, peaceful yak */
 
     /* peaceful yak -------- */
@@ -648,7 +652,8 @@
         background-repeat: no-repeat;
         background-size: 100%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port4 {
         background: url('assets/images/port/links/peacefulyak/safari/PY_MASTER.jpg');
@@ -658,7 +663,8 @@
         background-repeat: no-repeat;
         background-size: 100%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }/* port 5 img as background, jangobio */
 
     /* jangobio -------- */
@@ -670,7 +676,8 @@
         background-repeat: no-repeat;
         background-size: 140%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port5 {
         background: url('assets/images/port/links/jangobio/v2/safari/new.jpg');
@@ -692,7 +699,8 @@
         background-repeat: no-repeat;
         background-size: 170%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port6 {
         background: url('assets/images/port/links/hernandez_roofing/DRONE/safari/hr_large2.jpg');
@@ -702,7 +710,8 @@
         background-repeat: no-repeat;
         background-size: 170%;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }/* bigger font awesome icon */
 
     /* mixxi -------- */
@@ -800,7 +809,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port11 {
         background: url('port/img/weeds/graphics/tea.jpg');
@@ -810,7 +820,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
 
     /* gm jr scouting -------- */
@@ -822,7 +833,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
     .no-webp .port12 {
         background: url('port/img/gm_jr_scouting/gm_jr_scouting_web_8.jpg');
@@ -832,7 +844,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
+        border-radius: 5px;
     }
 
     /* codepen/diageo -------- */
@@ -1061,6 +1074,40 @@
         display: inline !important;
         line-height: 35px;
     }
+    /* increases font thickness way beyond 900 .. thanks to: https://stackoverflow.com/questions/6148032/how-to-make-a-font-thinner-on-web .. https://blog.logrocket.com/create-beautiful-stroked-text-css/ .. https://css-tricks.com/adding-stroke-to-web-text/ */
+    .strgtxt {
+        background: #d0c7d7 !important;
+        padding: 1px 1px 1px 1px;
+        color: #696b6e !important;
+        display: inline !important;
+        line-height: 35px;
+
+        /* color: #4f5154 !important; */
+        /* font-weight: 500 !important; */
+        /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
+        -webkit-text-stroke: 0.4px #696b6e;
+        -webkit-text-fill-color: #696b6e; 
+        /* paint-order: stroke fill; */
+        font-size: 1em;
+    }
+    /* increases font weight for descriptive text of projects .. added flex */
+    .thkfnt {
+      font-weight: 500;
+
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      text-align: left;
+      align-items: stretch;
+      align-self: center
+    }
+    /* descriptive text bootstrap grid layout tweaks .. lining up text with purple box/icon mostly */
+    .dsctx {
+      /* top: 3px; */
+      line-height: 14px;
+      padding: 0px 0px 10px 5px;
+    }
 
     @media (min-width: 540px) {
         .minhd {
@@ -1162,7 +1209,7 @@
       display: block;
       background: url("port/img/code/github_desktop.jpg") no-repeat;
       background-size: 100%;
-      background-position: 70% 100%; 
+      background-position: 70% 85%; 
       height: 100%;
       width: 100% !important;
       text-align: center;
@@ -1227,8 +1274,9 @@
 
     /* codepen version of bg images (as w/ .webp .port10 etc above), ref: https://codepen.io/fullstackninja/full/zYbgrLx/ddd82182fc1e637619b45127cf5a13ad */
     /* use this for upper non-img content */
+    /* code -------- */
     .this1 {
-      background-color: #ffc266;
+      background-color: #ffc266e
       width: 100%;
       height: 200px;
       /* border: 3px solid #ff9933; */
@@ -1260,11 +1308,13 @@
       background-size: cover;
       position: relative;
     }
+    /* mixxi -------- */
     .this4 {
       background-color: #ffc266;
       width: 100%;
       height: 400px;
-      /* border: 3px solid #ff9933; */
+      border: 0.3rem solid #d3cbd8;
+      border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/mixxi/mixxi_1.jpg");
       background-position: 0% 50%; /* x% y% */
       background-repeat: no-repeat;
@@ -1275,7 +1325,8 @@
       background-color: #ffc266;
       width: 100%;
       height: 400px;
-      /* border: 3px solid #ff9933; */
+      border: 0.3rem solid #d3cbd8;
+      border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/mixxi/mixxi_bold_clean_3.jpg");
       background-position: 0% 10%; /* x% y% */
       background-repeat: no-repeat;
@@ -1293,11 +1344,13 @@
       background-size: cover;
       position: relative;
     }
+    /* diageo -------- */
     .this7 {
       background-color: #ffc266;
       width: 100%;
       height: 400px;
-      /* border: 3px solid #ff9933; */
+      border: 0.3rem solid #d3cbd8;
+      border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/codepen/diageo_guinness_v2.jpg");
       background-position: 60% 0%; /* x% y% */
       background-repeat: no-repeat;
@@ -1308,7 +1361,8 @@
       background-color: #ffc266;
       width: 100%;
       height: 300px;
-      /* border: 3px solid #ff9933; */
+      border: 0.3rem solid #d3cbd8;
+      border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/codepen/diageo_login.jpg");
       background-position: 0% 0%; /* x% y% */
       background-repeat: no-repeat;
@@ -1614,7 +1668,7 @@
 
                 </div>
 
-                <div class='wrapc'>
+                <div class='wrapc' style="border:1rem solid #1b1b1b;border-radius:5px">
 
                   <div class='rowc'>
 
@@ -1674,7 +1728,7 @@
                         <div class="idetxt2 content_bg2">
                           <!-- <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
                           <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br /> -->
-                          <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:12em;"></i><br />
+                          <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:11em;padding:15px"></i><br />
                           Powered by Github Desktop with much love</a>
                         </div>
                     </div>
@@ -1733,12 +1787,37 @@
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
                                 <i class="fa-solid fa-whiskey-glass-ice"></i>
                             </h6>
-                            <div class="align-self-start">
+
+                            <div class="align-self-start thkfnt">
                                 <!-- blurb -->
-                                <p>
-                                  <strong class="subtitlebg">Visual design:</strong> <strong>UI development</strong> using company assets<br />
-                                   <strong class="subtitlebg">Front end coding:</strong> Codepen <strong>Bootstrap</strong> based 1) single page sales website, 2) merchant login web portal. <strong>Languages:</strong> HTML, CSS. JS.
-                                </p>
+                                  <div><strong class="subtitlebg">Client:</strong> <strong class="strgtxt">Diageo</strong> via Wild Impact Marketing Group</div>
+
+                                  <div><strong class="subtitlebg">Date:</strong> <strong class="strgtxt">March 2023</strong></div>
+
+                                  <div class="row" style="margin-left:0px !important">
+                                    <div class="col-3-md">
+                                      <strong class="subtitlebg">Tasks:</strong>
+                                    </div>
+                                    <div class="col-7-md dsctx">
+                                      1) <strong class="strgtxt">One page sales site</strong><br />
+                                      2) <strong class="strgtxt">Login portal</strong>
+                                    </div>
+                                    <div class="col-2-md"></div>
+                                   </div>
+
+                                  <div+><strong class="subtitlebg">Visual design:</strong> <strong class="strgtxt">UI development</strong> using company assets</div+>
+
+                                  <div class="row" style="margin-left:0px !important">
+                                    <div class="col-3-md">
+                                      <strong class="subtitlebg">Front end coding:</strong>
+                                    </div>
+                                    <div class="col-7-md dsctx">
+                                      1) <strong class="strgtxt">Bootstrap library</strong> in Codepen<br />
+                                      2) <strong class="strgtxt">Languages: HTML, CSS. JS</strong>
+                                    </div>
+                                    <div class="col-2-md"></div>
+                                   </div>
+
                                 <p>
                                     <a href="https://codepen.io/fullstackninja/full/MWqRVYL">
                                         <i class="fas fa-laptop bigicon"></i>
@@ -1806,7 +1885,7 @@
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fas fa-mountain"></i>
+                                <i class="fa-solid fa-microchip-ai"></i>
                             </h6>
                             <div class="align-self-start">
                                 <!-- blurb -->
