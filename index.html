@@ -1067,12 +1067,31 @@
         color: #e1d9e7 !important;
         display: inline !important;
     }
-    .subtitlebg {
+    /* backgrounds for task, client, date, process, visual design and front end coding .. can be toggled by switching the 2 */
+    .subtitlebg2 {
         background: #675077 !important;
         padding: 3px 9px 3px 9px;
         color: #e1d9e7 !important;
         display: inline !important;
         line-height: 35px;
+    }
+    @media (max-width: 540px) {
+      .subtitlebg2 {
+        line-height: 20px;
+      }
+    }
+    .subtitlebg {
+        background: #d0c7d7 !important;
+        padding: 3px 9px 3px 9px;
+        color: #675077 !important;
+        display: inline !important;
+        line-height: 35px;
+        border: 3px solid #675077
+    }
+    @media (max-width: 540px) {
+      .subtitlebg {
+        line-height: 20px;
+      }
     }
     /* increases font thickness way beyond 900 .. thanks to: https://stackoverflow.com/questions/6148032/how-to-make-a-font-thinner-on-web .. https://blog.logrocket.com/create-beautiful-stroked-text-css/ .. https://css-tricks.com/adding-stroke-to-web-text/ */
     .strgtxt {
@@ -1080,7 +1099,7 @@
         padding: 1px 1px 1px 1px;
         color: #696b6e !important;
         display: inline !important;
-        line-height: 35px;
+        line-height: 27px;
 
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
@@ -1091,22 +1110,36 @@
         /* paint-order: stroke fill; */
         font-size: 1em;
     }
-    /* increases font weight for descriptive text of projects .. added flex */
+    /* increases font weight for descriptive text of projects */
     .thkfnt {
       font-weight: 500;
-
-      display: flex;
-      justify-content: start;
-      flex-direction: column;
-      text-align: left;
-      align-items: stretch;
-      align-self: center
+    }
+    /* was 540px but extended to all tablets viewport widths excpet 1024px , added 100% so text isn't to high */
+    @media (max-width: 900px) {
+      .thkfnt {
+        font-weight: 500;
+        font-size: 0.9em;
+      }
     }
     /* descriptive text bootstrap grid layout tweaks .. lining up text with purple box/icon mostly */
     .dsctx {
-      /* top: 3px; */
-      line-height: 14px;
-      padding: 0px 0px 10px 5px;
+      /* line-height: 35px; */
+      padding: 0px 0px 10px 0px;
+      margin-top: 3px
+    }
+    @media (max-width: 540px) {
+      .dsctx {
+        line-height: 25px;
+        padding: 0px 0px 10px 0px;
+        margin-top: 3px
+      }
+    }
+    /* fixes in mobile bootstrap default element padding-left: 15px .. was 540px but extended to all tablets viewport widths excpet 1024px , added 100% so text isn't squished */
+    @media (max-width: 900px) {
+      .fix {
+        margin-left: -15px !important;
+        width: 100%;
+      }
     }
 
     @media (min-width: 540px) {
@@ -1790,33 +1823,39 @@
 
                             <div class="align-self-start thkfnt">
                                 <!-- blurb -->
-                                  <div><strong class="subtitlebg">Client:</strong> <strong class="strgtxt">Diageo</strong> via Wild Impact Marketing Group</div>
 
-                                  <div><strong class="subtitlebg">Date:</strong> <strong class="strgtxt">March 2023</strong></div>
-
-                                  <div class="row" style="margin-left:0px !important">
-                                    <div class="col-3-md">
-                                      <strong class="subtitlebg">Tasks:</strong>
-                                    </div>
-                                    <div class="col-7-md dsctx">
+                                <div class="container text-start">
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
+                                    <div class="col dsctx">
                                       1) <strong class="strgtxt">One page sales site</strong><br />
                                       2) <strong class="strgtxt">Login portal</strong>
                                     </div>
-                                    <div class="col-2-md"></div>
-                                   </div>
-
-                                  <div+><strong class="subtitlebg">Visual design:</strong> <strong class="strgtxt">UI development</strong> using company assets</div+>
-
-                                  <div class="row" style="margin-left:0px !important">
-                                    <div class="col-3-md">
-                                      <strong class="subtitlebg">Front end coding:</strong>
-                                    </div>
-                                    <div class="col-7-md dsctx">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
+                                    <div class="col dsctx"><strong>Diageo</strong> via Wild Impact Marketing Group</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
+                                    <div class="col dsctx">March 2023</div>
+                                  </div>
+                                  <!-- <div class="row">
+                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
+                                    <div class="col"></div>
+                                  </div> -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
+                                    <div class="col dsctx"><strong>UI development</strong> using company assets</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
+                                    <div class="col dsctx">
                                       1) <strong class="strgtxt">Bootstrap library</strong> in Codepen<br />
                                       2) <strong class="strgtxt">Languages: HTML, CSS. JS</strong>
                                     </div>
-                                    <div class="col-2-md"></div>
-                                   </div>
+                                  </div>
+                                </div>
 
                                 <p>
                                     <a href="https://codepen.io/fullstackninja/full/MWqRVYL">
