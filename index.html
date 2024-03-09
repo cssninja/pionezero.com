@@ -1113,6 +1113,11 @@
     /* increases font weight for descriptive text of projects */
     .thkfnt {
       font-weight: 500;
+      /* background: #dcd4e2\ !important;
+      border: 1rem solid #d3cbd8;
+      border-radius: 5px;
+      padding: 10px; */
+      margin: 0px 0px 20px 0px
     }
     /* was 540px but extended to all tablets viewport widths excpet 1024px , added 100% so text isn't to high */
     @media (max-width: 900px) {
@@ -1423,6 +1428,19 @@
       font-size: 18px;
       margin: 3px 0px 5px 0px;
       /* font-variant-position: super; */
+    }
+
+    /* bs4 button .. details accordian re-styles to get rid of green and synch with tasks, client etc text, simulating .subtitlebg2 .. thanks to: https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap */
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+        background: #675077 !important;
+        border: #675077 !important;
+        border-radius: 0px;
+        padding: 0px 10px 0px 10px;
+        color: #e1d9e7 !important;
+        display: inline !important;
+        line-height: 30px;
+        font-size: 1em;
+        font-weight: 900;
     }
 
     /* typing CODE via pseudo element
@@ -1821,10 +1839,9 @@
                                 <i class="fa-solid fa-whiskey-glass-ice"></i>
                             </h6>
 
-                            <div class="align-self-start thkfnt">
+                            <div class="align-self-start">
                                 <!-- blurb -->
-
-                                <div class="container text-start">
+                                <div class="container text-start thkfnt">
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -1856,6 +1873,7 @@
                                     </div>
                                   </div>
                                 </div>
+                                <!-- / blurb -->
 
                                 <p>
                                     <a href="https://codepen.io/fullstackninja/full/MWqRVYL">
@@ -1928,10 +1946,60 @@
                             </h6>
                             <div class="align-self-start">
                                 <!-- blurb -->
-                                <p>
-                                  <strong class="subtitlebg">Visual design:</strong> Design challenges for San Francisco startup<br />
-                                  <!-- <strong class="subtitlebg">Coding:</strong> -->
-                                </p>
+                                <div class="container text-start thkfnt">
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
+                                    <div class="col dsctx">
+                                      <strong class="strgtxt">Four design challenges</strong> for the branding of a new startup: minimal, bold and clean, elegant, fun.<br />
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
+                                    <div class="col dsctx">San Francisco startup <strong class="strgtxt">Mixxi</strong></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
+                                    <div class="col dsctx"><strong class="strgtxt">November 2021</strong></div>
+                                  </div>
+                                  <!-- <div class="row">
+                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
+                                    <div class="col"></div>
+                                  </div> -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
+                                    <div class="col dsctx"><strong class="strgtxt">Adobe Photoshop</strong> designs employing <strong class="strgtxt">flat design</strong>, <strong class="strgtxt">design thinking</strong> and <strong class="strgtxt">typeface</strong> creativity.</div>
+                                  </div>
+                                  <div class="row" style="display:none">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
+                                    <div class="col dsctx">
+                                      1) <strong class="strgtxt">Bootstrap library</strong> in Codepen<br />
+                                      2) <strong class="strgtxt">Languages: HTML, CSS. JS</strong>
+                                    </div>
+                                  </div>
+
+
+
+                                  <div class="row">
+                                    <div class="col-md-auto fix">
+                                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Details
+                                      </button>
+                                    
+                                      <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <!-- / blurb -->
+
+
+                                <!-- <strong class="subtitlebg">Coding:</strong> -->
+
                                 <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
                                 <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
                                     <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
