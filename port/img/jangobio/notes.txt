@@ -1,0 +1,583 @@
+csa@medicine.wisc.edu
++16082561901 x11664
+
+lab web site
+
+pennies, $1000-1500 ok
+
+links on left the same
+
+info updated, removed
+
+jango bio mesh with lab site
+
+https://www.jango-bio.com/
+
+https://agingresearch.wisc.edu/index.html
+
+play with branding
+
+$2000 then
+
+--------
+models? pharma sites
+http://www.phrma.org/
+
+lab site is just informational (simple)
+
+do a study on UI/UX
+check scientist's web sites
+--------
+
+CMS
+
+maybe meet mon or tues (open for craig) .. 11am meeting exception
+
+
+
+
+
+
+--
+email to get everything started:
+
+Craig is this still your email?
+
+Hey sorry I won't be in Madison this week as I've had to reschedule everything due to a little trip that my design partner and I had to reschedule (he was my ride to Madison). But I'm working behind the scenes still:
+
+1) researching models (like pharma sites and scientist's sites)
+2) preparing to code a custom CMS for your site
+3) digging into branding your new startup
+
+With respect to branding (for your startup company, not your lab site), can you provide me a little direction on what principles you want your 'brand' to represent? By 'brand' I mean the 'look and feel' of the visual design that will embody your LOGO and all visual aspects of your company site (which I can incorporate into yoru lab site as well). For instance:
+
+1) overall concept of the company's work
+2) the closest color palette (or if there is none that is fine too)
+A: SORT OF OPEN .. REPRESENTS LIFE, LONGEVITY HOPE FUTRE WELL BEING HEALTH OPTIMISM ENTHUSIASM
+
+GREEN COLOR PALETTE
+
+A: GREEN BLUE AQUA (TURQUOISE .. LIKE WATER IS LIFE)
+
+3) any symbols in mind that would represent this startup?
+A: A CROSS (RELIGIOUS) .. NEED TO SUGGEST VITALITY .. GREEN OK BUT NOT DARK .. CIRCLE (CIRCLE OF LIFE, CELLS)
+
+4) what is the company's target audience?
+5) what feeling or response would you like your logo to evoke?
+A: OPTIMISM FOR FUTURE .. SOMEBODY WHEN 18-25 WHOLE FUTURE IN FRONT OF THEM
+
+PRODUCT:
+CELL THERAPY .. STEM CELL THERAPY
+
+BASIC IDEA OF COMPANY .. TO REJUVINATE BY TESTES AND OVARIES .. TO REGENETE SAME CELLS AS PRODUCED WHEN YOUNGER (IN JANGO SITE) .. INCREASING HORMONES FROM GONADS
+
+NOT GROWTH HORMONE!! CRAIG: LEADS TO SHORTER LIFE SPAN (STUDIES)
+
+ATHLETES AGES SLOWER .. BCS ELEVATING SEX HORMONES
+
+READ JANGO SITE .. NEED TO UNDERSTAND MESSAGE THERE.
+
+I think answering these would be enough to get started on 'branding' your startup.
+
+Thanks!!
+Marcus
+
+
+
+--------
+invite to SLACK
+
+Hi Craig,
+
+Marcus here .. I'm setting up a communication infrastructure that is better than email .. it's called SLACK (I didn't design it ha .. just use it!) and it is LIVE CHAT via 'channels' I invite you to. So I sent you an invite to SLACK. Just:
+
+1) go to pionezero.slack.com
+2) create a username and password
+3) then I will create your own channel called '#lab_jango' and just join it
+
+the NOVELTY of SLACK is that it is live chat, chat's are stored neatly (and in MULTIPLE channels if you wish) as opposed to information being lost in strings of emails .. you can store files (or link to them) .. lots of cool things in SLACK so just click around. Oh and we can add team members to your channel(s) if you want them to participate .. and if you want a private channel you just don't invite others to it. SLACK is available via a browser, a desktop app or a mobile app. It would be a great tool for your lab!
+
+Marcus
+pionezero.com
+262-421-5780
+
+
+
+
+
+----
+october 8 2017
+
+pinterest study
+
+maybe elements that FORM a cross .. elements that are biotech this and that, as here >
+
+https://www.pinterest.com/pin/76420524896431417/
+
+
+
+
+
+----
+october 16 2017
+
+good pinterest study
+
+thought of a bird taking flight with many colors
+
+a phoenix - denotes fire so maybe not
+
+a butterflly
+
+tree leaves
+
+visual requirements:
+1) multi-colored
+2)
+3)
+etc..
+
+-
+excellent pinterest searches (packaging):
+- cosmetics
+- vitamins
+- food
+- pharma
+
+
+
+
+
+----
+october 17 2017
+
+review of craig's answers for essence of site
+
+1
+Q
+overall concept of the company's work
+
+A
+sort of open .. represents life, longevity, hope, future, well being, health, optimism, enthusiasm
+
+
+2
+Q
+the closest color palette (or if there is none that is fine too)
+
+A
+- green color palette
+- green blue aqua (turquoise .. like water is life)
+
+
+3
+Q
+any symbols in mind that would represent this startup?
+
+A
+- a cross (religious)
+- need to suggest vitality
+- green ok but not dark
+- circle (circle of life, cells)
+
+
+4
+Q
+what is the company's target audience?
+
+A
+somebody when 18-25 whole future in front of them
+
+
+5
+Q
+what feeling or response would you like your logo to evoke?
+
+A
+optimism for future
+
+
+6
+Q
+product?
+
+A
+- cell therapy .. stem cell therapy
+- basic idea of company .. to rejuvinate by testes and ovaries .. to regenete same cells as produced when younger (in jango site) .. increasing hormones from gonads
+- not growth hormone!! (NOTE: craig says studies suggest gh leads to shorter life span)
+- athletes ages slower .. bcs elevating sex hormones
+- read jango site .. need to understand message there
+
+
+
+
+
+----
+october 18 2017
+
+introduce to y combinator .. incubator that takes 7% b
+ut accelerates your company at rocket speed
+
+
+
+
+
+----
+december 14 2017
+
+icons for:
+
+----------------------
+NAVIGATION
+----------------------
+learn more
+more scientific publications
+
+----------------------
+THEMES
+----------------------
+balance
+disease
+health
+long life
+
+----------------------
+SITE MAP
+----------------------
+home
+science
+    hormone imbalance
+        hypothalamic-pituitary-gonadal (hpg) hormones
+        imbalance of reproductive hormones in women is associated with mortality
+        imbalance of reproductive hormones in men is associated with mortality
+        gonadal transplantation in animal models increases life expectancy
+        heterochronic parabiosis in animal models suggests a role for blood-borne factors in aging
+    our solution
+        traditional hormone replacement therapy
+        next-generation hormone replacement therapy
+        relevance to aging and age-related diseases
+    publications
+        theoretical considerations
+        studies in human
+            causes of sex hormone dysrgulation in humans
+            effects of sex hormone dysregulation in women
+            effects of sex hormone dysregulation in men
+            effects of partial hormone rebalancing in humans
+      studies in animal models
+          causes of sex hormone dysrgulation in animals
+          effects of sex hormone dysregulation in animals
+          effects of stem cell transplantation on gonadal rejuvenation
+          effects of heterochronic parabiosis on health and lifespan
+      cell manufacturing
+company
+    about
+        craig s. atwood, phd
+        george yu, md
+        william kohl
+        dirk racine, cpa, ctp
+        carter cliff
+    news
+        press releases
+        media coverage
+        relevant articles
+        presentations
+    contact
+legal
+careers
+
+
+
+
+
+----
+december 20 2017
+
+----------------------
+WEBFLOW SITE MAP
+----------------------
+
+home > JANGOBIO home
+
+home
+
+about us > change to 3 dropdown items (duplicate 1 page) > JANGOBIO company
+
+company
+  about
+  news (need upgraded acct)
+
+our products > change to 3 dropdown items (duplicate 2 pages) .. JANGOBIO science
+
+science
+  hormone imbalance (add 2 more panels)
+  our solution (need upgraded acct)
+  publications (need upgraded acct)
+
+brands & clients > eliminate for now
+
+pricing > eliminate for now
+
+extra > eliminate for now
+  404 page
+  dropdown list item
+  dropdown list item
+
+contact > JANGOBIO contact
+
+contact
+
+
+
+
+
+----
+december 21 2017
+
+webflow font colors
+
+large font of logo and all large type
+#d6eb8d
+
+smaller font and menu
+#ebfdda 
+
+opaque menu
+rgba(214, 235, 141, 0.65)
+
+opaque menu rollover
+#ebfdda
+
+button backgrounds
+#424955
+#555b66
+
+button backgrounds rollover
+#171f22
+
+button font
+#ebfdda
+
+NEW
+#c0fc68
+
+
+
+
+
+----
+december 26 2017
+
+google api for webflow map
+
+jangobio.tech@gmail.com
+s7}iK9@c}s$L3
+jan 1 1970
+femals
+262-421-5780
+
+------------
+JANGO BIO
+------------
+
+KEY
+AIzaSyAJinsqRsb49ZjWbUEJZm3CuMCVSR6ylhU
+
+http://marcuss-fabulous-project-92407f.webflow.io/contact
+
+------------
+LAB
+------------
+
+go straight to google cloud console (otherwise you have to go through a payment gateway where google tries to get your credit card) >
+
+https://console.cloud.google.com/google/maps-apis/maps-apis/overview?supportedpurview=project&project=my-project-2-1531469412192
+
+AIzaSyCJBFKfiKeZHCmkMCGlPqBd38SyprweuQM
+
+DID NOT WORK UNTIL I PUBLISHED IT A SECOND TIME ON THIS PAGE (UPPER RIGHT BLUE BUTTON) >
+https://webflow.com/dashboard/sites/marcuss-fabulous-project-a23b21bc77cb67/integrations#
+
+
+
+
+
+----
+december 27 2017
+
+sections colors
+
+dark
+#2f3d40
+
+green
+#d6eb8d
+
+
+
+
+
+----
+january 3 2018
+
+DON'T DELETE ENTIRE SECTIONS!
+
+just go display:none (in Syle (S) > Layout)
+
+sections gone invisible (use Navigator (F) >
+1 image section - has different selector than than the other sections bcs it's called image, so just checked display:none
+2 green our brands - have to create new selector (1) .. then go display:none on it
+3 white amazing features - have to create new selector (2) .. then go display:none on it
+
+slides gone invisible >
+1 slide 2
+2 slide 3
+
+autoplay off sets 1 slide frozen (simulating a static image)
+
+help: https://university.webflow.com/article/sliders
+
+TABLET YOGA IMAGE
+changed z-index of models slider from 0 to 2000 .. height from 190 to 400
+
+changed opacity of line from 20% to 0%
+
+
+
+
+
+----
+january 4 2018
+
+Traditional Hormone Replacement Therapy
+Next-Generation Hormone Replacement Therapy
+Relevance To Aging And Age-Related Diseases
+
+Hypothalamic-Pituitary-Gonadal (HPG) Hormones
+Imbalance Of Reproductive Hormones In Women Is Associated With Mortality
+Imbalance Of Reproductive Hormones In Men Is Associated With Mortality
+Gonadal Transplantation In Animal Models Increases Life Expectancy
+Heterochronic Parabiosis In Animal Models Suggests A Role For Blood-Borne Factors In Aging
+
+- Theoretical Considerations
+- Studies in Human
+- Studies in Animal Models
+- Cell Manufacturing
+
+
+
+
+
+----
+january 11 2018
+
+skype call with craig atwood
+
+http://marcuss-fabulous-project-92407f.webflow.io/
+
+not unhappy with current jangobio site
+
+nmeeds to work out with team members on jangobio site
+
+doesn't like green tones, not sharp enough
+
+1
+prefers white background of current site
+try turquoise
+then offwhite
+send screenshots of each
+FOR TEAM MEETING BY NEXT SATURDAY
+
+2
+wants lab site up more .. separate site .. check out DO IT
+
+priority .. jangobio or lab? lab was initial ..
+https://agingresearch.wisc.edu/
+
+3
+$24/month for TWO projects
+
+4
+call UW DO IT
+https://it.wisc.edu/
+608-264-4357
+
+has to see if hosted by doit .. YES
+https://agingresearch.wisc.edu/
+
+a)
+can we use webflow and use uw url as well?
+
+b)
+can transfer code from webflow to uw, but no cms
+
+c)
+are there uw templates available with cms that contractor can use? had NETID access before.
+
+https://it.wisc.edu/services/web-hosting
+
+5
+invoice
+
+
+
+
+
+----
+january 17 2018
+
+call with jake simon
+doit web publishing
+608-263-6904
+
+do dns legwork for URL transfer .. dns a record (points to ip #) or c-name
+webhosting@doit.wisc.edu
+
+cc draig to doit too
+2 weeks ahead
+
+
+
+
+
+----
+january 26 2018
+
+lite version colors
+
+panels
+#b9dfe7
+
+titles bg
+#d3ffff
+
+different icons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END END
+
+
+
+
+
