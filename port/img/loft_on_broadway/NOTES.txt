@@ -1,0 +1,350 @@
+-----------------------------
+start
+-----------------------------
+
+$1500
+
+squarespace template
+pionezero@protonmail.ch
+gX!8)iN{%tS4$
+The Loft On Broadway
+*trial ends in 14 days (Jan 16)
+OWNER: marcus grant .. transfer to meilyb after launch
+
+GIT
+
+facebook images
+
+domain name
+theloftonbroadway.com
+414-481-3337
+events@theloftonbroadway.com
+ 
+logo
+
+dropbox
+slack
+
+pass protect
+feb2021
+
+----
+DEV TEMPLATE
+
+PRED TEMPLATE
+
+Cailles
+https://cailles-demo.squarespace.com/?nochrome=true
+----
+
+
+
+
+
+-----------------------------
+shopify
+-----------------------------
+
+The Loft On Broadway
+pionezero@protonmail.ch
+si@q$(Uv{w&
+12345 Main Street
+
+
+
+
+
+-----------------------------
+developer notes
+-----------------------------
+
+starting from here somehow shows more templates
+https://developers.squarespace.com/
+click 'all templates'
+
+1
+pick any template for business card
+
+2
+make duplicate and put in developer mode
+
+3
+DEVELOPER MODE WON'T SHOW IN PREDESIGNED TEMPALTES UNLESS PICKED FROM DEVELOPER HOMEPAGE (developer templates will however)
+https://developers.squarespace.com/
+
+4
+can load multiple templates .. just change domain
+
+5
+developer mode right away remove predesigns .. even after adding images doesn't show (so not sure how stable this system is)
+
+6
+squarepeace has no:
+
+- mobile testing and editing capability (cross-platform readiness and fixes)
+- no built in code editor
+- only has GIT environment full code access
+- no third party apps
+- klunky platform (developer mode works when it wants to)
+- templates are not organized
+- no phone support
+
+you get what you pay more essentially .. its cheaper bcs its not on par with shopify in terms of both quality and capability 
+
+
+
+
+
+-----------------------------
+factory continuation
+-----------------------------
+
+empahsize NAILING 1909 look and feel (Pritzlaff COPIED FACTORY!!!)
+
+transparent large logo (OVER IMAGE) emphaszing turn of the century old milwaukee
+BEAMS AND METAL IMAGE OF SPACE AS FIRST IMAGE
+
+FULL SCREEN IMAGE WITH NO MENU OR SECONDARY ICONS .. only appear WITH SCROLL
+https://pritzlafflofts.com/project/307/
+
+SUBTLE industrial header (on scroll)
+
+IN YOUR FACE and SUBTLE turn of the century milwaukee LOOK AND FEEL
+
+improve 4-square image block .. something different .. do better flow of UX (this 4-square imagery is haphazzard and nearly useless) >> MAP OUT UX GOALS FOR FIRST PAGE
+
+WAY more refined deep dive into secondary pages (the SPACES > main .. loft .. kitchen .. all)
+
+DO NOT COPY OR THE BRAND, UI/UX WILL BREAK
+
+gallery sux on desktop .. redesign and keep simple .. just LARGE IMAGES and litle coding
+
+no home link in header
+
+
+
+
+
+-----------------------------
+templates
+-----------------------------
+
+Recommend highest
+
+1
+Harbor
+
+Mobile, Tablet, Desktop
+https://www.squarespace.com/templates/harbor-demo
+
+Full Desktop
+https://harbor-demo.squarespace.com/?nochrome=true
+
+2
+Cailles
+
+Mobile, Tablet, Desktop
+https://www.squarespace.com/templates/cailles-demo
+
+Full Desktop
+https://cailles-demo.squarespace.com/?nochrome=true
+
+3
+Carson
+
+Mobile, Tablet, Desktop
+https://www.squarespace.com/templates/carson-demo
+
+Full Desktop
+https://carson-demo.squarespace.com/
+
+4
+Lange
+
+Mobile, Tablet, Desktop
+https://www.squarespace.com/templates/lange-demo
+
+Full Desktop
+https://lange-demo.squarespace.com/
+
+5
+Sonora
+
+Mobile, Tablet, Desktop
+https://www.squarespace.com/templates/sonora-demo
+
+Full Desktop
+https://sonora-demo.squarespace.com/
+
+
+
+
+
+-----------------------------
+godaddy customer support
+-----------------------------
+
+ftp access
+cpanel
+
+Linux Hosting (cPanel): Move my cPanel website with FTP and FileZilla
+
+
+
+
+
+-----------------------------
+template defaults
+-----------------------------
+
+button bg
+#494848
+
+button text
+#EAE9E9
+
+
+
+
+
+-----------------------------
+descriptions
+-----------------------------
+
+Located in the Historic Third Ward, The Loft on Broadway is the newest wedding and event venue, located on the 3rd floor of 177 N. Broadway, Milwaukee, WI. The space features cream-city brick throughout, an oversized oval bar, elevated views, and more!
+
+Built in the Historic Third Ward, The Loft on Broadway is the newest wedding and event venue, located on the 3rd floor of 177 N. Broadway, Milwaukee, WI. The space features Old Milwaukee style cream-city brick throughout, wood beams and floors, elevated views and more!
+
+414-481-3337
+events@theloftonbroadway.com
+theloftonbroadway.com
+
+
+
+
+
+-----------------------------
+apps
+-----------------------------
+
+https://www.powr.io/
+
+--
+https://formita.myshopify.com/?_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaHBtYjNKdGFYUmhMbTE1YzJodmNHbG1lUzVqYjIwR09nWkZWQT09IiwiZXhwIjoiMjAyMS0wMi0xOFQxNzozMDowMS44MDRaIiwicHVyIjoicGVybWFuZW50X3Bhc3N3b3JkX2J5cGFzcyJ9fQ%3D%3D--af9bd5a7c84b59bd4ec7f444c3f5fa296671958e
+
+STORY TELLING VIDEO ON VIMEO
+https://vimeo.com/create/customize?hash=KQYSKl5TBDsxXQRhCzE
+
+https://apps.shopify.com/vimeo_product_video_maker
+
+VIMEO
+https://vimeo.com/514003389
+
+<iframe src="https://player.vimeo.com/video/514003389" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+<iframe src="https://player.vimeo.com/video/514003389" width="640" height="360" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
+
+<video width="640" height="360" controls="controls">
+<source src="https://cdn.shopify.com/s/files/1/0520/3853/3272/files/Old_World_Luxury_At_The_Loft_On_Broadway.mp4?v=1613686461" type="video/mp4">
+</video>
+
+--
+SHOPIFY
+<style><!--
+.image__img, .image, .image--63935742104 {
+ display: none !important;
+}
+--></style>
+<iframe src="https://player.vimeo.com/video/514003389" width="640" height="360" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen=""></iframe>
+<p><strong> Source: <a href="https://vimeo.com/514003389">https://vimeo.com/514003389</a></strong></p>
+
+BACKUP
+<video width="640" height="360" controls="controls" style="border: 0 !important;background-color:#000 !important;">
+<source src="https://cdn.shopify.com/s/files/1/0520/3853/3272/files/Old_World_Luxury_At_The_Loft_On_Broadway.mp4?v=1613686461" type="video/mp4" /></video>
+
+
+
+
+
+-----------------------------
+logo design
+-----------------------------
+
+pinterest search
+high end modern champagne label
+art deco champagne wine label
+art deco packaging
+
+1
+--
+find age of building
+177 N Broadway
+https://wisconsinhistory.org/Records/Property/HI110918
+1890
+--
+
+2
+seems like original logo design is aligned with ART DECO kinda
+https://duckduckgo.com/?q=art+deco+typeface&t=brave&iar=images&iax=images&ia=images
+
+3
+ART DECO began mid to late 1800's, officallly recognized 1901
+https://en.wikipedia.org/wiki/Art_Deco#Origins
+https://duckduckgo.com/?q=art+deco+typeface+print+posters&t=brave&iar=images&iax=images&ia=images
+https://99designs.com/blog/design-history-movements/art-deco-design/
+
+4
+also coincides with VICTORIAN era and design, roughly 1837-1901
+https://www.heritagetype.com/blogs/articles/victoriandesign
+https://duckduckgo.com/?q=victorian+typeface+print+posters&t=brave&iar=images&iax=images&ia=images
+
+5
+ART NOUVEAU is in there too, 1890-1910
+https://en.wikipedia.org/wiki/Art_Nouveau
+https://duckduckgo.com/?q=art+nouveau+typeface+print+posters&t=brave&iax=images&ia=images
+
+6
+design styles mentioned in building design description >
+VICTORIAN
+ROMAN IONIC capitals
+SULLIVANESQUE FOLIAGE
+detailed ITALIANATE STOREFRONT
+
+--
+SOLAR BOLD font very much like original, only is art deco
+
+--
+design thinking
+
+building outline with loft on top, broadway in middle
+
+like gilette image .. stuff on side like >
+bubble lounge in circle
+est in 1890
+
+art deco greek edges
+
+MOON icon >
+drinking is night activity
+tying in with charcoal
+especially is an art nouveau theme
+
+maybe even sun + moon face together (in design thinking images), or moon on top with sun on bottom as in art deco img
+
+charcoal background as nighttime sky
+
+little shooting star
+
+star field
+
+color palette > charcoal + dull gold .. or charcoal + creame city brick
+
+can draw some things, take picture then vecyor it
+
+champagne bubbles can turn into stars
+
+
+
+
+
+

@@ -1446,10 +1446,11 @@
       font-weight: 900;
       font-size: 1em;
       background: #e7deed !important;
-      /* width: 100%;
+      width: 100%;
       height: 100%;
       border: 0.3rem solid #d3cbd8;
-      border-radius: 5px; */
+      border-radius: 5px;
+      line-height: 20px;
     }
 
     /* typing CODE via pseudo element
@@ -1890,8 +1891,9 @@
                                       </button>
                                     
                                       <div class="collapse" id="collapseExample1">
-                                        <div class="card card-body dettxt">
-
+                                        <!-- class .card causing hyperlink to line break, specifically line 4491, display: flex; -->
+                                        <div class="card card-body dettxt" style="display:block !important">
+                                        One of the novelties of this site is buidling into it the ability to run Bootstrap v5.0.2 in any section of code you wish simply by giving that div the class 'bs5', where it refers to a special css file known as an <strong class="strgtxt"><a href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css">isolated file, or bootstrap-iso or bs-iso</a></strong>, where every class and element is prepended with the class .bs5, so that those sections of code don't conflict with the default css of the site. <strong class="strgtxt"><a href="https://github.com/franky920920/bootstrap-5-isolated">Explained here</a></strong> and <strong class="strgtxt"><a href="https://formden.com/blog/isolate-bootstrap">here</a></strong>.
                                         </div>
                                       </div>
 
@@ -1994,7 +1996,7 @@
                                   </div> -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
-                                    <div class="col dsctx"><strong class="strgtxt">Adobe Photoshop</strong> designs employing <strong class="strgtxt">flat design</strong>, <strong class="strgtxt">design thinking</strong> and <strong class="strgtxt">typeface</strong> creativity.</div>
+                                    <div class="col dsctx"><strong class="strgtxt">Adobe Photoshop and Illustrator</strong> designs employing <strong class="strgtxt">flat design</strong>, <strong class="strgtxt">design thinking</strong> and <strong class="strgtxt">typeface</strong> creativity.</div>
                                   </div>
                                   <div class="row" style="display:none">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
@@ -2021,7 +2023,7 @@
 
                                             <p>There are eight (8) total files, and in each set there is one with the image specs (ui color palette and typeface) and one with no image specs. They are high resolution graphics, so they can fill a mid sized computer monitor's screen. To tell which file is which just look at the file names (ex: mixxi_minimal_w/specs.jpg, mixxi_minimal.jpg) ...
 
-                                            <p>Read full README file on this project <a href="https://pionezero.com/port/img/mixxi/README_mixxi.pdf">HERE</a>
+                                            <p><strong class="strgtxt"><a href="https://pionezero.com/port/img/mixxi/README_mixxi.pdf">Read full README file on this project here</a></strong>
                                         </div>
                                       </div>
 
@@ -2092,71 +2094,165 @@
                 </div>
                 <!-- / ------------- END Mixxi -->
 
-                <!-- // ------------- Loft on Broadway -->
-                <div class="col-md-6 pr-lg-5" style="margin-top:50px;z-index:1000 !important;">
+                <!-- // ------------- Loft -->
+                <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
                         <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
                         <!-- title -->
                         <h2 class="h1 font-weight-bold titlebg">Loft on Broadway</h2>
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fas fa-building"></i>
+                                <i class="fa-solid fa-whiskey-glass-ice"></i>
                             </h6>
+
                             <div class="align-self-start">
                                 <!-- blurb -->
+                                <div class="container text-start thkfnt">
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
+                                    <div class="col dsctx">
+                                      1) <strong class="strgtxt">Create full company brand identity</strong><br />
+                                      2) <strong class="strgtxt">Shopify website</strong>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
+                                    <div class="col dsctx"><strong class="strgtxt">MeiLyn Nelson</strong></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
+                                    <div class="col dsctx"><strong class="strgtxt">January-April 2021</strong></div>
+                                  </div>
+                                  <!-- <div class="row">
+                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
+                                    <div class="col"></div>
+                                  </div> -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
+                                    <div class="col dsctx"><strong class="strgtxt">Adobe Photoshop and Illustrator</strong> designs meant to evoke Soho, modern chic elegance combined with turn of the century 'old Milwaukee' cream city brick vibe</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
+                                    <div class="col dsctx">
+                                      1) <strong class="strgtxt">Shopify</strong> template development<br />
+                                      2) <strong class="strgtxt">Languages: HTML, CSS. JS, Liquid (Shopify templating)</strong>
+                                    </div>
+                                  </div>
+
+                                  <!-- details -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix">
+                                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                        Details
+                                      </button>
+                                    
+                                      <div class="collapse" id="collapseExample1">
+                                        <!-- class .card causing hyperlink to line break, specifically line 4491, display: flex; -->
+                                        <div class="card card-body dettxt" style="display:block !important">
+                                          -----------------------------<br />
+                                          UI/UX meeting with MeiLyn<br />
+                                          Jan 1 2021<br />
+                                          -----------------------------
+
+                                          <p>pritzlaff
+
+                                          <p>beautiful pics and space feeling
+
+                                          <p>gallery
+
+                                          <p>description<br />
+                                          background<br />
+                                          where<br />
+                                          why unique<br />
+                                          multiple level
+
+                                          <p>contact us
+
+                                          <p>(THREE BLOCK LEVELS)
+
+                                          <p>weddings<br />
+                                          special day<br />
+                                          hosting corp event<br />
+                                          fundraiser
+
+                                          <p>bubLe lounge > feature for corp event or birthday
+
+                                          <p>night and day from FACTORY (industrial) .. lounge is high end
+
+                                          <p>focus on wedding for BIG IMAGES
+
+                                          <p>pritzlaff header (study .. do like that)
+
+                                          <p>reviews
+
+                                          <p>lead with great pictures
+
+                                          <p>5-8 inquires about FACTORY tours
+
+                                          <p>use site like PINTEREST .. grab with pictures
+
+                                          <p>put in mindset of couple wanting to find a space .. VISUALS .. then details on secondary page
+
+                                          <p><strong class="strgtxt"><a href="https://pionezero.com/port/img/mixxi/README_mixxi.pdf">Read full notes files on this project here</a></strong>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <!-- / details -->
+
+                                </div>
+                                <!-- / blurb -->
+
                                 <p>
-                                  <strong class="subtitlebg">Visual design:</strong> Full branding<br />
-                                   <strong class="subtitlebg">Front end coding:</strong> <strong>Shopify</strong> website (HTML, CSS. JS, Liquid).
-                                </p>
-                                <p>
-                                    <a href="https://theloftonbroadway.com">
+                                    <a href="https://codepen.io/fullstackninja/full/MWqRVYL">
                                         <i class="fas fa-laptop bigicon"></i>
                                     </a>
                                     &nbsp;&nbsp;
 
-                                    <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    <a href="https://pionezero.com/diageo/login/index.html">
+                                        <i class="fas fa-laptop bigicon"></i>
                                     </a>
                                     &nbsp;&nbsp;
-                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                    <a href="#" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
+
+                                    <a href="https://dribbble.com/shots/23781867-Diageo-Codepen-written-Bootstrap-based-single-page-sales-site">
+                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
                                     </a>
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body imgcon">
-                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp');">
-                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway.webp" class="linkz"></a>
-                            </div>
-                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-2.webp');">
-                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-2.webp" class="linkz"></a>
-                            </div>
-                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-3.webp');">
-                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-3.webp" class="linkz"></a>
-                            </div>
-                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-4.webp');">
-                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-4.webp" class="linkz"></a>
-                            </div>
-                            <div class="thumbz" style="background-image:url('assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-5.webp');">
-                                <a href="assets/images/port/links/loft_on_broadway/webp/loft-on-broadway-5.webp" class="linkz"></a>
-                            </div>
-                        </div>
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card card-body"></div>
                     </div>
 
                 </div>
+
                 <!-- image -->
-                <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port1">
-                    <a href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway">
-                        <image width="450" height="100%" href="">
-                    </a>
+                <div class='wrapc_mixxi'>
+
+                  <div class='rowc_mixxi'>
+                    
+                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                      <a class="linx" href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway"></a>
+                      <!-- USE THIS FOR UPPER IMG CONTENT -->
+                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
+                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
+                      <div class="port1"></div>
+                      <!-- <div class='content ts'>Codepen</div> -->
+                    </div>
+                    
+                  </div>
+                  
                 </div>
-                <!-- / END ------------- Loft on Broadway -->
+                <!-- / ------------- / Loft -->
 
                 <!-- // ------------- JangoBio -->
                 <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
@@ -2174,28 +2270,24 @@
                                 <!-- blurb -->
                                 <p>Full branding, <strong>Webflow</strong> websites.</p>
                                 <p>
-                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview">
-                                        <i class="fas fa-laptop bigicon"></i>
+                                  <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview">
+                                    <i class="fas fa-laptop bigicon"></i>
+                                  </a>&nbsp;&nbsp;
+                                  <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-a23b21bc77cb67?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-a23b21bc77cb67&preview=cdf0dfbbafb8deb00b13c90e30d9aeb6&mode=preview">
+                                    <i class="fas fa-laptop bigicon"></i>
+                                    </a>&nbsp;&nbsp;
+                                  <span style="font-size:0.85em;">&nbsp;&nbsp;
+                                    <a href="https://dribbble.com/shots/14017239-JangoBio">
+                                      <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    </a>&nbsp;&nbsp;
+                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                    <a href="#" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                                      <i class="fas fa-expand-arrows-alt bigicon"></i>
                                     </a>
-                                    &nbsp;&nbsp;
-                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-a23b21bc77cb67?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-a23b21bc77cb67&preview=cdf0dfbbafb8deb00b13c90e30d9aeb6&mode=preview">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <span style="font-size:0.85em;">
-                                        &nbsp;&nbsp;
-
-                                        <a href="https://dribbble.com/shots/14017239-JangoBio">
-                                            <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                        </a>
-                                        &nbsp;&nbsp;
-                                        <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                        <a href="#" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
-                                            <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                        </a>
-                                </p>
                                 </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
@@ -2250,27 +2342,26 @@
                                 <i class="fas fa-industry"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>
-                                    <strong></strong>
-                                     Full branding, <strong>Shopify</strong> website.
-                                </p>
-                                <p>
-                                    <a href="https://thefactoryonbarclay.com">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample2-code" aria-expanded="false" aria-controls="collapseExample2-code"><i class="fas fa-code bigicon"></i></a>&nbsp;&nbsp; -->
-                                    <a href="https://dribbble.com/shots/14440599-The-Factory-on-Barclay">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                    <a href="#" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                    </a>
-                                </p>
+                              <!-- blurb -->
+                              <p>
+                                 Full branding, <strong>Shopify</strong> website.
+                              </p>
+                              <p>
+                                <a href="https://thefactoryonbarclay.com">
+                                  <i class="fas fa-laptop bigicon"></i>
+                                </a>&nbsp;&nbsp;
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample2-code" aria-expanded="false" aria-controls="collapseExample2-code"><i class="fas fa-code bigicon"></i></a>&nbsp;&nbsp; -->
+                                <a href="https://dribbble.com/shots/14440599-The-Factory-on-Barclay">
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>&nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <a href="#" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                  <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a>
+                              </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
@@ -2388,27 +2479,27 @@
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fas fa-hard-hat"></i>
+                                <i class="fa-solid fa-people-roof"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>Full branding, app assets, <strong>Bootstrap-based</strong> website.</p>
-                                <p>
-                                    <!-- <a href="https://pionezero.com/pi10_bu/hernandez_roofing/beta/">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a> -->
-                                    &nbsp;&nbsp;
+                              <!-- blurb -->
+                              <p>Full branding, app assets, <strong>Bootstrap-based</strong> website.</p>
+                              <p>
+                                <!-- <a href="https://pionezero.com/pi10_bu/hernandez_roofing/beta/">
+                                       <i class="fas fa-laptop bigicon"></i>
+                                    </a>&nbsp;&nbsp; -->
 
-                                    <a href="https://dribbble.com/shots/23779389-Hernandez-Roofing">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
-                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                    </a> -->
-                                </p>
+                                <a href="https://dribbble.com/shots/23779389-Hernandez-Roofing">
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>&nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                  <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
+                              </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
@@ -2438,24 +2529,24 @@
                                 <i class="fa-solid fa-mug-tea"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>Icon design, <strong>Shopify</strong> web store.</p>
-                                <p>
-                                    <!-- <a href="https://pionezero.com/pi10_bu/hernandez_roofing/beta/">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a> -->
-                                    &nbsp;&nbsp;
+                              <!-- blurb -->
+                              <p>Icon design, <strong>Shopify</strong> web store.</p>
+                              <p>
+                                <!-- <a href="https://pionezero.com/pi10_bu/hernandez_roofing/beta/">
+                                       <i class="fas fa-laptop bigicon"></i>
+                                    </a> -->&nbsp;&nbsp;
 
-                                    <a href="https://dribbble.com/shots/23779310-Tea-novelty-store-icons">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
-                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                    </a> -->
-                                </p>
+                                <a href="https://dribbble.com/shots/23779310-Tea-novelty-store-icons">
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>&nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                  <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
+                              </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
@@ -2485,24 +2576,24 @@
                                 <i class="fa-solid fa-football"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>CSS drawn identity, <strong>Bootstrap-based</strong> 'lorem ipsum' template website.</p>
-                                <p>
-                                    <a href="https://pionezero.com/port/sites/gmjrscouting/mockdraft.html">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
+                              <!-- blurb -->
+                              <p>CSS drawn identity, <strong>Bootstrap-based</strong> 'lorem ipsum' template website.</p>
+                              <p>
+                                <a href="https://pionezero.com/port/sites/gmjrscouting/mockdraft.html">
+                                  <i class="fas fa-laptop bigicon"></i>
+                                </a>&nbsp;&nbsp;
 
-                                    <a href="https://dribbble.com/shots/23779797-Football-recruiting">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                    <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
-                                        <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                    </a> -->
+                                <a href="https://dribbble.com/shots/23779797-Football-recruiting">
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>&nbsp;&nbsp;
+                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
+                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                  <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                </a> -->
                                 </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
@@ -2532,21 +2623,24 @@
                                 <i class="fas fa-cheese"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>Website redesign, <strong>Shopify web store & marketing</strong>.</p>
-                                <p>
-                                    <!-- <a href="https://cheesehead.com/">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a> -->
-                                    &nbsp;&nbsp;
-                                    <a href="#">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                    <!-- <a href="https://www.dropbox.com/s/evqxup24cgmtna6/cheesehead_mobiless_1.jpg?dl=0"><i class="fas fa-image bigicon"></i></a> -->
+                              <!-- blurb -->
+                              <p>Website redesign, <strong>Shopify web store & marketing</strong>.</p>
+                              <p>
+                                <!-- <a href="https://cheesehead.com/">
+                                  <i class="fas fa-laptop bigicon"></i>
+                                </a> -->&nbsp;&nbsp;
+
+                                <a href="#">
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>
+                                <!-- <a href="https://www.dropbox.com/s/evqxup24cgmtna6/cheesehead_mobiless_1.jpg?dl=0"><i class="fas fa-image bigicon"></i></a> -->
                                 </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
+
                 </div>
                 <!-- image -->
                 <div class="d-flex mb-3 p-0 justify-content-center border-radius-0 port3">
@@ -2569,22 +2663,23 @@
                                 <i class="fas fa-mountain"></i>
                             </h6>
                             <div class="align-self-start">
-                                <!-- blurb -->
-                                <p>
-                                    <strong>Project in progress.</strong>
-                                     Full branding, <strong>Shopify web store</strong>.
-                                </p>
-                                <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
+                              <!-- blurb -->
+                              <p>
+                                <strong>Project in progress.</strong> Full branding, <strong>Shopify web store</strong>.
+                              </p>
+                              <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
                                 <a href="https://dribbble.com/shots/14440465-Peaceful-Yak">
-                                    <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                </a>
-                                &nbsp;&nbsp;
+                                  <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                </a>&nbsp;&nbsp;
+                                
                                 <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
                                 <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
+                                  <i class="fas fa-expand-arrows-alt bigicon"></i>
                                 </a> -->
                                 </p>
                             </div>
+                            <!-- /blurb -->
+
                         </div>
                     </div>
 
