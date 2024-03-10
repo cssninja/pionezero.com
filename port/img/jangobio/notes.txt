@@ -380,7 +380,6 @@ JANGO BIO
 ------------
 
 KEY
-AIzaSyAJinsqRsb49ZjWbUEJZm3CuMCVSR6ylhU
 
 http://marcuss-fabulous-project-92407f.webflow.io/contact
 
@@ -392,7 +391,6 @@ go straight to google cloud console (otherwise you have to go through a payment 
 
 https://console.cloud.google.com/google/maps-apis/maps-apis/overview?supportedpurview=project&project=my-project-2-1531469412192
 
-AIzaSyCJBFKfiKeZHCmkMCGlPqBd38SyprweuQM
 
 DID NOT WORK UNTIL I PUBLISHED IT A SECOND TIME ON THIS PAGE (UPPER RIGHT BLUE BUTTON) >
 https://webflow.com/dashboard/sites/marcuss-fabulous-project-a23b21bc77cb67/integrations#
