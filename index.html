@@ -1453,6 +1453,36 @@
       line-height: 20px;
     }
 
+    /* backgound and text to point user to websites and dribbble */
+    .porticonz {
+      background: #d0c7d7;
+      display: block;
+      width: 250px; /* 100% or 250px also */
+      padding: 10px;
+      border-radius:5px;
+    }
+    .porticonz::before {
+      content: 'websites,' '\A' 'portfolio';
+      white-space: pre; /* for line break */
+      /* color: #696b6e !important; */ /* default page color #7e8185 .. but overridden in text stroke below */
+      font-family: verdana;
+
+      font-weight:900;
+      /* background: #d0c7d7 !important; */
+      display: block !important;
+      margin: 0px 0px 0px 150px;
+      line-height: 15px;
+      -webkit-text-stroke: 0.4px #696b6e;
+      -webkit-text-fill-color: #696b6e;
+      /* paint-order: stroke fill; */
+      font-size: 0.75em;
+      opacity: 0.3;
+      position: absolute !important;
+      /* white-space: pre-wrap;
+      word-wrap: break-word; */
+      /* max-width: 100px; */ /* use max-width for line break as well */
+    }
+
     /* typing CODE via pseudo element
     https://codepen.io/raubaca/pen/rxLwPq
 
@@ -1900,7 +1930,7 @@
                                 </div>
                                 <!-- / blurb -->
 
-                                <p>
+                                <p class="porticonz">
                                     <a href="https://codepen.io/fullstackninja/full/MWqRVYL">
                                         <i class="fas fa-laptop bigicon"></i>
                                     </a>
@@ -2030,7 +2060,8 @@
 
                                 <!-- <strong class="subtitlebg">Coding:</strong> -->
 
-                                <!-- <p><a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
+                                <p class="porticonz">
+                                <!-- <a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
                                 <a href="https://dribbble.com/shots/23681213-Design-challenge-1">
                                     <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
                                 </a>
@@ -2177,7 +2208,7 @@
                                 </div>
                                 <!-- / blurb -->
 
-                                <p>
+                                <p class="porticonz">
                                     <a href="https://theloftonbroadway.com">
                                         <i class="fas fa-laptop bigicon"></i>
                                     </a>
@@ -2312,7 +2343,7 @@
                                 </div>
                                 <!-- / blurb -->
 
-                                <p>
+                                <p class="porticonz">
                                     <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview">
                                         <i class="fas fa-laptop bigicon"></i>
                                     </a>
