@@ -1,0 +1,265 @@
+----------------
+SHOPIFY LOGIN
+----------------
+
+Shopify Partners >
+https://www.shopify.com/partners
+pionezero@protonmail.ch
+pass
+
+The Factory on Barclay >
+pionezero@protonmail.ch
+pass
+https://the-factory-on-barclay.myshopify.com/
+PREVIEW > https://ix4142ec0qk5644y-24444862560.shopifypreview.com
+
+The Factory on Barclay
+1120 S Barclay Street
+Milwaukee, WI USA 53204
+414-719-0125
+
+
+
+
+
+----------------
+DROPBOX LOGIN
+----------------
+
+https://www.dropbox.com/sh/ab86nv7c7lct8lw/AADlFjOngE2Y0mvUvj3RsG4ya?dl=0
+
+
+
+----------------
+DESIGN
+----------------
+
+Hey Marcus.
+The Factory on Barclay
+Industrial chic
+Black and champagne bubbles
+If that helps!
+
+Need >
+1 vendors list
+2 latest shoot images
+
+PREVIEWS >
+
+split
+https://tyi8ggmmlhgni4lq-24444862560.shopifypreview.com
+
+kingdom
+https://z1q8skhhqxjpwfen-24444862560.shopifypreview.com
+
+--
+Meilyn is it possible for you to go through this todo tonight? A lot of what I’m doing in the beginning is:
+
+1) information architecture
+2) UI/UX
+
+which is dependent on most of what’s in this todo .. thanks!
+
+Immediate todo ..
+
+1. Buy the template - DONE
+2. Get a site map from you (menu basically and pages you want)
+3. Tell me what vibe you want the site to have .. emotional appeal that is
+4. What ‘look and feel’ do you want the site to have .. design appeal
+5. Some more details on the specs of your corporate identity I’ll design:
+  a) preferred color palette
+  b) font style
+  c) what feeling do you want to evoke
+  d) what design style do you prefer
+6) Send me pics from the photo shoot
+
+The Dropbox link for uploading the photoshoot images (and anything else) is:
+https://www.dropbox.com/sh/ab86nv7c7lct8lw/AADlFjOngE2Y0mvUvj3RsG4ya?dl=0
+
+Thanks!
+Marcus
+
+
+
+
+
+----------------
+CORE TEMPLATES
+----------------
+
+---
+CRITERIA
+---
+
+1) header
+2) footer
+3) LARGE IMAGES
+4) good contact page layout
+5) BLOG
+6) MOBILE
+7) image loading WITHOUT CODING IT IN
+
+from Squarespace Sonora:
+
+8) ability to do good VENDORS area + page
+9) past events
+10) full browser width GALLERY
+
+https://sonora-demo.squarespace.com/?nochrome=false
+https://tremont-demo.squarespace.com/?nochrome=false
+
+* Use Shopify apps for blog, gallery if needed
+
+https://apps.shopify.com/xo-gallery?surface_detail=image+gallery&surface_inter_position=1&surface_intra_position=9&surface_type=search
+
+
+
+
+
+---
+SHOPIFY
+---
+
+Looker
+https://themes.shopify.com/themes/split/styles/looker/preview
+1) ok
+2) good
+3) good
+4) good
+5) yes
+6) good
+7) yes
+8) yes
+9) yes
+10) yes
+
+ok - 1
+good - 4
+yes - 5
+no - 0
+
+Prince
+https://themes.shopify.com/themes/kingdom/styles/prince/preview
+1) good
+2) ok
+3) good
+4) good
+5) no (can add blog with app)
+6) good
+7) yes
+8) yes
+9) yes
+10) yes
+
+ok - 1
+good - 4
+yes - 4
+no - 1
+
+
+
+
+
+------------------
+OCT 24 2019
+------------------
+
+art oriented
+
+snippets of events
+
+creme city brixk
+
+simpler
+
+no embed calendar
+
+pritzlaf
+https://pritzlaffevents.com/
+
+terrace .. ultimately this one
+https://www.terrace167.com/
+
+go over shopify templates, find closest ones to two above sites
+
+call meilyn at 10pm
+
+--
+
+Four orders on old cheesehead.com site in magento  .. try to call nexcess to fulfill those orders
+
+How to recover 4 orders in Nexcess/Magento:
+
+1
+Login here >
+https://www.nexcess.net/magento/hosting/
+
+Click upper right 'SIGN IN'
+
+2
+Will take you to this portal >
+https://portal.nexcess.net/ 
+
+Use the original email and password used to create this account
+
+3
+After successfully logging in, at the top will be Account ID and a VERIFICATION PIN .. what you need the most is the PIN (have to uncover it by clicking the icon)
+
+4
+Then call Nexcess tech support and ask for GARRETT >
+866-639-2377
+
+He will need the VERIFICATION PIN
+
+He will then create for you over the phone a subdomain of cheesehead.com .. with that you can log into the admin section and extract all the order info you need
+
+5
+OLD LOGIN WAS >
+https://cheesehead.com/index.php/admin/index/index/key/d1d53c5341c671ce368f42e50ad971b9
+
+pass
+
+
+
+
+
+------------------
+NOV 3 2019
+------------------
+
+DESIGNED WAYYYYYYYYYYYYYYYYY BETTER >
+
+pritzlaf
+https://pritzlaffevents.com/
+(squarespace)
+
+beautiful full screen mobile images is what i'm feeling
+
+then really simply navigation to the essentials
+
+squarespace:
+1 camino has built-in scheduling
+
+--
+SONORA!
+
+tried it, squarespace sucked .. so pick closest template in shopify to duplicate squarespace look
+
+
+
+
+
+------------------
+JAN 16 2020
+------------------
+
+logo embellishment
+
+vintage, victorian, antique, art nuveau, turn of the century graphics free vector
+
+
+
+
+
+
+
