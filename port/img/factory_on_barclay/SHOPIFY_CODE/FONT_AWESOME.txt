@@ -1,0 +1,124 @@
+<!-- ADDED FONTAWESOME HOME -->       
+<script src="https://kit.fontawesome.com/af5b7fcfdd.js" crossorigin="anonymous"></script>
+<style>
+.flexcon {
+  display: flex;
+  justify-content:flex-end;
+  z-index: 9999 !important;
+  background:#474A56;
+  position: fixed;
+  display: block;
+  top: 0%;
+  right: 0;
+  width: 15%;
+  z-index: 990;
+  height: 46px;
+  align-items: right;
+  padding: 0 10px;
+  cursor:pointer;
+ }
+</style>
+<div class="flexcon" style="font-size: 1.3em; color: #FEFEF5;" onclick="location.href=https://thefactoryonbarclay.com">
+  <span style="display:block;"><i class="fas fa-home"></i></span>
+</div>
+
+<script>
+$("div").click(function(){
+window.location=$(this).find("a").attr("href"); return false;
+});
+</script>
+
+---------------
+
+1
+<a href="/">
+
+2
+onclick="location.href='url'"
+onclick="location.href='/'"
+
+            <script>
+            $("div").click(function(){
+               window.location=$(this).find("a").attr("href"); return false;
+            });
+            </script>
+
+3
+DIVS
+
+a)
+<div class="flexcon" style="font-size: 1.3em; color: #FEFEF5;" onclick="location.href=https://thefactoryonbarclay.com">
+  <span style="display:block;"><i class="fas fa-home"></i></span>
+</div>
+
+b)
+&#127969;
+
+<div class="flexcon" style="font-size: 1.3em; color: #FEFEF5;" onclick="location.href=https://thefactoryonbarclay.com">
+  <span style="display:block;">&#127969;</span>
+</div>
+
+4
+WORKED
+
+a)
+&#x1F3E1;
+
+<style>
+.flexcon {
+  display: flex;
+  justify-content:flex-end;
+  z-index: 9999 !important;
+  background:#474A56;
+  position: fixed;
+  display: block;
+  top: 0%;
+  right: 0;
+  width: 15%;
+  z-index: 990;
+  height: 46px;
+  align-items: right;
+  padding: 0 10px;
+  cursor:pointer;
+ }
+</style>
+<div class="flexcon" style="font-size: 1.3em; color: #FEFEF5;">
+  <a href="https://thefactoryonbarclay.com"><span style="display:block;">&#x1F3E1;</span></a>
+</div>
+
+* note .. think it was DOM related whne using javascript, lost the url tracking
+
+b)
+
+&#x2302;
+
+<style>
+.flexcon {
+  display: flex;
+  justify-content:flex-end;
+  z-index: 9999 !important;
+  background:#474A56;
+  position: fixed;
+  display: block;
+  top: -2%;
+  right: 0;
+  width: 15%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  z-index: 990;
+  height: 56px;
+  align-items: right;
+  padding: 0 10px;
+  cursor:pointer;
+ }
+@media (max-width: 1060px) {
+  .flexcon {
+    display:none !important;
+}
+</style>
+<div class="flexcon">
+  <a href="https://thefactoryonbarclay.com" style="font-size:2.2em;color:#FEFEF5 !important;display:block;">&#x2302;</a>
+</div>
+
+
+
+
+

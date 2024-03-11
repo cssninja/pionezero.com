@@ -1,0 +1,227 @@
+<div class="footer">
+
+  {% for block in section.blocks %}
+
+    {% case block.type %}
+
+      {% when 'text' %}
+
+        <div class="footer-item footer-text {{ block.settings.size }}">
+        
+          {% unless block.settings.title == blank %}
+            <h4>{{ block.settings.title | escape }}</h4>
+          {% endunless %}
+
+          <div class="rte">
+            {{ block.settings.content }}
+          </div>    
+
+        </div>
+
+      {% when 'menus' %}
+
+        <div class="footer-item footer-menus">
+
+          {% unless block.settings.menu_1 == blank %}
+
+            <div>
+
+              {% unless block.settings.title_1 == blank %}
+                <h4>{{ block.settings.title_1 | escape }}</h4>
+              {% endunless %}
+              
+              <div class="footer-links body-size-lesser-than-normal">
+                {% for link in linklists[block.settings.menu_1].links %}
+                  <span>
+                    <a href="{{ link.url | escape }}">{{ link.title | escape }}</a>
+                  </span>
+                {% endfor %}
+              </div>
+
+            </div>
+
+          {% endunless %}
+
+          {% unless block.settings.menu_2 == blank %}
+
+            <div>
+
+              {% unless block.settings.title_2 == blank %}
+                <h4>{{ block.settings.title_2 | escape }}</h4>
+              {% endunless %}
+              
+              <div class="footer-links body-size-lesser-than-normal">
+                {% for link in linklists[block.settings.menu_2].links %}
+                  <span>
+                    <a href="{{ link.url | escape }}">{{ link.title | escape }}</a>
+                  </span>
+                {% endfor %}
+              </div>
+
+            </div>
+
+          {% endunless %}
+
+        </div>
+
+      {% when 'info' %}
+
+        <div class="footer-item footer-info">
+      
+          {% if block.settings.show_payment_icons and shop.enabled_payment_types != empty %}
+            <div class="footer-icons">
+              {% for type in shop.enabled_payment_types %}
+                {{ type | payment_type_svg_tag }}
+              {% endfor %}
+            </div>
+          {% endif %}
+          
+          <div class="footer-copyright body-size-lesser-than-normal">
+            <span>{{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="/">{{ shop.name }}</a></span>
+            <span class="powered-by-shopify">. {{ powered_by_link }}</span>
+          </div>
+
+        </div>
+
+      {% when 'newsletter' %}
+
+        <div class="footer-item footer-newsletter">
+
+          {% unless block.settings.title == blank %}
+            <h4>{{ block.settings.title | escape }}</h4>
+          {% endunless %}
+
+          <div class="newsletter__form body-size-lesser-than-normal">
+
+            {% form 'customer' %}
+
+              {% include 'form-errors' %}
+
+              {% if form.posted_successfully? %}
+
+                <span class="alert alert--success">{{ 'general.newsletter.confirmation' | t }}</span>
+
+              {% else %}
+                
+                <div>
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <input type="email" class="newsletter__input" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter.email_label' | t }}" name="contact[email]" id="Email" aria-label="{{ 'general.newsletter.email_label' | t }}" autocorrect="off" autocapitalize="off">
+                  <button type="submit" class="newsletter__submit" id="Subscribe" aria-label="{{ 'general.newsletter.submit_label' | t }}">
+                    <span aria-hidden="true">{% include 'theme-symbols', icon: 'arrow-long' %}</span>
+                  </button>
+                </div>
+
+              {% endif %}
+
+            {% endform %}
+
+          </div>
+
+        </div>
+  
+    {% endcase %}
+
+  {% endfor %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "class": "mount-footer",
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Contact information"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Write a short statement about your brand.</p>"
+          },
+          {
+            "type": "select",
+            "id": "size",
+            "label": "Text size",
+            "options": [
+              {
+                "value": "",
+                "label": "Regular"
+              },
+              {
+                "value": "footer-text--large",
+                "label": "Large"
+              }
+            ],
+            "default": "footer-text--large"
+          }
+        ]
+      },
+      {
+        "type": "menus",
+        "name": "Menus",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "First menu",
+            "default": "Menu"
+          },
+          {
+            "type": "link_list",
+            "id": "menu_1",
+            "label": "First menu",
+            "default": "footer",
+            "info": "This menu won't show dropdown items"
+          },
+          {
+            "type": "text",
+            "id": "title_2",
+            "label": "Second menu",
+            "default": "Menu"
+          },
+          {
+            "type": "link_list",
+            "id": "menu_2",
+            "label": "Second menu",
+            "info": "This menu won't show dropdown items"
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "name": "Copyright information",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_payment_icons",
+            "label": "Show payment icons",
+            "default": true
+          }
+        ]
+      },
+      {
+        "type": "newsletter",
+        "name": "Newsletter",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Newsletter"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

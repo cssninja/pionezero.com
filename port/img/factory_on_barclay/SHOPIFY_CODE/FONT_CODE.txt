@@ -1,0 +1,86 @@
+/* OLD PLATE FONT-BASED TITLE */
+@import url(//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic);
+
+/* only woff2 needed, https://www.freecodecamp.org/news/web-fonts-in-2018-f191a48367e8/ */
+@font-face {
+  font-family: "Teutonic"; src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot");
+  src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot?#iefix") format("embedded-opentype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff2") format("woff2"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff") format("woff"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.ttf") format("truetype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.svg#Teutonic") format("svg");
+   font-weight: 400;
+   font-style: normal;
+   /* described here: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display */
+   font-display: fallback;
+   unicode-range: U+000-5FF;
+}
+
+swap could slow it down
+
+-----
+SHOPFY
+
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.eot?v=1613943529
+
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff?v=1613289049
+
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867
+
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.ttf?v=1613315294
+
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.svg?v=1613943577
+
+----
+TUTORIAL
+https://www.freecodecamp.org/news/web-fonts-in-2018-f191a48367e8/
+
+Example (Optimized) >
+view-source:https://fontface-test.glitch.me/index-cool.html
+https://fontface-test.glitch.me/cool-style.css
+
+@font-face {
+    font-family: 'Catamaran';
+    font-display: swap;
+    src: local('Catamaran Bold'),
+         url('https://cdn.glitch.com/432e5d06-a31f-4d67-8591-94ed2f65eb36%2FCatamaran-Bold.woff2') format('woff2'),
+         url('https://cdn.glitch.com/432e5d06-a31f-4d67-8591-94ed2f65eb36%2FCatamaran-Bold.woff') format('woff');
+    font-weight: bold;
+    unicode-range: U+000-5FF;
+    font-style: swap;
+}
+
+
+@font-face {
+    font-family: 'Catamaran';
+    font-display: swap;
+    src: local('Catamaran Regular'),
+         url('https://cdn.glitch.com/432e5d06-a31f-4d67-8591-94ed2f65eb36%2FCatamaran-Regular.woff2') format('woff2'),
+         url('https://cdn.glitch.com/432e5d06-a31f-4d67-8591-94ed2f65eb36%2FCatamaran-Regular.woff') format('woff');
+    font-weight: normal;
+    unicode-range: U+000-5FF;
+    font-style: swap;
+}
+
+Mine >
+
+(author i think made mistake , duplicated font/woff2 instead of using font/woff .. ALSO with font-style, there is no swap, only normal, italid etc)
+
+IN HEAD OR WILL BE SLOW >
+<link rel="preload" as="font" href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867" type="font/woff" crossorigin="anonymous">
+
+IN STYLES >
+@font-face {
+    font-family: 'Teutonic';
+    font-display: swap;
+    src: local('Teutonic Regular'),
+         url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff?v=1613289049') format('woff');
+    font-weight: normal;
+    unicode-range: U+000-5FF;
+    font-style: normal;
+}
+
+
+

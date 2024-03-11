@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+  <!-- ADDED to prevent unintended image scale with scroll -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+	{% if settings.favicon %}
+		<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+	{% endif %}
+
+	{% capture seo_page_title %}
+    {% if template contains 'search' %}
+      {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name }}
+    {% else %}
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    {% endif %}
+  {% endcapture %}
+
+	<title>{{ seo_title }}</title>
+
+	{% if page_description %}
+		<meta name="description" content="{{ page_description | escape }}">
+	{% endif %}
+
+	{% include 'open-graph' %}
+  {% include 'microdata-schema' %}
+
+	<link rel="canonical" href="{{ canonical_url }}">
+
+	<link rel="preload" as="style" href="{{ 'theme.scss.css' | asset_url }}">
+	<link rel="preconnect" href="//fonts.shopifycdn.com">
+
+	{{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+
+	{{ content_for_header }}
+	
+  {% if template == 'customers/addresses' %}
+	  <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+	  <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+	{% endif %}
+
+	{{ '//code.jquery.com/jquery-3.4.1.min.js' | script_tag }}
+
+  <script type="text/javascript">
+
+  	function lightOrDark(a){if(a.match(/^rgb/)){a=a.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);var b=a[1];var c=a[2];a=a[3]}else a=+("0x"+a.slice(1).replace(5>a.length&&/./g,"$&$&")),b=a>>16,c=a>>8&255,a&=255;return 140<Math.sqrt(.299*b*b+.587*c*c+.114*a*a)?"#000":"#fff"};
+
+  	window.reorderSections = function() {
+	    $(".with-gutter").removeClass("with-gutter");
+	    $(".without-gutter").removeClass("without-gutter");
+	    $(".content-section.gutter--on").each(function() {
+	      $(this).parent().addClass("with-gutter");
+	      if ( $(this).hasClass('parent-has-inner-padding') ) {
+	      	$(this).parent().addClass('has-inner-padding');
+	      }
+	    });
+	    $(".content-section.gutter--off").each(function() {
+	      $(this).parent().addClass("without-gutter")
+	    });
+		};
+		$(document).ready(function() {
+		   window.reorderSections()
+		});
+
+  	2===performance.navigation.type&&location.reload(!0);
+  </script>
+  
+  <style type="text/css">    
+    /* container for placeing floating logo over image .. desktop, tablet, mobile */
+    .imgcon {
+      display:flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-direction: row !important;
+      /* text-align:center; */
+      width: 100% !important;
+      margin: 0%; /* v,h */
+    }
+    /* desktop */
+    @media (min-width: 1024px) {
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 1% !important;
+      left:28% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+      width: 45% !important; /* 40% w/bg image, 60% without */
+      opacity:1; /* was 0.87 */
+      z-index:1000 !important;
+     }
+    }
+   /* tablet, mobile */
+   @media (max-width: 1023.95px) { /* was 948px */
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 1% !important;
+      left:25% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+      width: 55% !important; /* 80% w/bg image, 100% without */
+      opacity:1; /* was 0.87 */
+      z-index:1000 !important;
+     }
+    }
+   /* sm mobile */
+   @media (max-width: 450px) {
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 1% !important; /* 2% w/bg image, 4% without */
+      left:10% !important; /* ADDED FOR BACKGROUND IMAGE USE */
+      width: 80% !important; /* 80% w/bg image, 100% without */
+      opacity:1; /* was 0.87 */
+      z-index:1000 !important;
+     }
+    }
+   /* thanks to: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+       https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+       https://flexbox.help/
+       https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+     */
+
+   /* line 2249 in theme.scss.liquid changed 40px to 46 px for announcement bar */
+  
+   /* new flex menu can be ENABLED via text theme.liquid_new(WITH TOP MENU).txt */
+  
+  /* removes image section in tablet and mobile */
+   @media (max-width: 1024px) {
+     .rich-text__media {
+       display: none !important;
+    }
+     .rich-text__content {
+      width: 100%;
+     }
+    }
+
+   /* line 6880 disabled .slide__overlay for parallax scrolling */
+  
+  /* slide 1 .. don't have to use a blank cream city brick colored image with this feature */
+  #slide-1570684534406 {
+    opacity:1 !important; /* was opacity:0 .. THIS GIVES VISIBILITY TO UPPERMOST IMAGE */
+  }
+  @media (max-width: 767.95px) {
+    #slide-1570684534406 {
+      opacity:1 !important;
+   }
+  }
+  
+  /* slide calls to action text colors (svg arrow color filled with body text color, //fill: $bodyTxt;, line 978 in theme.scss.liquid .. just create own variable in Variables or Settings .. ref: 
+  1) https://blog.jim-nielsen.com/2019/generating-shades-of-color-using-css-variables/
+  2) https://stackoverflow.com/questions/51395179/svg-fill-with-css-variables
+  3) https://stackoverflow.com/questions/9529300/can-i-change-the-fill-color-of-an-svg-path-with-css) */
+  .button {
+    color:#b8b5a9 !important; /* WORKS */
+  }
+  /* NOT WORKING .. is svg fill, SO DISABLED SVG ARROW */
+  .symbol--arrow-right {
+    background-color:#b8b5a9 !important;
+    z-index:-1 !important;
+    display:none !important;
+  }
+  
+  /* ----------------------- */
+  /* MIDDLE TEXT SECTION INDUSTRIAL CHIC BG COLOR TO COVER WHITE */
+  #id-1570691463158 {
+    background-color:#474a56 !important;
+  }
+  /* PARENT DIV FOR ABOVE TWO SECTIONS TO COVER WHITE */
+  #page-content {
+    background-color:#474a56 !important;
+  }
+  /* ----------------------- */
+  
+  /* ----------------------- */
+  /* LOGO SECTION > #shopify-section-1613326161336370f1
+  LOGO SLIDE > #slide-1613326161336370f1-0
+  TEXT SECTION > #shopify-section-1613326814958c2958
+
+  NOTE: height not always responding to percentage, vh or em but responds to px and rem (targeting font) .. display: block issue?
+
+  https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7
+
+  LOGO HEIGHT ADJUSTMENT in industrial chic .. DESKTOP .. better controls in Slider cesction in theme.scss.liquid, line 6824, esp 6828-6836 .. got classes from slider-horizonral.liquid .. full edits in text file theme.liquid.new_W/LOGO/TEXT_MQ.txt */
+  /* ----------------------- */
+    
+  /* 4 */      
+  /* TEXT HEIGHT ADJUSTMENT in industrial chic .. TABLET */
+  @media (max-width: 949px) {
+  #shopify-section-1613326814958c2958 {
+    background-color:#474a56 !important;
+    max-height: 100vh !important;
+    /* margin-top: -20rem !important; */
+    z-index:9999 !important;
+    }
+  }
+    
+  /* 7 */
+  /* BG FOR TEXT BELOW SLIDESHOW HORIZONTAL (INDUSTRIAL CHIC), VERY LARGE SCREEN ..  #shopify-section-1613326814958c2958 #id-1613326814958c2958 .rich-text__body .. contain normally is best .. but when making bg image VERY WIDE and changing to cover, then it behaves as you want it to .. so just bring in bolts closer to center while still keeping image very wide .. has to do with ASPECT RATIO of contain vs cover .. OR wher volts disappear do new image with media query */
+  #id-1613326814958c2958 {
+    /* min-width:120vw !important;*/
+    /* z-index: -1 !important; */
+    /* excessive padding SHRINKS/SQUEEZES CONTAINER .. SOlUTION FOR OLD MILW IMAGE + BG IMG CONFLICT .. also BELL CURVE > if too much passing it begins expanding again */
+    padding: 100px 50px 100px 50px !important;
+    }
+  /* SAME BUT ZEROING OUT MARGINS FOR MOBILE */
+  @media (max-width: 768px) { 
+    #id-1613326814958c2958 {
+      /* min-width:120vw !important;*/
+      /* z-index: -1 !important; */
+      /* excessive padding SHRINKS/SQUEEZES CONTAINER .. SOlUTION FOR OLD MILW IMAGE + BG IMG CONFLICT .. also BELL CURVE > if too much passing it begins expanding again */
+      padding: 100px 0px 100px 0px !important;
+      }
+    }
+  
+  /* 8 */  
+  /* INDUSTRIAL CHIC BG IMG, LARGE DESKTOP */  
+  @media (min-width: 1551px) {
+    #id-1613326814958c2958 {
+      background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG.jpg?v=1613547857') !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: 50% 50% !important; /* x,y */
+      z-index: 9999 !important;
+      background-color:#474a56 !important;
+      /* width: 10vw !imporant; */
+      /* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+    }
+  }
+  /* INDUSTRIAL CHIC BG IMG, LAPTOP TO LARGE DESKTOP */  
+  @media (min-width: 1180px) and (max-width: 1550px) {
+    #id-1613326814958c2958 {
+      background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_SMALL_3149d5c0-1791-4e1e-8643-ae9a1a508d47.jpg?v=1613549951') !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: 50% 50% !important; /* x,y */
+      z-index: 9999 !important;
+      background-color:#474a56 !important;
+      /* width: 10vw !imporant; */
+      /* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+    }
+  }
+  /* INDUSTRIAL CHIC BG IMG, UNDER LAPTOP */  
+  @media (min-width: 950px) and (max-width: 1179px) {
+    #id-1613326814958c2958 {
+      background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_EVEN_SMALLER.jpg?v=1613551503') !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: 50% 50% !important; /* x,y */
+      z-index: 9999 !important;
+      background-color:#474a56 !important;
+      /* width: 10vw !imporant; */
+      /* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+    }
+  }
+  /* INDUSTRIAL CHIC BG IMG, SMALL */  
+  @media (max-width: 949px) {
+    #id-1613326814958c2958 {
+      background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg_W_IMG_EVEN_SMALLER.jpg?v=1613551503') !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: 50% 50% !important; /* x,y */
+      z-index: 9999 !important;
+      background-color:#474a56 !important;
+      /* width: 10vw !imporant; */
+      /* width units, https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+    }
+  }
+    
+  /* 9 */
+  /* SHRINKING LOGO WITH PADDING JUST AS WITH TEXT BELOW .. FOR GALAZY FOLD */
+  @media (min-width: 280px) and (max-width: 281px) {  
+    #slide-1613326161336370f1-0 {
+      max-height: 90vh !important;
+    }
+  }
+  </style>
+
+<!-- BEGIN XO GALLERY -->
+{% include "xo-gallery" %}
+<!-- END XO GALLERY -->
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %} customer-logged-in {% endif %} template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} no-touch clearfix">
+	
+	{% section 'announcement-bar' %}
+
+	{% section 'sidebar' %}
+
+	<div id="content-holder">
+
+		<main id="content" role="main">
+          
+          	<div class="imgcon">
+              <!-- LOGO 1 -->
+              <!-- <div class="imgfloat"><img src="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1592266940"></div> -->
+              <!-- LOGO 2 -->
+              <!-- <div class="imgfloat"><img src="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo.png?v=1612603068"></div> -->
+		    </div>
+
+			{{ content_for_layout }}
+
+			{% section 'text-columns-with-icons' %}
+			{% section 'footer' %}
+
+		</main>
+
+	</div>
+
+	{% section 'popup' %}
+
+	<script type="text/javascript">
+
+		window.shop_money_format = "{{ shop.money_format }}";
+		window.cart_action = "{{ settings.cart_action }}";
+
+		window.product_words_add_to_cart_button = "{{ 'products.page.add_to_cart_button' | t }}";
+		window.product_words_sold_out_variant = "{{ 'products.page.inventory.sold_out_variant' | t }}";
+		window.product_words_unavailable_variant = "{{ 'products.page.inventory.unavailable_variant' | t }}";
+		window.product_words_one_product = "{{ 'products.page.inventory.one_product' | t }}";
+		window.product_words_few_products = "{{ 'products.page.inventory.few_products' | t }}";
+		window.product_words_no_products = "{{ 'products.page.inventory.no_products' | t }}";
+		window.product_words_preorder = "{{ 'products.page.inventory.preoder' | t }}";
+		window.products_page_more_description_label = "{{ 'products.page.more_description_label' | t }}";
+		window.products_page_less_description_label = "{{ 'products.page.less_description_label' | t }}";
+		window.cart_add_error = "{{ 'cart.add_error' | t }}";
+		window.cart_general_error = "{{ 'cart.general_error' | t }}";
+
+		{% capture symbol_arrow %}{% include 'theme-symbols', icon: 'arrow-long' %}{% endcapture %}
+		window.symbol_arrow = '{{ symbol_arrow | strip_newlines }}';
+
+	</script>
+
+	<script type="text/javascript">
+		if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) {
+		  $('body').removeClass('no-touch').addClass('touch');
+		} 
+	</script>
+
+	<script type="text/javascript" src="{{ 'theme.min.js' | asset_url }}"></script>
+
+	<span class="cart-overlay-background"></span>
+	<span class="menu-overlay-background"></span>
+
+	<noscript><style type="text/css">.ll-fallback{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:99}#shopify-section-popup{display:none!important}.product-gallery--slider{height:auto}</style></noscript>
+
+</body>
+</html>

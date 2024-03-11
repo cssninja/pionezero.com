@@ -1,0 +1,158 @@
+<link href="//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic" rel="stylesheet" type="text/css"/>
+
+<style>
+  /* HOME ICON */
+.flexcon {
+  display: flex;
+  justify-content:flex-end;
+  z-index: 9999 !important;
+  background:#474A56;
+  position: fixed;
+  display: block;
+  top: -2%;
+  right: 0;
+  width: 3.3%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  height: 56px;
+  align-items: right;
+  padding: 0 10px;
+  cursor:pointer;
+ }
+/* BACKGROUND IMAGE */  
+.oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header.jpg?v=1612608114') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 8999 !important;
+   background-color:#474a56 !important;
+  }
+@media (max-width: 1060px) {
+  .flexcon {
+    display:none !important;
+}
+/* FONT-BASED TITLE */
+.flexcon2 {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 9999 !important;
+  background:#474A56;
+  position: fixed;
+  display: block;
+  top: -2%;
+  right: 0;
+  width: 50%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  height: 56px;
+  align-items: left;
+  padding: 0 10px;
+  cursor:pointer;
+  color:#b8b5a9;
+ }
+
+@import url(//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic);
+
+@font-face {
+  font-family: "Teutonic"; src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot");
+  src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot?#iefix") format("embedded-opentype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff2") format("woff2"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff") format("woff"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.ttf") format("truetype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.svg#Teutonic") format("svg");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+   unicode-range: U+000-5FF;
+}
+</style>
+<!-- <div class="oldplate"></div> -->
+<div class="flexcon">
+  <a href="https://thefactoryonbarclay.com" style="font-size:2.2em;color:#b8b5a9 !important;display:block;">&#x2302;</a>
+</div>
+<div class="flexcon2">
+  <a href="https://thefactoryonbarclay.com">The Factory on Barclay</a>
+</div>
+
+{% if section.settings.bar_show %}
+
+	{% if section.settings.bar_show_on_homepage == false or template == 'index' and section.settings.bar_show_on_homepage %}
+		
+		<a class="announcement oldplate" {% unless section.settings.bar_link == blank %} href="{{ section.settings.bar_link | escape }}" {% endunless %}>
+			<span class="announcement__text oldplate">{{ section.settings.bar_message | escape }}</span>
+  		</a>
+		{% if section.settings.bar_show_dismiss %}
+			<span class="announcement__exit" aria-label="{{ 'general.close' | t }}">{% include 'theme-symbols', icon: 'close' %}</span>
+		{% endif %}
+
+		{% style %}
+			.announcement {
+				background: {{ section.settings.bar_bgcolor }};
+				color: {{ section.settings.bar_txtcolor }};
+			}
+			.announcement__exit polygon {
+				fill: {{ section.settings.bar_txtcolor }};
+			}
+			{% if section.settings.bar_show_dismiss %}
+				.announcement {
+					padding-right: 40px;
+				}
+			{% endif %}
+		{% endstyle %}
+
+    <script type="text/javascript">
+      var ad = localStorage.getItem('announcement-dismissed');
+      if ( ad != 'true' ) {
+        jQuery('body').addClass('show-announcement-bar');
+      }
+    </script>
+
+	{% endif %}
+
+{% endif %}
+{% schema %}
+  {
+    "name": "Announcement bar",
+    "class": "mount-announcement",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bar_show",
+        "label": "Show announcement bar",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bar_show_on_homepage",
+        "label": "Show only on homepage",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bar_show_dismiss",
+        "label": "Show dismiss button",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "bar_message",
+        "label": "Content",
+        "default": "Use this bar for a short, important announcement."
+      },
+      {  
+        "type": "url",
+        "id": "bar_link",
+        "label": "Link"
+      },
+      {
+        "type": "color",
+        "id": "bar_bgcolor",
+        "label": "Background color",
+        "default": "#111111"
+      },
+      {
+        "type": "color",
+        "id": "bar_txtcolor",
+        "label": "Text color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+{% endschema %}

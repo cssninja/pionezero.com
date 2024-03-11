@@ -1,0 +1,86 @@
+<style type="text/css"><!--
+/* NOTE: DO NOT COPY CODE FROM SHOPIFY .. THEY DELETE VISIBILITY OF CODE, ALTHOUGH ITS STILL USED */
+
+/* MAKES LARGE LOGO DISAPPEAR .. targets HTML of Shopify coded page, NOT this page */
+.imgcon {
+  display: none !important;
+}
+
+/* TITLE SIZE .. targets HTML of Shopify coded page, NOT this page */
+.title {
+  /* margin-top:100px !important; */
+  text-align:center !important;
+}
+@media (min-width: 1400px) {
+.title {
+  /* margin-top:180px !important; */
+  text-align:center !important;
+ }
+}
+@media (min-width: 1024px) {
+.rte {
+  margin-left:100px !important;
+ }
+}
+
+/* thanks to: https://community.shopify.com/c/Shopify-Design/Make-Image-Full-Width-in-Debut-Theme/td-p/483823 */
+@media (max-width: 450px) {
+.fullimg {
+  width: 108vw !important;
+  margin-left: calc( 50% - 55vw) !important;
+  max-width: 108vw !important;
+ }
+}
+@media (min-width: 450.95px) {
+.fullimg {
+  margin-left: -5% !important;
+ }
+}
+
+/* ANIMATED  LINKS .. targets THIS PAGE'S CODE */
+/* thanks to https://ianlunn.github.io/Hover/ */
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  /* vertical-align: middle; */
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background:#e8e8e7 !important; /* ADDED .. LIGHT */
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #474a56; /* DARK */
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: #e8e8e7 /* LIGHT */
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+--></style>
+<!-- <div class="robin-pro fullimg" id="428f6667-6838-45e8-88ef-7e2875b22eea"></div> -->
+<div class="xo-gallery fullimg" data-id="1"></div>
+<p style="margin: 50px 0px 50px 0px;"><strong>Credits:</strong> images courtesy of <a href="https://www.lindsaystayton.photos/" class="hvr-sweep-to-right" style="border: 0 !important;">Lindsay Stayton Photography</a></p>

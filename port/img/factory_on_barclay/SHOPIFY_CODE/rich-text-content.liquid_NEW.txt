@@ -1,0 +1,141 @@
+<style type="text/css">
+/* IMG OF OLD MILWAUKEE WITH CONTAINER */
+@media (min-width: 415px) {    
+.flexOM {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap !important;
+  z-index: 1 !important;
+  background:#474A56;
+  /* background-color: transparent !important; */
+  position: relative;
+  display: block;
+  top: 0%;
+  left: 0;
+  /* orig w, h is 444px both .. 20vw and 40vh works */
+  width: 400px !important;
+  height: 239px !important;
+  /* top-bottom, right-left .. padding shrinks img */
+  padding: 0px 0px 0px 0px;
+  cursor:pointer;
+  float:left !important;
+ }
+.oldmilw {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/2019-08-02_EDIT.jpg?v=1614224668') !important;
+   background-repeat: no-repeat !important;
+   background-size: cover !important;
+   background-position: 50% 50% !important; /* x,y */
+   /* is not straight forward 100%, 100% but is 87%, 80% when container padding is 0px 0px 0px 30px */
+   width: 100% !important;
+   height: 100% !important;
+   border: 20px solid #3e4047;
+   border-radius: 20px;
+   margin-left: 0px !important;
+  }
+}
+/* SURFACE DUO FIX */  
+@media (min-width: 540px) and (max-width: 541px) {    
+  .flexOM {
+    float:none !important;
+  }
+}
+/* MOBILE 414px and under */
+@media (max-width: 414px) {  
+.flexOM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap !important; */
+  z-index: 1 !important;
+  background:#474A56;
+  /* background-color: transparent !important; */
+  position: relative;
+  display: block !important;
+  /* top: 0%; */
+  /* left: 0; */
+  /* orig w, h is 444px both .. 20vw and 40vh works */
+  width: 400px !important;
+  height: 239px !important;
+  /* top-bottom, right-left .. padding shrinks img */
+  /* padding: 0px 0px 0px 0px; */
+  cursor:pointer;
+  float:right !important;
+  text-align:center !important;
+  margin: 0px -50px 0px 0px !important;
+ }
+.oldmilw {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/2019-08-02_EDIT.jpg?v=1614224668') !important;
+   background-repeat: no-repeat !important;
+   background-size: cover !important;
+   background-position: 50% 50% !important; /* x,y */
+   /* is not straight forward 100%, 100% but is 87%, 80% when container padding is 0px 0px 0px 30px */
+   width: 100% !important;
+   height: 100% !important;
+   /* border: 20px solid #3e4047; */
+   /* border-radius: 20px; */
+   /* margin-left: 20px !important; */
+   display: block !important; /* margin doesnt work for INLINE elements, https://stackoverflow.com/questions/7589917/how-to-force-html-css-padding-margin-on-an-element */
+  }
+}
+  
+/* excessive padding SHRINKS/SQUEEZES CONTAINER .. SOlUTION FOR OLD MILW IMAGE + BG IMG CONFLICT .. also BELL CURVE > if too much passing it begins expanding again .. in theme.liquid */
+</style>
+
+<div id="id-{{ id }}" class="content-section {% unless image == blank %} gutter--{% if gutter_enabled and image %}on{% else %}off{% endif %} {% else %} gutter--on {% endunless %} rich-text rich-text--{{ image_position }} rich-text--media-{% unless image == blank %}on{% else %}off{% endunless %}">
+
+  <div class="rich-text__content" style="text-align: {{ text_alignment }}">
+
+    {% unless title == blank %}
+      <h2 class="rich-text__title {% if text_size == 'regular' %} h1 {% elsif text_size == 'large' %} h0 {% else %} hh {% endif %}">{{ title | escape }}</h2>
+    {% endunless %}
+
+    {% unless body == blank %}
+    
+    <!-- ADDED: FLOATING OLD MILWAUKEE IMAGE -->
+    <div class="flexOM">
+      <div class="oldmilw"></div>
+    </div>
+    
+    
+      <div class="rich-text__body rte" style="text-align:left !important;margin:300px 0px -100px 10px !important;">{{ body }}</div>
+    {% endunless %}
+
+  </div>
+  
+  {% unless image == blank%}
+    <div class="rich-text__media">
+      {% include 'lazy-image', image: image, type: 'background' %}
+    </div>
+    {% style %}
+      #id-{{ id }} .rich-text__media {
+        height: {{ image_height }};
+      }
+    {% endstyle %}
+  {% endunless %}
+
+</div>
+
+{% if color_bg != 'rgba(0,0,0,0)' %}
+  {% style %}
+    #id-{{ id }} .rich-text__content,
+    #id-{{ id }}.rich-text--media-off {
+      background: {{ color_bg }};
+    }
+    #id-{{ id }}.rich-text--media-off {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  {% endstyle %}
+{% endif %}
+
+{% if color_text != 'rgba(0,0,0,0)' %}
+  {% style %}
+    #id-{{ id }} {
+      color: {{ color_text }};
+    }
+    #id-{{ id }} a {
+      color: {{ color_text }};
+    }
+  {% endstyle %}
+{% endif %}

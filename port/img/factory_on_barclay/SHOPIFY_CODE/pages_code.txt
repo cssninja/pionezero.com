@@ -1,0 +1,52 @@
+<p><a href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/factory_ss.jpg?v=1579598218" class="hvr-sweep-to-right" style="border: 0 !important;"> The Factory at Barclay full width screensaver</a></p>
+<p><a href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/1910_map.jpg?v=1579598343" class="hvr-sweep-to-right" style="border: 0 !important;"> 1910 map of old Milwaukee</a></p>
+<style type="text/css"><!--
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #717171; /* was #FEFEF5 #2098D1 #D7D7C5 #717171 */
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: #000; /* was white */
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* thanks to https://ianlunn.github.io/Hover/ */
+-->
+
+/* disables floating logo */
+.imgcon {
+  display:none !important;
+}
+--></style>

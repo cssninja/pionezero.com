@@ -1,0 +1,350 @@
+================================
+
+BUILDING ICON IN sidebar.liquid (this is the old one .. NEW ONE in sidebar.liquid_new.txt )
+
+** SAVE FOR OPTION OF SIDEBAR BUILDING ICON
+
+<style type="text/css">
+  
+/* disables text type logo */
+.logo .logo__text {
+    display: none !important;
+}
+/* disables shopping cart icon */
+.sidebar__cart-handle {
+    display: none !important;
+}
+  
+/* building icon desktop .. can set icon/logo in sections > sidebar */
+.logo__image {
+    position: relative !important;
+    /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/building.jpg?v=1579426536);
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    top:0% !important;
+    margin: 0px 0px 0px 0px !important;
+    height: 50px !important;
+    max-width:130px !important;
+    /* z-index:2000 !important; */
+}
+/* vintage background, OPAQUE ART, use Tasty Bites as model */
+@media (max-width: 5000px) /* was 948px */
+.sidebar__container {
+    position: relative !important;
+    background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/vintage_bg2.jpg?v=1579579372);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; /* v, h */
+    height: 66px !important;
+ }
+}
+  
+/* logo tablet */
+@media (max-width: 5000px) { /* was 948px */
+.logo__image {
+    display: none !important;
+ }
+/* logo mobile */
+@media (max-width: 5000px) { /* was 296px */
+.logo__image {
+    display: none !important;
+ }
+}
+  
+/* line 214 in theme.scss.liquid changed set underline animation (background-size) to 0%, was 100% */
+/* line 2387 in theme.scss.liquid changed 1set footer links underline to 0px .. was 1px .. they are using a bottom border for an underline */
+  
+/* raises content over sidebar in tablet and mobile, z-index -1 */
+@media (max-width: 5000px) { /* was 948px */
+#content {
+  margin-top: -66px !important;
+  position: absolute !important;
+  z-index: 1 !important;
+ }
+}
+  
+/* makes cream background transparent */
+@media (max-width: 5000px) { /* was 948px */
+.sidebar__container {
+    position: relative !important;
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    border:0 !important;
+ }
+}
+@media (max-width: 5000px) { /* was 948px */
+.sidebar__responsive-container {
+    position: relative !important;
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    border:0 !important;
+ }
+}
+  
+/* give 3 bar menu cream background, tablet */
+@media (max-width: 1024px) {
+.sidebar__menu-handle {
+    background:#fefef5 !important;
+    border-radius: 3px;
+    width:1.95em;
+    padding: 5px 1px 0px 5px !important;
+ }
+}
+/* give 3 bar menu cream background when sidebar is disabled for new horizontal menu, desktop */
+@media (min-width: 1025px) and (max-width: 5000px) {
+.sidebar__menu-handle {
+    background:#fefef5 !important;
+    border-radius: 3px;
+    width:1.65em;
+    padding: 5px 1px 0px 5px !important;
+ }
+}
+/* fixes bottom white border */
+@media (max-width: 5000px) {
+.sidebar {
+    border:0 !important;
+ }
+}
+  
+/* breaks sidebar early to hide for new horizontal flex menu >
+  
+  1) line 234 in theme.scss.liquid changed from $breakSidebarAt: 948px; to $breakSidebarAt: 4000px;
+  2) line 145 (below) building.jpg disabled
+  3) line 25 948px to 5000px
+  4) line 37 948px to 5000px
+  5) line 42 296px to 5000px
+  6) line 52 948px to 5000px
+  7) line 61 948px to 5000px
+  8) line 69 948px to 5000px
+  
+  9) fixes 3 bar menu for mobile, tablet, desktop
+  
+  */
+  
+/* increases sidebar secondary menu font size for tablet and mobile */
+@media (max-width: 1023px) {
+.secondary-menu .sidebar__menu {
+    font-size: 20px !important; /* was 17.14286px */
+    line-height: 1;
+ }
+}
+/* increases sidebar secondary menu font size for desktop when sidebar is disabled */
+@media (min-width: 1024px) {
+.secondary-menu .sidebar__menu {
+    font-size: 26px !important; /* was 17.14286px */
+    line-height: 1;
+ }
+}
+  
+</style>
+
+
+
+
+
+
+
+
+================================
+
+FLOATING LOGO (in theme.liquid .. also stored in theme.liquid_new.txt)
+
+<style type="text/css">
+    .imgcon {
+      display:flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-direction: row !important;
+      /* text-align:center; */
+      width: 100% !important;
+      margin: 0%; /* v,h */
+    }
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 2% !important;
+      width: 40% !important;
+      opacity:0.87;
+      z-index:1000 !important;
+    }
+   @media (max-width: 948px) {
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 2% !important;
+      width: 80% !important;
+      z-index:1000 !important;
+     }
+    }
+    /* thanks to: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+       https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+
+    /* line 2249 in theme.scss.liquid changed 40px to 46 px for announcement bar */
+  </style>
+
+          	<div class="imgcon">
+              <div class="imgfloat"><img src="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538"></div>
+		    </div>
+
+
+
+
+
+
+
+
+================================
+
+NEW FLEX MENU (in theme.liquid)
+
+    /* new flex menu, thanks to https://www.w3schools.com/csS/css3_flexbox.asp */
+    @media (min-width: 949px) {
+    .flex-container {
+      position: absolute !important; /* THIS made the background transparent */
+      display:flex !important;
+      flex-direction: row !important;
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+      /* text-align:center; */
+      width: 97% !important;
+      margin: 0% 0% 0% 0%; /* v,h */
+      height: 0px !important;
+      background: rgba(255, 255, 255, 0) !important;
+      z-index:2000 !important;
+      }
+     }
+    @media (max-width: 948px) {
+    .flex-container {
+      display:none !important;
+      }
+     }
+    /* remember flex takes each item, so the styles below are for single divs */
+    @media (min-width: 949px) {
+    .flex-container > div {
+      position: relative !important;
+      width: 70px;
+      margin: 10px;
+      text-align: center;
+      font: inherit;
+      font-size: 14px;
+      color: #fefef5;
+      line-height: 14px;
+      text-decoration: none;
+      opacity:0.9;
+      background: rgba(255, 255, 255, 0) !important;
+      z-index:2000 !important;
+       }
+      }
+    @media (max-width: 948px) {
+    .flex-container > div {
+      display:none !important;
+      }
+     }
+  
+/* link properties
+   ref: https://www.w3schools.com/css/css_syntax.asp
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+*/
+    .flex-container > div a {
+      font: inherit;
+      font-size: 14px;
+      color: #fefef5;
+      line-height: 14px;
+      text-decoration: none;
+      /* border-bottom: 1px solid; */
+      opacity:0.9;
+       }
+
+=-=-=-=-=-=-=-
+place after <div id="content-holder">
+=-=-=-=-=-=-=-
+
+	<div id="content-holder">
+      
+            <div class="flex-container">
+              <div><a href="/">Home</a></div>
+              <div>About us</div>
+              <div>Plan</div>
+              <div>Vendors</div>
+              <div>Contact</div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+TALK ABOUT YOUR BRAND
+
+div ID > shopify-section-1570691463158
+
+    /* desktop */
+    .creamcity {
+      position: absolute !important;
+      background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/creamcity.jpg?v=1580494574);
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      /* top: 2% !important; */
+      width: 100% !important;
+      z-index:1 !important;
+    }
+   /* tablet, mobile */
+   @media (max-width: 948px) {
+    .creamcity {
+      position: absolute !important;
+      background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/creamcity.jpg?v=1580494574);
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      /* top: 2% !important; */
+      width: 100% !important;
+      z-index:1 !important;
+     }
+    }
+
+-
+
+    /* desktop */
+    #id-1570691463158 {
+      background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/creamcity.jpg?v=1580494574) !important;
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; /* v, h */
+      width: 100% !important;
+      min-height: 10vh;
+      z-index:2000 !important;
+    }
+
+-
+removing tablet and mobile
+
+  /* removes image section in tablet and mobile */
+   @media (max-width: 1024px) {
+     .rich-text__media {
+       display: none !important;
+    }
+     .rich-text__content {
+      width: 100%;
+     }
+    }
+
+
+
+
+

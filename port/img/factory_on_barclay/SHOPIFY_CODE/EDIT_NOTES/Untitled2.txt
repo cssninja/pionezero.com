@@ -1,0 +1,88 @@
+/* BG FOR TEXT BELOW SLIDESHOW HORIZONATAL (INDUSTRIAL CHIC) */
+#shopify-section-1613326814958c2958 {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/industrial_chic_bg.jpg?v=1613461102') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 7999 !important;
+   background-color:#474a56 !important;
+  }
+
+--
+
+<style type="text/css">
+.flexOM {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 9999 !important;
+  background:#474A56;
+  /* background-color: transparent !important; */
+  position: relative;
+  display: block;
+  top: 0%;
+  left: 0;
+  width: 444px !important;
+  height: 590px !important;
+  align-items: left;
+  padding: 10px 10px;
+  cursor:pointer;
+ }
+
+.oldmilw {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/Yesterday_s_Milwaukee__German_Market_Early_1880s.jpeg?v=1613476477') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 0% !important; /* x,y */
+   width: 100% !important;
+   height: 100% !important;
+  }
+</style>
+
+<div class="flexOM">
+  <div class="oldmilw"></div>
+</div>
+
+--
+WORKED
+
+<style type="text/css">
+.flexOM {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 9999 !important;
+  background:#474A56;
+  /* background-color: transparent !important; */
+  position: relative;
+  display: inline-block;
+  top: 0%;
+  left: 0;
+  width: 444px !important;
+  height: 590px !important;
+  align-items: left;
+  padding: 10px 10px;
+  cursor:pointer;
+  float:right !important;
+ }
+
+.oldmilw {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/Yesterday_s_Milwaukee__German_Market_Early_1880s.jpeg?v=1613476477') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 0% !important; /* x,y */
+   width: 300px !important;
+   height: 300px !important;
+   float:right !important;
+   padding:10px !important;
+   margin-left:10px !important;
+  }
+</style>
+
+    {% unless body == blank %}<div class="oldmilw"></div>
+      <div class="rich-text__body rte">{{ body }}
+
+
+
+
+
+
+

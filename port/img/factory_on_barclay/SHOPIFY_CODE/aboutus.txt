@@ -1,0 +1,262 @@
+<style type="text/css">
+
+/* NOTE: DO NOT COPY CODE FROM SHOPIFY .. THEY DELETE VISIBILITY OF CODE, ALTHOUGH ITS STILL USED */
+
+/* MAKES LARGE LOGO DISAPPEAR .. targets HTML of Shopify coded page, NOT this page */
+.imgcon {
+  display: none !important;
+}
+
+/* CELTIC ILLUSTRATION TOP .. targets THIS PAGE'S CODE */
+@media (min-width: 1280px) {
+#about-us {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  /* celtic_border_desk_PREP.svg */
+  background-image: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/celtic_border_desk_PREP.svg?v=1584643419') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /* background-attachment: fixed !important; */
+  /* width:100% !important; */
+  /* height:100% !important; */
+  /* margin: 0px 0px 0px 0px !important; */
+  background-position: 0% 0% !important; /* only helps with centering in mobile */
+  background-color:#FFFEF5 !important;
+  }
+}
+@media (min-width: 450px) and (max-width: 1279.95px) {
+#about-us {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  /* celtic_border_desk_PREP.svg */
+  background-image: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/celtic_border_desk_PREP.svg?v=1584643419') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /* background-attachment: fixed !important; */
+  /* width:100% !important; */
+  /* height:100% !important; */
+  /* margin: 0px 0px 0px 0px !important; */
+  background-position: 0% 0% !important; /* only helps with centering in mobile */
+  background-color:#FFFEF5 !important;
+  }
+}
+@media (max-width: 449.95px) {
+#about-us {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  /* celtic_border_sm_mob_PREP.svg*/
+  background-image: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/celtic_border_sm_mob_PREP.svg?v=1584643818') !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-attachment: fixed !important;
+  /* width:100% !important; */
+  /* height:100% !important; */
+  /* margin: 0px 0px 0px 0px !important; */
+  background-position: 0% 0% !important; /* only helps with centering in mobile */
+  background-color:#FFFEF5 !important;
+  }
+}
+/* thanks to: https://stackoverflow.com/questions/26861189/how-to-set-portrait-and-landscape-media-queries-in-css */
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 1100px) 
+and (orientation : landscape) {
+#about-us {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  /* celtic_border_sm_mob_lands_PREP.svg */
+  background-image: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/celtic_border_sm_mob_lands_PREP.svg?v=1584644320') !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-attachment: fixed !important;
+  /* width:100% !important; */
+  /* height:100% !important; */
+  /* margin: 0px 0px 0px 0px !important; */
+  background-position: 0% 0% !important; /* only helps with centering in mobile */
+  background-color:#FFFEF5 !important;
+  }
+}
+
+/* TITLE SIZE .. targets HTML of Shopify coded page, NOT this page */
+.title {
+  margin-top:100px !important;
+  text-align:center !important;
+}
+@media (min-width: 1400px) {
+.title {
+  margin-top:180px !important;
+  text-align:center !important;
+ }
+}
+@media (min-width: 1024px) {
+.rte {
+  margin-left:100px !important;
+ }
+}
+
+/* FONT AWESOME ICON .. targets THIS PAGE'S CODE */
+.faicon {
+  font-size: 12em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left: auto;
+  padding-left:30px;
+}
+/* between devices fix */
+@media (min-width: 450px) and (max-width: 1100px) {
+.faicon {
+  font-size: 7em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media (max-width: 450px) {
+.faicon {
+  font-size: 9em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media (max-width: 350px) {
+.faicon {
+  font-size: 7em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media only screen
+and (min-device-width : 300px)
+and (max-device-width : 1100px)
+and (orientation : landscape) {
+.faicon {
+  font-size: 9em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+  }
+ }
+/* FONT AWESOME ICON CONTAINER .. targets THIS PAGE'S CODE */
+.icondiv {
+  width:80%;
+  top:15% !important;
+}
+@media (max-width: 450px) {
+.icondiv {
+  width:100%;
+  top:10% !important;
+ }
+}
+
+/* TEXT BACKGROUND .. targets THIS PAGE'S CODE */
+/* txtbg not needed tor this page .. hvr-sweep-to-right used instead .. txtbg is backup background for NON-LINKED TEXT */
+.txtbg {
+  background:#e8e8e7 !important; /* LIGHT */
+  color:#474a56 !important; /* DARK */
+  padding:4px !important;
+  text-decoration:none !important;
+  border:0 !important;
+}
+.txtbg a:hover {
+  background:#e8e8e7 !important; /* LIGHT */
+  color:#474a56 !important;  /* DARK */
+  padding:4px !important;
+  text-decoration:none !important;
+  border:0 !important;
+}
+
+/* ANIMATED  LINKS .. targets THIS PAGE'S CODE */
+/* thanks to https://ianlunn.github.io/Hover/ */
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  /* vertical-align: middle; */
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background:#e8e8e7 !important; /* ADDED .. LIGHT */
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #474a56; /* DARK */
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: #e8e8e7 /* LIGHT */
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/4ec9b2d4a4.js" crossorigin="anonymous"></script>
+
+<div id="about-us"></div>
+
+<h2>Our Industrial Chic Space</h2>
+
+<div class="icondiv"><i class="fas fa-book-open faicon"></i></div>
+
+<p>
+Dear Guest,
+</p>
+
+<p>
+Welcome to a place where industrial chic invites you. A place where you can revel in a gala that marks one of life’s milestones. Transform a typical night out into an enchanting evening — welcome to the Factory on Barclay (The Factory).
+</p>
+
+<p>
+Hidden behind the facade of the Original Cheesehead Factory is a 6500 square foot venue space featuring a full service bar, private ceremony space, expansive catering kitchen, private bridal site and wrap around deck.
+</p>
+
+<p>
+Perhaps the most magical part of the Factory is the memories we create for up to 400 guests in our special-event hall. It’s ideal for corporate meetings and events, fundraisers, weddings, anniversaries, or any other cause for celebration. Our exposed cream city and calico brick, and floor-to-ceiling windows tell a rich and elegant history of the city.
+</p>
+
+<p>
+The Factory on Barclay is located in the Harbor District of Milwaukee’s Historic Walker’s Point, a neighborhood surrounded by an eclectic mix of micro- breweries and restaurants., industrial and manufacturing businesses . We’re located in the A.P. Green Refractory building, a 1909 architecural and historical landmark. Your special event deserves special attention. Operated by one of the most experienced and successful venue owners in Milwaukee, The Factory offers a professional and dedicated staff assist you throughout the planning process.
+</p>
+
+<p>
+Create the event of a lifetime - invite your guests to celebrate at The Factory!
+</p><br /><br /><br />
+
+<p>
+<a href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/factory_ss.jpg?v=1579598218" class="hvr-sweep-to-right" style="border:0 !important;"> The Factory at Barclay full width screensaver</a>
+</p>
+
+<p>
+<a href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/1910_map.jpg?v=1579598343" class="hvr-sweep-to-right" style="border:0 !important;"> 1910 map of old Milwaukee</a>
+<br /> (* The Factory on Barclay is located just to the left of the 'K' in the 'Lake Michigan' vertically on the lake .. it's a little ORANGE square so as to be located easier.)
+</p>
+
+<br /><br /><br />

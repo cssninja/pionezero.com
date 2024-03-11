@@ -1,0 +1,100 @@
+<style type="text/css">
+/* FONT AWESOME ICON .. targets THIS PAGE'S CODE */
+.faicon {
+  font-size: 12em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left: auto;
+  padding-left:30px;
+}
+/* between devices fix */
+@media (min-width: 450px) and (max-width: 1100px) {
+.faicon {
+  font-size: 7em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media (max-width: 450px) {
+.faicon {
+  font-size: 9em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media (max-width: 350px) {
+.faicon {
+  font-size: 7em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+ }
+}
+@media only screen
+and (min-device-width : 300px)
+and (max-device-width : 1100px)
+and (orientation : landscape) {
+.faicon {
+  font-size: 9em !important;
+  color:#e8e8e7 !important;
+  text-align: right;
+  float: right;
+  margin-left:auto;
+  }
+ }
+/* FONT AWESOME ICON CONTAINER .. targets THIS PAGE'S CODE */
+.icondiv {
+  width:80%;
+  top:15% !important;
+}
+@media (max-width: 450px) {
+.icondiv {
+  width:100%;
+  top:10% !important;
+ }
+}
+</style>
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/4ec9b2d4a4.js" crossorigin="anonymous"></script>
+
+<div class="icondiv"><i class="fas fa-home faicon"></i></div>
+
+-----------
+
+REDUCED
+
+<style type="text/css">
+/* FONT AWESOME ICON .. targets THIS PAGE'S CODE */
+.faicon {
+  font-size: 2em !important;
+  color:#fff !important;
+  text-align: left;
+  float: left;
+  margin-left: auto;
+  padding-left:30px;
+  z-index: 1000 !important;
+}
+/* FONT AWESOME ICON CONTAINER .. targets THIS PAGE'S CODE */
+.icondiv {
+  width:20%;
+  top:1% !important;
+  z-index: 1000 !important;
+}
+</style>
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/4ec9b2d4a4.js" crossorigin="anonymous"></script>
+
+<div class="icondiv"><i class="fas fa-home faicon"></i></div>
+
+
+
+
+

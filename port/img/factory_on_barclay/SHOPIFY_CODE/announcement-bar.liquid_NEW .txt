@@ -1,0 +1,237 @@
+<link rel="preload" as="font" href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867" type="font/woff" crossorigin="anonymous">
+
+<style type="text/css">
+/* HOME ICON */
+.flexcon {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 8999 !important;
+  /* background:#474A56; */
+  position: fixed;
+  display: block;
+  top: -1%;
+  left: 0;
+  width: 2%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  height: 56px;
+  align-items: left;
+  padding: 0 10px;
+  cursor:pointer;
+  background-color: transparent !important;
+ }
+/* BACKGROUND PLATE IMAGE, DESKTOP */
+.oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header_dark.jpg?v=1613543448') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 7999 !important;
+   background-color:#474a56 !important;
+   /* TO QUICKLY TARGET TEXT */
+   font-weight:bold;
+   font-size:1em !important;
+  }
+ /* BACKGROUND PLATE IMAGE, SM/LG TABLET */
+@media (min-width: 500px) and (max-width: 1024px) {
+  .oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header_tablet.jpg?v=1613459084') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 7999 !important;
+   background-color:#474a56 !important;
+   /* TO QUICKLY TARGET TEXT */
+   font-weight:bold;
+   font-size:1em !important;
+  }
+}
+/* BACKGROUND PLATE IMAGE, MOBILE */
+@media (max-width: 499px) {
+  .oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header_mobile.jpg?v=1613458453') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 7999 !important;
+   background-color:#474a56 !important;
+   /* TO QUICKLY TARGET TEXT */
+   font-weight:bold;
+   font-size:1em !important;
+  }
+}  
+@media (max-width: 1060px) {
+  .flexcon {
+    display:none !important;
+  }
+}
+
+/* OLD PLATE FONT-BASED TITLE, thanks to: https://www.freecodecamp.org/news/web-fonts-in-2018-f191a48367e8/ */
+@font-face {
+    font-family: 'Teutonic';
+    font-display: swap;
+    src: local('Teutonic Regular'),
+         url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff2?v=1613944867') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff?v=1613289049') format('woff');
+    font-weight: normal;
+    unicode-range: U+000-5FF;
+    font-style: normal;
+}
+/* DESKTOP */
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 1.8em !important;
+   display: flex !important;
+   justify-content:flex-end !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   right: 0 !important;
+   width: 36% !important; /* announcement text positioned in theme,scss.liquid starting on line 2239 OR styles on line 161 below */
+   height: 40px !important;
+   align-items: right !important;
+   padding: 5px 0px !important; /* top-bottom, right-left */
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   margin-right:0em !important;
+ }
+  /* @media (max-width: 1060px) {
+  .titlecon {
+    display:none !important;
+   }
+  } */
+/* SM DESKTOP */
+@media (max-width: 1060px) {
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 2em !important;
+   display: flex !important;
+   justify-content:center !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   /* right: 0 !important; */
+   width: 100% !important;
+   height: 40px !important;
+   align-items: center !important;
+   padding: 5px 0px !important;
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   text-align:center !important;
+ }
+}
+  
+ @media (max-width: 1060px) {
+  .gone {
+    display:none !important;
+   }
+  }
+
+</style>
+
+<!-- BACKGROUND PLATE IMAGE, in 2 places, with announcement classs below -->
+<div class="oldplate"></div>
+
+<!-- OLD PLATE FONT-BASED TITLE -->
+<div class="titlecon">
+  <a href="https://thefactoryonbarclay.com" style="color:#b8b5a9 !important;background-color: transparent !important;">The Factory on Barclay</a>
+</div>
+
+<!-- HOME ICON -->
+<div class="flexcon">
+  <a href="https://thefactoryonbarclay.com" style="font-size:2.2em;color:#b8b5a9 !important;display:block;">&#x2302;</a>
+</div>
+
+{% if section.settings.bar_show %}
+
+	{% if section.settings.bar_show_on_homepage == false or template == 'index' and section.settings.bar_show_on_homepage %}
+		
+        <!-- BACKGROUND PLATE IMAGE, in 2 places, in first div above .. announcement text positioned in theme,scss.liquid starting on line 2239 -->
+		<a class="announcement oldplate" {% unless section.settings.bar_link == blank %} href="{{ section.settings.bar_link | escape }}" {% endunless %}>
+			<span class="announcement__text gone" style="margin-left:-19em !important;">{{ section.settings.bar_message | escape }}</span>
+  		</a>
+		{% if section.settings.bar_show_dismiss %}
+			<span class="announcement__exit" aria-label="{{ 'general.close' | t }}">{% include 'theme-symbols', icon: 'close' %}</span>
+		{% endif %}
+
+		{% style %}
+			.announcement {
+				background: {{ section.settings.bar_bgcolor }};
+				color: {{ section.settings.bar_txtcolor }};
+			}
+			.announcement__exit polygon {
+				fill: {{ section.settings.bar_txtcolor }};
+			}
+			{% if section.settings.bar_show_dismiss %}
+				.announcement {
+					padding-right: 40px;
+				}
+			{% endif %}
+		{% endstyle %}
+
+    <script type="text/javascript">
+      var ad = localStorage.getItem('announcement-dismissed');
+      if ( ad != 'true' ) {
+        jQuery('body').addClass('show-announcement-bar');
+      }
+    </script>
+
+	{% endif %}
+
+{% endif %}
+{% schema %}
+  {
+    "name": "Announcement bar",
+    "class": "mount-announcement",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bar_show",
+        "label": "Show announcement bar",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bar_show_on_homepage",
+        "label": "Show only on homepage",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bar_show_dismiss",
+        "label": "Show dismiss button",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "bar_message",
+        "label": "Content",
+        "default": "Use this bar for a short, important announcement."
+      },
+      {  
+        "type": "url",
+        "id": "bar_link",
+        "label": "Link"
+      },
+      {
+        "type": "color",
+        "id": "bar_bgcolor",
+        "label": "Background color",
+        "default": "#111111"
+      },
+      {
+        "type": "color",
+        "id": "bar_txtcolor",
+        "label": "Text color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+{% endschema %}

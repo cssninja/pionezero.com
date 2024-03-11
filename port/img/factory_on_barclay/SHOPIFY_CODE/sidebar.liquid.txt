@@ -1,0 +1,150 @@
+<div class="sidebar">
+
+	<div class="sidebar__container sidebar__responsive-container">
+
+		<div class="sidebar__container-holder" style="flex: 1 0 auto;">
+
+	    <header class="logo">
+
+				{% if template == 'index' %}
+					<h1 itemscope itemtype="//schema.org/Organization">
+				{% else %}
+					<div itemscope itemtype="//schema.org/Organization">
+				{% endif %}
+
+					{% if section.settings.logo_src  %}
+
+						<a class="logo__image" href="/" itemprop="url">
+							<img src="{{ section.settings.logo_src | img_url: 'master' }}" alt="{{ shop.name }}" style="max-width: {{ section.settings.logo_width | escape }}px;" />
+						</a>
+
+					{% else %}
+
+						<a class="logo__text" href="/" itemprop="url">{{ shop.name }}</a>
+
+					{% endif %}
+
+				{% if template == 'index' %}
+					</h1>
+				{% else %}
+					</div>
+				{% endif %}
+
+	    </header>
+
+	    <div class="sidebar__menus">
+
+		    <nav class="primary-menu">
+					{% include 'sidebar-navigation', menu: menus[section.settings.menu_primary] %}
+	    	</nav>
+
+	    	<nav class="secondary-menu">
+
+					{% include 'sidebar-navigation', menu: menus[section.settings.menu_secondary] %}
+
+					{% if shop.customer_accounts_enabled %}
+		    		<ul class="sidebar__menu">
+		    			<li>
+			    			{% if customer %}
+			    				<a href="/account"><span class="underline-animation">{{ 'general.account_link.logged_in' | t }}</span></a>
+		    				{% else %}
+			    				<a href="/account/login"><span class="underline-animation">{{ 'general.account_link.logged_out' | t }}</span></a>
+								{% endif %}
+							</li>
+		    		</ul>
+	    		{% endif %}
+
+	    	</nav>
+
+				<span class="sidebar__menus-close hidden" aria-label="{{ 'general.close' | t }}">
+					{% include 'theme-symbols', icon: 'close' %}
+				</span>
+
+				<span class="sidebar__menus-back hidden" aria-label="{{ 'general.back' | t }}">
+					{% include 'theme-symbols', icon: 'arrow-left' %}
+				</span>
+
+	    </div>
+
+	    <div class="sidebar__responsive-handles">
+				
+				{% if section.settings.show_search %}
+					<span class="sidebar__search-handle">
+						<span class="icon icon-search" aria-hidden="true">{% include 'theme-symbols', icon: 'search' %}</span>
+					</span>
+				{% endif %}
+
+				<a href="/cart" class="sidebar__cart-handle" aria-label="{{ 'cart.title' | t }}" title="{{ 'cart.title' | t }}">
+					<span class="icon icon-cart" aria-hidden="true" style="height: 28px;">{% include 'theme-symbols', icon: 'cart' %}</span>
+					<span class="count" aria-hidden="true">{{ cart.item_count }}</span>
+				</a>
+
+				<span class="sidebar__menu-handle">
+					<span class="icon icon-menu" aria-hidden="true">{% include 'theme-symbols', icon: 'burger' %}</span>
+				</span>
+
+			</div>
+			
+			{% unless template contains 'cart' %}
+				<div class="sidebar__cart">
+					<div>
+						{% include 'cart-form', location: 'sidebar' %}
+						<span class="sidebar__cart-close" aria-label="{{ 'general.close' | t }}">
+							{% include 'theme-symbols', icon: 'close' %}
+						</span>
+					</div>
+				</div>
+			{% endunless %}
+
+		</div>
+
+		{% if section.settings.show_search %}
+			<div class="sidebar__footer">
+				{% include 'search-form' %}
+			</div>
+		{% endif %}
+
+	</div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Sidebar",
+    "class": "mount-sidebar mount-overlay",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_src",
+        "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "Custom logo width (in pixels)",
+        "min": 50,
+        "max": 250,
+        "step": 2,
+        "default": 100
+      },
+      {
+        "type": "link_list",
+        "id": "menu_primary",
+        "label": "Primary navigation",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "menu_secondary",
+        "label": "Secondary navigation",
+	      "info": "This menu won't show dropdown items"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

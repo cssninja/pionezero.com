@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js">
+<head>
+
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+
+	{% if settings.favicon %}
+		<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+	{% endif %}
+
+	{% capture seo_page_title %}
+    {% if template contains 'search' %}
+      {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name }}
+    {% else %}
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    {% endif %}
+  {% endcapture %}
+
+	<title>{{ seo_title }}</title>
+
+	{% if page_description %}
+		<meta name="description" content="{{ page_description | escape }}">
+	{% endif %}
+
+	{% include 'open-graph' %}
+  {% include 'microdata-schema' %}
+
+	<link rel="canonical" href="{{ canonical_url }}">
+
+	<link rel="preload" as="style" href="{{ 'theme.scss.css' | asset_url }}">
+	<link rel="preconnect" href="//fonts.shopifycdn.com">
+
+	{{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+
+	{{ content_for_header }}
+	
+  {% if template == 'customers/addresses' %}
+	  <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+	  <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+	{% endif %}
+
+	{{ '//code.jquery.com/jquery-3.4.1.min.js' | script_tag }}
+
+  <script type="text/javascript">
+
+  	function lightOrDark(a){if(a.match(/^rgb/)){a=a.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);var b=a[1];var c=a[2];a=a[3]}else a=+("0x"+a.slice(1).replace(5>a.length&&/./g,"$&$&")),b=a>>16,c=a>>8&255,a&=255;return 140<Math.sqrt(.299*b*b+.587*c*c+.114*a*a)?"#000":"#fff"};
+
+  	window.reorderSections = function() {
+	    $(".with-gutter").removeClass("with-gutter");
+	    $(".without-gutter").removeClass("without-gutter");
+	    $(".content-section.gutter--on").each(function() {
+	      $(this).parent().addClass("with-gutter");
+	      if ( $(this).hasClass('parent-has-inner-padding') ) {
+	      	$(this).parent().addClass('has-inner-padding');
+	      }
+	    });
+	    $(".content-section.gutter--off").each(function() {
+	      $(this).parent().addClass("without-gutter")
+	    });
+		};
+		$(document).ready(function() {
+		   window.reorderSections()
+		});
+
+  	2===performance.navigation.type&&location.reload(!0);
+  </script>
+  
+<style type="text/css">
+    /* container for placeing floating logo over image .. desktop, tablet, mobile */
+    .imgcon {
+      display:flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-direction: row !important;
+      /* text-align:center; */
+      width: 100% !important;
+      margin: 0%; /* v,h */
+    }
+    /* desktop */
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 2% !important;
+      width: 40% !important;
+      opacity:0.87;
+      z-index:1000 !important;
+    }
+   /* tablet, mobile */
+   @media (max-width: 948px) {
+    .imgfloat {
+      position: absolute !important;
+      /* background: url(https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538);
+      background-size:  !important;
+      background-repeat: no-repeat; */
+      top: 2% !important;
+      width: 80% !important;
+      z-index:1000 !important;
+     }
+    }
+    /* thanks to: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+       https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+       https://flexbox.help/
+       https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+     */
+
+    /* line 2249 in theme.scss.liquid changed 40px to 46 px for announcement bar */
+  
+    /* new flex menu, thanks to https://www.w3schools.com/csS/css3_flexbox.asp */
+    /* desktop */
+    @media (min-width: 949px) {
+    .flex-container {
+      position: absolute !important; /* THIS made the background transparent */
+      display:flex !important;
+      flex-direction: row !important;
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+      /* text-align:center; */
+      width: 97% !important;
+      margin: 0% 0% 0% 0%; /* v,h */
+      height: 0px !important;
+      background: rgba(255, 255, 255, 0) !important;
+      z-index:2000 !important;
+      }
+     }
+    /* tablet and mobile DISABLED */
+    @media (max-width: 948px) {
+    .flex-container {
+      display:none !important;
+      }
+     }
+    /* remember flex takes each item, so the styles below are for single divs .. desktop */
+    @media (min-width: 949px) {
+    .flex-container > div {
+      position: relative !important;
+      width: 70px;
+      margin: 10px;
+      text-align: center;
+      font: inherit;
+      font-size: 14px;
+      color: #fefef5;
+      line-height: 14px;
+      text-decoration: none;
+      opacity:0.9;
+      background: rgba(255, 255, 255, 0) !important;
+      z-index:2000 !important;
+       }
+      }
+     /* tablet and mobile DISABLED */
+    @media (max-width: 948px) {
+    .flex-container > div {
+      display:none !important;
+      }
+     }
+  
+/* link properties, desktop
+   ref: https://www.w3schools.com/css/css_syntax.asp
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+*/
+    .flex-container > div a {
+      font: inherit;
+      font-size: 14px;
+      color: #fefef5;
+      line-height: 14px;
+      text-decoration: none;
+      /* border-bottom: 1px solid; */
+      opacity:0.9;
+       }
+  
+/* disables 3 bar menu for NEW horizonal menu (in theme.liquid) */
+    @media (min-width: 949px) {
+    .sidebar__menu-handle {
+      display: none !important;
+ }
+}
+
+  </style>
+
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %} customer-logged-in {% endif %} template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} no-touch clearfix">
+	
+	{% section 'announcement-bar' %}
+
+	{% section 'sidebar' %}
+
+	<div id="content-holder">
+      
+            <div class="flex-container">
+              <div><a href="/">Home</a></div>
+              <div>About us</div>
+              <div>Plan</div>
+              <div>Vendors</div>
+              <div>Contact</div>
+            </div>
+
+		<main id="content" role="main">
+          
+          	<div class="imgcon">
+              <div class="imgfloat"><img src="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/floating_logo.png?v=1579764538"></div>
+		    </div>
+
+			{{ content_for_layout }}
+
+			{% section 'text-columns-with-icons' %}
+			{% section 'footer' %}
+
+		</main>
+
+	</div>
+
+	{% section 'popup' %}
+
+	<script type="text/javascript">
+
+		window.shop_money_format = "{{ shop.money_format }}";
+		window.cart_action = "{{ settings.cart_action }}";
+
+		window.product_words_add_to_cart_button = "{{ 'products.page.add_to_cart_button' | t }}";
+		window.product_words_sold_out_variant = "{{ 'products.page.inventory.sold_out_variant' | t }}";
+		window.product_words_unavailable_variant = "{{ 'products.page.inventory.unavailable_variant' | t }}";
+		window.product_words_one_product = "{{ 'products.page.inventory.one_product' | t }}";
+		window.product_words_few_products = "{{ 'products.page.inventory.few_products' | t }}";
+		window.product_words_no_products = "{{ 'products.page.inventory.no_products' | t }}";
+		window.product_words_preorder = "{{ 'products.page.inventory.preoder' | t }}";
+		window.products_page_more_description_label = "{{ 'products.page.more_description_label' | t }}";
+		window.products_page_less_description_label = "{{ 'products.page.less_description_label' | t }}";
+		window.cart_add_error = "{{ 'cart.add_error' | t }}";
+		window.cart_general_error = "{{ 'cart.general_error' | t }}";
+
+		{% capture symbol_arrow %}{% include 'theme-symbols', icon: 'arrow-long' %}{% endcapture %}
+		window.symbol_arrow = '{{ symbol_arrow | strip_newlines }}';
+
+	</script>
+
+	<script type="text/javascript">
+		if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) {
+		  $('body').removeClass('no-touch').addClass('touch');
+		} 
+	</script>
+
+	<script type="text/javascript" src="{{ 'theme.min.js' | asset_url }}"></script>
+
+	<span class="cart-overlay-background"></span>
+	<span class="menu-overlay-background"></span>
+
+	<noscript><style type="text/css">.ll-fallback{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:99}#shopify-section-popup{display:none!important}.product-gallery--slider{height:auto}</style></noscript>
+
+</body>
+</html>

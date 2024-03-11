@@ -1,0 +1,71 @@
+<div class="page-content">
+
+	<h1 class="title h0">{{ page.title }}</h1>
+
+    <div class="rte">
+			{{ page.content }}
+    </div>
+
+	{% form 'contact' %}
+
+		<h3>{{ 'general.contact_form.title' | t }}</h3>
+
+		{% if form.posted_successfully? %}
+			<p class="alert alert--success">{{ 'general.contact_form.success_message' | t }}</p>
+		{% endif %}
+
+		{% include 'form-errors' %}
+
+		<div class="krown-column-container one-third first">
+			<label for="contactFormName" class="hidden">{{ 'general.contact_form.name_label' | t }}</label>
+			<input type="text" id="contactFormName" name="contact[name]" placeholder="{{ 'general.contact_form.name_label' | t }}" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+		</div>
+
+		<div class="krown-column-container one-third">
+			<label for="contactFormEmail" class="hidden">{{ 'general.contact_form.email_label' | t }}</label>
+			<input type="email" id="contactFormEmail" name="contact[email]" placeholder="{{ 'general.contact_form.email_label' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+		</div>
+
+		<div class="krown-column-container one-third last">
+			<label for="contactFormPhone" class="hidden">{{ 'general.contact_form.phone_label' | t }}</label>
+			<input type="tel" id="contactFormPhone" name="contact[phone]" placeholder="{{ 'general.contact_form.phone_label' | t }}" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+		</div>
+  
+        <!-- ADDED, took out liquid/js placeholder code -->
+  		<div class="krown-column-container one-third first">
+			<label for="contactFormName" class="hidden">{{ 'general.contact_form.name_label' | t }}</label>
+			<input type="text" id="contactFormName" name="contact[Type of Event]" placeholder="Type of Event">
+		</div>
+
+		<div class="krown-column-container one-third first">
+			<label for="contactFormName" class="hidden">{{ 'general.contact_form.name_label' | t }}</label>
+			<input type="text" id="contactFormName" name="contact[Guest Count]" placeholder="Guest Count">
+		</div>
+  
+  		<div class="krown-column-container one-third first">
+			<label for="contactFormName" class="hidden">{{ 'general.contact_form.name_label' | t }}</label>
+			<input type="text" id="contactFormName" name="contact[Planned Date]" placeholder="Planned Date">
+		</div>
+        <!-- end -->
+  
+		<div class="krown-column-container one-whole first last">
+			<label for="contactFormMessage" class="hidden">{{ 'general.contact_form.message_label' | t }}</label>
+			<textarea rows="10" id="contactFormMessage" name="contact[body]" placeholder="{{ 'general.contact_form.message_label' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+		</div>
+		
+		<div class="krown-column-container first last">
+			<input type="submit" class="button button--solid" value="{{ 'general.contact_form.submit_label' | t }}">
+		</div>
+
+	{% endform %}
+
+</div>
+
+<script type="text/javascript">
+  $(window).on('load', function(){
+		if ( location.hash == '#contact_form' || location.hash == 'contact_form' ) {
+			$('html,body').animate({scrollTop: $('#contact_form').offset().top}, 300, 'easeInQuad');
+		}
+  });
+</script>
+

@@ -1,0 +1,593 @@
+----------
+GOOD
+----------
+
+https://stackoverflow.com/questions/55925496/pwa-best-practice-web-or-local-fonts/66132921#66132921
+
+<style type="text/css">
+
+@font-face {
+    font-family: 'Custom Font';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF;
+    /* Download only latin glyphs */
+    src:    local('Custom Font'),
+     url('/fonts/custom-font.woff') format('woff');
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Custom Font', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+</style>
+
+--
+https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff?v=1613289049
+
+--
+FROM SHOPIFY (works)
+
+<style type="text/css">
+/* HOME ICON */
+.flexcon {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 8999 !important;
+  /* background:#474A56; */
+  position: fixed;
+  display: block;
+  top: -1%;
+  left: 0;
+  width: 2%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  height: 56px;
+  align-items: left;
+  padding: 0 10px;
+  cursor:pointer;
+  background-color: transparent !important;
+ }
+/* BACKGROUND PLATE IMAGE */
+.oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header.jpg?v=1613307203') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 0999 !important;
+   background-color:#474a56 !important;
+   /* TO QUICKLY TARGET TEXT */
+   font-weight:bold;
+   font-size:1em !important;
+  }
+@media (max-width: 1060px) {
+  .flexcon {
+    display:none !important;
+  }
+}
+
+/* OLD PLATE FONT-BASED TITLE */
+@font-face {
+    font-family: 'Teutonic' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-display: swap !important;
+    /* Read next point */
+    unicode-range: U+000-5FF !important;
+    /* Download only latin glyphs */
+    src:local('Teutonic'),
+    url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.woff?v=1613289049') format('woff'),
+    url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/teutonic-regular.ttf?v=1613315294') format("truetype") !important;
+}
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 1.8em !important;
+   display: flex !important;
+   justify-content:flex-end !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   right: 0 !important;
+   width: 24% !important; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+   height: 40px !important;
+   align-items: right !important;
+   padding: 5px 0px !important;
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   margin-right:0em !important;
+ }
+  /* @media (max-width: 1060px) {
+  .titlecon {
+    display:none !important;
+   }
+  } */
+@media (max-width: 1060px) {
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 1.8em !important;
+   display: flex !important;
+   justify-content:center !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   /* right: 0 !important; */
+   width: 100% !important; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+   height: 40px !important;
+   align-items: center !important;
+   padding: 5px 0px !important;
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   text-align:center !important;
+ }
+}
+  
+ @media (max-width: 1060px) {
+  .gone {
+    display:none !important;
+   }
+  }
+
+</style>
+
+<div class="oldplate"></div>
+
+<div class="titlecon">
+  <a href="https://thefactoryonbarclay.com" style="color:#b8b5a9 !important;background-color: transparent !important;">The Factory on Barclay</a>
+</div>
+
+<!-- <div class="oldplate"></div> -->
+<div class="flexcon">
+  <a href="https://thefactoryonbarclay.com" style="font-size:2.2em;color:#b8b5a9 !important;display:block;">&#x2302;</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------
+FOUND IT
+----------
+
+https://www.onlinewebfonts.com/download/9879ce85dca006d1cdbbcfd22b722b80
+
+1
+<link href="//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic" rel="stylesheet" type="text/css"/>
+
+2
+@import url(//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic);
+
+3
+@font-face {font-family: "Teutonic"; src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot"); src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff") format("woff"), url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.svg#Teutonic") format("svg"); }
+
+or
+
+@font-face {
+@font-face {
+  font-family: "Teutonic"; src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot");
+  src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.svg#Teutonic") format("svg");
+}
+
+--
+FROM SHOPIFY (works)
+
+<link href="//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic" rel="stylesheet" type="text/css"/>
+
+<style type="text/css">
+/* HOME ICON */
+.flexcon {
+  display: flex;
+  justify-content:flex-start;
+  z-index: 8999 !important;
+  /* background:#474A56; */
+  position: fixed;
+  display: block;
+  top: -1%;
+  left: 0;
+  width: 2%; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+  height: 56px;
+  align-items: left;
+  padding: 0 10px;
+  cursor:pointer;
+  background-color: transparent !important;
+ }
+/* BACKGROUND PLATE IMAGE */
+.oldplate {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/oldplate_header.jpg?v=1613307203') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 50% !important; /* x,y */
+   z-index: 0999 !important;
+   background-color:#474a56 !important;
+   /* TO QUICKLY TARGET TEXT */
+   font-weight:bold;
+   font-size:1em !important;
+  }
+@media (max-width: 1060px) {
+  .flexcon {
+    display:none !important;
+  }
+}
+
+/* OLD PLATE FONT-BASED TITLE */
+@import url(//db.onlinewebfonts.com/c/9879ce85dca006d1cdbbcfd22b722b80?family=Teutonic);
+
+@font-face {
+  font-family: "Teutonic"; src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot");
+  src: url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.eot?#iefix") format("embedded-opentype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff2") format("woff2"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.woff") format("woff"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.ttf") format("truetype"),
+     url("//db.onlinewebfonts.com/t/9879ce85dca006d1cdbbcfd22b722b80.svg#Teutonic") format("svg");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+   unicode-range: U+000-5FF;
+}
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 1.8em !important;
+   display: flex !important;
+   justify-content:flex-end !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   right: 0 !important;
+   width: 24% !important; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+   height: 40px !important;
+   align-items: right !important;
+   padding: 5px 0px !important;
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   margin-right:0em !important;
+ }
+  /* @media (max-width: 1060px) {
+  .titlecon {
+    display:none !important;
+   }
+  } */
+@media (max-width: 1060px) {
+.titlecon {
+   font-family: "Teutonic"; 
+   font-size: 1.8em !important;
+   display: flex !important;
+   justify-content:center !important;
+   z-index: 9999 !important;
+   /* background:#474A56 !important; */
+   background-color: transparent !important;
+   position: fixed !important;
+   display: block !important;
+   top: 0% !important;
+   margin-top:0px !important;
+   /* right: 0 !important; */
+   width: 100% !important; /* balance with 85% in theme.scss.liquid announcements class, but had to do 100% tocover moving pixels */
+   height: 40px !important;
+   align-items: center !important;
+   padding: 5px 0px !important;
+   cursor:pointer !important;
+   color:#b8b5a9 !important;
+   text-align:center !important;
+ }
+}
+  
+ @media (max-width: 1060px) {
+  .gone {
+    display:none !important;
+   }
+  }
+
+</style>
+
+<div class="oldplate"></div>
+
+<div class="titlecon">
+  <a href="https://thefactoryonbarclay.com" style="color:#b8b5a9 !important;background-color: transparent !important;">The Factory on Barclay</a>
+</div>
+
+<!-- <div class="oldplate"></div> -->
+<div class="flexcon">
+  <a href="https://thefactoryonbarclay.com" style="font-size:2.2em;color:#b8b5a9 !important;display:block;">&#x2302;</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+--------------
+turning on industrial chic LOG for mobile
+
+<style data-shopify="">
+    #id-1570691463158 .rich-text__content,
+    #id-1570691463158.rich-text--media-off {
+      background: #474a56;
+    }
+    #id-1570691463158.rich-text--media-off {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  </style>
+
+--
+<div id="shopify-section-1570691463158" class="shopify-section"><div id="id-1570691463158" class="content-section  gutter--off  rich-text rich-text--align-right rich-text--media-on">
+
+--
+<div class="rich-text__media">
+ 
+<figure data-crop="true" class="lazy-image  lazy-image--background " data-ratio="1.5" style="padding-top: 66.66666666666667%">
+
+	<img src="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938" alt="" srcset="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_320x.jpg?v=1612608938 260w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_600x.jpg?v=1612608938 480w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938 720w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1100x.jpg?v=1612608938 960w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1600x.jpg?v=1612608938 1440w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_2100x.jpg?v=1612608938 1920w" data-srcset="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_320x.jpg?v=1612608938 260w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_600x.jpg?v=1612608938 480w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938 720w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1100x.jpg?v=1612608938 960w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1600x.jpg?v=1612608938 1440w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_2100x.jpg?v=1612608938 1920w" data-sizes="auto" class="img lazyautosizes ls-is-cached lazyloaded" sizes="585px">
+	
+	<span class="lazy-preloader"></span>
+
+	<noscript><span class="ll-fallback" style="background-image:url(//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938)"></span></noscript>
+
+   </figure>
+
+</div>
+
+--
+COLLPASES AT 1023 ($portable) >
+
+// responsiveness setup
+
+$palm: 480px;
+$bigPalm: 648px;
+$lap: 768px;
+$portable: 1023px;
+$laptop: 1280px;
+$desk: 1920px;
+
+--
+
+no 'display:none' needed .. collapses from 4 columns to 1 column (width: calc(33.33% - 33px);) >
+
+	.cols-4 & {
+
+		margin-right: 25px;
+		word-break: break-all;
+
+		@include at-query($min, $desk) {
+			width: calc(20% - 30px);
+		}
+		@include at-query($laptop, $desk) {
+			width: calc(25% - 31px);
+		}
+		@include at-query($portable, $laptop) {
+			width: calc(33.33% - 33px);
+		}
+		@include at-query($max, $portable) {
+			width: calc(50% - 33px);
+		}
+		@include at-query($max, $breakSidebarAt) {
+			margin-right: 17px;
+		}
+		@include at-query($max, $lap) {
+			.blog-item__excerpt {
+				display: none;
+			}
+		}
+
+
+OR
+
+	.gutter--on & {
+
+		width: calc(100% + 50px);
+
+		.product-item {
+
+			margin-right: 25px;
+			@include at-query($max, $breakSidebarAt) {
+				margin-right: 17px;
+			}
+
+			@include at-query($min, $desk) {
+				width: calc(20% - 30px);
+			}
+			@include at-query($laptop, $desk) {
+				width: calc(25% - 31px);
+			}
+			@include at-query($portable, $laptop) {
+				width: calc(33.33% - 33px);
+			}
+			@include at-query($lap, $portable) {
+				width: calc(50% - 33px);
+			}
+			@include at-query($palm, $lap) {
+				width: calc(33.33% - 28px);
+			}
+			@include at-query($max, $palm) {
+				width: calc(50% - 33px);
+			}
+
+		}
+
+	}
+
+EXAMPLE OF COLLAPSE >
+
+// Product breadcrumb
+
+.desktop-breadcrumb {
+
+	display: block;
+	@include at-query($max, $portable) {
+		display: none;
+	}
+
+--
+
+SOLUTION >
+
+do <div></div> with media query at 1023 that inserts div with background image on top in the RIGHT SECTIONS LIQUID PAGE (image with text in CUSTOM) .. but in SECTIONS which liquid page is it?
+
+image-with-text.liquid
+
+<style type="text/css">
+@media (max-width: 1023px) {
+.mobile_logo {
+   background: url('https://cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss.jpg?v=1612608938') !important;
+   background-repeat: no-repeat !important;
+   background-size: contain !important;
+   background-position: 0% 0% !important; /* x,y */
+   z-index: 9999 !important;
+   background-color:#474a56 !important;
+   width:100% !important;
+   height:100% !important;
+   /* position: relative !important; */
+   display: block !important;
+   /* top: 0% !important; */
+   left: 0 !important;
+  }
+}
+  
+@media (max-width: 1023px) {
+  #id-1570691463158 {
+    min-height:100em !important;
+  }
+}
+</style>
+
+<div class="mobile_logo"></div>
+
+
+
+
+
+--
+
+<div id="id-1570691463158" class="content-section  gutter--off  rich-text rich-text--align-right rich-text--media-on">
+
+  <div class="rich-text__content" style="text-align: left">
+
+    
+      <h2 class="rich-text__title  h0 ">Industrial Chic</h2>
+    
+
+    
+      <div class="rich-text__body rte"><p>The Factory on Barclay is a spectacular venue space tucked behind the walls of the Original Cheesehead Factory.&nbsp; The uniqueness of the space can only be appreciated by an on-site visit or a scheduled video tour. We love to show off our space!</p><p>The Factory on Barclay&nbsp;is located in the Original Cheesehead Factory building in the Harbor District of Milwaukee’s Historic Walker’s Point.</p><p><a href="/pages/the-space" title="Our Spaces"><strong>Our Spaces</strong></a></p><p><a href="/pages/layout-planning" title="Floor Plans"><strong>Floor Plans</strong></a></p><p><a href="/pages/vendors" title="Vendors"><strong>Vendors</strong></a></p></div>
+    
+
+  </div>
+  
+  
+    <div class="rich-text__media">
+      
+
+
+
+
+
+
+
+<figure data-crop="true" class="lazy-image  lazy-image--background " data-ratio="1.5" style="padding-top: 66.66666666666667%">
+
+	<img src="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938" alt="" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_320x.jpg?v=1612608938 260w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_600x.jpg?v=1612608938 480w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938 720w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1100x.jpg?v=1612608938 960w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1600x.jpg?v=1612608938 1440w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_2100x.jpg?v=1612608938 1920w" data-sizes="auto" class="img lazyload">
+	
+		<span class="lazy-preloader"></span>
+	
+
+	<noscript><span class="ll-fallback" style="background-image:url(//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938)"></span></noscript>
+
+	
+
+	
+
+</figure>
+
+
+    </div>
+    <style data-shopify="">
+      #id-1570691463158 .rich-text__media {
+        height: 100vh;
+      }
+    </style>
+  
+
+</div>
+
+
+
+---
+
+<style type="text/css">
+@media (max-width: 1023px) {
+  .lazy-image--background {
+    display: block !important;
+  }
+}
+</style>
+
+<figure data-crop="true" class="lazy-image  lazy-image--background " data-ratio="1.5" style="padding-top: 66.66666666666667%">
+	<img src="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938" alt="" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_320x.jpg?v=1612608938 260w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_600x.jpg?v=1612608938 480w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938 720w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1100x.jpg?v=1612608938 960w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_1600x.jpg?v=1612608938 1440w, //cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_2100x.jpg?v=1612608938 1920w" data-sizes="auto" class="img lazyload">
+		<span class="lazy-preloader"></span>
+	<noscript><span class="ll-fallback" style="background-image:url(//cdn.shopify.com/s/files/1/0244/4486/2560/files/metal_logo_ss_860x.jpg?v=1612608938)"></span></noscript>
+</figure>
+
+
+--
+
+NEW SINGLE LOGO ON TOP OF TEXT
+
+<div id="shopify-section-1613326161336370f1" class="shopify-section mount-slider overflow-hidden without-gutter">
+
+NEW TEXT BELOW LOGO
+
+<div id="shopify-section-1613326814958c2958" class="shopify-section with-gutter"><div id="id-1613326814958c2958" class="content-section  gutter--on  rich-text rich-text--align-left rich-text--media-off">
+
+THIRD LARGE IMAGE ABOVE
+
+<div id="shopify-section-1570683739738" class="shopify-section mount-slider overflow-hidden without-gutter">
+
+<div id="slide-1570683759174" class="slide" data-index="3" style="height: 1024px;">
+
+WORKED!! (with both)
+
+PUTTING INDUSTRAIL CHIC TEXT ABOVE LOGO IN SAME WAY .. DOUBLE
+
+<div id="id-1613326814958c2958" class="content-section  gutter--on  rich-text rich-text--align-left rich-text--media-off">
+
+THIS TIME Z-INDEX FIRST GALLERY IMAGE *BELOW* TEXT THAT IS BELOW LOGO
+
+<div id="shopify-section-1570701565393" class="shopify-section mount-gallery without-gutter">
+
+
+          
+
+
+
+
+
+
+
+
+

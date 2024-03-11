@@ -1,0 +1,231 @@
+<style type="text/css">
+  
+/* disables text type logo */
+.logo .logo__text {
+    display: none !important;
+}
+/* disables shopping cart icon */
+.sidebar__cart-handle {
+    display: none !important;
+}
+  
+/* logo tablet */
+@media (max-width: 5000px) { /* was 948px */
+.logo__image {
+    display: none !important;
+ }
+/* logo mobile */
+@media (max-width: 5000px) { /* was 296px */
+.logo__image {
+    display: none !important;
+ }
+}
+  
+/* line 214 in theme.scss.liquid changed set underline animation (background-size) to 0%, was 100% */
+/* line 2387 in theme.scss.liquid changed 1set footer links underline to 0px .. was 1px .. they are using a bottom border for an underline */
+  
+/* raises content over sidebar in desktop, tablet and mobile, z-index -1 */
+@media (max-width: 5000px) { /* was 948px */
+#content {
+  margin-top: -66px !important;
+  position: absolute !important;
+  z-index: 1 !important;
+ }
+}
+  
+/* makes cream background transparent in desktop, tablet and mobile .. .sidebar__container not needed */
+@media (max-width: 5000px) { /* was 948px */
+.sidebar__responsive-container {
+    position: relative !important;
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    border:0 !important;
+ }
+}
+  
+/* give 3 bar menu cream background when sidebar is disabled for 3 bar menu, tablet and mobile */
+@media (max-width: 1024px) {
+.sidebar__menu-handle {
+    background:#fefef5 !important;
+    border-radius: 3px;
+    width:1.95em;
+    padding: 5px 1px 0px 5px !important;
+ }
+}
+/* give 3 bar menu cream background when sidebar is disabled for 3 bar menu, desktop */
+@media (min-width: 1025px) and (max-width: 5000px) {
+.sidebar__menu-handle {
+    background:#fefef5 !important;
+    border-radius: 3px;
+    width:1.65em;
+    padding: 5px 1px 0px 5px !important;
+ }
+}
+
+/* 3 bar menu for NEW horizonal menu is DISABLED IN in theme.liquid */
+
+/* fixes bottom white border */
+@media (max-width: 5000px) {
+.sidebar {
+    border:0 !important;
+ }
+}
+  
+/* breaks sidebar early to hide for new horizontal flex menu .. different from original list stored in NEW.txt, so line #'s are different >
+  
+  1) line 234 in theme.scss.liquid changed from $breakSidebarAt: 948px; to $breakSidebarAt: 4000px;
+  2) line 109 (below) building.jpg disabled
+  3) line 13 948px to 5000px
+  4) line 18 296px to 5000px
+  5) line 28 948px to 5000px
+  6) line 37 948px to 5000px
+  
+  7) fixes 3 bar menu for mobile, tablet, desktop
+  
+  */
+  
+/* increases sidebar secondary menu font size for tablet and mobile */
+@media (max-width: 1024px) {
+.secondary-menu .sidebar__menu {
+    font-size: 20px !important; /* was 17.14286px */
+    line-height: 1;
+ }
+}
+/* increases sidebar secondary menu font size for desktop when sidebar is disabled */
+@media (min-width: 1025px) {
+.secondary-menu .sidebar__menu {
+    font-size: 26px !important; /* was 17.14286px */
+    line-height: 1;
+ }
+}
+  
+</style>
+
+<div class="sidebar">
+
+	<div class="sidebar__container sidebar__responsive-container">
+
+		<div class="sidebar__container-holder" style="flex: 1 0 auto;">
+
+	    <header class="logo">
+
+          <!-- <a class="logo__image" href="/" itemprop="url"><img src="https://cdn.shopify.com/s/files/1/0244/4486/2560/files/building.jpg?v=1579426536"></a> -->
+
+	    </header>
+
+	    <div class="sidebar__menus">
+
+		    <nav class="primary-menu">
+					{% include 'sidebar-navigation', menu: menus[section.settings.menu_primary] %}
+	    	</nav>
+
+	    	<nav class="secondary-menu">
+
+					{% include 'sidebar-navigation', menu: menus[section.settings.menu_secondary] %}
+
+					{% if shop.customer_accounts_enabled %}
+		    		<ul class="sidebar__menu">
+		    			<li>
+			    			{% if customer %}
+			    				<a href="/account"><span class="underline-animation">{{ 'general.account_link.logged_in' | t }}</span></a>
+		    				{% else %}
+			    				<a href="/account/login"><span class="underline-animation">{{ 'general.account_link.logged_out' | t }}</span></a>
+								{% endif %}
+							</li>
+		    		</ul>
+	    		{% endif %}
+
+	    	</nav>
+
+				<span class="sidebar__menus-close hidden" aria-label="{{ 'general.close' | t }}">
+					{% include 'theme-symbols', icon: 'close' %}
+				</span>
+
+				<span class="sidebar__menus-back hidden" aria-label="{{ 'general.back' | t }}">
+					{% include 'theme-symbols', icon: 'arrow-left' %}
+				</span>
+
+	    </div>
+
+	    <div class="sidebar__responsive-handles">
+				
+				{% if section.settings.show_search %}
+					<span class="sidebar__search-handle">
+						<span class="icon icon-search" aria-hidden="true">{% include 'theme-symbols', icon: 'search' %}</span>
+					</span>
+				{% endif %}
+
+				<a href="/cart" class="sidebar__cart-handle" aria-label="{{ 'cart.title' | t }}" title="{{ 'cart.title' | t }}">
+					<span class="icon icon-cart" aria-hidden="true" style="height: 28px;">{% include 'theme-symbols', icon: 'cart' %}</span>
+					<span class="count" aria-hidden="true">{{ cart.item_count }}</span>
+				</a>
+
+				<span class="sidebar__menu-handle">
+					<span class="icon icon-menu" aria-hidden="true">{% include 'theme-symbols', icon: 'burger' %}</span>
+				</span>
+
+			</div>
+			
+			{% unless template contains 'cart' %}
+				<div class="sidebar__cart">
+					<div>
+						{% include 'cart-form', location: 'sidebar' %}
+						<span class="sidebar__cart-close" aria-label="{{ 'general.close' | t }}">
+							{% include 'theme-symbols', icon: 'close' %}
+						</span>
+					</div>
+				</div>
+			{% endunless %}
+
+		</div>
+
+		{% if section.settings.show_search %}
+			<div class="sidebar__footer">
+				{% include 'search-form' %}
+			</div>
+		{% endif %}
+
+	</div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Sidebar",
+    "class": "mount-sidebar mount-overlay",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_src",
+        "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "Custom logo width (in pixels)",
+        "min": 50,
+        "max": 250,
+        "step": 2,
+        "default": 100
+      },
+      {
+        "type": "link_list",
+        "id": "menu_primary",
+        "label": "Primary navigation",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "menu_secondary",
+        "label": "Secondary navigation",
+	      "info": "This menu won't show dropdown items"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
