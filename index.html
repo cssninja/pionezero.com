@@ -1591,8 +1591,8 @@
       border-radius: 8px;
       margin: 0px 0px 0px 70px;
       padding: 0px 0px 0px 0px;
-      border: 0.4rem solid white;
-      /* z-index: 1; */ /* CHANGE INLINE z-index for visibility during editing */
+      /* border: 0.4rem solid white; */ /* use only when editing */
+      /* z-index: 1; */ /* CHANGE INLINE z-index's for all classes for visibility during editing */
     }
     .audiodv::before {
       content: "music \A on/off";
@@ -1618,7 +1618,7 @@
         position: relative;
         display: block;
         max-height: 30px;
-        max-width: 100px; /* anything less than 70% will collapse it in mobile */
+        max-width: 50px; /* anything less than 70% will collapse it in mobile */
         border-radius: 8px;
         margin: 0px 0px 0px 0px;
         transform: scale(2);
@@ -1878,7 +1878,7 @@
 
             <!-- intro -->
             <div class="container d-flex justify-content-center mb-2">
-                <div class="col-md-6 pr-lg-5 reslink" style="margin-top:100px;z-index:1000 !important;">
+                <div class="col-md-6 pr-lg-5 reslink" style="margin-top:100px;/* z-index:1000 !important; */">
                     <div class="mt-5 mt-md-0" style="display:none !important;">
                         <!-- title -->
                         <h2 class="h1 font-weight-bold">Launching soon!</h2>
