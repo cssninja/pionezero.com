@@ -1587,11 +1587,12 @@
       display: flex;
       top: 20px;
       max-height: 30px;
-      width: 100px;
+      max-width: 100px;
       border-radius: 8px;
-      margin: 0 auto !important;
-      padding: 0px 0px 0px 70px;
-      /* border: 1rem solid #1b1b1b; */
+      margin: 0px 0px 0px 70px;
+      padding: 0px 0px 0px 0px;
+      border: 0.4rem solid white;
+      /* z-index: 1; */ /* CHANGE INLINE z-index for visibility during editing */
     }
     .audiodv::before {
       content: "music \A on/off";
@@ -1604,7 +1605,7 @@
       font-weight: bold;
       position: absolute !important;
       display: inline-block !important;
-      z-index: 50000;
+      /* z-index: 50000; */
       margin: -8px 0px 0px 130px;
       line-height: 20px;
       opacity: 0.04;
@@ -1619,10 +1620,10 @@
         max-height: 30px;
         max-width: 100px; /* anything less than 70% will collapse it in mobile */
         border-radius: 8px;
-        margin: 0 auto !important;
-        transform: scale(1.3);
-        opacity: 1;
-        z-index: 60000;
+        margin: 0px 0px 0px 0px;
+        transform: scale(2);
+        opacity: 0.04;
+        /* z-index: 60000; */
       }
     }
     /* iframe *
@@ -1852,9 +1853,9 @@
     <div class="row d-flex justify-content-start">
       <div class="col-md-6">
 
-        <div class= "audiodv" style="z-index:9000 !important">
+        <div class= "audiodv" style="/* z-index:5000 !important */">
             <!-- <iframe src="https://pionezero.com/vibes/schumannres.mp3" allow="autoplay" id="iframeAudio" class="ifmaud"></iframe> -->
-            <audio autoplay loop controls id="playAudio" style="z-index:10000 !important">
+            <audio autoplay loop controls id="playAudio" style="z-index:6000 !important">
               <source src="https://pionezero.com/vibes/schumannres.mp3">
             </audio> 
             <!-- <script>
