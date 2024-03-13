@@ -1647,6 +1647,24 @@
       display: none;
     }
 
+    /* VIDEO HACK .. using video tag, access iphone, thanks to: https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5 .. stupid rule allows videos or audio to autoplay if muted .. try to use js to undo muted
+
+    https://www.w3schools.com/tags/tag_video.asp
+    https://stackoverflow.com/questions/7698953/how-to-play-html5-video-when-the-file-is-file-m4v
+    https://stackoverflow.com/questions/34764876/html5-video-autoplay-not-automatically-starting-in-chrome
+
+    third ref has beautiful hack THAT UNMUTES VIDEO .. try with audio
+    * works initally in codepen (https://codepen.io/mmdileepthomas/pen/QroQZp), then DOES NOT
+
+    https://stackoverflow.com/questions/39041960/how-to-unmute-html5-video-with-a-muted-prop
+    muted property and attribute DIFFERENT w/respect to use in js
+
+    moz DEFINES 'muted' and tells how to unmute > https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/unmute_event
+
+    https://stackoverflow.com/questions/30108788/video-mute-unmute
+
+    */
+
     /* typing CODE via pseudo element
     https://codepen.io/raubaca/pen/rxLwPq
 
@@ -1872,16 +1890,36 @@
             <!-- <iframe src="https://pionezero.com/vibes/schumannres.mp3" allow="autoplay" id="iframeAudio" class="ifmaud"></iframe> -->
             <audio autoplay loop controls id="playAudio" style="z-index:6000 !important">
               <source src="https://pionezero.com/vibes/schumannres.mp3">
-            </audio> 
+            </audio>
+
+
+            <!-- thanks to: https://codepen.io/mmdileepthomas/pen/QroQZp, source: https://stackoverflow.com/questions/34764876/html5-video-autoplay-not-automatically-starting-in-chrome -->
+            <!-- WORKS only if the user is clicking, once is enough .. only script that works at least in Codepen -->
+
+            <!-- <video width="320" height="240" controls autoplay muted playsinline loop id="videoId">
+              <source src="https://pionezero.com/vibes/schumannres.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
             <!-- <script>
-              var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-              if (!isChrome){
-                  $('#iframeAudio').remove()
+            function toggleMute() {
+
+              var video=document.getElementById("videoId");
+
+              if(video.muted){
+                video.muted = false;
+              } else {
+                debugger;
+                video.muted = true;
+                video.play()
               }
-              else {
-                  $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-              }
+
+            }
+
+            $(document).ready(function(){
+              setTimeout(toggleMute,3000);
+            })
             </script> -->
+
         </div>
 
       </div>
