@@ -1611,6 +1611,20 @@
       opacity: 0.09;
       transform: scale(1);
     }
+
+    /* keep this order .. safari first, moz second which effects only moz, otherwise play button disappears for moz at 45px */
+    audio {
+      background-color: #292a2a;
+      position: relative;
+      display: block;
+      max-height: 30px;
+      max-width: 45px; /* anything less than 70% will collapse it in mobile */
+      border-radius: 8px;
+      margin: 0px 0px 0px 0px;
+      transform: scale(2);
+      opacity: 0.09;
+      /* z-index: 60000; */
+    }
     /* audio tag .. explanation what this is thanks to: https://stackoverflow.com/questions/3123063/what-does-moz-document-url-prefix-do .. MOTHERLODE OF -moz pseudos and prefixes HER > https://developer.mozilla.org/en-US/docs/Web/CSS/Mozilla_Extensions */
     @-moz-document url-prefix() {
       audio {
@@ -1625,18 +1639,6 @@
         opacity: 0.09;
         /* z-index: 60000; */
       }
-    }
-    audio {
-      background-color: #292a2a;
-      position: relative;
-      display: block;
-      max-height: 30px;
-      max-width: 50px; /* anything less than 70% will collapse it in mobile */
-      border-radius: 8px;
-      margin: 0px 0px 0px 0px;
-      transform: scale(2);
-      opacity: 0.09;
-      /* z-index: 60000; */
     }
 
     /* iframe *
