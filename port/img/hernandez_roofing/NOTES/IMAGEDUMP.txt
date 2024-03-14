@@ -1,0 +1,50 @@
+Brian and Rohit,
+
+Ok just uploaded the 'motherload' of images, the folder called 'IMAGE DUMP' (your term Brian ha.) This contains everything you both need for print and web.
+
+1)
+The only exception is the category 'ICONS_WITH_COPY' as I'll need further instructions from you Brian on what exactly you need this for. I am assuming you want this for email graphics, letterhead graphics and truck magnets, etc .. which I can do for you (properly). (See #5 below.)
+
+2)
+The folders BUS_CARD, DARK_TRANS_FOR_PRINT and PRODUCT_SIGNUP all have MODIFIED icons and logo that are made DARKER for print, as these graphics render differently on paper as they do on computers and smart devices. The only folder with the original graphics is the TRANS_FOR_WEB, which has it's original color palette. The swatch image DOES NOT include a hexidecimal swatch for this modified darker color of the icons as this process included a somewhat complex edit (using 'Image' > 'Adjustments' > 'Levels' in Photoshop) which is not a simple hexidecimal assignment. So all the darkening of graphics for print is something I need to do myself.
+
+3)
+Rohit you now have the Work Order buttons (in TRANS_FOR_WEB folder), in large dimensions so simply just shrink it with CSS3. The only images you can use for the web is in the TRANS_FOR_WEB folder .. all other folders are exclusively for PRINT.
+
+4)
+Brian if you want to mess around with using transparent images as you requested, for your emails, etc these are all in the folder DARK_TRANS_FOR_PRINT > ICONS. But again, let's go over your needs for email graphics, letterhead graphics and truck magnets, etc.. Either send me instructions for creating all these graphics myself .. or .. send me instructions on exactly what copy you want with what graphics:
+
+a) graphics needs list (email, magnets, etc.)
+b) icons (already created) list
+c) corresponding copy (titles, bulletpoints, text, etc.)
+
+So .. a), b) and c) above is pretty much all that needs to be done for PRINT needs.
+
+5) The last things to do with NON-PRINT design is:
+
+a) finish upper panel of home page UI (minified icons in a circle)
+b) the UI for the pages:
+  i) Projects,
+  ii) Qualifications
+  iii) Contact
+
+which should go fast design-wise (I'll create three new single icons for each page.)
+
+That is it. Anything you guys want to add let me know! The 'IMAGE DUMP' can always be found in these two locations (my server as backup):
+
+http://goo.gl/ReWO9M (don't have to sign into DropBox with this shared link)
+http://pionezero.com/brian
+
+Marcus
+
+pionezero.com
+262-421-5780
+twitter.com/cssninja
+pionezero@hush.com
+
+
+
+
+
+
+

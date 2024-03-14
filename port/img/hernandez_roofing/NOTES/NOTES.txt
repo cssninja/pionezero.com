@@ -1,0 +1,153 @@
+LOGIN
+
+godaddy login:
+pass
+
+Plesk login:
+pass
+
+(old login was pass)
+
+-
+hernandezroof.com
+
+50.62.168.152
+pass
+
+LOGGED IN 5:15 am Feb 17 2015
+-
+
+
+
+
+-
+jan 9 2015
+
+Roof brand
+
+Points of separation .. new vs dinosoar and competition
+
+1) Technology
+2) Real time communication
+3) Closed loop .. finishibg work of need .. confirming done
+4) Increase visibility, asset management
+
+Connect Wed jan 14 2015 on art direction (AD):
+
+1) 10 flat design models
+2) AD includes 4 bullet point concepts to visual design of logo, illustrations of background or icons, max 4 colors palette
+3) Hernandez Roofing in there
+
+--
+icons
+
+1) drone
+2) signal
+3) closed loop
+4) not sure
+
+LOGO was thinking of eagle or something in the air overlooking everything with drone, signal, closed loop and not sure .. a logo that embodies all this.
+
+* 10 or so model flat design sites that come right out of Silicon Valley .. designed to attract funding. Find those 'start up monitoring' sites. Other 'startup monitoring' sites too, like from the UK, and elsewhere in USA (but not partial to SV.)
+
+-
+business proposal
+
+$4000+
+
+hours
+branding $2500
+coding $1500
+
+list all that comes with it
+app integration
+all illustrations, icons from scratch (no purchased icons sets)
+
+
+
+
+
+
+-
+jan 28 2015
+
+1) modeling after some of http://mightytext.net/
+
+2) for mockup
+
+Points of separation .. new vs dinosoar and competition
+
+1) Technology .. drone icon
+2) Real time communication .. wifi type icon
+3) Closed loop .. finishing work of need .. confirming done .. circle with arrow closing loop icon
+4) Increase visibility, asset management .. 
+
+Menu
+
+WHY WE'RE UNIQUE
+Technology
+Real Time Communication
+Closed Loop
+Asset Management
+History
+Certifications
+
+OUR CLIENTS
+
+CALL US
+
+CLIENT PORTAL LOGIN
+
+Our mobile app allows admins, clients and technicians to be in constant communication
+
+
+
+
+
+
+-
+feb 5 2015
+
+H in logo .. service asset management blah 
+
+No product link bcs on home page
+
+Video window in drone vision
+
+Longer text (accordian) and with caption text
+
+
+Projects .. roof replacement projects, current and historical .. gallery incl video
+
+MENU .. Home Projects why different
+
+Service disparch button on site to go to crm (part of why different page, not called 'about us') .. rename service dispatch to 'work order' .. as important as logo/branded
+
+Budget matrix stuff (client facing tool) .. refer to budget matrix ppt .. CALL IT SOMETHING ELSE AND COOL LOGO ..something cool or just 'property summary' (work order, replace product, properry summary, drone vision, property docs, sections of roof details) > these are functionalities at the property level
+
+Everything derived from aerial
+
+Revoluion product .. etc 4 H, brand tbose .. home page, incorp work order button
+
+Logo .. steel plate background in there
+
+Home page .. ease of use .. login for client portal/lofin (interstitial popup)
+
+Fiverr .. videos, may have them do a commercial .. whiteboard commercial or narrated (explainer video) .. breaking news .. on home page use my illustrations for explainer video or whiteboard .. rolling out new brand
+
+Qualification in menu
+
+Home why unique project qualification contact (admin office and operational office) .. move client login up for more room
+
+Sign up sheet asap to sell .. refer to docs .. will have Rapid, Responsible and Drone (PRINT PROJECT) .. get info via ppt .. maybe research other looks
+
+Website and signup sheet to be able sell stuff SOON
+
+GODADDY .. get ftp rohit .. change nameservers from old to godaddy .. call godaddy .. get login info first
+
+Refer to agenda in email .. didnt discuss client portal ui yet
+
+
+
+
+

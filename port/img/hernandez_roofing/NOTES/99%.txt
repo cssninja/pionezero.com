@@ -1,0 +1,27 @@
+http://hernandezroof.com/beta
+
+1) I spent more time on the footer as it had more complex coding challenges. It contains a:
+
+- 'Blurb section on left' (editable or course for whatever new blurb you want posted)
+- Main contact section in middle (with social media)
+- Map on right (with expanding large map when clicking the map/arrow icon.) This map feature can be expanded upon more to include actual notes in the map, locations of seminars, gigs, anything location-based. (https://www.mapbox.com/ .. example of howe it's done: http://a.tiles.mapbox.com/v3/examples.map-zr0njcqy/page.html#12/38.9070/-77.0460)
+
+2) The main content of the site (the different panels with the icons and expanding/collapsng text) is really easy and will be finishing that today. So for our next meeting (Saturday or Sunday morning .. Sunday best for me), I'll have done:
+
+- Home page
+- Why We're Unique
+- Projects (simple image gallery)
+- Qualifications (just a shell .. need to discuss content)
+- Contact page
+
+This should comprise 99% of the site actually published online.
+
+Note also the drop-down login at the upper right of each page (which Rohit will have to finish coding to access the backend.)
+
+3) A the very end Rohit and I will be installing a CMS (content management system) by Statamic. This requires a $99 commercial license to be purchased from Statamic (http://statamic.com/).
+
+4) Then we can discuss all the printing needs you have and get that squared away. You need to have the email graphics redone as the ones you are using now (clumped together with red backgrounds) wasn't designed for email. You'll need a white space background email graphic. Plus doing that 'branding layout' idea (gave the example of that British company's photoshoot of their brand reach layed out on a table) of your business card, letterhead, and an iPhone and iPad, etc. photographed would look hot to promote your new brand, maybe a link on the 'Why We're Unique page'. When we discuss printing I'll make a list of what's been done vs what needs to be done yet .. a whole different meeting and topic. The goal of course is to FINISH the branding efforts so that all print, web media and other media can all be layed out in a white background on a table so it can be photographed, showing off a UNIFIED branding effort across all medias. It would look awesome.
+
+Lets shoot for Saturday morning or Sunday morning (Starbucks) .. Sunday is best for me but if you absolutely can't we can do Saturday.
+
+Marcus

@@ -1,0 +1,89 @@
+Ok just to clarify .. so instead of focusing on 'POINTS OF SEPARATION' for the UI I'm working on >>
+
+1) Technology
+2) Real time communication
+3) Closed loop
+4) Increase visibility, asset management
+
+you want PRODUCTS as the main panels in the UI of the very first page someone sees (the UI I'm working on now), right? >>
+
+1) HRapid
+2) HResponsible
+3) HReplace
+4) HRevolution
+5) DroneVision
+
+If so, I'll do an illustration/icon for each, right? And if so, are you able to give me a keyword that sums up in ONE WORD what each of the 5 above represents? I'll need this so I can translate that keyword into a brand-illustration-icon. For example I have an illustration already for DroneVision. And I have illustrations for 'real time communication' and 'closed loop' but those aren't products, those are characteristics of some of the products.
+
+I did read the descriptions and I can probably create an illustration/icon from those myself, but I want to check with you first before I start going deep into branding with illustrations/icons to make sure I'm not going down the wrong path (and wasting time) in creating an illustration/icon for each of the 5 products.
+
+So I'll need 4 more solid keywords that I can translate into an illustration. If you want me to use rapid, responsible, replace, revolution and drone as the keywords, let me know and I'll work off of those.
+
+Thanks ;).
+
+--
+
+Brian,
+
+To be honest, the edgewater blog article on flat design has nothing to do with flat design at all .. lots of people out there are claiming to have 'flat designs' (to be part of this trend) but they are not, and this is one example.
+
+1) Their color palette is all over the place (true flat design has a refined color palette of maybe a max of 4 colors: three shades of blue for instance, with complimentary grey scales)
+2) The UI/UX is NOT simple
+3) Their font is too small to be considered 'flat'
+4) Then they have an interface that goes completely dark, and I'm thinking "What the heck?"
+
+The entire design is screaming 'old school' (especially the image https://edgewatertech.files.wordpress.com/2013/09/image-1.png).
+
+The YouTube video that explains their product .. I can understand where they are coming from, better UI/UX they claim, but it's probably better when compared to their old product. That may be, but overall they are missing the mark for true flat design:
+
+1) SIMPLISTIC UX (not complex .. information has to be stored in LAYERS, not bombarding the user with everything at once; is an 'information architecture' principle)
+2) SIMPLISTIC COLOR PALETTE
+3) LARGER FONT
+4) BRANDED IN SUCH A WAY THAT WHEN YOU LOOK AT IT YOU RECOGNIZE THE ** BRAND **, which is beyond flat design but flat design certainly incorporates this principle.
+
+I'd grade them with a D.
+
+The only thing they might have done half way decent is re-organizing the fairly large amount of data (large amount of menu choices) .. but even with this the user is bombarded with too much data. The MENU should be SIMPLISTIC with general categories so it's easier for the non-techy user to be GUIDED on where to go. The 'information architecture' in their case should be in LAYERS, rather than bombarding the user with everything they have all at once. This is why WordPress is horrible UX-wise, or GoDaddy as well (used to be, they have improved somewhat.)
+
+The thing with CRM's as this MIcrosoft guy presents in the video is that he/Microsoft designed it for themselves, not for the non-techy USER. They understand reaaaaally well where everything is, whereas the new person who is presented with this product is bombarded with information overload. The 'information architecture' is not LAYERED .. a flat design FAIL.
+
+The Microsoft CRM has absolutely no brand at all .. it's all over the place design-wise.
+
+Want to know why Facebook bought Instagram for a gazillion dollars a few years ago? User-friendly. Instagram didn't design their UI/UX with overly technical options, or a menu with dozens and dozens of choices right off the bat. Deeper choices are hidden in a very simplistic menu. Users liked it .. it became popular and now a handful of people in the Instagram company are rridiculously, shamefully wealthy, haha.
+
+A much better example (perfect example) of TRUE flat design would be:
+
+https://mixitup.kunkalabs.com/
+
+They of course don't have a heavy information architecture as the Microsoft CRM product has, but even if they did, their UI/UX would probably be very similar to what it is now in terms of layering the UX/UI, color palette and font, and brand. And I can provide more examples than Mixitup, but it's a good one.
+
+Very soon we'll have to sit down with:
+
+1) REAL examples of flat design and discuss how real flat design makes products succeed,
+2) Have a discussion on general UI/UX
+
+Marcus
+
+--
+
+more
+
+minified js
+no extraneous scripting (transitions overdone)
+
+ui/ux that is attractive (SIMPLE) to users
+ui/ux that translates to lots of business
+
+my role will now be:
+1) design - both flat design principles and branding
+2) ui/ux, especially user experience that makes complex information architecture invisible through layering
+
+color swatches
+font libraries specs
+
+flat crm models
+
+
+
+
+

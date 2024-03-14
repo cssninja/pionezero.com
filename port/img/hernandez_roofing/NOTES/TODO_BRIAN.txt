@@ -1,0 +1,124 @@
+feb 5 2015
+
+H in logo .. service asset management blah 
+
+No product link bcs on home page
+
+Video window in drone vision
+
+Longer text (accordian) and with caption text
+
+
+Projects .. roof replacement projects, current and historical .. gallery incl video
+
+MENU .. Home Projects why different
+
+Service disparch button on site to go to crm (part of why different page, not called 'about us') .. rename service dispatch to 'work order' .. as important as logo/branded
+
+Budget matrix stuff (client facing tool) .. refer to budget matrix ppt .. CALL IT SOMETHING ELSE AND COOL LOGO ..something cool or just 'property summary' (work order, replace product, properry summary, drone vision, property docs, sections of roof details) > these are functionalities at the property level
+
+Everything derived from aerial
+
+Revoluion product .. etc 4 H, brand tbose .. home page, incorp work order button
+
+Logo .. steel plate background in there
+
+Home page .. ease of use .. login for client portal/lofin (interstitial popup)
+
+Fiverr .. videos, may have them do a commercial .. whiteboard commercial or narrated (explainer video) .. breaking news .. on home page use my illustrations for explainer video or whiteboard .. rolling out new brand
+
+Qualification in menu
+
+Home - why unique - project - qualification - contact (admin office and operational office) .. move client login up for more room
+
+Sign up sheet asap to sell .. refer to docs .. will have Rapid, Responsible and Drone (PRINT PROJECT) .. get info via ppt .. maybe research other looks
+
+Website and signup sheet to be able sell stuff SOON
+
+GODADDY .. get ftp rohit .. change nameservers from old to godaddy .. call godaddy .. get login info first
+
+Refer to agenda in email .. didnt discuss client portal ui yet
+
+-
+
+logos for 4 products
+
+hrapid: clock with flame, stick figure running, * truck on the go
+search: rapid fast in iconfinder
+
+hresponsible: * calendar with check mark (preventive) or hand with tool
+search: maintenance schedule in iconfinder
+
+hreplace:
+
+hrevolution: * cell phone with finger
+search: technology or cell phone or mobile in iconfinder
+
+drone vision (part of hrevolution)
+
+* do icon search here:
+https://www.iconfinder.com/search/?q=fast+shipping
+
+-
+feb 24
+
+DONE
+It appears you are tying the dronevision and revolution products together. They should be separate logos. 
+
+DONE
+The Revolution product is our umbrella technology suite....the dronevision is a separate product. 
+
+We can discuss any final tweek
+-
+Can you dump all images...logos...along with a "text box" or something that easily allows me to copy our text script/font....colors etc. Is there an easy way to get our colors in ppt?
+
+I need both high res and lower res of images...transparent...etc. Am going to work on email signatures for employees...along with wrap for trucks....logos for shirts....biz cards...etc.
+-
+DONE
+"Above signature authorizes Hernandez Roofing to create custom web portal for client in which roof data will be housed. This form is not a contract for services."
+-
+DONE
+ok....I sent you copy for under the signature lines...please add.
+
+DONE
+-Reduce line weights for "client" box, product boxes lower right corner and signature line
+DONE
+-Make "service level options: in line with bottom of client box...I think make client box a bit longer and you should be good...
+DONE
+-increase size of HRapid logo a bit
+DONE
+-as I look at this...I think having all logos on left and text on right will layout better.
+DONE
+-try to add a bit more of our color pallette into it...make it pop a bit more?
+
+DONE
+-when I print it out there is a white border around it....I want to make sure when I have them professionally printed it lays out with no border and consistent background color.
+-
+yes perfect....here is quick agenda:
+
+-update on wireframe progress...answer questions and clarify and outstanding issues
+-review branding, logo and service detail sign up sheet
+-discuss hernandezroof.com website development...layout....details....etc.
+-discuss text notification programming details along with wordorder email layout
+
+
+--
+feb 25
+
+icon search for hreplace
+istockphoto, iconfinder
+
+replace
+install
+industrial blueprint
+building blueprint
+factory blueprint
+
+blueprint with circular arrow
+
+stick figure carrying something over shoulder or pushing something
+
+
+
+
+
