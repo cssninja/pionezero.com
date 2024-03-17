@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="copyright" content="" />
+
+    <title>Login</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- added, from offcanvaspush -->
+    <link href="../css/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <!-- added, from offcanvaspush -->
+    <link href="../css/navmenu-push.css" rel="stylesheet">
+
+    <!-- just for debugging purposes -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="../js/tasks.js"></script>
+      
+    <![endif]-->
+
+    <link href="../css/carousel.css" rel="stylesheet">
+
+    <!-- zocial footer icons -->
+    <link href="../css/zocial.css" rel="stylesheet" type="text/css"/>
+
+    <!-- pinterest-like gallery styles -->
+    <link href="../css/essential.css" rel="stylesheet">
+
+    <style>
+          /* added for demo mar 17 2024 .. sticky footer edit thanks to: https://dev.to/xinnks/multiple-ways-to-implement-sticky-footers-3o31 .. https://codepen.io/xinnks/pen/YzpBrJW */
+    .newcon {
+      position: relative;
+      display: block;
+      height: 55%
+    }
+    @media (max-width: 1024px) {
+      .newcon {
+        position: relative;
+        display: block;
+        height: 65%
+      }
+    }
+    @media (max-width: 550px) {
+      .newcon {
+        position: relative;
+        display: block;
+        height: 40%
+      }
+    }
+    /* .marketing {
+      max-height: 10vh;
+    } */
+    #outer {
+      position: absolute !important;
+      bottom: 0 !important;
+      width: 100%;
+    }
+    </style>
+
+  </head>
+
+  <body id="top" style="background-color:#2a2d2f;">
+
+
+
+
+<!-- ```````````````````````````` navbar begin, added, from offcanvaspush -->
+    <div class="bg-fix">
+    <!-- logo (added) -->
+        <div id="hide" class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="background-color:#191A1C !important;border-color:#191A1C !important;overflow-x:scroll;-webkit-overflow-scrolling:touch;">
+          <a class="navmenu-brand" href="#" style="font-weight:bold;color:#8a8f94 !important;pointer-events:none;">Sports App</a>
+        <div style="margin-bottom:60px !important;"></div>
+          <ul class="nav navmenu-nav lato" style="font-size:1.4em;">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../admin/cp.html">Dashboard</a></li>
+            <!-- <li><a href="login/index.html">Login</a></li> -->
+            <li><a href="../thumbnails_new.html">Player Thumbs</a></li>
+            <li><a href="../playerstats_new.html">Player Stats</a></li>
+            <li><a href="../profile_new.html">Profile</a></li>
+            <li><a href="../help.html">Help</a></li>
+          </ul>
+        </div>
+
+    <!-- note: max-width: zero to xx px, min-width: starting from xx px; and border is top, left/right, bottom -->
+        <div class="navbar navbar-default navbar-fixed-top" style="background:transparent !important;border-width:0 0 0px !important;">
+          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" style="border-color:#60656A !important;">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+    </div>
+
+<!-- ```````````````````````````` navbar end -->
+
+
+    <!-- new container -->
+    <div class="newcon">
+
+<!-- ```````````````````````````` container 2 begin -->
+    <div class="container marketing">
+
+      <!-- ============= MAIN CONTENT ============= -->
+   
+    <div class="wrapper" style="margin-top:120px !important;">
+        <!-- Can change number of columns in minItemWidth part of jquery.mosaicflow.min.js; changed from 240 (5 coulmns) to 300 (4 columns) .. don't use 360, will cause images to disappear when switching from portrait to landscape on smart devices .. OR can use ordinary class="col-lg-4" for three columns, class="col-lg-3" for four columns, etc. -->
+
+        <!-- =============== EMBED DATA HERE =============== http://getbootstrap.com/css/#forms-controls -->
+        <form role="form" class="fieldwidth fieldwidth2" style="margin-bottom:30px;">
+          <div class="form-group lead lato2">
+            <label for="f1">Username</label>
+            <input type="text" class="form-control" id="f1" placeholder="Username">
+          </div>
+
+          <div class="form-group lead lato2">
+            <label for="f2">Password</label>
+            <input type="password" class="form-control" id="f2" placeholder="Password">
+          </div>
+          <button onClick="SN_Login(event)" type="button" class="btn btn-default">Submit</button>
+        </form>
+
+    <!- wrapper END -->
+    </div>
+
+    </div>
+<!-- ```````````````````````````` container 2 end -->
+
+
+
+
+<!-- ```````````````````````````` footer begin -->
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      FOOTER GEARED TO SOCIAL ENGAGEMENT      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <!-- sticky footer shell -->
+        <div id="outer">
+
+        <!-- footer -->
+	<div id="footer">
+	
+        <!-- zocial buttons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us">
+		<a href="mailto:pionezero@hush.com" class="zocial email"></a>
+              <a href="#" class="zocial facebook"></a>
+              <a href="#" class="zocial twitter"></a>
+	  </div>
+
+	</div>
+
+        <!-- sticky footer solution using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+        <div class="push"></div>
+
+        <!-- end outer, sticky footer shell -->
+        </div>
+<!-- ```````````````````````````` footer end -->
+
+</div>
+
+
+<!-- ```````````````````````````` bootstrap core js begin -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">$j = jQuery.noConflict();</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/docs.min.js"></script>
+    <!-- added, from offcanvaspush -->
+    <script src="../js/jasny-bootstrap.min.js"></script>
+<!-- ```````````````````````````` bootstrap core js end -->
+
+
+	<script>
+		
+		$j(document).ready(function() {
+			SN_Login = function(e) {
+				
+				var p 	= $j('#f1').val();
+				var u 	= $j('#f2').val();
+				var f  	= false;
+				
+				if(!G_ValidateAlphaNumeric(p)) {
+					f = true;
+					$j('#f1').prev('label').animate({ color: 'red' }, 300);
+				}
+				else
+					$j('#f1').prev('label').animate({ color: '#ccc' }, 300);
+				
+				if(!G_ValidateAlphaNumeric(u)) {
+					f = true;
+					$j('#f2').prev('label').animate({ color: 'red' }, 300);
+				}
+				else
+					$j('#f2').prev('label').animate({ color: '#ccc' }, 300);
+					
+				if(f == true) {
+					return false;
+				}
+					
+				var o = new Object();
+					o.u = u;
+					o.p = p;
+					
+				$j.ajax({
+					method: 	'POST',
+					url:		'../ajax/validate.php',
+					data:		'data=' + encodeURIComponent(JSON.stringify(o)),
+					success:	function(d) {
+						if(parseInt(d) === 1)
+							window.location = '../admin/cp.php';
+						else
+							return alert('Invalid Credentials');	
+					}
+				});
+				
+									e.stopImmediatePropagation();
+					e.preventDefault();	
+			}
+		});
+		
+	</script>
+
+
+
+
+<!-- SMOOTH SCROLLING begin, from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->
+<script>
+$j(function() {
+  $j('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $j('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $j('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- smooth scrolling end -->
+
+
+
+
+    <!-- ============= MOSAIC SCRIPTS ============= -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+    <script src="../js/jquery.mosaicflow.js"></script>
+
+</body>
+</html>
