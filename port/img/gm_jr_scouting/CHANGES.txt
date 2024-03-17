@@ -1,0 +1,68 @@
+1)
+I edited a lot of the HTML stuff embedded in the php javascript, mostly in cp.php, but also in
+
+index.php
+home.php
+general.php
+UploadSS.php
+
+2)
+Tweaked or added new classes in carousel.css (new ones usually at the bottom, but not always)
+
+2)
+Added a Help page in the menu (not up yet)
+
+3)
+Fixed all the menus (3-bar drop-down menu) .. spacing, consistent titles, etc
+
+4)
+In index.php i changed:
+
+<li class="menuspace"><a href="#">Player Stats</a></li>
+
+to
+
+<li><a href="#" class="menuspace" form="view_thumbs" onClick="S_LoadForm('view_thumbs')">Player Thumbs</a></li>
+
+as that menu item was indented for some reason and not highlighted so this fixed it (borrowed it from cp.php).
+
+* 5)
+The only thing I could not find to edit was the Player ID in the 'Create Player' page .. it is being spaced separately (and appears shorter) from all the other fields and don't know why.
+
+6) I styled the dropdowm menus in general.php, but they weren't accepting classes too well so I had to do an inline style for a margin. I noticed you used the select element .. Bootstrap documents their version of dropdowns as this:
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+versus this:
+
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+Bootstrap docs also mentioned avoiding using the select element in certain circumstances: "Avoid using <select> elements here as they cannot be fully styled in WebKit browsers." but that was with respect to input groups (http://getbootstrap.com/components/#input-groups).
+
+You don't have to change it but maybe that was why it wasn't styling right (I was using WebKit.)
+
+Later today I'll be:
+
+7) doing a test run of the fresh .csv file you've supplied via the link and messing around with that to see how it works.
+
+8) Then will begin compiling a Help page .. then will be done.
+
+Marcus
+

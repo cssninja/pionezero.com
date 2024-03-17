@@ -1,0 +1,196 @@
+Rich,
+
+I came across three types of styling scenarios, all of which I was careful to only edit that which had already been styled for the most part:
+
+EDITING TEXT WITHIN JAVASCRIPT
+
+EDITING TEXT (YOU HAD ALREADY STYLED INLINE) OUTSIDE OF JAVASCRIPT
+
+EDITING TEXT (WITH NO STYLES) OUTSIDE OF JAVASCRIPT
+
+
+
+-----------------------------
+EDITING TEXT WITHIN JAVASCRIPT >>
+
+I already get how to:
+
++ find classes etc in javascript and target those in carousel.css
++ assign a class to text in javascript that previously didn't have a class (or was minimally styled, such as your use of <style="color:white">)
+
+I came across text in the javascript that had no id's or classes assigned to them or something minimal like <style="color:white"> .. so most (maybe 90%) of the styling I completed a while ago was merely switching out or adding this little span to unstyled or minimally styled text:
+
+<span class="lead lato-php lato-php2">
+
+as with this example in cp.php (in the folder admin),
+
+1)
+WHERE SOMETHING LIKE THIS:
+
+		//pulls create player form
+		S_CreatePlayer = function() {
+				$j.ajax({
+				method:		'POST',
+				url:		'../forms/create_entry.php',
+				success:	function(d) {
+					try {
+					
+						d = $j.parseJSON(d);
+						
+						$j('#content').html('');
+						
+						var counter = 1;
+						
+						for(var i=0; i<d.length; i++) {
+
+							var a = d[i];
+							
+							a = a.replace(/([a-z])([A-Z])/g, '$1 $2');
+							
+							if(i == 0) {
+								var str = '<h1">Create A New Player</h1>'
+										+ '<style="color:white">Fill out one or more values below to create a new player</span>'
+										+ '<form role="form">';
+							}
+							else
+								var str = '';
+
+2)
+BECAME THIS:
+
+		//pulls create player form
+		S_CreatePlayer = function() {
+				$j.ajax({
+				method:		'POST',
+				url:		'../forms/create_entry.php',
+				success:	function(d) {
+					try {
+					
+						d = $j.parseJSON(d);
+						
+						$j('#content').html('');
+						
+						var counter = 1;
+						
+						for(var i=0; i<d.length; i++) {
+
+							var a = d[i];
+							
+							a = a.replace(/([a-z])([A-Z])/g, '$1 $2');
+							
+							if(i == 0) {
+								var str = '<h1 class="home-space home-space2">Create A New Player</h1>'
+										+ '<span class="lead lato-php lato-php2">Fill out one or more values below to create a new player</span><br/><br/>'
+										+ '<form role="form" class="fieldwidth fieldwidth2" style="margin-bottom:30px;">';
+							}
+							else
+								var str = '';
+
+As mentioned, sometimes I noticed you had javascript text styled inline with something like <style="color:white"> which I switched out with <span class="lead lato-php lato-php2">. This was 90% of my styling of the entire dashboard, which I got done ages ago.
+
+** So to answer your question, I was styling javascript inline because you already had done so .. I was merely changing it to the classes designated in carousel.css instead of using styles like <style="color:white">.
+
+
+
+-----------------------------
+EDITING TEXT (YOU HAD ALREADY STYLED INLINE) OUTSIDE OF JAVASCRIPT >>
+
+So then this week I went through the folders to see if I had missed anything and found numerous files that ** you had already styled inline **, such as Uploading.php (in the folder ajax), so I merely pointed the styling to carousel.css,
+
+1)
+CHANGING SOMETHING LIKE THIS:
+
+	
+	<form role="form" style="margin-bottom:30px; width: 80%;" id="SN_UploadImg">
+	
+		<span id="SN_UploadImg">
+			Choose Image <input type="file">
+		</span>
+	
+		<span id="SN_ImgFilename" style="padding-left: 5px;"></span>
+	
+		<span id="SN_DoUploadImg" style="display: none;">
+			Upload
+		</span>
+		
+	</form>
+
+2)
+TO THIS:
+
+	<form role="form" class="fieldwidth fieldwidth2" style="margin-bottom:30px; width: 80%;" id="SN_UploadImg">
+	
+		<span class="btn btn-default btn-file" id="SN_UploadImg">
+			Choose Image <input type="file">
+		</span>
+	
+		<span id="SN_ImgFilename" style="padding-left: 5px;" class="lead lato-php lato-php2"></span>
+	
+		<span class="btn btn-default" id="SN_DoUploadImg" style="display: none;">
+			Upload
+		</span>
+		
+	</form>
+
+
+
+-----------------------------
+EDITING TEXT (WITH NO STYLES) OUTSIDE OF JAVASCRIPT >>
+
+Then I found unstyled error messages that had no classes assigned to them at all, so I began styling those merely by giving them classes (thinking it was ok since you yourself had been styling text that wasn't emebedded within javascript, as with the example above in Uploading.php.)
+
+Here's a good example .. the file home.php (in the folder ajax),
+
+HAD THE ORIGINAL FORM SOMETHING LIKE THIS:
+
+1)
+<?php
+
+	session_start();
+	require_once '../data/globals.php';
+	require_once '../functions/general.php';
+	
+	$sitename = SITENAME;
+	
+	$str = <<<EOF
+	
+		<h1">Welcome to $sitename</h1>
+		This is your main control panel to create, edit, and delete new and existing players.
+		Any changes you make here will automatically and immediately change the same data in your website.
+	
+	
+EOF;
+
+	echo GF_RemoveAllWhitespaceExceptSpaces($str);
+
+I completely get me being able to target h1 in a style sheet to style that .. no inline styling needed. But the text below it had no id's or classes assigned to it at all, hence no access to style it. ** How do you suggest I style the text below h1 ("This is your main...")? **
+
+SO I CHANGED IT TO:
+
+2)
+<?php
+
+	session_start();
+	require_once '../data/globals.php';
+	require_once '../functions/general.php';
+	
+	$sitename = SITENAME;
+	
+	$str = <<<EOF
+	
+		<h1 class="home-space home-space2">Welcome to $sitename</h1>
+		<span class="lead lato-php-home lato-php-home2">This is your main control panel to create, edit, and delete new and existing players.
+		Any changes you make here will automatically and immediately change the same data in your website.<br /><br /><br /><br /><br /><br /><br /></span>
+	
+	
+EOF;
+
+	echo GF_RemoveAllWhitespaceExceptSpaces($str);
+
+The breaks were needed to force the footer to the bottom as it was hugging the top (which I had originally had hugging the bottom in my original code with a 'sticky footer' in carousel.css).
+
+Marcus
+
+
+
+Sent using Hushmail
