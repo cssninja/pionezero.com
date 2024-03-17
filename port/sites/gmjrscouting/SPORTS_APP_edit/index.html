@@ -26,7 +26,7 @@
 
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/js/tasks.js"></script>
+    <script src="./js/tasks.js"></script>
     <![endif]-->
 
     <link href="css/carousel.css" rel="stylesheet">
@@ -140,7 +140,7 @@
 
 			  <!-- zocial buttons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
 			  <div class="follow_us">
-					<a href="mailto:pionezero@protonmail.ch" class="zocial email"></a>
+					<a href="mailto:pionezero@hush.com" class="zocial email"></a>
 			    <a href="#" class="zocial facebook"></a>
 			    <a href="#" class="zocial twitter"></a>
 			  </div>
@@ -165,15 +165,145 @@
 		<!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>-->
 		<script type="text/javascript">$j = jQuery.noConflict();</script>
 
-		<script src="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/js/bootstrap.min.js"></script>
-		<script src="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/js/docs.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/docs.min.js"></script>
 		<!-- added, from offcanvaspush -->
-		<script src="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/js/jasny-bootstrap.min.js"></script>
+		<script src="./js/jasny-bootstrap.min.js"></script>
 		<!-- ```````````````````````````` bootstrap core js end -->
 
 		<!-- ============= MOSAIC SCRIPTS ============= -->
 		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
-		<script src="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/js/jquery.mosaicflow.js"></script>
+		<script src="./js/jquery.mosaicflow.js"></script>
+
+		<script>
+			$j(document).ready(function() {
+				
+				
+				//gets a specific player's profile page
+				S_GetProfile = function(pid) {
+
+					$j.ajax({
+						method:		'POST',
+						url:		'ajax/GetPlayerProfile.php',
+						data:		'pid=' + encodeURIComponent(pid),
+						success:	function(d) {
+
+							if($j('#SNE_Container').is(':visible'))
+								$j('#SNE_Container').hide();
+								
+							if($j('#content').is(':hidden'))
+								$j('#content').show();
+
+							d = $j.parseJSON(d);
+
+							var PlayerName		= ''; //players name
+							var img 			= ''; //player image
+							var str 			= ''; //all other stats
+							
+							
+							//loop through all the stats
+							for(var key in d) {
+								var label 	= key.replace(/([a-z])([A-Z])/g, '$1 $2');
+								var value	= decodeURIComponent(d[key]);
+								
+								if(key == 'ImageName')
+									img = '<img src="' + d[key] + '" style="max-width:240px;" />';
+									
+								else if(key == 'PlayerName')
+									PlayerName = '<h1>' + d[key] + '</h1>';
+								
+								else if(value != '' && key != 'PlayerID')
+									str = str + '<div class="lead lato2"><strong>'+label+'</strong>: '+ G_DecodeEntities(value) +'</div>';
+							}
+							
+							str = str + '<br/><br/><a href="#" class="lead lato2" onClick="S_InitThumbs()">Back to Player Thumbs &raquo;</a>';
+							
+							$j('#content').html(PlayerName + img + '<br/><br/>' + str);
+						}
+					});
+				}
+				
+				
+				
+				//pulls all player thumbnail page data
+				S_GetPlayerThumbData = function() {
+					$j.ajax({
+						method:		'POST',
+						url:		'ajax/GetPlayerThumbData.php',
+						success:	function(d) {
+							try {
+								d = $j.parseJSON(d);
+							} catch(e) { return false; }
+							
+							S_RenderThumbs(d);
+						}
+					});
+				}
+				
+				
+				//renders the thumbnails on the thumbnail page
+				S_RenderThumbs = function(Players) {
+					
+					if($j('#content').is(':visible'))
+						$j('#content').hide();
+						
+					if($j('#SNE_Container').is(':visible')) {
+					
+						//start the mosaicflow plugin
+						var container = $j('#SNE_Container').mosaicflow({
+							minItemWidth:			240,
+							itemHeightCalculation:	'attribute',
+						});
+						
+						
+						/**
+							This is a callback function from mosaicflow - this is triggered AFTER everytime a single thumbanil is rendered.
+							If there are 30 thumbnails, this will get fired 30 times.  One for each thumbnail.  This plugin isn't very well written,
+								it returns no reference to the thumbnail it created, so I wrote that functionality into the plugin.
+								
+							Arguments:
+							(object)	e				the mosaicflow event object
+							(string)	thumbnail_id	the ID of the thumbnail so you can grab it with jquery/javascript
+						*/
+						container.on('added', function(e, thumbnail_id) {
+							
+							//grab the image that was just rendered
+							$j('#' + thumbnail_id).find('img').css({ 
+								//add css to the image directly after mosaicflow kicks in if desired
+							});
+							
+						});
+						
+						
+						//loop through every player creating the thumbnail html for each - then add to mosaicflow plugin
+						for(var i=0; i<Players.length; i++) {
+							Players[i].name 		= (Players[i].name == '') ? 'Unknown' : Players[i].name;
+							Players[i].position		= (Players[i].position == '') ? 'Unknown' : Players[i].position;
+							Players[i].grade		= (Players[i].grade == '') ? 'Unknown' : Players[i].grade;
+							Players[i].image		= (Players[i].image == '') ? 'img/profile.jpg' : Players[i].image;
+							
+							var e = $j('<div class="mosaicflow__item"><a href="#" onClick="S_GetProfile(\'' + Players[i].id + '\')"><img src="' + Players[i].image + '" width="500" height="375"/></a><p>' + Players[i].name + '</p><p>' + Players[i].position + '</p><p>' + Players[i].grade + '</p></div>');
+
+							container.mosaicflow('add', e);
+						}
+					}
+					else 
+						$j('#SNE_Container').show();
+				}
+				
+				
+				//init method - starter function
+				S_InitThumbs = function() {
+					
+					S_GetPlayerThumbData();
+				}
+				
+				
+				//fire up the thumbnail page
+				S_InitThumbs();
+				
+			});
+		</script>
 
 		<!-- SMOOTH SCROLLING begin, from http://css-tricks.com/snippets/jquery/smooth-scrolling/ -->
 		<script>
