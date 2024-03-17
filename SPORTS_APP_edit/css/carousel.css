@@ -1,0 +1,646 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+/* background image can be fixed with mobile but disables smooth scroll and on-page linking .. weird; google query: background-attachment android; http://stackoverflow.com/questions/17664927/background-attachment-fixed-not-working-on-android-mobile */
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class; added margin-top to get rid of annoying 1 px white space */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  margin-top:-1px !important;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #34495E;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left:  15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left:  0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+
+
+
+/* OVERRIDE BOOTSTRAP and CAROUSEL; max-width: zero to xx px, min-width: starting from xx px */
+
+@media (min-width: 768px) {
+.navbar-fixed-top {
+  background:#26292E !important;
+  border-width:0 0 0px !important;
+  /* visibility:hidden; */
+  }
+}
+@media (max-width: 768px) {
+.navbar-fixed-top {
+  background:#191a1c !important;
+  border-width:0 0 0px !important;
+  }
+}
+
+/* media query to hide the ugly white thing at the bottom of menu when this isn't there! UPDATE: removed @media (min-width: 768px) */
+#hide {
+ background-color:#191A1C !important;
+ border-color:#191A1C !important;
+ overflow-x:hidden !important;
+ -webkit-overflow-scrolling:touch !important;
+ }
+
+
+/* @media (min-width: 769px) and (max-width: 1200px) { */
+
+/* fixed top slice, was min-width: 400 */
+@media (min-width: 0px) {
+.bg-fix {
+  height:60px !important;
+  width:100% !important;
+  background:#191a1c !important;
+  position: absolute !important;
+  top: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+.col-lg-4 {
+  font-size:1.3em;
+  }
+}
+@media (max-width: 768px) {
+.col-lg-4 {
+  font-size:1.3em;
+  }
+}
+@media (max-width: 768px) {
+.lead {
+  font-size:1.3em;
+  }
+}
+
+
+/* from jasny-bootstrap.min.css, changed from 300px to 200px */
+.navmenu,.navbar-offcanvas {
+  width:200px !important;
+  background-color:#191A1C !important;
+  height:110% !important; /* SEEMS TO HAVE FIXED THE HOLE IN BOTTOM OF MENU .. KEEP AT 110% */
+  z-index:9999 !important;
+  margin-bottom:100px !important;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+  position: fixed;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+.navmenu {
+  font-size:1.0em;
+  }
+}
+
+@media (max-width: 768px) {
+.dropdown-menu {
+  font-size:1.0em;
+  }
+}
+
+body a {
+  color:#bdc3c7 !important;
+}
+body a:hover,
+body a:visited {
+  color:#bdc3c7 !important;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'SciFly-Sans';
+  src: url('../img/fonts/SciFly-Sans.eot'); /* IE9 Compat Modes */
+  src: url('../img/fonts/SciFly-Sans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../img/fonts/SciFly-Sans.woff') format('woff'), /* Modern Browsers */
+       url('../img/fonts/SciFly-Sans.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../img/fonts/SciFly-Sans.svg#svgSciFly-Sans') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../img/fonts/lato-bold.eot'); /* IE9 Compat Modes */
+  src: url('../img/fonts/lato-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../img/fonts/lato-bold.woff') format('woff'), /* Modern Browsers */
+       url('../img/fonts/lato-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../img/fonts/lato-bold.svg#svglato-bold') format('svg'); /* Legacy iOS */
+}
+
+/* font size controlled in squishy in html */
+.scifly {
+  font-family:SciFly-Sans;
+  /* font-weight:600; */
+  /* font-size:10em !important; */
+  color:#A3C2D6;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  text-align:center !important;
+  line-height: 1 !important;
+}
+.scifly2 {
+  font-family:lato-bold;
+  /* font-weight:200;*/
+  font-size:40% !important;
+  color:#49637A;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  text-align:center !important;
+  line-height: 1 !important;
+}
+/* for h2, p */
+.lato {
+  font-family:lato-bold !important;
+  color:#95a5a6 !important;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+}
+.lato-small {
+  font-size:30px;
+  font-family:lato-bold;
+  color:#95a5a6;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+}
+.lato2 {
+  font-family:lato-bold;
+  color:#bdc3c7;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+}
+.lato3 {
+  font-family:lato-bold;
+  color:#ecf0f1;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+}
+.lato_arrow {
+  font-family:lato-bold;
+  color:#ecf0f1;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  font-size:3.5em;
+  opacity:0.3 !important;
+}
+
+@media (max-width: 768px) {
+.lato-php {
+  font-size:18px;
+  font-family:lato-bold;
+  color:#bbbbbb;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  width:100% !important;
+ }
+}
+@media (min-width: 768px) {
+.lato-php2 {
+  font-size:18px;
+  font-family:lato-bold;
+  color:#bbbbbb;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  width:80% !important;
+ }
+}
+@media (max-width: 768px) {
+.lato-php-home {
+  font-size:22px;
+  font-family:lato-bold;
+  color:#bbbbbb;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  width:100% !important;
+ }
+}
+@media (min-width: 768px) {
+.lato-php-home2 {
+  font-size:22px;
+  font-family:lato-bold;
+  color:#bbbbbb;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  width:80% !important;
+ }
+}
+@media (max-width: 768px) {
+.home-space {
+  margin-top:-50px !important;
+ }
+}
+@media (min-width: 768px) {
+.home-space2 {
+  margin-top:0px !important;
+ }
+}
+
+
+.logo {
+  font-family:SciFly-Sans;
+  font-size:3em !important;
+  color:#bdc3c7;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  position:relative;
+  text-align:left !important;
+  padding:20px 0px 0px 20px;
+  background-color:#26292E;
+  height:60px;
+  z-index:2000;
+}
+
+@media (max-width: 768px) {
+.logo {
+  font-family:SciFly-Sans;
+  font-size:3em !important;
+  color:#bdc3c7;
+  text-shadow:none!important; /* MAKE SURE THIS OVERRIDE IS EVERYWHERE FOR FLAT UI */
+  position:relative;
+  text-align:left !important;
+  padding:0px 0px 0px 20px;
+  background-color:#26292E;
+  height:60px;
+  margin-top:-2px; /* fixes 1 px white space margin above */
+ }
+}
+
+/* ADDED */
+@media (max-width: 768px) {
+.carousel .item {
+  height: 500px;
+  background-color: #34495E;
+ }
+}
+/* ADDED */
+@media (max-width: 768px) {
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+ }
+}
+/* ADDED */
+@media (max-width: 768px) {
+  .carousel-caption p {
+    margin-bottom: 60px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+.size-override {
+  font-size:2em !important;
+  color:#95a5a6;
+}
+
+.icon-bar {
+  background-color:#bbbbbb !important;
+}
+.navbar-toggle:hover {
+  background-color:#1b1e22 !important;
+}
+.navbar-toggle {
+  background-color:#0e1011 !important;
+}
+@media (max-width: 768px) {
+.navbar-toggle {
+  background-color:#0e1011 !important;
+ }
+}
+
+
+.navmenu-nav li a {
+  color:#bbbbbb !important; /* MENU FONT COLOR SET HERE */
+}
+.navmenu-nav li a:hover,
+.navmenu-nav li a:visited {
+  color:#c7cacd !important;
+  text-decoration: none;
+}
+.hover-fix li a { /* fixes 1 pixel movement of text when hovering */
+  padding-left:16px;
+}
+
+.btn-default {
+  background-color:#0e1011 !important;
+  border-color:#60656a !important;
+  color:#b0b7bc !important;
+}
+.dropd-php {
+  /* background-color:#0e1011 !important;
+  border-color:#60656a !important;
+  color:#b0b7bc !important; */
+  margin-top:-110px !important;
+}
+
+.featurette-divider {
+  border-color:#60656a !important;
+}
+
+.fancytext {
+ background-color:#464B55; !important;
+ font-weight:bold !important;
+ color:#BDC3C7 !important;
+ padding:4px 7px 4px 7px !important;
+}
+.fancytext2 {
+ background-color:#464B55; !important;
+ font-weight:bold !important;
+ color:#BDC3C7 !important;
+ padding:4px !important;
+}
+
+.menu-divider {
+  margin: 12px 0;
+  border: 4px solid #273949 !important;
+}
+
+
+
+/* different version, good for ipad, larger images and centered, from http://codeitdown.com/css-square-rectangle/ */
+.round-box{
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    background: #0e1011; /* was 30455A */
+    border-radius:60px /* added */
+}
+.round-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.rb-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.rb-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.rb-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.rb-content span img {
+    width:75%;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* social media footer */
+
+#footer { 
+    background-color:#0e1011;
+    padding:40px 0px 50px; /* top right/left bottom */
+    text-align:center;
+    margin-top:200px;
+}
+
+/* zocial icons */
+.follow_us {text-align:center;}
+.follow_us a.zocial { 
+    font-size:36px;
+    width:77px;
+    margin:0 10px 0 0;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    background:transparent;
+    opacity:0.2;
+}
+.follow_us a.zocial:hover {opacity:1.0; background:transparent; }
+
+/* sticky footer */
+
+#outer {
+    min-height: 0%; /* changed, was 100%*/
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -40em;
+}
+
+/* sticky footer solution using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ */
+.push {
+    height:0em;
+    clear:both;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+.limit {
+   width:70% !important;
+ }
+}
+
+
+
+@media (max-width: 768px) {
+.fieldwidth {
+   width:60% !important;
+ }
+}
+@media (min-width: 768px) {
+.fieldwidth2 {
+   width:30% !important;
+ }
+}
+
+
+.menuspace {
+  background-color:#0e1011 !important;
+  margin-left:0px;
+  padding:10px;
+}
+
+
+@media (max-width: 768px) {
+.createplayer_php {
+   margin-top:-70px !important;
+ }
+}
+@media (min-width: 768px) {
+.createplayer_php2 {
+   margin-top:-20px !important;
+ }
+}
+
+h1 {
+  color:#696969 !important;
+ }
+
+@media (max-width: 768px) {
+.helpmargin {
+   font-size:28px !important;
+   margin-top:-100px !important;
+ }
+}
+@media (min-width: 768px) {
+.helpmargin2 {
+   font-size:28px !important;
+   margin-top:-40px !important;
+ }
+}
+
+
+.ftbackg {
+  background-image: url('../img/football2.png');
+  background-attachment: fixed !important;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+
+.italics {
+ font-family: 'arial' !important;
+ font-style: italic !important;
+ font-weight: bold !important;
+ }
+
+
+
+
+
+
+
