@@ -1,0 +1,32 @@
+A)
+DASHBOARD
+
+1) The dashboard forms we are developing for you CAN be used OFFLINE via HTML5 local storage. The dashboard will work with or without internet connection.
+
+2) The MASTER SPREADSHEET Rich will format for you of course can also be used offline .. you'd just have to wait for internet connection to upload it to the database. (Note to Rich: can it be uploaded offline and stored via HTML5?)
+
+3) Initial data entry using the dashboard will take some effort but only needs to be done once. This is common when 'populating' a database.
+
+B)
+SPREADSHEETS upload: 'RANDOM' vs 'MASTER'
+
+1) You can take all the 'random spreadsheets' you get from all over the country and put these into the database. NOTE >>
+   i) These spreadsheets are not formatted in a standardized 'master' format, simply because they are using their own formats. HOWEVER, Rich is going to configure for you a 'master spreadsheet, different from the 'randoms' in that the master spreadsheet will have the ability to upload all fields without error messages and will be fully searchable.
+   ii) The 'random spreadsheets' aren't formatted for a perfect fit into the database so when uploaded there may be error messages .. but to allow them to post and not be blocked Rich can loosen the 'validation' requirement.
+   iii) These 'random spreadsheets' lose some search capability, and relies on JSON only for search. However they can be searched by player name, for instance, if there are no spelling errors.
+   iv) When 'random spreadsheets' post online, it will basically be a WYSIWYG, or, 'what you see is what you get' as they won't be in the master format that you yourself will be using.
+   v) Continually uploading these 'random spreadsheets'  will pile up in number, eventually slowing down the database (Note to Rich: unless one replaces the other each time it's uploaded.)
+
+ 2) HOWEVER, as noted, a MASTER SPREADSHEET will be developed for your personal use which will be formatted in such a way that it can be uploaded to the database showing all fields (without error messages or having to loosen validation requirements), posted to the web as you want it to look, and will be fully searchable. It will be standardized as it should be to synch with the database SEAMLESSLY.
+
+3) An option with this master spreadsheet is that instead of uploading all the 'random spreadsheets' you get from all over the country, you can eyeball them and manually enter data from them into the master spreadsheet, so all that is uploaded is ONE MASTER SPREADSHEET, as opposed to uploading improperly formatted spreadsheets. Seeing you have a team of four or five, all of you working together using the same master spreadsheet should significantly speed up this manual transfer of data. (Note to Rich: should there be more than one 'master spreadsheet'? I can see how this would cause conflict, notes below.)
+
+4) *More notes to Rich:
+   i) Wouldn't it be better for Russ and his team of 5 to manually enter data from the random spreadsheets into the online/offline dashboard forms? That is, with multiple master spreadsheets would there be conflicts of overriding one master spreadsheet with another master spreadsheet if they are not filled out exactly the same during time of upload?
+
+   ii) Also, will the dashboard have the capability to upload a master spreadsheet offline and store it as HTML5, or is offline dashboard use restricted to using only the forms?
+
+   iii) If the former is true, can Russ and his team of 5 upload their own respective master spreadsheets offline in the dashboard and have that data stored into HTML5, thus eliminating any possible overwriting of data mentioned above? This sounds messy because how would the dashboard/HTML5 stuff/database know what entry is considered 'new' and which one is 'old' and meant to be replaced with the new one.
+
+
+
