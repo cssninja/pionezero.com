@@ -1,0 +1,110 @@
+A FRONTEND DEVELOPER'S VIEW (FROM MARCUS) ..
+
+Russ!
+
+Hey sorry for the confusion here .. to cut to the chase here, the database upgrade you had us do to accommodate your requests for a fully scaleable and fully editable database (where there was no longer any 'FIXED' data .. as the original 93 fields .. but now EVERYTHING could be edited) made it impossible for a simple two dimensional spreadsheet to process this data .. this processing and 'matrixing' can only be done in a database and is absolutely impossible to do in a simple two-dimensional spreadsheet.
+
+The last time we upgraded the database Rich and I both through email and especially Rich on the phone with you (twice I believe) made it crystal clear that the use of the master spreadsheet was being replaced by multiple spreadsheets. The reasons we gave were thoroughly outlined and Rich's replies to you recently and also pretty nicely explained to you through project iterations we went through from the start (master spreadsheet concept) to the use a a few spreadsheets instead when we were updating the database a while back.
+
+Based on your requests to update the database with it's added capabilities, the 'core logic' had to be rewritten. As a rough analogy, the master spreadsheet was a two-dimensional array of data where everything was pretty much in a 1:1 correspondence with 'fixed fields'. However, when you requested we give you more capability to edit EVERYTHING where fields were no longer fixed but now editable, the 'array' of relational data went from 'two dimensional' to ASTRONOMICAL so to speak - it became 'multidimensional' where simple 1:1 correspondence of simple data is IMPOSSIBLE IN A SPREADSHEET AND HAS TO BE HANDLED BY A DATABASE. IT'S LITERALLY IMPOSSIBLE FOR A SIMPLE SPREADSHEET TO SIMULTANEOUSLY HANDLE A MULTIDIMENSIONAL ARRAY OF DATA THIS WAY. You'd need a supercomputer using a 'virtual' spreadsheet to accomplish this basically. Super stores like Amazon or Ebay know this and don't store the entirety of their information on spreadsheets for processing .. it's IMPOSSIBLE and a database has to do this .. it's the only way. This was the path the project took when you made the request to be able to edit fields in the database (see 'Request 1', 'Request 2' in Rich's reply below.)
+
+So to accommodate your requests to have the entire database be completely editable (it's a very powerful database now, capable of anything), the master spreadsheet was replaced by the few multiple spreadsheets, listed by player position. IN OTHER WORDS, THE MATRIXING INCAPABILITY OF A SINGLE SPREADSHEET TO HANDLE CHANGING MULTIPLE FIELDS WAS MADE CAPABLE BY MULTIPLE SPREADSHEETS. And consequently you now have a VERY powerful app I hope you know. You can populate those spreadsheets with all your data, and upload them just the same. The master spreadsheet is only available as something to look at to view all the data at once .. that's it. And using a few spreadsheets now versus one massive master spreadsheet means that finding players and data is MUCH FASTER for these smaller spreadsheets. All you need to do is toggle to the next spreadsheet to get to different player positions.
+
+For the database upgrade one of the things (among many) you wanted was a change over so that you could isolate player statistics (hide the ones not applicable to a position in the create/edit forms).
+ 
+Once again, the reason for multiple spreadsheets is because if there is one big spreadsheet there is nothing there that can make an association between a statistic and whether or not it belongs to a player position (what I referred to as 'matrixing capability' above.) So if you add a new column - WHAT position does it go to? YOU CANNOT MAKE THAT ASSOCIATION IN A SPREADSHEET, LET ALONE LOOK AT A SPREADSHEET AND KNOW THAT A PARTICULAR STATISTIC BELONGS TO 10 OR 15 DIFFERENT POSITIONS AND NOT THE OTHER REMAINING POSITIONS.
+ 
+IT IS EXACTLY FOR THAT REASON THAT THIS (DATA ASSOCIATIONS .. WHICH YOU NEED TO DO) HAS TO BE DONE ON THE DATABASE SIDE. IT'S IMPOSSIBLE TO ACCOMPLISH IN A SPREADSHEET THAT IS. That's why Amazon and every other website in existence doesn't use spreadsheets for storing information.
+
+Therefore, if you want a single spreadsheet to work off of .. the entire system would have to be re-written, a third time. THE FOLLOWING IS WHAT YOU WILL LOSE IF YOU GO BACK TO A SINGLE SPREADSHEET (HUGE LOSE OF CAPABILITY):
+ 
+1) Since there is no ability to link stats with positions in a spreadsheet (a database has to do this, and it also POPULATES MULTIPLE SPREADSHEETS WITH THIS PROCESSED DATA IF YOU MAKE CHANGES IN THE BACKEND) - all that functionality will be GONE.
+ 
+2) Since there is no ability to link stats to positions in a spreadsheet (a database has to do this, and it also POPULATES MULTIPLE SPREADSHEETS WITH THIS PROCESSED DATA IF YOU MAKE CHANGES IN THE BACKEND), then it is also an ALL OR NOTHING situation when editing/creating players - new and existing.
+ 
+3) When creating a new player - you will have all 100+ fields because the application won't know what statistic belongs to what position since its spreadsheet driven and spreadsheets cannot make that distinction. IT IS LITERALLY IMPOSSIBLE TO DO. (A database has to do this, and it also POPULATES MULTIPLE SPREADSHEETS WITH THIS PROCESSED DATA IF YOU MAKE CHANGES IN THE BACKEND.)
+ 
+4) When editing a player, either the app shows every stat there is or only shows what the player currently has, which means if you want to go into the backend and update a stat value for a player - and that player did not have a value in the spreadsheet for that stat - that statistic will be not be present in the edit player form because there is nothing in the spreadsheet to say that this stat belongs with that position. (A database has to do this, and it also POPULATES MULTIPLE SPREADSHEETS WITH THIS PROCESSED DATA IF YOU MAKE CHANGES IN THE BACKEND.)
+ 
+So either you get all 100+ fields or only get ones that have values in the spreadsheet when editing players in the backend, and regardless of that you will have all 100+ fields when creating a new player.
+ 
+5) There will not be an ability to create new stats in the backend. There will not be any ability to link stats to positions in the backend, since a 'master spreadsheet' would control that. ESSENTIALLY, DUE TO THE SEVERE LIMITATIONS OF A SPREADSHEET TO CONTROL AND PROCESS DATA, ALL THE CAPABILITIES AND POWER OF YOUR APP ARE WIPED OUT.
+ 
+6) There will not be an ability to create new player positions in the backend, because a 'master spreadsheet' would control it. Again, you lose everything.
+ 
+7) There will not be an ability to edit player positions in the backend because the spreadsheet controls it. (Ditto.)
+ 
+8) If you misspell a player position (quartrback instead of quaterback) - there will now be two positions - quarterback and quartrback - because the spreadsheet would be in charge of configuration and not the database.
+ 
+9) Local storage will be gone.
+ 
+10) You will also have to deal with a spreadsheet being 60 feet wide over time.
+
+So in short, you will basically not be able to edit the database if you want to add a new stat or field, etc .. to do that the CORE LOGIC WOULD HAVE TO BE REWRITTEN EVERYTIME YOU'D WANT TO CHANGE OR EDIT FIELDS. This is why we redesigned the core logic to to give you complete control over what you can edit. Russ .. the only thing that changes is the use of a FEW extra spreadsheet, that is all. It won't be hard to toggle between player position spreadsheets. Having a completely EDITABLE database is FAR SUPERIOR. To make all this possible, you only need to use a few spreadsheets instead of one, otherwise you will not have any database editing capabilities.
+
+We know you don't think like a programmer, so we apologize for any miscommunication. But we feel the database we created for you is VERY powerful with full editing capabilities at your fingertips .. far far superior than a database that had 93 fixed fields as it originally had.
+
+Below is Rich's view of the project so far, why having an editable database is FAR superior.
+
+Peace!
+Marcus
+
+----------
+
+BACKEND DEVELOPER'S VIEW (FROM RICH) ..
+
+Russ,
+
+To simplify things, this is essentially what has happened from start until now:
+ 
+To Start:
+	•	We were asked to write an app that would take spreadsheet data and ultimately that data would end up on some sort of profiling system on a website.
+	•	A series of several spreadsheets were provided stating these were all the positions/stats
+	•	Spreadsheets originally controlled most of the configuration from the previous application
+	•	Spreadsheets were condensed from a series of spreadsheets broken down by position - to one large "master" spreadsheet that contained all statistics. This was a developer decision.  NOTE: This was done because it was stated that there would be no more stats or positions added at the start of this project, so the "master" spreadsheet would never grow in size. Based on that statement, the original logic worked fine with this.  SOMETHING TO UNDERSTAND: When you add a single column to a spreadsheet, you exponentiate the amount of data the spreadsheet can contain. For example, if you have 300 rows of players and add one column, you just added 300 new values. If you add two columns, now you've added 600 new values, 10 new columns would be 3000 new values. Add one more player and that number grows again. This is FATAL to an application.  Since it was originally stated that these were all the stats and player positions and there would be no more added, this above method was fine to use.
+Redesign request 1
+	•	A request was made to only show stats for the position(s) the stats applied to. For example, don't show "touchdowns" if the position is a quarterback.  This request alone changes the way the spreadsheet can be used. Spreadsheets are used for an unsecure and vulnerable way of showcasing and organizing data. Spreadsheets cannot make the distinction between what is associated with what.   For example, there is nothing you can do to make a "touchdowns" column only apply to wide receiver positions because as you well know, any column in a spreadsheet will apply to ALL rows of data.   This means the spreadsheet can not be the entity in charge of linking statistics to positions since it is impossible to make columns only apply to certain rows, it has to be done in a relational database, which provides relationships between data - such as linking a statistic to one or more player positions.
+Redesign request 2
+	•	A request was made to be able to add statistics "on the fly"  This request also means a single master spreadsheet is not a feasible approach because once again, if you add a new statistic to the spreadsheet, it is essentially another column in the spreadsheet, which will once again apply to ALL rows of data - meaning ALL players of ALL positions are affected by the new statistic. The spreadsheet cannot make that distinction. Not to mention, See "SOMETHING TO UNDERSTAND" in the first topic because this would cause that to happen.
+Other Flaws ..
+	•	Because it was requested to be able to add statistics, the idea of using a single spreadsheet becomes impractical and a flawed design that will eventually destroy your application from the inside out. Here is why:  Refer to SOMETHING TO UNDERSTAND in the first topic. With each new statistic being added, you exponentiate your data more and more and more. When this happens, you have to pull more and more data with each request for a player's statistics. This means that it will take longer and longer to get that data and eventually people will not even bother coming to the site/application because they will get frustrated at how long it takes to bring up a player's profile - let alone an entire team.
+	•	The database was set up a specific way. It was set up based on the fact that there would be no addition of stats or positions. That fact changed over time and became irrelevant, which, in turn, made the database configuration irrelevant as well as the idea of a single spreadsheet irrelevant. These issues had to be addressed to make the changes requested.
+ 
+Had this been brought up from the start, there would never have been a "master" spreadsheet. It would have remained spreadsheets broken down by position as they are now. The idea behind the "master" spreadsheet was just to make things easier and more centralized, based on the fact that stats and positions would NEVER change. Using a spreadsheet to maintain data is a sloppy design in software and leaves you at serious risk for being hacked. All of this should be the responsibility of the database.
+ 
+ 
+RESULT:
+Since stats and positions needed to be associated with each other, this means the database has to take control of the data, not any spreadsheets, because spreadsheets cannot make that association between data. It just shows data and that's it. There are no relationships between data in a spreadsheet.
+ 
+With using a single spreadsheet to drive everything, and considering spreadsheets cannot make associations between stats and positions, the application would then only be capable of doing what it knows. So when a user goes to edit or create a new player, it would then show every field the spreadsheet has - because there is no possible way in a spreadsheet to say that a stat does or does not belong with a position.
+ 
+What if we just left the cell empty to represent that it didn't belong to that position? Sure, but what happens when you stated that you didn't have completed profiles? That means cells that should have values will not. Then the field for that stat would not show up when editing that player because no value exists. So that's a flawed concept. Another reason this is flawed is because if all players have a value but one doesn't and the code is expecting there to be a value, the code will break which means the application breaks and so does the rest of the website. This means you lose credibility and end users lose confidence in the application.
+ 
+If a player position is misspelled in the spreadsheet, there will now be two positions of the same type, but one is misspelled and the other is not. Nobody ever catches all misspellings. That's why you can find them from the New York Times down to Best Selling books. So if uncaught, then what happens with stats and positions because it's not the same position anymore - if you were to use the flawed "empty cell" idea I bought up in the last paragraph? Everything breaks.
+ 
+There is an old saying that "You can't have your cake and eat it, too". This saying applies here. What is being asked is a "free for all" with no order, no structure, no logic, and everything should just know how to sort itself out based on that, like harmony in the middle of a natural disaster. This is not possible to do.
+ 
+SO, IN ORDER TO STILL BE ABLE TO USE SPREADSHEETS TO CONFIGURE PLAYER DATA, THE SPREADSHEETS HAVE BEEN BROKEN DOWN AND ONLY SHOW THE STATS THAT ARE ASSOCIATED WITH THEM.
+ 
+These spreadsheets are still all master spreadsheets, only these are broken down by player position.
+ 
+Any change in player data, linking/unlinking stats, deleting players, adding players, etc, automatically show up in the spreadsheet download link. This is because the spreadsheets are generated when they are requested so the application provides the most current data possible.
+ 
+If a new stat is needed, it can be created in the backend and when linked to one or more positions, they automatically show up in the appropriate spreadsheets.
+ 
+If a new position is needed, the same thing happens - a new spreadsheet appears for download along with any stats attached to that position.
+ 
+You can still add new players to the spreadsheets and upload them and they will be added to the entire system including any new spreadsheet downloads of that player's position.
+ 
+THIS ALSO MAKES MAINTENANCE OF SAID SPREADSHEETS FAR EASIER AND FAR QUICKER THAN IT WOULD BE TO MAINTAIN ONE MASSIVELY, EVER GROWING SPREADSHEET THAT GOES INFINITELY OFF THE SIDE OF THE PAGE BECAUSE 4 YEARS LATER THERE'S 562 MORE STATS ADDED TO WHAT WAS ORIGINALLY THERE. Even with around 100 stats/spreadsheet columns - if you need to add 300 players, how fun would it be to scroll across over 100 columns in a spreadsheet to find a single column to put the stat's value in? Keep in mind, the headers are only the first row in a spreadsheet. As you add more players and have to scroll down to add new ones, you will have to scroll back up and way over to the right to find the right cell, then back down to the player's row. When editing player #342's touchdown stat (out of 700 players) - this scrolling will become very cumbersome - as opposed to just downloading the position spreadsheet for a group of players and throwing them in there, uploading, then moving onto the next position and repeating.
+ 
+I guarantee you that if there was a race between the two methods, the person working with multiple spreadsheets would win over the person using one massive spreadsheet, particularly with larger amounts of data (100+ players). One thing that would stand out very quickly is you don't have to know or care what stats belong to that position because they're the only ones in that position's spreadsheet which leaves no room for error, as well.
+ 
+When Microsoft comes out with the ability to completely remove a column's cell or range of cells from a row maybe we can revisit this idea - although it's still a sloppy approach, but until that time arrives the only thing that can be done is to delete a value in a cell. But the cell is still present in both the column and the row. In order to make the distinction that a particular stat does not belong with a position, the cell itself has to be removed from the spreadsheet (IE:C cannot exist in rows 3, 7, and 38, so 3C, 7C, and 38C would not exist). Spreadsheets don't work like that. Delete the values all day long until you're blue in the face, but 3C, 7C, and 38C cells will still exist. They just won't contain a value. THIS IS WHY ALL STATS WOULD APPLY TO ALL POSITIONS IN A SPREADSHEET. THIS IS WHY THE MASTER SPREADSHEET IDEA IS OUT THE WINDOW.
+
+Respectfully,
+Rich
+
+
+
+Sent using Hushmail
