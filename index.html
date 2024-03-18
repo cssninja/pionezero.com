@@ -1752,6 +1752,29 @@
       }
     }
 
+    /* italics */
+    .ital {
+      font-style: italic;
+      color: #696b6e !important;
+      display: inline !important;
+      line-height: 27px;
+      -webkit-text-stroke: 0.4px #696b6e;
+      -webkit-text-fill-color: #696b6e; 
+      font-size: 1em;
+      opacity: 0.6
+    }
+
+    @media (min-width: 1200px) {
+      .ddtwk {
+        min-width: 26vw !important
+      }
+    }
+    @media (max-width: 1024px) {
+      .ddtwk {
+        min-width: 76vw !important
+      }
+    }
+
     </style>
 
 </head>
@@ -2459,11 +2482,11 @@
                                     </div>
                                   </div>
 
-                                  <!-- details -->
-                                  <div class="row">
+                                  <!-- details .. style below: dropdown text area wasn't collapsing below 'process' so  only in this div is here a compensation for the .container media query in css above in head, which made it woder by 400px .. further tweaked with class .ddtwk above to give text area equivalent width to others -->
+                                  <div class="row" style="max-width:500px !important">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"><strong class="subtitlebg2">Process &nbsp&nbsp&nbsp<i class="fa-regular fa-caret-down" style="margin-right:0"></i></strong></div>
                                     
-                                    <div class="collapse" id="collapseExample3">
+                                    <div class="collapse ddtwk" id="collapseExample3">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
                                       <div class="card card-body dettxt">
                                         -----------------------------<br />
@@ -3049,7 +3072,7 @@
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
                                     <div class="col dsctx">
                                       1) A <strong class="strgtxt">responsive front end framework to act as the main website to view uploaded spreadsheet data</strong>, or the place where the backend portal site posts to<br />
-                                      2) A <strong class="strgtxt">responsive front end framework to act as a backend portal</strong> to a) <strong class="strgtxt">upload</strong> spreadsheet data, b) <strong class="strgtxt">manually type</strong> in data and c) <strong class="strgtxt">edit</strong> data<br /> (* another developer coded all the backend functionality)<br />
+                                      2) A <strong class="strgtxt">responsive front end framework to act as a backend portal</strong> to a) <strong class="strgtxt">upload</strong> spreadsheet data, b) <strong class="strgtxt">manually type</strong> in data and c) <strong class="strgtxt">edit</strong> data<br /> <span class="ital">(* another developer coded all the backend functionality)</span><br />
                                       3) <strong class="strgtxt">Bootstrap front end UI development</strong><br />
                                       4) <strong class="strgtxt">Languages: HTML, CSS, JS</strong>
                                     </div>
@@ -3057,11 +3080,11 @@
 
                                   <!-- details -->
                                   <div class="row">
-                                    <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"><strong class="subtitlebg2">Process &nbsp&nbsp&nbsp<i class="fa-regular fa-caret-down" style="margin-right:0"></i></strong></div>
+                                    <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7"><strong class="subtitlebg2">Process &nbsp&nbsp&nbsp<i class="fa-regular fa-caret-down" style="margin-right:0"></i></strong></div>
                                     
-                                    <div class="collapse" id="collapseExample4">
+                                    <div class="collapse" id="collapseExample7">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style -->
-                                      <div class="card card-body dettxt" style="display:block !important">
+                                      <div class="card card-body dettxt">
                                       A)<br />
                                       DASHBOARD<br /><br />
 
