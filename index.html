@@ -1146,6 +1146,41 @@
         /* paint-order: stroke fill; */
         font-size: 1em;
     }
+    /* more sanples here */
+    .strgtxt2 {
+        /* background: #d0c7d7 !important; */
+        padding: 1px 1px 1px 1px;
+        color: #696b6e !important;
+        display: inline !important;
+        line-height: 27px;
+
+        /* color: #4f5154 !important; */
+        /* font-weight: 500 !important; */
+        /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
+        -webkit-text-stroke: 0.4px #696b6e;
+        -webkit-text-fill-color: #696b6e; 
+        /* paint-order: stroke fill; */
+        font-size: 1em;
+    }
+    /* footer bio, adding stroke and fill for font weight above 900 */
+    .strgtxt3 {
+        /* background: #d0c7d7 !important; */
+        padding: 1px 1px 1px 1px;
+        color: #e1d9e7 !important;
+        display: inline !important;
+        line-height: 27px;
+
+        /* color: #4f5154 !important; */
+        /* font-weight: 500 !important; */
+        /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
+        -webkit-text-stroke: 0.4px #e1d9e7;
+        -webkit-text-fill-color: #e1d9e7; 
+        /* paint-order: stroke fill; */
+        font-size: 1em;
+        opacity: 0.85;
+    }
     /* increases font weight for descriptive text of projects */
     .thkfnt {
       font-weight: 500;
@@ -1543,8 +1578,47 @@
       position: relative !important;
       max-height: 30px;
     }
+    /* expandable background version where text pushes background taller */
+    .porticonz3 {
+      background: #d0c7d7;
+      width: 250px; /* 100% or 250px also .. can't use 350px as it ruins layout in mobile so use vw */
+      padding: 2px 10px; /* tb, rl */
+      border-radius: 5px;
+      font-family: verdana;
+      font-weight:900;
+      display: block !important;
+      margin: -13px 0px 30px 0px;
+      line-height: 20px;
+      -webkit-text-stroke: 0.4px #696b6e;
+      -webkit-text-fill-color: #696b6e;
+      /* paint-order: stroke fill; */
+      font-size: 0.75em;
+      opacity: 0.3;
+      position: relative !important;
+      max-height: 45px;
+    }
+    @media (max-width: 550px) {
+      .porticonz3 {
+        background: #d0c7d7;
+        width: 250px; /* 100% or 250px also .. can't use 350px as it ruins layout in mobile so use vw */
+        padding: 2px 10px; /* tb, rl */
+        border-radius: 5px;
+        font-family: verdana;
+        font-weight:900;
+        display: block !important;
+        margin: -13px 0px 30px 0px;
+        line-height: 20px;
+        -webkit-text-stroke: 0.4px #696b6e;
+        -webkit-text-fill-color: #696b6e;
+        /* paint-order: stroke fill; */
+        font-size: 0.75em;
+        opacity: 0.3;
+        position: relative !important;
+        max-height: 45px;
+      }
+    }
     .porticonz::before {
-      content: 'websites,' '\A' 'portfolio';
+      /* content: 'websites,' '\A' 'portfolio'; */
       white-space: pre; /* for line break */
       /* color: #696b6e !important; */ /* default page color #7e8185 .. but overridden in text stroke below */
       font-family: verdana;
@@ -3041,6 +3115,29 @@
                             <div class="align-self-start">
                                 <!-- blurb -->
                                 <div class="container text-start thkfnt">
+
+                                  <div class="row">
+                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col dsctx">
+                                        <p class="porticonz">
+                                            <a href="https://pionezero.com/port/sites/gmjrscouting/index.html">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+                                            <a href="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/index.html">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+
+                                            <a href="https://dribbble.com/shots/23779797-GM-Jr-Scouting-football-recruiting-in-flat-design">
+                                                <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                            </a>
+                                            <p class="porticonz3"><a href="https://codepen.io/fullstackninja/pen/dyLNvmy">experimental code: isotope (codepen fork)</a></p>
+                                            <!-- <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cssninja/view_source/blob/main/SHOPIFY_CODE">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.com/pionezero/1870-1914-look-and-design/">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p> -->
+                                        </p>
+                                    </div>
+                                  </div>
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -3080,7 +3177,7 @@
 
                                   <!-- details -->
                                   <div class="row">
-                                    <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7"><strong class="subtitlebg2">Process &nbsp&nbsp&nbsp<i class="fa-regular fa-caret-down" style="margin-right:0"></i></strong></div>
+                                    <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
                                     
                                     <div class="collapse" id="collapseExample7">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style -->
@@ -3115,38 +3212,28 @@
 
                                          &nbsp&nbsp&nbsp&nbspiii) If the former is true, can Russ and his team of 5 upload their own respective master spreadsheets offline in the dashboard and have that data stored into HTML5, thus eliminating any possible overwriting of data mentioned above? This sounds messy because how would the dashboard/HTML5 stuff/database know what entry is considered 'new' and which one is 'old' and meant to be replaced with the new one.<br /> <br />
 
-                                         <p>Read all 'process' notes on this project <strong class="strgtxt"><a href="https://pionezero.com/port/img/gm_jr_scouting/phase1_review.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/gm_jr_scouting/defending_new_db.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/gm_jr_scouting/CHANGES.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/gm_jr_scouting/more_options.txt">here</a></strong> and <strong class="strgtxt"><a href="https://pionezero.com/port/img/gm_jr_scouting/styling_php.txt">here</a></strong>.
-
                                       </div>
                                     </div>
 
                                   </div>
                                   <!-- / details -->
 
+                                  <!-- process notes -->
+                                  <div class="row">
+                                    <!-- <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div> -->
+                                    <div class="col dsctx" style="margin-top:20px">
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/phase1_review.txt">phase 1 review</a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/defending_new_db.txt">defending new db</a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/CHANGES.txt">changes</a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/more_options.txt">more options</a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/styling_php.txt">styling php</a></p>
+                                    </div>
+                                  </div>
+                                  <!-- / process notes -->
+
                                 </div>
                                 <!-- / blurb -->
 
-                                <p class="porticonz">
-                                    <a href="https://pionezero.com/port/sites/gmjrscouting/index.html">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-                                    <a href="https://pionezero.com/port/sites/gmjrscouting/SPORTS_APP_edit/index.html">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://dribbble.com/shots/23779797-GM-Jr-Scouting-football-recruiting-in-flat-design">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                </a> -->
-                                </p>
-                                <!-- <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.dropbox.com/scl/fo/j0o1d4uakjqqpa18wwi9t/h?rlkey=hew6qd62yoporspae0ll107dh&dl=0">all visual assets</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cssninja/view_source/blob/main/SHOPIFY_CODE">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.com/pionezero/1870-1914-look-and-design/">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p> -->
                             </div>
                         </div>
                     </div>
@@ -3295,7 +3382,7 @@
                             </h6>
                             <div class="align-self-start">
                                 <!-- blurb -->
-                                <p>Be sure to click through folders to see it all. Temporarily right now in Dropbox but will be in my new home page and Dribbble shortly.</p>
+                                <p class="strgtxt2">Be sure to click through folders to see it all. Temporarily right now in Dropbox but will be in my new home page and Dribbble shortly.</p>
                             </div>
                         </div>
                     </div>
@@ -3339,7 +3426,7 @@
                         <div class="widget">
 
                             <!-- short bio -->
-                            <p class="pb-3">
+                            <p class="pb-3 strgtxt3">
                             I’m a highly skilled <span class="hlight">visual designer</span>. My creative existence is absorbed in all things design: illustration, branding, graphic design, typography, I love flat design based color palettes and prefer simplicity in design. I'm a <span class="hlight">front-end coding</span> ninja and craft Shopify stores as well. I'm fully immersed and fluent in <span class="hlight">startup culture</span>, from <span class="hlight">AI</span> to <span class="hlight">distributed web</span> to the ethereal <span class="hlight">mathematics</span> that empowers it all. On breaks I enjoy: time with <span class="hlight">family</span>, <span class="hlight">building</span> things (outdoor and indoor greenhouses, alpine furniture, tree houses), survival <span class="hlight">gardening</span>, cultivating <span class="hlight">off grid</span> skills, <span class="hlight">Youtube and Tiktok</span> videos, studying <span class="hlight">math and science</span>, Indian culture and <span class="hlight">philosophy</span>, <span class="hlight">vegan</span> food, long training runs or bikes in the country, weight training and swim training (I’m a <span class="hlight">lifelong athlete</span>). Anything having to do with <span class="hlight">meditation, Buddha dharma, or promoting peace and abundance on Gaia</span> you will find me there.
                             </p>
 
@@ -3524,9 +3611,9 @@
                                 </a>
                             </li>
                             <!-- instagram -->
-                            <li class="fa-brands fa-instagram">
+                            <li class="social-icons-item social-instagram">
                                 <a class="social-icons-link" href="https://www.instagram.com/auuumoksa">
-                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
                         </ul>
