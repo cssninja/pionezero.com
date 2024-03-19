@@ -13417,14 +13417,14 @@ header.navbar-sticky-on .navbar-brand .navbar-brand-item {
   z-index: 100;
   width: 100px; /* WAS 200px .. to use ALERT, change to 100px */
   height: 100px; /* WAS 200px .. to use ALERT, change to 100px */
-  background: #3a204c; /* WAS #ffffff .. to remove circle around three bars just use color 432957, otherwise use 675077 */
+  background: #301b3f; /* WAS #3a204c #ffffff #301b3f #1b1b1b .. to remove circle around three bars just use color 432957, otherwise use 675077 */
   border-radius: 50% 50% 50% 50%;
   -webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
   -ms-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-  box-shadow: 0 0 0 0 #3a204c, 0 0 0 0 #3a204c; /* WAS #432957 .. transition bg for menu */
+  box-shadow: 0 0 0 0 #301b3f, 0 0 0 0 #301b3f; /* WAS #432957 .. transition bg for menu */
   cursor: pointer;
 }
 
@@ -13472,9 +13472,10 @@ header.navbar-sticky-on .navbar-brand .navbar-brand-item {
 }
 
 .hamburger-menu input:checked + .hamburger-inner {
-  box-shadow: 0 0 0 130vw #3a204c, 0 0 0 130vh #3a204c; /* WAS #3a204c 110vw 110dh .. actual menu bg here */
+  box-shadow: 0 0 0 130vw #1b1b1b, 0 0 0 130vh #1b1b1b; /* WAS #3a204c 110vw 110dh .. actual menu bg here */
   border-radius: 50% 50% 50% 50%; /* WAS 0 */
   z-index:2001;
+  background: #353636 !important; /* added */
   /* ADDED */
   /* -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;
@@ -13486,12 +13487,14 @@ header.navbar-sticky-on .navbar-brand .navbar-brand-item {
 .hamburger-menu input:checked + .hamburger-inner .hamburger-icon {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  background: #d0c7d7 /* added, other part of x */
 }
 
 .hamburger-menu input:checked + .hamburger-inner .hamburger-icon:after {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   bottom: 0;
+  background: #d0c7d7 /* added, other part of x */
 }
 
 .hamburger-menu input:checked + .hamburger-inner .hamburger-icon:before {

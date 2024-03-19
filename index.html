@@ -960,7 +960,7 @@
         border: 0px solid rgba(0, 0, 0, 0);
         border-radius: 0rem;
         width: 100% !important;
-        /* creates collapsable flex grid for MANY images, as with Factory on Barclay .. ADDED flex-wrap, CHANGED flex-direction from column, line 4492 in style,css .. MUST REMOVE BREAKS AFTER DIVS, that's all */
+        /* creates collapsable flex grid for MANY images, as with Factory on Barclay .. ADDED flex-wrap, CHANGED flex-direction from column, line 4492 in style.css .. MUST REMOVE BREAKS AFTER DIVS, that's all */
         flex-wrap: wrap !important;
         flex-direction: row;
     }/* when using colored bg *//* @media (max-width:540px) {
@@ -1725,7 +1725,7 @@
       font-weight: bold;
       position: absolute !important;
       display: inline-block !important;
-      z-index: 50000;
+      z-index: 1000;
       margin: -8px 0px 0px 95px;
       line-height: 20px;
       opacity: 0.09;
@@ -1861,7 +1861,7 @@
     <script src="assets/images/port/code_port/code_type/assets/demos_E2.js"></script>
 
     <!-- corner menu / / / / / /    1    / / / / / / -->
-    <!-- disable/enable alert with > display: -->
+    <!-- disable/enable alert with > display: .. change bg of opened menu on line 13474 in style.css, .hamburger-menu input:checked + .hamburger-inner, old: #3a204c, new: #343a40 -->
     <section class="d-flex m-0 p-0 bd-highlight justify-content-end" style="display:non !important;">
         <div class="hamburger-menu m-0 p-0 bd-highlight linksp" id="top">
             <label>
@@ -2038,7 +2038,7 @@
 
         <div class= "audiodv" style="/* z-index:5000 !important */">
             <!-- <iframe src="https://pionezero.com/vibes/schumannres.mp3" allow="autoplay" id="iframeAudio" class="ifmaud"></iframe> -->
-            <audio autoplay loop controls id="playAudio" style="z-index:6000 !important">
+            <audio autoplay loop controls id="playAudio" style="z-index:1000 !important">
               <source src="https://pionezero.com/vibes/schumannres.mp3">
             </audio>
 
