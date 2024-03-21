@@ -1,7 +1,9 @@
+/* ONLY EDITS, march 20 2024 .. disabled .cbutton margin and color, for icons and text, respectively */
+
 .cbutton {
 	position: relative;
 	display: inline-block;
-	margin: 1em;
+	/* margin: 1em; */
 	padding: 0;
 	border: none;
 	background: none;
