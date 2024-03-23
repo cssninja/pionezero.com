@@ -3,17 +3,8 @@
 <head>
     <title>pi one zero labs | madison, wi</title>
 
-    <!-- updated: mar 22 10:03 2024 -->
-<!-- 
-                       888            
-                       888            
-                       888            
-88888b.d88b.   .d88b.  888888  8888b. 
-888 "888 "88b d8P  Y8b 888        "88b
-888  888  888 88888888 888    .d888888
-888  888  888 Y8b.     Y88b.  888  888
-888  888  888  "Y8888   "Y888 "Y888888
--->
+    <!-- updated: mar 9 4:08 2024 -->
+
     <!-- metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -38,19 +29,33 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-<!--
-888                                .d888                         
-888                               d88P"                          
-888                               888                            
-888888 888  888 88888b.   .d88b.  888888 8888b.   .d8888b .d88b. 
-888    888  888 888 "88b d8P  Y8b 888       "88b d88P"   d8P  Y8b
-888    888  888 888  888 88888888 888   .d888888 888     88888888
-Y88b.  Y88b 888 888 d88P Y8b.     888   888  888 Y88b.   Y8b.    
- "Y888  "Y88888 88888P"   "Y8888  888   "Y888888  "Y8888P "Y8888 
-            888 888                                              
-       Y8b d88P 888                                              
-        "Y88P"  888
--->                                     
+
+    <!-- preloading port img via js (not jquery), targeted div tag is in HEADER labeled HIDDEN, thanks to: https://www.dougv.com/2012/03/preloading-images-with-javascript/, view-source:https://demo.dougv.com/js_preload_images/example1.htm -->
+    <script type="text/javascript">
+    function preloadImages() {
+        var hiddenDiv = document.getElementById('hiddenImages');
+        var i;
+        var img;
+
+        for (i = 0; i < arguments.length; i++) {
+            img = document.createElement('img');
+            img.src = arguments[i];
+            img.alt = '';
+            hiddenDiv.appendChild(img);
+        }
+    }
+
+    function toggleHidden() {
+        var hiddenDiv = document.getElementById('hiddenImages');
+        if (hiddenDiv.style.display == 'none') {
+            hiddenDiv.style.display = 'block';
+        }
+        else {
+            hiddenDiv.style.display = 'none';
+        }
+    }
+    </script>
+
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CPlayfair+Display:400,400i,700,700i%7CRoboto:400,400i,500,700" rel="stylesheet">
     <!-- use firefox only for nabbing fonts .. ubuntu under greek language -->
@@ -58,17 +63,15 @@ Y88b.  Y88b 888 888 d88P Y8b.     888   888  888 Y88b.   Y8b.
 
     <!-- font awesome js -->
     <script src="https://kit.fontawesome.com/3c4f5c0732.js" crossorigin="anonymous"></script>
-<!--
- .d8888b .d8888b  .d8888b 
-d88P"    88K      88K     
-888      "Y8888b. "Y8888b.
-Y88b.         X88      X88
- "Y8888P  88888P'  88888P'
--->
-    <!-- plugins css -->
-    <!-- KEEP, cool animated css > http://daneden.me/animate -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css"/>
 
+    <!-- modernizr for webp display in safari, thanks to: https://modernizr.com/download?webp-dontmin-setclasses and https://stackoverflow.com/questions/55191112/webp-images-doesnt-display-in-safari-although-added-polyfill and https://css-tricks.com/using-webp-images/#article-header-id-4 and http://www.stucox.com/blog/using-webp-with-modernizr/ .. SEE NOTES IN folder assets, have to add css classes and js snippet (https://modernizr.com/download?webp-webplossless_webp_lossless-dontmin-setclasses .. see: 'view examples') .. MODERNIZR IS JUST A DETECT SCRIPT, DOES NOT ADD WEBP FUNCTIONALITY TO SAFARI SO REMOVE // INSTEAD, add this: https://www.npmjs.com/package/webp-hero, and tehy give working example here: https://webp-hero.chasemoskal.com .. stackoverflw link above also links to solution using <picture> and such here: https://stackoverflow.com/questions/60913711/how-to-use-webp-images-and-support-safari/64048033#64048033  -->
+    <script src="assets/js/added/modernizr-custom.js" type="text/javascript"></script>
+
+    <!-- plugins css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/themify-icons/css/themify-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/fancybox/css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/owlcarousel/css/owl.carousel.min.css"/>
     <!-- BOOM click effect from old site, requires classes [cbutton cbutton--effect-novak then class boom for DELAY and HAS TO BE IN LINK BCS JS IS a.boom ] .. this css & js below .. and lots of js at bottom [below classie.js] .. thabnks to: https://tympanus.net/codrops/2015/02/11/subtle-click-feedback-effects/ -->
     <link rel="stylesheet" type="text/css" href="ClickEffects/css/component.css" />
     <script src="ClickEffects/js/modernizr.custom.js"></script>
@@ -78,6 +81,41 @@ Y88b.         X88      X88
 
     <!-- manual css .. edits in master file (style.css) are marked 'WAS', 'ADDED' or 'NOTE' -->
     <style type="text/css">
+    /*
+    (BEGIN notes)
+
+      -------
+        image types (34)
+      -------
+        1) 3 svgs >
+          - 2 waves (both in sections 4 and 7)
+            - 1 footer arch (section 6)
+      2) 1 jpg >
+          - banner rocket (section 3, .rocketbg)
+        3) 4 png's >
+          - logo (section 3, .pi10bg)
+            - logo (section 6, widget 1, STILL IN SVG MODE)
+            - map (section 6, widget 3)
+            - favicon labeled 'open graph properties and favicon' (above)
+      4) 26 font awesome icons >
+          - 1 labled 'to bottom arrow'(section 2 .. font size > .topar)
+        - 10 labeled 'font awesome icon' (section 5 .. font size > .display-1)
+            - 6 labeled 'contact info' (section 6, widget 3 .. font size > .fawe)
+            - 1 labeled 'to top arrow' (section 6, bottom .. font size > .botar)
+            - 2 labeled 'trademark and copyright' (section 6, bottom .. font size > .hlight2)
+            - 7 labeled 'social links' (section 6, bottom .. font size > .social-icons-link)
+
+        * use svg's only if you want to control fill, shape, animation, everything (in a file like functions.js, line 267-290)
+        * most svg setup edited out but all divs and classes remain for layout (see original svg setup in wizixo-1.1.0.zip)
+            * moz documents setting up png in svg mode > https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image
+
+    -------
+        illustrations (10)
+    -------
+        1) 10 in 'panels and such' (section 6) use bg ILLUSTRATIONS in each div marked // left //, // right //
+
+      (END notes)
+        */
 
     /* ============= css-only typing effect of code, up here for stacking (disabled at bottom) */
     .typcon {
@@ -985,9 +1023,7 @@ Y88b.         X88      X88
         opacity: 0;
         /*workaround to make clickable in IE */
         filter: alpha(opacity=0);
-    }
-
-    /* methods >
+    }/* methods >
             1) just use spans instead of divs and embed bg img there
             2) USING > can make entire link fill div with text link then make invisible (correction: visibility:hidden; actually disables clickableness), thanks to: https://www.labnol.org/code/19639-turn-div-clickable-link
             3) give a href a bg image (seems to work), occupying space with actual text link but making invisible
@@ -997,9 +1033,7 @@ Y88b.         X88      X88
             display: flex !important;
             justify-content: center !important;
             text-align:center;
-            *//* same as thumbz only for source code .. demos_EDITED.js runs typed6 byt typed (first one) or type2 seems best as they run off parapgraph type text .. all source code styling thanks to: https://github.com/highlightjs/highlight.js
-
-    */
+            *//* same as thumbz only for source code .. demos_EDITED.js runs typed6 byt typed (first one) or type2 seems best as they run off parapgraph type text .. all source code styling thanks to: https://github.com/highlightjs/highlight.js */
 
     .codez {
         position: relative;
@@ -1110,6 +1144,7 @@ Y88b.         X88      X88
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
         /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
         -webkit-text-stroke: 0.4px #696b6e;
         -webkit-text-fill-color: #696b6e; 
         /* paint-order: stroke fill; */
@@ -1126,6 +1161,7 @@ Y88b.         X88      X88
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
         /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
         -webkit-text-stroke: 0.7px #696b6e;
         -webkit-text-fill-color: #696b6e; 
         /* paint-order: stroke fill; */
@@ -1143,6 +1179,7 @@ Y88b.         X88      X88
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
         /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
         -webkit-text-stroke: 0.4px #e1d9e7;
         -webkit-text-fill-color: #e1d9e7; 
         /* paint-order: stroke fill; */
@@ -1168,6 +1205,7 @@ Y88b.         X88      X88
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
         /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
         -webkit-text-stroke: 0.4px #696b6e;
         -webkit-text-fill-color: #696b6e; 
         /* paint-order: stroke fill; */
@@ -1185,6 +1223,7 @@ Y88b.         X88      X88
         /* color: #4f5154 !important; */
         /* font-weight: 500 !important; */
         /* text-shadow: #696b6e 1px 0 10px; */
+        /* -webkit-text-stroke: 0.8px #4f5154; */
         -webkit-text-stroke: 0.4px #696b6e;
         -webkit-text-fill-color: #696b6e; 
         /* paint-order: stroke fill; */
@@ -1692,6 +1731,131 @@ Y88b.         X88      X88
       text-align: center;
     }
 
+    /* audio tag toggle button .. thanks to: https://stackoverflow.com/questions/59024693/style-the-audio-html-tag, specifically EGC (https://stackoverflow.com/users/11700321/egc) .. MUST DO BOTH -moz and -webkit .. what is the moz equivalent of -webkit-media-controls-play-button
+
+    ALSO may be abel to access the -moz audio controls via SHADOW DOM (--- basically hacking the moz shadow DOM to style a button, after moz said it can't be done (ref: "You can't however style the individual components inside the audio player (e.g. change the button size or icons, change the font, etc.), and the controls are different across the different browsers." https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio), thanks to: https://pointclearmedia.com/2020/08/27/css-styling-the-audio-element/ 
+
+    shadow DOM edits from wild impact work, ref (line 180-212):
+
+    view-source:file:///Volumes/LaCie/Users(MAC_M2)/marcusgrant/Documents/WILD%20copy/PROJECTS/p2_peak/CODE/APR25_simple_navbar_bs5.0.2_iso_w:content%5BSTACKBLITZ%5D_BXSIZ+MIVA+VAR.html
+
+    example:
+
+    @media screen and (min-width: 769px) {
+      #mmx-image-across__six-across picture img,
+      slot[name="image"]::slotted(*) {
+        user-select: none;
+        object-position: center;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: contain;
+        aspect-ratio: var(--mmx-hero__aspect-ratio);
+        }
+      }
+
+      look for > #shadow-root (THIS IS WHERE SHADOW DOM IS, ref: https://pointclearmedia.com/2020/08/27/css-styling-the-audio-element/ ..
+       
+      - about:config
+      - devtools.inspector.showUserAgentShadowRoots
+      - devtools.inspector.showAllAnonymousContent (this is all the toggle needed to show shadow DOM)
+      - set both to true
+      - restart firefox
+
+      FOUND IT >
+      chrome://global/skin/media/videocontrols.css
+
+      -two ways > ::slotted and ::part
+      -have to first make an element eligible for styling by for instance placing inside div part="box" (arbitrary)
+
+      do webkit, moz, opera and def
+
+    */
+
+    /* parent div .. SEE UPDATE TO FIX DOUBLE AUDIO RUNNING, ref: https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome#51630171 */
+    .audiodv {
+      background-color: #292a2a;
+      position: absolute;
+      display: flex;
+      top: 20px;
+      max-height: 30px;
+      max-width: 100px;
+      border-radius: 8px;
+      margin: 0px 0px 0px 70px;
+      padding: 0px 0px 0px 0px;
+      /* border: 0.4rem solid white; */ /* use only when editing */
+      /* z-index: 1; */ /* CHANGE INLINE z-index's for all classes for visibility during editing */
+    }
+    .audiodv::before {
+      content: "music \A on/off";
+      white-space: pre; /* necessary for line break, thanks to: https://css-tricks.com/injecting-line-break/ */
+      min-width: 50px;
+      min-height: 50px;
+      color: #000;
+      font-family: verdana;
+      font-size: 1.5em;
+      font-weight: bold;
+      position: absolute !important;
+      display: inline-block !important;
+      z-index: 1000;
+      margin: -8px 0px 0px 95px;
+      line-height: 20px;
+      opacity: 0.09;
+      transform: scale(1);
+    }
+
+    /* keep this order .. safari first, moz second which effects only moz, otherwise play button disappears for moz at 45px */
+    audio {
+      background-color: #292a2a;
+      position: relative;
+      display: block;
+      max-height: 30px;
+      max-width: 45px; /* anything less than 70% will collapse it in mobile */
+      border-radius: 8px;
+      margin: 0px 0px 0px 0px;
+      transform: scale(2);
+      opacity: 0.09;
+      /* z-index: 60000; */
+    }
+    /* audio tag .. explanation what this is thanks to: https://stackoverflow.com/questions/3123063/what-does-moz-document-url-prefix-do .. MOTHERLODE OF -moz pseudos and prefixes HER > https://developer.mozilla.org/en-US/docs/Web/CSS/Mozilla_Extensions */
+    @-moz-document url-prefix() {
+      audio {
+        background-color: #292a2a;
+        position: relative;
+        display: block;
+        max-height: 30px;
+        max-width: 50px; /* anything less than 70% will collapse it in mobile */
+        border-radius: 8px;
+        margin: 0px 0px 0px 0px;
+        transform: scale(2);
+        opacity: 0.09;
+        /* z-index: 60000; */
+      }
+    }
+
+    /* iframe *
+    .ifmaud {
+      position: relative;
+      display: none;
+    }
+
+    /* VIDEO HACK .. using video tag, access iphone, thanks to: https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5 .. stupid rule allows videos or audio to autoplay if muted .. try to use js to undo muted
+
+    https://www.w3schools.com/tags/tag_video.asp
+    https://stackoverflow.com/questions/7698953/how-to-play-html5-video-when-the-file-is-file-m4v
+    https://stackoverflow.com/questions/34764876/html5-video-autoplay-not-automatically-starting-in-chrome
+
+    third ref has beautiful hack THAT UNMUTES VIDEO .. try with audio
+    * works initally in codepen (https://codepen.io/mmdileepthomas/pen/QroQZp), then DOES NOT
+
+    https://stackoverflow.com/questions/39041960/how-to-unmute-html5-video-with-a-muted-prop
+    muted property and attribute DIFFERENT w/respect to use in js
+
+    moz DEFINES 'muted' and tells how to unmute > https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/unmute_event
+
+    https://stackoverflow.com/questions/30108788/video-mute-unmute
+
+    */
+
     /* typing CODE via pseudo element
     https://codepen.io/raubaca/pen/rxLwPq
 
@@ -1764,110 +1928,16 @@ Y88b.         X88      X88
       font-size: 1em !important;
     }
 
-    /* Custom CSS to prevent collapsing columns */
-    @media (min-width: 1160px) {
-      .fixed-column {
-        max-width: 330px;
-      }
-    }
-    @media (min-width: 768px) and (max-width: 1159.75px) {
-      .fixed-column {
-        max-width: 330px;
-      }
-    }
-    /* mobile .. mobile breaks at 571px to 676px (title collapses) but there are no devices at that width until 768px */
-    @media (max-width: 676px) {
-      .fixed-column {
-        max-width: 270px;
-      }
-    }
-
-    @media (min-width: 1100.25px) {
-    .justify-left-column {
-        padding-left: 0; /* Remove padding for left alignment */
-        margin: 0px 0px 0px 0px ; /* Compensate for negative margin from Bootstrap's row */
-      }
-    }
-    @media (min-width: 768.25px) and (max-width: 1100px) {
-      .justify-left-column {
-        padding-left: 0; /* Remove padding for left alignment */
-        margin: 0px 0px 0px -15px ; /* Compensate for negative margin from Bootstrap's row */
-      }
-    }
-    @media (max-width: 768px) {
-      .justify-left-column {
-        padding-left: 0; /* Remove padding for left alignment */
-        margin: -5px 0px 0px -10px ; /* Compensate for negative margin from Bootstrap's row .. also prevents collapse in some device viewports (360px) */
-      }
-    }
-
-    .aicode {
-      font-size: 0.3em;
-      padding: 5px;
-    }
-    /* @media (min-width: 489.75px) {
-      .aicode::after {
-        content: "ai assisted code";
-        display: block;
-        margin: -25px 0px 0px 50px !important;
-        -webkit-text-stroke: 0.4px #696b6e !important;
-        -webkit-text-fill-color: #696b6e !important; 
-      }
-    } */
-    @media (max-width: 489.75px) {
-      .brain {
-        margin: 20px 0px 0px 20px;
-        min-width: 400px !important; /* giving it a width that can't be sustained in the grid, it has to collapse at 490px */
-      }
-    }
-    /* .braintxt a:hover {
-      -webkit-text-stroke: 0.4px #4bb8f1 !important;
-      -webkit-text-fill-color: #4bb8f1 !important;
-      -webkit-transition: -webkit-text-stroke 0.3s;
-      transition: -webkit-text-stroke 0.3s;
-      -webkit-transition: -webkit-text-fill-color 0.3s;
-      transition: -webkit-text-fill-color 0.3s;
-    } */
-    .braintxt {
-      /* background: #d0c7d7; */
-      font-size: 0.3em;
-      padding: 5px 5px; /* tb, rl */
-      vertical-align: middle;
-      margin: -3px 0px 0px 5px;
-      display: inline-block;
-      /* color: #696b6e;
-      -webkit-text-stroke: 0.4px #696b6e;
-      -webkit-text-fill-color: #696b6e; */
-    }
-
     </style>
 
 </head>
-<!--
-                          888                     888   
-                          888                     888   
-                          888                     888   
- .d8888b .d88b.  88888b.  888888 .d88b.  88888b.  888888
-d88P"   d88""88b 888 "88b 888   d8P  Y8b 888 "88b 888   
-888     888  888 888  888 888   88888888 888  888 888   
-Y88b.   Y88..88P 888  888 Y88b. Y8b.     888  888 Y88b. 
- "Y8888P "Y88P"  888  888  "Y888 "Y8888  888  888  "Y888
--->
+
 <body>
 
     <!-- source code animated type, thanks to: https://github.com/mattboldt/typed.js/ -->
     <script src="assets/images/port/code_port/code_type/lib/typed.js" type="text/javascript"></script>
     <script src="assets/images/port/code_port/code_type/assets/demos_E2.js"></script>
-<!--
- d888  
-d8888  
-  888  
-  888  
-  888  
-  888  
-  888  
-8888888
--->
+
     <!-- corner menu / / / / / /    1    / / / / / / -->
     <!-- disable/enable alert with > display: .. change bg of opened menu on line 13474 in style.css, .hamburger-menu input:checked + .hamburger-inner, old: #3a204c, new: #343a40 -->
     <section class="d-flex m-0 p-0 bd-highlight justify-content-end" style="display:non !important;">
@@ -1903,16 +1973,7 @@ d8888
             </label>
         </div>
     </section>
-<!--
- .d8888b. 
-d88P  Y88b
-       888
-     .d88P
- .od888P" 
-d88P"     
-888"      
-888888888 
--->
+
     <!-- header / / / / / /    2    / / / / / / -->
     <!-- disable/enable alert with > display: .. original #301b3f, COVID19 #6c2e8c -->
     <header class="d-flex header-static navbar-light justify-content-center minhd" style="background:#301b3f !important;display:non !important">
@@ -1948,16 +2009,7 @@ d88P"
         <!-- <a href="#covid"><i class="fas fa-angle-down topar alertl-COV"></i></a> -->
 
     </header>
-<!--
- .d8888b. 
-d88P  Y88b
-     .d88P
-    8888" 
-     "Y8b.
-888    888
-Y88b  d88P
- "Y8888P" 
--->
+
     <!-- main banner / / / / / /    3    / / / / / / -->
     <!-- ROCKET IMAGE HERE as bg -->
     <section class="p-0 position-relative rocketbg staybig rocketems">
@@ -2003,16 +2055,7 @@ Y88b  d88P
 
             </div>
         </div>
-<!--
-    d8888 
-   d8P888 
-  d8P 888 
- d8P  888 
-d88   888 
-8888888888
-      888 
-      888 
--->
+
         <!-- wavify / / / / / /    4    / / / / / / -->
         <!-- other svg components in section 8, go to functions.js line 267-290 for full controls -->
         <div class="position-relative wavebot" style="z-index:100 !important;">
@@ -2027,16 +2070,51 @@ d88   888
         </div>
 
     </section>
-<!--
-888888888 
-888       
-888       
-8888888b. 
-     "Y88b
-       888
-Y88b  d88P
- "Y8888P" 
--->
+
+    <!-- autoplay music, thanks to: ajbee, https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome#51630171 -->
+
+    <div class="row d-flex justify-content-start" style="display:none !important">
+      <div class="col-md-6">
+
+        <div class= "audiodv" style="/* z-index:5000 !important */">
+            <!-- <iframe src="https://pionezero.com/vibes/schumannres.mp3" allow="autoplay" id="iframeAudio" class="ifmaud"></iframe> -->
+            <audio autoplay loop controls id="playAudio" style="z-index:1000 !important">
+              <source src="https://pionezero.com/vibes/schumannres.mp3">
+            </audio>
+
+
+            <!-- thanks to: https://codepen.io/mmdileepthomas/pen/QroQZp, source: https://stackoverflow.com/questions/34764876/html5-video-autoplay-not-automatically-starting-in-chrome -->
+            <!-- WORKS only if the user is clicking, once is enough .. only script that works at least in Codepen -->
+
+            <!-- <video width="320" height="240" controls autoplay muted playsinline loop id="videoId">
+              <source src="https://pionezero.com/vibes/schumannres.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+            <!-- <script>
+            function toggleMute() {
+
+              var video=document.getElementById("videoId");
+
+              if(video.muted){
+                video.muted = false;
+              } else {
+                debugger;
+                video.muted = true;
+                video.play()
+              }
+
+            }
+
+            $(document).ready(function(){
+              setTimeout(toggleMute,3000);
+            })
+            </script> -->
+
+        </div>
+
+      </div>
+    </div>
+
     <!-- panels and such / / / / / /    5    / / / / / / -->
     <section class="mt-3 panelmar" style="background-color: #e1d9e7;">
       <div class="container" id="covid">
@@ -2063,19 +2141,7 @@ Y88b  d88P
 
             <!-- =-=-=-=-=-=-=-=-= container row -->
             <div class="row d-flex justify-content-around">
-<!--
-                      888                                                        
-                      888                                                        
-                      888                                                        
- .d8888b .d88b.   .d88888  .d88b.      888d888 .d88b.  88888b.   .d88b.  .d8888b 
-d88P"   d88""88b d88" 888 d8P  Y8b     888P"  d8P  Y8b 888 "88b d88""88b 88K     
-888     888  888 888  888 88888888     888    88888888 888  888 888  888 "Y8888b.
-Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X88
- "Y8888P "Y88P"   "Y88888  "Y8888      888     "Y8888  88888P"   "Y88P"   88888P'
-                                                       888                       
-                                                       888                       
-                                                       888                       
--->
+
                 <!-- // ------------- code samples -->
                 <div class="col-md-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2229,19 +2295,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- / ------------- END code samples -->
-<!--
-                          d8b                   888         d888  
-                          Y8P                   888        d8888  
-                                                888          888  
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  
-888  888 888    888  888  888 88888888 888      888          888  
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888
-888                       888                                     
-888                      d88P                                     
-888                    888P"                                                                             
--->
+
                 <!-- // ------------- Diageo v2 -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2363,19 +2417,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- END Diageo v2 -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888               888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888          .d88P
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         .od888P" 
-888  888 888    888  888  888 88888888 888      888        d88P"     
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      888"      
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     888888888 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                                   
--->
+
                 <!-- // ------------- Mixxi -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2506,19 +2548,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- END Mixxi -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888             .d88P
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         8888" 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y8b.
-888  888 888    888  888  888 88888888 888      888        888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                    
--->
+
                 <!-- // ------------- Loft -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2661,19 +2691,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- / Loft -->
-<!--
-                          d8b                   888            d8888 
-                          Y8P                   888           d8P888 
-                                                888          d8P 888 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888      d8P  888 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        d88   888 
-888  888 888    888  888  888 88888888 888      888        8888888888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.            888 
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888           888 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                                   
--->
+
                 <!-- // ------------- Jangobio -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2823,20 +2841,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- / Jangobio -->
-<!--
 
-                          d8b                   888        888888888 
-                          Y8P                   888        888       
-                                                888        888       
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     8888888b. 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y88b
-888  888 888    888  888  888 88888888 888      888               888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
                 <!-- // ------------- Factory on Barclay -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2980,19 +2985,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- / Factory -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888        888       
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     888d888b. 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        888P "Y88b
-888  888 888    888  888  888 88888888 888      888        888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
+
                 <!-- // ------------- Hernandez Roofing -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -3007,7 +3000,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                             </h6>
 
                             <div class="align-self-start">
-                                <!-- ( ( ( ( ( ( ( ( ( blurb ) ) ) ) ) ) ) ) ) -->
+                                <!-- blurb -->
                                 <div class="container text-start thkfnt">
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -3040,7 +3033,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
 
-                                  <!-- process notes (dropdown) -->
+                                  <!-- details -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
                                     
@@ -3087,7 +3080,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                   <!-- / details -->
 
                                 </div>
-                                <!-- / ( ( ( ( ( ( ( ( ( blurb ) ) ) ) ) ) ) ) ) -->
+                                <!-- / blurb -->
 
                                 <p class="porticonz">
                                     <a href="https://pionezero.com/port/sites/hernandez_roofing/index.html" class="boom cbutton cbutton--effect-novak">
@@ -3146,38 +3139,14 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
                 <!-- / ------------- / Hernandez -->
-<!--
-                          d8b                   888        8888888888
-                          Y8P                   888              d88P
-                                                888             d88P 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         d88P  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         88888888 
-888  888 888    888  888  888 88888888 888      888          d88P    
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.       d88P     
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     d88P      
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
+
                 <!-- // ------------- GM Jr Scouting -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-
-                        <!-- title, with option for icon or text -->
-                        <div class="container-fluid">
-                          <div class="row">
-                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
-                              <!-- Fixed width column -->
-                              <h2 class="h1 font-weight-bold titlebg">GM Jr Scouting</h2>
-                            </div>
-                            <div class="col justify-left-column brain" style="/* border:0.3rem solid #d3cbd8; */">
-                              <!-- Content column with left alignment -->
-                               <a href="https://chat.openai.com/share/8af77da9-4740-4cf1-93c0-c5e6dd985d25" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-brain-circuit" style="font-size:3em"><span class="braintxt">ai assisted code</span></i></span></a>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- / title -->
-
+                        <!-- portfolio links -->
+                        <!-- <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
+                        <!-- title -->
+                        <h2 class="h1 font-weight-bold titlebg">GM Jr Scouting</h2>
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
@@ -3220,7 +3189,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       <strong class="strgtxt">Design and develop two front end framework UI shells</strong> for a web application that takes sports data from spread sheets 1) <strong class="strgtxt"> in a backend portal</strong> and populates it into 2) <strong class="strgtxt">the main website</strong>, <strong class="strgtxt">displaying football draft pick statistics.</strong>
                                     </div>
                                   </div>
-                                  <!-- / tasks -->
+                                  <!-- tasks -->
 
                                   <!-- client -->
                                   <div class="row">
@@ -3355,173 +3324,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / ------------- / GM Jr Scouting -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888        Y88b. d88P
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888      "Y88888" 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        .d8P""Y8b.
-888  888 888    888  888  888 88888888 888      888        888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
 
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888        888    888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     Y88b. d888
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         "Y888P888
-888  888 888    888  888  888 88888888 888      888               888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
-
-<!--
-                          d8b                   888         d888   .d8888b. 
-                          Y8P                   888        d8888  d88P  Y88b
-                                                888          888  888    888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  888    888
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  888    888
-888  888 888    888  888  888 88888888 888      888          888  888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 "Y8888P" 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         d888    d888  
-                          Y8P                   888        d8888   d8888  
-                                                888          888     888  
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888     888  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888     888  
-888  888 888    888  888  888 88888888 888      888          888     888  
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888     888  
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 8888888
-888                       888                                             
-888                      d88P                                             
-888                    888P"                                              
--->
-
-<!--
-                          d8b                   888         d888    .d8888b. 
-                          Y8P                   888        d8888   d88P  Y88b
-                                                888          888          888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888        .d88P
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888    .od888P" 
-888  888 888    888  888  888 88888888 888      888          888   d88P"     
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888   888"      
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 888888888 
-888                       888                                                
-888                      d88P                                                
-888                    888P"                                                 
--->
-
-<!--
-                          d8b                   888         d888   .d8888b. 
-                          Y8P                   888        d8888  d88P  Y88b
-                                                888          888       .d88P
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888      8888" 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888       "Y8b.
-888  888 888    888  888  888 88888888 888      888          888  888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 "Y8888P" 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         d888      d8888 
-                          Y8P                   888        d8888     d8P888 
-                                                888          888    d8P 888 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888   d8P  888 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  d88   888 
-888  888 888    888  888  888 88888888 888      888          888  8888888888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888        888 
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888      888 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         d888  888888888 
-                          Y8P                   888        d8888  888       
-                                                888          888  888       
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  8888888b. 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888       "Y88b
-888  888 888    888  888  888 88888888 888      888          888         888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 "Y8888P" 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         d888   8888888888
-                          Y8P                   888        d8888         d88P
-                                                888          888        d88P 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888       d88P  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888    88888888 
-888  888 888    888  888  888 88888888 888      888          888     d88P    
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888    d88P     
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 d88P      
-888                       888                                                
-888                      d88P                                                
-888                    888P"                                                 
--->
-
-<!--
-                          d8b                   888         d888   .d8888b. 
-                          Y8P                   888        d8888  d88P  Y88b
-                                                888          888  Y88b. d88P
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888   "Y88888" 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  .d8P""Y8b.
-888  888 888    888  888  888 88888888 888      888          888  888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 "Y8888P" 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         d888   .d8888b. 
-                          Y8P                   888        d8888  d88P  Y88b
-                                                888          888  888    888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  Y88b. d888
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888   "Y888P888
-888  888 888    888  888  888 88888888 888      888          888         888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888 "Y8888P" 
-888                       888                                               
-888                      d88P                                               
-888                    888P"                                                
--->
-
-<!--
-                          d8b                   888         .d8888b.   .d8888b. 
-                          Y8P                   888        d88P  Y88b d88P  Y88b
-                                                888               888 888    888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888          .d88P 888    888
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         .od888P"  888    888
-888  888 888    888  888  888 88888888 888      888        d88P"      888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      888"       Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     888888888   "Y8888P" 
-888                       888                                                   
-888                      d88P                                                   
-888                    888P"                                                    
--->
                 <div class="msgtxt">I'm in the process of updating projects (and adding more).</div>
 
             <!-- / =-=-=-=-=-=-=-=-= container row -->
@@ -3557,16 +3360,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
       </div>
     </section>
     <!-- / panels and such / / / / / /    5    / / / / / / -->
-<!--
- .d8888b. 
-d88P  Y88b
-888       
-888d888b. 
-888P "Y88b
-888    888
-Y88b  d88P
- "Y8888P" 
--->
+
     <!-- footer / / / / / /    6    / / / / / / -->
     <footer class="footer footer-dark section-pt position-relative pt-4 mt-5" id="bottom">
 
@@ -3801,16 +3595,7 @@ Y88b  d88P
         <!-- / footer bottom -->
 
     </footer>
-<!--
-8888888888
-      d88P
-     d88P 
-    d88P  
- 88888888 
-  d88P    
- d88P     
-d88P      
--->
+
     <!-- wavify / / / / / /    7    / / / / / / -->
     <div>
         <!-- svg wave top, full controls in functions.js, line 267-290 .. other svg components in section 5 -->
@@ -3826,19 +3611,7 @@ d88P
             </svg>
         </figure>
     </div>
-<!--
-                          d8b          888            
-                          Y8P          888            
-                                       888            
-.d8888b   .d8888b 888d888 888 88888b.  888888 .d8888b 
-88K      d88P"    888P"   888 888 "88b 888    88K     
-"Y8888b. 888      888     888 888  888 888    "Y8888b.
-     X88 Y88b.    888     888 888 d88P Y88b.       X88
- 88888P'  "Y8888P 888     888 88888P"   "Y888  88888P'
-                              888                     
-                              888                     
-                              888                     
--->
+
     <!-- scripts / / / / / /    8    / / / / / / -->
     <!-- global js -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -3847,12 +3620,13 @@ d88P
     <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- vendors -->
+    <!-- <script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script> -->
+    <!-- <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script> -->
     <script src="assets/vendor/animated-headline/main.js"></script>
+    <!-- <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
     <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
-
     <!-- wavify -->
     <script src="assets/vendor/wavify/wavify.js"></script>
-
     <!-- image place holder, thanks to http://holderjs.com/ -->
     <script src="assets/vendor/holder/holder.min.js"></script>
 
@@ -3956,23 +3730,6 @@ d88P
             return false;
         });
     </script>
-<!-- 
-         d8b                                                                 888          888              
-         Y8P                                                                 888          888              
-                                                                             888          888              
-88888b.  888  .d88b.  88888b.   .d88b. 88888888  .d88b.  888d888 .d88b.      888  8888b.  88888b.  .d8888b 
-888 "88b 888 d88""88b 888 "88b d8P  Y8b   d88P  d8P  Y8b 888P"  d88""88b     888     "88b 888 "88b 88K     
-888  888 888 888  888 888  888 88888888  d88P   88888888 888    888  888     888 .d888888 888  888 "Y8888b.
-888 d88P 888 Y88..88P 888  888 Y8b.     d88P    Y8b.     888    Y88..88P     888 888  888 888 d88P      X88
-88888P"  888  "Y88P"  888  888  "Y8888 88888888  "Y8888  888     "Y88P"      888 "Y888888 88888P"   88888P'
-888                                                                                                        
-888                                                                                                        
-888         
 
-scii art thanks to: hhttps://www.asciiart.eu/text-to-ascii-art, colossal
-
-more:
-https://asciiflow.com/#/
--->
 </body>
 </html>
