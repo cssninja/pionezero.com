@@ -364,7 +364,7 @@ p {
  .gmjrtitle {
     font-family:lato-bold;
     font-weight:bold !important;
-    font-size:7em;
+    font-size:6em;
     letter-spacing: -3px;
     text-transform: uppercase;
     color:#FEFED9 !important;
@@ -379,7 +379,7 @@ p {
  .gmjrtitle2 {
     font-family:lato-bold;
     font-weight:bold !important;
-    font-size:3.5em;
+    font-size:3em;
     letter-spacing: -3px;
     text-transform: uppercase;
     color:#FEFED9 !important;
@@ -394,7 +394,7 @@ p {
  .gmjrtitle2 {
     font-family:lato-bold;
     font-weight:bold !important;
-    font-size:2.5em;
+    font-size:2.2em;
     letter-spacing: -3px;
     text-transform: uppercase;
     color:#FEFED9 !important;
