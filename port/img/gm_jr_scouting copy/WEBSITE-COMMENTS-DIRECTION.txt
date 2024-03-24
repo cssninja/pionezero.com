@@ -1,0 +1,216 @@
+﻿RICH'S COMMENTS:
+
+
+so what I see from the frontend that he needs, and these are my questions based on your UI
+
+
+1 a blog
+•        Blog is the same as an article for our purposes so see section on articles for all this info.
+
+
+2 a profile system for GM Jr Scouting bios 
+– This is CMS Based.
+
+
+3 the ability to do podcasts (does he really want this or did you just throw it out there?)
+•        Yes, we do podcasts.  Our plan once the site it up is to do at least one and potentially three each week.
+•        This is link to one that we did this year via Google Hangout that posted not only directly to my Google Homepage, but also to Youtube.  I want you guys to code it so that once we don one, I can just cut and paste the link to it into a specific spot on the website so that it will be up and placed in the appropriate places.
+
+
+4 some sort of google map system (as you have a google map pointing to 4 montreal for some reason - what is this map for?)
+   - This is not a must have and actually I am fine with not using this.
+
+
+5 are articles the same thing as a blog (thats to both you and russ - whoever came up with that idea to put it on articles.html)
+•        Articles will be CMS based.
+•        We will be writing anywhere from three to ten articles each week, so we need to be able to have an easy to use interface to get them onto site and to be able to edit them after the fact if needed.
+
+
+6 bio.html is static content - we just need him to give us a short bio of himself
+- This is CMS Based as it will have photos and bios of each person working for my company, but I want it to be easily editable/updateable without having to use database.
+
+
+7 combine_pro.html – 
+•        This is CMS based.
+•        Refer to this link to get an idea of what I want for Pro Days (http://www.nfl.com/news/story/0ap3000000471580/article/2015-pro-days-schedule-and-results) .  Basically, it is one master page with a tab for each school that holds a Pro Day (Which is a workout of all the prospects at that school).  When a person clicks on a school name it will go to a page similar to what is on this link (http://www.nfl.com/news/story/0ap3000000476185/article/patriots-belichick-steelers-gm-attend-auburns-pro-day).
+•        In terms of the Combine, those will be most list/results and you can use this link to get a general idea of what I want - http://www.cbssports.com/nfl/draft/combine 
+
+
+8 combine_pro.html - are combine articles the same as articles the same as blog? (really I think it should all be one in the same - too confusing all these variations - keep it simple)
+- See above re Pro Days / Combine.  Each page giving results for Pro Days will have a short article with the results.  With the Combine stuff there will be articles on main page, but not on each page with the results.  For both Pro Day and Combine Days I need to be able to import a spreadsheet to use on just the page for the school/page that it is relating to.  The info on that spreadsheet does not need to be linked or tied in with anything else on the website (If I want that info in the database, I will upload that info specifically).
+
+
+
+
+9 contact_media.html has he been on radio, tv, and news articles? 
+•        This is a page so that different media outlets can find out how to contact me and my team.
+•        Additionally, on this page I will post links to all the radio and television interviews that I do.  Most of the time after making an appearance the media outlet will email me a link to it and I need to be able to list those on the site, so that people who come to the site can listen to them and other potential media outlets can listen/view them to decide if they want to have me on as a guest.
+
+
+10 hitmiss.html - what is this
+- This is a CMS feed which is basically a list of 30 different players with a copy of the report of them when they came out of college.  These reports are broken down into those players we “hit’ were right about and those we “missed” were wrong about.  This page needs to be easily editable – You can use this link from my current website as an example, although I would like it to look even more professional.
+
+
+11 prospects.html - what is a prospect and does this apply to any player or only specific players
+•        Basically, use this link (http://www.cbssports.com/nfl/draft/prospectrankings) to give you an idea of what I want.  The main page will rank all players by grade (Which will be in database) and then this list needs to be sortable by Position, Grade, Alpha and College Team.  When a person wants to see the top QB’s they can click on that and will see a page similar to this link (http://www.cbssports.com/nfl/draft/prospectrankings/2016/QB).  On pages like that the players need to be ranked by grade and if they do not have a grade then they are listed alphabetically after the lowest graded player.
+•        If at any point a customer wants to click on a player’s name it needs to take him to see his player report which will have all the information from his player report on one page.
+
+
+12 rankings.html - this is another leaderboard, so I will need to know what this leaderboard is basing its ranking on
+•                Basically, use this link (http://www.cbssports.com/nfl/draft/prospectrankings) to give you an idea of what I want.  The main page will rank all players by grade (Which will be in database) and then this list needs to be sortable by Position, Grade, Alpha and College Team.  When a person wants to see the top QB’s they can click on that and will see a page similar to this link (http://www.cbssports.com/nfl/draft/prospectrankings/2016/QB).  On pages like that the players need to be ranked by grade and if they do not have a grade then they are listed alphabetically after the lowest graded player.
+•        If at any point a customer wants to click on a player’s name it needs to take him to see his player report which will have all the information from his player report on one page.
+
+
+
+
+13 whatis.html - this seems like it would be static content like bio.html for hte most part, but there's 25 hits? 5 misses (with articles)? - are these those hit/miss articles?
+•        This is a CMS Feed it needs to be editable.  It will have the history of the company, but I need to be able to tweak adjust whenever I need to.
+
+
+14 – ONE  ADDITIONAL  SECTION  FOR  TOP  LINE  OF  HOMEPAGE (In addition to having One Section/Tab for NFL Draft and One Section/Tab for NCAA Recruiting) is DRAFT DAY  TRACKER.  This needs to be a tab that can be inserted only on the week before the annual NFL Draft and it will stay active until the beginning of the college football season.  It will look similar to this link (http://www.cbssports.com/nfl/draft/drafttracker) and the comments sections under each player need to be CMS Feed so that we can type the short comment after each player is picked in the draft.  Once the draft ends these players need to be able to be sorted by Position, Alphabetical, College Team, and NFL Team.
+
+
+Current TODO:
+
+
+____1) NUTS AND BOLTS OF DATA ENTRY
+____2) CMS
+____3) MOCK DRAFT TEST RUN IN PHP  (http://sleign.net/clients/marcus/mockdraft.php)
+____4) ONLINE PAYMENTS
+
+
+--
+
+
+____1) NUTS AND BOLTS OF DATA ENTRY
+
+
+So, Russ (and Rich) if you have time tonight can you go to:
+
+
+http://pionezero.com/gm/
+
+
+and tell me the kind of content each page is? there are three kinds of content so far:
+
+
+a) feed-based
+b) database-based
+c) cms-based (content management based)
+
+
+and so far this is how I see it (correct this Russ or Rich if these are labeled wrong)
+
+
+•        allstargame.html – CMS  BASED
+•        
+•        articles.html - CMS  BASED
+•        
+•        bio.html - CMS  BASED
+•        
+•        combine_pro.html – This will be DATABASE Driven, but also independent spreadsheets & CMS BASED for entering articles/write-ups above or below player performance stats.
+•        
+•        contact_media.html - CMS  BASED
+•        
+•        hitmiss.html – CMS  BASED
+•        
+•        home.html - FEED & CMS Based.  For the articles and podcast we need to be able to tweak and adjust.  In terms of the NEWS section, we need to set up a feed from certain websites (ESPN.com, CBSSports.com, Profootballtalk.com, Rotoworld.com/sports/nflfootball, CFL.ca, Montrealalouettes.com and some others) for NFL/CFL News and then a separate one for articles that mention GM Jr Scouting or any of the guys names.
+•        
+•        mockdraft.html – This needs to be CMS BASED with the ability to put two or three independent spreadsheets next to each other.  The page needs to be set up similar to what Marcus had it set up in the template (Except that comments must always be visable) and I need to be able to import the spreadsheets completely apart from and not involving the database.  None of the info in these mock drafts needs to appear anywhere else on the website.  The mock drafts will be “What we believe should happen,” “What we expect to happen” and one “Fans Mock Draft.”  These are all very different things as we often believe certain players should not be selected where they are but we hear they are going to be so having these two mock drafts run next to each other will be a great talking point and will separate us from every other NFL Draft site and sports site that covers the NFL Draft.
+•        
+•        podcasts_videos.html – CMS & FEED Based – See notes at top in Podcasts section about Google Hangout situation.
+•        
+•        prospects.html - database-based
+•        
+•        rankings.html - database-based
+•        
+•        whatis.html - CMS  BASED
+•        
+•        whois.html - CMS  BASED
+•        
+
+
+
+
+
+
+____2) CMS
+
+
+Q - In our meeting tomorrow Rich what details of the CMS do you need from Russ for a ballpark estimate on what features the CMS needs? Seeing most of the site is feed-based and database-based, not much is needed (just text and images.)
+A -
+
+
+
+
+
+
+
+
+
+
+____3) MOCK DRAFT TEST RUN IN PHP  (http://sleign.net/clients/marcus/mockdraft.php)
+
+
+http://sleign.net/clients/marcus/mockdraft.php
+
+
+And here are Rich's comments:
+
+
+FIRST COMMENT
+"right now, mockdraft.html shows 3 leaderboards. there is nothing we've built that deals with any of this type of data (in terms of ranking). what is the difference between the first two leaderboards - expecting and feeling? isn't expecting something the same as making a logical guess as to the outcome of something?
+ 
+apparently, there are some rules to this leaderboard maybe not so much with the first one (or two or whatever) but the last one - fan's first round mock draft. this implies users will come up with that list so how is that list derived? and if there is some automated way the first one or two leaderboards are derived, I need to know those rules and/or conditions as well.
+
+
+for now, I can just return an array of random people from the database until that's actually figured out, but each time you refresh the page either it can be the same people or random people will show up every time."
+
+
+So Russ, these questions are basically on how this data is entered:
+
+
+Q - What is the difference between the first two leaderboards - expecting and feeling? Isn't expecting something the same as making a logical guess as to the outcome of something?
+•        A - The mock drafts will be “What we believe should happen,” “What we expect to happen” and one “Fans Mock Draft.”  These are all very different things as we often believe certain players should not be selected where they are but we hear they are going to be so having these two mock drafts run next to each other will be a great talking point and will separate us from every other NFL Draft site and sports site that covers the NFL Draft.
+
+
+
+
+Q - How is the user's list derived? (spreadsheet or CMS?)
+A - This needs to be CMS BASED with the ability to put two or three independent spreadsheets next to each other.  The page needs to be set up similar to what Marcus had it set up in the template (Except that comments must always be visable) and I need to be able to import the spreadsheets completely apart from and not involving the database.  None of the info in these mock drafts needs to appear anywhere else on the website.  
+
+
+Q - For the first two ledgerboards what are the rules and conditions?
+A – These spreadsheets will be completely independent from everything else on the website, so not rules/conditions pertaining to their interactions with other pages.
+
+
+So basically will Mock Draft be entered through a spreadsheet or through the CMS?
+
+
+SECOND COMMENT:
+"one other thing that should be said - team was never listed anywhere in any of the specs for the application that was built - only their stats. it won't take much to put them with a team in there but I just figured I would make that known because a lot of this site has never been disclosed to me before so I'm seeing a lot of gaps where there should be none if this whole site is supposed to work off what I built so far."
+
+
+Q - So Russ this question is basically do you want a TEAMS option added to the database?
+A – I believe we already have a College/School section in database and from what you explained to me when we did the powerpoint presentation, I will be able to add sections to database.  Once a player is drafted, I need to be able to input the team that drafted him easily so that it can run in the Draft Tracker (Same link as above – http://www.cbssports.com/nfl/draft/drafttracker) so that fans can see the players selected by their favorite teams right after the selections are made and we input the team that selected them into the database.
+
+
+THIRD COMMENT:
+"we can adjust to pull whatever data we want based on whatever conditions, just like I was saying before though I gotta know what those conditions are"
+
+
+Q - So Russ, Rich is looking for certain 'conditions' on what to pull from the database to populate Mock Draft.
+A – All Mock Draft will be independent from the remainder of the Website, so no conditions.
+
+
+
+
+
+
+
+
+____4) ONLINE PAYMENTS
+
+
+On online payments Rich, I think I mentioned to Russ using a service like PaySimple (http://paysimple.com/) or similar, but any recommendations are welcome.
+-        I would rather use an independent pay function rather than pay a % to a separate company for the different things that people need to pay for.  Are we okay to get things built out roughly and then go thru and lay-out what sections and things on website people will need to pay for?
