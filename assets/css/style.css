@@ -13413,7 +13413,7 @@ header.navbar-sticky-on .navbar-brand .navbar-brand-item {
 .hamburger-menu .hamburger-inner {
   position: absolute;
   right: -50px; /* WAS -120px .. to use ALERT, change to -50px */
-  top: 100px; /* WAS -120px .. to use ALERT, change to 100px */
+  top: 150px !important; /* WAS -120px .. to use ALERT, change to 100px */
   z-index: 100;
   width: 100px; /* WAS 200px .. to use ALERT, change to 100px */
   height: 100px; /* WAS 200px .. to use ALERT, change to 100px */
