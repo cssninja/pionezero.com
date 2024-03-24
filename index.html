@@ -1764,7 +1764,7 @@ Y88b.         X88      X88
       font-size: 1em !important;
     }
 
-    /* Custom CSS to prevent collapsing columns */
+    /* title block of code (title + font awesome icon to right) to prevent collapsing columns */
     @media (min-width: 1160px) {
       .fixed-column {
         max-width: 330px;
@@ -1800,24 +1800,55 @@ Y88b.         X88      X88
         margin: -5px 0px 0px -10px ; /* Compensate for negative margin from Bootstrap's row .. also prevents collapse in some device viewports (360px) */
       }
     }
-
-    .aicode {
+    /* font awesome icon's accompanying text, pseudo element option */
+    /* .aicode {
       font-size: 0.3em;
       padding: 5px;
-    }
+    } */
     /* @media (min-width: 489.75px) {
       .aicode::after {
-        content: "ai assisted code";
+        content: "startup";
         display: block;
         margin: -25px 0px 0px 50px !important;
         -webkit-text-stroke: 0.4px #696b6e !important;
         -webkit-text-fill-color: #696b6e !important; 
       }
     } */
-    @media (max-width: 489.75px) {
+    /* font awesome icon to right of title .. styles here not needed for original gm jr scouting bcs bs4.4 grid worked so well .. need though FOR TITLES OF LENGTHS NOT MATCHING ORIGINAL (like class .brain_mixxi)  .. OR .. pseudo element positioning is better */
+    /* icon collapses below title in mobile version .. giving it a width that can't be sustained in the grid, it has to collapse at 490px */
+    /* @media (max-width: 489.75px) {
       .brain {
         margin: 20px 0px 0px 20px;
-        min-width: 400px !important; /* giving it a width that can't be sustained in the grid, it has to collapse at 490px */
+        min-width: 400px !important;
+        display: non
+      }
+    } */
+    /* icon stays on right in mobile version bcs min-width of 400px is disabled */
+    @media (max-width: 489.75px) {
+      .brain {
+        margin: -30px 0px 0px -20px;
+        min-width: 0px !important;
+        /* display: none */
+      }
+    }
+    .brain_mixxi {
+      position: absolute;
+      /* left: 150px;
+      top: -3px; */
+      margin: 0 auto;
+      min-width: 0px !important;
+      /* display: none */
+      transform: translate(150px, -3px)
+      /* instead of top and left .. thanks to: https://css-tricks.com/almanac/properties/t/transform/#translate, https://codepen.io/team/css-tricks/pen/eNQdgJ/b9df78cff3ab6b64b5925b10c1e52d9e */
+      }
+    @media (max-width: 489.75px) {
+      .brain_mixxi {
+        position: absolute;
+        left: 150px;
+        top: 40px;
+        margin: 0 auto;
+        min-width: 0px !important;
+        /* display: none */
       }
     }
     /* .braintxt a:hover {
@@ -1828,6 +1859,7 @@ Y88b.         X88      X88
       -webkit-transition: -webkit-text-fill-color 0.3s;
       transition: -webkit-text-fill-color 0.3s;
     } */
+    /* font awesome icon text */
     .braintxt {
       /* background: #d0c7d7; */
       font-size: 0.3em;
@@ -2247,7 +2279,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
 
-                        <!-- title, with option for icon or text -->
+                        <!-- title, with option for icon or text .. bs4.4 grid w/ai assist -->
                         <div class="container-fluid">
                           <div class="row">
                             <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
@@ -2256,7 +2288,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                             </div>
                             <div class="col justify-left-column brain" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
-                               <a href="https://chat.openai.com/share/8af77da9-4740-4cf1-93c0-c5e6dd985d25" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-brain-circuit" style="font-size:3em"><span class="braintxt">ai assisted code</span></i></span></a>
+                               <a href="https://chat.openai.com/share/8af77da9-4740-4cf1-93c0-c5e6dd985d25" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-brain-circuit" style="font-size:3em"><span class="braintxt">ai assisted code</span></i></a>
                             </div>
                           </div>
                         </div>
@@ -2274,7 +2306,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                                   <!-- assets -->
                                   <div class="row">
-                                    <div class="col-md-auto fix"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
                                     <div class="col dsctx">
                                         <p class="porticonz">
                                             <a href="https://pionezero.com/port/sites/gmjrscouting/index.html" class="boom cbutton cbutton--effect-novak">
@@ -2289,6 +2321,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                             <a href="https://dribbble.com/shots/23779797-GM-Jr-Scouting-football-recruiting-in-flat-design" class="boom cbutton cbutton--effect-novak">
                                                 <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
                                             </a>
+
                                             <p class="porticonz3"><a href="https://codepen.io/fullstackninja/pen/dyLNvmy" class="boom cbutton cbutton--effect-novak">experimental code: isotope (codepen fork)</a></p>
                                             <!-- <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cssninja/view_source/blob/main/SHOPIFY_CODE">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
                                             <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.com/pionezero/1870-1914-look-and-design/">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p> -->
@@ -2457,18 +2490,57 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- // ------------- Mixxi -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-                        <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/23681213-Design-challenge-1"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
-                        <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Mixxi</h2>
+
+                        <!-- title, with option for icon or text -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                              <!-- Fixed width column -->
+                              <h2 class="h1 font-weight-bold titlebg">Mixxi</h2>
+                            </div>
+                            <div class="col justify-left-column brain_mixxi" style="/* border:0.3rem solid #d3cbd8; */">
+                              <!-- Content column with left alignment -->
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-microchip-ai" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / title -->
+
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fa-solid fa-microchip-ai"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </h6>
+
                             <div class="align-self-start">
-                                <!-- blurb -->
+                                <!-- ( ( ( ( ( ( ( ( ( blurb ) ) ) ) ) ) ) ) ) -->
                                 <div class="container text-start thkfnt">
+
+                                  <!-- assets -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col dsctx">
+                                        <p class="porticonz">
+                                            <!-- <a href="#" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp; -->
+
+                                            <a href="https://dribbble.com/shots/23681213-Design-challenge-1" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                            </a>
+
+                                            <!-- <p class="porticonz3"><a href="#" class="boom cbutton cbutton--effect-novak">experimental code: isotope (codepen fork)</a></p> -->
+                                            <!-- <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p> -->
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <!-- / assets -->
+
+
+
+
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -2524,20 +2596,6 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                 </div>
                                 <!-- / blurb -->
 
-
-                                <!-- <strong class="subtitlebg">Coding:</strong> -->
-
-                                <p class="porticonz">
-                                <!-- <a href="#"><i class="fas fa-laptop bigicon"></i></a>&nbsp;&nbsp;-->
-                                <a href="https://dribbble.com/shots/23681213-Design-challenge-1" class="boom cbutton cbutton--effect-novak">
-                                    <i class="fab fa-dribbble bigicon"></i>
-                                </a>
-                                &nbsp;&nbsp;
-                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                </a> -->
-                                </p>
                             </div>
                         </div>
                     </div>
