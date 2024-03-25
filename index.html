@@ -541,22 +541,22 @@ Y88b.         X88      X88
     /* loft on broadway -------- */
     .port1 {
         background: url('assets/images/port/links/loft_on_broadway/safari/loft_on_broadway.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 0% 20%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 160%;
+        background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
     }/* port 2 img as background, the factory on barclay */
 
     .port14 {
         background: url('port/img/loft_on_broadway/loft_on_broadway_2.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 70% 0%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
@@ -566,22 +566,22 @@ Y88b.         X88      X88
     /* factory on barclay -------- */
     .port2 {
         background: url('port/img/factory_on_barclay/brand_mark/LOGO.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 50% 45%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 180%;
+        background-size: cover; /* was 180% bfr imag section turned into bs column with class col-xl-6 col-lg-10 col-md-11 col-sm-10 */
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
     }
     .port2b {
         background: url('port/img/factory_on_barclay/brand_mark/iden_4_factory_on_barclay.jpg');
-        height: 300px !important;
-        background-position: 50% 45%;
+        height: 400px !important;
+        background-position: 50% 50%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 180%;
+        background-size: 170%;
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
@@ -638,17 +638,17 @@ Y88b.         X88      X88
     /* jangobio -------- */
     .port5 {
         background: url('assets/images/port/links/jangobio/v2/safari/new.jpg');
-        height: 300px !important;
-        background-position: 50% 50%;
+        height: 400px !important;
+        background-position: 50% 40%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 140%;
+        background-size: cover;
         position: relative;
-        border: 0px !important;
+        border: 0.3rem solid #d3cbd8;
     }/* port 6 img as background, hernandez */
     .port15 {
         background: url('port/img/jangobio/neurology_lab/webflow_desk.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 50% 50%;
         /* x,y */
         background-repeat: no-repeat;
@@ -661,22 +661,23 @@ Y88b.         X88      X88
     /* hernandez roofing -------- */
     .port6 {
         background: url('https://pionezero.com/port/img/hernandez_roofing/DRONE/hr_large2.jpg');
-        height: 300px !important;
-        background-position: 50% 53%;
+        height: 400px !important; /* so img does not break border box calculate minimum height in mobile first .. lowest is 260px */
+        background-position: 50% 58%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 170%;
+        background-size: cover;
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
+        /* aspect-ratio: 1 / 1 !important */
     }
     .port6b {
         background: url('https://pionezero.com/port/img/hernandez_roofing/DRONE/drone.jpg');
-        height: 300px !important;
-        background-position: 50% 53%;
+        height: 400px !important;
+        background-position: 50% 46%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 170%;
+        background-size: cover;
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
@@ -775,7 +776,7 @@ Y88b.         X88      X88
     /* gm jr scouting -------- */
     .port12 {
         background: url('port/img/gm_jr_scouting/sports_app.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 50% 0%;
         /* x,y */
         background-repeat: no-repeat;
@@ -786,7 +787,7 @@ Y88b.         X88      X88
     }
     .port12b {
         background: url('port/img/gm_jr_scouting/gm_jr_scouting_web_8.jpg');
-        height: 300px !important;
+        height: 400px !important;
         background-position: 0% 0%;
         /* x,y */
         background-repeat: no-repeat;
@@ -1382,7 +1383,7 @@ Y88b.         X88      X88
       border: 0.3rem solid #d3cbd8;
       border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/mixxi/mixxi_1.jpg");
-      background-position: 0% 50%; /* x% y% */
+      background-position: 0% 56%; /* x% y% */
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
@@ -1394,7 +1395,7 @@ Y88b.         X88      X88
       border: 0.3rem solid #d3cbd8;
       border-radius: 5px;
       background-image: url("https://pionezero.com/port/img/mixxi/mixxi_bold_clean_3.jpg");
-      background-position: 0% 10%; /* x% y% */
+      background-position: 0% 26%; /* x% y% */
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
@@ -1565,7 +1566,7 @@ Y88b.         X88      X88
       padding: 2px 10px; /* tb, rl */
       border-radius: 5px;
       font-family: verdana;
-      font-weight:900;
+      font-weight: 900;
       display: block !important;
       margin: -13px 0px 30px 0px;
       line-height: 20px;
@@ -1584,7 +1585,7 @@ Y88b.         X88      X88
         padding: 2px 10px; /* tb, rl */
         border-radius: 5px;
         font-family: verdana;
-        font-weight:900;
+        font-weight: 900;
         display: block !important;
         margin: -13px 0px 30px 0px;
         line-height: 20px;
@@ -1714,18 +1715,18 @@ Y88b.         X88      X88
     /* title block of code (title + font awesome icon to right) to prevent collapsing columns */
     @media (min-width: 1160px) {
       .fixed-column {
-        max-width: 330px;
+        max-width: 400px;
       }
     }
     @media (min-width: 768px) and (max-width: 1159.75px) {
       .fixed-column {
-        max-width: 330px;
+        max-width: 370px;
       }
     }
     /* mobile .. mobile breaks at 571px to 676px (title collapses) but there are no devices at that width until 768px */
     @media (max-width: 676px) {
       .fixed-column {
-        max-width: 270px;
+        max-width: 300px;
       }
     }
 
@@ -1773,9 +1774,9 @@ Y88b.         X88      X88
     /* icon stays on right in mobile version bcs min-width of 400px is disabled */
     @media (max-width: 489.75px) {
       .brain {
-        margin: -30px 0px 0px -20px;
+        margin: -30px 0px 0px -50px;
         min-width: 0px !important;
-        /* display: none */
+        display: none
       }
     }
     .brain_mixxi {
@@ -1796,7 +1797,28 @@ Y88b.         X88      X88
         transform: translate(125px, -8px);
         margin: 0 auto;
         min-width: 0px !important;
-        /* display: none */
+        display: none
+      }
+    }
+    .brain_jango {
+      position: absolute;
+      /* left: 150px;
+      top: -3px; */
+      margin: 0 auto;
+      min-width: 0px !important;
+      /* display: none */
+      transform: translate(235px, -3px)
+      /* instead of top and left .. thanks to: https://css-tricks.com/almanac/properties/t/transform/#translate, https://codepen.io/team/css-tricks/pen/eNQdgJ/b9df78cff3ab6b64b5925b10c1e52d9e */
+      }
+    @media (max-width: 489.75px) {
+      .brain_jango {
+        position: absolute;
+        /* left: -10px;
+        top: 44px; */
+        transform: translate(180px, -8px);
+        margin: 0 auto;
+        min-width: 0px !important;
+        display: none
       }
     }
     /* .braintxt a:hover {
@@ -1818,6 +1840,16 @@ Y88b.         X88      X88
       /* color: #696b6e;
       -webkit-text-stroke: 0.4px #696b6e;
       -webkit-text-fill-color: #696b6e; */
+    }
+
+    /* process note tweak */
+    .pnote {
+      margin: 20px 0px 0px 0px !important
+    }
+    @media (max-width: 1023.75px) {
+      .pnote {
+        margin: 20px 0px 0px -15px !important
+      }
     }
 
     </style>
@@ -2350,9 +2382,8 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                   <!-- / process notes (dropdown) -->
 
                                   <!-- process notes (list) -->
-                                  <div class="row">
-                                    <!-- <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div> -->
-                                    <div class="col dsctx" style="margin:20px 0px 0px 15px">
+                                  <div class="row pnote">
+                                    <div class="col dsctx">
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
                                     </div>
@@ -2369,18 +2400,18 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- / 2 parent containers -->
 
                 <!-- images -->
-                <div class='wrapc_mixxi'>
-                  <div class='rowc_mixxi'>
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23681213-Design-challenge-1"></a>
                       <div class="this4"></div>
                     </div>
                     <!-- / image 1 -->
 
                     <!-- image 2 -->
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23681213-Design-challenge-1"></a>
                       <div class="this5"></div>
                     </div>
@@ -2406,19 +2437,65 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- // ------------- Jangobio -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-                        <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
-                        <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Jangobio</h2>
+
+                        <!-- title, with option for icon or text -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                              <!-- Fixed width column -->
+                              <h2 class="h1 font-weight-bold titlebg">Jangobio</h2>
+                            </div>
+                            <div class="col justify-left-column brain_jango" style="/* border:0.3rem solid #d3cbd8; */">
+                              <!-- Content column with left alignment -->
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / title -->
+
+                        <!-- 7 category column -->
                         <div class="d-flex mt-3 reslink">
+
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
                                 <i class="fa-solid fa-flask"></i>
                             </h6>
 
                             <div class="align-self-start">
-                                <!-- blurb -->
                                 <div class="container text-start thkfnt">
+
+                                  <!-- assets -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col dsctx">
+                                        <p class="porticonz">
+                                            <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+
+                                            <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-a23b21bc77cb67?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-a23b21bc77cb67&preview=cdf0dfbbafb8deb00b13c90e30d9aeb6&mode=preview" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+
+                                            <a href="https://dribbble.com/shots/14017239-JangoBio" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                            </a>
+
+                                            <!-- <a href="" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fa-solid fa-file bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp; -->
+
+                                            <!-- special asset -->
+                                            <p class="porticonz3">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/sites/atwood/jangobio/jango_EDIT.htm" class="boom cbutton cbutton--effect-novak">v2</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/sites/atwood/lab/lab_EDIT.html" class="boom cbutton cbutton--effect-novak">v2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backup</p>
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <!-- / assets -->
+
+                                  <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -2426,18 +2503,23 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Websites for lab and startup</strong>
                                     </div>
                                   </div>
+                                  <!-- / tasks -->
+
+                                  <!-- client -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">Dr Craig Atwood</strong></div>
                                   </div>
+                                  <!-- / client -->
+
+                                  <!-- date -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">December 2017 - December 2018</strong></div>
                                   </div>
-                                  <!-- <div class="row">
-                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
-                                    <div class="col"></div>
-                                  </div> -->
+                                  <!-- / date -->
+
+                                  <!-- visual design -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">Adobe Photoshop and Illustrator</strong> designs for:<br />
@@ -2445,6 +2527,9 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     2) lab detailing the lab's hormone based aging research, <strong class="strgtxt">synching color palette and vibe with the startup brand identity</strong>
                                     </div>
                                   </div>
+                                  <!-- / visual design -->
+
+                                  <!-- front end coding -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
                                     <div class="col dsctx">
@@ -2452,11 +2537,13 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Languages: HTML, CSS, JS</strong>
                                     </div>
                                   </div>
+                                  <!-- / front end coding -->
 
-                                  <!-- details -->
+                                  <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
                                     
+                                    <!-- dropdown -->
                                     <div class="collapse" id="collapseExample4">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
                                       <div class="card card-body dettxt">
@@ -2488,69 +2575,50 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                         <p>Read full notes files on this project <strong class="strgtxt"><a href="https://pionezero.com/port/img/jangobio/README.txt">here</a></strong> and <strong class="strgtxt"><a href="https://pionezero.com/port/img/jangobio/notes.txt">here</a></strong>
                                       </div>
                                     </div>
+                                    <!-- / dropdown -->
 
                                   </div>
-                                  <!-- / details -->
+                                  <!-- / process notes (dropdown) -->
+
+                                  <!-- process notes (list) -->
+                                  <div class="row">
+                                    <div class="col dsctx" style="margin:20px 0px 0px 15px">
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
+                                    </div>
+                                  </div>
+                                  <!-- / process notes (list) -->
 
                                 </div>
-                                <!-- / blurb -->
-
-                                <p class="porticonz">
-                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-92407f?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-92407f&preview=d9ac8dc33adc1b8205de5c24716966ad&mode=preview" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://preview.webflow.com/preview/marcuss-fabulous-project-a23b21bc77cb67?utm_medium=preview_link&utm_source=dashboard&utm_content=marcuss-fabulous-project-a23b21bc77cb67&preview=cdf0dfbbafb8deb00b13c90e30d9aeb6&mode=preview" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://dribbble.com/shots/14017239-JangoBio" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                </a> -->
-                                </p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/sites/atwood/jangobio/jango_EDIT.htm" class="boom cbutton cbutton--effect-novak">v2</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/sites/atwood/lab/lab_EDIT.html" class="boom cbutton cbutton--effect-novak">v2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backup</p>
                             </div>
+                            <!-- / 2 sub containers -->
                         </div>
+                        <!-- / 7 category column -->
                     </div>
-
-                    <div class="collapse" id="collapseExample3">
-                        <div class="card card-body"></div>
-                    </div>
-
                 </div>
+                <!-- / 2 parent containers -->
 
-                <!-- image -->
-                <div class='wrapc_mixxi'>
-
-                  <div class='rowc_mixxi'>
+                <!-- images -->
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <!-- image 1 -->
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/14017239-JangoBio"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="port5"></div>
-                      <!-- <div class='content ts'>Codepen</div> -->
                     </div>
+                    <!-- / image 1 -->
 
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <!-- image 2 -->
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/14017239-JangoBio"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="port15"></div>
-                      <!-- <div class='content ts'>Codepen</div> -->
                     </div>
+                    <!-- / image 2 -->
                     
                   </div>
-                  
                 </div>
+                <!-- / images -->
                 <!-- / ------------- / Jangobio -->
 <!--
                           d8b                   888         .d8888b. 
@@ -2568,19 +2636,61 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- // ------------- Factory on Barclay -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-                        <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
-                        <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Factory on Barclay</h2>
+
+                        <!-- title, with option for icon or text -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                              <!-- Fixed width column -->
+                              <h2 class="h1 font-weight-bold titlebg">Factory on Barclay</h2>
+                            </div>
+                            <div class="col justify-left-column brain_factory" style="display:none/* border:0.3rem solid #d3cbd8; */">
+                              <!-- Content column with left alignment -->
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / title -->
+
+                        <!-- 7 category column -->
                         <div class="d-flex mt-3 reslink">
+
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
                                 <i class="fa-solid fa-industry"></i>
                             </h6>
 
                             <div class="align-self-start">
-                                <!-- blurb -->
                                 <div class="container text-start thkfnt">
+
+                                  <!-- assets -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col dsctx">
+                                        <p class="porticonz">
+                                            <a href="https://thefactoryonbarclay.com/" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+
+                                            <a href="https://dribbble.com/shots/23804282-Factory-on-Barclay-1908-old-MKE-building-turned-event-venue" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                            <!-- <a href="" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fa-solid fa-file bigicon"></i>
+                                            </a> -->
+
+                                            <!-- special asset -->
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.dropbox.com/scl/fo/j0o1d4uakjqqpa18wwi9t/h?rlkey=hew6qd62yoporspae0ll107dh&dl=0" class="boom cbutton cbutton--effect-novak">all visual assets</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cssninja/view_source/blob/main/SHOPIFY_CODE" class="boom cbutton cbutton--effect-novak">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.com/pionezero/1870-1914-look-and-design/" class="boom cbutton cbutton--effect-novak">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p>
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <!-- / assets -->
+
+                                  <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -2588,22 +2698,30 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Shopify website</strong>
                                     </div>
                                   </div>
+                                  <!-- / tasks -->
+
+                                  <!-- client -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">Meilyn Nelson</strong></div>
                                   </div>
+                                  <!-- / client -->
+
+                                  <!-- date -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">October 2019 - June 2020</strong></div>
                                   </div>
-                                  <!-- <div class="row">
-                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
-                                    <div class="col"></div>
-                                  </div> -->
+                                  <!-- / date -->
+                                  
+                                  <!-- visual design -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">Very enjoyable and fascinating deep dive research into late 1800's, early 1900's 'old Milwaukee'</strong> which initially began with pouring over old photos of that era of Milwaukee (<strong class="strgtxt"><a href="https://wisconsinhistory.org/Records/Property/HI108817">ref 1</a></strong>, <strong class="strgtxt"><a href="https://duckduckgo.com/?t=ffab&q=old+milwaukee+1800%27s+early+1900%27s&iax=images&ia=images">ref 2</a></strong>, <strong class="strgtxt"><a href="https://www.pinterest.com/search/pins/?q=old%20milwaukee%201800%27s&rs=typed">ref 3)</a></strong> which revealed a very strong sense of the vibe of that period of Milwaukee: <strong class="strgtxt">horse drawn vehicles, brick paved streets, well built everything, extreme industriousness and a strong sense of old world values.</strong> Words that evoke this reseach include: heavy wood beams, industrial metal (gears, cogs, bolts, pipes, springs, plates, rivets), steampunk, Edison lamps, Tesla devices, old blueprints, brick, cream city brick, rust, copper and grayscale.</div>
                                   </div>
+                                  <!-- / visual design -->
+
+                                  <!-- front end coding -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
                                     <div class="col dsctx">
@@ -2611,11 +2729,13 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Languages: HTML, CSS, JS, Liquid (Shopify templating language)</strong>
                                     </div>
                                   </div>
+                                  <!-- / front end coding -->
 
-                                  <!-- details -->
+                                  <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
                                     
+                                    <!-- dropdown -->
                                     <div class="collapse" id="collapseExample5">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
                                       <div class="card card-body dettxt">
@@ -2647,66 +2767,50 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                         <p>Read full notes files on this project <strong class="strgtxt"><a href="https://pionezero.com/port/img/factory_on_barclay/README.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/factory_on_barclay/SOFT_LAUNCH.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/factory_on_barclay/UPDATE_NOTES.txt">here</a></strong>, <strong class="strgtxt"><a href="https://pionezero.com/port/img/factory_on_barclay/notes.txt">here</a></strong> and <strong class="strgtxt"><a href="https://pionezero.com/port/img/factory_on_barclay/notes_2.txt">here</a></strong>.
                                       </div>
                                     </div>
+                                    <!-- / dropdown -->
 
                                   </div>
-                                  <!-- / details -->
+                                  <!-- / process notes (dropdown) -->
+
+                                  <!-- process notes (list) -->
+                                  <div class="row pnote">
+                                    <div class="col dsctx">
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
+                                    </div>
+                                  </div>
+                                  <!-- / process notes (list) -->
 
                                 </div>
-                                <!-- / blurb -->
-
-                                <p class="porticonz">
-                                    <a href="https://thefactoryonbarclay.com/" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://dribbble.com/shots/23804282-Factory-on-Barclay-1908-old-MKE-building-turned-event-venue" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
-                                    </a>
-                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                </a> -->
-                                </p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.dropbox.com/scl/fo/j0o1d4uakjqqpa18wwi9t/h?rlkey=hew6qd62yoporspae0ll107dh&dl=0" class="boom cbutton cbutton--effect-novak">all visual assets</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cssninja/view_source/blob/main/SHOPIFY_CODE" class="boom cbutton cbutton--effect-novak">shopify code repo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropbox</p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.com/pionezero/1870-1914-look-and-design/" class="boom cbutton cbutton--effect-novak">era study</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pinterest</p>
                             </div>
+                            <!-- / 2 sub containers -->
                         </div>
+                        <!-- / 7 category column -->
                     </div>
-
-                    <div class="collapse" id="collapseExample3">
-                        <div class="card card-body"></div>
-                    </div>
-
                 </div>
+                <!-- / 2 parent containers -->
 
-                <!-- image -->
-                <div class='wrapc_mixxi'>
-
-                  <div class='rowc_mixxi'>
+                <!-- images -->
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <!-- image 1 -->
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23804282-Factory-on-Barclay-1908-old-MKE-building-turned-event-venue"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="port2"></div>
-                      <!-- <div class='content ts'>Codepen</div> -->
                     </div>
+                    <!-- / image 1 -->
 
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <!-- image 2 -->
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23804282-Factory-on-Barclay-1908-old-MKE-building-turned-event-venue"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="port2b"></div>
-                      <!-- <div class='content ts'>Codepen</div> -->
                     </div>
+                    <!-- / image 2 -->
                     
                   </div>
-                  
                 </div>
+                <!-- / images -->
                 <!-- / ------------- / Factory -->
 <!--
                           d8b                   888            d8888 
@@ -2731,7 +2835,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                                <i class="fa-solid fa-industry"></i>
+                                <i class="fa-solid fa-people-roof"></i>
                             </h6>
 
                             <div class="align-self-start">
@@ -2848,11 +2952,10 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- image -->
-                <div class='wrapc_mixxi'>
-
-                  <div class='rowc_mixxi'>
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23779389-Hernandez-Roofing"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -2861,7 +2964,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                       <!-- <div class='content ts'>Codepen</div> -->
                     </div>
 
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23779389-Hernandez-Roofing"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -3003,11 +3106,10 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- image -->
-                <div class='wrapc_mixxi'>
-
-                  <div class='rowc_mixxi'>
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -3016,7 +3118,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                       <!-- <div class='content ts'>Codepen</div> -->
                     </div>
 
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/15261010-The-Loft-On-Broadway"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -3199,8 +3301,8 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                   <!-- / process notes (dropdown) -->
 
                                   <!-- process notes (list) -->
-                                  <div class="row">
-                                    <div class="col dsctx" style="margin:20px 0px 0px 15px">
+                                  <div class="row pnote">
+                                    <div class="col dsctx">
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/WEBSITE-COMMENTS-DIRECTION.txt" class="boom cbutton cbutton--effect-novak">website comments, direction</a></p>
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/READ_ME.txt" class="boom cbutton cbutton--effect-novak">READ ME</a></p>
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/port/img/gm_jr_scouting/phase1_review.txt" class="boom cbutton cbutton--effect-novak">phase 1 review</a></p>
@@ -3222,18 +3324,18 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- 2 parent containers -->
 
                 <!-- images -->
-                <div class='wrapc_mixxi'>
-                  <div class='rowc_mixxi'>
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23779797-GM-Jr-Scouting-football-recruiting-in-flat-design"></a>
                       <div class="port12"></div>
                     </div>
                     <!-- / image 1 -->
     
                     <!-- image 2 -->
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23779797-GM-Jr-Scouting-football-recruiting-in-flat-design"></a>
                       <div class="port12b"></div>
                     </div>
@@ -3351,11 +3453,10 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- image -->
-                <div class='wrapc_mixxi'>
-
-                  <div class='rowc_mixxi'>
+                <div class="wrapc_mixxi">
+                  <div class="rowc_mixxi">
                     
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
@@ -3364,7 +3465,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                       <!-- <div class='content ts'>Codepen</div> -->
                     </div>
 
-                    <div class='columnc' style="/* background-color:#cbc4d0;border-radius:0px */">
+                    <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"></a>
                       <!-- USE THIS FOR UPPER IMG CONTENT -->
                       <!-- <div class='content_bg'></div> -->
