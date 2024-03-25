@@ -379,24 +379,29 @@ Y88b.         X88      X88
             font-size: 1em;
             width: 40%;
         }
-    }/* top margin for 'panels and such' to meet wavify */
+    }
 
+    /* top margin for 'panels and such' to meet wavify */
     .panelmar {
         margin: -80px 0px 170px 0px !important;
-    }/* tablet */
-
-    @media (max-width: 768px) {
+        padding: 25px 50px 0px 50px
+    }
+    /* tablet */
+    @media (max-width: 1024px) {
         .panelmar {
             margin: -120px 0px 170px 0px !important;
+            padding: 15px 0px 0px 0px
         }
-    }/* sm mobile */
-
+    }
+    /* sm mobile */
     @media (max-width: 450px) {
         .panelmar {
             margin: -160px 0px 170px 0px !important;
+            padding: 15px 0px 0px 0px
         }
-    }/* top alert */
+    }
 
+    /* top alert */
     .alertl {
         color: #e1d9e7 !important;
         font-weight: bold;
@@ -581,7 +586,7 @@ Y88b.         X88      X88
         background-position: 50% 50%;
         /* x,y */
         background-repeat: no-repeat;
-        background-size: 170%;
+        background-size: cover;
         position: relative;
         border: 0.3rem solid #d3cbd8;
         border-radius: 5px;
