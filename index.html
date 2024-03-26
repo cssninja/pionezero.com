@@ -564,8 +564,7 @@ Y88b.         X88      X88
         background-size: cover;
         position: relative;
         border: 0.3rem solid #d3cbd8;
-        border-radius: 5px;
-        margin-bottom: 100px
+        border-radius: 5px
     }
 
     /* factory on barclay -------- */
@@ -1209,12 +1208,30 @@ Y88b.         X88      X88
       /* border: 3px solid #ff9933; */
       width: 450px;
     }
-    .wrapc_mixxi {
-      margin: -7px 0px 150px 0px;
+    .wrapc_img {
+      margin: 0px 0px 150px 0px;
       /* border: 3px solid #ff9933; */
       width: 450px;
       /* padding: 60px 0px 0px 0px */ /* just to horizontally center images on right */
-      transform: translate(0%,0%)
+      transform: translate(0%,8%) /* x,y */
+    }
+    @media (max-width: 540px) {
+      .wrapc_img {
+        margin: 0px 0px 0px 0px;
+        /* border: 3px solid #ff9933; */
+        width: 450px;
+        /* padding: 60px 0px 0px 0px */ /* just to horizontally center images on right */
+        transform: translate(0%,0%) /* x,y */
+      }
+    }
+    @media (min-width: 541px) and (max-width: 1024px) {
+      .wrapc_img {
+        margin: 0px 0px 0px 0px;
+        /* border: 3px solid #ff9933; */
+        width: 450px;
+        /* padding: 60px 0px 0px 0px */ /* just to horizontally center images on right */
+        transform: translate(0%,-3%) /* x,y */
+      }
     }
     /* rows */
     .rowc {
@@ -1405,7 +1422,6 @@ Y88b.         X88      X88
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      margin-bottom: 100px
     }
     .this6 {
       background-color: #ffc266;
@@ -2409,7 +2425,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- / 2 parent containers -->
 
                 <!-- images -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
@@ -2590,8 +2606,8 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                   <!-- / process notes (dropdown) -->
 
                                   <!-- process notes (list) -->
-                                  <div class="row">
-                                    <div class="col dsctx" style="margin:20px 0px 0px 15px">
+                                  <div class="row pnote">
+                                    <div class="col dsctx">
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
                                         <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="boom cbutton cbutton--effect-novak"></a></p>
                                     </div>
@@ -2608,7 +2624,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- / 2 parent containers -->
 
                 <!-- images -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
@@ -2800,7 +2816,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- / 2 parent containers -->
 
                 <!-- images -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
@@ -2999,7 +3015,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- 2 parent containers -->
 
                 <!-- images -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
@@ -3149,7 +3165,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- image -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
@@ -3367,7 +3383,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- 2 parent containers -->
 
                 <!-- images -->
-                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_mixxi">
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <!-- image 1 -->
@@ -3496,7 +3512,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 </div>
 
                 <!-- image -->
-                <div class="wrapc_mixxi">
+                <div class="wrapc_img">
                   <div class="rowc_mixxi">
                     
                     <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
