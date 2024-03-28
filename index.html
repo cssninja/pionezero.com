@@ -3436,19 +3436,59 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                 <!-- // ------------- Diageo v2 -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-                        <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
-                        <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Diageo</h2>
+
+                        <!-- title, with option for icon or text -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                              <!-- Fixed width column -->
+                              <h2 class="h1 font-weight-bold titlebg">Diageo</h2>
+                            </div>
+                            <div class="col justify-left-column brain_factory" style="display:none/* border:0.3rem solid #d3cbd8; */">
+                              <!-- Content column with left alignment -->
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / title -->
+
+                        <!-- 7 category column -->
                         <div class="d-flex mt-3 reslink">
+
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
                                 <i class="fa-solid fa-whiskey-glass-ice"></i>
                             </h6>
 
                             <div class="align-self-start">
-                                <!-- blurb -->
                                 <div class="container text-start thkfnt">
+
+                                  <!-- assets -->
+                                  <div class="row">
+                                    <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
+                                    <div class="col dsctx">
+                                        <p class="porticonz">
+                                            <a href="https://codepen.io/fullstackninja/full/MWqRVYL" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fas fa-laptop bigicon"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+
+                                            <a href="https://dribbble.com/shots/23781867-Diageo-Codepen-written-Bootstrap-based-single-page-sales-site" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                            <!-- <a href="" class="boom cbutton cbutton--effect-novak">
+                                                <i class="fa-solid fa-file bigicon"></i>
+                                            </a> -->
+
+                                            <!-- special asset -->
+                                            <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/diageo/store/index.html" class="boom cbutton cbutton--effect-novak">backup</a></p>
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <!-- / assets -->
+
+                                  <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
                                     <div class="col dsctx">
@@ -3456,22 +3496,30 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Login portal</strong>
                                     </div>
                                   </div>
+                                  <!-- / tasks -->
+
+                                  <!-- client -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">Diageo</strong> via Wild Impact Marketing Group</div>
                                   </div>
+                                  <!-- / client -->
+
+                                  <!-- date -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">March 2023</strong></div>
                                   </div>
-                                  <!-- <div class="row">
-                                    <div class="col-md-auto"><strong class="subtitlebg2">Process</strong></div>
-                                    <div class="col"></div>
-                                  </div> -->
+                                  <!-- / date -->
+
+                                  <!-- visual design -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
                                     <div class="col dsctx"><strong class="strgtxt">UI development</strong> using company assets</div>
                                   </div>
+                                  <!-- / visual design -->
+
+                                  <!-- front end coding -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
                                     <div class="col dsctx">
@@ -3479,79 +3527,63 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                       2) <strong class="strgtxt">Languages: HTML, CSS, JS</strong>
                                     </div>
                                   </div>
+                                  <!-- front end coding -->
 
-                                  <!-- details -->
+                                  <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
                                     
+                                    <!-- dropdown -->
                                     <div class="collapse ddtwk" id="collapseExample1">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
                                       <div class="card card-body dettxt">
                                       One of the novelties of this site is buidling into it the ability to run Bootstrap v5.0.2 in any section of code you wish simply by giving that div the class 'bs5', where it refers to a special css file known as an <strong class="strgtxt"><a href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css">isolated file, or bootstrap-iso or bs-iso</a></strong>, where every class and element is prepended with the class .bs5, so that those sections of code don't conflict with the default css of the site. Explained <strong class="strgtxt"><a href="https://github.com/franky920920/bootstrap-5-isolated">here</a></strong> and <strong class="strgtxt"><a href="https://formden.com/blog/isolate-bootstrap">here</a></strong>.
                                       </div>
                                     </div>
+                                    <!-- / dropdown -->
 
                                   </div>
-                                  <!-- / details -->
+                                  <!-- / process notes (dropdown) -->
+
+                                  <!-- process notes (list) -->
+                                  <div class="row pnote">
+                                    <div class="col dsctx">
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/franky920920/bootstrap-5-isolated" class="boom cbutton cbutton--effect-novak">bootstrap isolated (1)</a></p>
+                                        <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://formden.com/blog/isolate-bootstrap" class="boom cbutton cbutton--effect-novak">bootstrap isolated (2)</a></p>
+                                    </div>
+                                  </div>
+                                  <!-- / process notes (list) -->
 
                                 </div>
-                                <!-- / blurb -->
-
-                                <p class="porticonz">
-                                    <a href="https://codepen.io/fullstackninja/full/MWqRVYL" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://pionezero.com/diageo/login/index.html" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fas fa-laptop bigicon"></i>
-                                    </a>
-                                    &nbsp;&nbsp;
-
-                                    <a href="https://dribbble.com/shots/23781867-Diageo-Codepen-written-Bootstrap-based-single-page-sales-site" class="boom cbutton cbutton--effect-novak">
-                                        <i class="fab fa-dribbble bigicon"></i>
-                                    </a>
-                                <!-- more work (using visibility toggle via accordian) .. thanks to Bootstrap 4.4, https://getbootstrap.com/docs/4.4/components/collapse/#accordion-example -->
-                                <!-- <a href="#" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                                    <i class="fas fa-expand-arrows-alt bigicon"></i>
-                                </a> -->
-                                </p>
-                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pionezero.com/diageo/store/index.html" class="boom cbutton cbutton--effect-novak">v2 (backup)</a></p>
                             </div>
+                            <!-- / 2 sub containers -->
                         </div>
+                        <!-- / 7 category column -->
                     </div>
-
-                    <div class="collapse" id="collapseExample3">
-                        <div class="card card-body"></div>
-                    </div>
-
                 </div>
+                <!-- / 2 parent containers -->
 
-                <!-- image -->
-                <div class="wrapc_img">
+                <!-- images -->
+                <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
                     
+                    <!-- image 1 -->
                     <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content'><img class="imgr" src="https://via.placeholder.com/800x150?text=left"></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="this7"></div>
-                      <!-- <div class='content ts'>Codepen</div> -->
                     </div>
+                    <!-- / image 1 -->
 
+                    <!-- image 2 -->
                     <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
                       <a class="linx boom cbutton cbutton--effect-novak" href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login"></a>
-                      <!-- USE THIS FOR UPPER IMG CONTENT -->
-                      <!-- <div class='content_bg'></div> -->
-                      <!-- USE THIS FOR UPPER NON-IMG CONTENT -->
                       <div class="this8"></div>
-                      <!-- <div class='content ts'>Stackblitz</div> -->
                     </div>
+                    <!-- / image 2 -->
                     
                   </div>
-                  
                 </div>
+                <!-- / images -->
                 <!-- / ------------- END Diageo v2 -->
 <!--
                           d8b                   888         .d8888b. 
