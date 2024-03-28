@@ -3,17 +3,17 @@
 <head>
     <title>pi one zero labs | madison, wi</title>
 
-    <!-- updated: mar 22 10:03 2024 -->
-<!-- 
-                       888            
-                       888            
-                       888            
-88888b.d88b.   .d88b.  888888  8888b. 
-888 "888 "88b d8P  Y8b 888        "88b
-888  888  888 88888888 888    .d888888
-888  888  888 Y8b.     Y88b.  888  888
-888  888  888  "Y8888   "Y888 "Y888888
--->
+    <!-- updated: mar 28 1:56 2024 -->
+    <!-- 
+                           888            
+                           888            
+                           888            
+    88888b.d88b.   .d88b.  888888  8888b. 
+    888 "888 "88b d8P  Y8b 888        "88b
+    888  888  888 88888888 888    .d888888
+    888  888  888 Y8b.     Y88b.  888  888
+    888  888  888  "Y8888   "Y888 "Y888888
+    -->
     <!-- metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -38,19 +38,19 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-<!--
-888                                .d888                         
-888                               d88P"                          
-888                               888                            
-888888 888  888 88888b.   .d88b.  888888 8888b.   .d8888b .d88b. 
-888    888  888 888 "88b d8P  Y8b 888       "88b d88P"   d8P  Y8b
-888    888  888 888  888 88888888 888   .d888888 888     88888888
-Y88b.  Y88b 888 888 d88P Y8b.     888   888  888 Y88b.   Y8b.    
- "Y888  "Y88888 88888P"   "Y8888  888   "Y888888  "Y8888P "Y8888 
-            888 888                                              
-       Y8b d88P 888                                              
-        "Y88P"  888
--->                                     
+    <!--
+    888                                .d888                         
+    888                               d88P"                          
+    888                               888                            
+    888888 888  888 88888b.   .d88b.  888888 8888b.   .d8888b .d88b. 
+    888    888  888 888 "88b d8P  Y8b 888       "88b d88P"   d8P  Y8b
+    888    888  888 888  888 88888888 888   .d888888 888     88888888
+    Y88b.  Y88b 888 888 d88P Y8b.     888   888  888 Y88b.   Y8b.    
+     "Y888  "Y88888 88888P"   "Y8888  888   "Y888888  "Y8888P "Y8888 
+                888 888                                              
+           Y8b d88P 888                                              
+            "Y88P"  888
+    -->                                     
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CPlayfair+Display:400,400i,700,700i%7CRoboto:400,400i,500,700" rel="stylesheet">
     <!-- use firefox only for nabbing fonts .. ubuntu under greek language -->
@@ -58,13 +58,13 @@ Y88b.  Y88b 888 888 d88P Y8b.     888   888  888 Y88b.   Y8b.
 
     <!-- font awesome js -->
     <script src="https://kit.fontawesome.com/3c4f5c0732.js" crossorigin="anonymous"></script>
-<!--
- .d8888b .d8888b  .d8888b 
-d88P"    88K      88K     
-888      "Y8888b. "Y8888b.
-Y88b.         X88      X88
- "Y8888P  88888P'  88888P'
--->
+    <!--
+     .d8888b .d8888b  .d8888b 
+    d88P"    88K      88K     
+    888      "Y8888b. "Y8888b.
+    Y88b.         X88      X88
+     "Y8888P  88888P'  88888P'
+    -->
     <!-- plugins css -->
     <!-- KEEP, cool animated css > http://daneden.me/animate -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css"/>
@@ -1812,7 +1812,8 @@ Y88b.         X88      X88
       margin: 0 auto;
       min-width: 0px !important;
       /* display: none */
-      transform: translate(150px, -3px)
+      transform: translate(150px, -3px);
+      display: none
       /* instead of top and left .. thanks to: https://css-tricks.com/almanac/properties/t/transform/#translate, https://codepen.io/team/css-tricks/pen/eNQdgJ/b9df78cff3ab6b64b5925b10c1e52d9e */
       }
     @media (max-width: 489.75px) {
@@ -1833,7 +1834,8 @@ Y88b.         X88      X88
       margin: 0 auto;
       min-width: 0px !important;
       /* display: none */
-      transform: translate(235px, -3px)
+      transform: translate(235px, -3px);
+      display: none
       /* instead of top and left .. thanks to: https://css-tricks.com/almanac/properties/t/transform/#translate, https://codepen.io/team/css-tricks/pen/eNQdgJ/b9df78cff3ab6b64b5925b10c1e52d9e */
       }
     @media (max-width: 489.75px) {
@@ -1842,6 +1844,28 @@ Y88b.         X88      X88
         /* left: -10px;
         top: 44px; */
         transform: translate(180px, -8px);
+        margin: 0 auto;
+        min-width: 0px !important;
+        display: none
+      }
+    }
+    .brain_code {
+      position: absolute;
+      /* left: 150px;
+      top: -3px; */
+      margin: 0 auto;
+      min-width: 0px !important;
+      /* display: none */
+      transform: translate(385px, -3px);
+      display: none
+      /* instead of top and left .. thanks to: https://css-tricks.com/almanac/properties/t/transform/#translate, https://codepen.io/team/css-tricks/pen/eNQdgJ/b9df78cff3ab6b64b5925b10c1e52d9e */
+      }
+    @media (max-width: 489.75px) {
+      .brain_code {
+        position: absolute;
+        /* left: -10px;
+        top: 44px; */
+        transform: translate(275px, 0px);
         margin: 0 auto;
         min-width: 0px !important;
         display: none
@@ -1881,31 +1905,31 @@ Y88b.         X88      X88
     </style>
 
 </head>
-<!--
-                          888                     888   
-                          888                     888   
-                          888                     888   
- .d8888b .d88b.  88888b.  888888 .d88b.  88888b.  888888
-d88P"   d88""88b 888 "88b 888   d8P  Y8b 888 "88b 888   
-888     888  888 888  888 888   88888888 888  888 888   
-Y88b.   Y88..88P 888  888 Y88b. Y8b.     888  888 Y88b. 
- "Y8888P "Y88P"  888  888  "Y888 "Y8888  888  888  "Y888
--->
-<body>
 
+<body>
+    <!--
+       d8b                                                      d8b          888   
+       Y8P                                                      Y8P          888   
+                                                                             888   
+      8888  8888b.  888  888  8888b.  .d8888b   .d8888b 888d888 888 88888b.  888888
+      "888     "88b 888  888     "88b 88K      d88P"    888P"   888 888 "88b 888   
+       888 .d888888 Y88  88P .d888888 "Y8888b. 888      888     888 888  888 888   
+       888 888  888  Y8bd8P  888  888      X88 Y88b.    888     888 888 d88P Y88b. 
+       888 "Y888888   Y88P   "Y888888  88888P'  "Y8888P 888     888 88888P"   "Y888
+       888                                                          888            
+      d88P                                                          888            
+    888P"                                                           888                               
+    -->
     <!-- source code animated type, thanks to: https://github.com/mattboldt/typed.js/ -->
     <script src="assets/images/port/code_port/code_type/lib/typed.js" type="text/javascript"></script>
     <script src="assets/images/port/code_port/code_type/assets/demos_E2.js"></script>
-<!--
- d888  
-d8888  
-  888  
-  888  
-  888  
-  888  
-  888  
-8888888
--->
+    <!--                                    
+    88888b.d88b.   .d88b.  88888b.  888  888
+    888 "888 "88b d8P  Y8b 888 "88b 888  888
+    888  888  888 88888888 888  888 888  888
+    888  888  888 Y8b.     888  888 Y88b 888
+    888  888  888  "Y8888  888  888  "Y88888
+    -->
     <!-- corner menu / / / / / /    1    / / / / / / -->
     <!-- disable/enable alert with > display: .. change bg of opened menu on line 13474 in style.css, .hamburger-menu input:checked + .hamburger-inner, old: #3a204c, new: #343a40 -->
     <section class="d-flex m-0 p-0 bd-highlight justify-content-end" style="display:non !important;">
@@ -1941,16 +1965,16 @@ d8888
             </label>
         </div>
     </section>
-<!--
- .d8888b. 
-d88P  Y88b
-       888
-     .d88P
- .od888P" 
-d88P"     
-888"      
-888888888 
--->
+    <!--
+             888                  888   
+             888                  888   
+             888                  888   
+     8888b.  888  .d88b.  888d888 888888
+        "88b 888 d8P  Y8b 888P"   888   
+    .d888888 888 88888888 888     888   
+    888  888 888 Y8b.     888     Y88b. 
+    "Y888888 888  "Y8888  888      "Y888
+    -->
     <!-- header / / / / / /    2    / / / / / / -->
     <!-- disable/enable alert with > display: .. original #301b3f, COVID19 #6c2e8c -->
     <header class="d-flex header-static navbar-light justify-content-center minhd" style="background:#301b3f !important;display:non !important">
@@ -1986,16 +2010,19 @@ d88P"
         <!-- <a href="#covid"><i class="fas fa-angle-down topar alertl-COV"></i></a> -->
 
     </header>
-<!--
- .d8888b. 
-d88P  Y88b
-     .d88P
-    8888" 
-     "Y8b.
-888    888
-Y88b  d88P
- "Y8888P" 
--->
+    <!--
+                             888               888            888                           
+                             888               888            888                           
+                             888               888            888                           
+    888d888 .d88b.   .d8888b 888  888  .d88b.  888888         888  .d88b.   .d88b.   .d88b. 
+    888P"  d88""88b d88P"    888 .88P d8P  Y8b 888            888 d88""88b d88P"88b d88""88b
+    888    888  888 888      888888K  88888888 888            888 888  888 888  888 888  888
+    888    Y88..88P Y88b.    888 "88b Y8b.     Y88b.  d8b     888 Y88..88P Y88b 888 Y88..88P
+    888     "Y88P"   "Y8888P 888  888  "Y8888   "Y888 88P     888  "Y88P"   "Y88888  "Y88P" 
+                                                      8P                        888         
+                                                      "                    Y8b d88P         
+                                                                            "Y88P"             
+    -->
     <!-- main banner / / / / / /    3    / / / / / / -->
     <!-- ROCKET IMAGE HERE as bg -->
     <section class="p-0 position-relative rocketbg staybig rocketems">
@@ -2041,16 +2068,13 @@ Y88b  d88P
 
             </div>
         </div>
-<!--
-    d8888 
-   d8P888 
-  d8P 888 
- d8P  888 
-d88   888 
-8888888888
-      888 
-      888 
--->
+        <!--                              
+        888  888  888  8888b.  888  888  .d88b. 
+        888  888  888     "88b 888  888 d8P  Y8b
+        888  888  888 .d888888 Y88  88P 88888888
+        Y88b 888 d88P 888  888  Y8bd8P  Y8b.    
+         "Y8888888P"  "Y888888   Y88P    "Y8888 
+        -->
         <!-- wavify / / / / / /    4    / / / / / / -->
         <!-- other svg components in section 8, go to functions.js line 267-290 for full controls -->
         <div class="position-relative wavebot" style="z-index:100 !important;">
@@ -2065,16 +2089,19 @@ d88   888
         </div>
 
     </section>
-<!--
-888888888 
-888       
-888       
-8888888b. 
-     "Y88b
-       888
-Y88b  d88P
- "Y8888P" 
--->
+    <!--
+                      888    d8b                  
+                      888    Y8P                  
+                      888                         
+     .d88b.  88888b.  888888 888  .d88b.  88888b. 
+    d88""88b 888 "88b 888    888 d88""88b 888 "88b
+    888  888 888  888 888    888 888  888 888  888
+    Y88..88P 888 d88P Y88b.  888 Y88..88P 888  888
+     "Y88P"  88888P"   "Y888 888  "Y88P"  888  888
+             888                                  
+             888                                  
+             888                                  
+    -->
     <!-- panels and such / / / / / /    5    / / / / / / -->
     <section class="mt-3 panelmar" style="background-color: #e1d9e7;">
       <div class="container" id="covid">
@@ -2101,26 +2128,41 @@ Y88b  d88P
 
             <!-- =-=-=-=-=-=-=-=-= container row -->
             <div class="row d-flex justify-content-around">
-<!--
-                      888                                                        
-                      888                                                        
-                      888                                                        
- .d8888b .d88b.   .d88888  .d88b.      888d888 .d88b.  88888b.   .d88b.  .d8888b 
-d88P"   d88""88b d88" 888 d8P  Y8b     888P"  d8P  Y8b 888 "88b d88""88b 88K     
-888     888  888 888  888 88888888     888    88888888 888  888 888  888 "Y8888b.
-Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X88
- "Y8888P "Y88P"   "Y88888  "Y8888      888     "Y8888  88888P"   "Y88P"   88888P'
-                                                       888                       
-                                                       888                       
-                                                       888                       
--->
-                <!-- // ------------- code samples -->
+                <!--
+                                      888                                                        
+                                      888                                                        
+                                      888                                                        
+                 .d8888b .d88b.   .d88888  .d88b.      888d888 .d88b.  88888b.   .d88b.  .d8888b 
+                d88P"   d88""88b d88" 888 d8P  Y8b     888P"  d8P  Y8b 888 "88b d88""88b 88K     
+                888     888  888 888  888 88888888     888    88888888 888  888 888  888 "Y8888b.
+                Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X88
+                 "Y8888P "Y88P"   "Y88888  "Y8888      888     "Y8888  88888P"   "Y88P"   88888P'
+                                                                       888                       
+                                                                       888                       
+                                                                       888                       
+                -->
+                <!-- // ------------- code repositories -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
-                        <!-- portfolio links -->
-                        <!-- <a href="https://dribbble.com/shots/23681213-Design-challenge-1"><span class="text-white border-radius-3 px-2 py-0 mb-2 d-inline-block" style="background:#675077 !important;">Dribbble</span></a> -->
-                        <!-- title -->
-                        <h2 class="h1 font-weight-bold titlebg">Code repositories</h2>
+
+
+                        <!-- title, with option for icon or text -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                              <!-- Fixed width column -->
+                              <h2 class="h1 font-weight-bold titlebg">Code repositories</h2>
+                            </div>
+                            <div class="col justify-left-column brain_code" style="/* border:0.3rem solid #d3cbd8; */">
+                              <!-- Content column with left alignment -->
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em;display:non"><span class="braintxt">startup</span></i></span></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / title -->
+
+
+
                         <div class="d-flex mt-3 reslink">
                             <!-- font awesome icon -->
                             <h6 class="display-1 opacity-2 mr-3 align-self-start">
@@ -2153,10 +2195,6 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="collapse" id="collapseExample3">
-                        <div class="card card-body"></div>
                     </div>
 
                 </div>
@@ -2266,20 +2304,20 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   
                 </div>
 
-                <!-- / ------------- END code samples -->
-<!--
-                          d8b                   888         d888  
-                          Y8P                   888        d8888  
-                                                888          888  
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  
-888  888 888    888  888  888 88888888 888      888          888  
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888
-888                       888                                     
-888                      d88P                                     
-888                    888P"                                                                             
--->
+                <!-- / ------------- / code repositories -->
+                <!--
+                                          d8b                   888         d888  
+                                          Y8P                   888        d8888  
+                                                                888          888  
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888       888  
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888          888  
+                888  888 888    888  888  888 88888888 888      888          888  
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.        888  
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     8888888
+                888                       888                                     
+                888                      d88P                                     
+                888                    888P"                                                                             
+                -->
                 <!-- // ------------- Jangobio -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2293,7 +2331,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                             </div>
                             <div class="col justify-left-column brain_jango" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
-                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em;display:none"><span class="braintxt">startup</span></i></span></a>
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em"><span class="braintxt">startup</span></i></span></a>
                             </div>
                           </div>
                         </div>
@@ -2309,7 +2347,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                   -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -2340,6 +2387,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
 
                                   <!-- tasks -->
                                   <div class="row">
@@ -2384,11 +2441,20 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
-                                    
+
                                     <!-- dropdown -->
                                     <div class="collapse ddtwk" id="collapseExample4">
                                       <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
@@ -2432,7 +2498,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -2441,7 +2516,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- / 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -2463,20 +2550,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- / Jangobio -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888               888
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888          .d88P
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         .od888P" 
-888  888 888    888  888  888 88888888 888      888        d88P"     
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      888"      
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     888888888 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                                   
--->
+                <!--
+                                          d8b                   888         .d8888b. 
+                                          Y8P                   888        d88P  Y88b
+                                                                888               888
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888          .d88P
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         .od888P" 
+                888  888 888    888  888  888 88888888 888      888        d88P"     
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      888"      
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     888888888 
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                                                                   
+                -->
                 <!-- // ------------- Factory on Barclay -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2488,7 +2588,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                               <!-- Fixed width column -->
                               <h2 class="h1 font-weight-bold titlebg">Factory on Barclay</h2>
                             </div>
-                            <div class="col justify-left-column brain_factory" style="display:none/* border:0.3rem solid #d3cbd8; */">
+                            <div class="col justify-left-column brain" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
                                <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
                             </div>
@@ -2506,7 +2606,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                   -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -2533,7 +2642,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -2574,7 +2692,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
@@ -2625,7 +2752,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -2634,7 +2770,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- / 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -2656,20 +2804,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- / Factory -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888             .d88P
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         8888" 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y8b.
-888  888 888    888  888  888 88888888 888      888        888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                    
--->
+                <!--
+                                          d8b                   888         .d8888b. 
+                                          Y8P                   888        d88P  Y88b
+                                                                888             .d88P
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         8888" 
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y8b.
+                888  888 888    888  888  888 88888888 888      888        888    888
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                                                    
+                -->
                 <!-- // ------------- Hernandez Roofing -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -2699,7 +2860,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -2725,7 +2895,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -2766,7 +2945,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
@@ -2804,7 +2992,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-                        
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -2813,7 +3010,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -2835,20 +3044,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- / Hernandez -->
-<!--
-                          d8b                   888            d8888 
-                          Y8P                   888           d8P888 
-                                                888          d8P 888 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888      d8P  888 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        d88   888 
-888  888 888    888  888  888 88888888 888      888        8888888888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.            888 
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888           888 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                                                                   
--->
+                <!--
+                                          d8b                   888            d8888 
+                                          Y8P                   888           d8P888 
+                                                                888          d8P 888 
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888      d8P  888 
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        d88   888 
+                888  888 888    888  888  888 88888888 888      888        8888888888
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.            888 
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888           888 
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                                                                   
+                -->
                 <!-- // ------------- Mixxi -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px">
                     <div class="mt-5 mt-md-0">
@@ -2862,7 +3084,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                             </div>
                             <div class="col justify-left-column brain_mixxi" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
-                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em;display:none"><span class="braintxt">startup</span></i></span></a>
+                               <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em"><span class="braintxt">startup</span></i></span></a>
                             </div>
                           </div>
                         </div>
@@ -2878,7 +3100,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -2911,7 +3142,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -2951,7 +3191,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
@@ -2983,7 +3232,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -2992,7 +3250,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- / 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -3014,20 +3284,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- END Mixxi -->
-<!--
-                          d8b                   888        888888888 
-                          Y8P                   888        888       
-                                                888        888       
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     8888888b. 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y88b
-888  888 888    888  888  888 88888888 888      888               888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
+                <!--
+                                          d8b                   888        888888888 
+                                          Y8P                   888        888       
+                                                                888        888       
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     8888888b. 
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888             "Y88b
+                888  888 888    888  888  888 88888888 888      888               888
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                         
+                -->
                 <!-- // ------------- Loft -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -3039,7 +3322,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                               <!-- Fixed width column -->
                               <h2 class="h1 font-weight-bold titlebg">Loft on Broadway</h2>
                             </div>
-                            <div class="col justify-left-column brain_factory" style="display:none/* border:0.3rem solid #d3cbd8; */">
+                            <div class="col justify-left-column brain" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
                                <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
                             </div>
@@ -3057,7 +3340,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -3078,7 +3370,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -3120,7 +3421,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <!-- details .. .ddtwk ORIGIN .. style below: dropdown text area wasn't collapsing below 'process' so  only in this div is here a compensation for the .container media query in css above in head, which made it woder by 400px .. further tweaked with class .ddtwk above to give text area equivalent width to others -->
                                   <div class="row">
@@ -3172,7 +3482,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -3181,7 +3500,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- / 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -3203,20 +3534,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- / Loft -->
-<!--
-                          d8b                   888         .d8888b. 
-                          Y8P                   888        d88P  Y88b
-                                                888        888       
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     888d888b. 
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        888P "Y88b
-888  888 888    888  888  888 88888888 888      888        888    888
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
+                <!--
+                                          d8b                   888         .d8888b. 
+                                          Y8P                   888        d88P  Y88b
+                                                                888        888       
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888     888d888b. 
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888        888P "Y88b
+                888  888 888    888  888  888 88888888 888      888        888    888
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.      Y88b  d88P
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888      "Y8888P" 
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                         
+                -->
                 <!-- // ------------- GM Jr Scouting -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -3246,7 +3590,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -3281,7 +3634,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -3328,7 +3690,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / front end coding --> 
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
@@ -3388,7 +3759,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -3397,7 +3777,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -3419,20 +3811,33 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- / GM Jr Scouting -->
-<!--
-                          d8b                   888        8888888888
-                          Y8P                   888              d88P
-                                                888             d88P 
-88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         d88P  
-888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         88888888 
-888  888 888    888  888  888 88888888 888      888          d88P    
-888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.       d88P     
-88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     d88P      
-888                       888                                        
-888                      d88P                                        
-888                    888P"                                         
--->
+                <!--
+                                          d8b                   888        8888888888
+                                          Y8P                   888              d88P
+                                                                888             d88P 
+                88888b.  888d888 .d88b.  8888  .d88b.   .d8888b 888888         d88P  
+                888 "88b 888P"  d88""88b "888 d8P  Y8b d88P"    888         88888888 
+                888  888 888    888  888  888 88888888 888      888          d88P    
+                888 d88P 888    Y88..88P  888 Y8b.     Y88b.    Y88b.       d88P     
+                88888P"  888     "Y88P"   888  "Y8888   "Y8888P  "Y888     d88P      
+                888                       888                                        
+                888                      d88P                                        
+                888                    888P"                                         
+                -->
                 <!-- // ------------- Diageo v2 -->
                 <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
                     <div class="mt-5 mt-md-0">
@@ -3444,7 +3849,7 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                               <!-- Fixed width column -->
                               <h2 class="h1 font-weight-bold titlebg">Diageo</h2>
                             </div>
-                            <div class="col justify-left-column brain_factory" style="display:none/* border:0.3rem solid #d3cbd8; */">
+                            <div class="col justify-left-column brain" style="/* border:0.3rem solid #d3cbd8; */">
                               <!-- Content column with left alignment -->
                                <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:3em"><span class="braintxt">startup</span></i></span></a>
                             </div>
@@ -3462,7 +3867,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 
                             <div class="align-self-start">
                                 <div class="container text-start thkfnt">
-
+                                  <!--
+                                                                      888            
+                                                                      888            
+                                                                      888            
+                                   8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                      "88b 88K      88K      d8P  Y8b 888    88K     
+                                  .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                  888  888      X88      X88 Y8b.     Y88b.       X88
+                                  "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- assets -->
                                   <div class="row">
                                     <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
@@ -3487,7 +3901,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / assets -->
-
+                                  <!--
+                                         d88P                                  888            
+                                        d88P                                   888            
+                                       d88P                                    888            
+                                      d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                                     d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                                    d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                                   d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                                  d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                                  -->
                                   <!-- tasks -->
                                   <div class="row">
                                     <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
@@ -3528,7 +3951,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- front end coding -->
-
+                                  <!--
+                                       888      888
+                                       888      888
+                                       888      888
+                                   .d88888  .d88888
+                                  d88" 888 d88" 888
+                                  888  888 888  888
+                                  Y88b 888 Y88b 888
+                                   "Y88888  "Y88888
+                                  -->
                                   <!-- process notes (dropdown) -->
                                   <div class="row">
                                     <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
@@ -3553,7 +3985,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                                     </div>
                                   </div>
                                   <!-- / process notes (list) -->
-
+                                  <!--
+                                         d88P   888      888
+                                        d88P    888      888
+                                       d88P     888      888
+                                      d88P  .d88888  .d88888
+                                     d88P  d88" 888 d88" 888
+                                    d88P   888  888 888  888
+                                   d88P    Y88b 888 Y88b 888
+                                  d88P      "Y88888  "Y88888
+                                  -->
                                 </div>
                             </div>
                             <!-- / 2 sub containers -->
@@ -3562,7 +4003,19 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                     </div>
                 </div>
                 <!-- / 2 parent containers -->
-
+                <!--
+                d8b                       
+                Y8P                       
+                                          
+                888 88888b.d88b.   .d88b. 
+                888 888 "888 "88b d88P"88b
+                888 888  888  888 888  888
+                888 888  888  888 Y88b 888
+                888 888  888  888  "Y88888
+                                       888
+                                  Y8b d88P
+                                   "Y88P" 
+                -->
                 <!-- images -->
                 <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
                   <div class="rowc_mixxi">
@@ -3584,7 +4037,21 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
                   </div>
                 </div>
                 <!-- / images -->
+                <!--
+                       d88P d8b                       
+                      d88P  Y8P                       
+                     d88P                             
+                    d88P    888 88888b.d88b.   .d88b. 
+                   d88P     888 888 "888 "88b d88P"88b
+                  d88P      888 888  888  888 888  888
+                 d88P       888 888  888  888 Y88b 888
+                d88P        888 888  888  888  "Y88888
+                                                   888
+                                              Y8b d88P
+                                               "Y88P" 
+                -->
                 <!-- / ------------- END Diageo v2 -->
+
 <!--
                           d8b                   888         .d8888b. 
                           Y8P                   888        d88P  Y88b
@@ -3752,11 +4219,28 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
 888                      d88P                                                   
 888                    888P"                                                    
 -->
+
+                <!--                           
+                88888b.d88b.  .d8888b   .d88b. 
+                888 "888 "88b 88K      d88P"88b
+                888  888  888 "Y8888b. 888  888
+                888  888  888      X88 Y88b 888
+                888  888  888  88888P'  "Y88888
+                                            888
+                                       Y8b d88P
+                                        "Y88P" 
+                -->
                 <div class="msgtxt">I'm in the process of updating projects (and adding more).</div>
 
             <!-- / =-=-=-=-=-=-=-=-= container row -->
             </div>
-
+            <!--
+            88888b.d88b.   .d88b.  888d888 .d88b. 
+            888 "888 "88b d88""88b 888P"  d8P  Y8b
+            888  888  888 888  888 888    88888888
+            888  888  888 Y88..88P 888    Y8b.    
+            888  888  888  "Y88P"  888     "Y8888 
+            -->
             <!-- more samples here -->
             <div class="container d-flex justify-content-center mb-2">
                 <div class="col-md-6 pr-lg-5 reslink" style="margin-top:140px;z-index:1000 !important;">
@@ -3787,16 +4271,16 @@ Y88b.   Y88..88P Y88b 888 Y8b.         888    Y8b.     888 d88P Y88..88P      X8
       </div>
     </section>
     <!-- / panels and such / / / / / /    5    / / / / / / -->
-<!--
- .d8888b. 
-d88P  Y88b
-888       
-888d888b. 
-888P "Y88b
-888    888
-Y88b  d88P
- "Y8888P" 
--->
+    <!--
+     .d888                  888                   
+    d88P"                   888                   
+    888                     888                   
+    888888 .d88b.   .d88b.  888888 .d88b.  888d888
+    888   d88""88b d88""88b 888   d8P  Y8b 888P"  
+    888   888  888 888  888 888   88888888 888    
+    888   Y88..88P Y88..88P Y88b. Y8b.     888    
+    888    "Y88P"   "Y88P"   "Y888 "Y8888  888    
+    -->
     <!-- footer / / / / / /    6    / / / / / / -->
     <footer class="footer footer-dark section-pt position-relative pt-4 mt-5" id="bottom">
 
@@ -4031,16 +4515,26 @@ Y88b  d88P
         <!-- / footer bottom -->
 
     </footer>
-<!--
-8888888888
-      d88P
-     d88P 
-    d88P  
- 88888888 
-  d88P    
- d88P     
-d88P      
--->
+    <!--
+
+
+           d88P  .d888                  888                   
+          d88P  d88P"                   888                   
+         d88P   888                     888                   
+        d88P    888888 .d88b.   .d88b.  888888 .d88b.  888d888
+       d88P     888   d88""88b d88""88b 888   d8P  Y8b 888P"  
+      d88P      888   888  888 888  888 888   88888888 888    
+     d88P       888   Y88..88P Y88..88P Y88b. Y8b.     888    
+    d88P        888    "Y88P"   "Y88P"   "Y888 "Y8888  888    
+
+    -->
+    <!--
+    888  888  888  8888b.  888  888  .d88b. 
+    888  888  888     "88b 888  888 d8P  Y8b
+    888  888  888 .d888888 Y88  88P 88888888
+    Y88b 888 d88P 888  888  Y8bd8P  Y8b.    
+     "Y8888888P"  "Y888888   Y88P    "Y8888      
+    -->
     <!-- wavify / / / / / /    7    / / / / / / -->
     <div>
         <!-- svg wave top, full controls in functions.js, line 267-290 .. other svg components in section 5 -->
@@ -4057,17 +4551,17 @@ d88P
         </figure>
     </div>
 <!--
-                          d8b          888            
-                          Y8P          888            
-                                       888            
-.d8888b   .d8888b 888d888 888 88888b.  888888 .d8888b 
-88K      d88P"    888P"   888 888 "88b 888    88K     
-"Y8888b. 888      888     888 888  888 888    "Y8888b.
-     X88 Y88b.    888     888 888 d88P Y88b.       X88
- 88888P'  "Y8888P 888     888 88888P"   "Y888  88888P'
-                              888                     
-                              888                     
-                              888                     
+   d8b                                                      d8b          888   
+   Y8P                                                      Y8P          888   
+                                                                         888   
+  8888  8888b.  888  888  8888b.  .d8888b   .d8888b 888d888 888 88888b.  888888
+  "888     "88b 888  888     "88b 88K      d88P"    888P"   888 888 "88b 888   
+   888 .d888888 Y88  88P .d888888 "Y8888b. 888      888     888 888  888 888   
+   888 888  888  Y8bd8P  888  888      X88 Y88b.    888     888 888 d88P Y88b. 
+   888 "Y888888   Y88P   "Y888888  88888P'  "Y8888P 888     888 88888P"   "Y888
+   888                                                          888            
+  d88P                                                          888            
+888P"                                                           888                             
 -->
     <!-- scripts / / / / / /    8    / / / / / / -->
     <!-- global js -->
@@ -4188,10 +4682,26 @@ d88P
             return false;
         });
     </script>
+    <!--
+
+
+           d88P d8b                                                      d8b          888   
+          d88P  Y8P                                                      Y8P          888   
+         d88P                                                                         888   
+        d88P   8888  8888b.  888  888  8888b.  .d8888b   .d8888b 888d888 888 88888b.  888888
+       d88P    "888     "88b 888  888     "88b 88K      d88P"    888P"   888 888 "88b 888   
+      d88P      888 .d888888 Y88  88P .d888888 "Y8888b. 888      888     888 888  888 888   
+     d88P       888 888  888  Y8bd8P  888  888      X88 Y88b.    888     888 888 d88P Y88b. 
+    d88P        888 "Y888888   Y88P   "Y888888  88888P'  "Y8888P 888     888 88888P"   "Y888
+                888                                                          888            
+               d88P                                                          888            
+             888P"                                                           888            
+
+    -->
 <!-- 
          d8b                                                                 888          888              
          Y8P                                                                 888          888              
-                                                                   ,          888          888              
+                                                                             888          888              
 88888b.  888  .d88b.  88888b.   .d88b. 88888888  .d88b.  888d888 .d88b.      888  8888b.  88888b.  .d8888b 
 888 "88b 888 d88""88b 888 "88b d8P  Y8b   d88P  d8P  Y8b 888P"  d88""88b     888     "88b 888 "88b 88K     
 888  888 888 888  888 888  888 88888888  d88P   88888888 888    888  888     888 .d888888 888  888 "Y8888b.
