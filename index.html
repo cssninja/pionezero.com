@@ -1230,9 +1230,9 @@
 
     /* parent container */
     .wrapc {
-      margin: 0px 0px 13px 0px;
+      margin: 0px 0px 0px 0px;
       /* border: 3px solid #ff9933; */
-      width: 450px;
+      width: 100%; /* was 450px .. so this will be used exclusively for the code module */
     }
     .wrapc_img {
       margin: 0px 0px 150px 0px;
@@ -1323,7 +1323,7 @@
     }
     .content_bg2 {
       display: block;
-      background: url("port/img/code/github_desktop.jpg") no-repeat;
+      /* background: url("port/img/code/github_desktop.jpg") no-repeat; */
       background-size: 100%;
       background-position: 70% 85%; 
       height: 100%;
@@ -1497,8 +1497,8 @@
     .linx {
       position: absolute;
       display: block;
-      min-width: 450px;
-      min-height: 300px;
+      min-width: 100%; /* was 450px */
+      min-height: 400px; /* was 300px */
       z-index: 1000 !important;
     }
     /* text spacing styles for the text to the right of the font awesome icons */
@@ -2278,64 +2278,72 @@
             -->
             <!-- RIGHT -->
             <!-- animated typed text -->
-            <div class='wrapc' style="border:1rem solid #1b1b1b;border-radius:5px;margin:0px 12px 100px 12px">
+            <!-- added parent containers from normal modules -->
+            <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img">
+              <div class="rowc_mixxi">
 
-              <div class='rowc'>
+                <div class='wrapc' style="border:1rem solid #1b1b1b;border-radius:5px">
 
-                <!-- keyframe powered typed text content -->
-                <div class="typcon" style="background-color:#353636;border-radius:0px">
-                    <span class="type" style="--n:800">
-                    <span class="linen">1</span>&nbsp.type {<br />
-                    <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
-                    <span class="linen">3</span>&nbsp&nbsp background:<br />
-                    <span class="linen">4</span>&nbsp&nbsp linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
-                    <span class="linen">5</span>&nbsp&nbsp linear-gradient(#fffef2 0 0) 0 0;<br />
-                    <span class="linen">6</span>&nbsp&nbsp background-size:calc(var(--n)*1ch) 200%;<br />
-                    <span class="linen">7</span>&nbsp&nbsp -webkit-background-clip:padding-box,text;<br />
-                    <span class="linen">8</span>&nbsp&nbsp background-clip:padding-box,text;<br />
-                    <span class="linen">9</span>&nbsp&nbsp background-repeat:no-repeat;<br />
-                    <span class="linen">10</span>&nbsp animation: <br />
-                    <span class="linen">11</span> &nbsp&nbsp&nbsp b .7s infinite steps(1),<br />
-                    <span class="linen">12</span> &nbsp&nbsp&nbsp t calc(var(--n)*.01s) steps(var(--n)) forwards;<br />
-                    <span class="linen">13</span> animation-iteration-count: infinite;<br />
-                    <span class="linen">14</span>&nbsp}<br />
-                    <span class="linen">15</span>&nbsp@keyframes t {<br />
-                    <span class="linen">16</span>&nbsp&nbsp&nbspfrom {background-size:0 200%}<br />
-                    <span class="linen">18</span>&nbsp&nbsp&nbsp/* to {transform: translateY(40px); opacity: 0;} */<br />
-                    <span class="linen">19</span>&nbsp}<br />
-                    <span class="linen">20</span>&nbsp@keyframes b {<br />
-                    <span class="linen">21</span>&nbsp&nbsp&nbsp50% {background-position:0 -100%,0 0}<br />
-                    <span class="linen">22</span>&nbsp}
-                    </span>
-                </div>
+                  <div class='rowc'>
 
-                <!-- pseudo-element placement of text -->
-                <div class="typcon2" style="display:non"></div>
-
-                <!-- bg placement of text -->
-                <div class="typcon3" style="background-color:#353636;border-radius:0px;display:flex;align-items:center;justify-content:center;">
-                    <div class="idetxt2 content_bg2">
-                      <!-- <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
-                      <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br /> -->
-                      <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:11em;padding:15px"></i><br />
-                      Powered by Github Desktop with much love</a>
+                    <!-- keyframe powered typed text content -->
+                    <div class="typcon" style="background-color:#353636;border-radius:0px">
+                        <span class="type" style="--n:800">
+                        <span class="linen">1</span>&nbsp.type {<br />
+                        <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
+                        <span class="linen">3</span>&nbsp&nbsp background:<br />
+                        <span class="linen">4</span>&nbsp&nbsp linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,<br />
+                        <span class="linen">5</span>&nbsp&nbsp linear-gradient(#fffef2 0 0) 0 0;<br />
+                        <span class="linen">6</span>&nbsp&nbsp background-size:calc(var(--n)*1ch) 200%;<br />
+                        <span class="linen">7</span>&nbsp&nbsp -webkit-background-clip:padding-box,text;<br />
+                        <span class="linen">8</span>&nbsp&nbsp background-clip:padding-box,text;<br />
+                        <span class="linen">9</span>&nbsp&nbsp background-repeat:no-repeat;<br />
+                        <span class="linen">10</span>&nbsp animation: <br />
+                        <span class="linen">11</span> &nbsp&nbsp&nbsp b .7s infinite steps(1),<br />
+                        <span class="linen">12</span> &nbsp&nbsp&nbsp t calc(var(--n)*.01s) steps(var(--n)) forwards;<br />
+                        <span class="linen">13</span> animation-iteration-count: infinite;<br />
+                        <span class="linen">14</span>&nbsp}<br />
+                        <span class="linen">15</span>&nbsp@keyframes t {<br />
+                        <span class="linen">16</span>&nbsp&nbsp&nbspfrom {background-size:0 200%}<br />
+                        <span class="linen">18</span>&nbsp&nbsp&nbsp/* to {transform: translateY(40px); opacity: 0;} */<br />
+                        <span class="linen">19</span>&nbsp}<br />
+                        <span class="linen">20</span>&nbsp@keyframes b {<br />
+                        <span class="linen">21</span>&nbsp&nbsp&nbsp50% {background-position:0 -100%,0 0}<br />
+                        <span class="linen">22</span>&nbsp}
+                        </span>
                     </div>
-                </div>
-                
-              </div>
-              <!-- / rowc -->
 
-              <!-- code challenge description -->
-              <div class='rowc' style="display:non">
-                  <!-- link to lines of code in github, thanks to: https://stackoverflow.com/questions/23821235/how-to-link-to-a-specific-line-number-on-github .. (have to be signed in or public repo) https://github.com/cssninja/pionezero.com/blob/main/index.html?plain=1#L115 .. for source code link, https://css-tricks.com/make-a-view-source-button/ and https://css-tricks.com/make-a-view-source-button/ -->
-                  <div class='columnc' style="width:100%;height:100%;background-color:#292a2a;border-radius:0px">
-                    <div class='content ts' style="font-size:0.85em;height:100%;opacity:0.4;padding:0px 20px 10px 20px">Code challenges for above module: 1) css-only typing effect for code (thanks to: <a href="https://codepen.io/t_afif/pen/ExXyXpB" class="ts strgtxt5">https://codepen.io/t_afif/pen/ExXyXpB</a>), 2) background text child element w/higher stacking order than parent so that background text are clickable links (done w/css animation keyframes where parent z-index is temporarily reduced to 1). <a href="https://github.com/cssninja/view_source/blob/main/pionezero_view.html?plain=1#L115" style="color: #fffef2 !important" class="strgtxt5">[ View code (line 115-278) ]</a></div>
+                    <!-- pseudo-element placement of text -->
+                    <div class="typcon2" style="display:none"></div>
+
+                    <!-- bg placement of text -->
+                    <div class="typcon3" style="background-color:#353636;border-radius:0px;display:flex;align-items:center;justify-content:center;">
+                        <div class="idetxt2 content_bg2">
+                          <!-- <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
+                          <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br /> -->
+                          <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:11em;padding:15px"></i><br />
+                          Powered by Github Desktop with much love</a>
+                        </div>
+                    </div>
+                    
                   </div>
+                  <!-- / rowc -->
+
+                  <!-- code challenge description -->
+                  <div class='rowc' style="display:non">
+                      <!-- link to lines of code in github, thanks to: https://stackoverflow.com/questions/23821235/how-to-link-to-a-specific-line-number-on-github .. (have to be signed in or public repo) https://github.com/cssninja/pionezero.com/blob/main/index.html?plain=1#L115 .. for source code link, https://css-tricks.com/make-a-view-source-button/ and https://css-tricks.com/make-a-view-source-button/ -->
+                      <div class='columnc' style="width:100%;height:100%;background-color:#292a2a;border-radius:0px">
+                        <div class='content ts' style="font-size:0.85em;height:100%;opacity:0.4;padding:0px 20px 10px 20px">Code challenges for above module: 1) css-only typing effect for code (thanks to: <a href="https://codepen.io/t_afif/pen/ExXyXpB" class="ts strgtxt5">https://codepen.io/t_afif/pen/ExXyXpB</a>), 2) background text child element w/higher stacking order than parent so that background text are clickable links (done w/css animation keyframes where parent z-index is temporarily reduced to 1). <a href="https://github.com/cssninja/view_source/blob/main/pionezero_view.html?plain=1#L115" style="color: #fffef2 !important" class="strgtxt5">[ View code (line 115-278) ]</a></div>
+                      </div>
+                  </div>
+                  <!-- / code challenge description -->
+                  
+                </div>
+                <!-- / wrapc -->
+
               </div>
-              <!-- / code challenge description -->
-              
             </div>
-            <!-- / wrapc -->
+            <!-- / added parent containers from normal modules -->
             <!-- / RIGHT -->
             <!--
                    d88P                d8b                        888    d8b                  
