@@ -1952,7 +1952,10 @@
         .introbg1 {
           color: #c9c6c6 !important;
           background: #3f3f3f;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #c9c6c6 !important;
           -webkit-text-fill-color: #c9c6c6 !important;
@@ -1964,61 +1967,76 @@
         .introbg2 {
           color: #98adf9 !important;
           background: #2e469d;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #98adf9 !important;
           -webkit-text-fill-color: #98adf9 !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 9000 !important;
+          z-index: 9000 !important
         }
         /* MAGENTA 1 .. design */
         .introbg3 {
           color: #f6aaf5 !important;
           background: #961794;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #f6aaf5 !important;
           -webkit-text-fill-color: #f6aaf5 !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 8000 !important;
+          z-index: 8000 !important
         }
         /* PURPLE .. code */
         .introbg4 {
           color: #d99af9 !important; /* af4fe0 */
           background: #562876;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #d99af9 !important;
           -webkit-text-fill-color: #d99af9 !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 7000 !important;
+          z-index: 7000 !important
         }
         /* TURQUOISE .. jamstack */
         .introbg5 {
           color: #10587d !important;
           background: #4bb8f1;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #10587d !important;
           -webkit-text-fill-color: #10587d !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 6000 !important;
+          z-index: 6000 !important
         }
         /* MAGENTA 2 .. startup */
         .introbg6 {
           color: #f6a7ce !important;
           background: #b51363;
-          padding: 8px 5px 11px 5px !important;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #f6a7ce !important;
           -webkit-text-fill-color: #f6a7ce !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 5000 !important;
+          z-index: 5000 !important
         }
     }
     @media (min-width: 993px) and (max-width: 1249.75px) {
@@ -2032,7 +2050,7 @@
           -webkit-text-fill-color: #c9c6c6 !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 10000 !important;
+          z-index: 10000 !important
         }
         /* BLUE .. ui/ux */
         .introbg2 {
@@ -2044,7 +2062,7 @@
           -webkit-text-fill-color: #98adf9 !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 9000 !important;
+          z-index: 9000 !important
         }
         /* MAGENTA 1 .. design */
         .introbg3 {
@@ -2056,7 +2074,7 @@
           -webkit-text-fill-color: #f6aaf5 !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 8000 !important;
+          z-index: 8000 !important
         }
         /* PURPLE .. code */
         .introbg4 {
@@ -2068,7 +2086,7 @@
           -webkit-text-fill-color: #d99af9 !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 7000 !important;
+          z-index: 7000 !important
         }
         /* TURQUOISE .. jamstack */
         .introbg5 {
@@ -2080,7 +2098,7 @@
           -webkit-text-fill-color: #10587d !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 6000 !important;
+          z-index: 6000 !important
         }
         /* MAGENTA 2 .. startup */
         .introbg6 {
@@ -2092,7 +2110,7 @@
           -webkit-text-fill-color: #f6a7ce !important;
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 5000 !important;
+          z-index: 5000 !important
         }
     }
     @media (min-width: 768px) and (max-width: 992.75px) {
@@ -2108,7 +2126,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 10000 !important;
+          z-index: 10000 !important
         }
         /* BLUE .. ui/ux */
         .introbg2 {
@@ -2121,7 +2139,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 9000 !important;
+          z-index: 9000 !important
         }
         /* MAGENTA 1 .. design */
         .introbg3 {
@@ -2134,7 +2152,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 8000 !important;
+          z-index: 8000 !important
         }
         /* PURPLE .. code */
         .introbg4 {
@@ -2147,7 +2165,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 7000 !important;
+          z-index: 7000 !important
         }
         /* TURQUOISE .. jamstack */
         .introbg5 {
@@ -2160,7 +2178,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 6000 !important;
+          z-index: 6000 !important
         }
         /* MAGENTA 2 .. startup */
         .introbg6 {
@@ -2173,7 +2191,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 5000 !important;
+          z-index: 5000 !important
         }
     }
 
@@ -2190,7 +2208,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 10000 !important;
+          z-index: 10000 !important
         }
         /* BLUE .. ui/ux */
         .introbg2 {
@@ -2203,7 +2221,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 9000 !important;
+          z-index: 9000 !important
         }
         /* MAGENTA 1 .. design */
         .introbg3 {
@@ -2216,7 +2234,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 8000 !important;
+          z-index: 8000 !important
         }
         /* PURPLE .. code */
         .introbg4 {
@@ -2229,7 +2247,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 7000 !important;
+          z-index: 7000 !important
         }
         /* TURQUOISE .. jamstack */
         .introbg5 {
@@ -2242,7 +2260,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 6000 !important;
+          z-index: 6000 !important
         }
         /* MAGENTA 2 .. startup */
         .introbg6 {
@@ -2255,7 +2273,7 @@
           /* display: inline-block !important; */
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
-          z-index: 5000 !important;
+          z-index: 5000 !important
         }
     }
 
