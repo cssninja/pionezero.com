@@ -1946,55 +1946,317 @@
         font-family: 'Ubuntu', sans-serif;
         line-height: clamp(2rem, 10vw, 3.5rem)
     }
-    /* GRAYSCALE .. ui/ux designer */
-    .introbg1 {
-      color: #c9c6c6 !important;
-      background: #3f3f3f;
-      padding: 8px 5px 11px 5px !important;
-      border: 0;
-      -webkit-text-stroke: 1.5px #c9c6c6 !important;
-      -webkit-text-fill-color: #c9c6c6 !important;
-      line-height: clamp(2rem, 10vw, 4.7rem)
+    /* line-height breaks at 1250px */
+    @media (min-width: 1250px) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 10000 !important;
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 9000 !important;
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 8000 !important;
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 7000 !important;
+        }
+        /* TURQUOISE .. jamstack */
+        .introbg5 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 6000 !important;
+        }
+        /* MAGENTA 2 .. startup */
+        .introbg6 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 5000 !important;
+        }
     }
-    /* MAGENTA .. design */
-    .introbg2 {
-      color: #f6aaf5 !important;
-      background: #961794;
-      padding: 8px 5px 11px 5px !important;
-      border: 0;
-      -webkit-text-stroke: 1.5px #f6aaf5 !important;
-      -webkit-text-fill-color: #f6aaf5 !important;
-      line-height: clamp(2rem, 10vw, 4.7rem)
+    @media (min-width: 993px) and (max-width: 1249.75px) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 10000 !important;
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 9000 !important;
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 8000 !important;
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 7000 !important;
+        }
+        /* TURQUOISE .. jamstack */
+        .introbg5 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 6000 !important;
+        }
+        /* MAGENTA 2 .. startup */
+        .introbg6 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 8px 5px 11px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 5000 !important;
+        }
     }
-    /* PURPLE .. code */
-    .introbg3 {
-      color: #d99af9 !important; /* af4fe0 */
-      background: #562876;
-      padding: 8px 5px 11px 5px !important;
-      border: 0;
-      -webkit-text-stroke: 1.5px #d99af9 !important;
-      -webkit-text-fill-color: #d99af9 !important;
-      line-height: clamp(2rem, 10vw, 4.7rem)
+    @media (min-width: 768px) and (max-width: 992.75px) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          /* added display, otherwise line-height in mobile wasn't responding .. OR change MIDDLE value in line-heights */
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 10000 !important;
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 9000 !important;
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 8000 !important;
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 7000 !important;
+        }
+        /* TURQUOISE .. jamstack */
+        .introbg5 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 6000 !important;
+        }
+        /* MAGENTA 2 .. startup */
+        .introbg6 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 14px 5px 15px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 5000 !important;
+        }
     }
-    /* BLUE .. jamstack */
-    .introbg4 {
-      color: #98adf9 !important;
-      background: #2e469d;
-      padding: 8px 5px 11px 5px !important;
-      border: 0;
-      -webkit-text-stroke: 1.5px #98adf9 !important;
-      -webkit-text-fill-color: #98adf9 !important;
-      line-height: clamp(2rem, 10vw, 4.7rem)
-    }
-    /* TURQUOISE .. startup */
-    .introbg5 {
-      color: #10587d !important;
-      background: #4bb8f1;
-      padding: 8px 5px 8px 5px !important;
-      border: 0;
-      -webkit-text-stroke: 1.5px #10587d !important;
-      -webkit-text-fill-color: #10587d !important;
-      line-height: clamp(2rem, 10vw, 4.7rem)
+
+    @media (min-width: 300px) and (max-width: 500px) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          /* added display, otherwise line-height in mobile wasn't responding .. OR change MIDDLE value in line-heights */
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 10000 !important;
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 9000 !important;
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 8000 !important;
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 7000 !important;
+        }
+        /* TURQUOISE .. jamstack */
+        .introbg5 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 6000 !important;
+        }
+        /* MAGENTA 2 .. startup */
+        .introbg6 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 3px 5px 6px 5px !important;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 5000 !important;
+        }
     }
 
     </style>
@@ -2218,7 +2480,7 @@
               
             </div>
             <div class="col-10">
-                  <p><span class="introbg1">I am a UI/UX designer with an amazing skillset that includes: </span><span class="introbg2">visual design, graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg3">&nbspfront end development, Bootstrap, HTML, CSS, Javascript, React, Node.js,</span><span class="introbg4">&nbspJamstack, Netlify, Gatsby, Shopify,</span> <span class="introbg5">startups and problem solving.</span>
+                  <p><span class="introbg1">I am a UI/UX designer with an amazing skillset that includes: </span><span class="introbg2">design thinking, information architecture, prototyping, usability testing,</span><span class="introbg3">visual design, graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">&nbspfront end development, Bootstrap, HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">&nbspJamstack, Netlify, Gatsby, Shopify,</span><span class="introbg6">&nbspstartups and problem solving.</span>
             </div>
             <div class="col">
               
