@@ -1935,6 +1935,18 @@
       line-height: 20px
     }
 
+    /* skills intro at top .. font calc() thanks to: https://stackoverflow.com/questions/15649244/responsive-font-size-in-css */
+    .intro {
+        /* border: 0.5rem solid #888888; */
+        /* font-size: 3em; */
+        /* font-size: calc(32px + 1vw); */
+        /* font-size: clamp(2rem, 10vw, 3.5rem); */
+        font-size: min(max(30px, 4vw), 50px);
+        padding: 0px 0px 150px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        line-height: clamp(2rem, 10vw, 3.5rem);
+    }
+
     </style>
 
 </head>
@@ -2139,6 +2151,23 @@
     <section class="mt-3 panelmar" style="background-color:#e1d9e7;padding-top:200px !important">
       <!-- =-=-=-=-=-=-=-=-= container row -->
       <div class="row d-flex justify-content-around">
+
+
+
+
+        <div class="container intro">
+          <div class="row justify-content-md-center">
+            <div class="col">
+              
+            </div>
+            <div class="col-10">
+                  <p>I am a UI/UX designer with an amazing skillset that includes: visual design, graphic design, typography, branding, illustration, Adobe Creative Cloud, print, front end development, Bootstrap, HTML, CSS, Javascript, React, Node.js, Jamstack, Netlify, Gatsby, Shopify, startups and problem solving.
+            </div>
+            <div class="col">
+              
+            </div>
+          </div>
+        </div>
 
             <!--
                                   888                                                        
