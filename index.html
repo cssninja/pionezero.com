@@ -1054,9 +1054,9 @@
     }/* bg color truncation via inline thanks to: https://stackoverflow.com/questions/13817506/background-color-only-around-text */
 
     .titlebg {
-        background: #675077 !important;
+        background: #675077 !important; /* was #675077 #3f3f3f */
         padding: 3px 9px 3px 9px;
-        color: #e1d9e7 !important;
+        color: #e1d9e7!important; /* was #e1d9e7 #c9c6c6 */
         display: inline !important;
     }
     /* backgrounds for task, client, date, process, visual design and front end coding .. can be toggled by switching the 2 */
@@ -1671,8 +1671,7 @@
       font-size: 0.75em;
       opacity: 0.3;
       position: absolute !important;
-      /* white-space: pre-wrap;
-      word-wrap: break-word; */
+      /* word-wrap: break-word; */
       /* max-width: 100px; */ /* use max-width for line break as well */
     }
 
@@ -1950,7 +1949,7 @@
         /* font-size: calc(32px + 1vw); */
         /* font-size: clamp(2rem, 10vw, 3.5rem); */
         font-size: min(max(30px, 4vw), 50px);
-        padding: 0px 0px 150px 0px;
+        padding: 0px 0px 100px 0px;
         font-family: 'Ubuntu', sans-serif;
         line-height: 30px !important; /* CAN SET LINE-HEIGHT TO ZERO for better line-height styles below */
         margin-top: -100px !important;
@@ -2340,6 +2339,38 @@
         }
     }
 
+    /* GRAYSCALE 2 .. second intro */
+    .introbg7 {
+      color: #c2b154 !important;
+      background: #403a1a;
+      padding: 8px 20px 11px 20px !important;
+      /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      border: 0;
+      -webkit-text-stroke: 1.1px #c2b154 !important;
+      -webkit-text-fill-color: #c2b154 !important;
+      line-height: clamp(0rem, 0vw, 0rem);
+      position: relative;
+      z-index: 10000 !important;
+      font-size: 0.6em
+    }
+    /* fun craetion of line break pixel by pixel .. works with display: block but that shows background, so to have NO BACKGROUND use display: inline-block .. '\a0' refers to space, https://stackoverflow.com/questions/50264375/add-a-space-in-css-content, while \A refers to an 'escape sequence, ref: https://stackoverflow.com/questions/17047694/add-line-break-to-after-or-before-pseudo-element-content' */
+    .introbg7::before {
+      content: "";
+      white-space: pre;
+      display: inline-block;
+      margin: 50px 0px 0px 0px
+    }
+    @media (max-width: 1024px) {
+      .introbg7::before {
+      content: "";
+      white-space: pre;
+      display: inline-block;
+      margin: 50px 0px 0px 0px
+      }
+    }
+
     </style>
 
 </head>
@@ -2561,6 +2592,14 @@
             <div class="col"></div>
             <div class="col-10">
                   <p><span class="introbg1">I am a UI/UX designer with an amazing skillset that includes: </span><span class="introbg2">design thinking, information architecture, prototyping, usability testing,</span><span class="introbg3">visual design, graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">&nbspfront end development, Bootstrap, HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">&nbspJamstack, Netlify, Gatsby, Shopify,</span><span class="introbg6">&nbspstartups and problem solving.</span>
+            </div>
+            <div class="col"></div>
+          </div>
+
+          <div class="row justify-content-md-center">
+            <div class="col"></div>
+            <div class="col-10">
+                  <p><span class="introbg7">608-286-9463 | Resume | Executive Summary</span>
             </div>
             <div class="col"></div>
           </div>
