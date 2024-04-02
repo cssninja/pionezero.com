@@ -2018,6 +2018,21 @@
         }
         /* TURQUOISE .. jamstack */
         .introbg5 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 6000 !important
+        }
+        /* MAGENTA 2 .. shopify */
+        .introbg6 {
           color: #10587d !important;
           background: #4bb8f1;
           padding: 8px 20px 11px 20px !important;
@@ -2029,19 +2044,19 @@
           -webkit-text-fill-color: #10587d !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
-          z-index: 6000 !important
+          z-index: 5000 !important
         }
-        /* MAGENTA 2 .. startup */
-        .introbg6 {
-          color: #f6a7ce !important;
-          background: #b51363;
+        /* NEW .. startup */
+        .introbg7 {
+          color: #bd8640 !important;
+          background: #423a30;
           padding: 8px 20px 11px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           border: 0;
-          -webkit-text-stroke: 1.5px #f6a7ce !important;
-          -webkit-text-fill-color: #f6a7ce !important;
+          -webkit-text-stroke: 1.5px #bd8640 !important;
+          -webkit-text-fill-color: #bd8640 !important;
           line-height: clamp(2rem, 10vw, 4.7rem);
           position: relative;
           z-index: 5000 !important
@@ -2340,30 +2355,30 @@
     }
 
     /* GRAYSCALE 2 .. second intro */
-    .introbg7 {
-      color: #c2b154 !important;
-      background: #403a1a;
+    .introbg8 {
+      color: #c9c6c6 !important;
+      background: #3f3f3f;
       padding: 8px 20px 11px 20px !important;
       /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
       border: 0;
-      -webkit-text-stroke: 1.1px #c2b154 !important;
-      -webkit-text-fill-color: #c2b154 !important;
+      -webkit-text-stroke: 1.1px #c9c6c6 !important;
+      -webkit-text-fill-color: #c9c6c6 !important;
       line-height: clamp(0rem, 0vw, 0rem);
       position: relative;
       z-index: 10000 !important;
       font-size: 0.6em
     }
     /* fun craetion of line break pixel by pixel .. works with display: block but that shows background, so to have NO BACKGROUND use display: inline-block .. '\a0' refers to space, https://stackoverflow.com/questions/50264375/add-a-space-in-css-content, while \A refers to an 'escape sequence, ref: https://stackoverflow.com/questions/17047694/add-line-break-to-after-or-before-pseudo-element-content' */
-    .introbg7::before {
+    .introbg8::before {
       content: "";
       white-space: pre;
       display: inline-block;
-      margin: 50px 0px 0px 0px
+      margin: 150px 0px 0px 0px
     }
     @media (max-width: 1024px) {
-      .introbg7::before {
+      .introbg8::before {
       content: "";
       white-space: pre;
       display: inline-block;
@@ -2591,7 +2606,7 @@
           <div class="row justify-content-md-center">
             <div class="col"></div>
             <div class="col-10">
-                  <p><span class="introbg1">I am a highly skilled designer and developer with expertise in </span><span class="introbg2">UI/UX design: information architecture, wireframes, design thinking, prototyping, usability testing,</span><span class="introbg3">visual design: graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">&nbspfront end development: HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">&nbspJamstack: Netlify, Gatsby, Strapi, OneGraph,</span><span class="introbg1">ecommerce: Shopify,</span><span class="introbg6">&nbspstartups and problem solving.</span>
+                  <p><span class="introbg1">I am a highly skilled designer and developer with expertise in </span><span class="introbg2">UI/UX design: information architecture, wireframes, design thinking, prototyping, usability testing,</span><span class="introbg3">visual design: graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">&nbspfront end development: HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">&nbspJamstack: Netlify, Gatsby, Strapi, OneGraph,</span><span class="introbg6">ecommerce: Shopify,</span><span class="introbg7">&nbspstartups and problem solving.</span>
             </div>
             <div class="col"></div>
           </div>
@@ -2599,7 +2614,7 @@
           <div class="row justify-content-md-center">
             <div class="col"></div>
             <div class="col-10">
-                  <p><span class="introbg7">608-286-9463 | Resume | Executive Summary</span>
+                  <p><span class="introbg8">608-286-9463 | Resume | Executive Summary</span>
             </div>
             <div class="col"></div>
           </div>
