@@ -295,16 +295,20 @@
         background: #3a204c;
         padding: 6px;
         border: 0;
-    }/* auto-type cursor .. manually imported from style.css */
+        /* -webkit-text-stroke: 1.5px #d489fa !important;
+        -webkit-text-fill-color:  !important */
+    }
 
+    /* auto-type cursor .. manually imported from style.css */
     .cd-headline.big-clip .cd-words-wrapper::after {
         background-color: #e1d9e7 !important;
     }
 
     .clip-dark.cd-headline.big-clip .cd-words-wrapper::after {
         background-color: #e1d9e7 !important;
-    }/* reduces auto-type size for small mobile */
+    }
 
+    /* reduces auto-type size for small mobile */
     @media (max-width: 420px) {
         .getsmall {
             font-size: 0.8em !important;
@@ -316,8 +320,9 @@
             font-size: 0.55em !important;
             margin-bottom: 20px !important;
         }
-    }/* wavify margin just above 'panels and such' */
+    }
 
+    /* wavify margin just above 'panels and such' */
     .wavebot {
         top: 100px !important;
     }
@@ -326,14 +331,16 @@
         .wavebot {
             top: 100px !important;
         }
-    }/* fill mobile vertically with the rocket (under tablet size) */
+    }
 
+    /* fill mobile vertically with the rocket (under tablet size) */
     @media (max-width: 767.98px) {
         .staybig {
             height: 550px !important;
         }
-    }/* footer font size increase and color .. manually imported from style.css */
+    }
 
+    /* footer font size increase and color .. manually imported from style.css */
     .footer {
         font-size: 0.98rem !important;
         color: #e1d9e7 !important;
@@ -348,8 +355,9 @@
     .footer a:hover {
         color: #e1d9e7 !important;
         text-decoration: none;
-    }/* background for 'helpful links' (not used) */
+    }
 
+    /* background for 'helpful links' (not used) */
     .linkbg {
         background: #e1d9e7;
         padding: 4px;
@@ -2371,7 +2379,7 @@
                 <span class='hamburger-inner'>
                     <span class='hamburger-icon'></span>
                 </span>
-                <ul style="z-index:2002 !important;top:250px !important;">
+                <ul style="z-index:11000 !important;top:250px !important;">
 
                     <!-- main links -->
                     <li class="linksp">
@@ -2548,7 +2556,7 @@
         888 888  888  "Y888 888     "Y88P" 
         -->
         <!-- disabled class container below .. put back in for more space on left anbd right -->
-        <div class="containe intro">
+        <div class="containe intro" style="z-index:1 !important">
           <div class="row justify-content-md-center">
             <div class="col"></div>
             <div class="col-10">
