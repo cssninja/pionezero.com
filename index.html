@@ -2772,6 +2772,15 @@
         }
     }
 
+    /* link styles for contact info .. thanks to: https://stackoverflow.com/questions/7291873/disable-color-change-of-anchor-tag-when-visited */
+    @media (min-width: 300px) {
+      .introbg8 a:link, .introbg8 a:active, .introbg8 a:visited .introbg8 a:hover {
+        color: #867aac !important;
+        -webkit-text-stroke: 1.5px #867aac !important;
+        -webkit-text-fill-color: #867aac !important;
+      }
+    }
+
     /* GRAYSCALE 2 .. second intro with contact info */
     .introbg9 {
       color: #c9c6c6 !important;
