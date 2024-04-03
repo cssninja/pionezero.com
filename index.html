@@ -185,8 +185,9 @@
     .type {
       color:#0000; /* this isn't a color, it's for monospace font, more here: https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3 .. background layers color the text and create the blinking caret .. thanks to: https://stackoverflow.com/questions/41828017/how-to-make-a-typewritter-text-effect-to-loop-using-css for infinite loop .. thanks to: https://stackoverflow.com/questions/13887889/css-animation-delay-in-repeating for animation delay .. thanks to: https://css-tricks.com/css-keyframe-animation-delay-iterations/ AND https://css-tricks.com/a-new-way-to-delay-keyframes-animations/ AND https://lists.w3.org/Archives/Public/www-style/2011May/0549.html for DELAY BETWEEN ITERATIONS, EXACTLY WHAT YOU WANT .. query: css animation iteration delay keyframe .. can also try to ANIMATE DISPLAY, OPACITY etc with transition, transform .. HAVE ANOTHER ANIMATION TO HIDE DIV CONTAINER */
       background:
-      linear-gradient(-90deg,#dcd4e2 5px,#0000 0) 10px 0,
-      linear-gradient(#fffef2 0 0) 0 0;
+      /* first color is cursor color, second color is typed text color */
+      linear-gradient(-90deg,#fad4a3 5px,#0000 0) 10px 0,
+      linear-gradient(#e49a3b 0 0) 0 0;
       background-size:calc(var(--n)*1ch) 200%;
       -webkit-background-clip:padding-box,text;
       background-clip:padding-box,text;
@@ -3454,8 +3455,8 @@
 
               <div class='rowc'>
 
-                <!-- keyframe powered typed text content -->
-                <div class="typcon" style="background-color:#353636;border-radius:0px">
+                <!-- keyframe powered typed text content bg > orig #353636, #423a30 -->
+                <div class="typcon" style="background-color:#2a2928;border-radius:0px">
                     <span class="type" style="--n:800">
                     <span class="linen">1</span>&nbsp.type {<br />
                     <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
