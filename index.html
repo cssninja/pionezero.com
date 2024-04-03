@@ -2061,7 +2061,7 @@
           position: relative;
           z-index: 4000 !important
         }
-        /* IDE type animation color .. contact info */
+        /* pi10 color .. contact info */
         .introbg8 {
           color: #867aac !important;
           background: #574d79;
@@ -2183,7 +2183,7 @@
           position: relative;
           z-index: 4000 !important
         }
-        /* IDE type animation color .. contact info */
+        /* pi10 color .. contact info */
         .introbg8 {
           color: #867aac !important;
           background: #574d79;
@@ -2312,7 +2312,7 @@
           position: relative;
           z-index: 4000 !important
         }
-        /* IDE type animation color .. contact info */
+        /* pi10 color .. contact info */
         .introbg8 {
           color: #867aac !important;
           background: #574d79;
@@ -2533,7 +2533,7 @@
           display: block; /* inline-block creates no vertical space, but then have to use margins */
           margin: 0px 0px 0px 0px
         }
-        /* IDE type animation color .. contact info */
+        /* pi10 color .. contact info */
         .introbg8 {
           color: #867aac !important;
           background: #574d79;
@@ -2755,7 +2755,7 @@
           display: block; /* inline-block creates no vertical space, but then have to use margins */
           margin: 0px 0px 0px 0px
         }
-        /* IDE type animation color .. contact info */
+        /* pi10 color .. contact info */
         .introbg8 {
           color: #867aac !important;
           background: #574d79;
@@ -2767,6 +2767,137 @@
           -webkit-text-stroke: 1.5px #867aac !important;
           -webkit-text-fill-color: #867aac !important;
           line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 3000 !important
+        }
+    }
+
+    /* LANDSCAPE ORIENTATION FOR ALL DEVICES .. used dev tools to get range of viewports pixels from iphone SE to ipad pro, 667px to 1386px */
+        @media (min-width: 600px) and (max-width: 1400px) and (orientation:landscape) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          /* added display, otherwise line-height in mobile wasn't responding .. OR change MIDDLE value in line-heights */
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 10000 !important
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 9000 !important
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 8000 !important
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 7000 !important
+        }
+        /* MAGENTA 2 .. jamstack */
+        .introbg5 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 6000 !important
+        }
+        /* TURQUOISE .. shopify */
+        .introbg6 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 5000 !important
+        }
+        /* BROWN-ORANGE .. startup */
+        .introbg7 {
+          color: #bd8640 !important;
+          background: #423a30;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #bd8640 !important;
+          -webkit-text-fill-color: #bd8640 !important;
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 4000 !important
+        }
+        /* pi10 color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 3000 !important
         }
