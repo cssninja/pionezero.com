@@ -2061,6 +2061,21 @@
           position: relative;
           z-index: 4000 !important
         }
+        /* IDE type animation color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 10vw, 4.7rem);
+          position: relative;
+          z-index: 3000 !important
+        }
     }
     @media (min-width: 993px) and (max-width: 1249.75px) {
         /* GRAYSCALE .. intro */
@@ -2168,13 +2183,28 @@
           position: relative;
           z-index: 4000 !important
         }
+        /* IDE type animation color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 8px 20px 11px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 3000 !important
+        }
     }
     @media (min-width: 768px) and (max-width: 992.75px) {
         /* GRAYSCALE .. intro */
         .introbg1 {
           color: #c9c6c6 !important;
           background: #3f3f3f;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2183,7 +2213,7 @@
           -webkit-text-fill-color: #c9c6c6 !important;
           /* added display, otherwise line-height in mobile wasn't responding .. OR change MIDDLE value in line-heights */
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 10000 !important
         }
@@ -2191,7 +2221,7 @@
         .introbg2 {
           color: #98adf9 !important;
           background: #2e469d;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2199,7 +2229,7 @@
           -webkit-text-stroke: 1.5px #98adf9 !important;
           -webkit-text-fill-color: #98adf9 !important;
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 9000 !important
         }
@@ -2207,7 +2237,7 @@
         .introbg3 {
           color: #f6aaf5 !important;
           background: #961794;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2215,7 +2245,7 @@
           -webkit-text-stroke: 1.5px #f6aaf5 !important;
           -webkit-text-fill-color: #f6aaf5 !important;
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 8000 !important
         }
@@ -2223,7 +2253,7 @@
         .introbg4 {
           color: #d99af9 !important; /* af4fe0 */
           background: #562876;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2231,7 +2261,7 @@
           -webkit-text-stroke: 1.5px #d99af9 !important;
           -webkit-text-fill-color: #d99af9 !important;
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 7000 !important
         }
@@ -2239,7 +2269,7 @@
         .introbg5 {
           color: #f6a7ce !important;
           background: #b51363;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2247,7 +2277,7 @@
           -webkit-text-stroke: 1.5px #f6a7ce !important;
           -webkit-text-fill-color: #f6a7ce !important;
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 6000 !important
         }
@@ -2255,7 +2285,7 @@
         .introbg6 {
           color: #10587d !important;
           background: #4bb8f1;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2263,7 +2293,7 @@
           -webkit-text-stroke: 1.5px #10587d !important;
           -webkit-text-fill-color: #10587d !important;
           /* display: inline-block !important; */
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 5000 !important
         }
@@ -2271,25 +2301,40 @@
         .introbg7 {
           color: #bd8640 !important;
           background: #423a30;
-          padding: 14px 20px 15px 20px !important;
+          padding: 7px 20px 7px 20px !important;
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           border: 0;
           -webkit-text-stroke: 1.5px #bd8640 !important;
           -webkit-text-fill-color: #bd8640 !important;
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 10vw, 3rem);
           position: relative;
           z-index: 4000 !important
         }
+        /* IDE type animation color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 7px 20px 7px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 10vw, 3rem);
+          position: relative;
+          z-index: 3000 !important
+        }
     }
-
-    @media (min-width: 300px) and (max-width: 500px) {
+    /* to remove pseudo element breaks, disable classes and restore left and right padding .. and fix spacing with UX writing */
+    @media (min-width: 412px) and (max-width: 428px) {
         /* GRAYSCALE .. intro */
         .introbg1 {
           color: #c9c6c6 !important;
           background: #3f3f3f;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2302,11 +2347,24 @@
           position: relative;
           z-index: 10000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg1dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        .introbg1dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
         /* BLUE .. ui/ux */
         .introbg2 {
           color: #98adf9 !important;
           background: #2e469d;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2318,11 +2376,24 @@
           position: relative;
           z-index: 9000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg2dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg2dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
         /* MAGENTA 1 .. design */
         .introbg3 {
           color: #f6aaf5 !important;
           background: #961794;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2334,11 +2405,24 @@
           position: relative;
           z-index: 8000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg3dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg3dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
         /* PURPLE .. code */
         .introbg4 {
           color: #d99af9 !important; /* af4fe0 */
           background: #562876;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2350,11 +2434,24 @@
           position: relative;
           z-index: 7000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg4dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg4dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
         /* MAGENTA 2 .. jamstack */
         .introbg5 {
           color: #f6a7ce !important;
           background: #b51363;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2366,11 +2463,24 @@
           position: relative;
           z-index: 6000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg5dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg5dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
         /* TURQUOISE .. shopify */
         .introbg6 {
           color: #10587d !important;
           background: #4bb8f1;
-          padding: 3px 20px 6px 20px !important;
+          padding: 5px 20px 3px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
           /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
@@ -2381,6 +2491,241 @@
           line-height: clamp(2rem, 10vw, 4rem);
           position: relative;
           z-index: 5000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg6dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg6dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* BROWN-ORANGE .. startup */
+        .introbg7 {
+          color: #bd8640 !important;
+          background: #423a30;
+          padding: 5px 20px 3px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #bd8640 !important;
+          -webkit-text-fill-color: #bd8640 !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 4000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg7dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg7dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* IDE type animation color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 5px 20px 3px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 10vw, 4rem);
+          position: relative;
+          z-index: 3000 !important
+        }
+    }
+
+    /* to remove pseudo element breaks, disable classes and restore left and right padding .. and fix spacing with UX writing */
+    @media (min-width: 300px) and (max-width: 411.75px) {
+        /* GRAYSCALE .. intro */
+        .introbg1 {
+          color: #c9c6c6 !important;
+          background: #3f3f3f;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #c9c6c6 !important;
+          -webkit-text-fill-color: #c9c6c6 !important;
+          /* added display, otherwise line-height in mobile wasn't responding .. OR change MIDDLE value in line-heights */
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 10000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg1dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        .introbg1dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* BLUE .. ui/ux */
+        .introbg2 {
+          color: #98adf9 !important;
+          background: #2e469d;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #98adf9 !important;
+          -webkit-text-fill-color: #98adf9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 9000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg2dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg2dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* MAGENTA 1 .. design */
+        .introbg3 {
+          color: #f6aaf5 !important;
+          background: #961794;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6aaf5 !important;
+          -webkit-text-fill-color: #f6aaf5 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 8000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg3dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg3dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* PURPLE .. code */
+        .introbg4 {
+          color: #d99af9 !important; /* af4fe0 */
+          background: #562876;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #d99af9 !important;
+          -webkit-text-fill-color: #d99af9 !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 7000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg4dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg4dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* MAGENTA 2 .. jamstack */
+        .introbg5 {
+          color: #f6a7ce !important;
+          background: #b51363;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #f6a7ce !important;
+          -webkit-text-fill-color: #f6a7ce !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 6000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg5dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg5dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* TURQUOISE .. shopify */
+        .introbg6 {
+          color: #10587d !important;
+          background: #4bb8f1;
+          padding: 3px 20px 6px 20px !important; /* was padding: 3px 20px 6px 20px !important but using pseudo element for breaks */
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #10587d !important;
+          -webkit-text-fill-color: #10587d !important;
+          /* display: inline-block !important; */
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 5000 !important
+        }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg6dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg6dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
         }
         /* BROWN-ORANGE .. startup */
         .introbg7 {
@@ -2393,14 +2738,42 @@
           border: 0;
           -webkit-text-stroke: 1.5px #bd8640 !important;
           -webkit-text-fill-color: #bd8640 !important;
-          line-height: clamp(2rem, 10vw, 4rem);
+          line-height: clamp(2rem, 11vw, 4rem);
           position: relative;
           z-index: 4000 !important
         }
+        /* DISABLED class by adding 'dis' to end of class */
+        .introbg7dis::before {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: -67px 0px 0px 0px
+        }
+        .introbg7dis::after {
+          content: "\A";
+          white-space: pre;
+          display: block; /* inline-block creates no vertical space, but then have to use margins */
+          margin: 0px 0px 0px 0px
+        }
+        /* IDE type animation color .. contact info */
+        .introbg8 {
+          color: #867aac !important;
+          background: #574d79;
+          padding: 3px 20px 6px 20px !important;
+          /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          border: 0;
+          -webkit-text-stroke: 1.5px #867aac !important;
+          -webkit-text-fill-color: #867aac !important;
+          line-height: clamp(2rem, 11vw, 4rem);
+          position: relative;
+          z-index: 3000 !important
+        }
     }
 
-    /* GRAYSCALE 2 .. second intro */
-    .introbg8 {
+    /* GRAYSCALE 2 .. second intro with contact info */
+    .introbg9 {
       color: #c9c6c6 !important;
       background: #3f3f3f;
       padding: 8px 20px 11px 20px !important;
@@ -2416,14 +2789,14 @@
       font-size: 0.6em
     }
     /* fun craetion of line break pixel by pixel .. works with display: block but that shows background, so to have NO BACKGROUND use display: inline-block .. '\a0' refers to space, https://stackoverflow.com/questions/50264375/add-a-space-in-css-content, while \A refers to an 'escape sequence, ref: https://stackoverflow.com/questions/17047694/add-line-break-to-after-or-before-pseudo-element-content' */
-    .introbg8::before {
+    .introbg9::before {
       content: "";
       white-space: pre;
       display: inline-block;
       margin: 150px 0px 0px 0px
     }
     @media (max-width: 1024px) {
-      .introbg8::before {
+      .introbg9::before {
       content: "";
       white-space: pre;
       display: inline-block;
@@ -2651,15 +3024,15 @@
           <div class="row justify-content-md-center">
             <div class="col"></div>
             <div class="col-10">
-                  <p><span class="introbg1">I am a highly skilled designer and developer with expertise in </span><span class="introbg2">UI/UX design: information architecture, wireframes, design thinking, prototyping, usability testing,</span><span class="introbg3">visual design: graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">&nbspfront end development: HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">&nbspJamstack: Netlify, Gatsby, Strapi, OneGraph,</span><span class="introbg6">ecommerce: Shopify,</span><span class="introbg7">&nbspstartups and problem solving.</span>
+                  <p><span class="introbg1">I am a highly skilled designer and developer with expertise in </span><span class="introbg2">UI/UX design: information architecture, wireframes, design thinking, prototyping, usability testing,</span><span class="introbg3">visual design: graphic design, typography, branding, illustration, Adobe Creative Cloud, print,</span><span class="introbg4">front end development: HTML, CSS, Javascript, React, Node.js,</span><span class="introbg5">API-based decoupled CMS: Jamstack, (Netlify, Gatsby, Strapi, OneGraph),</span><span class="introbg6">e-commerce: Shopify (incl. Tiktok, Facebook, Instagram, Youtube, SEO)</span><span class="introbg7">startup community.</span><span class="introbg8"><a href="https://pionezero.com/marcus_grant_res.pdf" class="boom cbutton cbutton--effect-novak">Resume</a> | <a href="https://pionezero.com/marcus_grant_cover.pdf" class="boom cbutton cbutton--effect-novak">Executive Summary</a> | <a href="tel:6082869463" class="boom cbutton cbutton--effect-novak">608-286-9463</a></span>
             </div>
             <div class="col"></div>
           </div>
 
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-md-center" style="display:none">
             <div class="col"></div>
             <div class="col-10">
-                  <p><span class="introbg8"><a href="tel:6082869463" class="boom cbutton cbutton--effect-novak">608-286-9463</a> | <a href="https://pionezero.com/marcus_grant_res.pdf" class="boom cbutton cbutton--effect-novak">Resume</a> | <a href="https://pionezero.com/marcus_grant_cover.pdf" class="boom cbutton cbutton--effect-novak">Executive Summary</a></span>
+                  <p><span class="introbg9"><a href="tel:6082869463" class="boom cbutton cbutton--effect-novak">608-286-9463</a> | <a href="https://pionezero.com/marcus_grant_res.pdf" class="boom cbutton cbutton--effect-novak">Resume</a> | <a href="https://pionezero.com/marcus_grant_cover.pdf" class="boom cbutton cbutton--effect-novak">Executive Summary</a></span>
             </div>
             <div class="col"></div>
           </div>
