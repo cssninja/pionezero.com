@@ -219,6 +219,17 @@
       50% {background-position:0 -100%,0 0}
     }
 
+    /* code animation .. chrome only .. iphone se issue (using class already in place for galaxy fold) .. ORDER COUNTES WITH PROPERTY ORDER */
+    @media (min-width: 360px) and (max-width: 376px) {
+      .galfold2 { 
+        /* zoom: 3 !important; */
+        transform: scale(0.9) !important;
+        -webkit-transform: scale(0.9) !important;
+        transform-origin: 200px 0px !important; /* x,y */
+        -webkit-transform-origin: 200px 0px !important;
+      }
+    }
+
     /* background block text, but almost impossible to make it clickable with a stacking order higher than parent, ref: https://stackoverflow.com/questions/16057361/how-to-make-child-element-higher-z-index-than-parent .. maybe js */
     .idetxt {
       font-size:4em;
@@ -251,7 +262,6 @@
     .idetxt2 a:hover {
       color: #4bb8f1 !important;
     }
-
 
     /* technically this places the first child of .rowc, which is .typcon, lower in the z-index stacking order */
     /* .rowc div:first-child {
@@ -2819,7 +2829,7 @@
           transform: scale(0.9);
           -moz-transform: scale(0.95);
           transform-origin: 565px 0px; /* x,y */
-          -moz-transform-origin: 300px 30px;
+          -moz-transform-origin: 300px 25px;
           min-width: 140vw !important;
           margin: 0px 0px 0px 74px !important;
         }
@@ -3793,7 +3803,7 @@
               <div class='rowc'>
 
                 <!-- keyframe powered typed text content bg > orig #353636, #423a30 -->
-                <div class="typcon galfold_type" style="background-color:#2a2928;border-radius:0px">
+                <div class="typcon" style="background-color:#2a2928;border-radius:0px">
                     <span class="type" style="--n:800">
                     <span class="linen">1</span>&nbsp.type {<br />
                     <span class="linen">2</span>&nbsp&nbsp color:#0000;<br />
@@ -3824,7 +3834,7 @@
 
                 <!-- bg placement of text -->
                 <div class="typcon3" style="background-color:#353636;border-radius:0px;display:flex;align-items:center;justify-content:center;">
-                    <div class="idetxt2 content_bg2 galfold_fa">
+                    <div class="idetxt2 content_bg2">
                       <!-- <a href="https://codepen.io/fullstackninja/pens/public">Codepen</a><br />
                       <a href="https://stackblitz.com/@cssninja">Stackblitz</a><br /> -->
                       <a style="color:#585b5d !important" href="https://desktop.github.com/"><i class="fa-brands fa-github" style="font-size:11em;padding:15px"></i><br />
