@@ -2790,6 +2790,23 @@
         min-width: 142.5vw;
       }
     }
+    /* firefox only .. as of 2020 developer said @supports (-moz-appearance:none) WORKS (as did chatGPT, ref: https://chat.openai.com/share/62c1b2d7-275b-472f-a75f-39135c553dad), ref: https://stackoverflow.com/questions/3123063/what-does-moz-document-url-prefix-do */
+    @supports (-moz-appearance:none) {
+        @media only screen and (min-width: 279px) and (max-width: 281px) {
+          .intro {
+            /* border: 0.5rem solid #888888; */
+            /* font-size: 3em; */
+            /* font-size: calc(32px + 1vw); */
+            /* font-size: clamp(2rem, 10vw, 3.5rem); */
+            font-size: min(max(30px, 4vw), 50px);
+            padding: 0px 0px 100px 0px;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 30px !important; /* CAN SET LINE-HEIGHT TO ZERO for better line-height styles below */
+            margin: -75px 0px 0px 70px !important;
+            min-width: 142.5vw;
+          }
+        }
+      }
     /* entire content container */
     @media (min-width: 279px) and (max-width: 281px) {
       .galfold { 
@@ -2801,7 +2818,7 @@
         margin-bottom: -670vh !important /* scale() SHRINKS SPACE so have to adjust */
       }
     }
-    /* code animation .. chrome only .. ORDER COUNTES WITH PROPERTY ORDER */
+    /* code animation .. chrome only (if firefox exclusion works below) .. ORDER COUNTES WITH PROPERTY ORDER */
     @media (min-width: 279px) and (max-width: 281px) {
       .galfold2 { 
         /* zoom: 3 !important; */
@@ -2817,11 +2834,11 @@
         .galfold2 { 
           /* zoom: 3 !important; */
           transform: scale(0.9);
-          -moz-transform: scale(0.95);
+          -moz-transform: scale(0.9);
           transform-origin: 565px 0px; /* x,y */
-          -moz-transform-origin: 300px 25px;
-          min-width: 140vw !important;
-          margin: 0px 0px 0px 74px !important;
+          -moz-transform-origin: 308px 35px;
+          min-width: 148vw !important;
+          margin: 0px 0px 0px 65px !important
         }
       }
     }
@@ -2971,6 +2988,22 @@
           position: relative;
           z-index: 3000 !important
         }
+    }
+
+    /* RANDOM TWEAKS USING .galfold2, etc CLASSES ALREADY IN PLACE bcs tehy worked well */
+    /* iphoneSE ONLY (375px), samsung galaxy s8+ (360px) in chromium (chrome, brave) .. chrome only (2022) thanks to: https://stackoverflow.com/questions/9328832/how-to-apply-specific-css-rules-to-chrome-only */
+    /* code animation .. chromium only (chrome, brave) */
+    @supports (not (-moz-appearance:button)) and (contain:paint) and (-webkit-appearance:none) {
+      @media (min-width: 360px) and (max-width: 376px) {
+        .galfold2 { 
+          /* zoom: 3 !important; */
+          transform: scale(0.8);
+          transform-origin: 0px 0px; /* x,y */
+          min-width: 128vw !important;
+          margin: 0px 0px 0px 0px !important;
+          /* display: none; */
+        }
+      }
     }
 
     /* LANDSCAPE ORIENTATION FOR ALL NON-TABLET DEVICES .. used dev tools to get range of viewports pixels from iphone SE to ipad pro, 667px to 926px */
