@@ -219,17 +219,6 @@
       50% {background-position:0 -100%,0 0}
     }
 
-    /* code animation .. chrome only .. iphone se issue (using class already in place for galaxy fold) .. ORDER COUNTES WITH PROPERTY ORDER */
-    @media (min-width: 360px) and (max-width: 376px) {
-      .galfold2 { 
-        /* zoom: 3 !important; */
-        transform: scale(0.9) !important;
-        -webkit-transform: scale(0.9) !important;
-        transform-origin: 200px 0px !important; /* x,y */
-        -webkit-transform-origin: 200px 0px !important;
-      }
-    }
-
     /* background block text, but almost impossible to make it clickable with a stacking order higher than parent, ref: https://stackoverflow.com/questions/16057361/how-to-make-child-element-higher-z-index-than-parent .. maybe js */
     .idetxt {
       font-size:4em;
@@ -262,6 +251,7 @@
     .idetxt2 a:hover {
       color: #4bb8f1 !important;
     }
+
 
     /* technically this places the first child of .rowc, which is .typcon, lower in the z-index stacking order */
     /* .rowc div:first-child {
@@ -2796,7 +2786,7 @@
         padding: 0px 0px 100px 0px;
         font-family: 'Ubuntu', sans-serif;
         line-height: 30px !important; /* CAN SET LINE-HEIGHT TO ZERO for better line-height styles below */
-        margin: -75px 0px 0px 67px !important;
+        margin: -75px 0px 0px -20px !important;
         min-width: 142.5vw;
       }
     }
@@ -2817,8 +2807,8 @@
         /* zoom: 3 !important; */
         transform: scale(0.9);
         -webkit-transform: scale(0.9);
-        transform-origin: 565px 0px; /* x,y */
-        -webkit-transform-origin: 565px 0px;
+        transform-origin: 0px 0px; /* x,y */
+        -webkit-transform-origin: 0px 0px;
       }
     }
     /* code animation .. firefox only */
