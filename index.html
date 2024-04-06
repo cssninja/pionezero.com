@@ -2991,15 +2991,15 @@
     }
 
     /* RANDOM TWEAKS USING .galfold2, etc CLASSES ALREADY IN PLACE bcs tehy worked well */
-    /* iphoneSE ONLY (375px), samsung galaxy s8+ (360px) in chromium (chrome, brave) .. chrome only (2022) thanks to: https://stackoverflow.com/questions/9328832/how-to-apply-specific-css-rules-to-chrome-only */
+    /* iphoneSE ONLY (375px), samsung galaxy s8+ (360px), iphone 12 pro (390px) in chromium (chrome, brave) .. chrome only (2022) thanks to: https://stackoverflow.com/questions/9328832/how-to-apply-specific-css-rules-to-chrome-only */
     /* code animation .. chromium only (chrome, brave) */
     @supports (not (-moz-appearance:button)) and (contain:paint) and (-webkit-appearance:none) {
-      @media (min-width: 360px) and (max-width: 376px) {
+      @media (min-width: 360px) and (max-width: 390px) {
         .galfold2 { 
           /* zoom: 3 !important; */
           transform: scale(0.8);
           transform-origin: 0px 0px; /* x,y */
-          min-width: 128vw !important;
+          min-width: 128.2vw !important;
           margin: 0px 0px 0px 0px !important;
           /* display: none; */
         }
