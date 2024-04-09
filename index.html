@@ -1711,7 +1711,7 @@
       font-family: verdana;
       font-weight: 900;
       display: block !important;
-      margin: 5px 0px 0px 0px;
+      margin: 7px 0px 0px 0px;
       line-height: 30px;
       -webkit-text-stroke: 0.4px #696b6e;
       -webkit-text-fill-color: #696b6e;
@@ -1720,6 +1720,13 @@
       opacity: 0.3;
       position: relative !important;
       max-height: 45px
+    }
+    /* line break via pseudo element */
+    .porticonz4_bk::before {
+      content: "";
+      white-space: pre;
+      display: block;
+      margin: 25px 0px 0px 0px !important
     }
 
     .msgtxt {
@@ -3778,6 +3785,7 @@
                   <p><span class="introbg9" style="color:#c9c6c6 !important"><a href="tel:6082869463" class="boom cbutton cbutton--effect-novak">608-286-9463</a> | <a href="https://pionezero.com/marcus_grant_res.pdf" class="boom cbutton cbutton--effect-novak">Resume</a> | <a href="https://pionezero.com/marcus_grant_cover.pdf" class="boom cbutton cbutton--effect-novak">Executive Summary</a></span></p>
                   
                   <!-- special asset -->
+                  <span class="porticonz4_bk"></span>
                   <p class="porticonz4"><a href="https://dribbble.com/cssninja" class="boom cbutton cbutton--effect-novak">visual design port (dribbble)</a></p>
                   <p class="porticonz4"><a href="https://www.dropbox.com/sh/wbp0nebs87sensx/AAA_bbrxYWuxsCdb8HZWNkUQa?dl=0" class="boom cbutton cbutton--effect-novak">projects vault (dropbox)</a></p>
             </div>
