@@ -726,7 +726,7 @@
     /* mixxi -------- */
     .port7 {
         background: url('port/img/mixxi/mixxi_1.jpg');
-        height: 800px !important;
+        height: 400px !important;
         background-position: 50% 53%;
         /* x,y */
         background-repeat: no-repeat;
@@ -736,7 +736,7 @@
     }
     .port8 {
         background: url('port/img/mixxi/mixxi_bold_clean_3.jpg');
-        height: 800px !important;
+        height: 400px !important;
         background-position: 50% 53%;
         /* x,y */
         background-repeat: no-repeat;
@@ -859,11 +859,34 @@
         border: 0px !important;
     }
 
+    /* wild impact -------- */
+    .port16 {
+        background: url('port/img/wild/wildimpact_devnotes.jpg');
+        height: 400px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border: 0px !important;
+    }
+    .port17 {
+        background: url('port/img/wild/wild_peak_login.jpg');
+        height: 400px !important;
+        background-position: 50% 53%;
+        /* x,y */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border: 0px !important;
+    }
+
     .bigicon {
         font-size: 1.5em !important;
         font-weight: 900 !important;
-    }/* COVID19 statement */
+    }
 
+    /* COVID19 statement */
     .alertl-COV {
         color: #e1d9e7 !important;
         font-weight: bold;
@@ -880,8 +903,9 @@
         background-color: #432957;
         /* WAS transparent, #605175 */
         padding: 3px 4px 4px 4px;
-    }/* small logo in main banner */
+    }
 
+    /* small logo in main banner */
     .sm_logo {
         position: absolute;
         left: 2% !important;
@@ -905,8 +929,9 @@
             top: 5% !important;
             max-width: 40px;
         }
-    }/* also added media query in style.css with footer-logo-item *//* modified from style.css */
+    }
 
+    /* also added media query in style.css with footer-logo-item *//* modified from style.css */
     .card {
         background-color: #e1d9e7 !important;
         /* #e1d9e7 light, #dad2e0 darker */
@@ -917,14 +942,15 @@
         /* creates collapsable flex grid for MANY images, as with Factory on Barclay .. ADDED flex-wrap, CHANGED flex-direction from column, line 4492 in style.css .. MUST REMOVE BREAKS AFTER DIVS, that's all */
         flex-wrap: wrap !important;
         flex-direction: row;
-    }/* when using colored bg *//* @media (max-width:540px) {
+    }
+
+    /* when using colored bg *//* @media (max-width:540px) {
               .card {
                 width: 100vw !important;
                 margin-left: -5vw;
                 margin-right: -5vw;
               }
             } *//* for large library img load, smaller images using > webp, html5Preloader.js, lazyload: https://stackoverflow.com/questions/9617935/reduce-loading-time-of-heavy-images-in-html5 *//* for portfolio images loaded as div backgrounds BELOW IN HTML, first used in .port1 (notes there) */
-
     .thumbz {
         position: relative;
         padding: 20px;
@@ -956,8 +982,9 @@
         cursor: hand;
         cursor: pointer;
         opacity: .95;
-    }/* linking text a href text link with no actual text link by targeting entire dimension of div */
+    }
 
+    /* linking text a href text link with no actual text link by targeting entire dimension of div */
     a.linkz {
         position: absolute;
         width: 100%;
@@ -1001,8 +1028,9 @@
         font-family: 'Poppins', sans-serif;
         font-size: 1.4em;
         font-weight: bold;
-    }/* thanks to: https://coryrylan.com/blog/css-gap-space-with-flexbox */
+    }
 
+    /* thanks to: https://coryrylan.com/blog/css-gap-space-with-flexbox */
     div > .codez {
         margin: 6px !important;
     }
@@ -1036,8 +1064,9 @@
         opacity: 0;
         /*workaround to make clickable in IE */
         filter: alpha(opacity=0);
-    }/* backup source code styling */
+    }
 
+    /* backup source code styling */
     .scode {
         color: #e4c578 !important;
         background: #333333 !important;
@@ -1046,21 +1075,37 @@
         font-weight: bold;
         white-space: pre-wrap;
         overflow-x: auto;
-    }/* container for card that holds portfolio images */
+    }
 
+    /* container for card that holds portfolio images */
     .imgcon {
         display: flex !important;
         justify-content: center !important;
         text-align: center !important;
         min-width: 100% !important;
-    }/* bg color truncation via inline thanks to: https://stackoverflow.com/questions/13817506/background-color-only-around-text */
+    }
 
+    /* bg color truncation via inline thanks to: https://stackoverflow.com/questions/13817506/background-color-only-around-text .. added text break padding from class .introbg1 */
     .titlebg {
         background: #675077 !important; /* was #675077 #3f3f3f */
         padding: 3px 9px 3px 9px;
-        color: #e1d9e7!important; /* was #e1d9e7 #c9c6c6 */
+        color: #e1d9e7 !important; /* was #e1d9e7 #c9c6c6 */
         display: inline !important;
+
+        /* color: #c9c6c6 !important;
+        background: #3f3f3f;
+        padding: 8px 20px 12px 20px !important; */
+        /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        border: 0;
+        /* -webkit-text-stroke: 1.5px #e1d9e7 !important;
+        -webkit-text-fill-color: #e1d9e7 !important; */
+        line-height: clamp(2rem, 10vw, 3rem);
+        /* position: relative;
+        z-index: 10000 !important; */
     }
+
     /* backgrounds for task, client, date, process, visual design and front end coding .. can be toggled by switching the 2 */
     .subtitlebg2 {
         background: #675077 !important;
@@ -3777,7 +3822,7 @@
      "Y8888P "Y88P"  888  888  "Y888 "Y8888  888  888  "Y888                                
     -->
     <!-- panels and such / / / / / /    5    / / / / / / -->
-    <section class="mt-3 panelmar galfold" style="background-color:#e1d9e7;padding-top:200px !important">
+    <section class="mt-3 panelmar galfold" style="background-color:#e1d9e7;padding-top:200px !important;padding-bottom:200px !important">
       <!-- =-=-=-=-=-=-=-=-= container row -->
       <div class="row d-flex justify-content-around">
 
@@ -5637,8 +5682,8 @@
                             
                             <!-- dropdown -->
                             <div class="collapse ddtwk" id="collapse_project6">
-                              <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
-                              <div class="card card-body dettxt">
+                              <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) .. CONTEENT SHORT HORIZONTALLY SO HAD TO SET MIN-WIDTH -->
+                              <div class="card card-body dettxt" style="min-width:30vw">
                                 -----------------------------<br />
                                 UI/UX meeting with MeiLyn<br />
                                 Jan 1 2021<br />
@@ -6186,8 +6231,8 @@
                             
                             <!-- dropdown -->
                             <div class="collapse ddtwk" id="collapse_project8">
-                              <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
-                              <div class="card card-body dettxt">
+                              <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) .. CONTEENT SHORT HORIZONTALLY SO HAD TO SET MIN-WIDTH -->
+                              <div class="card card-body dettxt" style="min-width:30vw">
                               </div>
                             </div>
                             <!-- / dropdown -->
@@ -6198,7 +6243,7 @@
                           <!-- process notes (list) -->
                           <div class="row pnote">
                             <div class="col dsctx">
-                                <p class="porticonz2"></a></p>
+                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="boom cbutton cbutton--effect-novak"></a></p>
                             </div>
                           </div>
                           <!-- / process notes (list) -->
@@ -6282,6 +6327,265 @@
         888                      d88P                                        
         888                    888P"                                         
         -->
+        <!-- // ------------- Wild Impact Marketing Group -->
+        <div class="col-xl-6 pr-lg-5" style="margin-top:50px;">
+            <div class="mt-5 mt-md-0">
+                <!--
+                888                             888 d8b                  
+                888                             888 Y8P                  
+                888                             888                      
+                88888b.   .d88b.   8888b.   .d88888 888 88888b.   .d88b. 
+                888 "88b d8P  Y8b     "88b d88" 888 888 888 "88b d88P"88b
+                888  888 88888888 .d888888 888  888 888 888  888 888  888
+                888  888 Y8b.     888  888 Y88b 888 888 888  888 Y88b 888
+                888  888  "Y8888  "Y888888  "Y88888 888 888  888  "Y88888
+                                                                      888
+                                                                 Y8b d88P
+                                                                  "Y88P" 
+                -->
+                <!-- title, with option for icon or text -->
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
+                      <!-- Fixed width column -->
+                      <h2 class="h1 font-weight-bold titlebg">Wild Impact Marketing Group</h2>
+                    </div>
+                    <div class="col justify-left-column brain_jango" style="/* border:0.3rem solid #d3cbd8; */">
+                      <!-- Content column with left alignment -->
+                       <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em"><span class="braintxt">startup</span></i></span></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- / title -->
+
+                <!-- 7 category column -->
+                <div class="d-flex mt-3 reslink">
+
+                    <!-- font awesome icon -->
+                    <h6 class="display-1 opacity-2 mr-3 align-self-start">
+                        <i class="fa-solid fa-billboard"></i>
+                    </h6>
+
+                    <div class="align-self-start">
+                        <div class="container text-start thkfnt">
+                          <!--
+                                                              888            
+                                                              888            
+                                                              888            
+                           8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                              "88b 88K      88K      d8P  Y8b 888    88K     
+                          .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                          888  888      X88      X88 Y8b.     Y88b.       X88
+                          "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                           -->
+                          <!-- assets -->
+                          <div class="row">
+                            <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
+                            <div class="col dsctx">
+                                <p class="porticonz">
+                                    <a href="https://peakdentalstore.com/login-new.html" class="boom cbutton cbutton--effect-novak">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+
+                                    <a href="https://stackblitz.com/edit/web-platform-ktcxej?file=README.md" class="boom cbutton cbutton--effect-novak">
+                                        <i class="fas fa-laptop bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+
+                                    <a href="https://dribbble.com/shots/23781867-Diageo-Bootstrap-based-single-page-sales-site-merchant-login" class="boom cbutton cbutton--effect-novak">
+                                        <i class="fab fa-dribbble bigicon" style="font-weight:bold;"></i>
+                                    </a>
+
+                                    <!-- <a href="" class="boom cbutton cbutton--effect-novak">
+                                        <i class="fa-solid fa-file bigicon"></i>
+                                    </a>
+                                    &nbsp;&nbsp; -->
+
+                                    <!-- special asset -->
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://codepen.io/fullstackninja/full/bGzzbXg" class="boom cbutton cbutton--effect-novak">code repository</a></p>
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://codepen.io/fullstackninja/full/yLZmBjw" class="boom cbutton cbutton--effect-novak">no js accordion</a></p>
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://codepen.io/fullstackninja/live/yLGJQNg" class="boom cbutton cbutton--effect-novak">chatgpt3.5 color toggle</a></p>
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://codepen.io/fullstackninja/full/GRwVvpo" class="boom cbutton cbutton--effect-novak">full screen background video</a></p>
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://codepen.io/fullstackninja/full/ZEmgGYg" class="boom cbutton cbutton--effect-novak">chatgpt3.5 background video</a></p>
+                                    <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chat.openai.com/share/a2349c21-ba2c-431f-b49b-c54da71f6042" class="boom cbutton cbutton--effect-novak">chatgpt3.5 conversation</a></p>
+                                </p>
+                            </div>
+                          </div>
+                          <!-- / assets -->
+                          <!--
+                                 d88P                                  888            
+                                d88P                                   888            
+                               d88P                                    888            
+                              d88P  8888b.  .d8888b  .d8888b   .d88b.  888888 .d8888b 
+                             d88P      "88b 88K      88K      d8P  Y8b 888    88K     
+                            d88P   .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
+                           d88P    888  888      X88      X88 Y8b.     Y88b.       X88
+                          d88P     "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
+                          -->
+                          <!--
+                           d8b           .d888        
+                           Y8P          d88P"         
+                                        888           
+                          888 88888b.  888888 .d88b. 
+                          888 888 "88b 888   d88""88b
+                          888 888  888 888   888  888
+                          888 888  888 888   Y88..88P
+                          888 888  888 888    "Y88P" 
+                          -->
+                          <!-- tasks -->
+                          <div class="row">
+                            <div class="col-md-auto fix"><strong class="subtitlebg2">Tasks</strong></div>
+                            <div class="col dsctx">
+                              Brought on board to:<br />
+                              1) Take <strong class="strgtxt">front end development</strong> tasks from their senior software engineer and <strong class="strgtxt">work as a team to do a few large projects</strong> (coolest being a dental portal, all sorts of code builds)<br />
+                              2) <strong class="strgtxt">Build out website templates using the Miva CMS</strong><br />
+                              3) <strong class="strgtxt">Design fresh templates</strong><br /><br />
+
+                              Tasks included: take <strong class="strgtxt">client design requirements</strong> and implement into preexisting <a href="https://www.miva.com/">Miva CMS</a> template, <strong class="strgtxt">fix errors in Miva templates (HTML, CSS, JS),</strong> <strong class="strgtxt">solve coding problems</strong> (HTML, CSS, JS usually using <strong class="strgtxt">Stackoverflow</strong>), build template prototypes in <strong class="strgtxt">Adobe XD</strong> for presentation, expand capability of Miva templates using Bootstrap library for <strong class="strgtxt">Bootstrap based UI and functionality</strong>, compile <strong class="strgtxt">coding repository.</strong>
+                            </div>
+                          </div>
+                          <!-- / tasks -->
+
+                          <!-- client -->
+                          <div class="row">
+                            <div class="col-md-auto fix"><strong class="subtitlebg2">Client</strong></div>
+                            <div class="col dsctx"><strong class="strgtxt">Wild Impact Marketing Group</strong></div>
+                          </div>
+                          <!-- / client -->
+
+                          <!-- date -->
+                          <div class="row">
+                            <div class="col-md-auto fix"><strong class="subtitlebg2">Date</strong></div>
+                            <div class="col dsctx"><strong class="strgtxt">March 2023 - August 2023</strong></div>
+                          </div>
+                          <!-- / date -->
+
+                          <!-- visual design -->
+                          <div class="row">
+                            <div class="col-md-auto fix"><strong class="subtitlebg2">Visual design</strong></div>
+                            <div class="col dsctx"><strong class="strgtxt">UI development</strong> of layout components using pure CSS
+                            </div>
+                          </div>
+                          <!-- / visual design -->
+
+                          <!-- front end coding -->
+                          <div class="row">
+                            <div class="col-md-auto fix"><strong class="subtitlebg2">Front end coding</strong></div>
+                            <div class="col dsctx">
+                              1) <strong class="strgtxt">Miva</strong> templates development<br />
+                              2) Languages: <strong class="strgtxt">HTML, CSS, JS</strong> and <strong class="strgtxt"><a href="https://docs.miva.com/developer/developer-training/template-language/">Miva templating language</a></strong>
+                            </div>
+                          </div>
+                          <!-- / front end coding -->
+                          <!--
+                                 d88P d8b           .d888        
+                                d88P  Y8P          d88P"         
+                               d88P                888           
+                              d88P    888 88888b.  888888 .d88b. 
+                             d88P     888 888 "88b 888   d88""88b
+                            d88P      888 888  888 888   888  888
+                           d88P       888 888  888 888   Y88..88P
+                          d88P        888 888  888 888    "Y88P" 
+                          -->
+                          <!--
+                               888      888
+                               888      888
+                               888      888
+                           .d88888  .d88888
+                          d88" 888 d88" 888
+                          888  888 888  888
+                          Y88b 888 Y88b 888
+                           "Y88888  "Y88888
+                          -->
+                          <!-- process notes (dropdown) -->
+                          <div class="row">
+                            <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapse_project1" aria-expanded="false" aria-controls="collapse_project1"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
+
+                            <!-- dropdown -->
+                            <div class="collapse ddtwk" id="collapse_project1">
+                              <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
+                              <div class="card card-body dettxt" style="min-width:30vw">
+                              </div>
+                            </div>
+                            <!-- / dropdown -->
+
+                          </div>
+                          <!-- / process notes (dropdown) -->
+
+                          <!-- process notes (list) -->
+                          <div class="row pnote">
+                            <div class="col dsctx">
+                                <p class="porticonz2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="boom cbutton cbutton--effect-novak"></a></p>
+                            </div>
+                          </div>
+                          <!-- / process notes (list) -->
+                          <!--
+                                 d88P   888      888
+                                d88P    888      888
+                               d88P     888      888
+                              d88P  .d88888  .d88888
+                             d88P  d88" 888 d88" 888
+                            d88P   888  888 888  888
+                           d88P    Y88b 888 Y88b 888
+                          d88P      "Y88888  "Y88888
+                          -->
+                        </div>
+                    </div>
+                    <!-- / 2 sub containers -->
+                </div>
+                <!-- / 7 category column -->
+            </div>
+        </div>
+        <!-- / 2 parent containers -->
+        <!--
+        d8b                       
+        Y8P                       
+                                  
+        888 88888b.d88b.   .d88b. 
+        888 888 "888 "88b d88P"88b
+        888 888  888  888 888  888
+        888 888  888  888 Y88b 888
+        888 888  888  888  "Y88888
+                               888
+                          Y8b d88P
+                           "Y88P" 
+        -->
+        <!-- images -->
+        <div class="col-xl-6 col-lg-10 col-md-11 col-sm-10 wrapc_img galfold4">
+          <div class="rowc_mixxi">
+            
+            <!-- image 1 -->
+            <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
+              <a class="linx boom cbutton cbutton--effect-novak" href="https://peakdentalstore.com/login-new.html"></a>
+              <div class="port17"></div>
+            </div>
+            <!-- / image 1 -->
+
+            <!-- image 2 -->
+            <div class="columnc" style="/* background-color:#cbc4d0;border-radius:0px */">
+              <a class="linx boom cbutton cbutton--effect-novak" href="https://codepen.io/fullstackninja/full/bGzzbXg"></a>
+              <div class="port16"></div>
+            </div>
+            <!-- / image 2 -->
+            
+          </div>
+        </div>
+        <!-- / images -->
+        <!--
+               d88P d8b                       
+              d88P  Y8P                       
+             d88P                             
+            d88P    888 88888b.d88b.   .d88b. 
+           d88P     888 888 "888 "88b d88P"88b
+          d88P      888 888  888  888 888  888
+         d88P       888 888  888  888 Y88b 888
+        d88P        888 888  888  888  "Y88888
+                                           888
+                                      Y8b d88P
+                                       "Y88P" 
+        -->
+        <!-- / ------------- / Wild Impact Marketing Group -->
 
         <!--
                                   d8b                   888         d888   .d8888b. 
