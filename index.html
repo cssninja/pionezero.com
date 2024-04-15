@@ -3941,16 +3941,14 @@
                                                                  Y8b d88P
                                                                   "Y88P" 
                 -->
-                <!-- title, with option for icon or text -->
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
-                      <!-- Fixed width column -->
-                      <h2 class="h1 font-weight-bold titlebg">Code repositories</h2>
+                <!-- title, with option for icon or text .. note: simple GRID used on most of site, FLEX HAD TO BE ENABLED HERE to make left-right alignment work with title + icon, docs: https://getbootstrap.com/docs/4.4/utilities/flex/#enable-flex-behaviors and https://stackoverflow.com/questions/50579575/bootstrap-col-resize-next-to-each-other-when-smaller-screen -->
+                <div class="container-fluid" style="padding:0 !important">
+                  <div class="d-flex flex-row">
+                    <div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 display-1 opacity-2 faicona">
+                      <i class="fa-solid fa-code"></i>
                     </div>
-                    <div class="col justify-left-column brain_code" style="/* border:0.3rem solid #d3cbd8; */">
-                      <!-- Content column with left alignment -->
-                       <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em;display:non"><span class="braintxt">startup</span></i></span></a>
+                    <div class="col justify-left-column align-self-center">
+                      <h2 class="h1 font-weight-bold titlebg">Code Repositories</h2>
                     </div>
                   </div>
                 </div>
@@ -3959,12 +3957,7 @@
                 <!-- 7 category column -->
                 <div class="d-flex mt-3 reslink">
 
-                    <!-- font awesome icon -->
-                    <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                        <i class="fa-solid fa-code"></i>
-                    </h6>
-
-                    <div class="align-self-start">
+                    <div class="align-self-start leftpad">
                         <div class="container text-start thkfnt">
                           <!--
                                                               888            
@@ -3975,7 +3968,7 @@
                           .d888888 "Y8888b. "Y8888b. 88888888 888    "Y8888b.
                           888  888      X88      X88 Y8b.     Y88b.       X88
                           "Y888888  88888P'  88888P'  "Y8888   "Y888  88888P'
-                          -->
+                           -->
                           <!-- assets -->
                           <div class="row">
                             <div class="col-md-auto fix" style="margin-bottom:2px"><strong class="subtitlebg2">Assets</strong></div>
