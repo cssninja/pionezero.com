@@ -1101,9 +1101,60 @@
         border: 0;
         /* -webkit-text-stroke: 1.5px #e1d9e7 !important;
         -webkit-text-fill-color: #e1d9e7 !important; */
-        line-height: clamp(2rem, 10vw, 3rem);
+        line-height: clamp(2rem, 10vw, 3.3rem);
         /* position: relative;
         z-index: 10000 !important; */
+        /* margin-left: -15px; */ /* tweak for new layout where font awesome icon is now to left of title .. have to media query this .. OR RESET parent container to zero BELOW */
+    }
+    @media (max-width: 520px) {
+      .titlebg {
+        line-height: clamp(2rem, 10vw, 2rem)
+      }
+    }
+    @media (max-width: 767.75px) {
+      .titlebg {
+        font-size: 1.6em
+      }  
+    }
+    @media (min-width: 768px) and (max-width: 1023.75px) {
+      .titlebg {
+        font-size: 2em
+      } 
+    }
+    @media (min-width: 1023.95px) and (max-width: 1024.25px) {
+      .titlebg {
+        font-size: 2em
+      } 
+    }
+    /* with new layout of font awesome icon to right of title have to reset paddings and margins of some container .. star * means resetting parent and children beneath, thanks to: https://stackoverflow.com/questions/51260463/how-to-reset-all-margins-and-paddings-within-a-parent-element .. ABOTHER SOLUTION IS BOOTSTRAP RESPONSIVE PADDING JUST ABOVE ASSETS LABEL, pl-xl-3 etc, here: https://getbootstrap.com/docs/4.4/utilities/spacing/ .. FINAL was media query below, 900px vw and below */
+    /* .container-fluid *{
+      margin: 0;
+      padding: 0;
+    } */
+    @media (max-width: 900.75px) {
+      .leftpad {
+        padding-left: 15px
+      }
+    }
+    /* padding and font size tweaks for font awesome icon */
+    .faicona {
+      padding: 0px 0px 0px 15px;
+      /* position: relative !important; */
+      /* display: block !important; */
+      margin-right: 20px !important;
+      /* min-width: 500px !important */
+      max-width: 100px !important;
+      font-size: 70px;
+    }
+    @media (max-width: 575.75px) {
+      .faicona {
+        max-width: 100px !important;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 1100.75px) {
+      .faicona {
+        max-width: 120px !important;
+      }
     }
 
     /* backgrounds for task, client, date, process, visual design and front end coding .. can be toggled by switching the 2 */
@@ -5683,7 +5734,7 @@
                             <!-- dropdown -->
                             <div class="collapse ddtwk" id="collapse_project6">
                               <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) .. CONTEENT SHORT HORIZONTALLY SO HAD TO SET MIN-WIDTH -->
-                              <div class="card card-body dettxt" style="min-width:30vw">
+                              <div class="card card-body dettxt" style="min-width:32vw">
                                 -----------------------------<br />
                                 UI/UX meeting with MeiLyn<br />
                                 Jan 1 2021<br />
@@ -6343,16 +6394,14 @@
                                                                  Y8b d88P
                                                                   "Y88P" 
                 -->
-                <!-- title, with option for icon or text -->
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12 col-md-11 col-sm-auto fixed-column" style="/* border:0.3rem solid #000; */">
-                      <!-- Fixed width column -->
-                      <h2 class="h1 font-weight-bold titlebg">Wild Impact Marketing Group</h2>
+                <!-- title, with option for icon or text .. note: simple GRID used on most of site, FLEX HAD TO BE ENABLED HERE to make left-right alignment work with title + icon, docs: https://getbootstrap.com/docs/4.4/utilities/flex/#enable-flex-behaviors and https://stackoverflow.com/questions/50579575/bootstrap-col-resize-next-to-each-other-when-smaller-screen -->
+                <div class="container-fluid" style="padding:0 !important">
+                  <div class="d-flex flex-row">
+                    <div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 display-1 opacity-2 faicona">
+                      <i class="fa-solid fa-billboard"></i>
                     </div>
-                    <div class="col justify-left-column brain_jango" style="/* border:0.3rem solid #d3cbd8; */">
-                      <!-- Content column with left alignment -->
-                       <a href="#" class="boom cbutton cbutton--effect-novak"><i class="fa-solid fa-rocket-launch" style="font-size:1.9em"><span class="braintxt">startup</span></i></span></a>
+                    <div class="col justify-left-column align-self-center">
+                      <h2 class="h1 font-weight-bold titlebg">Wild Impact Marketing Group</h2>
                     </div>
                   </div>
                 </div>
@@ -6361,12 +6410,7 @@
                 <!-- 7 category column -->
                 <div class="d-flex mt-3 reslink">
 
-                    <!-- font awesome icon -->
-                    <h6 class="display-1 opacity-2 mr-3 align-self-start">
-                        <i class="fa-solid fa-billboard"></i>
-                    </h6>
-
-                    <div class="align-self-start">
+                    <div class="align-self-start leftpad">
                         <div class="container text-start thkfnt">
                           <!--
                                                               888            
@@ -6500,12 +6544,12 @@
                           -->
                           <!-- process notes (dropdown) -->
                           <div class="row">
-                            <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapse_project1" aria-expanded="false" aria-controls="collapse_project1"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
+                            <div class="col-md-auto fix" data-toggle="collapse" data-target="#collapse_project9" aria-expanded="false" aria-controls="collapse_project9"><strong class="subtitlebg2">Process notes&nbsp&nbsp&nbsp<i class="fa-solid fa-expand" style="margin-right:0"></i></strong></div>
 
                             <!-- dropdown -->
-                            <div class="collapse ddtwk" id="collapse_project1">
+                            <div class="collapse ddtwk" id="collapse_project9">
                               <!-- class .card was causing hyperlink to line break, specifically line 4491, display: flex so removed it w/inline style (then transferred to class .dettxt) -->
-                              <div class="card card-body dettxt" style="min-width:30vw">
+                              <div class="card card-body dettxt" style="min-width:35vw">
                               </div>
                             </div>
                             <!-- / dropdown -->
