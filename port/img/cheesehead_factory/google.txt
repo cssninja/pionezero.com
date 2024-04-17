@@ -1,0 +1,85 @@
+google for analytics
+
+cheesehead.analytics@gmail.com
+pass
+
+Cheesehead Analytics
+pass
+
+when launched (need reall URL) measure both web + mobile (in BETA)
+
+=-=-=-=-=-=-=-=-=-=-
+Tracking ID
+pass
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150812592-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'pass');
+</script>
+
+enabled Enhanced Ecommerce Tracking
+
+
+
+=-=-=-=-=-=-=-=-=-=-
+
+
+
+
+
+
+
+
+
+
+
+
+
+=-=-=-=-=-=-=-=-=-=-
+DONE HERE:
+Sales Channels > Online Store > Preferences
+
+** Ask Shopify if all three codes can be inserted here.
+
+EVERYTHING BELOW CAN BE SKIPPED JUST BY ENTERING CODE HERE .. but still ask what the three new codes are about, as well as 'Enhanced Ecommerce'.
+
+Shopify lets you choose between BASIC and ENHANCED ecommerce tracking as well, HERE >
+https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-setup
+
+And can even check the template (theme.liquid) for what kind of code is there.
+=-=-=-=-=-=-=-=-=-=-
+
+setting up in shopify >
+https://help.shopify.com/en/manual/reports-and-analytics/google-analytics
+
+and the next page >
+https://support.google.com/analytics/answer/6014841
+
+where at the bottom there are three links:
+
+Getting ecommerce data from your site to Analytics
+To see this data in your reports, you need to:
+
+1) Implement Universal Analytics on your site.
+
+THREE CODE SNIPPETS NOW, not the old single one >
+
+Get a new and more flexible tracking code that lets you collect data from any digital device
+Universal Analytics introduces three new versions of the tracking code you can implement to meet your specific technical needs. Use the GTAG.JS JAVASCRIPT LIBRARY FOR WEBSITES, the ANALYTICS SDKS (V2.X OR HIGHER) FOR MOBILE APP TRACKING, and the MEASUREMENT PROTOCOL FOR OTHER DIGITAL DEVICES, like game consoles and information kiosks.
+
+2) Configure gtag.js to use enhanced ecommerce.
+
+Applies to 'enhanced ecommerce' >
+
+https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-ecommerce
+
+3) Turn on Enhanced Ecommerce for individual Views.
+
+Also 'enhanced ecommerce' >
+
+https://support.google.com/analytics/answer/6032539

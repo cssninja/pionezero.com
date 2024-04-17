@@ -1,0 +1,360 @@
+Cheesehead Launch
+
+https://www.shopify.com/
+cheesehead-tours.myshopify.com
+pass
+
+current domain
+http://www.cheesehead.com/
+
+domain pointing start here >
+https://help.shopify.com/en/manual/domains/add-a-domain/using-existing-domains/connecting-domains#add-an-existing-domain-to-your-shopify-store
+
+web store, $1900 for store design done .. was not built out bcs no initial consultation .. march then april .. refund? was it for cheeshead factory? expires march 2021 for a full store .. has to schedule a call with professional web services team to pursue refund
+
+1
+email may break so need:
+
+5 cnames
+2 srv records
+1 txt record
+1-2 mx records
+
+get from provider of the office 365
+
+*find out who email provider to confirm
+any company that offers office 365 has their own exchange servers (THIRD PARTY)
+when done with MICROSOFT they use axure servers (DIRECTLY FROM MICROSOFT) -- it is meilyn
+
+records may be here:
+a) nexcess
+b) office 365 directly
+c) on computer
+
+=-=-=-=-=-=-=-=-
+MICROSOFT 365 LOGIN
+https://www.office.com/
+
+TYPE DOMAIN ON 2ND WINDOW
+
+Microsoft 365 outlook
+pass
+
+when logged in says nexcess is managing it .. ASK GODADDY IF THEY CAN JUST BE KICKED OFF
+TEST FIRST
+
+OR
+https://mxtoolbox.com/
+https://www.whatsmydns.net/
+
+cnames not manditory (optional) NOT FOUND
+mx FOUND
+txt FOUND
+srv NOT FOUND
+
+* to avoid stall do at night .. 15 to 24 hours
+
+=-=-=-=-=-=-=-=-
+
+2
+first have to change NAMESEVERS TO GODADDY
+
+can be done by me with click of button
+
+currently with nexuscess.net
+
+3
+THEN can do domain
+
+Your A record should point to Shopify's IP address, which is 23.227.38.32
+
+Your CNAME record should point to shops.myshopify.com
+
+** cheesehead is using third party host (nexcess.net) that uses magento (just an application)
+
+HAVE TO GRAB ALL RECORDS IN NEXCESS.NET
+
+
+
+
+
+===========================
+https://www.whatsmydns.net/#NS/cheesehead.com
+
+MX
+Microsoft Corporation
+pass	
+
+TXT
+v=spf1 include:spf.protection.outlook.com -all
+
+GET SECOND TXT RECORD from microsoft.com
+ms=ms.....
+will notify if something missing .. or .. will ask to verify
+
+but logged into https://www.office.com/ and it didnt show
+
+CNAME is for www
+A RECORD is primary (no www)
+
+
+===========================
+
+
+
+
+
+-
+email
+
+MeiLyn so you don't have to refer to other emails I took the most important content from previous emails and included that in this one, plus some new content. This can be referred to as the final launch checklist.
+
+(A) Cheesehead Launch
+(B) Check
+(C) Facebook authentication from a recognized computer
+(D) Vegan products for huge revenue with Cheesehead Factory
+(E) Venue site
+
+------------------------
+(A) Cheesehead Launch
+------------------------
+
+PREVIEW LINK:
+https://cheesehead-tours.myshopify.com/
+
+MeiLyn I revised the list to things essential for the launch and things I can do during and after the launch (to speed up launch time). I think we should shoot to launch the site on Monday September 23.
+
+Essential for launch:
+
+1. Google analytics set up with Gmail account
+2. Enter keyword list, alt tags and descriptions (gotten from old site and new ones) in SEO section of Shopify
+3. Any POS or inventory management need to be integrated into Shopify? (But you said no .. orders will just be sent out as they come in you said?)
+4. Domain pointing (or transfer) via GoDaddy from Magento to Shopify (I need to know where their current domain name is parked, and then will have to call that tech support to help transfer the domain to Shopify servers)
+5. What contact email would Cheesehead Factory like for the upper contact form on the contact page?
+6. Test purchases and test emails (SET UP TEST PURCHASE WITH SHOPIFY)
+7. Activate payment provider in Shopify admin: Settings > Payment providers
+8. Give Collections and Pages margin bottom spacings as well for desktop version (looks bad)
+9. Fix footer link spacings
+10. Give secondary pages and footer a brand graphic
+=-=-=-=-=-=-=-=-
+11. Temporarily launch with Shopify domain but use 'noindex' in code so search engines don't index it .. REMOVE AT LAUNCH
+=-=-=-=-=-=-=-=-
+
+=-=-=-=-=-=-=-=-
+12. Kepp pionezere@protonmail.ch for login but use info@cheesehead.com for email form
+=-=-=-=-=-=-=-=-
+
+Can be done during/after launch:
+
+13. Ask Cheesehead Factory if they want user login (present in old site)
+14. Facebook Messenger integration so Messenger can be a sales channel and for customer chat (IG too)
+15. Add Trip Advisor social link (tutorial is in my email from template designer)
+16. Flex accordion dropdown for tags
+17. Blog link on side menu (has different categories as 'Recommendations', 'News' etc)
+18. Site map
+19. Design, code and login assets to Dropbox
+20. Yelp videos
+21. More graphics - as custom products images for banner near top
+22. Links to galleries: Yelp, Google Maps, Facebook, Trip Advisor .. try app for instant gallery > WILL IMPROVE GOOGLE SERP
+23. Blog material from Trip Advisor and Yelp (besides just Facebook)
+24. 3 bar menu .. for shop expansion, items transparent until touched (on mobile)
+25. tag loading on collections pages still slight issue
+26. Turn cheesehead hat to vector .. then animate
+27. Clicking cart reduces right background image partially on Custom Products but NOT About + Join Our Team pages *try onclick display:none with js .. thats bcs its not at top most class, so move up in DOM .. or move graphic higher (that's it, just make cart UI higher z-index .. but other pages different) - DONE
+28. GIve FB Messenger higher z-index when scrolled to very bottom at footer (or lower z-index of graphic) - DONE
+29. Reposition Messenger so Cheesehead Graphicin footer not hidden - DONE
+30. Faster transition time for cart full screen
+31.Graphic on right not reaching bottom for ipad .. FIXED value doesn't work on mobile so need a media query for that .. it appears FIXED but appears to not be long enough for screen .. so figure out viewport screen or not screen .. could just be your browser as well
+32. Change 'thank you' message in email form to DARK text
+33. Make sure the two Shopify apps are FREE (Sesame and Sitemap Page Generator)
+
+=-=-=-=-=-=-=-=-
+34. Check http vs https (SSL in Shopify) .. AND .. www vs non-www
+
+* new Cheesehead site not coming up in mobile .. only OLD one
+
+clearing caches and restarting phone will clear out old site from mobile browsers
+=-=-=-=-=-=-=-=-
+
+35. tablet slow with product loading
+36. Curd Herd Tour $200 .. custom code 'Call us for details'
+37. inventory set at 100
+38. Make IG pics SQUARE
+
+------------------------
+(C) Facebook authentication from a recognized computer
+------------------------
+
+Hey when you get a chance can you log into Facebook (from Shopify) and get authentication that way (SEE BELOW)? I tried but Facebook didn't recognize my computer so locked the Cheesehead Factory Facebook page down (temporarily), just until identity is verified, but it has to be from a computer Facebook recognizes. Is ty@cheesehead.com your login email or would someone at Cheesehead have to do this? I actually left a message with Sue Bruno to try to get this done as I want to get this done today actually.
+
+So here's how to login to the Cheesehead Factory backend in Shopify >
+
+1
+https://www.shopify.com/logout?dest=launch+apps&sid=24782635117
+
+login at upper right with:
+
+cheesehead-tours.myshopify.com/
+pass
+
+2
+go to the left and you'll see 'Messenger' under 'Sales Channels'
+
+click that
+
+3
+click the BLUE BUTTON on the right that says 'Connect account'
+
+that is where you authenticate identity from your computer (if Facebook recognizes your computer)
+
+* a popup will appear where you will log into Facebook
+
+Then do the following below >
+
+*Since Facebook locked down the Cheesehead Factory account because it saw my login attempt, it probably sent an email to ty@cheesehead.com to prompt you to IDENTIFY yourself, which will include >
+
+- logging in
+- identifying pictures of Facebook friends
+- or perhaps answering security questions
+
+like that. After that is done then Facebook and Shopify should be successfully authenticated (connected). To be sure, go back to the Cheesehead Factory backend in Shopify and see if it says Messenger is connected, HERE >
+
+pass
+
+4
+If Facebook does not recognize your computer then just send this entire message to some at Cheesehead Factory so they can go through this just thins one time, for authentication.
+
+------------------------
+(D) Vegan products for huge LONGTERM revenue with Cheesehead Factory
+------------------------
+
+HUGE OPPORTUNITY.
+
+On you doing inventory etc .. do you own the company now bcs you bought it? Talk about dumb q’a ha ..
+
+And if you are making executive decisions for Cheesehead Factory we should definitely talk on the vegan movement which is exploding .. I’m pretty confident I can get Cheesehead Factory some plant-based startups to put in some huge orders for vegan foam products .. I’m going to call them directly and do some exploration. I envision if Cheesehead Factory tried vegan products, the vegan products would far outsell the cheese ones simply bcs the vegan movement is right now a growing tsunami ..
+
+If it became really successful (and I anticipate it def will) you could even make it a separate entity LLC and call it something like 'Vegiwear' .. I have a ton of ideas already, like a foam cucumber slice frisbee .. a foam avacado hat .. a foam cell phone case that an already covered phone slips into for fun (cute green vegan monsters, veggies and fruits, a whale .. anything Earth friendly and vegan supporting) .. lots of ideas that would sell like crazy on Facebook and especially Etsy.
+
+I have a HUGE network of vegan friends on Facebook that when calculating the actual network goes into the 100's of thousands (maybe millions) when counting friends of friends etc. I could help promote vegan products on my Facebook with product links .. AND .. talk to my Facbook friends to promore this. MANY of them are MAJOR vegan movement organizers (like Anonymous for the Voiceless) all across the country, in Europe and in Australia .. they could quickly spread Cheesehead Factory vegan procucts across the planet. That's why I suggested a new LLC something like 'Vegiwear' .. to make a clean break from anything cheese (vegans are very absolute in their convictions), even though the prodcuts would still be made in Cheesehead Factory.
+
+Like I said .. the vegan movement is becoming a multi-BILLION dollar revenue tsunami now over just the last 2 years with plant-based tech companies really hurting meat and dairy revenue .. plus all the support companies and activities needed, which foam products definitely could contribute to.
+
+------------------------
+(E) Venue site
+------------------------
+
+And looking ahead .. while I'm on a Shopify roll I'd love to start your venue site immediately and shoot for a launch date of maybe mid October or so .. sound good? I have no other projects going at the moment so your venue project would get my full attention. That's a $4000 project, correct? That would be perfect timing actually because I need to purchase a car before winter gets here.
+
+Namaste!
+Marcus
+
+
+
+--
+CALL
+sept 19 2pm
+
+1) godaddy - get username, pass and pin .. cust 85198348, pin 2018, pass Retire23# .. 480-463-8389
+
+shopify has to give me an a record (or c name) to log into godaddy
+https://help.shopify.com/en/manual/domains
+https://help.shopify.com/en/manual/domains/add-a-domain/using-existing-domains
+
+HERE >
+https://help.shopify.com/en/manual/domains/add-a-domain/using-existing-domains/connecting-domains#add-an-existing-domain-to-your-shopify-store
+
+=-=-=-=-=-=-
+DONE ON GODADDY SERVERS >
+
+1
+first have to change NAMESEVERS TO GODADDY
+
+2
+If you've purchased your domain through a third party, then you need to edit the following DNS settings:
+
+Your A record should point to Shopify's IP address, which is pass
+Your CNAME record should point to shops.myshopify.com
+
+Editing these domain settings might have an effect on other things, such as email forwarding. You can contact your domain provider to find out how any changes might affect your DNS settings.
+=-=-=-=-=-=-
+
+Have to contact GODADDY TO SEE IF THIS EFFECTS EMAIL FORWARDING
+
+CALL WITH GD TECH SUPPORT >
+appears to do email with microsoft office 365 (last 2 years mx set to office), but not godaddy's office 365
+
+mx record search
+https://securitytrails.com/dns-trails
+
+=-=-=-=-=-=-
+DONE ALSO ON GODADDY .. add these records to DNS as well
+
+3
+mx records
+cheesehead-com.mail.protection.outlook.com
+0 in box
+
+TXT
+v=spf1 include:spf.protection.outlook.com -all
+=-=-=-=-=-=-
+
+2) google analytics - need to transfer domain
+
+3) facebook messenger auth - from recognized computer
+
+
+
+-----
+
+old school menu on top
+
+send invoice stuff
+
+add AMAZON link
+
+
+
+--
+CALL
+oct 8 2:00pm
+
+contact page content not centered properly (just on desktop)
+
+=-=-=-=-=-=-=-
+find godaddy info .. OK FOR LAUNCH
+before packer game SUNDAY
+=-=-=-=-=-=-=-
+
+resend admin access to meilyn
+
+orders
+orders@cheesehead.com
+*talk to shopify tech support
+
+venue site .. what is feel .. kinda like cuvee .. will send similar sites
+
+qucik bare bones version
+
+images important bcs no construction yet
+
+need to walk thru
+
+---
+
+vegi wear
+
+legal ok to mention company
+customs stuff
+
+send VENMO info
+
+schedule tutoring
+
+
+
+--
+CALL
+nov 3
+
+

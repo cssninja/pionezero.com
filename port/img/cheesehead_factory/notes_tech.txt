@@ -1,0 +1,18 @@
+JULY 19 2019
+
+I want to add a button on all product pages that says 'Book' or "Schedule' but I don't know where in the code to find it. I'm a web developer so I can read code but just don't know where the product page buttons are.
+
+In the SOURCE CODE i DID find them though:
+
+      <div data-shopify="payment-button" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
+
+I'm a Shopify Partner as well so I was told you can get us tech support from the author of the template, correct? The template is Colors:
+
+https://themes.shopify.com/themes/colors/styles/generic
+
+I"m going to be calling you shortly .. will these email be available to look at?
+
+Kind regards,
+Marcus
+
+---------------

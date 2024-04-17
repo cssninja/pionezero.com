@@ -1,0 +1,157 @@
+shopify partner development store
+
+https://www.shopify.com/
+cheesehead-tours.myshopify.com
+pass
+pass
+new >
+pass
+
+
+
+
+
+
+--
+sept 22 2019
+
+SEO CHECKLIST >
+
+Improving search engine optimization (SEO)
+https://help.shopify.com/en/manual/promoting-marketing/seo
+
+Use COMMUNITY as well for questions
+https://community.shopify.com/c/Shopify-Community/ct-p/en
+
+https://community.shopify.com/c/Ecommerce-Marketing/Adding-Keywords-and-Meta-Tags/m-p/61799
+
+
+
+
+
+
+--------------
+META KEYORDS ---------------- DONE
+--------------
+
+-- NOTES --
+just meta tag for keywords
+
+--
+layout > theme.liquid
+
+using lines 8-10 .. but changed to line 12
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Foamation, Inc. - Creators of the Original Cheesehead Hat</title>
+<meta name="description" content="The Official Makers of the Original Cheesehead Hat!  Many Cheesehead products to choose from, and secure online ordering." />
+<meta name="keywords" content="cheesehead hats, packers cheeseheads, packer cheesehead,cheesehead,wisconsin cheesehead, green bay packer cheesehead, green bay cheeseheads, Cheesehead hats, green bay novelties, packer novelty, packer novelties, cheeseheads hats, official Cheesehead hat, cheesehead hat gifts, green bay packer gift, christmas cheesehead, gifts,Wisconsin cheesehead, extreme cheesehead,foamation, foam hat, big cowboy foam hat, free shipping, holiday, christmas,sports, sports merchandise, custom product, custom foam, cyber monday, black friday, est 1987, est. 1987, original cheesehead, original cheesehead factory, original cheesehead retail store, original cheesehead factory and retail store, original cheesehead factory &amp; retail store, original cheesehead est 1987, original cheesehead 1987, original cheesehead est. 1987, original cheesehead established 1987" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="http://www.cheesehead.com/media/favicon/default/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.cheesehead.com/media/favicon/default/favicon.ico" type="image/x-icon" />
+
+--------------
+ALT TAGS ---------------- DONE
+--------------
+
+-- NOTES --
+in individual product pages
+
+--------------
+SITE MAP ---------------- DONE (tweak + launch list)
+--------------
+
+-- NOTES --
+domain
+analytics
+webmaster
+uncheck password protect
+2 apps tech support
+
+--
+* ON LAUNCH >
+- submit site map to google on launch
+
+find it
+https://help.shopify.com/en/manual/promoting-marketing/seo/find-site-map
+
+google webmasters code
+https://help.shopify.com/en/manual/promoting-marketing/seo/find-site-map#find-your-sitemap
+
+this video is for indexing via Google Webmaster .. it isn't for tracking via Google Analytics
+https://www.google.com/webmasters/#?modal_active=none
+
+- what else?
+
+* ALSO >
+Online Store > Preferences > uncheck password protect to make it live (is this a LAUNCH? No .. its still in preview mode.)
+
+--
+apps to use >
+
+1) Image Sitemap
+https://apps.shopify.com/image-sitemap?surface_detail=site+map&surface_inter_position=1&surface_intra_position=3&surface_type=search
+
+Have to have custom domain installed first
+
+2) SEO Sitemap Builder #1 Sitemap
+https://apps.shopify.com/sitemap-builder?surface_detail=site+map&surface_inter_position=1&surface_intra_position=4&surface_type=search
+
+--------------
+PLAN UPGRADE ---------------- DONE (remove noindex at launch)
+--------------
+
+-- NOTES --
+noindex removal
+
+--
+$29/month
+https://cheesehead-tours.myshopify.com/admin/account/pricing
+
+will enable me to install more features (site map etc)
+
+=-=-=-=-=-=-=-=-
+temporarily published for site map apps so inserted noindex >
+https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines
+https://support.google.com/webmasters/answer/93710?hl=en
+
+Layout > theme.liquid
+
+line 7-8
+
+LIVE w/noindex >
+https://cheesehead-tours.myshopify.com/
+
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+
+
+
+
+
+
+
+
+
+
+
+--
+vegan producxt ideas
+
+cheesehead color:
+
+squares-sliced mango
+orange
+sweet potato
+carrots
+cantelope
+pumpkin
+papaya
+tangerine
+orange peppers
+peaches
+butternut squash
+apricots

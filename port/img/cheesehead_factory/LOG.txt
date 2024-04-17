@@ -1,0 +1,719 @@
+LIQUID TEMPLATE
+
+product-form.liquid
+https://cheesehead-tours.myshopify.com/admin/themes/73788588141?key=snippets/product-form.liquid
+
+
+
+
+---------
+WORKED
+
+<div data-shopify="payment-button" class="shopify-payment-button">
+
+<button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"></button>
+
+<button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button>
+
+</div>
+
+
+
+
+---------
+REDUCED
+
+1
+<div data-shopify="payment-button" class="shopify-payment-button">
+<button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"></button>
+</div>
+
+2
+<div data-shopify="payment-button" class="shopify-payment-button">
+<button style="background-color: #3D4753; border: none; color: white; font-family:Montserrat; font-weight:900; font-size: 1.15em; padding: 17px 42%; text-align: center; text-decoration: none; display: inline-block; margin: 4px 2px; cursor: pointer; border-radius: 1px; overflow:hidden" onclick="location.href='https://fareharbor.com/cheesehead/'" type="button">schedule</button>
+</div>
+
+<button onclick="location.href='http://www.google.com'" type="button">
+         www.example.com</button>
+
+---
+from css
+
+cursor:pointer;padding:14px;width:100%;font-family:Montserrat, sans-serif;font-style:normal;font-weight:700;color:#3d4753;text-transform:lowercase;font-size:18px;-webkit-appearance:none;-moz-appearance:none;appearance:none;line-height:normal
+
+<div>
+<button style="margin-top:10px; cursor:pointer; padding:14px; width:100%; font-family:Montserrat,sans-serif; font-style:normal; font-weight:700; background-color:#3D4753; color:white; text-transform:lowercase; font-size:18px; -webkit-appearance:none; -moz-appearance:none; appearance:none; line-height:normal; -webkit-transition-property:background;-webkit-transition-duration:200ms;-webkit-transition-timing-function:cubic-bezier(0.2, 0.3, 0.25, 0.9);-webkit-transition-delay:0s;" onclick="location.href='https://fareharbor.com/cheesehead/'" type="button">schedule</button>
+</div>
+
+
+
+
+---------
+with classes ----- FINAL
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign variants_count = 0 %}
+{% for variant in product.variants %}
+  {% assign variants_count = variants_count | plus: 1 %}
+{% endfor %}
+
+{% form 'product', product %}
+  {% if variants_count > 1 %}
+    <div class="row expanded">
+      {% include 'product-variants' %}
+    </div>
+  {% else %}
+    <input name="id" type="hidden" value="{{ current_variant.id }}">
+  {% endif %}
+
+  {% if section.settings.product_show_quantity_selector %}
+    <div class="row expanded quantity-selector">
+      <div class="selector-wrapper">
+        <label for="">{{ 'products.product.quantity' | t }}</label>
+        <div class="select shopify-select">
+          <select class="single-option-selector" id="productQuantity-{{ section.id }}" name="quantity">
+            {% if product.selected_or_first_available_variant.inventory_management  == 'shopify' and product.selected_or_first_available_variant.inventory_quantity > 0%}
+              {% assign max = product.selected_or_first_available_variant.inventory_quantity | at_most: 50 %}
+            {% else %}
+              {% assign max = 50 %}
+            {% endif %}
+            {% for i in (1..max) %}
+              <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+          </select>
+          {% include 'svg-arrow' %}
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <input type="hidden" id="quantity" name="quantity" value="1" min="1">
+  {% endif %}
+
+
+  <div class="row expanded">    
+    {% if current_variant.available %}
+      <button id="addToCart-{{ section.id }}" type="submit" class="add-to-cart {% if section.settings.enable_payment_button %}with-payment-button{% endif %}" data-action="add-to-cart">
+        {{ 'products.product.add_to_cart' | t }}
+      </button>
+      <!-- ADDED -->
+      <div>
+      <button class="shopify-payment-button__button--unbranded" style="margin-top:10px;" onclick="location.href='https://fareharbor.com/cheesehead/'" type="button">schedule</button>
+      </div>
+      <!-- END -->
+    {% else %}
+      <button id="addToCart-{{ section.id }}" type="submit" class="add-to-cart {% if section.settings.enable_payment_button %}with-payment-button{% endif %}" disabled>
+        {{ 'products.product.unavailable' | t }}
+      </button>
+    {% endif %}
+    {% if section.settings.enable_payment_button %}
+      {{ form | payment_button }}
+    {% endif %}
+  </div>
+{% endform %}
+
+
+
+
+---------
+IN INDIVIDUAL PRODUCT PAGE
+
+1
+won't work without reference to CSS
+
+2
+if not working in individual product page then go back to displaying everywhere, but with snippet ot HTML going display:none with new class
+
+3
+Montserrat font
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900 !important;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.e72d00d31ae5399d260a80ec70322c62c1819762.woff2?&hmac=a51355a3cbe15aebc1c1554760a284fd97876d256948d4151d76b08cd7a65c73") format("woff2"), url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.18a018b6c83e89030c5d70a6d4c02c969f228500.woff?&hmac=1f425240c6882b6b59bf030962238f189bee59b0451390685d40a5a2eb939f4b") format("woff"); }
+
+4
+Work Sans font
+
+moz-user-select:none;
+-ms-user-select:none;
+-webkit-user-select:none;
+user-select:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+appearance:none;
+display:inline-block;
+width:auto;
+text-decoration:none;
+text-align:center;
+vertical-align:middle;
+cursor:pointer;
+border:1px solid transparent;
+border-radius:2px;
+padding:8px 15px;
+background-color:#557b97;
+color:#fff;
+font-family:"Work Sans",sans-serif;
+font-style:normal;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:0.08em;
+white-space:normal;
+font-size:14px
+
+
+
+
+      <!-- ADDED -->
+      <link href="//cdn.shopify.com/s/files/1/0247/8263/5117/t/1/assets/theme.scss.css?1525" rel="stylesheet" type="text/css" media="all" />
+      <style id="shopify-dynamic-checkout">
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900 !important;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.e72d00d31ae5399d260a80ec70322c62c1819762.woff2?&hmac=a51355a3cbe15aebc1c1554760a284fd97876d256948d4151d76b08cd7a65c73") format("woff2"), url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.18a018b6c83e89030c5d70a6d4c02c969f228500.woff?&hmac=1f425240c6882b6b59bf030962238f189bee59b0451390685d40a5a2eb939f4b") format("woff"); }
+
+.shopify-payment-button__button--unbranded {
+  background-color: #1990c6 !important;
+  padding:15px 15px; /* was 1em 2em */
+  /* ADDED */
+  min-width:100% !important;
+  max-height:70% !important;
+  border:0em !important;
+  color:#fff !important;
+  font-family: Montserrat !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  border-radius:3px !important;
+}
+
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: #136f99 !important;
+  /* ADDED */
+  min-width:100% !important;
+  max-height:70% !important;
+  border:0em !important;
+  color:#fff !important;
+  font-family: Montserrat !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  border-radius:3px !important;
+}
+
+</style>
+      <div>
+      <button class="shopify-payment-button__button--unbranded" style="margin-top:10px;" onclick="location.href='https://fareharbor.com/cheesehead/'" type="button">schedule</button>
+      </div>
+      <!-- END -->
+
+-----
+version 2 with new class
+
+      <!-- ADDED -->
+      <link href="//cdn.shopify.com/s/files/1/0247/8263/5117/t/1/assets/theme.scss.css?1525" rel="stylesheet" type="text/css" media="all" />
+      <style id="shopify-dynamic-checkout">
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900 !important;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.e72d00d31ae5399d260a80ec70322c62c1819762.woff2?&hmac=a51355a3cbe15aebc1c1554760a284fd97876d256948d4151d76b08cd7a65c73") format("woff2"), url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.18a018b6c83e89030c5d70a6d4c02c969f228500.woff?&hmac=1f425240c6882b6b59bf030962238f189bee59b0451390685d40a5a2eb939f4b") format("woff"); }
+
+.schedule {
+  background-color: #3D4753 !important;
+  padding:15px 15px; /* was 1em 2em */
+  /* ADDED */
+  min-width:100% !important;
+  max-height:70% !important;
+  border:0em !important;
+  color:#fff !important;
+  font-family: Montserrat !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  border-radius:3px !important;
+  cursor:pointer !important;
+}
+
+.schedule:hover:not([disabled]) {
+  background-color: #3D4753 !important;
+  /* ADDED */
+  min-width:100% !important;
+  max-height:70% !important;
+  border:0em !important;
+  color:#fff !important;
+  font-family: Montserrat !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  border-radius:3px !important;
+  cursor:pointer !important;
+}
+
+</style>
+      <div id="sch">
+      <button class="schedule" style="margin-top:20px" onclick="location.href='https://fareharbor.com/cheesehead/'" type="button">schedule</button>
+      </div>
+      <!-- END -->
+
+
+
+
+---------
+EVERYWHERE BUT REMOVE CLASS WITH JS
+
+1
+eliminate class on page load with javascript stackoverflow
+
+https://stackoverflow.com/questions/52265557/delete-element-with-javascript-by-onload
+
+window.onload=function(){
+    var elem = document.getElementById("sdffg");
+    elem.parentNode.removeChild(elem);
+}
+
+.
+.
+
+<!-- ADDED -->
+<script type="text/javascript">
+window.onload=function(){
+    var elem = document.getElementById("sch");
+    elem.parentNode.removeChild(elem);
+}`
+</script>
+<!-- END -->
+
+* works in product-form.liquid best ugly and slow
+
+2
+how to target the dom in javascript stackoverflow
+
+3
+PARTIAL SOLUTIONS
+
+a)
+place in individual product pages that apply (just THREE)
+
+b)
+place js in product-form.liquid so the entire DOM loads -- that will remove the class in the individual product pages (not very good solution)
+
+
+
+
+---------
+SOLUTION
+
+(( A ))
+
+1
+place button code in product-form.liquid so it loads in all prodiuct pages PROPERLY POSITIONED
+
+2
+place the js in a PARENT PAGE so that the entire DOM LOADS .. and remove classes from here (CAN'T DO YET)
+
+3
+remove 'description' in product-description.liquid
+      <h3>{{ 'products.product.description_html' | t }}</h3>
+      <!-- <h3>{{ 'products.product.description_html' | t }}</h3> -->
+
+4
+move button up
+
+--
+tour pages
+
+target and remove classes for buttons:
+quantity -- quantity-selector, in div (body id) the-cheddar-factory-amp-production-tour
+add -- add-to-cart, in div 
+buy -- shopify-payment-button, in div 
+
+pages to use >
+index.liquid -- home
+product-form.liquid -- buttons
+product.liquid -- index page (shell) for product-form
+product-template.liquid -- index page for product-form
+
+--
+query
+remove class javascript
+
+1
+https://usefulangle.com/post/145/javascript-add-remove-css-class
+
+<!-- ADDED -->
+<script type="text/javascript">
+// If class "quantity-selector" exists then remove it. Else do nothing
+document.querySelector("#the-cheddar-factory-amp-production-tour").classList.toggle('quantity-selector', false);
+</script>
+<!-- END -->
+
+2
+https://stackoverflow.com/questions/32914759/remove-class-from-multiple-elements-in-javascript-or-jquery
+
+$('.classToRemove').removeClass('classToRemove');
+
+<!-- ADDED -->
+<script type="text/javascript">
+$('.quantity-selector').removeClass('quantity-selector');
+</script>
+<!-- END -->
+
+--------
+
+(( B ))
+
+hide all buttons from product template with <!-- -->
+
+add all buttons INDIVIDUALLY in description section in PRODUCT LOAD PAGE
+
+easy
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign variants_count = 0 %}
+{% for variant in product.variants %}
+  {% assign variants_count = variants_count | plus: 1 %}
+{% endfor %}
+
+{% form 'product', product %}
+  {% if variants_count > 1 %}
+    <div class="row expanded">
+      {% include 'product-variants' %}
+    </div>
+  {% else %}
+    <input name="id" type="hidden" value="{{ current_variant.id }}">
+  {% endif %}
+
+  {% if section.settings.product_show_quantity_selector %}
+    <!-- <div class="row expanded quantity-selector">
+      <div class="selector-wrapper">
+        <label for="">{{ 'products.product.quantity' | t }}</label>
+        <div class="select shopify-select">
+          <select class="single-option-selector" id="productQuantity-{{ section.id }}" name="quantity">
+            {% if product.selected_or_first_available_variant.inventory_management  == 'shopify' and product.selected_or_first_available_variant.inventory_quantity > 0%}
+              {% assign max = product.selected_or_first_available_variant.inventory_quantity | at_most: 50 %}
+            {% else %}
+              {% assign max = 50 %}
+            {% endif %}
+            {% for i in (1..max) %}
+              <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+          </select>
+          {% include 'svg-arrow' %}
+        </div>
+      </div>
+    </div> -->
+  {% else %}
+    <input type="hidden" id="quantity" name="quantity" value="1" min="1">
+  {% endif %}
+
+MUTED VERSION (templating language does not work .. and buttons wont either bcs it won't be dynamic then) >
+--------
+
+(( C ))
+
+template duplicates with a striped down version for the tours only
+
+called tech support .. i guess cant duplciate .. but this forum page says someone did >
+
+query
+duplicate liquid page
+
+https://community.shopify.com/c/forums/searchpage/tab/message?filter=location,dateRangeType&q=duplicate%20liquid%20page&rangeTime=1y&location=category:en&collapse_discussion=true
+
+1
+https://community.shopify.com/c/Shopify-Design/Page-blank-after-duplicating-template-and-section/m-p/464884
+
+MESSAGE
+Hello Sasha! It seems you know what you 're doing so I thought I'd ask a quick question. I'm a developer (front end) and designer building a store for a client. The store is mostly shipped products, but there are also 3 'products' in the form of 3 different kinds of tours through their factory. So I found an app in the Shopify app store that turns renting time into a product so that it literally shows up in the product list. So that is done.
+
+But the problem is I don't need the buttons: quantity, add to cart and buy it now. All I need for the 3 tour products is a 'schedule' button. There are two way of adding that .. 1) in the template page called 'product-form.liquid' and 2) in the individual product pages themselves in the description section (by toggling the button to HTML editing).
+
+In #1 the button will show up on ALL product pages, which is what I don't want. But I did try to work around that and try to create some conditional JavaScript that removes the classes of the unwanted buttons on the 3 tour product pages (but keeps the buttons on all other product pages), but I don't know how to write that kind of conditional JavaScript.
+
+So my first question is do you know how to write conditional JavaScript that targets just three product pages, to remove the quantity, add to cart and buy it now buttons? If I had that I could manually add the 'schedule' button in the HTML section of the description section on the product pages.
+
+The problem with conditional JavaScript is that I believe it has to access the entire DOM of the page the content is on, not just part of the page .. meaning I don't think I can implement JavaScript in the HTML section of the description section of the product pages (unless it can access the entire DOM from there). I think the JavaScript has to be written into the liquid parent page product-form.liquid in order to successfully conditionally remove classes.
+
+Are you with me? Ha .. hope this makes sense! If you need links I can send them.
+
+One other thought .. this thread I'm replying in .. he said he was able to duplicate liquid pages. THAT would be great .. then I could take a single duplicated page and strip it down to only the one button I need for the tour pages and I'd be good to go. But I called Shopify tech support and they told me that's not possible .. that I can only duplicate an entire theme. Has to be a way though .. this is Shopify!
+
+Attached is a screenshot of the buttons on a product page I'm referring to. This particular page is a tour page .. so I'd need conditional JavaScript to remove the top three buttons and just keep the bottom 'schedule' button (which was coded into the HTML section of the description section of that product page.)
+
+Kind regards,
+Marcus
+--------
+
+(( D ))
+
+1
+The GENERIC TEMPLATE is showing how it's SCHEDULING IS SUPPOSED TO LOOK, with
+
+Duration
+30 minutes
+
+ADD TO CART
+BUY IT NOW
+
+schedule
+
+2
+PRODUCTS is
+
+ADD TO CART
+BUY IT NOW
+
+** how does it know to NOT show duration and schedule?
+
+schedule is in the individual product page.
+
+what about duration?
+--------
+
+(( E ))
+
+Put js in header or in js file that does product page
+
+
+--------
+
+(( F ))
+
+Find the liquid template that displays the tours on the FIRST PAGE and just add scheduling button there .. BOOM!
+
+in CUSTOMIZE it is the product list section
+
+in view source in browser the Buy<br>now button also targets what template it may be in + classes
+SECTIONS
+featured-product.liquid
+featured-products.liquid
+
+SNIPPETS
+featured-product.liquid
+
+found the 'buy now' button code > snippets > featured-product.liquid >
+
+            <div class="button">
+              <span class="btn border {{ settings.button_shape }}">
+                {{ 'products.product.buy_html' | t }}
+              </span>
+            </div>
+
+so try the fareharbor link there
+https://fareharbor.com/cheesehead/
+
+'buy now' is fine for now .. find way to 'schedule now'
+
+FOUND IT
+SNIPPETS
+featured-product.liquid
+line 51 >
+
+  <a class="info" href="{{ product.url }}"> 
+
+changed to
+
+  <a class="info" href="https://fareharbor.com/cheesehead/"> 
+
+mobile didnt work (stayed in shopfy) so maybe line 20 is mobile?
+
+line 20 >
+        <a href="{{ product.url }}" tabindex="-1">
+
+changed to
+
+        <a href="https://fareharbor.com/cheesehead/" tabindex="-1">
+
+
+aaaadn it is.
+
+
+
+
+-----------------------
+phone, address at top
+
+rich-text.liquid
+
+line 1 >
+<div class="rich-text">
+<div class="rich-text" style="margin:-60px 0px -30px 0px !important;">
+
+omitted
+
+-
+colors.scss.liquid
+
+.rich-text ORIG >
+
+/* Rich text */
+.rich-text{
+  padding: 0 $page_padding;
+  #rte{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: $page_padding 0;
+  }
+}
+
+@media (max-width: $big_phone_max_width){
+  .rich-text{
+    padding: 0 $mobile_page_padding;
+    #rte{
+      margin: 30px auto;
+    }
+  }
+}
+
+.rich-text NEW >
+
+/* Rich text */
+.rich-text{
+  padding: 0 $page_padding;
+  margin: -50px 0px -30px 0px !important; /* ADDED */
+  #rte{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: $page_padding 0;
+  }
+    /* ADDED */   
+    #rte p{
+    font-size:1.2em !important;
+  }
+}
+
+@media (max-width: $big_phone_max_width){
+  .rich-text{
+    padding: 0 $mobile_page_padding;
+    #rte{
+      margin: 0px auto;
+    }
+    /* ADDED */   
+    #rte p{
+    font-size:1.2em !important;
+  }
+  }
+}
+
+
+
+
+-----------------------
+MAIN category titles
+
+SECTIONS > collection-template.liquid
+
+line 1-3 >
+
+<div class="content" data-section-id="{{ section.id }}" data-section-type="collection">
+  {% include 'collection' %}
+</div>
+
+to
+
+<div class="content" data-section-id="{{ section.id }}" data-section-type="collection" style="font-size:4.5em !important;">
+  {% include 'collection' %}
+</div>
+
+didint work so go to class in colors.scss.liquid >
+
+categories
+all
+
+line 3014 >
+          @include font-header(15px, $color_body_text);
+
+to
+
+          @include font-header(21px, $color_body_text);
+
+
+
+
+-----------------------
+reduced header height
+
+Assets > colors.scss.liquid > line 1470-1483
+
+orig >
+
+h1.logo{
+  @include font-header($header_logo_font_size, $color_header_text, $header_weight_bold);
+  line-height: $header_logo_line_height;
+  word-wrap: break-word;
+  @include header-transition(font-size);
+  img{
+    max-width: 100%;
+    display: block;
+    @include header-transition(width);
+  }
+  span {
+    @include font-loading-transition();
+  }
+}
+
+edited >
+
+
+
+
+-----------------------
+fixing double space on collection page
+
+<style>
+html {
+  line-height: 1 !important;
+}
+</style>
+
+<style>
+html {
+  line-height: 1em !important;
+}
+body {
+  line-height: 1em !important;
+}
+</style>
+
+-
+in Customizations click 'Collection Pages' for more settings .. but not much with spacings
+
+collection header can be taken out
+
+price is in wrong place too .. can fix that in the template as well
+
+-
+FOUND IT .. in >
+
+snippets > collection-products.liquid
+but messes up home page product spacing
+
+same with
+snippets > collection-product.liquid
+
+style="line-height: 1em !important;"
+
+-
+ABOVE (SECTIONS > collection-template.liquid) you changed the font size to 4.5em .. that may mess with line height as well
+
+line 1-3 >
+<div class="content" data-section-id="{{ section.id }}" data-section-type="collection" style="font-size:4.5em !important;">
+  {% include 'collection' %}
+</div>
+
+removing this FIXED the error but didnt change the font size so you must have done that in colors.scss.liquid >
+line 3014 >
+15 px to 21 px
+
+changed to 18px
+
+
+
+
+
+
+
+
+end end
