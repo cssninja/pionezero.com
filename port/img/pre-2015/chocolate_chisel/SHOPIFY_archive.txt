@@ -1,0 +1,173 @@
+Elizabeth and John .. I've recently discovered Shopify has done a ton of upgrading not only in it's UI (appearance and ease of use) but also features they've added to both keep up with competition and blow them out of the water. For the reasons I get into below I recommend we use Shopify as your sales platform (** and we can use the current template in Webflow for your personal artisan site John if you wish .. which also by the way can be migrated over to Shopify when we are done designing it in Webflow.)
+
+One awesome feature cost wise is that you won't have to pay a thing while I'm developing your site in Shopify as I am a 'Shopify Partner' now, a special partnership Shopify allows with web developers who develop stores on the Shopify platform. Shopify allows us to develop stores to the very end and when the store is ready to be launched THEN you buy the template (which is roughly $180). So say it takes the summer to finish your site .. you pay in August or so. The monthly hosting fee is cheaper than Webflow as well ($29/m).
+
+Below is what I've found .. and further below is a list of templates we should go over in a next meeting. Sorry we are redoing this but this is way better than Webflow .. you can basically build a chocolate empire online with Shopify now .. a professional path I'd recommend for your store.
+
+Kind regards,
+Marcus
+
+262-421-5780
+pionezero.com
+
+
+
+------------------
+BIGGEST CRITERIA IN WEBFLOW VS SHOPIFY VS GODADDY
+------------------
+
+I compared Shopify with GoDaddy, Big Commerce, Volusion, Big Cartel and a few others as well .. there's no comparison. The biggest competitor with Shopify was Volusion for sales, GoDaddy for cheap hosting and Webflow for design capability.
+
+These were the most important criteria:
+
+Price
+24/7 phone support
+Marketing online
+Design flexibility
+
+SUMMARY >
+Webflow is best for designing from scratch
+Shopify is best for selling online (plus has AMAZING phone support)
+GoDaddy is best for cheap hosting of non-ecommerce websites
+
+
+
+------------------
+WHY SHOPIFY BLOWS EVERYONE OUT OF THE WATER
+------------------
+
+https://www.shopify.com
+
+SHOPIFY SUPPORT
+https://help.shopify.com/en/questions#/contact
+855-816-3857
+
+1
+DEVELOPER MODE AS SHOPIFY PARTNER (me that is)
+
+I've had extensive tech support calls with Shopify .. I can develop your store under my account where I will be a 'Shopify partner' (a developer), which gives us a ton of benefits for developing the store:
+  a) my 14 day trial is extended to as long as i want (FREE store development in other words)
+  b) we get free 'beta testing' of up to 50 orders to test the store before launch (and can request more)
+  c) I get full access to the code
+
+2
+BEST PART
+
+Also, Shopify has crushed competition with the following additions:
+  a) Facebook ads and Google ads now BUILT INTO Shopify
+  b) If not selling there's a PAUSE PLAN on Shopify (where you pay less monthly)
+  c) You can even do MULTIPLE SITES (duplicates of the template you're using) that you can switch to as seasonal or promotional options
+  d) ** SHOPIFY NOW HAS A 'BUY BUTTON' THAT DOES EXACTLY WHAT SELZ AND ECWID DOES, BUT NO ADDITIONAL COST (allowing you to create shopping carts anywhere):
+
+    - you can post a single product or a collection of products anywhere on the web OUTSIDE OF YOUR SHOPIFY HOMEPAGE
+    - buy buttons are through HTML code snippet (embedded in code) or through an HTTP checkout link
+
+    you can post buy buttons here:
+    - web site
+    - blog
+    - Facebook page
+    - Facebook Messenger
+    - Instagram
+    - Pinterest
+    - Amazon via Amazon Seller's Central account
+    - Ebay sales channel
+    - email campaign
+
+    ref: https://help.shopify.com/en/manual/sell-online/buy-button
+    (see menu on the left that shows all the sales channel possibilities)
+
+    - You can also post buy buttons through OTHER SALES CHANNELS VIA SHOPIFY APPS .. Facebook's WhatsApp is an example of another sales channel (over 2 BILLION users)
+      ref: https://apps.shopify.com, type 'sales channel'
+    - Shopify Academy .. teaches you to grow your online store, esp through Instagram
+       ref: https://www.shopify.com/academy
+
+
+
+------------------
+FAVORITE SHOPIFY THEMES FOR FOODIE SMALL BUSINESSES
+https://themes.shopify.com/themes
+$180
+------------------
+
+Colors (Generic)
+https://themes.shopify.com/themes/colors/styles/generic (click 'VIEW DEMO')
+- large bold imagery and print
+- no built-in user login but the beauty of Shopify is that I can add it via their apps (in this case an app called Flits: Customer Account Page)
+- product categories
+- nice big product grid
+- simple and very easy to navigate
+- excellent uncluttered MOBILE (important)
+- blog area
+- Instagram
+
+Kagami (Kyoto)
+https://themes.shopify.com/themes/kagami/styles/kyoto (click 'VIEW DEMO')
+- announcement bar at top
+- user login
+- currency options
+- goes right into product with large images
+- video
+- awesome large product grid towards middle
+- collections area below grid
+- cool map at bottom
+- ultra magnification for product image (on individual product pages)
+- awesome MOBILE
+- blog
+- Instagram
+
+Galleria (Empire)
+https://themes.shopify.com/themes/galleria/styles/empire (click 'VIEW DEMO')
+- interesting split presentation at top
+- announcement bar at top
+- user login
+- product categories
+- featured product
+- product grid further down
+- video capability in a few places
+- good MOBILE upper image (often too small) and overall MOBILE .. product images on product pages can be bigger in MOBILE
+- blog
+- Instagram
+
+District (District)
+https://themes.shopify.com/themes/district/styles/district (click 'VIEW DEMO')
+- announcement bar at top
+- user login
+- currency options
+- best sellers
+- lots of video
+- product categories
+- product grid towards middle
+- excellent MOBILE
+- blog
+- Instagram
+
+Prestige (Couture)
+https://themes.shopify.com/themes/prestige/styles/couture (click 'VIEW DEMO')
+- announcement bar at top
+- reviews on product page
+- user login
+- currency options
+- right into product
+- featured products and collections
+- has video further down
+- 'buy now' on homepage (popular with experienced Shopify designers .. must work)
+- excellent MOBILE (full width product images on product pages)
+- blog
+- Instagram
+
+
+
+------------------
+EMAIL REROUTING
+------------------
+
+I talked with Godaddy support and you CAN host your email elsewhere:
+
+- For email the 'mx record' has to be accessed .. mx record = part of dns zone file page that has both domain and email info on it
+-  Lets say you want to change hosts from GoDaddy to Shopify .. since Shopify does not host emails do the following:
+  - get a Google G Suite account
+  - get Google's 'mx record'
+  - enter Google's mx record in GoDaddy (DNS zone file page)
+  - DONE
+- As opposed to domain transfer where you CAN transfer domain origination from one host to the next, you can't do this with email as there's there's no governing body like ICANN has for domains .. all you do is just delete the hosting account, get a new host and enter the same exact email there basically (along with the mx record steps above) .. it's part of 'email rerouting'.
+

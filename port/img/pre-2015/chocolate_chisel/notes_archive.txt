@@ -1,0 +1,474 @@
+----------------------------
+CONTACTS
+----------------------------
+
+lassolizzy@gmail.com
++12624831133
+
+jr@reichert-studios.com
++12624831314
+
+chocolate chisel
++12622610200
+
+
+
+----------------------------
+MIGRATION LETTER
+----------------------------
+
+----------------
+CONTENTS
+----------------
+
+INTRO
+OLD
+NEW
+COMPARISON
+WEBFLOW LIVE
+SLACK
+DROPBOX
+DESIGN MEETINGS CENTERED ON UX (User Experience)
+SUMMARY
+
+
+
+----------------
+INTRO
+----------------
+
+( *Please PRINT this message for reference! You can print it from the attached PDF. )
+
+John and Elizabeth,
+
+Below is basically a UX GUIDE for your business, a start at least .. starting with migration details from the old to the new .. why Webflow is so AWESOME .. how we can can communicate during this design journey via Slack and Dropbox .. and then beginning the UX process. Just remember one thing about UX .. it stands for 'user experience' so the goal is to serve and please your niche of users (and acquire new ones) using the latest UX tech.
+
+To make this all worth it even more I've offered to do this for you guys free (or on a donation basis if you feel so inspired, but not required.) As I mentioned to you, I'm maintaining and upgrading my portfolio in preparation for interviews with Silicon Valley tech companies later this year, so I will be documenting our design process lots (something they look for in portfolios.)
+
+To this end I'd like to give Chocolate Chisel a radically improved look online .. not only with:
+
+1) your new template
+2) selling on multiple store locations (which you have not done before)
+3) AI chat bot integration
+
+4) but I've also had the idea of designing custom icons for your site, something really unique and creative like little 'chocolate chisel creatures' that appear in different places on the site to give more life to the overall user experience. Lots of businesses use little branded creatures (or monsters, magical animals, anime creatures, whatever they are called) to give their brand life and quirkiness. Here are some examples:
+
+https://www.etsy.com/listing/187656160/childrens-book-monsters-in-my-house
+https://www.etsy.com/listing/163380506/cute-acrylic-fox-kitsune-charm-3-tailed
+
+I actually created a Pinterest board just for this topic, here:
+
+https://www.pinterest.com/pionezero/creature-iconography-art-and-illustration/
+
+Log into Pinterest and check it out. I think it would be a COOL idea to create a few little Chocolate Chisel anime creatures that could be your company companions .. I could illustrate them in posters eating your chocolates or drinking tea .. and this could be done MANY times for different campaigns and such (they can be printed as weatherproof banners to hang outside). Also .. could you guys create chocolate molds to make little chocolate anime creatures .. like a whole line of magical chocolate anime creatures? Check out the Pinterest board .. that's what it's about (and I'm adding pins all the time.)
+
+So overall even though your may be paying $6 more per month using Webflow (compared to GoDaddy + Big Cartel, or Shopify) .. what I'm giving you for free is an entirely new online store + lots of new illustrations and design features. So I think this easily offsets an extra $6/month. Normally I charge at least $3000 for such new web sites .. sometimes way more when accompanied by branding and extensive visual design. But I need my portfolio maintained .. so here I am!
+
+
+
+----------------
+OLD
+----------------
+
+GODADDY
+-- cancel the 2 or 3 year plan before the next payment cycle
+-- about $19/month
+
+BIG CARTEL
+-- this should also be cancelled before the next payment cycle
+-- $9/month
+
+Combined roughly $30/month.
+
+Both of these Elizabeth need to be disabled and cancelled so you are not paying monthly (or yearly) anymore .. unless you absolutely need the online store running in Big Cartel in the background while I design.
+
+In the mean time I will have a temporary home page set up soon in Webflow.
+
+
+
+----------------
+NEW
+----------------
+
+WEBFLOW
+-- we should add hosting sometime in the next few weeks .. I can work on maybe 20% (2 pages) of the site (including the home page, most important!) but the rest of the pages are 'locked' to editing until we add a hosting plan
+-- Webflow's Ecommerce plan is $36/month (if paid yearly .. $39/month if paid monthly) and includes all the features of GoDaddy + Big Cartel combined .. PLUS a ton more (described below)
+-- and as I've mentioned, you are getting this project 99% free from me .. so hopefully this offsets the cost of $6 per month more ;)
+
+Your old home page was not really a full e-commerce site running from a single portal .. it had very limited features for the shoppers to get acquainted with product .. limited design capability .. and .. had no CMS (content management system.)
+
+All that is changing .. we're migrating everything to a single platform - Webflow - which now gives you AMAZING STUFF, all explained HERE (you should really check out this link:
+
+https://webflow.com/ecommerce
+
+But here's the short list:
+
+1) Everything is managed from one location
+2) A powerful CMS giving you the ability to edit all your content
+3) The capability to redesign any page any way you want to way beyond the original template design .. and Webflow lets you design interactions and animations that target your chocolate-loving users .. all without having to know code
+4) The template you purchased is rooted in ecommerce, which means not having to log into Big Cartel any more for managing selling online, all that is done in the ecommerce section of the backend portal .. you also have built in product feature sections on the home page .. you also have full control over designing the look of your product pages, shopping carts and checkout pages .. and you can easily create special pages for seasonal promotions, advertising campaigns and coming soon previews
+5) Facebook and Instagram integration
+6) Manage inventory
+7) Auto tax calculation
+8) Stripe powered payments (it's like Paypal and is taking the web by storm)
+9) Product import via CSV
+10) You'll have a built in BLOG now as well
+11) The ability to sell product in multiple currencies
+
+There's a TON of features listed below that may be more meaningful to you as store owners than to me .. check it out:
+
+https://webflow.com/ecommerce
+
+
+
+----------------
+COMPARISON
+----------------
+
+By comparison ..
+
+COMBINED GODADDY + BIG CARTEL is roughly $30/month on average (without special 'buy in advance' promotions.)
+
+GODADDY Online Store is $30/month.
+
+SHOPIFY's basic ecommerce plan is $29/month.
+
+But both GoDaddy and Shopify do NOT have extensive design capabilities .. you are limited to a strict template design in GoDaddy and Shopify, whereas with Webflow you can redesign everything, no limitations. For instance with Shopify you need to pay additional monthly fees for a design app to do extensive custom editing. See https://webflow.com/vs/shopify.
+
+WEBFLOW'S BASIC ECOMMERCE PLAN is $36/month (if paid yearly .. $39/month if paid monthly)
+
+
+
+----------------
+WEBFLOW LIVE
+----------------
+
+To view the template's progress, go here:
+
+https://preview.webflow.com/preview/chocolate-chisel?utm_source=chocolate-chisel&preview=a29745cac4c08a8c1f9dd86f326c6108
+
+This is in 'editor' mode .. you can mess around with edits but cannot save them. To see the normal site outside of editor click the little EYE ICON in the upper left. And DEVICE ICONS are at the top so you can see how it looks in various viewport widths.
+
+
+
+----------------
+SLACK
+----------------
+
+I've invited both of you to Slack.
+
+To use Slack:
+
+1) Accept the invitation I sent
+2) Go to:
+https://pionezero.slack.com
+3) Follow login or sign-up instructions
+4) When you are there you will see the channel: #chocolatechisel on the left .. that is our chat channel
+
+Slack is a professional tool enabling company staff to chat all day long .. or project members (as we are) .. useful for by-passing email and live communication!
+
+
+
+----------------
+DROPBOX
+----------------
+
+I've invited both of you to Dropbox as well.
+
+To use Dropbox:
+
+1) Make sure you have it installed on your computer
+2) Log in
+3) Use this link to access our shared folder:
+https://www.dropbox.com/sh/2juwmdxho87ycpv/AABT1vaX5qqSg30jpFzYR328a?dl=0
+
+Just drag and drop to the screen for adding content .. and to download click the checkbox to the left of the item(s) then click 'Download' to the right.
+
+
+
+----------------
+DESIGN MEETINGS CENTERED ON UX (User Experience)
+----------------
+
+After we get all of the above squared away .. let's have other meeting(s) focused on UX DESIGN around the end of January (and after) to discuss the following, all of which are geared towards refining the user experience of your site .. reaaaaaaallllllllllyyyyyyyyyyyy important .. and when I mention a list please make sure you BOTH contribute to it.
+
+)))))))))))
+1) What NEW LOOK AND VIBE would you like Chocolate Chisel to have online?
+)))))))))))
+
+I will rely on both of you for this as you both work in the chocolate industry (and I don't) and are both chocolate artisans and have inner goals, visions, intuitions and dreams for your company. Dig deep within and tell me these things and I will represent them VISUALLY via illustrations, graphic design and in the UI/UX of your site (layout, user flow, information architecture, typography, color .. all that and more is involved in UI/UX .. 'user interface and user experience'). MAKE A LIST OF 10 THINGS YOU ENVISION OR WANT.
+
+For my creative input I've already suggested SMALL ICONS designed as little branded creatures (or monsters, magical animals, anime creatures) to add life to the user experience and to enhance your brand overall. They can be enlarged as well to be something more than icons (I'll make them vectors), such as campaign posters and such.
+
+)))))))))))
+2) Seeing you know your 'USER' (as we call them in the designer/developer world) very well .. how can we design your new site with chocolate-loving users in mind to accomplish the following:
+)))))))))))
+
+  a) keep them on the site as long as possible
+  b) address their needs
+  c) stimulate interest in chocolate if they are neutral to chocolate
+  d) make their browsing and shopping experience 'stupid easy'
+  e) arouse positive, happy and memorable emotions while on the site
+
+Step inside the chocolate-lover's heart and mind .. imagine you love chocolate and you want to reach product not only quickly but pleasantly, hassle free. Or imagine converting someone into a chocolate lover .. how could this be done?
+
+Be open to various media -- creative text content, images, illustrations and video (VERY popular now days, including LIVE STREAM VIDEO.)
+
+All these things comprise what is known as UX Design, or 'user experience design'. MAKE A LIST OF 10-20 THINGS THAT WOULD ANSWER THE ABOVE QUESTIONS. This section is really very important .. these are design features I have to integrate that will keep your users on your site (versus them 'bouncing' off it .. or, high 'bounce rate'). Both DESIGN (layout, information design, user flow, etc) + CONTENT (text, images, video) make for good UX.
+
+WE HAVE TO PROFILE YOUR USERS AND DESIGN FOR THEM.
+
+)))))))))))
+3) What are great CHOCOLATE ATTRACTORS?
+)))))))))))
+
+This may be an obvious question, but maybe not. What things attract people to chocolate? Brainstorm. Direct and indirect attraction to chocolate. MAKE A LIST OF 10 THINGS and I'll integrate this into your site.
+
+)))))))))))
+4) How would you like to expand upon or change your current BRAND MARK (the chisel made of chocolate in the logo) in order to attract, serve and make happy your users?
+)))))))))))
+
+And if you have no plans .. completely fine!
+
+But this not only refers to your logo but it can be other things that can be visually designed that evokes 'Chocolate Chisel' .. visual aids that when someone sees it they immediately think 'Chocolate Chisel'. MAKE A LIST OF 5 THINGS.
+
+)))))))))))
+5) What are your PRODUCT DESIGN needs?
+)))))))))))
+
+What PRODUCTS do you carry (or want to carry) that need design refinement? This can be NEW CHOCOLATE IDEAS or ANY PRODUCT.
+
+The way UX Designers think is that we enter into the hearts and minds of the (chocolate-loving) user, the user of a very specific NICHE (pleasure foods), to understand what they want, what evokes happy experiences, what retains their attention .. like that.
+
+It's all about UX .. user experience .. and not so much sometime about one's own needs, even as an artist .. iF YOUR GOAL IS TRAFFIC + REVENUE.
+
+( ( ( ( ( ( ( A green footprint and vegan products are also great goals as this is immensely popular on social media .. like a tidal wave. ) ) ) ) ) ) )
+
+So what chocolates are popular worldwide that you do not yet carry but could? What could you do to match or surpass any local competition? How can you refine your products so that they reflect WHAT IS POPULARLY WANTED?
+
+A new product line of MAGICAL CREATURE CHOCOLATES would be amazing .. I'd design all the illustrations for you. ;)
+
+)))))))))))
+6) What are your design needs for ASSETS THAT SUPPORT PRODUCTS?
+)))))))))))
+
+For instance, packaging design, or any other visual asset that supports your main product (chocolates)? Have any ideas for cool PACKAGING? Or an idea for an INFOGRAPHIC POSTER? Like that.
+
+What information, colors, keywords, shapes, sounds, aromas, tastes, experiences, places, thoughts, memories, emotions, textures or visual cues strongly evoke attraction to chocolate? MAKE A LIST OF 10-20 THINGS THAT EVOKE STONG ATTRACTION TO CHOCOLATE. These can be subtle as well, not overtly 'in your face'.
+
+These can be integrated into assets like packaging or web content that will in turn SUPPORT attraction to, interest in, retention upon and the frequent purchasing of .. chocolates. 
+
+)))))))))))
+7) Do you REALLY know your user?
+)))))))))))
+
+Facebook does! (And scaringly so ..)
+
+It might be worth while doing a cultural study of people who love, crave, live for and desire chocolate, In UX terms, this is known as 'ETHNOGRAPHY', or getting to know the culture of the niche your business caters to .. not necessarily the individuals but the overall culture, or what that group of people collectively cultivate. So addressing the culture in your content is indirectly addressing chocolate. This is all part of creating value in content (versus monotonous sales sales sales), content where someone is not immediately assaulted with the pressure to buy. In other words post content that addresses the culture, creating a 'conversation' and 'relationship' with their culture.
+
+For instance, you could in one campaign address the culture of wellness advocates, posting on the home page introduction something about wellness habits, your concern for your customer's health .. then at the end say how healthy chocolate is for the brain or cardiovascular health. [We can do this easily >> prepare MULTIPLE HOME PAGES that we can switch anytime you want .. and consider each one 'campaigns' that target different cultures.)
+
+To support the above ethnography approach, we should also do our homework with a fair amount of:
+
+  a) 'UX research' (getting data from user's actual experience on the site, with this tool > https://helio.app)
+  b) 'user research' (different from UX research, which is more about the personality of users) and
+  c) parsing 'big data' (in this case the only big data you'd have would be the Google Analytics embedded in your Big Cartel web store available for study.)
+
+But we can find such chocolate-loving profile data by Googling it too. Zurb has a great tool though > https://helio.app.
+
+The goal of such data is to obtain insight as to how to better serve (AND PLEASE .. emotional responses are important, hence UX or 'user experience') the niche that's attracted to your site .. or .. how to simply attract that niche if they have not found you yet. We need to learn specific traits (data points in all the data) of chocolate lovers and gear your content towards those data points.
+
+FACEBOOK ADS DO THIS MIRACULOUSLY. I'd highly recommend investing into this space. Facebook's algorithms are hauntingly good at finding people of a specific niche .. their algorithms have radically improved over the 10+ year history of Facebook .. and its evolved into AI (artificial intelligence.)
+
+WE ARE PRETTY MUCH DONE AT THIS POINT OF INTRODUCING YOU TO UX INTEGRATION Everything below #7 here is extra .. or can be titled: 'How to go ballistic with brand exposure'. But .. doing UX well on the web (emphasizing mobile devices) should be enough exposure if done well .. seeing everyone is addicted to the web, so let's just go where all the addiction is (and maybe try to improve that with 'healthy addictions'.)
+
+)))))))))))
+8) The universe's most pretty close to complete list of brand display options (or .. 'How to sell stuff online and offline')
+)))))))))))
+
+Below (A-F) is a 'brand guide' I wrote that began from a biotech startup in Madison I was working for. It includes:
+
+A) drag and drop platforms
+B) frameworks (code libraries) that you can pretty much design from scratch from
+C) brand itself
+D) UX design
+
+and then two additional forms of brand display (not including 'platforms' above):
+
+E) web
+F) non-web
+
+These are just here to stimulate new ideas .. you won't have to answer questions.
+
+---
+(A) PLATFORMS FOR EASY DRAG AND DROP TEMPLATED WEB-BASED BRAND DISPLAY
+---
+
+  1) Webflow
+  2) Big Cartel
+  3) Shopify
+  4) GoDaddy
+  5) Wordpress + Woocommerce
+  6) Bigcommerce
+  7) Volusion
+  8) and if you want to be cool, Bootstrap integrated with API-based CMS using GraphCMS (based on Facebook's GraphQL, but that requires hardcore coding and expense if done from scratch) .. where you can post to multiple locations from a single portal using API. 
+
+We already discussed this section though and WEBFLOW SQUEAKED OUT ON TOP! And actually we'll be doing #8 with Ecwid or Selz (instead of me designing it from scratch) because that's exactly what they do.
+
+---
+B) UX FRAMEWORKS FOR BRAND DISPLAY
+---
+
+  1) 2-D based frameworks: Bootstrap and Foundation
+  2) 3-D based framework: Google's Material Design
+  3) All the code written from scratch (used to do this, too time consuming)
+  4) Platform that allows 2-D, 3-D and from scratch pretty much -- Webflow (my best choice out of all the competition, most of which are INFLEXIBLE to design changes, or EXPENSIVE to do so with proper developer access)
+
+---
+C) THE BRAND ITSELF
+---
+
+  1) BRAND ESSENCE: pure design, regardless if it finds itself on the web or non-web:
+    a) concept
+    b) form (color palette, font and typography, etc) 
+  2) BRAND DISPLAY: this is the 'playground' of refined brand, which has two locations:
+    a) the web
+    b) the non-web
+
+---
+D) UX DESIGN FOR YOUR UNIQUE USERS
+---
+
+Covered in #1 - #7 above in DESIGN MEETINGS CENTERED ON UX (User Experience)!
+
+---
+E) BRAND DISPLAY OPTIONS THAT DON'T REQUIRE CODING WEB PAGES (but may require other forms of coding):
+---
+
+  1) VIDEOS, LIVE STREAM (Youtube, Periscope, Twitter (uses Periscope), Instagram and Facebook) and webinars ------ DO THIS
+  2) SMS (text messages)
+
+  3) CHAT MEDIA, particularly with AI CHAT BOT INTERACTION (mostly for Whats App and Messenger seeing they had 1.5B and 1.3B monthly active users, respectively in Oct 2018.) In fact, as of Sept 2018, WhatsApp surpassed Facebook in growth: 30% versus 20%, but Facebook still has 2.2B monthly active users. There are various ways to tap into this user base .. AI CHAT BOTS IS THE BEST (not on your site, but within WhatsApp and Messenger) .. here are a few:
+
+    --- MESSENGER ---
+    a) Chatfuel .. https://chatfuel.com .. has free plan .. they power 46% of bots on Messenger (optimize with Dialogflow, Google's machine learning software, which also has a free plan, https://dialogflow.com, https://medium.com/janis)
+    b) FlowXO .. https://flowxo.com .. has free plan
+    c) Mobile Monkey .. https://mobilemonkey.com .. has free plan
+    d) Rocketbots .. https://rocketbots.io .. has free plan
+
+    --- WHATSAPP ---
+    a) Whatsapp Business API (for medium to large businesses) .. https://www.whatsapp.com/business/api .. must apply .. after approval can use this tool to create a chat bot > https://botsociety.io (has free plan) .. good tutorial > https://botsociety.io/blog/2018/09/whatsapp-bot/ 
+    b) Whatsapp Business app (for small business), can download in Google Play .. https://play.google.com/store/apps/details?id=com.whatsapp.w4b
+    c) IBM Watson .. https://www.ibm.com/cloud/watson-assistant/ .. has free plan
+    d) Rocketbots .. https://rocketbots.io .. has free plan
+    e) Xenioo .. https://www.xenioo.com .. has free plan
+
+  4) SOCIAL AND ONLINE MEDIA REACH (not chat): Twitter, Facebook, Instagram, Pinterest, Snapchat, LinkedIn, Vimeo, GitHub, Reddit, Amazon, Skype, Slack to name only the most popular .. some of these are 'hyper evolving' into diverse and powerful media, as Pinterest monetization + their new MARKETPLACE (you can sell there now), Spectacles with Snapchat (now called Snap, a camera company), Instagram ads, highly evolved ad forms in many of them .. the list goes on. Best advice: EXPLODE YOUR PRODUCT ON ALL THESE MEDIA SOURCES .. stay consistent .. then monitor and tweak with analytics. The ones I recommend the most to start with:
+
+    a) Facebook ads  ------ HIGHLY RECOMMEND
+        https://www.facebook.com/business/
+    b) Instagram ads:
+        https://www.facebook.com/business/marketing/instagram
+    c) Pinterest ads (relatively new):
+        https://help.pinterest.com/en/business/guide/becoming-an-advertiser-on-pinterest
+        https://business.pinterest.com/en
+
+  5) BLOG SPACE media (including curating comments, which helps with SEO and Google)
+  6) CREATIVE URL'S (start purchasing them on GoDaddy before others do! They start from $0.99)
+  7) DISPLAY DEVICES AND HARDWARE (cell, tablet, kiosk displays, digital signs, touchscreens)
+  8) IOT DEVICES ('Internet of Things') reach (have to figure out how this can be a brand playground)
+  9) DOWNLOADABLE MP3 PODCASTS AND AUDIO FILES
+  10) EMAIL .. acquire email databases then do mailings through services like MailChimp (free when under 2,000 subscribers)
+  11) EBOOKS
+  12) INTRANET
+  13) BROWSER PLUGINS (interesting possibilities here .. such as analyzing a page for wellness content, then making recommendations of wellness pathways that enhance all that with chocolate perhaps)
+  14) MOBILE APPS (huge category .. but the more SPECIFIC the app the better .. like it does ONE THING well .. perhaps one aspect of Chocolate Chisel or that leads to the use of Chocolate Chisel product .. for instance a wellness app that maps out healing pathways in human chemistry, endocrinology or immunology {which starts with gut health actually} .. then introduce the healing benefits of chocolate .. like that)
+  15) QR CODES (maybe make the code look like a chocolate, ha .. Pinterest recently created it's own version of a QR code that's quite creative and very colorful)
+  16) BLOCKCHAIN TOKENS (cryptocurrency) .. not sure how this could be a brand playground, maybe 'crypto-branding and encryption' .. popular tokens include Ether (on the Ethereum distributed network), Bitcoin, BAT (Basic Attention Token, baked into the new Brave browser) .. or your own .. that is, offering tokens can 'brand' Chocolate Chisel as offering currency (payment) options that may be attractive to some
+  17) VR and AR (virtual reality and augmented reality)
+
+Any one of these 17 BRAND DISPLAY OPTIONS can guide the design journey, particularly if your targeted user is highly embedded in any of these online 'playgrounds'. SOCIAL MEDIA IS ALWAYS A SAFE DECISION FOR DEVELOPMENT POSSIBILITIES .. I'D HIGHLY RECOMMEND GOING DEEP WITH FACEBOOK, INSTAGRAM AND PINTEREST.
+
+The end goal is to CREATE ENJOYABLE USER EXPERIENCES THAT ARE CLOSELY AFFILIATED WITH ONE OF THESE MEDIA SOURCES (versus thoughtlessly bombarding users with ads or the 'same old' brand mark.) Mix it up!
+
+Chocolate Chisel can create 'brand association' outside of a logo ..for instance, perhaps Chocolate Chisel could be known for its slew of short 5 minute YouTube videos that are highly educational on the topic of pathways to wellness using chocolate. People would say: "Oh they have great little healing videos". Or Chocolate Chisel could have a browser plugin that is really useful for educating people on wellness pathways (that chocolate helps fix.) All very enjoyable user experiences that can only make Chocolate Chisel popular. User retention, enjoyable experiences, content with appreciated value .. all this is the goal of good UX.
+
+---
+F) 55 BRAND DISPLAY OPTIONS THAT ARE 'DISCONNECTED' FROM THE INTERNET:
+---
+
+  1) plain old paper of all sorts (Google's Material Design mentioned above is modeled after paper believe it or not)
+  2) packaging (wrap and labels)
+  3) infographics
+  4) cards of various sizes, business cards, postcards
+  5) signage
+  6) LED signs
+  7) neon light art
+  8) book covers
+  9) books (including children's books on wellness)
+  10) wellness checklists
+  11) wellness maps (kind of like a layman's version of the Kreb's cycle or any cycle relevant to ingesting chocolate)
+  12) coffee cups and coasters
+  13) information packets
+  14) folders and portfolios
+  15) letterhead
+  16) brochures and flyers
+  17) posters and banners
+  18) magnets, pens and rubber bands
+  19) desk wedges and paperweights
+  20) bottle openers
+  21) name tags
+  22) stickers and post-its
+  23) receipts
+  24) bags
+  25) clothing (hoodies, t-shirts, hats, socks)
+  26) plaques, plates and awards
+  27) flags
+  28) gifts (you can be creative here .. from stuffed animals to chocolates to ornaments to candles)
+  29) 'Chocolate Chisel food' .. new food items -- CHOCOLATE CHISEL CREATURES MADE FROM CHOCOLATE! (anthropomorphized food)
+  30) 'Chocolate Chisel coffee' .. only a 'bulletproof coffee' version that feeds the brain healing fats like medium chain triglycerides (MCT's) + ketones
+  31) video, film, trailers
+  32) photography
+  33) HD drone media
+  34) 4K 3D camera media
+  35) art (in all forms)
+  36) material products .. vast possibilities (but for instance things printed, embossed, etched into a product like an etched logo in a vitamin)
+  37) 3D printing
+  38) trade show exhibits
+  39) endorsements
+  40) roadside billboards
+  41) music, songs and jingles
+  42) magazines, newspapers, newspaper columns, inserts, catalogues, mailings and door-to-door circulars
+  43) television, infomercials, radio and telephone
+  44) lecture media (Powerpoint)
+  45) white papers (pdf's)
+  46) trademarks
+  47) branded 'space' .. such as a brand built into building architecture (outside or inside)
+  48) ELA or the 'English-Language arts', which includes speaking + created conversational keywords and archetypes 'owned' or adopted by Chocolate Chisel ('human media')
+  49) surveys
+  50) store tours
+  51) athletic walks, runs and bike rides
+  52) contests, discounts, giveaways and goody bags
+  53) blimps, balloons, kites and flying things (had to throw this in)
+  54) sandwich board (kind of funny)
+  55) and hey if you're really old school (like ancient times) - graffiti .. including urban brick wall art and ads or sidewalk 3-D art (really cool stuff)
+
+
+
+----------------
+SUMMARY
+----------------
+
+You get the picture, basically Chocolate Chisel's reach using this vast variety of media where we are not buried in our cell phones. However, in a sense you can kind of ignore all of the above list of 55 since everyone DOES live in their mobile devices .. so pretty much mobile-first marketing should be a higher priority, but some of these are interesting.
+
+The goal of all of the above UX approaches is to not 'numb' your audience by monotonous bombardment of the SAME OLD THING .. but to delight them .. surprise them .. and with as much variety as possible for pleasant and memorable experiences .. content that is much appreciated for it's thoughtful, personal value to your target audience.
+
+That's it! That's the world of UX. See you at the next meeting. You don't have to master everything in this message .. just be aware of them and work with me .. I'll do the rest.
+
+Namaste,
+Marcus
+
+262-421-5780
+http://pionezero.com
+https://www.linkedin.com/in/cssninja
+https://twitter.com/cssninja
