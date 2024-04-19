@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chocolate Chisel | Bars</title>
+
+  <!-- ============= NOTES and CREDITS:
+     1) ORDER OF .css, .js IN BOTH TOP AND BOTTOM IMPORTANT, DON'T ALTER!! ALTERING WILL DISABLE SOME FUNCTIONS
+
+     2) MOSAIC refers to LAYOUT, https://github.com/sapegin/jquery.mosaicflow
+     3) FIT TEXT refers to SCALABLE TITLE TEXT, https://github.com/davatron5000/FitText.js
+     4) DARK DROPDOWN MENU of course refers to the top responsive MENU, http://responsive-nav.com/
+     5) STICKY FOOTER SOLUTION refers to FIXING FOOTER to bottom using #outer, .footer and .push, http://ryanfait.com/sticky-footer/
+
+  ============= -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ============= SMART DEVICE SCALING ============= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============= FONT ============= -->
+  <!--<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>-->
+  
+  <style>
+  @font-face {
+  font-family: 'benjaminfranklin-webfont';
+  src: url('font/benjaminfranklin-webfont.eot');
+  src: local('?'),
+    url('font/benjaminfranklin-webfont.woff') format('woff'),
+    url('font/benjaminfranklin-webfont.otf') format('opentype'),
+    url('font/benjaminfranklin-webfont.ttf') format('truetype'),
+    url('font/benjaminfranklin-webfont.svg') format('svg');
+  }
+
+  .fs_benjaminfranklin {
+    font-family: 'benjaminfranklin-webfont' !important;
+    color: #FFCA25;
+    font-size: 1em;
+  }
+  </style>
+
+  <!-- ============= COMBINED CSS ============= -->
+  <link rel="stylesheet" href="css/essential.css">
+
+  <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+  <script src="js/responsive-nav.js"></script>
+  
+  <!-- ============= ZOCIAL ============= -->
+  <link rel="stylesheet" href="css/zocial.css">
+
+</head>
+<body>
+
+  <div id="outer">
+
+    <!-- ============= DARK DROPDOWN MENU ============= -->
+    <div id="nav">
+      <ul>
+        <li><a style="background-color:#C0392B !important;" href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="http://thechocolatechisel.bigcartel.com/">Web Store</a></li>
+        <li class="divider"></li>
+        <li><a href="gallery.html">All Products Image Gallery</a></li>
+        <li class="divider"></li>
+        <li><a href="about.html">Visit Shop</a></li>
+        <li class="divider"></li>
+        <li><a href="corporateabout.html">Corporate Bars</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- ============= SCALABLE PAGE TITLES ============= -->
+    <div id="pinterest_font" class="fs_benjaminfranklin">
+    Bars
+    </div>
+    <!--<div id="pinterest_font2" class="lobster2">
+    Chocolate Chisel
+    </div>-->
+
+    <!-- ============= IMAGE GALLERIES LIST ============= -->
+    <div class="wrapper">
+        <!-- Can change number of columns in minItemWidth part of jquery.mosaicflow.min.js; changed from 240 (5 coulmns) to 300 (4 columns) -->
+        <!-- .mosaicflow__item p DISABLED in essential.css to make text visible -->
+	<div class="clearfix mosaicflow">
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/spike-the-watch-dog-bar-in-dark-or-milk" class="gallery"><img border="0" width="300" height="300" src="img/Corporate/Spike-Milk-Chocolate.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/spike-the-watch-dog-bar-in-dark-or-milk" class="gallery">Spike the Watchdog Bar in Dark or Milk Chocolate</a><p><span class="gallery2">He will protect you from the donuts your co-workers bring to the office. Woof him up and you will have the strength to snub your nose at those tempting deep-fried donuts loaded with sugar. Nutrient dense chocolate gives you energy to make it to lunch, and if you eat a dark chocolate Spike, plenty of anti-oxidents too. Spike comes one to a package. Please specify milk or dark. <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/spike-the-watch-dog-bar-in-dark-or-milk" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/classic-70-dark-bar-with-sea-salt" class="gallery"><img border="0" width="300" height="300" src="img/Bars/Bar-DarkClassicFront&Back-Salted.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/classic-70-dark-bar-with-sea-salt" class="gallery">Classic 70% Dark Chocolate Bar (with and without sea salt)</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/classic-70-dark-bar-with-sea-salt" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/classic-milk-chocolate-bar-with-sea-salt" class="gallery"><img border="0" width="300" height="300" src="img/Bars/Bar-MilkClassicFrontSalted.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/classic-milk-chocolate-bar-with-sea-salt" class="gallery">Classic Milk Chocolate Bar (with and without sea salt)</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/classic-milk-chocolate-bar-with-sea-salt" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery"><img border="0" width="300" height="200" src="img/Corporate/Nautilas-Milk.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery">The Nautilas Chocolate Bar (Milk)</a> <p><span class="gallery2">Hold this sea shell up to your ear to hear it's message, "Hellooooo there! I am the creamiest and most delicious chocolate bar ever...and by the way, eating dessert before dinner is a splendid idea" Great advice. For all of us who work here at The Chisel it is a way of life! The Nautilus chocolate bar comes one to a package. Please specify milk or dark. <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery"><img border="0" width="300" height="300" src="img/Corporate/NautilasDark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery">The Nautilas Chocolate Bar (Dark)</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/the-nautilus-chocolate-bar-spike-your-watch-dog-bar" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Bars/GiftBoxLipsDark.jpg" alt="">
+			<p><a href="#" class="gallery">Luscious Lips, Dark Chocolate</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Bars/GiftBoxLipsMilk.jpg" alt="">
+			<p><a href="#" class="gallery">Luscious Lips, Milk Chocolate</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Bars/GIftBoxMouseDCatM.jpg" alt="">
+			<p><a href="#" class="gallery">SophistiCat & Pip Squeak (Milk Chocolate Cat, Dark Chocolate Mouse)</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="300" src="img/Bars/GiftBoxMouseMCatD.jpg" alt="">
+			<p><a href="#" class="gallery">SophistiCat & Pip Squeak (Dark Chocolate Cat, Milk Chocolate Mouse)</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Bars/GiftBoxMouseWCatM.jpg" alt="">
+			<p><a href="#" class="gallery">SophistiCat & Pip Squeak (Milk Chocolate Cat, White Chocolate Mouse)</a></p>
+        </div>
+        <!-- END of classes clearfix mosaicflow -->
+	</div>
+
+    <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+    <div class="push"></div>
+
+    <!- wrapper END -->
+    </div>
+
+    <div class="footer" style="background-color: #C0392B !important; overflow:hidden; padding:44px 20px 20px 30px !important; text-align:center;line-height:1.1 !important;">
+
+      <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us" style="padding-bottom:8px;">
+	  	<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/biz/the-chocolate-chisel-port-washington" class="zocial yelp"></a>
+		<a href="https://twitter.com/ChocolateChisel" class="zocial twitter"></a>
+		<a href="http://www.pinterest.com/chocolatechisel/" class="zocial pinterest"></a>
+		<a href="https://www.facebook.com/chocolatechisel" class="zocial facebook"></a>
+		<a href="https://www.youtube.com/watch?v=K0DrdMmg6qc" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/pub/elizabeth-maccrimmon/9/98a/87b/" class="zocial linkedin"></a>
+		<!--<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>-->
+	  </div>
+	  
+    </div>
+
+  <!-- END outer -->
+  </div>
+
+    <!-- ============= MOSAIC SCRIPTS ============= -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.mosaicflow.min.js"></script>
+
+    <!-- ============= FIT TEXT, from http://fittextjs.com/ ============= -->
+    <!-- https://github.com/davatron5000/FitText.js, Font-size = 1/10th of the element's width. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#pinterest_font").fitText(1.2, { minFontSize: '28px', maxFontSize: '52px' });
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master), TOGGLE speed of transition and other option in 'Default options' in responsive-nav.js ============= -->
+    <script>
+      var navigation = responsiveNav("#nav");
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+    <!--[if lte IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>

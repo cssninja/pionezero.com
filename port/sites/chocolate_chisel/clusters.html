@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chocolate Chisel | Clusters</title>
+
+  <!-- ============= NOTES and CREDITS:
+     1) ORDER OF .css, .js IN BOTH TOP AND BOTTOM IMPORTANT, DON'T ALTER!! ALTERING WILL DISABLE SOME FUNCTIONS
+
+     2) MOSAIC refers to LAYOUT, https://github.com/sapegin/jquery.mosaicflow
+     3) FIT TEXT refers to SCALABLE TITLE TEXT, https://github.com/davatron5000/FitText.js
+     4) DARK DROPDOWN MENU of course refers to the top responsive MENU, http://responsive-nav.com/
+     5) STICKY FOOTER SOLUTION refers to FIXING FOOTER to bottom using #outer, .footer and .push, http://ryanfait.com/sticky-footer/
+
+  ============= -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ============= SMART DEVICE SCALING ============= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============= FONT ============= -->
+  <!--<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>-->
+  
+  <style>
+  @font-face {
+  font-family: 'benjaminfranklin-webfont';
+  src: url('font/benjaminfranklin-webfont.eot');
+  src: local('?'),
+    url('font/benjaminfranklin-webfont.woff') format('woff'),
+    url('font/benjaminfranklin-webfont.otf') format('opentype'),
+    url('font/benjaminfranklin-webfont.ttf') format('truetype'),
+    url('font/benjaminfranklin-webfont.svg') format('svg');
+  }
+
+  .fs_benjaminfranklin {
+    font-family: 'benjaminfranklin-webfont' !important;
+    color: #FFCA25;
+    font-size: 1em;
+  }
+  </style>
+
+  <!-- ============= COMBINED CSS ============= -->
+  <link rel="stylesheet" href="css/essential.css">
+
+  <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+  <script src="js/responsive-nav.js"></script>
+  
+  <!-- ============= ZOCIAL ============= -->
+  <link rel="stylesheet" href="css/zocial.css">
+
+</head>
+<body>
+
+  <div id="outer">
+
+    <!-- ============= DARK DROPDOWN MENU ============= -->
+    <div id="nav">
+      <ul>
+        <li><a style="background-color:#C0392B !important;" href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="http://thechocolatechisel.bigcartel.com/">Web Store</a></li>
+        <li class="divider"></li>
+        <li><a href="gallery.html">All Products Image Gallery</a></li>
+        <li class="divider"></li>
+        <li><a href="about.html">Visit Shop</a></li>
+        <li class="divider"></li>
+        <li><a href="corporateabout.html">Corporate Bars</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- ============= SCALABLE PAGE TITLES ============= -->
+    <div id="pinterest_font" class="fs_benjaminfranklin">
+    Nut Clusters
+    </div>
+    <!--<div id="pinterest_font2" class="lobster2">
+    Chocolate Chisel
+    </div>-->
+
+    <!-- ============= IMAGE GALLERIES LIST ============= -->
+    <div class="wrapper">
+        <!-- Can change number of columns in minItemWidth part of jquery.mosaicflow.min.js; changed from 240 (5 coulmns) to 300 (4 columns) -->
+        <!-- .mosaicflow__item p DISABLED in essential.css to make text visible -->
+	<div class="clearfix mosaicflow">
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/walnut-clusters-in-dark-chocolate" class="gallery"><img border="0" width="300" height="300" src="img/Clusters/WalnutClustersDark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/walnut-clusters-in-dark-chocolate" class="gallery">Walnut Clusters in Dark Chocolate</a> <p><span class="gallery2">Walnuts are amazing! They are the highest in anti-oxidants of any nut.  Walnuts are a nutrient-dense food: 100 grams of walnuts contain 15.2 grams of protein, 65.2 grams of healthy fat, and 6.7 grams of dietary fiber. The protein in walnuts provides many essential amino acids. Combined with nutrient rich and high in anti-oxidant dark chocolate, these clusters pack a nutritional wallop. Oh, and did we mention walnut clusters taste amazing? Yup, you gotta try 'em! <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/walnut-clusters-in-dark-chocolate" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/pecan-clusters-in-dark-or-milk-chocolate" class="gallery"><img border="0" width="300" height="300" src="img/Clusters/PecanClustersDark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/pecan-clusters-in-dark-or-milk-chocolate" class="gallery">Pecan Clusters in Dark or Milk Chocolate</a> <p><span class="gallery2">Ahhh..the pecan! The most popular nut in our shop. The pecan's sweet nutmeat nourishes your soul and your taste buds. These sirens of the South are small batch roasted and smothered with our smooth rich chocolate and lightly sea salt sprinkled. Put the world right again by satisfying all of your creamy, crunchy, and salty desires! <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/pecan-clusters-in-dark-or-milk-chocolate" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/peanut-clusters-in-milk-or-dark-chocolate" class="gallery"><img border="0" width="300" height="300" src="img/Clusters/Peanut Clusters Dark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/peanut-clusters-in-milk-or-dark-chocolate" class="gallery">Peanut Clusters in Dark or Milk Chocolate</a> <p><span class="gallery2">These roasted salted  peanuts are smothered in a smooth rich chocolate and lightly sprinkled with sea salt. Sneak these babies into the movies and savor the best chocolate covered goobers you’ve ever had. The creamy, crunchy, sweet and salty perfection of these peanut clusters will make any movie performance much more fun. <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/peanut-clusters-in-milk-or-dark-chocolate" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/cashew-clusters-in-milk-or-dark-chocolate" class="gallery"><img border="0" width="300" height="200" src="img/Clusters/cashewClusters-Dark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/cashew-clusters-in-milk-or-dark-chocolate" class="gallery">Cashew Clusters in Dark or Milk Chocolate</a> <p><span class="gallery2">"Am I awake or am I dreaming?" These cashew clusters are so dreamily delicious, you might wonder if you are having the best dream of your life!  The cashews are small batch roasted right here at The Chisel. Smothered in chocolate & sprinkled with sea salt, these clusters are the perfect blend of creamy and crunchy, salty and sweet. Life is a dream when eating a bag of cashew clusters. <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/cashew-clusters-in-milk-or-dark-chocolate" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<a href="http://thechocolatechisel.bigcartel.com/product/almond-clusters-in-milk-or-dark-chocolate" class="gallery"><img border="0" width="300" height="200" src="img/Clusters/AlmondClustersDark.jpg" alt=""></a>
+			<p><a href="http://thechocolatechisel.bigcartel.com/product/almond-clusters-in-milk-or-dark-chocolate" class="gallery">Almond Clusters in Dark or Milk Chocolate</a> <p><span class="gallery2">Small batch roasted right here in our facility, these crunchy almonds are smothered in a smooth rich chocolate with a sea salt sprinkling. Each cluster contains the perfect balance of creamy, sweet, crunchy and salty. Our chocolatiers blend the nuts and chocolate together by hand, giving you guilt-free bragging rights to all your friends, "My clusters are better than your clusters, oh yeah." <span style="color:#DA9E78"> (Allergy disclaimer: this product is made in a facility that also uses nuts.)</span></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/product/almond-clusters-in-milk-or-dark-chocolate" class="gallery"><span style="color:#FFCA25;">BUY</span></a></p>
+        </div>
+        <!-- END of classes clearfix mosaicflow -->
+	</div>
+
+    <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+    <div class="push"></div>
+
+    <!- wrapper END -->
+    </div>
+
+    <div class="footer" style="background-color: #C0392B !important; overflow:hidden; padding:44px 20px 20px 30px !important; text-align:center;line-height:1.1 !important;">
+
+      <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us" style="padding-bottom:8px;">
+	  	<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/biz/the-chocolate-chisel-port-washington" class="zocial yelp"></a>
+		<a href="https://twitter.com/ChocolateChisel" class="zocial twitter"></a>
+		<a href="http://www.pinterest.com/chocolatechisel/" class="zocial pinterest"></a>
+		<a href="https://www.facebook.com/chocolatechisel" class="zocial facebook"></a>
+		<a href="https://www.youtube.com/watch?v=K0DrdMmg6qc" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/pub/elizabeth-maccrimmon/9/98a/87b/" class="zocial linkedin"></a>
+		<!--<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>-->
+	  </div>
+	  
+    </div>
+
+  <!-- END outer -->
+  </div>
+
+    <!-- ============= MOSAIC SCRIPTS ============= -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.mosaicflow.min.js"></script>
+
+    <!-- ============= FIT TEXT, from http://fittextjs.com/ ============= -->
+    <!-- https://github.com/davatron5000/FitText.js, Font-size = 1/10th of the element's width. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#pinterest_font").fitText(1.2, { minFontSize: '28px', maxFontSize: '52px' });
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master), TOGGLE speed of transition and other option in 'Default options' in responsive-nav.js ============= -->
+    <script>
+      var navigation = responsiveNav("#nav");
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+    <!--[if lte IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>

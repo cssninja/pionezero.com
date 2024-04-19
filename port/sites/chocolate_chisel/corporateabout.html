@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <!--
+        ADDED TO ORIGINAL MARKUP:
+           1) RESPONSIVE TO SMART DEVICES
+           2) FOOTER FONT (Lato)
+           3) SOCIAL FOOTER CSS (font-awesome.min.cs and zocial.css)
+           4) CUSTOM EMBEDDED FONT
+           5) FOOTER 1 AND 2
+           6) STICKY FOOTER SHELL
+           7) STICKY FOOTER SOLUTION
+
+        SCRIPT LIST:
+           css________
+           font-awesome.min.css
+           zocial.css
+           bootstrap_dark.css
+           bootstrap-responsive.css
+
+           js________
+           modernizr-2.6.2-respond-1.1.0.min.js
+           http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+           jquery-1.9.1.min.js
+           bootstrap.min.js
+
+           font________
+           http://fonts.googleapis.com/css?family=Lato
+           http://fonts.googleapis.com/css?family=Lato:400
+           http://fonts.googleapis.com/css?family=Lato:700
+           http://fonts.googleapis.com/css?family=Lato:300
+           atwriter.ttf
+           santa_fe_plain.ttf
+           cooprblk.ttf
+           copperplate-gothic-light.ttf
+           FaunaOne-Regular.ttf
+        -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Chocolate Chisel, Port Washington, WI | About Our Custom Corporate Bars</title>
+        <meta name="description" content="">
+
+        <!-- RESPONSIVE TO SMART DEVICES (ADDED) -->
+        <!-- Set the viewport width to device width for mobile -->
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <!-- from https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+        <!-- FOOTER FONT (ADDED) -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+
+        <!-- SOCIAL FOOTER CSS (ADDED) -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/zocial.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="css/bootstrap_dark.css"> <!-- CHANGED, was bootstrap.min.css -->
+
+        <!-- CUSTOM EMBEDDED FONT -->
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            @font-face { 
+	        font-family: "atwriter";
+	        src: url(font/atwriter.eot);
+	        src: local("atwriter"), url(font/atwriter.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "santa_fe_plain";
+	        src: url(font/santa_fe_plain.eot);
+	        src: local("santa_fe_plain"), url(font/santa_fe_plain.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "cooprblk";
+	        src: url(font/cooprblk.eot);
+	        src: local("cooprblk"), url(font/cooprblk.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "copperplate-gothic-light";
+	        src: url(font/copperplate-gothic-light.eot);
+	        src: local("copperplate-gothic-light"), url(font/copperplate-gothic-light.ttf) format("truetype");
+            }
+            @font-face { 
+	        font-family: "FaunaOne-Regular";
+	        src: url(font/FaunaOne-Regular.eot);
+	        src: local("FaunaOne-Regular"), url(font/FaunaOne-Regular.ttf) format("truetype");
+            }
+            /* solution thanks to gonçalo peres at stack overflow, http://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-handheld-device-in-jquery || this is the only way these two media queries work .. when separated into .css and .html .. otherwise if both in .css the upper one disables the one below it */
+            @media only screen and (max-width: 760px) {
+              .laptop_disappear_at_760 { display: none !important; }
+            }
+           }
+        </style>
+
+        <link rel="stylesheet" href="css/bootstrap-responsive.css"> <!-- CHANGED, was bootstrap-responsive.min.css -->
+
+        <!--<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+
+    </head>
+
+    <body>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      NAVIGATION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="tel://12622610200"><!--Chocolate Chisel </a>-->Tel: +1 (262) 261-0200</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Store<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/">Main product page</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/category/chocolate-barks">Chocolate Barks</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/category/gift-boxes">Gift Boxes</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/product/all-natural-cocoa-lip-balms">Lip Balms</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/category/chocolate-bars">Chocolate Bars</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/category/chocolate-gear-chocolate-proverbs">Gear (Proverbs, Pins, Magnets)</a></li>
+                                    <li><a href="http://thechocolatechisel.bigcartel.com/category/nut-clusters">Nut Clusters</a></li>
+                                    <li><a href="shipping.html">Shipping policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visit Shop<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="about.html">Our Story</a></li>
+                                    <li><a href="gallery.html">All Products Image Gallery</a></li>
+                                    <li><a href="http://chocolatechisel.wordpress.com/2011/06/10/health-benefits-of-chocolate/">Factoids</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="corporateabout.html">Corporate Bars</a></li>
+                            <li><a href="index.html#contact">Contact Us</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      MAIN CALL TO ACTION      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <!-- NOTE: have not applied media queries for hero-unit h1 elements in bootstrap_dark.css .. appears to not be needed yet -->
+            <div class="hero-unit2" style="height:400px !important;">
+                <center>
+
+                <span class="logo_bigger"><a href="index.html"><img src="img/logo_1600x1000.png" style="width:300px !important; margin:-50px 0px 30px 0px;opacity:1.0;" alt=""></a></span>
+
+                </center>
+
+                <!-- ************** NEWS ************** -->
+                <!--<center><p class="fauna_one_submenu follow_uszzz" style="margin-top: -30px;background: #402D1E;padding:8px;border-radius:20px;opacity:0.9;">
+                <a href="#" class="zocial_lil opac">NEWS: Chocolate, ice cream and coffee tasting, Oct 12, 2013, 4-5 pm.</a>&nbsp;&nbsp;</center>
+                </p>-->
+                
+                <!-- sub-menu -->
+                <center><p class="fauna_one_submenu ipadb ipad2b ipad3b_home follow_uszzz smart" style="background: #0E0E0E;padding:8px;border-radius:20px;opacity:0.9;">
+                <a href="index.html" class="zocial_lil opac">home</a>&nbsp;|&nbsp;&nbsp;<a href="http://thechocolatechisel.bigcartel.com/" class="zocial_lil opac" style="color:#FFCA25 !important;">web store</a>&nbsp;|&nbsp;&nbsp;<a href="about.html" class="zocial_lil opac">visit shop</a>&nbsp;|&nbsp;&nbsp;<a href="corporateabout.html" class="zocial_lil opac">corporate bars</a>&nbsp;|&nbsp;&nbsp;<a href="index.html#contact" class="zocial_lil opac">contact</a></center>
+                </p>
+                
+            </div>
+
+        <!-- ` ` ` ` ` ` ` SINGLE COLUMN ` ` ` ` ` ` ` -->
+                            
+        <div class="main-container" style="color:#aaaaaa !important; margin-top:14px !important;" >
+            <div class="main wrapper clearfix textpage">
+
+                <article>
+                    <section>
+                        <a name="about"></a>
+                        <br /><h2>About Our Custom Corporate Bars</h2>
+
+                    <div class="span4"><p><span style="margin-right:20px;"><a href="#"><img src="img/cc_corp.jpg" style="display:block;margin:20px 20px 20px 0;width:90%;border-radius: 7px;-moz-border-radius: 7px;background: #353c46;padding:6px;"></a></span></div>
+
+                        <p>Yes, You Can Give a Pen...</p>
+
+                        <p>Make a lingering impression with your customers and clients using Chocolate Chisel's customized chocolate bars and truffles.</p>
+
+                        <p><span class="fancytext">Your marketing dollars are very precious</span> and we know you must make the best and most lasting impression possible with what you have.</p>
+
+                        <p>Yes, you can give a pen, a mug, or a pad of paper to reach your customers, but the truth is those items regularly get lost in the mug holding all of those pens and pretty soon your impression becomes blurred with everyone else's.</p>
+
+                        <p>Not true with our chocolate and truffles! <span class="fancytext">Our chocolate consistently leaves a lingering memory on one's palate and mind</span>.</p>
+
+                        <p><span class="fancytext">The Chocolate Chisel is known for its artisan designs and flavors</span>, all crafted right here in our shop, nestled in the heart of Port Washington, Wisconsin, just 30 minutes north of downtown Milwaukee.</p>
+
+                    <div class="span4"><p><span style="margin-right:20px;"><a href="#"><img src="img/fishday_corp.jpg" style="display:block;margin:20px 20px 20px 0;width:90%;border-radius: 7px;-moz-border-radius: 7px;background: #353c46;padding:6px;"></a></span></div>
+
+                        <p><span class="fancytext">We are able to take your company logo and hand craft an artisan chocolate bar representing your unique style and 'flavor'</span>. Bars can be custom-sized to make the strongest impact you are trying to achieve. To further impress, you can customize not only the size but also the <span class="fancytext">ingredients</span> that go into the chocolate. For example you can add fruit, nuts, caramels, herbs, spices-- any flavor profile you desire! We can design custom truffles to match your company colors. All of our truffles are skillfully painted by hand under the watchful eye of <span class="fancytext">master chocolatier <i>John Reichert</i></span>.</p>
+
+                        <p><span class="fancytext">Customized truffle boxes</span> range in size from one to fifty pieces with a wide variety of tastes, colors and designs. We can customize <span class="fancytext">gift baskets</span> based on your needs and price point. It all starts with a call! Please contact <span class="fancytext"><i>Jennifer Golemba</i></span> Vice President of Marketing and Sales, at <a href="tel://12622610200">(262) 261-0200</a> (store) to get started today!</p>
+                        <p>Check out a sample of corporate bars we've <a href="corporate.html">aleady done</a>.
+                    </section>
+                </article>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        </div>
+        <!-- /container -->
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      FOOTER GEARED TO SOCIAL ENGAGEMENT      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <!-- STICKY FOOTER SHELL (ADDED) -->
+        <div id="outer" style="margin-top:40px;">
+
+        <!-- FOOTER 1 (ADDED) -->
+	<div id="footer">
+	<!--<h1 style="font-weight: 200 !important;">stay in touch</h1>-->
+	<!--<h3 class="center follow">
+	We're social and we'd love to hear from you!</h3>-->
+	
+      <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us">
+	  	<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/biz/the-chocolate-chisel-port-washington" class="zocial yelp"></a>
+		<a href="https://twitter.com/ChocolateChisel" class="zocial twitter"></a>
+		<a href="http://www.pinterest.com/chocolatechisel/" class="zocial pinterest"></a>
+		<a href="https://www.facebook.com/chocolatechisel" class="zocial facebook"></a>
+		<a href="https://www.youtube.com/watch?v=K0DrdMmg6qc" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/pub/elizabeth-maccrimmon/9/98a/87b/" class="zocial linkedin"></a>
+		<!--<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>-->
+	  </div>
+
+          <!--<div class="follow_us fauna_one_footer">
+                The Chocolate Chisel,
+                125 West Grand Avenue,
+                Port Washington, WI 53074<br />
+                <a href="tel://12622610200">(262) 261-0200</a> | <a href="mailto:chocolatechisel@gmail.com">Email</a><br  />
+                <span style="font-size:22px;display:inline-block;vertical-align:bottom;line-height: 15px;">&#169;</span> 2013 - All Rights Reserved-->
+	  </div>
+
+	</div>
+
+        <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+        <div class="push"></div>
+
+        <!-- END outer, STICKY FOOTER SHELL -->
+        </div>
+
+
+
+
+        <!-- ` ` ` ` ` ` ` ` ` ` ` `      SCRIPTS      ` ` ` ` ` ` ` ` ` ` ` ` -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- http: excluded in original -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>

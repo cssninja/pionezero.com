@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chocolate Chisel | Truffles</title>
+
+  <!-- ============= NOTES and CREDITS:
+     1) ORDER OF .css, .js IN BOTH TOP AND BOTTOM IMPORTANT, DON'T ALTER!! ALTERING WILL DISABLE SOME FUNCTIONS
+
+     2) MOSAIC refers to LAYOUT, https://github.com/sapegin/jquery.mosaicflow
+     3) FIT TEXT refers to SCALABLE TITLE TEXT, https://github.com/davatron5000/FitText.js
+     4) DARK DROPDOWN MENU of course refers to the top responsive MENU, http://responsive-nav.com/
+     5) STICKY FOOTER SOLUTION refers to FIXING FOOTER to bottom using #outer, .footer and .push, http://ryanfait.com/sticky-footer/
+
+  ============= -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ============= SMART DEVICE SCALING ============= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============= FONT ============= -->
+  <!--<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>-->
+  
+  <style>
+  @font-face {
+  font-family: 'benjaminfranklin-webfont';
+  src: url('font/benjaminfranklin-webfont.eot');
+  src: local('?'),
+    url('font/benjaminfranklin-webfont.woff') format('woff'),
+    url('font/benjaminfranklin-webfont.otf') format('opentype'),
+    url('font/benjaminfranklin-webfont.ttf') format('truetype'),
+    url('font/benjaminfranklin-webfont.svg') format('svg');
+  }
+
+  .fs_benjaminfranklin {
+    font-family: 'benjaminfranklin-webfont' !important;
+    color: #FFCA25;
+    font-size: 1em;
+  }
+  </style>
+
+  <!-- ============= COMBINED CSS ============= -->
+  <link rel="stylesheet" href="css/essential.css">
+
+  <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+  <script src="js/responsive-nav.js"></script>
+  
+  <!-- ============= ZOCIAL ============= -->
+  <link rel="stylesheet" href="css/zocial.css">
+
+</head>
+<body>
+
+  <div id="outer">
+
+    <!-- ============= DARK DROPDOWN MENU ============= -->
+    <div id="nav">
+      <ul>
+        <li><a style="background-color:#C0392B !important;" href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="http://thechocolatechisel.bigcartel.com/">Web Store</a></li>
+        <li class="divider"></li>
+        <li><a href="gallery.html">All Products Image Gallery</a></li>
+        <li class="divider"></li>
+        <li><a href="about.html">Visit Shop</a></li>
+        <li class="divider"></li>
+        <li><a href="corporateabout.html">Corporate Bars</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- ============= SCALABLE PAGE TITLES ============= -->
+    <div id="pinterest_font" class="fs_benjaminfranklin">
+    Truffles
+    </div>
+    <!--<div id="pinterest_font2" class="lobster2">
+    Chocolate Chisel
+    </div>-->
+
+    <!-- ============= IMAGE GALLERIES LIST ============= -->
+    <div class="wrapper">
+        <!-- Can change number of columns in minItemWidth part of jquery.mosaicflow.min.js; changed from 240 (5 coulmns) to 300 (4 columns) -->
+        <!-- .mosaicflow__item p DISABLED in essential.css to make text visible -->
+	<div class="clearfix mosaicflow">
+	  <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CaramelAppleTruffle.jpg" alt="">
+			<p><a href="#" class="gallery">Caramel Apple</a></p>
+                  <p><span class="gallery2">Quisentential Caramel Apple in one magnificant bite. A two layer truffle, a milk chocolate apple topped with a creamy caramel layer and shelled in milk chocolate.</span></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="300" src="img/Truffles/SweetPotato Truffle.jpg" alt="">
+			<p><a href="#" class="gallery">Sweet Potato</a></p>
+        </div>
+	  <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/2012_06_06Strawberries.jpg" alt="">
+			<p><a href="#" class="gallery">Strawberries</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="300" src="img/Truffles/AlmostFudgeWeb.jpg" alt="">
+			<p><a href="#" class="gallery">Almost Fudge</a></p>
+                  <p><span class="gallery2">For chocolate afficiandos, no other flavors to distract you, a rich, chocolate-y, melt-in-your-mouth ganache, with a dark outer chocolate coating.</span></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/AmarettoCherryWeb.jpg" alt="">
+			<p><a href="#" class="gallery">Amaretto Cherry</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="300" src="img/Truffles/BananaDreamWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Banana Dream Pie</a></p>
+                  <p><span class="gallery2">A double layered truffle. The bottom layer is a creamy dark chocolate infused with natural banana, topped with a white chocolate "whipped cream." This heavenly truffle is encased in a thin milk chocolate shell.</span></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/BlueberryCupWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Blueberry Cheesecake</a></p>
+                  <p><span class="gallery2">A miniature cupcake filled with a white chocolate ganache adeptly blended with blueberry jam to taste just like blueberry cheesecake, with real dried blueberries on top too. You can eat the dark chocolate “cupcake” liner too.</span></p>
+        </div>
+        <!--<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CaramelAppleWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Caramel Apple</a></p>
+        </div>-->
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CaramelMacademiaWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Caramel Macademia</a></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/ChipotleWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Chipotle</a></p>
+                  <p><span class="gallery2">Rich dark chocolate melts in your mouth, and you think, "This isn’t hot." Then at the very end of the your taste experience, the chipotle pepper suddenly warms your tongue and escalates to its full heat, commanding your full attention. Consider it a 5 on the heat scale of 1-10. If you like medium salsa, this is for you.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/ChunkyDaveWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Chunky Dave</a></p>
+                  <p><span class="gallery2">A salute to our customer Dave's love of the Chunky bar of old. Our new mythically indulgent version includes a blended dark and milk chocolate creamy center filled with organic roasted salted peanuts, organic golden raisons, and organic Thompson raisons, encased with a thin milk chocolate shell. The colored cocoa butter exterior which is hand-painted by our talented chocolatiers, could hold its own in an art gallery.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CinnamonHabeneroWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Cinnamon Habenero</a></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CoconutCreme1WEB.jpg" alt="">
+			<p><a href="#" class="gallery">Coconut Creme</a></p>
+                  <p><span class="gallery2">Coconut lovers will be transported to angelic realms when they bite into this creamy, coconut-ty truffle with the top dipped in roasted, shredded coconut. The thin outer shell is dark chocolate. 'Nuff said.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CremeBruleeWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Creme Brulee</a></p>
+                  <p><span class="gallery2">Dark chocolate on the outside, creamy white in the inside, with carmalized sugar on the top. This creamy truffle will play your heartstrings as you let its deliciousness slowly melt in your mouth.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/CupOEspressoWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Cup of Espresso</a></p>
+                  <p><span class="gallery2">A darling coffee cup encased in either dark or milk chocolate. We grind Intelligentsia espresso beans to a fine powder and blend with chocolate. This chocolate coffee cup truffle packs a big java flavor. Who me tired? No way, not with two or three of these gems! Quite a few of our customers have told us these are a great pick-me-up.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/DarkOrangeWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Dark Orange</a></p>
+                  <p><span class="gallery2">Straight from the orange grove, natural orange oil is fully blended in the truffle center with our signature blend of chocolate and an outer shell of dark chocolate. A customer favorite and a year round treat. This is one truffle that is always in season.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/ExperiMindMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">ExperiMint Milk</a></p>
+                  <p><span class="gallery2">We consider this truffle one of our best experiments in our truffle making history. Triple distilled natural peppermint oil expertly blended into our creamy melt-in-your mouth chocolate ganache. Color coded with green exterior of cocoa butter and a flavor that exclaims, "Mint, Mint, Mint" for a refreshingly long time. Encased in milk chocolate for those that favor the milk.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/ExperiMintDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">ExperiMint Dark</a></p>
+                  <p><span class="gallery2">Same flavor as the Milk ExperiMint, different shape, and of course a dark chocolate shell. Mint lovers will rejoice with the flavor that exclaims, "Refreshing" long after the original truffle has melted and disappeared.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/GeorgeWashingtonWEB.jpg" alt="">
+			<p><a href="#" class="gallery">George Washington</a></p>
+                  <p><span class="gallery2">Packed full of dried tart cherries and roasted pecans and coated in dark chocolate, George Washington was one of our first creations. Its authentic, sincere and forthright disposition has kept it as one of our most popular.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/GoldenChampagneWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Golden Champagne</a></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/HazelnutHeavenWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Hazelnut Heaven</a></p>
+                  <p><span class="gallery2">This mountain of heavenly joy is full of “gianduia.” Gianduia is an Italian chocolate-hazelnut confection containing at least 30% hazelnut paste. We fresh roast and grind hazelnuts to make hazelnut butter and blend it with our milk chocolate ganache. A thin milk chocolate coating is the finishing touch. Be self-indulgent with this unpretentious beauty.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/LemonDropDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Lemon Drop Dark</a></p>
+                  <p><span class="gallery2">Real lemon explodes in your mouth as you bite into one of these drops of lemony sunshine. Our ganache is blended with lemon and coated with dark chocolate. No artificial flavor here! This is one bright drop of sunshine for any kind of day.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/LemonDropMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Lemon Drop Milk</a></p>
+                  <p><span class="gallery2">Real lemon explodes in your mouth as you bite into one of these drops of lemony sunshine. Our ganache is blended with lemon and coated with milk chocolate. No artificial flavor here! This is one bright drop of sunshine for any kind of day.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/MagicBeanWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Magic Bean</a></p>
+                  <p><span class="gallery2">No cup needed for this magic coffee fix. This caffeinated, dark chocolate truffle, shaped like a coffee bean, contains three crushed coffee beans to rev up your day and keep you jumping!</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/MandarinMagicnewWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Mandarin Magic</a></p>
+                  <p><span class="gallery2">White chocolate blends smoothly to enhance the mandarin orange flavor of this unique looking truffle. Take a bite to hop aboard your imaginary pirate ship, and sail away to your own tropical island.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/MangoTangoWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Mango Tango</a></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/MarbleDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Mascarpone Marble Dark</a></p>
+                  <p><span class="gallery2">Creamy and delicious, you’ll fall head over heals in love with this big beauty! A layer of creamy Mascarpone ganache over a layer of our acclaimed chocolate ganache, wrapped in a shell of Dark Chocolate and painted with a sea of colored cocoa butter. This is one marble that’s as beautiful as any, but certainly won’t be traded.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/MarbleMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Mascarpone Marble Milk</a></p>
+                  <p><span class="gallery2">Creamy and delicious, you’ll fall head over heals in love with this big beauty! A layer of creamy Mascarpone ganache over a layer of our acclaimed chocolate ganache, wrapped in a shell of Milk Chocolate and painted with a sea of colored cocoa butter. Other marbles may come and go, but this one will go the fastest.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/Mix.jpg" alt="">
+			<p><a href="#" class="gallery">Mix</a></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PassionFruitWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Passion Fruit</a></p>
+                  <p><span class="gallery2">Seemingly unpretentious milk chocolate outside; passionate, tropical and exotic inside.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PBbarDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Peanut Butter Bar Dark</a></p>
+                  <p><span class="gallery2">Peanut Butter lovers will be on cloud nine! This hefty bar, full of creamy organic peanut butter is enveloped in a dark chocolate shell, is equivalent in size to 2 ½ of many of our other truffles. Who needs gold when you have your own bar of peanut butter?</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PBbarMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Peanut Butter Bar Milk</a></p>
+                  <p><span class="gallery2">Peanut Butter lovers will be on cloud nine! This hefty bar, full of creamy organic peanut butter is enveloped in a milk chocolate shell, is equivalent in size to 2 ½ of many of our other truffles. Who needs gold when you have your own bar of peanut butter?</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PBtwirlDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Peanut Butter Twirl Dark</a></p>
+                  <p><span class="gallery2">A smaller version of our Peanut Butter Bar, creamy organic peanut butter is encased in a dark chocolate shell. This tasty morsel is just enough to satisfy your nutty craving and fits nicely into any boxed presentation.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PBTwirlMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Peanut Butter Twirl Milk</a></p>
+                  <p><span class="gallery2">A smaller version of our Peanut Butter Bar, creamy organic peanut butter is encased in a milk chocolate shell. This tasty morsel is just enough to satisfy your nutty craving and fits nicely into any boxed presentation.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/PortWineConeWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Port Wine Cone</a></p>
+                  <p><span class="gallery2">One bite of this cone will flush your cheeks and relax your soul. Elegant and smooth, you’ll find your happy place in this authentic Port Wine melded with chocolate ganache, hidden inside a dark chocolate shell.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/RomanianRoseDarkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Romanian Rose Dark</a></p>
+                  <p><span class="gallery2">Requested by a Romanian friend, this truffle is a dance of raspberry and hazelnut butter, twirling inside a Dark Chocolate shell. We roast our hazelnuts and handcraft them into hazelnut butter to create this masterpiece. Your taste buds will beg for more.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/RomanianRoseMilkWEB.jpg" alt="">
+			<p><a href="#" class="gallery">Romanian Rose Milk</a></p>
+                  <p><span class="gallery2">Requested by a Romanian friend, this truffle is a dance of raspberry and hazelnut, twirling inside a Milk Chocolate shell. We roast our hazelnuts and handcraft them into hazelnut butter to create this masterpiece. Your taste buds will beg for more.</span></p>
+        </div>
+        <div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Truffles/SoSublimenewRAW.jpg" alt="">
+			<p><a href="#" class="gallery">So SubLime</a></p>
+                  <p><span class="gallery2">A magnificent harmony of good looks and taste. The lime flavor is blended to subtle perfection in this white chocolate truffle. Colored cocoa butter gives this white chocolate exterior it’s lime color, while real lime essence mixes with the white chocolate ganache. Eat this an instantly balance your inner feng shui!</span></p>
+       </div>
+        <!-- END of classes clearfix mosaicflow -->
+	</div>
+
+    <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+    <div class="push"></div>
+
+    <!- wrapper END -->
+    </div>
+
+    <div class="footer" style="background-color: #C0392B !important; overflow:hidden; padding:44px 20px 20px 30px !important; text-align:center;line-height:1.1 !important;">
+
+      <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us" style="padding-bottom:8px;">
+	  	<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/biz/the-chocolate-chisel-port-washington" class="zocial yelp"></a>
+		<a href="https://twitter.com/ChocolateChisel" class="zocial twitter"></a>
+		<a href="http://www.pinterest.com/chocolatechisel/" class="zocial pinterest"></a>
+		<a href="https://www.facebook.com/chocolatechisel" class="zocial facebook"></a>
+		<a href="https://www.youtube.com/watch?v=K0DrdMmg6qc" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/pub/elizabeth-maccrimmon/9/98a/87b/" class="zocial linkedin"></a>
+		<!--<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>-->
+	  </div>
+	  
+    </div>
+
+  <!-- END outer -->
+  </div>
+
+    <!-- ============= MOSAIC SCRIPTS ============= -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.mosaicflow.min.js"></script>
+
+    <!-- ============= FIT TEXT, from http://fittextjs.com/ ============= -->
+    <!-- https://github.com/davatron5000/FitText.js, Font-size = 1/10th of the element's width. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#pinterest_font").fitText(1.2, { minFontSize: '28px', maxFontSize: '52px' });
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master), TOGGLE speed of transition and other option in 'Default options' in responsive-nav.js ============= -->
+    <script>
+      var navigation = responsiveNav("#nav");
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+    <!--[if lte IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>

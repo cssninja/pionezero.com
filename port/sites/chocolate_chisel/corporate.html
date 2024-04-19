@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chocolate Chisel | Custom Corporate Logo Bars</title>
+
+  <!-- ============= NOTES and CREDITS:
+     1) ORDER OF .css, .js IN BOTH TOP AND BOTTOM IMPORTANT, DON'T ALTER!! ALTERING WILL DISABLE SOME FUNCTIONS
+
+     2) MOSAIC refers to LAYOUT, https://github.com/sapegin/jquery.mosaicflow
+     3) FIT TEXT refers to SCALABLE TITLE TEXT, https://github.com/davatron5000/FitText.js
+     4) DARK DROPDOWN MENU of course refers to the top responsive MENU, http://responsive-nav.com/
+     5) STICKY FOOTER SOLUTION refers to FIXING FOOTER to bottom using #outer, .footer and .push, http://ryanfait.com/sticky-footer/
+
+  ============= -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ============= SMART DEVICE SCALING ============= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============= FONT ============= -->
+  <!--<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>-->
+  
+  <style>
+  @font-face {
+  font-family: 'benjaminfranklin-webfont';
+  src: url('font/benjaminfranklin-webfont.eot');
+  src: local('?'),
+    url('font/benjaminfranklin-webfont.woff') format('woff'),
+    url('font/benjaminfranklin-webfont.otf') format('opentype'),
+    url('font/benjaminfranklin-webfont.ttf') format('truetype'),
+    url('font/benjaminfranklin-webfont.svg') format('svg');
+  }
+
+  .fs_benjaminfranklin {
+    font-family: 'benjaminfranklin-webfont' !important;
+    color: #FFCA25;
+    font-size: 1em;
+  }
+  </style>
+
+  <!-- ============= COMBINED CSS ============= -->
+  <link rel="stylesheet" href="css/essential.css">
+
+  <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+  <script src="js/responsive-nav.js"></script>
+  
+  <!-- ============= ZOCIAL ============= -->
+  <link rel="stylesheet" href="css/zocial.css">
+
+</head>
+<body>
+
+  <div id="outer">
+
+    <!-- ============= DARK DROPDOWN MENU ============= -->
+    <div id="nav">
+      <ul>
+        <li><a style="background-color:#C0392B !important;" href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="http://thechocolatechisel.bigcartel.com/">Web Store</a></li>
+        <li class="divider"></li>
+        <li><a href="gallery.html">All Products Image Gallery</a></li>
+        <li class="divider"></li>
+        <li><a href="about.html">Visit Shop</a></li>
+        <li class="divider"></li>
+        <li><a href="corporateabout.html">Corporate Bars</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- ============= SCALABLE PAGE TITLES ============= -->
+    <div id="pinterest_font" class="fs_benjaminfranklin">
+    Custom Corporate Logo Bars
+    </div>
+    <!--<div id="pinterest_font2" class="lobster2">
+    Chocolate Chisel
+    </div>-->
+
+    <!-- ============= IMAGE GALLERIES LIST ============= -->
+    <div class="wrapper">
+        <!-- Can change number of columns in minItemWidth part of jquery.mosaicflow.min.js; changed from 240 (5 coulmns) to 300 (4 columns) -->
+        <!-- .mosaicflow__item p DISABLED in essential.css to make text visible -->
+	<div class="clearfix mosaicflow">
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/animalfairy.jpg" alt="">
+			<p><a href="#" class="gallery">Animal Fairy</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/bemis.jpg" alt="">
+			<p><a href="#" class="gallery">Bemis Bar</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/chocchis.jpg" alt="">
+			<p><a href="#" class="gallery">Chocolate Chisel</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/denverartmuseum.jpg" alt="">
+			<p><a href="#" class="gallery">Denver Art Museum</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/fishday.jpg" alt="">
+			<p><a href="#" class="gallery">Fish Day</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/ford.jpg" alt="">
+			<p><a href="#" class="gallery">Ford Bar</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/mam.jpg" alt="">
+			<p><a href="#" class="gallery">Milwaukee Art Museum</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/music.jpg" alt="">
+			<p><a href="#" class="gallery">Music</a></p>
+        </div>
+		<div class="mosaicflow__item">
+			<img border="0" width="300" height="200" src="img/Corporate/tuesdayschild.jpg" alt="">
+			<p><a href="#" class="gallery">Tuesday's Child</a></p>
+        </div>
+        <!-- END of classes clearfix mosaicflow -->
+	</div>
+
+    <!-- STICKY FOOTER SOLUTION using #outer, .footer and .push, http://ryanfait.com/sticky-footer/ -->
+    <div class="push"></div>
+
+    <!- wrapper END -->
+    </div>
+
+    <div class="footer" style="background-color: #C0392B !important; overflow:hidden; padding:44px 20px 20px 30px !important; text-align:center;line-height:1.1 !important;">
+
+      <!-- Zocial Butons - http://zocial.smcllns.com - by Sam Collins (@smcllns) .. make sure all fonts are loaded, see zocial.css -->
+	  <div class="follow_us" style="padding-bottom:8px;">
+	  	<a href="mailto:" class="zocial email"></a>
+		<a href="http://www.yelp.com/biz/the-chocolate-chisel-port-washington" class="zocial yelp"></a>
+		<a href="https://twitter.com/ChocolateChisel" class="zocial twitter"></a>
+		<a href="http://www.pinterest.com/chocolatechisel/" class="zocial pinterest"></a>
+		<a href="https://www.facebook.com/chocolatechisel" class="zocial facebook"></a>
+		<a href="https://www.youtube.com/watch?v=K0DrdMmg6qc" class="zocial youtube"></a>
+		<a href="http://www.linkedin.com/pub/elizabeth-maccrimmon/9/98a/87b/" class="zocial linkedin"></a>
+		<!--<a href="#" class="zocial reddit"></a>
+		<a href="#" class="zocial googleplus"></a>
+		<a href="#" class="zocial vimeo"></a>
+		<a href="#" class="zocial instagram"></a>
+		<a href="#" class="zocial flickr"></a>-->
+	  </div>
+	  
+    </div>
+
+  <!-- END outer -->
+  </div>
+
+    <!-- ============= MOSAIC SCRIPTS ============= -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.mosaicflow.min.js"></script>
+
+    <!-- ============= FIT TEXT, from http://fittextjs.com/ ============= -->
+    <!-- https://github.com/davatron5000/FitText.js, Font-size = 1/10th of the element's width. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#pinterest_font").fitText(1.2, { minFontSize: '28px', maxFontSize: '52px' });
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master), TOGGLE speed of transition and other option in 'Default options' in responsive-nav.js ============= -->
+    <script>
+      var navigation = responsiveNav("#nav");
+    </script>
+
+    <!-- ============= DARK DROPDOWN MENU, from http://responsive-nav.com/ (responsive-nav.js-master) ============= -->
+    <!--[if lte IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>
