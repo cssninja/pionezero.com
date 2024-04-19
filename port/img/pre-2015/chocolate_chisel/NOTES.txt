@@ -1,0 +1,357 @@
+big cartel
+thechocolatechisel.bigcartel.com
+pass
+
+--
+Hi Marcus, 
+Yes, I want to go ahead. I need a simple page right now, that says:
+
+Our doors are closed temporarily because of Covid 19, but we are open for Contact-Free Curbside Pickups, Free Friday deliveries with a $20 purchase and shipping Mon-Friday, anywhere! 
+
+Email your ORDER, Name, & Phone No. to chocolatechisel@gmail.com by 2pm for same day pick-up or Friday delivery ( Marcus, we are going to create a new email just for Curbsides and Delivery, I will get that to you next week)
+
+We will call you to arrange Shipping,  Curbside Pick-Up or delivery, and Payment
+
+•Curbside: Tuesday-Sunday / 3pm-5pm
+•Delivery: Free with $20 purchase
+   Fridays Only / Port Washington & Saukville
+• Shipping / Anywhere/ Monday-Friday
+
+Let me know when you want the photos. I do want a sidebar with 1) Year Round Chocolates ( This one will have sub-catagories) 2) Easter 3) Mother's Day 4) Halloween 5) Thanksgiving 6) Christmas 7) Valentine's Day
+
+For now I am taking all photos with my cell phone, and later when I have time, I will photograph each one with my real camera professionally and replace them one by one. Right now I have all my Easter Bunnies photographed. 
+
+Thanks Marcus. Lets talk soon, 
+Elizabeth 
+
+--
+
+Hi Marcus, 
+Can you please redirect our current website to our Chocolate Chisel Facebook page? Please? Our old website has almost nothing of what we have now. OR just have Big cartel come up for now, and get rid of the rest? And make sure the link works to our chocolatechisel@gmail.com email address? Thanks for letting us know. Elizabeth 
+
+--
+
+Thanks so much. And maybe just the message about closed temporarily because of Corvid 19, and the directions on how to email etc, that I sent you before. Thanks Marcus. I really appreciate whatever you can do. Just let me know what you decided to do, so I know. Thanks again. E 
+
+--
+
+Hi Marcus, 
+Here is the info I think you need. 
+
+C Panel Login: gubz4t4wx3v4
+she gave us a generic password, that we need to change. 
+pass
+
+She said there is no SSL certificate on Big Cartel. She didn't know if it comes with Shopify, but if Shopify doesn't have it, we can purchase it from GoDaddy. We don't have it because we are on the Deluxe Shared Hosting plan right now with GoDaddy. Only the Ultimate or Maximum plans have it. She also said something about a record and DNS manager but I didn't know what she meant.
+
+Hope this is what you were looking for. Thanks, 
+Elizabeth
+
+--
+
+april 15 2020 call
+
+1
+-----------------------------
+-----------------------------
+GODADDY SITE LOGIN
+
+Username >
+pass
+
+Customer number >
+pass
+262-483-1133
+
+PIN >
+pass
+
+P >
+pass
+
+CPANEL >
+https://chocolatechisel.com/cpanel
+
+https://a2plcpnl0566.prod.iad2.secureserver.net:2083/
+pass
+-----------------------------
+-----------------------------
+
+2
+-----------------------------
+-----------------------------
+LOGIN OLD
+
+FTP for ORIGINAL >
+
+ADDRESS
+NO sftp .. must be FTP
+chocolatechisel.com
+173.201.145.1 WORKS
+
+U
+chocochisel
+
+P
+pass
+
+OLD ON LEGACY VERSION
+-----------------------------
+-----------------------------
+
+3
+NEW FTP IF NEEDED >
+
+timed out .. if continues .. create another ftp user >
+hosting details page
+https://hostingmanager.godaddy.com/AccountPanel.aspx?accountuid=8cc41313-2323-11df-8650-00114332b4ff&marketid=en-US#/
+
+click FTP user
+click add
+
+--
+services
+
+domain
+email
+
+--
+permission to delete DUPLICATE
+
+--
+most traffic to big cartel
+
+
+
+
+
+
+
++++++++++++++++++++++++++
+HACK
+
+godaddy texting  eliz phpne >
+262-483--1133
+red back msg to me
+then can log in
+013127
+GRANTED
+
+stared new c-panel
+
+new.thechocolatechisel.com/cpanel
+july 6 2019godaddy long
+sent to MY EMAIL
+(she has customer #)
+
+my products
+web hosting
+new.thechocolatechisel.com
+pass
+
+--
+FTP
+new.thechocolatechisel.com
+U
+pass
+P
+pass
+
+failed
++++++++++++++++++++++++++
+
+
+changing domain
+
+go to >
+
+my products
+web hosting
+new.thechocolatechisel.com
+on right > primary domain > manage .. change
+up to 24 hours .. but 5 min
+
+-----------------------------
+-----------------------------
+LOGIN NEW
+
+FTP (other server .. former new.thechocolatechisel.com, changed to chocolatechisel.com)
+ADDY >
+107.180.56.146
+U >
+pass
+P >
+pass
+
+success
+NEW CONFIRMED
+-----------------------------
+-----------------------------
+
+------
+change c-panel pass for user >
+pass
+
+new pass >
+pass
+
+cpanel login directly >
+https://a2plcpnl0566.prod.iad2.secureserver.net:2083/
+
+---------
+https://chocolatechisel.com/
+says 'pakeok'
+
+https://www.chocolatechisel.com/
+is still old ste
+
+so do i need to go into DNS settings to wet up www as well?
+
+and .. why am i logging into 2 locations?
+
+-
+ans
+tech guy went to DNS and included thechocolatechisel.com > up  to 3 hours propagation time
+
+https://chocolatechisel.com/
+white page with 'pageok'
+
+https://www.chocolatechisel.com/
+old
+legacy location still exists thats why its stil there
+
+http://thechocolatechisel.com/
+new
+
+
+
+-
+edits .. ended with >
+
+fixing menu issue (in inspector, not opening properly)
+
+dropdown menu also not clickable, z-index issue with margins
+check larger css
+
+continue scan of code then done
+
+may have to update the IP, that 173.201.145.1 is pointing to 107.180.56.146
+
+https://www.godaddy.com/community/Using-WordPress/Trying-to-browse-my-site-and-get-quot-pageok-quot-when-on-a-page/td-p/10059
+https://pagecrafter.com/pageok-hosting-error-with-godaddy/
+
+-
+april 16 godaddy call
+
+need to update ip adresss inside firewall
+understands 'pageok'
+
+asking > to turn off auto-renew hosting
+
+www will propagate (he turned it on)
+
+april 1, web security $299.99 (since renewal we reverse charge until 30th)
+feb 26, renewed hosting economy linux for $359 (OUTDATED HOSTING), 3 years
+(PLUS cpanel hosting as wel .. paid in 2019)
+reichert studio > move to deluxe cpanel
+
+3 hosting accots >
+1 linux hosting for recheirt .. paid till 9/14/2022
+2 old thechocolatechisel.com .. paid on 2/26/2020 for $359
+3 cpanel currently has NEW chocolatechisel.com .. oring paid 2017, added additional year in 6/6/2019 .. good till 2023
+
+$299 can reverse by april 30
+can take recheirt studio and put in paid up $359 hosting
+
+he cancelled renewal in cpanel acct (where new cc is)
+
+-
+second call
+
+firewall does cache
+
+maybe 24 hours will pass and the propagation will fix this
+
+IF UNRESOLVED POINT TO GITHUB
+
+----------------------------------
+YES! she flushed the firewall
+
+my products
+website security and backups
+website security, manage button neaer cc
+firewall tab
+firewall, clear cache
+----------------------------------
+
+-
+webflow to shopify >
+https://www.udesly.com/webflow-to-shopify/
+
+
+
+
+----
+call with godaddy may 3
+
+$300 was site security
+
+username + pass does not work
+
+but says we have site security BASIC so need to log into gmail to reset pass
+
+website securty EXPRESS cancelled
+
+have to long and APPLY BASIC SECURITY PACKAGE
+
+
+
+
+----
+second call with godaddy may 3
+
+can we get rid of old server and site an just have one login?
+
+
+tier 2
+
+
+
+
+
+
+
+----
+godaddy call may 8 2020
+
+need an SSL (temp)
+
+https://www.godaddy.com/help/manually-install-an-ssl-certificate-on-my-cpanel-hosting-12027?
+https://www.godaddy.com/help/generate-a-csr-certificate-signing-request-for-my-cpanel-hosting-32044?
+
+email used in certificate > pionezero@protonmail.ch (NO! used ilyrae@gmail.com)
+pass phrase for certif > pass
+
+INSTALL GOOD with ZEROSSL .. but mail.chocolatechisel.com not supported (they use gmail) >
+pass
+
+You have successfully updated the SSL website’s certificate.
+
+The SSL website is now active and accessible via HTTPS on this domain:
+
+chocolatechisel.com
+The SSL website is also accessible via this domain, but the certificate does not support it. Web browsers will show a warning when accessing this domain via HTTPS:
+mail.chocolatechisel.com
+The SSL certificate also supports this domain, but this domain does not refer to the SSL website mentioned above:
+www.chocolatechisel.com
+Click “OK” to reload this page.
+
+-
+NEW CERTIFICATE AUG 7 2020
+
+https://www.chocolatechisel.com/
+
+
+
+
+
