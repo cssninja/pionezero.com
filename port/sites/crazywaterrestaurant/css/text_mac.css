@@ -1,0 +1,199 @@
+/* general */
+* {margin:0;padding:0}
+body {
+  text-align:center;
+  background-color:#070707;
+}
+.p1 {
+  padding-top:12px;
+}
+.p2 {
+  padding-top:40px;
+}
+.p3 {
+  padding-top:12px;
+  padding-bottom:40px;
+}
+
+
+
+/* ( 1 ) screen shot image */
+#ss {
+  position:absolute;
+  left:0px;
+  top:0px;
+  /*width:100% only for wide*/
+  width:1006px;
+  height:700px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  z-index:1;
+}
+img.full {
+  /*wide: 1264px*/
+  max-width:1006px;
+  max-height:700px;
+  /*next 3 replaces html center tags .. DISABLED for narrow*/
+  /*display:block;
+  margin-left:auto;
+  margin-right:auto;*/
+  /*left:0px only for narrow*/
+  left:0px;
+}
+
+
+
+/* ` ` ` `( 2 ) vertical text scrolling */
+/* ` ` scrollbar elements */
+#scrollbar {
+  position:absolute;
+  left:964px;
+  top:112px;
+  width:30px;
+  height:467px;
+  font-size:1px;  /* so no gap or misplacement due to image vertical alignment */
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#scrollbar img {
+  border:none;
+}
+/* up arrow */
+#up {
+  position:absolute;
+  left:0;
+  top:0;
+}
+/* track background and drag bar */
+#track { 
+  position:absolute;
+  left:0;
+  top:34px;
+  width:30px;
+  height:396px;
+  background:#363636;
+}
+#dragBar {
+  position:absolute;
+  left:1px;
+  top:1px;
+  width:28px;
+  height:20px;
+  background-color:#5C5A5B;
+}
+/* down arrow */
+#down {
+  position:absolute;
+  left:0;
+  top:430px;
+}
+/* text */
+#wn { 
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:141px;
+  left:370px;
+  overflow:hidden;
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#wn a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+.text {
+  text-align:left;
+  font-family:"Arial";
+  font-size:15px;
+  font-weight:normal;
+  line-height:18px;
+  color:#9C9C9C;
+}
+.text_staff {
+  text-align:left;
+  font-family:"Arial";
+  font-size:18px;
+  font-weight:normal;
+  line-height:28px;
+  color:#2B292A;
+}
+/* for safari, to prevent selection problem  */
+#scrollbar, #track, #dragBar, #up, #down {
+  -moz-user-select:none;
+  -khtml-user-select:none;
+}
+/* so no gap or misplacement due to image vertical alignment font-size:1px in scrollbar has same effect (less likely to be removed, resulting in support issues) */
+#scrollbar img {
+  display:block;
+}
+
+
+
+/* ( 2 ) flash wisconsin foodie */
+#vidinterface { 
+  position:absolute;
+  width:400px;
+  height:301px;
+  top:200px;
+  left:70px;
+  overflow:hidden;
+  z-index:1;
+}
+#wflink { 
+  position:absolute;
+  width:400px;
+  height:40px;
+  top:510px;
+  left:70px;
+  overflow:hidden;
+  text-align:right;
+  z-index:100;
+}
+#wflink a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+
+
+
+/* ( 3 ) networking */
+#networking {
+  position:absolute;
+  left:0px;
+  top:590px;
+  width:1006px;
+  height:70px;
+  overflow:hidden;
+  z-index:100;
+}

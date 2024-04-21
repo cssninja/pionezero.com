@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<pagescount>
+	<html_total>7</html_total>
+	<html_done>7</html_done>
+	<images>7</images>
+	<script>4</script>
+	<css>1</css>
+	<pdf/>
+	<documents/>
+	<excel/>
+	<powerpoint/>
+	<flash/>
+	<audios/>
+	<videos/>
+	<xml/>
+	<json/>
+	<txt/>
+	<autocad/>
+	<fonts/>
+	<scraping_reload>1</scraping_reload>
+	<is_pretty_url>false</is_pretty_url>
+	<has_trailing_slash>false</has_trailing_slash>
+	<is_ebn>false</is_ebn>
+	<email>pionezero@protonmail.ch</email>
+	<theme_name>WmdTheme222491</theme_name>
+	<server_url_front_page>https://www.waybackmachinedownloader.com/scraping/files/demo/crazywaterrestaurant.com_pionezero_protonmail.ch_u66tluyqel/</server_url_front_page>
+	<no_www_url>crazywaterrestaurant.com</no_www_url>
+	<hosted_domain/>
+	<original_archive_url>http://web.archive.org/web/20161020045016/http://crazywaterrestaurant.com/restaurant.html#</original_archive_url>
+	<final_archive_url>http://web.archive.org/web/20161020045016/http://crazywaterrestaurant.com/restaurant.html</final_archive_url>
+	<front_page_code_date>20161020045016</front_page_code_date>
+	<total_urls_from_api/>
+	<max_reached_live>false</max_reached_live>
+	<scrape_other_captures>false</scrape_other_captures>
+	<total_size>392</total_size>
+</pagescount>
