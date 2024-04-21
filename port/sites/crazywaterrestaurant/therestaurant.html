@@ -1,9 +1,11 @@
 <html>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<title>Crazy Water | American Fusion Cuisine [ Reservations ]</title>
-	<link rel="canonical" href="http://crazywaterrestaurant.com/reservations.html" />
+
+<title>Crazy Water | American Fusion Cuisine [ The Restaurant ]</title>
+	<link rel="canonical" href="http://crazywaterrestaurant.com" />
 <!-- google uses this to find you -->
 <meta name="keywords" content=""/>
 <meta name="description" content=""/>
@@ -12,28 +14,243 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
 <!-- css toggled based on platform -->
 <script type="text/javascript" src="js/toggle2.js"></script>
 <!-- platform sensor -->
 <script type="text/javascript" src="js/platform.js"></script>
 <!-- vertical text scrolling (css also referred to here) -->
 <script src="js/scroll_mac2.js" type="text/javascript"></script>
+<!-- wisconsin foodie javascript -->
+<script src="js/wiscfoodie_swfobject.js" type="text/javascript"></script>
+
+<style>
+/* general */
+* {margin:0;padding:0}
+body {
+  text-align:center;
+  background-color:#070707;
+}
+.p1 {
+  padding-top:12px;
+}
+.p2 {
+  padding-top:40px;
+}
+.p3 {
+  padding-top:12px;
+  padding-bottom:40px;
+}
+
+/* ( 1 ) screen shot image */
+#ss {
+  position:absolute;
+  left:0px;
+  top:0px;
+  /*width:100% only for wide*/
+  width:1006px;
+  height:700px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  z-index:1;
+}
+img.full {
+  /*wide: 1264px*/
+  max-width:1006px;
+  max-height:700px;
+  /*next 3 replaces html center tags .. DISABLED for narrow*/
+  /*display:block;
+  margin-left:auto;
+  margin-right:auto;*/
+  /*left:0px only for narrow*/
+  left:0px;
+}
+
+/* ` ` ` `( 2 ) vertical text scrolling */
+/* ` ` scrollbar elements */
+#scrollbar {
+  position:absolute;
+  left:964px;
+  top:112px;
+  width:30px;
+  height:467px;
+  font-size:1px;  /* so no gap or misplacement due to image vertical alignment */
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#scrollbar img {
+  border:none;
+}
+/* up arrow */
+#up {
+  position:absolute;
+  left:0;
+  top:0;
+}
+/* track background and drag bar */
+#track { 
+  position:absolute;
+  left:0;
+  top:34px;
+  width:30px;
+  height:396px;
+  background:#363636;
+}
+#dragBar {
+  position:absolute;
+  left:1px;
+  top:1px;
+  width:28px;
+  height:20px;
+  background-color:#5C5A5B;
+}
+/* down arrow */
+#down {
+  position:absolute;
+  left:0;
+  top:430px;
+}
+/* text */
+#wn { 
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:141px;
+  left:370px;
+  overflow:hidden;
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#wn a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+.text {
+  text-align:left;
+  font-family:"Arial";
+  font-size:15px;
+  font-weight:normal;
+  line-height:18px;
+  color:#9C9C9C;
+}
+.text_staff {
+  text-align:left;
+  font-family:"Arial";
+  font-size:18px;
+  font-weight:normal;
+  line-height:28px;
+  color:#2B292A;
+}
+/* for safari, to prevent selection problem  */
+#scrollbar, #track, #dragBar, #up, #down {
+  -moz-user-select:none;
+  -khtml-user-select:none;
+}
+/* so no gap or misplacement due to image vertical alignment font-size:1px in scrollbar has same effect (less likely to be removed, resulting in support issues) */
+#scrollbar img {
+  display:block;
+}
+
+/* ( 2 ) flash wisconsin foodie */
+#vidinterface { 
+  position:absolute;
+  width:400px;
+  height:301px;
+  top:200px;
+  left:70px;
+  overflow:hidden;
+  z-index:1;
+}
+#wflink { 
+  position:absolute;
+  width:400px;
+  height:40px;
+  top:510px;
+  left:70px;
+  overflow:hidden;
+  text-align:right;
+  z-index:100;
+}
+#wflink a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+
+/* ( 3 ) networking */
+#networking {
+  position:absolute;
+  left:0px;
+  top:590px;
+  width:1006px;
+  height:70px;
+  overflow:hidden;
+  z-index:100;
+}
+
+/* NEW */
+/* html {
+  transform: scale(1.5)
+} */
+.flexc {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center
+}
+</style>
+
 </head>
+
 <body background="images/cw_new_bg.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
 <!-- ( 1 ) screen shot image -->
-<div id="ss">
+<div id="ss" class="flexc">
+
 <img class="full" src="images/media_interface.jpg" border="0" usemap="#map" alt=""/>
 <map name="map">
 <area shape="rect" alt="" coords="43,543,236,562" href="mailto:crazywatermilwaukee@gmail.com"/>
 <area shape="rect" alt="" coords="76,436,244,458" href="reviews_press.html"/>
 <area shape="rect" alt="" coords="58,401,244,423" href="hours_directions.html"/>
-<area shape="rect" alt="" coords="123,365,244,387" href="#"/>
+<area shape="rect" alt="" coords="123,365,244,387" href="reservations.html"/>
 <area shape="rect" alt="" coords="153,328,244,350" href="winelist.html"/>
 <area shape="rect" alt="" coords="181,292,244,314" href="menu.html"/>
-<area shape="rect" alt="" coords="103,256,244,278" href="therestaurant.html"/>
+<area shape="rect" alt="" coords="103,256,244,278" href="#"/>
 <area shape="rect" alt="" coords="180,220,244,242" href="index.html"/>
 </map>
+
 </div>
+
 <!-- ` ` ` `( 2 ) vertical text scrolling -->
 <!-- ` ` scrollbar elements -->
 <div id="scrollbar">
@@ -41,24 +258,34 @@
 <div id="up">
 <a class="mouseover_up" href=""><img src="images/up.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
 </div>
+
 <!-- track background and drag bar -->
 <div id="track">
 <div id="dragBar"></div>
 </div>
+
 <!-- down arrow -->
 <div id="down">
 <a class="mouseover_down" href=""><img src="images/down.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
 </div>
 </div>
-<div id="wn" style="width:500px;top:230px;left:400px;">
+
+<!-- ` ` text -->
+<div id="wn" style="width:570px;left:335px;height:510px;top:55px">
 <div id="lyr1" class="text">
-<center>
-<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=158935&amp;restref=158935&amp;bgcolor=F6F6F3&amp;titlecolor=0F0F0F&amp;subtitlecolor=0F0F0F&amp;btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_red.png&amp;otlink=FFFFFF&amp;icon=light&amp;mode=short"></script><a href="http://www.opentable.com/crazy-water-reservations-milwaukee?rtype=ism&amp;restref=158935" class="OT_ExtLink">Crazy Water (158935), Wisconsin Reservations</a>
-</center>
+
+<!-- ` ` video interface: wisconsin foodie -->
+    <video style="width:570px;height:510px;top:55px" controls autoplay muted>
+      <source src="wifoodie_cw_s1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
 </div>
 </div>
+
 <!-- ( 3 ) networking -->
 <div id="networking">
+
 <img src="images/networking_module.gif" border="0" usemap="#netw_addys" alt=""/>
 <map name="netw_addys">
 <area shape="rect" alt="" coords="891,7,977,35" href="#"/>
@@ -78,15 +305,8 @@
 <area shape="rect" alt="" coords="78,12,152,24" href="http://www.urbanspoon.com/r/43/470528/restaurant/Walkers-Point/Crazy-Water-Milwaukee"/>
 <area shape="rect" alt="" coords="42,12,71,24" href="http://www.yelp.com/biz/crazy-water-milwaukee"/>
 </map>
+
 </div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-10249260-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+
 </body>
 </html>

@@ -1,8 +1,9 @@
 <html>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app224.us.archive.org';v.server_ms=400;archive_analytics.send_pageview({});});</script>
+
+<head>
+
 <title>Crazy Water | American Fusion Cuisine [ The Restaurant ]</title>
 	<link rel="canonical" href="http://crazywaterrestaurant.com" />
 <!-- google uses this to find you -->
@@ -13,6 +14,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
 <!-- css toggled based on platform -->
 <script type="text/javascript" src="js/toggle2.js"></script>
 <!-- platform sensor -->
@@ -21,22 +23,280 @@
 <script src="js/scroll_mac2.js" type="text/javascript"></script>
 <!-- wisconsin foodie javascript -->
 <script src="js/wiscfoodie_swfobject.js" type="text/javascript"></script>
+
+<style>
+/* general */
+* {margin:0;padding:0}
+body {
+  text-align:center;
+  background-color:#070707;
+}
+.p1 {
+  padding-top:12px;
+}
+.p2 {
+  padding-top:40px;
+}
+.p3 {
+  padding-top:12px;
+  padding-bottom:40px;
+}
+
+/* ( 1 ) screen shot image */
+#ss {
+  position:absolute;
+  left:0px;
+  top:0px;
+  /*width:100% only for wide*/
+  width:1006px;
+  height:700px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  z-index:1;
+}
+img.full {
+  /*wide: 1264px*/
+  max-width:1006px;
+  max-height:760px;
+  /*next 3 replaces html center tags .. DISABLED for narrow*/
+  /*display:block;
+  margin-left:auto;
+  margin-right:auto;*/
+  /*left:0px only for narrow*/
+  left: 0px;
+  z-index: 1000;
+  opacity: 1;
+  border: 0px;
+}
+
+/* ` ` ` `( 2 ) vertical text scrolling */
+/* ` ` scrollbar elements */
+#scrollbar {
+  position:absolute;
+  left:964px;
+  top:112px;
+  width:30px;
+  height:467px;
+  font-size:1px;  /* so no gap or misplacement due to image vertical alignment */
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#scrollbar img {
+  border:none;
+}
+/* up arrow */
+#up {
+  position:absolute;
+  left:0;
+  top:0;
+}
+/* track background and drag bar */
+#track { 
+  position:absolute;
+  left:0;
+  top:34px;
+  width:30px;
+  height:396px;
+  background:#363636;
+}
+#dragBar {
+  position:absolute;
+  left:1px;
+  top:1px;
+  width:28px;
+  height:20px;
+  background-color:#5C5A5B;
+}
+/* down arrow */
+#down {
+  position:absolute;
+  left:0;
+  top:430px;
+}
+/* text */
+#wn { 
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:141px;
+  left:370px;
+  overflow:hidden;
+  /*next 3 replaces html center tags*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:100;
+}
+#wn a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wn a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+.text {
+  text-align:left;
+  font-family:"Arial";
+  font-size:15px;
+  font-weight:normal;
+  line-height:18px;
+  color:#9C9C9C;
+}
+.text_staff {
+  text-align:left;
+  font-family:"Arial";
+  font-size:18px;
+  font-weight:normal;
+  line-height:28px;
+  color:#2B292A;
+}
+/* for safari, to prevent selection problem  */
+#scrollbar, #track, #dragBar, #up, #down {
+  -moz-user-select:none;
+  -khtml-user-select:none;
+  /* added */
+  display: none;
+}
+/* so no gap or misplacement due to image vertical alignment font-size:1px in scrollbar has same effect (less likely to be removed, resulting in support issues) */
+#scrollbar img {
+  display:block;
+}
+
+/* ( 2 ) flash wisconsin foodie */
+#vidinterface { 
+  position:absolute;
+  width:400px;
+  height:301px;
+  top:200px;
+  left:70px;
+  overflow:hidden;
+  z-index:1;
+}
+#wflink { 
+  position:absolute;
+  width:400px;
+  height:40px;
+  top:510px;
+  left:70px;
+  overflow:hidden;
+  text-align:right;
+  z-index:100;
+}
+#wflink a:link {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:visited {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:hover {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+#wflink a:active {
+  color:#9C9C9C;
+  text-decoration:none;
+}
+
+/* ( 3 ) networking */
+#networking {
+  position:absolute;
+  left:0px;
+  top:590px;
+  width:1006px;
+  height:70px;
+  overflow:hidden;
+  z-index:100;
+}
+
+/* NEW */
+/* html {
+  transform: scale(1.5)
+} */
+
+/* floating + collapsing images via flex .. thanks to: https://stackoverflow.com/questions/59770543/stack-elements-of-div-vertically-one-below-the-other */
+.flexc {
+  position: relative;
+  display: flex;
+  min-width: 100vw; /* THIS IS WHAT CENTERED IT */
+  min-height: 100vh;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column; /* CAUSES SECOND IMG TO STACK BELOW */
+  margin-top: -100px; /* counters margin for .netmod */
+  z-index: 1000 !important;
+  /* ++++++++++ DO ALL RESPONSIVE VIEWPORTS WITH PADDING HERE --> */
+  padding-top: 4%;
+  @media (max-width: 1100px) {
+    /* .flexc {
+      padding-top: 0%;
+    } */
+  }
+.netmod {
+  position: relative;
+  margin-top: -159px;
+  transform: translateY(-11px); /* have to use this as it does no move the entire div, only .netmod */
+  z-index: 900 !important;
+  opacity: 1;
+  /* border: 1px solid #fff; */
+}
+.bgdraw {
+  position: relative;
+  width: 100vw;
+  height: 760px;
+  /* margin-top: 0px; */
+  z-index: 800 !important;
+  background: url("images/cw_new_bg_2.jpg");
+  background-repeat: repeat !important;
+  /* background-size: cover; */
+  margin-top: -671px;
+  /* background-attachment: fixed; */
+  opacity: 1;
+  /* border: 1px solid #fff */
+  z-index: 900 !important
+}
+
+</style>
+
 </head>
-<body background="images/cw_new_bg.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<!-- bg colors: dark #3c373b, red #962c2e -->
+<body style="background-color:#962c2e">
+
 <!-- ( 1 ) screen shot image -->
-<div id="ss">
-<img class="full" src="images/media_interface.jpg" border="0" usemap="#map" alt=""/>
+<div id="ss" class="flexc">
+
+<!-- img map coords: x1,y1 .. x2,y2 or top left .. bottom right .. ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area -->
+<img class="full" src="images/media_interface_2.jpg" usemap="#map" alt=""/>
 <map name="map">
-<area shape="rect" alt="" coords="43,543,236,562" href="mailto:crazywatermilwaukee@gmail.com"/>
-<area shape="rect" alt="" coords="76,436,244,458" href="reviews_press.html"/>
-<area shape="rect" alt="" coords="58,401,244,423" href="hours_directions.html"/>
-<area shape="rect" alt="" coords="123,365,244,387" href="reservations.html"/>
-<area shape="rect" alt="" coords="153,328,244,350" href="winelist.html"/>
-<area shape="rect" alt="" coords="181,292,244,314" href="menu.html"/>
-<area shape="rect" alt="" coords="103,256,244,278" href="#"/>
-<area shape="rect" alt="" coords="180,220,244,242" href="index_html.html"/>
+   <area target="" alt="" title="" href="#" coords="180,218,242,243" shape="rect">
+    <area target="" alt="" title="" href="therestaurant.html" coords="109,256,241,278" shape="rect">
+    <area target="" alt="" title="" href="menu.html" coords="189,292,243,315" shape="rect">
+    <area target="" alt="" title="" href="winelist.html" coords="158,325,240,350" shape="rect">
+    <area target="" alt="" title="" href="reservations.html" coords="123,363,239,386" shape="rect">
+    <area target="" alt="" title="" href="hours_directions.html" coords="57,398,238,422" shape="rect">
+    <area target="" alt="" title="" href="reviews_press.html" coords="82,434,244,459" shape="rect">
+    <area target="" alt="" title="" href="tel:+14146452606" coords="159,522,239,542" shape="rect">
+    <area target="" alt="" title="" href="mailto:crazywatermilwaukee@gmail.com" coords="51,545,239,563" shape="rect">
 </map>
+<img src="images/networking_module.gif" style="z-index:1100 !important" border="0" usemap="#netw_addys" alt="" class="netmod" />
+<span class="bgdraw"></span>
+
 </div>
+
 <!-- ` ` ` `( 2 ) vertical text scrolling -->
 <!-- ` ` scrollbar elements -->
 <div id="scrollbar">
@@ -44,56 +304,31 @@
 <div id="up">
 <a class="mouseover_up" href=""><img src="images/up.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
 </div>
+
 <!-- track background and drag bar -->
 <div id="track">
 <div id="dragBar"></div>
 </div>
+
 <!-- down arrow -->
 <div id="down">
 <a class="mouseover_down" href=""><img src="images/down.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
 </div>
 </div>
+
 <!-- ` ` text -->
 <div id="wn" style="width:540px;left:360px;height:420px;">
 <div id="lyr1" class="text">
 
-<!-- ` ` video interface: wisconsin foodie -->
-<div id="vidinterface">
-<div id="location">
-        <script type="text/javascript">
-            var flashvars = {
-                moviePath : "wifoodie_cw_s1.mp4",
-                skinPath : "wifoodie_cw_s1.mp4"
-            };
-            var params = {
-                quality: "best",
-                allowfullscreen: "true",
-                bgcolor : "#000000"
-            };
-            var attributes = {};
-            swfobject.embedSWF("wifoodie_cw_s1.mp4", "videoPlayerBox", "400", "301", "9.0.0", "wifoodie_cw_s1.mp4",flashvars, params, attributes);
-        </script>
 
-<div class="ypad bottomBorder clearFix">
-<div id="videoPlayer" class="left">
-<div id="videoPlayerBox"><img src="wifoodie_cw_s1.mp4" alt="FakeHomePlayer"/></div>
-</div>
 </div>
 </div>
 
-</div>
-
-<p class="p1">Built from a nineteenth century feed store, a vintage tavern serves as the backdrop for Crazy Water's refined American cuisine. The ambient feel of the room is that of a European bistro from a bygone era. The look is subdued elegance with soft lighting and warm, intimate tables.
-<p class="p1">Crazy Water's contemporary menu is based in tradition and utilizes seasonal, local and organic products when available. Attention to detail is evident in our product-driven menu showcasing the purity and  quality of the ingredients in all of our finished plates.<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div id="wflink">
-<a href="http://wisconsinfoodie.com/">More delicious Wisconsin Foodie here</a>.
-</div>
-</div>
-</div>
 <!-- ( 3 ) networking -->
 <div id="networking">
 
-<img src="images/networking_module.gif" border="0" usemap="#netw_addys" alt=""/>
+<!-- this img moved underneath media_interface_2.jpg above, using flex for stacking -->
+<!-- <img src="images/networking_module.gif" border="0" usemap="#netw_addys" alt=""/> -->
 <map name="netw_addys">
 <area shape="rect" alt="" coords="891,7,977,35" href="#"/>
 <area shape="rect" alt="" coords="800,7,872,35" href="http://www.flickr.com/photos/crazywatermilwaukee/sets/72157621676883705/"/>
