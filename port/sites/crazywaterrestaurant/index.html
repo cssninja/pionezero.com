@@ -1,354 +1,257 @@
-<html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
 
-<head>
+    <title>Crazy Water | American Fusion Cuisine</title>
 
-<title>Crazy Water | American Fusion Cuisine [ The Restaurant ]</title>
-	<link rel="canonical" href="http://crazywaterrestaurant.com" />
-<!-- google uses this to find you -->
-<meta name="keywords" content=""/>
-<meta name="description" content=""/>
-<meta name="author" content="www.crazywatermilwaukee.com"/>
-<meta name="copyright" content="Copyright (c) 2009"/>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta http-equiv="Content-Style-Type" content="text/css"/>
-<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c4f5c0732.js" crossorigin="anonymous"></script>
 
-<!-- css toggled based on platform -->
-<script type="text/javascript" src="js/toggle2.js"></script>
-<!-- platform sensor -->
-<script type="text/javascript" src="js/platform.js"></script>
-<!-- vertical text scrolling (css also referred to here) -->
-<script src="js/scroll_mac2.js" type="text/javascript"></script>
-<!-- wisconsin foodie javascript -->
-<script src="js/wiscfoodie_swfobject.js" type="text/javascript"></script>
+    <style>
 
-<style>
-/* general */
-* {margin:0;padding:0}
-body {
-  text-align:center;
-  background-color:#070707;
-}
-.p1 {
-  padding-top:12px;
-}
-.p2 {
-  padding-top:40px;
-}
-.p3 {
-  padding-top:12px;
-  padding-bottom:40px;
-}
+    /* bg colors: dark #3c373b, red #962c2e .. gradient thanks to: https://stackoverflow.com/questions/36679649/how-to-add-a-color-overlay-to-a-background-image */
+    body {
+      background: url("images/flickr/9004548816_c0f10c291b_o.jpg") no-repeat, linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-attachment: fixed
 
-/* ( 1 ) screen shot image */
-#ss {
-  position:absolute;
-  left:0px;
-  top:0px;
-  /*width:100% only for wide*/
-  width:1006px;
-  height:700px;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  z-index:1;
-}
-img.full {
-  /*wide: 1264px*/
-  max-width:1006px;
-  max-height:760px;
-  /*next 3 replaces html center tags .. DISABLED for narrow*/
-  /*display:block;
-  margin-left:auto;
-  margin-right:auto;*/
-  /*left:0px only for narrow*/
-  left: 0px;
-  z-index: 1000;
-  opacity: 1;
-  border: 0px;
-}
+      /* worked as well .. thanks to: https://codepen.io/chriscoyier/pen/jZBLrN, https://css-tricks.com/css-basics-using-multiple-backgrounds/ .. i added 100vh height to make it work, which is equivalent to background-attachment: fixed, which prevents ratio shrink of img */
+      /* background-image: url(images/table_orig.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      background-position:
+        top 0px left 0px,
+        top 0px right 0px,
+        bottom 0px right 0px,
+        bottom 0px left 0px */
 
-/* ` ` ` `( 2 ) vertical text scrolling */
-/* ` ` scrollbar elements */
-#scrollbar {
-  position:absolute;
-  left:964px;
-  top:112px;
-  width:30px;
-  height:467px;
-  font-size:1px;  /* so no gap or misplacement due to image vertical alignment */
-  /*next 3 replaces html center tags*/
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  z-index:100;
-}
-#scrollbar img {
-  border:none;
-}
-/* up arrow */
-#up {
-  position:absolute;
-  left:0;
-  top:0;
-}
-/* track background and drag bar */
-#track { 
-  position:absolute;
-  left:0;
-  top:34px;
-  width:30px;
-  height:396px;
-  background:#363636;
-}
-#dragBar {
-  position:absolute;
-  left:1px;
-  top:1px;
-  width:28px;
-  height:20px;
-  background-color:#5C5A5B;
-}
-/* down arrow */
-#down {
-  position:absolute;
-  left:0;
-  top:430px;
-}
-/* text */
-#wn { 
-  position:absolute;
-  width:400px;
-  height:400px;
-  top:141px;
-  left:370px;
-  overflow:hidden;
-  /*next 3 replaces html center tags*/
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  z-index:100;
-}
-#wn a:link {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wn a:visited {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wn a:hover {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wn a:active {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-.text {
-  text-align:left;
-  font-family:"Arial";
-  font-size:15px;
-  font-weight:normal;
-  line-height:18px;
-  color:#9C9C9C;
-}
-.text_staff {
-  text-align:left;
-  font-family:"Arial";
-  font-size:18px;
-  font-weight:normal;
-  line-height:28px;
-  color:#2B292A;
-}
-/* for safari, to prevent selection problem  */
-#scrollbar, #track, #dragBar, #up, #down {
-  -moz-user-select:none;
-  -khtml-user-select:none;
-  /* added */
-  display: none;
-}
-/* so no gap or misplacement due to image vertical alignment font-size:1px in scrollbar has same effect (less likely to be removed, resulting in support issues) */
-#scrollbar img {
-  display:block;
-}
+        /*
+        images/table_orig.jpg
+        images/flickr/9004548816_c0f10c291b_o.jpg
+        images/flickr/9004611280_27bf5cd50c_o.jpg
+        images/flickr/9004917230_dec1bd867a_o.jpg
+        images/flickr/3750623215_3314fa8c17_o.jpg
+        images/flickr/9003422941_6c59753da4_o.jpg
+        images/flickr/9003723369_2f68d9a773_o.jpg
+        images/flickr/3750623297_437649186f_o.jpg
+        */
+    }
 
-/* ( 2 ) flash wisconsin foodie */
-#vidinterface { 
-  position:absolute;
-  width:400px;
-  height:301px;
-  top:200px;
-  left:70px;
-  overflow:hidden;
-  z-index:1;
-}
-#wflink { 
-  position:absolute;
-  width:400px;
-  height:40px;
-  top:510px;
-  left:70px;
-  overflow:hidden;
-  text-align:right;
-  z-index:100;
-}
-#wflink a:link {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wflink a:visited {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wflink a:hover {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-#wflink a:active {
-  color:#9C9C9C;
-  text-decoration:none;
-}
-
-/* ( 3 ) networking */
-#networking {
-  position:absolute;
-  left:0px;
-  top:590px;
-  width:1006px;
-  height:70px;
-  overflow:hidden;
-  z-index:100;
-}
-
-/* NEW */
-/* html {
-  transform: scale(1.5)
-} */
-
-/* floating + collapsing images via flex .. thanks to: https://stackoverflow.com/questions/59770543/stack-elements-of-div-vertically-one-below-the-other */
-.flexc {
-  position: relative;
-  display: flex;
-  min-width: 100vw; /* THIS IS WHAT CENTERED IT */
-  min-height: 100vh;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-direction: column; /* CAUSES SECOND IMG TO STACK BELOW */
-  margin-top: -100px; /* counters margin for .netmod */
-  z-index: 1000 !important;
-  /* ++++++++++ DO ALL RESPONSIVE VIEWPORTS WITH PADDING HERE --> */
-  padding-top: 4%;
-  @media (max-width: 1100px) {
-    /* .flexc {
-      padding-top: 0%;
+    /* scale option for desktop */
+    /* html {
+      transform: scale(1.3);
+      overflow-x: hidden;
+      overflow-y: hidden;
     } */
-  }
-.netmod {
-  position: relative;
-  margin-top: -159px;
-  transform: translateY(-11px); /* have to use this as it does no move the entire div, only .netmod */
-  z-index: 900 !important;
-  opacity: 1;
-  /* border: 1px solid #fff; */
-}
-.bgdraw {
-  position: relative;
-  width: 100vw;
-  height: 760px;
-  /* margin-top: 0px; */
-  z-index: 800 !important;
-  background: url("images/cw_new_bg_2.jpg");
-  background-repeat: repeat !important;
-  /* background-size: cover; */
-  margin-top: -671px;
-  /* background-attachment: fixed; */
-  opacity: 1;
-  /* border: 1px solid #fff */
-  z-index: 900 !important
-}
 
-</style>
+    /* floating + collapsing images via flex .. thanks to: https://stackoverflow.com/questions/59770543/stack-elements-of-div-vertically-one-below-the-other */
+    .flexc {
+      left: 0px;
+      top: 0px;
+      overflow-x: hidden;
+      /* overflow-y: hidden; */
+      position: absolute;
+      display: flex;
+      min-width: 100vw; /* THIS IS WHAT CENTERED IT */
+      min-height: 100vh;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column; /* CAUSES SECOND IMG TO STACK BELOW */
+      margin-top: -100px; /* counters margin for .netmod */
+      z-index: 1000 !important;
+      /* ++++++++++ DO ALL RESPONSIVE VIEWPORTS WITH PADDING HERE --> */
+      padding-top: 4%;
+      /* border: 1px solid #fff */
+      @media (max-width: 1100px) {
+        /* .flexc {
+          padding-top: 0%;
+        } */
+      }
 
-</head>
+    /* img #1 > main UI */
+    .full {
+      position: relative;
+      width: 1006px;
+      height: 760px;
+      background: url("images/media_interface_2.jpg");
+      top: -760px; /* added to align with transparent png */
+      left: 0px;
+      z-index: 1100 !important;
+      opacity: 1;
+      border: 0px;
+      /* border: 1px solid #fff */
+    }
+    /* img map overlay */
+    .full_2 {
+      position: relative;
+      width: 300px;
+      height: 760px;
+      /* background: url("images/media_interface.png"); */
+      left: -352px;
+      z-index: 1200 !important;
+      opacity: 1;
+      border: 0px;
+      /* border: 1px solid #fff */
+    }
 
-<!-- bg colors: dark #3c373b, red #962c2e -->
-<body style="background-color:#962c2e">
+    /* content area with built-in scroll  */
+    .textsec {
+      position: absolute;
+      width: 680px;
+      height: 470px;
+      margin: 11% 0% 0% 32%;
+      font-family: 'Ubuntu', sans-serif;
+      line-height: 30px !important;
+      font-size: 20px;
+      color: #868185;
+      overflow-y: scroll;
+      padding: 0px 20px 0px 0px !important;
+      z-index: 1100 !important;
+      /* border: 1px solid #fff */
+    }
 
-<!-- ( 1 ) screen shot image -->
-<div id="ss" class="flexc">
+    /* scrollbars thanks to: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+    /* For browsers that support `scrollbar-*` properties */
+    @supports (scrollbar-color: auto) {
+      .textsec {
+        scrollbar-color: #962c2e #312d30;
+        scrollbar-width: auto
+      }
+    }
+    /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+    @supports selector(::-webkit-scrollbar) {
+      .textsec::-webkit-scrollbar {
+        background: #962c2e
+      }
+      .textsec::-webkit-scrollbar-thumb {
+        background: #312d30
+      }
+    }
 
-<!-- img map coords: x1,y1 .. x2,y2 or top left .. bottom right .. ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area -->
-<img class="full" src="images/media_interface_2.jpg" usemap="#map" alt=""/>
-<map name="map">
-   <area target="" alt="" title="" href="#" coords="180,218,242,243" shape="rect">
-    <area target="" alt="" title="" href="therestaurant.html" coords="109,256,241,278" shape="rect">
-    <area target="" alt="" title="" href="menu.html" coords="189,292,243,315" shape="rect">
-    <area target="" alt="" title="" href="winelist.html" coords="158,325,240,350" shape="rect">
-    <area target="" alt="" title="" href="reservations.html" coords="123,363,239,386" shape="rect">
-    <area target="" alt="" title="" href="hours_directions.html" coords="57,398,238,422" shape="rect">
-    <area target="" alt="" title="" href="reviews_press.html" coords="82,434,244,459" shape="rect">
-    <area target="" alt="" title="" href="tel:+14146452606" coords="159,522,239,542" shape="rect">
-    <area target="" alt="" title="" href="mailto:crazywatermilwaukee@gmail.com" coords="51,545,239,563" shape="rect">
-</map>
-<img src="images/networking_module.gif" style="z-index:1100 !important" border="0" usemap="#netw_addys" alt="" class="netmod" />
-<span class="bgdraw"></span>
+    /* text area right padding */
+    p {
+      padding-right: 30px
+    }
 
-</div>
+    /* img #2 > bg */
+    .bgdraw {
+      position: relative;
+      width: 100vw;
+      height: 760px;
+      /* margin-top: 0px; */
+      background: url("images/cw_new_bg_2.jpg");
+      background-repeat: repeat !important;
+      /* background-size: cover; */
+      margin-top: -1520px;
+      /* background-attachment: fixed; */
+      opacity: 1;
+      /* border: 1px solid #fff */
+      z-index: 900 !important
+    }
 
-<!-- ` ` ` `( 2 ) vertical text scrolling -->
-<!-- ` ` scrollbar elements -->
-<div id="scrollbar">
-<!-- up arrow -->
-<div id="up">
-<a class="mouseover_up" href=""><img src="images/up.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
-</div>
+    /* z-index stacking:
 
-<!-- track background and drag bar -->
-<div id="track">
-<div id="dragBar"></div>
-</div>
+    .flexc
+    z-index: 1000 !important
 
-<!-- down arrow -->
-<div id="down">
-<a class="mouseover_down" href=""><img src="images/down.jpg" border="0" width="30" height="36" alt="" border="0"/></a>
-</div>
-</div>
+    .full
+    z-index: 1100
 
-<!-- ` ` text -->
-<div id="wn" style="width:540px;left:360px;height:420px;">
-<div id="lyr1" class="text">
+    .textsec
+    z-index: 1200 !important
 
+    .bgdraw
+    z-index: 900 !important
 
-</div>
-</div>
+    */
 
-<!-- ( 3 ) networking -->
-<div id="networking">
+    </style>
 
-<!-- this img moved underneath media_interface_2.jpg above, using flex for stacking -->
-<!-- <img src="images/networking_module.gif" border="0" usemap="#netw_addys" alt=""/> -->
-<map name="netw_addys">
-<area shape="rect" alt="" coords="891,7,977,35" href="#"/>
-<area shape="rect" alt="" coords="800,7,872,35" href="http://www.flickr.com/photos/crazywatermilwaukee/sets/72157621676883705/"/>
-<area shape="rect" alt="" coords="667,7,741,35" href="http://twitter.com/crazy_water"/>
-<area shape="rect" alt="" coords="546,7,638,35" href="http://www.facebook.com/pages/Milwaukee-WI/Crazy-Water/124651996600"/>
-<area shape="rect" alt="" coords="378,28,405,40" href="http://iate.com/restaurants/crazy-water-milwaukee-wi"/>
-<area shape="rect" alt="" coords="294,28,372,40" href="http://www.restaurantica.com/wi/milwaukee/crazy-water/23395974/"/>
-<area shape="rect" alt="" coords="187,28,286,40" href="http://www.onmilwaukee.com/dining/articles/crazywater07.html"/>
-<area shape="rect" alt="" coords="109,28,178,40" href="http://www.tripadvisor.com/Restaurant_Review-g60097-d392458-Reviews-Crazy_Water-Milwaukee_Wisconsin.html"/>
-<area shape="rect" alt="" coords="61,28,102,40" href="http://maps.google.com/maps?hl=en&amp;um=1&amp;ie=UTF-8&amp;q=crazy+water+milwaukee&amp;fb=1&amp;split=1&amp;gl=us&amp;view=text&amp;latlng=9453659898198857946&amp;dtab=2&amp;ei=tx1pSvrLNonWNculrKcL&amp;sa=X&amp;oi=local_result&amp;ct=result&amp;resnum=1"/>
-<area shape="rect" alt="" coords="386,11,424,23" href="http://local.yahoo.com/info-16717337-crazy-water-milwaukee;_ylt=AtF42fuLLnxzEG7.7aEFl_iHNcIF;_ylv=3?csz=Milwaukee%2C+WI"/>
-<area shape="rect" alt="" coords="333,12,379,24" href="http://www.boorah.com/restaurants/WI/milwaukee/crazy-water/8812A12794.html"/>
-<area shape="rect" alt="" coords="275,12,326,24" href="http://www.menuism.com/restaurants/bncnkaOMKr26tEabBlKsEs-crazy-water-milwaukee-wi"/>
-<area shape="rect" alt="" coords="200,12,269,24" href="http://www.chow.com/places/29296"/>
-<area shape="rect" alt="" coords="157,12,193,24" href="http://www.zagat.com/Verticals/PropertyDetails.aspx?VID=8&amp;R=142003&amp;AJX=Ntk%253DGeoChildID%25257cHomepage+Search%2526Ntt%253D1130%25257ccrazy+water+milwaukee%2526VID%253D8%2526N%253D120%2526Ntx%253Dmode%25252bmatchall%2526Nr%253DOR%2528Item%25252bStatus%25253aActive%25252cItem%25252bStatus%25253aTemporarily%25252bClosed%2529"/>
-<area shape="rect" alt="" coords="78,12,152,24" href="http://www.urbanspoon.com/r/43/470528/restaurant/Walkers-Point/Crazy-Water-Milwaukee"/>
-<area shape="rect" alt="" coords="42,12,71,24" href="http://www.yelp.com/biz/crazy-water-milwaukee"/>
-</map>
+  </head>
 
-</div>
+  <body>
 
-</body>
+    <!-- container -->
+    <div class="flexc">
+
+      <!-- Image Map Generated by http://www.image-map.net/ -->
+      <img src="images/media_interface.png" usemap="#image-map" class="full_2">
+      <map name="image-map">
+          <area target="" alt="" title="" href="" coords="182,218,243,243" shape="rect">
+          <area target="" alt="" title="" href="therestaurant.html" coords="106,252,244,279" shape="rect">
+          <area target="" alt="" title="" href="menu.html" coords="184,294,243,315" shape="rect">
+          <area target="" alt="" title="" href="winelist.html" coords="156,324,245,350" shape="rect">
+          <area target="" alt="" title="" href="reservations.html" coords="125,364,242,387" shape="rect">
+          <area target="" alt="" title="" href="hours_directions.html" coords="60,398,243,422" shape="rect">
+          <area target="" alt="" title="" href="reviews_press.html" coords="77,437,243,463" shape="rect">
+          <!-- <area target="" alt="" title="" href="" coords="160,524,243,543" shape="rect">
+          <area target="" alt="" title="" href="" coords="51,546,242,560" shape="rect">
+          <area target="" alt="" title="" href="" coords="45,603,69,614" shape="rect">
+          <area target="" alt="" title="" href="" coords="76,601,149,614" shape="rect">
+          <area target="" alt="" title="" href="" coords="158,604,192,615" shape="rect">
+          <area target="" alt="" title="" href="" coords="200,602,266,613" shape="rect">
+          <area target="" alt="" title="" href="" coords="276,603,325,614" shape="rect">
+          <area target="" alt="" title="" href="" coords="333,603,377,614" shape="rect">
+          <area target="" alt="" title="" href="" coords="387,603,420,613" shape="rect">
+          <area target="" alt="" title="" href="" coords="60,621,102,629" shape="rect">
+          <area target="" alt="" title="" href="" coords="109,619,177,630" shape="rect">
+          <area target="" alt="" title="" href="" coords="188,620,286,629" shape="rect">
+          <area target="" alt="" title="" href="" coords="295,620,372,631" shape="rect">
+          <area target="" alt="" title="" href="" coords="380,620,403,629" shape="rect">
+          <area target="" alt="" title="" href="" coords="545,601,636,620" shape="rect">
+          <area target="" alt="" title="" href="" coords="664,602,745,623" shape="rect">
+          <area target="" alt="" title="" href="" coords="799,601,870,621" shape="rect">
+          <area target="" alt="" title="" href="" coords="892,600,976,620" shape="rect"> -->
+          <area target="" alt="" title="" href="index.html" coords="24,137,244,189" shape="rect">
+      </map>
+
+      <!-- img #1 > main UI -->
+      <div class="full">
+
+        <!-- content area with built-in scroll -->
+        <section class="textsec">
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In cursus turpis massa tincidunt. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Posuere ac ut consequat semper viverra. Sit amet est placerat in egestas erat imperdiet sed euismod. Fames ac turpis egestas sed tempus urna et. Eu volutpat odio facilisis mauris. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Ut tristique et egestas quis ipsum suspendisse ultrices. Iaculis nunc sed augue lacus. Nisl rhoncus mattis rhoncus urna neque. Nunc mi ipsum faucibus vitae. Lectus sit amet est placerat in egestas. Mus mauris vitae ultricies leo integer malesuada nunc vel. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Laoreet non curabitur gravida arcu ac tortor. Elementum nibh tellus molestie nunc. Elit pellentesque habitant morbi tristique.
+
+          <p>Ultrices vitae auctor eu augue. Massa eget egestas purus viverra accumsan. Congue nisi vitae suscipit tellus mauris a diam maecenas sed. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam. Tristique senectus et netus et malesuada fames ac. A diam maecenas sed enim ut sem. In est ante in nibh mauris cursus. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Enim tortor at auctor urna. Est placerat in egestas erat imperdiet sed euismod nisi porta. Curabitur vitae nunc sed velit dignissim sodales ut. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Eget nunc scelerisque viverra mauris in aliquam. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Sed lectus vestibulum mattis ullamcorper velit sed. Nec ullamcorper sit amet risus. Sit amet facilisis magna etiam tempor orci eu lobortis. Tristique senectus et netus et malesuada fames ac turpis.
+
+          <p>Mauris augue neque gravida in fermentum et sollicitudin ac. Proin fermentum leo vel orci porta non pulvinar neque. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Tincidunt augue interdum velit euismod in. Ultrices in iaculis nunc sed augue. Tincidunt nunc pulvinar sapien et ligula. Consectetur a erat nam at. Vitae justo eget magna fermentum iaculis eu non. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Adipiscing diam donec adipiscing tristique risus nec feugiat. Proin libero nunc consequat interdum.
+
+          <p>Urna duis convallis convallis tellus id interdum velit. Sed id semper risus in hendrerit gravida rutrum. Aliquam vestibulum morbi blandit cursus risus at ultrices. Diam donec adipiscing tristique risus nec feugiat. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Amet risus nullam eget felis eget nunc. Ultrices dui sapien eget mi proin sed libero enim. Massa tincidunt dui ut ornare. Scelerisque in dictum non consectetur a erat nam at. Nam aliquam sem et tortor consequat. Egestas diam in arcu cursus euismod quis viverra nibh. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Scelerisque eleifend donec pretium vulputate sapien. Vulputate mi sit amet mauris commodo quis. Ac turpis egestas integer eget aliquet nibh praesent tristique.
+
+          <p>Vitae tempus quam pellentesque nec nam. Dictum varius duis at consectetur lorem donec. Mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing. Et netus et malesuada fames ac turpis. Viverra justo nec ultrices dui sapien eget mi proin sed. Ultrices dui sapien eget mi. Vitae nunc sed velit dignissim sodales. Vitae sapien pellentesque habitant morbi tristique senectus et. Volutpat sed cras ornare arcu dui vivamus arcu. Mi bibendum neque egestas congue quisque egestas diam in arcu. Habitant morbi tristique senectus et netus et malesuada. -->
+        </section>
+
+      </div>
+
+      <!-- img #2 > bg -->
+      <div class="bgdraw"></div>
+
+      <!-- ( 4 ) flash tunes -->
+      <div id="tunes">
+        <script language="JavaScript" type="text/javascript" src="rad/audio-player.js"></script>
+
+        <object type="application/x-shockwave-flash" data="rad/player.swf" id="audioplayer1" height="24" width="290">
+          <param name="movie" value="rad/player.swf"/>
+          <param name="FlashVars" value="playerID=1&amp;bg=0xAD3D3C&amp;leftbg=0x8C2629&amp;lefticon=0xC37E7E&amp;rightbg=0x8C2629&amp;rightbghover=0xC37E7E&amp;righticon=0xC37E7E&amp;righticonhover=0x8C2629&amp;text=0xC37E7E&amp;slider=0xC37E7E&amp;track=0xC37E7E&amp;border=0xC37E7E&amp;loader=0x8C2629&amp;loop=no&amp;autostart=yes&amp;volume=20&amp;soundFile=rad/bananasplit.mp3"/>
+          <param name="quality" value="high"/>
+          <param name="menu" value="false"/>
+          <param name="wmode" value="transparent"/>
+        </object>
+
+      </div>
+
+    </div>
+    <!-- / container -->
+
+    <script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+    <script type="text/javascript" src="ruffle/ruffle.js"></script>
+    <script src="js/swfobject.js" type="text/javascript"></script>
+
+  </body>
+
 </html>
