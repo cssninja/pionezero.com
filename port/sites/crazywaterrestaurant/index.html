@@ -154,6 +154,15 @@
       z-index: 900 !important
     }
 
+    /* vintage swf media player positioning */
+    .vintage {
+      position: relative;
+      left: 300px;
+      top: -693px;
+      border: 1px solid #fff;
+      z-index: 1300 !important
+    }
+
     /* z-index stacking:
 
     .flexc
@@ -232,7 +241,7 @@
       <div class="bgdraw"></div>
 
       <!-- ( 4 ) flash tunes -->
-      <div id="tunes">
+      <div id="tunes" class="vintage">
         <script language="JavaScript" type="text/javascript" src="rad/audio-player.js"></script>
 
         <object type="application/x-shockwave-flash" data="rad/player.swf" id="audioplayer1" height="24" width="290">
