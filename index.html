@@ -1228,6 +1228,46 @@
         font-size: 2em
       } 
     }
+    .titlebg_code {
+        background: #2e469d !important; /* was #675077 #3f3f3f */
+        padding: 3px 9px 3px 9px;
+        color: #98adf9 !important; /* was #e1d9e7 #c9c6c6 */
+        display: inline !important;
+
+        /* color: #c9c6c6 !important;
+        background: #3f3f3f;
+        padding: 8px 20px 12px 20px !important; */
+        /* wowwwwww, found out how to add padding to text after text break .. thanks to: https://stackoverflow.com/questions/26099078/css-padding-automatic-linebreak, https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break .. then just change padding */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        border: 0;
+        /* -webkit-text-stroke: 1.5px #e1d9e7 !important;
+        -webkit-text-fill-color: #e1d9e7 !important; */
+        line-height: clamp(2rem, 10vw, 3.3rem);
+        /* position: relative;
+        z-index: 10000 !important; */
+        /* margin-left: -15px; */ /* tweak for new layout where font awesome icon is now to left of title .. have to media query this .. OR RESET parent container to zero BELOW */
+    }
+    @media (max-width: 520px) {
+      .titlebg_code {
+        line-height: clamp(2rem, 10vw, 2rem)
+      }
+    }
+    @media (max-width: 767.75px) {
+      .titlebg_code {
+        font-size: 1.6em
+      }  
+    }
+    @media (min-width: 768px) and (max-width: 1023.75px) {
+      .titlebg_code {
+        font-size: 2em
+      } 
+    }
+    @media (min-width: 1023.95px) and (max-width: 1024.25px) {
+      .titlebg_code {
+        font-size: 2em
+      } 
+    }
     /* with new layout of font awesome icon to right of title have to reset paddings and margins of some container .. star * means resetting parent and children beneath, thanks to: https://stackoverflow.com/questions/51260463/how-to-reset-all-margins-and-paddings-within-a-parent-element .. ABOTHER SOLUTION IS BOOTSTRAP RESPONSIVE PADDING JUST ABOVE ASSETS LABEL, pl-xl-3 etc, here: https://getbootstrap.com/docs/4.4/utilities/spacing/ .. FINAL was media query below, 900px vw and below */
     /* .container-fluid *{
       margin: 0;
@@ -4050,7 +4090,7 @@
                       <i class="fa-solid fa-code"></i>
                     </div>
                     <div class="col justify-left-column align-self-center">
-                      <h2 class="h1 font-weight-bold titlebg">Code Repositories</h2>
+                      <h2 class="h1 font-weight-bold titlebg_code">Code Repositories</h2>
                     </div>
                   </div>
                 </div>
