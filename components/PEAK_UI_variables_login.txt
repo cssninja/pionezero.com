@@ -1,0 +1,834 @@
+/ / / / / / / / / 
+COLOR PALETTE
+/ / / / / / / / /
+
+https://codepen.io/fullstackninja/live/abaapgo/40cb07ccdfc7f7e1d86dd26799666aea
+
+/ / / / / / / / / 
+PHOTOSHOP
+/ / / / / / / / / 
+
+logos_sm.psd
+
+/ / / / / / / / / 
+IMAGES LOCATION
+/ / / / / / / / / 
+
+https://mega.nz/folder/EyhBTKab#Sd_XLhuA1jaCrlg0dks5cA
+
+PREPEND >
+https://peakdentalstore.com/mm5/
+
+IMG UPLOAD >
+graphics/00000001/1/logos_sm_0058_38_modern.png
+
+COMPLETE >
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0058_38_modern.png
+
+PNG >
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0000_woodmen.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0001_woodland_park.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0002_windsor.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0010_sunshine_kids.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0003_stetson_hills.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0004_stapleton_modern.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0005_standley_lake.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0006_south_springs.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0007_silver_screen.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0008_sealy_ortho.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0009_sealy_kids.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0011_sealy_dental_center_katy.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0012_sealy_dental_center.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0013_sage_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0014_premier_dental_univcity.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0015_premier_dental_seguin.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0016_premier_dental_sanantonio_naco.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0016_premier_dental_sanantonio.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0017_premier_dental_lockhart.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0018_premier_dental_bulverde.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0019_premier_dental_braunfels.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0020_premier_dental_boerne.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0021_panorama.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0022_my_dentist.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0024_mountain_shadows.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0023_mile_high.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0025_lowry.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0026_lone_tree.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0027_kip_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0028_jarrell.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0029_highland_ranch.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0030_hampden.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0031_gvr.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0033_greeley_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0034_fountain_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0032_flatirons.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0035_exceptional_smiles.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0036_enhance_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0037_empire_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0038_east_harmony.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0039_discovery_kids.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0040_colorado_springs_ortho.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0041_colorado_springs_family_ortho.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0042_colorado_periodontal_group.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0043_colorado_oral_surg.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0044_colorado_family_orth.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0045_colorado_endonic_group.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0046_colorado_dental_group.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0047_colorado_dental_assisting.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0048_college_avenue.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0049_cody_dental_group.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0050_central_park_modern.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0051_buda_dental_studio.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0052_bloomingdale_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0053_aurora_city.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0054_appletree.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0055_all_smiles.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0056_advantage_dental.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0057_advanced_oral_surgery.png
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0058_38_modern.png
+
+JPG >
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0000_woodmen.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0001_woodland_park.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0002_windsor.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0010_sunshine_kids.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0003_stetson_hills.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0004_stapleton_modern.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0005_standley_lake.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0006_south_springs.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0007_silver_screen.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0008_sealy_ortho.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0009_sealy_kids.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0011_sealy_dental_center_katy.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0012_sealy_dental_center.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0013_sage_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0014_premier_dental_univcity.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0015_premier_dental_seguin.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0016_premier_dental_sanantonio_naco.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0016_premier_dental_sanantonio.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0017_premier_dental_lockhart.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0018_premier_dental_bulverde.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0019_premier_dental_braunfels.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0020_premier_dental_boerne.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0021_panorama.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0022_my_dentist.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0024_mountain_shadows.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0023_mile_high.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0025_lowry.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0026_lone_tree.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0027_kip_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0028_jarrell.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0029_highland_ranch.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0030_hampden.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0031_gvr.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0033_greeley_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0034_fountain_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0032_flatirons.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0035_exceptional_smiles.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0036_enhance_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0037_empire_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0038_east_harmony.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0039_discovery_kids.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0040_colorado_springs_ortho.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0041_colorado_springs_family_ortho.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0042_colorado_periodontal_group.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0043_colorado_oral_surg.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0044_colorado_family_orth.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0045_colorado_endonic_group.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0046_colorado_dental_group.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0047_colorado_dental_assisting.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0048_college_avenue.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0049_cody_dental_group.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0050_central_park_modern.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0051_buda_dental_studio.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0052_bloomingdale_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0053_aurora_city.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0054_appletree.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0055_all_smiles.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0056_advantage_dental.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0057_advanced_oral_surgery.jpg
+https://peakdentalstore.com/mm5/graphics/00000001/1/logos_sm_0058_38_modern.jpg
+
+
+/ / / / / / / / / 
+CSS LOCATIONS
+/ / / / / / / / /
+
+—————
+1
+header logo
+—————
+
+STYLE SHEETS - DONE (apr 23 2023)
+&mvt:locationlogo;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 146 (HTML), line 115 (CSS)
+
+___HTML (line 146)___
+<a style="max-width:50%;" class="navbar-brand" href="https://peakdentalstore.com/storefront.html"><img class="fix1"></a>
+
+___CSS (in use)___
+/* thanks to: https://css-tricks.com/replace-the-image-in-an-img-with-css/ .. psd: 800w, 420h > 250w, 131h .. test img: https://fakeimg.pl/250x131/282828/eae0d0/ (don't use ?retina=1 .. makes img LARGER) .. variable: &mvt:locationlogo; */
+.fix1 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(&mvt:locationlogo;);
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px !important; /* Width of new image */
+  height: 131px !important; /* Height of new image */
+  padding-left: 250px; /* Equal to width of new image */
+}
+
+—————
+2
+header bg color
+—————
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color1;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 143 (HTML)
+
+___HTML (line 143)___
+<nav class="navbar navbar-expand-lg navbar-light" style="background:#e8f0fe">
+
+___CSS (suggested)___
+.fix_2 {
+  background: #e8f0fe;
+}
+
+—————
+3
+storefront left bg color
+—————
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color2;
+
+___miva___
+user interface > content management > storefront > bs5.0.2_hero_replacement > line 162 (HTML), line 136, 146 (CSS)
+
+NEW MIVA LOCATION (variables don’t read in RTE) >
+user interface > templates > SFNT (storefront) > line 192 (HTML), line 155, 165 (CSS)
+
+___HTML (line 192)___
+<div class="col-xl-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
+
+___CSS (in use, line 148-167)___
+/* TEXT .. had to add google fonts above to properly render fonts in miva */
+.lefttxt {
+  color:#ffffff; /* LARGE LEFT TEXT FONT COLOR */
+  font-size: 65px; /* was 3em in codepen, higher for miva */
+  font-family:'Lato',sans-serif !important;
+  font-weight:700;
+  line-height: 68px; /* only for miva */
+  background:#0071B2; /* LARGE LEFT TEXT BACKGROUND COLOR */
+}
+/*  collapse is at 1200px, lg is at 992px */
+@media (max-width: 1200px) {
+  .lefttxt {
+  color:#ffffff; /* LARGE LEFT TEXT FONT COLOR */
+  font-size:30px; /* was 1.5em in codepen, higher in miva */
+  font-family:'Lato',sans-serif !important;
+  font-weight:700;
+  line-height: 35px; /* only for miva */
+  background:#0071B2; /* LARGE LEFT TEXT BACKGROUND COLOR */
+  }
+}
+
+—————
+4
+storefront right logo
+—————
+
+HAS TO BE STYLE SHEET BCS OF MEDIA QUERIES (but can be inline for demo, desktop only) - DONE (apr 23 2023)
+&mvt:storefrontlogo;
+
+___miva___
+user interface > content management > storefront > bs5.0.2_hero_replacement > line 165 (HTML), line 90, 103, 117 (CSS)
+
+NEW MIVA LOCATION (variables don’t read in RTE) >
+user interface > templates > SFNT (storefront) > line 195 (HTML), line 108, 121, 136 (CSS)
+
+___HTML (line 195)___
+<div class="col-xl-6 themed-container2 bg1"></div>
+
+___CSS (in use, line 108, 121, 136)___
+/* DESKTOP */
+.bg1 {
+  background-image: url(&mvt:storefrontlogo;);
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: 600px 315px;  /* was contain, but png has no img border and was occupying 100% width .. percentage is GREAT, now it behaves like a jpg with white bg border, but it cuts off TALL images, so w,h next best .. 500px 263px ideal */
+  min-height: 315px !important;
+  min-width: 30% !important;
+  position: relative;
+  /* tb rl */
+  /* padding: 10rem; */
+}
+/* TABLET .. was 992 but text area collpases early at 1200px, making img blow up */
+@media (max-width: 1200px) {
+  .bg1 {
+  background-image: url(&mvt:storefrontlogo;);
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: 400px 210px; /* was contain .. 400px 210px ideal */
+  min-height: 210px !important;
+  min-width: 100% !important;
+  position: relative;
+  /* tb rl */
+  /* padding: 10rem; */
+  margin: 0px 0px 10px 0px;
+  }
+}
+/* MOBILE */
+@media (max-width: 576px) {
+  .bg1 {
+  background-image: url(&mvt:storefrontlogo;);
+  background-position: center; /* x% y% */
+  background-repeat: no-repeat;
+  background-size: 260px 137px; /* was contain .. 260px 137px */
+  min-height: 137px !important;
+  min-width: 100% !important;
+  position: relative;
+  /* tb rl */
+  margin: 0px 0px 10px 0px;
+  }
+}
+
+—————
+5
+footer upper bg color
+—————
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color3;
+
+___miva___
+user interface > global settings > global header and footer > global footer > line 6 (HTML)
+
+___HTML___
+<footer class="t-site-footer u-bg-white" style="background:#e8f0fe;">
+
+___CSS (suggested)___
+.fix_11 {
+  background:#e8f0fe;
+}
+
+—————
+6
+footer lower bg color
+—————
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color4;
+
+___miva___
+user interface > theme components > content sections > site copyright > line 1 (HTML)
+
+___HTML___
+<section class="o-layout o-layout--flush u-color-gray-600 u-text-center t-site-footer__copyright" style="background:#137bbe !important;color:#e8f0fe;">
+
+___CSS (suggested)___
+.fix_14 {
+  background: #137bbe !important;
+  color: #e8f0fe;
+}
+
+—————
+7
+header shopping cart bg color
+—————
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color5;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 193 (HTML)
+
+___HTML (line 193)___
+<a class="t-site-header__basket-link" data-hook="open-mini-basket" aria-label="Open Mini-Basket" href="&mvte:urls:BASK:auto;" style="background:#e8f0fe;color:#2b044d;text-decoration:none;">
+
+___CSS (suggested)___
+.fix_7 {
+  background: #e8f0fe;
+  color: #2b044d;
+  text-decoration: none;
+}
+
+—————
+8
+header nav dropdown menu background color
+—————
+
+*ERROR ——— code does not work BUT &mvt:color1; works, hmmmmmmmmm
+
+CAN BE INLINE - DONE (apr 23 2023)
+&mvt:color6;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 163 (HTML)
+
+___HTML (line 163)___
+<ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown" style="color:#2b044d !important;font-size:1em !important;background:#e8f0fe !important;">
+
+___CSS (suggested)___
+.fix_3 {
+  color: #2b044d !important;
+  font-size: 1em !important;
+  background: #e8f0fe !important;
+}
+
+—————
+9
+header search form input background color (more input styles in fix 5)
+—————
+
+STYLE SHEET - DONE (apr 24 2023)
+&mvt:color1;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 187 (HTML)
+
+___HTML (line 187)___
+<input class="form-control me-2 srcbx" type="search" placeholder="Search" aria-label="Search">
+
+___CSS (in use, line 69, 75)___
+@media screen and (min-width: 1100px) {
+  .srcbx {
+    min-width: 500px !important;
+    background: &mvt:color1; !important; /* was  #e8f0fe */
+  }
+}
+@media screen and (max-width: 1099.95px) {
+  .srcbx {
+    max-width: 200px !important;
+    background: &mvt:color1; !important; /* was  #e8f0fe */
+  }
+}
+@media screen and (max-width: 1099.95px) {
+  .srcpar {
+    padding-left:2% !important;
+  }
+}
+
+—————
+10
+header search form button background color
+—————
+
+STYLE SHEET - DONE (apr 24 2023)
+&mvt:color2;
+
+___miva___
+user interface > global settings > global header and footer > global header > line 188
+
+___HTML (line 188)___
+<button class="btn" type="submit" style="background:#137bbe !important;color:#e8f0fe !important;">Search</button>
+
+___CSS (suggested)___
+.fix_6 {
+  background: #137bbe !important;
+  color: #e8f0fe !important;
+}
+
+—————
+11
+footer newsletter form input background color (more input styles in fix 5)
+—————
+
+STYLE SHEET - DONE (apr 24 2023)
+&mvt:color1;
+
+___miva___
+user interface > theme components > content sections > global footer newsletter form > line 33
+
+___HTML (line 33)___
+<input class="form-control me-2 srcbx_ft" type="search" placeholder="Enter Your Email" aria-label="Search" style="font-size:1em !important;">
+
+___CSS (in use, line 5, 11)___
+@media screen and (min-width: 1100px) {
+  .srcbx_ft {
+    max-width: 250px !important;
+    background: #e8f0fe !important;
+  }
+}
+@media screen and (max-width: 1099.95px) {
+  .srcbx_ft {
+    max-width: 200px !important;
+    background: #e8f0fe !important;
+  }
+}
+
+—————
+12
+footer newsletter form button background color
+—————
+
+CAN BE INLINE - DONE (apr 24 2023)
+&mvt:color2;
+
+___miva___
+user interface > theme components > content sections > global footer newsletter form > line 34
+
+___HTML (line 34)___
+<button class="btn" type="submit" style="background:#137bbe !important;color:#e8f0fe !important;">Join</button>
+
+___CSS (suggested)___
+.fix_13 {
+  background: #137bbe !important;
+  color: #e8f0fe !important;
+}
+
+—————
+13
+header search form input focus color when the user clicks the input (the 'glow' around the input)
+—————
+
+CAN BE INLINE - DONE (apr 24 2023)
+&mvt:color2;
+
+___miva___
+for fix 4 >
+user interface > global settings > global header and footer > global header > line 187
+
+for fix 12 >
+user interface > theme components > content sections > global footer newsletter form > line 33
+
+___HTML (line 187, 33)___
+for fix 4 >
+<input class="form-control me-2 srcbx" type="search" placeholder="Search" aria-label="Search">
+
+for fix 12 >
+<input class="form-control me-2 srcbx_ft" type="search" placeholder="Enter Your Email" aria-label="Search" style="font-size:1em !important;">
+
+___CSS (in use)___
+/* styles for input focus color */
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #C7CED4 !important; /* TINY IMPUT BORDER .. was #86b7fe */
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem &mvt:color2; !important; /* FOCUS BORDER .. hex is #0d6efd, thanks to: https://www.w3schools.com/colors/colors_converter.asp */
+}
+   
+
+—————
+14
+site background color
+—————
+
+CAN BE INLINE - DONE (apr 24 2023)
+
+___miva___
+user interface > global settings > global header and footer > global header > line 2
+
+___HTML (line 2)___
+<html lang="en">
+
+___CSS (in use, line 20-22)___
+/* nab entire page background */
+html {
+  background: #f4feff !important;
+}
+
+/ / / / / / / / / 
+VARIABLE ASSIGNMENTS
+/ / / / / / / / /
+ 
+1
+LOGIN 1: branding group a
+
+png
+&mvt:locationlogo;
+
+header bg color: #e8f0fe
+&mvt:color1;
+
+storefront left text bg color: #0098b5
+&mvt:color2;
+
+jpg
+&mvt:storefrontlogo;
+
+footer upper bg color: #e8f0fe
+&mvt:color3;
+
+footer lower bg color: #0098b5
+&mvt:color4;
+
+header shopping cart bg color: #e8f0fe
+&mvt:color5;
+
+header nav dropdown menu background color: #e8f0fe
+&mvt:color6;
+
+2
+LOGIN 2: branding group b
+
+png
+&mvt:locationlogo;
+
+header bg color: #e8f0fe
+&mvt:color1;
+
+storefront left text bg color: #137bbe
+&mvt:color2;
+
+jpg
+&mvt:storefrontlogo;
+
+footer upper bg color: #e8f0fe
+&mvt:color3;
+
+footer lower bg color: #137bbe
+&mvt:color4;
+
+header shopping cart bg color: #e8f0fe
+&mvt:color5;
+
+header nav dropdown menu background color: #e8f0fe
+&mvt:color6;
+
+3
+LOGIN 3: branding group c
+
+png
+&mvt:locationlogo;
+
+header bg color: #e8f0fe
+&mvt:color1;
+
+storefront left text bg color: #2b3990
+&mvt:color2;
+
+jpg
+&mvt:storefrontlogo;
+
+footer upper bg color: #e8f0fe
+&mvt:color3;
+
+footer lower bg color: #2b3990
+&mvt:color4;
+
+header shopping cart bg color: #e8f0fe
+&mvt:color5;
+
+header nav dropdown menu background color: #e8f0fe
+&mvt:color6;
+
+4
+LOGIN 4: branding group d
+
+png
+&mvt:locationlogo;
+
+header bg color: #f0f7e8
+&mvt:color1;
+
+storefront left text bg color: #8dc63f
+&mvt:color2;
+
+jpg
+&mvt:storefrontlogo;
+
+footer upper bg color: #f0f7e8
+&mvt:color3;
+
+footer lower bg color: #8dc63f
+&mvt:color4;
+
+header shopping cart bg color: #f0f7e8
+&mvt:color5;
+
+header nav dropdown menu background color: #f0f7e8
+&mvt:color6;
+
+/ / / / / / / / / 
+MASTER LIST (60)
+/ / / / / / / / / 
+
+38_modern ----------------------- branding group a
+advanced_oral_surgery ----------------------- branding group b
+advantage_dental ----------------------- branding group c
+all_smiles ----------------------- branding group c
+appletree ----------------------- branding group d
+aurora_city ----------------------- branding group c
+bloomingdale_dental ----------------------- branding group b
+buda_dental_studio ----------------------- branding group c
+central_park_modern ----------------------- branding group b
+cody_dental_group ----------------------- branding group c
+college_avenue ----------------------- branding group a
+colorado_dental_assisting ----------------------- branding group b
+colorado_dental_group ----------------------- branding group b
+colorado_endonic_group ----------------------- branding group a
+colorado_family_orth ----------------------- branding group b
+colorado_oral_surg ----------------------- branding group c
+colorado_periodontal_group ----------------------- branding group a
+colorado_springs_family_ortho ----------------------- branding group c
+colorado_springs_ortho ----------------------- branding group c
+discovery_kids ----------------------- branding group d ========================= header logo cut off (FIXED)
+east_harmony ----------------------- branding group b
+empire_dental ----------------------- branding group d
+enhance_dental ----------------------- branding group b
+exceptional_smiles ----------------------- branding group d
+flatirons ----------------------- branding group a
+fountain_dental ----------------------- branding group b
+greeley_dental ----------------------- branding group d
+gvr ----------------------- branding group a
+hampden ----------------------- branding group b
+highland_ranch ----------------------- branding group d
+jarrell ----------------------- branding group b
+kip_dental ----------------------- branding group a
+lone_tree ----------------------- branding group a
+lowry ----------------------- branding group a
+mile_high ----------------------- branding group c
+mountain_shadows ----------------------- branding group a
+my_dentist ----------------------- branding group b
+panorama ----------------------- branding group c
+premier_dental_boerne ----------------------- branding group b
+premier_dental_bulverde ----------------------- branding group b
+premier_dental_lockhart ----------------------- branding group b
+premier_dental_braunfels ----------------------- branding group b
+premier_dental_sanantonio ----------------------- branding group b
+premier_dental_sanantonio_naco ----------------------- branding group b
+premier_dental_seguin ----------------------- branding group b
+premier_dental_universalcity ----------------------- branding group b
+sage_dental ----------------------- branding group d
+sealy_dental_center ----------------------- branding group a
+sealy_dental_center_kati ----------------------- branding group a
+sealy_kids ----------------------- branding group b
+sealy_ortho ----------------------- branding group d ========================= header logo cut off (FIXED)
+silver_screen_dental ----------------------- branding group b ========================= header logo cut off (FIXED)
+south_springs ----------------------- branding group d
+standley_lake ----------------------- branding group a
+stapleton_modern ----------------------- branding group d
+stetson_hills ----------------------- branding group c
+sunshine_kids ----------------------- branding group c ========================= header logo cut off (FIXED)
+windsor ----------------------- branding group d
+woodland_park ----------------------- branding group b
+woodmen ----------------------- branding group b
+
+/ / / / / / / / / 
+DATA TO POPULATE .CSV
+/ / / / / / / / / 
+
+temporary fields
+
+email >
+user@email.com
+
+pass >
+12345q
+
+first, last name >
+ACTUAL CLIENT, qq
+
+address, city, state (dropdown), zip >
+1234
+1234
+state
+00000
+
+phone >
+1234567890
+
+38_modern
+advanced_oral_surgery
+advantage_dental
+all_smiles
+appletree
+aurora_city
+bloomingdale_dental
+buda_dental_studio
+central_park_modern
+cody_dental_group
+college_avenue
+colorado_dental_assisting
+colorado_dental_group
+colorado_endonic_group
+colorado_family_orth
+colorado_oral_surg
+colorado_periodontal_group
+colorado_springs_family_ortho
+colorado_springs_ortho
+discovery_kids
+east_harmony
+empire_dental
+enhance_dental
+exceptional_smiles
+flatirons
+fountain_dental
+greeley_dental
+gvr
+hampden
+highland_ranch
+jarrell
+kip_dental
+lone_tree
+lowry
+mile_high
+mountain_shadows
+my_dentist
+panorama
+premier_dental_boerne
+premier_dental_bulverde
+premier_dental_lockhart
+premier_dental_braunfels
+premier_dental_sanantonio
+premier_dental_sanantonio_naco
+premier_dental_seguin
+premier_dental_universalcity
+sage_dental
+sealy_dental_center
+sealy_dental_center_kati
+sealy_kids
+sealy_ortho
+silver_screen_dental
+south_springs
+standley_lake
+stapleton_modern
+stetson_hills
+sunshine_kids
+windsor
+woodland_park
+woodmen
+
+/ / / / / / / / / 
+VARIABLES
+/ / / / / / / / /
+
+*for new custom fields
+home > settings > utilities > custom fields > new custom field (right blue button) > add below
+
+in modal >
+custom field
+code (no underscore)
+title
+text field
+location color palette
+save
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color1', l.settings:color1 )" /> <mvt:comment>&mvt:color1;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color2', l.settings:color2 )" /> <mvt:comment>&mvt:color2;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color3', l.settings:color3 )" /> <mvt:comment>&mvt:color3;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color4', l.settings:color4 )" /> <mvt:comment>&mvt:color4;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color5', l.settings:color5 )" /> <mvt:comment>&mvt:color5;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color6’, l.settings:color6 )" /> <mvt:comment>&mvt:color6;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'location_logo', l.settings:locationlogo )" /> <mvt:comment>&mvt:locationlogo;</mvt:comment>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'storefrontlogo', l.settings:storefrontlogo )" /> <mvt:comment>&mvt:storefrontlogo;</mvt:comment>
+
+
+

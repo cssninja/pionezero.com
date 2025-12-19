@@ -1,0 +1,468 @@
+<mvt:if expr="l.settings:page:code NE 'SPWD' AND l.settings:page:code NE 'CTUS' AND l.settings:page:code NE 'CSTR' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'LOGN'">
+  <mvt:if expr="NOT g.basket:cust_id">
+      <mvt:assign name="l.header" value="miva_output_header( 'Status', '302 Found' )" />
+    <mvt:assign name="l.header" value="miva_output_header( 'Location', 'https://peakdentalstore.com/login-new.html' )" />
+  </mvt:if>
+</mvt:if>
+
+<mvt:if expr="g.basket:cust_id">
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color1', l.settings:color1 )" /> <mvt:comment>&mvt:color1;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color2', l.settings:color2 )" /> <mvt:comment>&mvt:color2;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color3', l.settings:color3 )" /> <mvt:comment>&mvt:color3;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color4', l.settings:color4 )" /> <mvt:comment>&mvt:color4;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color5', l.settings:color5 )" /> <mvt:comment>&mvt:color5;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'color6’, l.settings:color6 )" /> <mvt:comment>&mvt:color6;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'location_logo', l.settings:locationlogo )" /> <mvt:comment>&mvt:locationlogo;</mvt:comment>
+  <mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'storefrontlogo', l.settings:storefrontlogo )" /> <mvt:comment>&mvt:storefrontlogo;</mvt:comment>
+<mvt:else>
+  <mvt:assign name="l.settings:color1" value="'#e8f0fe'" />
+  <mvt:assign name="l.settings:color2" value="'#2b3990'" />
+  <mvt:assign name="l.settings:color3" value="'#e8f0fe'" />
+  <mvt:assign name="l.settings:color4" value="'#2b3990'" />
+  <mvt:assign name="l.settings:color5" value="'#e8f0fe'" />
+  <mvt:assign name="l.settings:color6" value="'#e8f0fe'" />
+  <mvt:assign name="l.settings:locationlogo" value="'https://peakdentalstore.com/mm5/graphics/00000001/logos/peak_logo.png'" />
+  <mvt:assign name="l.settings:storefrontlogo " value="'https://peakdentalstore.com/mm5/graphics/00000001/logos/peak_logo.png'" />
+</mvt:if>
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'customer_role', l.settings:customer_role )" />
+
+<mvt:if expr="l.settings:customer_role EQ 'Admin'">
+
+<mvt:item name="customfields" param="Read_Customer_ID( g.basket:cust_id, 'customer_region', l.settings:region)" />
+
+<mvt:comment>
+| Setup data needed for Miva JSON API calls
+</mvt:comment>
+<mvt:assign name="l.endpoint"     value="'https://peakdentalstore.com/mm5/json.mvc'" />
+<mvt:assign name="l.access_token"   value="'246b004a8eb06571898f84d6162a273c'" />
+<mvt:assign name="l.signature"    value="crypto_base64_decode('cJG5blMsms1TcGFWs3QEdI6ClO/1YrQGGnP894Mb3ME=')" />
+<mvt:assign name="l.timestamp"    value="'\"Miva_Request_Timestamp\" : ' $ '\"' $ s.time_t $ '\",' " />
+<mvt:assign name="l.return"         value="'------------------------'" />
+<mvt:comment>
+|   Pass in the JSON body along with signature variable to the crypto_hmac_sha256 function
+|   Base 64 the HMAC response using the crypto_base64_encode function
+|   Asssign the headers to the l.header variable
+|   Make an API call
+</mvt:comment>
+<mvt:capture variable="l.settings:json_request_data:queue_order_data">
+    {
+        <mvt:eval expr="l.timestamp"/>
+        "Store_Code":"PEAK",
+        "Function":"Module",
+        "Module_Code":"orderworkflow",
+        "Module_Function":"QueueOrderList_Load_Query",
+        "Queue_Code":"order_approvals",
+        "Filter":[
+            {
+                "name":"ondemandcolumns",
+                "value":[
+                    "items",
+                    "charges",
+                    "discounts",
+                    "payments",
+                    "notes",
+                    "payment_data",
+        "CustomField_Values:customfields:*"
+                ]
+            },
+      {
+    "name": "search",
+    "value":
+    [
+      {
+        "field": "CustomField_Values:customfields:region",
+        "operator": "EQ",
+        "value": "&mvte:region;"
+      }
+    ]
+      }
+        ]
+    }
+</mvt:capture>
+<mvt:assign name="l.ok" value="crypto_hmac_sha256(l.settings:json_request_data:queue_order_data,l.signature,'binary',l.hmac_response)" />
+<mvt:assign name="l.b64encoded_hmac_response" value="crypto_base64_encode(l.hmac_response)" />
+<mvt:assign name="l.headers" value="'X-Miva-API-Authorization: MIVA-HMAC-SHA256 ' $ l.access_token $ ':' $ l.b64encoded_hmac_response $ asciichar( 13 ) $ asciichar( 10 )" />
+<mvt:call action="l.endpoint" method="'RAW'" headers="l.headers" content-type="'application/json'" fields="'l.settings:json_request_data:queue_order_data'">
+<mvt:assign name="g.api_response" value="l.api_response $ s.callvalue" />
+</mvt:call>
+
+<mvt:assign name="l.success" value="miva_json_decode(g.api_response , l.settings:review_data)" />
+<mvt:comment>
+<textarea class="u-hidden" rows="20" cols="100">
+
+&mvt:global:api_response;
+
+</textarea>
+</mvt:comment>
+
+<mvt:assign name="l.settings:approval_count" value="l.settings:review_data:data:total_count" />
+
+</mvt:if>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>simple_navbar_bs5.0.2_iso[MIVA_2]</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <!--
+    notes
+
+    from: https://github.com/cssninja/simple-navbar-bs5.0.2-iso/tree/miva_2
+    -->
+
+    <!-- slight modifications to bs5.0.2_iso/bootstrap-isolated.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet"/>
+    <style>
+      /* nab entire page background */
+      html {
+        background: #fcfcfc !important; /* was #f4feff */
+        color: #495057 !important; /* new default dark for whole site */
+      }
+      body {
+        margin: 0;
+        color: #495057 !important; /* new default dark for whole site */
+      }
+      /* footer menu titles */
+      footer nav p.c-menu__title {
+        color: #495057 !important;
+      }
+      /* footer menu links */
+      footer nav ul li a.c-menu__link {
+        color: #495057 !important;
+      }
+
+      nav {
+        font-family: 'Lato', sans-serif !important;
+      }
+      .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: 0 0 0 0rem !important;
+      }
+
+      /* responsive logo img, slightly modified to height instead, with nax-width % limiting width .. thanks to: https://stackoverflow.com/questions/33929604/fit-image-to-bootstrap-navbar-height-responsively */
+      .navbar .navbar-brand {
+        padding-top: 0px !important;
+      }
+      .navbar .navbar-brand img {
+        max-width: 100% !important;
+      }
+
+      /* right justification thanks to: https://stackoverflow.com/questions/54394243/bootstrap-4-navbar-justify-menu-to-right .. also in docs: https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content */
+
+      /* lorem ipsum images thanks to: https://fakeimg.pl/ and https://github.com/Rydgel/Fake-images-please */
+
+      /* search box width, thanks to: https://stackoverflow.com/questions/13915904/css3-media-query-not-working-with-max-width .. was 1099.95 but cart + approval icons were breaking */
+      @media screen and (min-width: 1200.5px) {
+        .srcbx {
+          min-width: 500px !important;
+          background: &mvt:color1; !important; /* was  #e8f0fe */
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .srcbx {
+          max-width: 200px !important;
+          background: &mvt:color1; !important; /* was  #e8f0fe */
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .srcpar {
+          padding-left:2% !important;
+        }
+      }
+
+      /* finally .. smooth transition for sub-menu, thanks to: https://stackoverflow.com/questions/12115833/adding-a-slide-effect-to-bootstrap-dropdown .. could not get transition to work somehow, may be blocked elsewhere, fix later
+
+      good animation here >
+
+      fadeInUp etc >
+      https://pionezero.com/appco/assets/css/animate.min.css
+      from
+      from https://animate.style/
+
+      base: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name
+      */
+      @keyframes slideIn {
+        0% {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+      }
+      .slideIn {
+          -webkit-animation-name: slideIn;
+          animation-name: slideIn;
+          animation-duration: 0.8s;
+          animation-fill-mode: both;
+      }
+
+      /* thanks to: https://css-tricks.com/replace-the-image-in-an-img-with-css/ .. psd: 800w, 420h > 250w, 131h .. test img: https://fakeimg.pl/250x131/282828/eae0d0/ (don't use ?retina=1 .. makes img LARGER) .. variable: &mvt:locationlogo; */
+      .fix1 {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(&mvt:locationlogo;);
+        background-position: center; /* x% y% */
+        background-repeat: no-repeat;
+        background-size: 90%; /* was contain */
+        width: 250px !important; /* Width of new image */
+        height: 131px !important; /* Height of new image */
+        padding-left: 250px; /* Equal to width of new image */
+      }
+
+      /* styles for input focus color */
+      .form-control:focus {
+        color: #212529;
+        background-color: #fff;
+        border-color: #C7CED4 !important; /* TINY IMPUT BORDER .. was #86b7fe */
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem &mvt:color2; !important; /* FOCUS BORDER .. hex is #0d6efd, thanks to: https://www.w3schools.com/colors/colors_converter.asp */
+      }
+
+    /* border and w, h control for category images .. DESKTOP */
+      @media screen and (min-width: 769px) {
+      #mmx-image-across__six-across picture img {
+        border: 12px solid #edebeb !important;
+        padding: 0px;
+        border-radius: 20px;
+        max-height: 400px !important; /* is only form images .. must do img container actually */
+        max-width: 95% !important; /* hugging left and right too much, cutting off borders .. */
+        /* display: none !important; */
+        background: #ffffff !important; /* FIXES LEFT RIGHT GAP */
+        }
+      }
+      /* border and w, h control for category images .. TABLET */
+      @media screen and (max-width: 768px) {
+      #mmx-image-across__six-across picture img {
+        border: 12px solid #edebeb !important;
+        padding: 0px;
+        border-radius: 20px;
+        max-height: 95% !important; /* is only form images .. must do img container actually */
+        max-width: 95% !important; /* hugging left and right too much, cutting off borders .. */
+        /* display: none !important; */
+        background: #ffffff !important; /* FIXES LEFT RIGHT GAP */
+        }
+      }
+      /* border and w, h control for category images .. MOBILE */
+      @media screen and (max-width: 768px) {
+      #mmx-image-across__six-across picture img {
+        border: 12px solid #edebeb !important;
+        padding: 0px;
+        border-radius: 20px;
+        max-height: 95% !important; /* is only form images .. must do img container actually */
+        max-width: 95% !important; /* hugging left and right too much, cutting off borders .. */
+        /* display: none !important; */
+        background: #ffffff !important; /* FIXES LEFT RIGHT GAP */
+        }
+      }
+      /* more category section img control .. CAUSES HORIZ SCROLL BAR IN TABLET (use overflow-x: hidden;) .. line 50-59, ref: https://peakdentalstore.com/mm5/themes/00000001/shadows/mmx/mmx-hero/styles.css?T=0377fd79 .. fixes thanks to: https://www.w3schools.com/css/css3_object-fit.asp */
+
+      /* TO WORK THIS DEPENDS ON THE DEFULT IMAGE SIZE CHOICE LOCATED IN USER INTERFACE > CONTENT MANAGEMENT > STOREFRONT > CATEGORIES (sm, sm, med, lrg) .. SET TO > MEDIUM .. ALSO HAVE TO TARGET CLASS IN STOREFRONT OTHERWISE CHAGES IMAGES ELSEWHERE IN SITE > DONE .. april 26 2023 14:41 WORKS IN ALL VIEWPORTS (mobile can be bigger) */
+
+      @media screen and (min-width: 769px) {
+      #mmx-image-across__six-across picture img,
+      slot[name="image"]::slotted(*) {
+        user-select: none; /* was none */
+        object-position: center; /* was center */
+        height: 100% !important; /* was 100% */
+        width: 100% !important; /* was 100% */
+        object-fit: contain; /* was var(--mmx-hero__object-fit) */
+        aspect-ratio: var(--mmx-hero__aspect-ratio); /* was var(--mmx-hero__aspect-ratio) */
+        }
+      }
+      @media screen and (max-width: 768px) {
+      #mmx-image-across__six-across picture img,
+      slot[name="image"]::slotted(*) {
+        user-select: none; /* was none */
+        object-position: center; /* was center */
+        height: 100% !important; /* was 100% */
+        width: 100% !important; /* was 100% */
+        object-fit: contain; /* was var(--mmx-hero__object-fit) */
+        aspect-ratio: var(--mmx-hero__aspect-ratio); /* was var(--mmx-hero__aspect-ratio) */
+        }
+      }
+      @media screen and (max-width: 450px) {
+      #mmx-image-across__six-across picture img,
+      slot[name="image"]::slotted(*) {
+        user-select: none; /* was none */
+        object-position: center; /* was center */
+        height: 100% !important; /* was 100% */
+        width: 50% !important; /* was 100% */
+        object-fit: contain; /* was var(--mmx-hero__object-fit) */
+        aspect-ratio: var(--mmx-hero__aspect-ratio); /* was var(--mmx-hero__aspect-ratio) */
+        }
+      }
+
+      /* had to style a shadow DOM element through ::part(), was actually labeled in dev tools as '#shadow-root (open)', THIS IS THE ONLY WAY TO STYLE ELEMENTS MARKED WITH part="button" .. display: none worked with mmx-hero mmx-button {} .. thanks to: https://ziga-petek.medium.com/styling-shadow-dom-with-part-and-slotted-bc4bc94ab56b .. query: target button slot in css, https://search.brave.com/search?q=target+button+slot+in+css&source=web */
+      mmx-hero mmx-button::part(button) {
+        background: &mvt:color2; !important; /* was var(--mmx-color-primary-bg) */
+        width: 45vw !important;
+        border-color: #FCFBFC !important; /* was var(--mmx-color-primary-bg) */
+        outline: 2px solid #FCFBFC !important;
+        font-size: 1.5em !important;
+      }
+      mmx-hero mmx-button::part(button):hover {
+        background: #495057 !important; /* was transparent, then #121212 */
+        color: var(--mmx-color-primary-text);
+        width: 45vw !important;
+        border-color: #FCFBFC !important; /* was var(--mmx-color-primary-bg) */
+        outline: 2px solid #FCFBFC !important;
+        font-size: 1.5em !important;
+      }
+      mmx-hero mmx-button::part(button):focus {
+        background: #495057 !important; /* was transparent, then #121212 */
+        color: var(--mmx-color-primary-text);
+        width: 45vw !important;
+        border-color: #FCFBFC !important; /* was var(--mmx-color-primary-bg) */
+        outline: 2px solid #FCFBFC !important;
+        font-size: 1.5em !important;
+      }
+      /* location: https://peakdentalstore.com/storefront.html .. MIVA CSS > line 56-95, ref: https://peakdentalstore.com/mm5/themes/00000001/shadows/mmx/mmx-button/styles.css?T=2f30b59d */
+
+      /* to fix borrowed 'wired up' search input from sean, where it was set to disappear at 958px (59.9em)..
+      correct and set to infinite (400em) .. was 59.9em and display: none .. for placeholder it was set to
+      opacity: 0 so corrected with opacity: 1, thanks to: https://stackoverflow.com/questions/74637393/input-placeholder-text-not-showing-in-safari */
+      @media (max-width: 400em) {
+        .t-site-header__search-icon {
+          display: block !important;
+        }
+        .t-site-header__search-field::-moz-placeholder {
+          opacity: 1 !important;
+        }
+        .t-site-header__search-field::placeholder {
+          opacity: 1 !important;
+        }
+      }
+      /* line 6772, ref: https://peakdentalstore.com/mm5/json.mvc?Store_Code=PEAK&Function=CSSCombinedResource_Output&CSSCombinedResource_Code=stylesheet&T=4f0a39f7 */
+    </style>
+
+    <!-- original bs cdn -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
+    <link rel="stylesheet" href="https://peakdentalstore.com/mm5/css/00000001/GH_bootstrap-isolated.css"/>
+
+    <script src="https://peakdentalstore.com/mm5/scripts/00000001/GH_CDN_bootstrap.bundle.min.js"></script>
+
+  </head>
+  <body>
+
+    <div class="bs5">
+      <!-- message section -->
+      <mvt:comment><mvt:item name="readytheme" param="contentsection( 'fasten_header' )" /></mvt:comment>
+      <mvt:comment><mvt:item name="navbar" /></mvt:comment>
+      <!-- / message section -->
+
+      <nav class="navbar navbar-expand-lg navbar-light" style="background:&mvt:color1;">
+        <div class="container-fluid">
+          
+          <a style="max-width:50%;" class="navbar-brand" href="https://peakdentalstore.com/storefront.html"><img class="fix1"></a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Shop All</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#495057 !important;font-size:1.1em !important;font-weight:bold !important;">
+                  Shop Categories
+                </a>
+                <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown" style="color:#495057 !important;font-size:1em !important;background:&mvt:color1; !important;">
+                  <li><a class="dropdown-item" href="https://peakdentalstore.com/promo.html">Promotional Products</a></li>
+                  <li><a class="dropdown-item" href="https://peakdentalstore.com/print.html">Print Collateral</a></li>
+                  <!-- <li><a class="dropdown-item" href="https://peakdentalstore.com/category-3.html">Category 3</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="https://peakdentalstore.com/category-4.html">Category 4</a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Sale</a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Featured Products</a>
+              </li> -->
+            </ul>
+
+            <!-- SEARCH BEGIN .. SEAN ADDED THIS TO 'WIRE UP' SEARCH .. original bootstrap search below
+              this and commented out (line 406) .. removed classes: o-layout__item u-width-12 u-width-3--l t-site-header__search and added bootstrap-based classes: d-flex me-auto mb-2 mb-lg-0, NOW WORKS ..
+              at 959px the span below has pseudo element that appears (at 959px) and disappeasrs (at 958px) for
+              both search icon and search text (placeholder), see CSS above (line 330) -->
+            <div class="d-flex me-auto mb-2 mb-lg-0 &mvte:global:Session:shadows:checkout_hidden;" data-hook="site-header__search" itemscope itemtype="http://schema.org/WebSite">
+            <meta itemprop="url" content="//&mvt:global:domain:name;/"/>
+            <form class="t-site-header__search-form" method="post" action="&mvte:urls:SRCH:rr;" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+              <fieldset>
+                <legend>Product Search</legend>
+                <div class="c-form-list">
+                  <div class="c-form-list__item c-form-list__item--full c-control-group u-flex">
+                    <meta itemprop="target" content="&mvte:urls:SRCH:auto;?q={Search}"/>
+                    <span class="u-bg-white u-color-gray-50 u-icon-search t-site-header__search-icon" aria-hidden="true" style="background:&mvt:color1; !important"></span>
+                    <input class="c-form-input c-control-group__field u-bg-transparent u-border-none t-site-header__search-field" data-mm_searchfield="Yes" data-mm_searchfield_id="x-search-preview" type="search" name="Search" value="&mvte:global:Search;" placeholder="Search" autocomplete="off" required itemprop="query-input" aria-label="Product Search">
+                    <!-- DISABLED BUTTON BELOW AS WAS SHOWING ERRONEOUS LETTER 'B' TO THE RIGHT -->
+                    <!-- <button class="c-button c-control-group__button u-bg-transparent u-color-gray-50 u-border-none u-icon-search t-site-header__search-button" type="submit" aria-label="Search"></button> -->
+                  </div>
+                </div>
+              </fieldset>
+              <ul class="x-search-preview" data-mm_searchfield_menu="Yes" data-mm_searchfield_id="x-search-preview" role="listbox"></ul>
+            </form>
+            </div>
+            <!-- SEARCH END -->
+
+            <!-- added classes from line 69 ul mb-2 mb-lg-0 for vertical align -->
+            <!--<form class="d-flex me-auto mb-2 mb-lg-0 srcpar">
+              <input class="form-control me-2 srcbx" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn" type="submit" style="background:&mvt:color2; !important;color:#e8f0fe !important;">Search</button>
+            </form>-->
+            <!-- me-auto disabled below to fully right justify menu .. can use miva class t-site-header__masthead-links -->
+            <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+              <li class="nav-item mt-2 &mvte:global:Session:shadows:checkout_hidden;" style="display:none;">
+                <!-- <a class="nav-link me-4" aria-current="page" href="#">Sign In</a> -->
+                <!-- SIGN IN -->
+                <mvt:item name="customerlink" />
+                <mvt:item name="readytheme" param="contentsection( 'global_account' )" />
+              </li>
+              <li class="nav-item my-2">
+                <!-- <a class="nav-link" href="#">Cart</a> -->
+                <!-- CART (maybe after customer log in) -->
+                <a class="t-site-header__basket-link" data-hook="open-mini-basket" aria-label="Open Mini-Basket" href="&mvte:urls:BASK:auto;" style="background:&mvt:color5;;color:#495057;text-decoration:none;">
+                  <mvt:if expr="l.settings:global_minibasket:basket_count GT 0">
+                    <span class="u-icon-cart-full" aria-hidden="true"></span>
+                  <mvt:else>
+                    <span class="u-icon-cart-empty" aria-hidden="true"></span>
+                  </mvt:if>
+                  <span class="t-site-header__basket-link-quantity" data-hook="mini-basket-count">&mvte:global_minibasket:basket_count;</span>
+                </a>
+                <!-- / CART -->
+              </li>
+        <mvt:if expr="l.settings:customer_role EQ 'Admin'">
+            <li class="nav-item my-2">
+                  <!-- APPROVALS -->
+    
+                  <a class="t-site-header__approval-link" data-hook="open-mini-basket" aria-label="View Order Approvals" href="&mvte:urls:APPR:auto;" style="background:&mvt:color5;;color:#495057;text-decoration:none;">
+                      <span class="u-icon-document" aria-hidden="true"></span> Approvals
+                      <span class="u-color-black t-site-header__approval-link-quantity" style="background-color:#EFEFEF;line-height:50px;">&mvt:approval_count;</span>
+                  </a>
+                  <!-- / APPROVALS -->
+              </li>
+      </mvt:if>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+    </div>
+    
+  </body>
+</html>
